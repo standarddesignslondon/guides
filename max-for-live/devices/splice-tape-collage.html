@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>splice (tape collage) — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">06</p>
+  <h1>splice (tape collage)</h1>
+  <p class="ch-sub">A 1950s random tape editor — razor-blades your recordings and splices them back together, imperfections included.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/splice1.png" alt="Splice (Tape Collage)"></div><figcaption>splice (tape collage)</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">06.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Load up to eight sources, press Play, and the machine cuts random sections, levels and speeds them, and splices them end to end until you stop it. Four dials take it from frenetic musique concrète to slow ambient drift. Every decision — source, region, length, level, speed, effect, joint character — is rolled <b>once</b> at each splice boundary and held; nothing modulates mid-clip.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>shipping</dd></div><div class="fact"><dt>folder</dt><dd>Splice Tape Collage Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">06.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drag WAV/AIFF onto the <b>drop boxes</b> (not the waveforms). <b>Main 1–4</b> is your material, <b>BG 1–2</b> are atmosphere beds, <b>IR 1–2</b> are impulse responses for the reverbs.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Press <b>Play</b> — it starts instantly. Stopping lets the current splice and its tails finish.</span></li>
+<li><span class="step-n">03</span><span class="step-t"><b>Min/Max Length</b> is <i>the</i> composition control. Short and narrow = stutter chaos; long and wide = drifting collage.</span></li>
+<li><span class="step-n">04</span><span class="step-t">When something good happens, sweep <b>Loop</b> up: the last N seconds repeat and generation pauses. Ride it to re-cut the same moment; back to 0 releases it.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">06.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">performance</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Play<span class="rng">on / off</span></dt><dd>Instant start. Stopping lets the current splice and tails finish.</dd></div>
+<div class="ctl-row"><dt>Min / Max Length<span class="rng">30 ms – 8 s</span></dt><dd>The length range each splice is rolled from. Changes land on the <i>next</i> splice, never the current one.</dd></div>
+<div class="ctl-row"><dt>Balance<span class="rng">0 – 100 %</span></dt><dd>0 % is all Main material; raise it for backgrounds and period electronics (sine tones, buzzes, mains hum, slow sweeps).</dd></div>
+<div class="ctl-row"><dt>Silence<span class="rng">0 – 100 %</span></dt><dd>How often the machine leaves real gaps. Languid moods need some.</dd></div>
+<div class="ctl-row"><dt>Bad Splice / Severity<span class="rng">0 – 100 %</span></dt><dd>The engineer&#x27;s condition — from careful (occasional soft thumps) to drunk (clicks, dead air, double-speak overlaps, transport sag, outright dropouts).</dd></div>
+<div class="ctl-row"><dt>Loop<span class="rng">0 – 30 s</span></dt><dd>The freeze gesture. The last N seconds repeat and generation pauses.</dd></div>
+</dl>
+<h3 class="sub">character</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Level Min / Max<span class="rng">−36 … 0 dB</span></dt><dd>Per-splice level range.</dd></div>
+<div class="ctl-row"><dt>Varispeed<span class="rng">0 – 100 %</span></dt><dd>Chance of half-speed, double-speed and reversed splices.</dd></div>
+<div class="ctl-row"><dt>FX Amount<span class="rng">0 – 100 %</span></dt><dd>How often a splice gets <b>one</b> effect: convolution A/B (your IRs), tape echo, age filter, or drive.</dd></div>
+<div class="ctl-row"><dt>Echo Char<span class="rng">0 – 100 %</span></dt><dd>Echo time, feedback and wow, moving together.</dd></div>
+<div class="ctl-row"><dt>Age<span class="rng">0 – 100 %</span></dt><dd>How narrow and old effected splices get.</dd></div>
+<div class="ctl-row"><dt>Drive / Output<span class="rng">0 – 100 % · −36…+6 dB</span></dt><dd>Warmth, then master level.</dd></div>
+</dl>
+<h3 class="sub">extras</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Tones<span class="rng">0 – 100 %</span></dt><dd>The electronics&#x27; share of the atmosphere.</dd></div>
+<div class="ctl-row"><dt>Sync + Loop Div<span class="rng">on/off · 1/32 – 16 bars</span></dt><dd>Locks Loop lengths to project tempo (a bar = 4 beats). The Loop dial still triggers and releases.</dd></div>
+<div class="ctl-row"><dt>Tail Cut<span class="rng">on / off</span></dt><dd>Reverb tails die at every new splice, as if printed to the tape.</dd></div>
+<div class="ctl-row"><dt>Slot toggles<span class="rng">yellow, per slot</span></dt><dd>Turn individual sources on/off; <i>clear</i> empties a slot. Files persist with the Set.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">06.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">performance</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Play</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Min Length</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Max Length</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Balance</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Silence</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Bad Splice</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Severity</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Loop</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">character</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Level Min</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Level Max</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Varispeed</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">FX Amount</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Echo Char</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Age</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Drive</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Output</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">extras</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Tones</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Loop Div</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Sync</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Tail Cut</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">06.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">the rules it lives by</h3><p>Every decision is rolled once at each splice boundary and held. Nothing modulates mid-clip. One effect per splice. No colour that couldn&#x27;t exist in 1958.</p>
+<h3 class="sub">drop boxes, not waveforms</h3><p>The drop targets are the small boxes, not the waveform displays — a common miss.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">06.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>WAV/AIFF only, and it&#x27;s a <b>mono</b> collage by design (reads channel 1).</li><li>Needs the HISSTools IR Toolbox from the Max Package Manager unless the <code>.amxd</code> is frozen with it bundled — the shipping copy is.</li><li>~2 % CPU.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">06.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>Splice-Manual.pdf</code> is the printable version of the manual. <code>Splice 1.adv</code> is a saved preset.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="the-1958-machine.html"><span>previous</span>the 1958 machine</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="ondes-martenot.html"><span>next</span>ondes martenot</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

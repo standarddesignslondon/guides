@@ -1,0 +1,26 @@
+{
+ "subject": {
+  "short": "photoshop",
+  "title": "photoshop tools",
+  "subtitle": "process guide",
+  "blurb": "Panels, scripts and actions built for Photoshop. What every control does, how a file travels from the canvas out to whatever does the work and back again, and the things each one needs you to remember.",
+  "noun": "tool",
+  "noun_plural": "tools",
+  "page_dir": "tools"
+ },
+ "generated": "2026-08-14",
+ "items": [
+  {
+   "num": "01",
+   "slug": "nano-banana-bridge",
+   "name": "Nano Banana Bridge",
+   "tagline": "Sends the canvas and a marked-up selection to Nano Banana, then brings the result back as a masked layer.",
+   "url": "tools/nano-banana-bridge.html",
+   "image": "images/nano-banana-bridge.png",
+   "facets": {
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  }
+ ]
+}

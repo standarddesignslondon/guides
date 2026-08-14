@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pulsograph — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">03</p>
+  <h1>pulsograph</h1>
+  <p class="ch-sub">Early-electronic rhythm machine — four synthesis lanes on a 32-step grid that drifts like a real motor.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/pulsograph.png" alt="Pulsograph"></div><figcaption>pulsograph</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">03.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Four lane voices, each able to be any of four classes (Thud, Tick, Burst, Odd), sequenced on a 32-step grid with per-lane length, direction and rate. Timing is sample-accurate inside gen~ and derived from Live&#x27;s transport, so loops and relocates resync for free — but <b>Drift</b> lets the whole thing breathe against the grid like a machine with a motor. Add per-lane Grit, slow parameter wander (Var), a delay circuit and hum/hiss, and it exports to audio or MIDI.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>instrument</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete</dd></div><div class="fact"><dt>folder</dt><dd>Pulsograph Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">03.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Pulsograph.amxd</code> on a MIDI track. The face is cream; the grid is top-left.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Click cells on lane 1 and press play. Click cycles a cell: off → red (on) → dark (accent) → off. Drag to paint.</span></li>
+<li><span class="step-n">03</span><span class="step-t"><b>Alt-click</b> (or ctrl-click) a cell to move the red bracket — that&#x27;s the lane&#x27;s loop length. Set lanes to 16 / 12 / 13 / 8 and a phasing polyrhythm develops.</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>Shift-drag vertically</b> on a cell to pitch that step ±12 semitones around the lane&#x27;s Tune. A tick mark appears in the cell.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Notes <b>36–39</b> (C1–D#1) fire lanes 1–4 from pads, merged with the internal sequence.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">03.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">per lane (×4)</h3>
+<p class="lead">Tune, Tone and Decay are <b>class-relative</b> — the same dial means something different per class.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Class<span class="rng">Thud / Tick / Burst / Odd</span></dt><dd>The lane&#x27;s synthesis engine. Changing it while playing may cut or morph a ringing tail — that&#x27;s fine.</dd></div>
+<div class="ctl-row"><dt>Tune<span class="rng">class-relative</span></dt><dd>Thud: pitch 30–120 Hz · Tick: ping 1.5–8.5 kHz · Burst: band centre 200 Hz–4 kHz · Odd: carrier 80–1280 Hz.</dd></div>
+<div class="ctl-row"><dt>Tone<span class="rng">class-relative</span></dt><dd>Thud: harmonic drive (sine → square-ish) · Tick: sine ping ↔ noise click · Burst: filter resonance · Odd: ring-mod ratio 0.5–7, non-integer.</dd></div>
+<div class="ctl-row"><dt>Decay<span class="rng">0 – 1</span></dt><dd>Length of the hit.</dd></div>
+<div class="ctl-row"><dt>Level<span class="rng">0 – 1</span></dt><dd>Lane level. At 0 the lane is silent whatever Var is doing (the wander is multiplicative).</dd></div>
+<div class="ctl-row"><dt>Grit<span class="rng">0 – 1</span></dt><dd>Decimation down to ~2 kHz sample-hold, quantisation to ~4 bits, sporadic static crackle and a dusty tail. Exactly transparent at 0.</dd></div>
+<div class="ctl-row"><dt>Var<span class="rng">0 – 1</span></dt><dd>How far Tune, Tone, Decay and Level may slowly wander (5–8 s memory), independently. At 0.15 the lane subtly changes over a minute; at 1 it wanders far from the dials — which themselves don&#x27;t move.</dd></div>
+</dl>
+<h3 class="sub">grid (per lane)</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Length<span class="rng">1 – 32 steps</span></dt><dd>Alt-click a cell to set it.</dd></div>
+<div class="ctl-row"><dt>End mode<span class="rng"><code>&gt;</code> loop / <code>&lt;&gt;</code> ping-pong</span></dt><dd>Ping-pong bounces; endpoints play once per cycle.</dd></div>
+<div class="ctl-row"><dt>Rate<span class="rng">x2 x1 /2 /3 /4 /6 /8</span></dt><dd>Multiplier on 16ths. <code>/3</code> against <code>x1</code> gives a dotted-8th feel.</dd></div>
+<div class="ctl-row"><dt>Step offsets<span class="rng">±12 semitones</span></dt><dd>Shift-drag a cell. Class-relative, applied at fire time. MIDI pad hits ignore offsets and always play the lane&#x27;s dialled tune.</dd></div>
+</dl>
+<h3 class="sub">delay circuit</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Mode<span class="rng">Steps / Time</span></dt><dd><b>Steps</b>: delay = n × one 32nd at Live&#x27;s tempo, on the same grid the sequencer walks. <b>Time</b>: dialled directly.</dd></div>
+<div class="ctl-row"><dt>Steps<span class="rng">1 – 32</span></dt><dd>n = 3 against 16ths is the classic dotted echo; 5 or 7 give polyrhythmic echoes.</dd></div>
+<div class="ctl-row"><dt>Time<span class="rng">0.1 – 1000 ms (log)</span></dt><dd>Sub-millisecond turns the circuit into a comb filter/resonator — try high Feedback and Wet with a Tick lane.</dd></div>
+<div class="ctl-row"><dt>Feedback<span class="rng">0 – 0.95</span></dt><dd>One-pole lowpass + <code>tanh</code> per pass: repeats get duller and rounder, never louder.</dd></div>
+<div class="ctl-row"><dt>Wet / Tone<span class="rng">0 – 1</span></dt><dd>Wet 0 is exactly the dry machine. Tone sets loop darkness.</dd></div>
+<div class="ctl-row"><dt>Grit<span class="rng">0 – 1</span></dt><dd>The same dirt, but <b>inside</b> the feedback loop, so it compounds per repeat.</dd></div>
+</dl>
+<h3 class="sub">master &amp; export</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Volume<span class="rng">0 – 1</span></dt><dd>Master level.</dd></div>
+<div class="ctl-row"><dt>Drift<span class="rng">0 – 1</span></dt><dd>Sequencer hits land late by a wandering few ms — one slow shared motor curve (~2 s memory) plus tiny per-hit jitter, 0–~20 ms. <b>MIDI hits are never drifted</b> — you&#x27;re playing those. 0 = sample-tight.</dd></div>
+<div class="ctl-row"><dt>Electricity<span class="rng">0 – 1</span></dt><dd>Always-present 50 Hz hum + harmonics, hiss bed, faint supply-sag ripple, and extra drive into the master saturation. The hum bed is <i>not</i> sent to the delay — it&#x27;s chassis, not signal.</dd></div>
+<div class="ctl-row"><dt>Bars<span class="rng">1 – 8</span></dt><dd>Export length.</dd></div>
+<div class="ctl-row"><dt>To MIDI<span class="rng">button</span></dt><dd>Writes the grid as a MIDI clip in this track&#x27;s first empty Session slot. Notes 36–39, accents = velocity 127, plain = 88. Lengths, modes and rates are flattened over n bars.</dd></div>
+<div class="ctl-row"><dt>Bounce<span class="rng">button</span></dt><dd>Transport must be running. Records the device&#x27;s actual output — drift, grit, hum, delay — from the next bar for n bars, writes a wav, then creates a new audio track with the clip. Press again mid-bounce to cancel.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">03.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">lane 1</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Class</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Tune</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Tone</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Decay</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Level</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Grit</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Var</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">lane 2</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Class</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Tune</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Tone</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Decay</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Level</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Grit</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Var</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">lane 3</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Class</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Tune</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Tone</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Decay</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Level</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Grit</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Var</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">lane 4</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Class</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Tune</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Tone</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Decay</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Level</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Grit</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Var</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">delay</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Mode</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Steps</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Time</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Feedback</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Wet</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Tone</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Grit</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">master</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Volume</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Drift</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Electricity</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Bars</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">To MIDI</span>
+<span class="btn">Bounce</span>
+</div>
+<p class="bank-note">Lanes never straddle banks — one lane per page. Buttons are momentary and self-resetting.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">03.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">polyrhythm comes from lane lengths, not from the grid</h3><p>Different lengths per lane phase against each other. Add per-lane Rate dividers on top and complex patterns fall out of very few clicks.</p>
+<h3 class="sub">var is what makes it a piece rather than a loop</h3><p>Small Var values (~0.15) make a lane drift in character over a minute or two without you touching anything. It&#x27;s the difference between a pattern and a performance.</p>
+<h3 class="sub">bounce captures the imperfections</h3><p>To MIDI gives you the notes; Bounce gives you the actual sound including drift, hum and delay. If you play the exported MIDI clip on the same track it will retrigger the lanes — mute them (Level 0) or move the clip elsewhere.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">03.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li><b>Freeze required from stage 2 on</b> — there&#x27;s external js. Rebuild → Edit in Max → snowflake → Cmd+S. A blank/white grid area means the device isn&#x27;t frozen.</li><li>&quot;no function beats&quot; errors at the <i>top</i> of the Max console are benign — messages arriving before the js engines compile.</li><li>Bounces land in <b><code>~/Music/Pulsograph</code></b> — create that folder once in Finder; the device can&#x27;t make it.</li><li>Don&#x27;t change tempo mid-bounce.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">03.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_pulsograph.py</code>, then add to Live and <b>freeze</b>.</p>
+<p>Offline checks: <code>sim_voice.py</code>, <code>sim_seq.py</code>, <code>sim_drift.py</code>, <code>sim_delay.py</code>, <code>sim_grit.py</code>, plus <code>node test_grid_node.js</code> and <code>node test_export_node.js</code>.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="microcosmos.html"><span>previous</span>microcosmos</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="oram.html"><span>next</span>oram</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

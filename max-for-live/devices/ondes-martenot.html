@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ondes martenot — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">07</p>
+  <h1>ondes martenot</h1>
+  <p class="ch-sub">Monophonic MPE Ondes voice for Push 3 pads — pressure is the envelope.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/ondes–martenot–fond–version.png" alt="Ondes Martenot"></div><figcaption>ondes martenot</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">07.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Not a museum replica, but built around the three things that make the Ondes sound like the Ondes: combinable timbre stops from drifting &quot;tube&quot; oscillators, the <i>touche d&#x27;intensité</i> (<b>pressure is the envelope</b> — there is no fixed one), and the <i>diffuseurs</i>, the resonating speakers: spring, gong, and sympathetic strings.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>instrument</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete (frozen build)</dd></div><div class="fact"><dt>folder</dt><dd>Ondes Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">07.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Ondes Martenot.amxd</code> on a MIDI track.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Play Push 3 pads. <b>Per-pad pressure = volume</b> — press harder to swell, release to fade. Notes are silent without pressure.</span></li>
+<li><span class="step-n">03</span><span class="step-t"><b>Slide up/down on a pad</b> (CC74) changes brightness.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Mix the timbre stops like drawbars: Onde (pure), Creux (hollow), Gambé (string), Nasal (reedy), Octave.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">07.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">timbre stops</h3>
+<p class="lead">Mix these like drawbars — they combine rather than switch.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Onde<span class="rng">0 – 1</span></dt><dd>The pure fundamental.</dd></div>
+<div class="ctl-row"><dt>Creux<span class="rng">0 – 1</span></dt><dd>Hollow.</dd></div>
+<div class="ctl-row"><dt>Gambé<span class="rng">0 – 1</span></dt><dd>String-like.</dd></div>
+<div class="ctl-row"><dt>Nasillard<span class="rng">0 – 1</span></dt><dd>Reedy, nasal.</dd></div>
+<div class="ctl-row"><dt>Octaviant<span class="rng">0 – 1</span></dt><dd>The octaviant partial.</dd></div>
+<div class="ctl-row"><dt>Souffle<span class="rng">0 – 1</span></dt><dd>Breath noise.</dd></div>
+<div class="ctl-row"><dt>Fond<span class="rng">0 – 1</span></dt><dd>Sub-octave — a clean sine one octave below the note, for body and weight. Defaults to 0.</dd></div>
+<div class="ctl-row"><dt>Drift<span class="rng">0 – 1</span></dt><dd>Tube age: pitch wobble, hum and hiss.</dd></div>
+<div class="ctl-row"><dt>Warmth<span class="rng">0 – 1</span></dt><dd>Saturation.</dd></div>
+</dl>
+<h3 class="sub">diffuseurs &amp; jeu</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Principal<span class="rng">0 – 1</span></dt><dd>The dry speaker.</dd></div>
+<div class="ctl-row"><dt>Résonance<span class="rng">0 – 1</span></dt><dd>The spring diffuseur.</dd></div>
+<div class="ctl-row"><dt>Métallique<span class="rng">0 – 1</span></dt><dd>The gong diffuseur — rings on attacks.</dd></div>
+<div class="ctl-row"><dt>Palme<span class="rng">0 – 1</span></dt><dd>Sympathetic strings; blooms on C3–B3 and their octaves.</dd></div>
+<div class="ctl-row"><dt>Glide<span class="rng">1 – 800 ms</span></dt><dd>Portamento time between notes.</dd></div>
+<div class="ctl-row"><dt>Touche<span class="rng">0.25 – 4</span></dt><dd>Pressure response curve: low = touchy, high = needs a firm press.</dd></div>
+<div class="ctl-row"><dt>Vibrato<span class="rng">0 – 1</span></dt><dd>Automatic vibrato. Finger vibrato on the pads is usually better.</dd></div>
+<div class="ctl-row"><dt>Volume<span class="rng">0 – 1</span></dt><dd>Master level.</dd></div>
+<div class="ctl-row"><dt>Bend range<span class="rng">1 – 96 st</span></dt><dd>Defaults to 48, the MPE/Push standard. Adjust if pitch glides land wrong.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">07.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">timbre stops</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Onde</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Creux</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Gambé</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Nasal</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Octave</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Souffle</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Drift</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Warmth</span></div>
+</div>
+<p class="bank-note">These banks come from the parameters ordering alphabetically by long name (a1…c2) rather than from named banks.</p>
+</div>
+<div class="bank">
+<div class="bank-head">diffuseurs &amp; jeu</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Princip</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Spring</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Metal</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Palme</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Glide</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Touche</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Vibrato</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Volume</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">extras</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Bend rg</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Fond</span></div>
+<div class="enc empty"><span class="enc-n">3</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">4</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<p class="bank-note">Banks 1 and 2 are full at eight encoders each, so Fond lives here rather than with the other timbre stops.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">07.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">the ribbon — two ways, and one of them is better</h3><p><b>Portamento (recommended):</b> take the Push pads <i>out</i> of MPE (Setup → Expression → Mono or Poly Aftertouch). Moving across pads then plays stepped notes on one channel, and turning up <b>Glide</b> slurs the mono voice between them — the <i>au ruban</i> feel. Keep aftertouch on so the touche still works. <b>MPE on</b> gives true per-note bend, but Push&#x27;s pads only emit continuous bend <i>within</i> a pad — sliding across pads retriggers notes. So MPE = per-pad vibrato, not long sweeps.</p>
+<h3 class="sub">starting points</h3><p><i>Messiaen</i>: Onde 0.9, Octave 0.2, Drift 0.35, Spring 0.3, Palme 0.5, Glide 80 ms, slow pressure swells. <i>Radiophonic</i>: Creux 0.7, Nasal 0.3, Drift 0.6, Metal 0.5, Touche 0.7. <i>Ghost choir</i>: Souffle 0.4, Onde 0.5, Palme 0.7, Spring 0.5, slide low.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">07.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>If pressure or bend seem global rather than per-note, check the track is receiving MPE. If you edit the patch in Max, the inspector&#x27;s Max for Live → <code>is_mpe</code> flag must stay on.</li><li>The shipped device is <b>frozen</b> (<code>ondes_voice.js</code> embedded). <code>build_ondes.py</code> now writes a frozen, self-contained device — there&#x27;s no manual freeze step any more.</li><li>A blank black UI means the background panel was drawn first — in patcher JSON the <i>first</i> box draws frontmost. The build script appends the panel last.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">07.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_ondes.py</code> writes a frozen <code>.amxd</code> with the current <code>ondes_voice.js</code> embedded. Run <code>python3 sim_test.py</code> first after any DSP change to catch instabilities.</p>
+<p><code>Ondes Martenot.amxd.frozen-bak</code> is a known-good copy.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="splice-tape-collage.html"><span>previous</span>splice (tape collage)</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="sw-radio.html"><span>next</span>sw radio</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

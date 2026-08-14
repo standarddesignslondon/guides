@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scene placer — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">12</p>
+  <h1>scene placer</h1>
+  <p class="ch-sub">Places a voice or source inside a loaded environment recording.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/scene–placer.png" alt="Scene Placer"></div><figcaption>scene placer</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">12.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Combines a looped stereo ambience bed, distance filtering, sample-responsive brightness, sparse outdoor-style early reflections, stereo-width control and voice-keyed ducking. This is <b>perceptual scene construction, not measured convolution</b> — an ordinary field recording isn&#x27;t an impulse response, so it doesn&#x27;t claim to reproduce the exact acoustics of the place.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>gpt-5.6</dd></div><div class="fact"><dt>state</dt><dd>v0.1</dd></div><div class="fact"><dt>folder</dt><dd>scene-placer</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">12.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drag <code>device/Scene Placer v0.1.amxd</code> onto the voice or source track.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Leave <b>Source</b> on <b>Sample</b>, then drag a garden, room or field recording from Live&#x27;s browser or the Finder onto the Environment area.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Set <b>Place</b> high enough to enter the scene, then establish perspective with <b>Distance</b> and <b>Space</b>.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Balance the audible recording with <b>Ambience</b>, then raise <b>Match</b> to let its changing upper-frequency energy animate the voice&#x27;s air.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">12.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">controls</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Place<span class="rng">0 – 1</span></dt><dd>Equal-power transition from the original track to the constructed scene.</dd></div>
+<div class="ctl-row"><dt>Distance<span class="rng">0 – 1</span></dt><dd>Reduces direct level and high-frequency air.</dd></div>
+<div class="ctl-row"><dt>Space<span class="rng">0 – 1</span></dt><dd>Adds short ground and boundary reflections — not an indoor reverb tail.</dd></div>
+<div class="ctl-row"><dt>Ambience<span class="rng">0 – 1</span></dt><dd>Level of the loaded recording.</dd></div>
+<div class="ctl-row"><dt>Match<span class="rng">0 – 1</span></dt><dd>How much slow brightness movement derived from the recording is applied to the placed source.</dd></div>
+<div class="ctl-row"><dt>Width<span class="rng">0 – 1</span></dt><dd>Stereo width of the environment bed. The direct source keeps its original position.</dd></div>
+<div class="ctl-row"><dt>Duck<span class="rng">0 – 1</span></dt><dd>Gently lowers the ambience during foreground audio, for intelligibility.</dd></div>
+<div class="ctl-row"><dt>Output<span class="rng">±12 dB</span></dt><dd>Final trim.</dd></div>
+<div class="ctl-row"><dt>Source<span class="rng">Sample / Live</span></dt><dd><b>Sample</b> uses the dropped recording. <b>Live</b> takes the environment from another track via the Environment Sender.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">12.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">placement</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Place</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Distance</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Space</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Ambience</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Match</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Width</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Duck</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Output</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">source</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Source</span></div>
+<div class="enc empty"><span class="enc-n">2</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">3</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">4</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<p class="bank-note">The less frequently changed Source selector sits on its own bank.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">12.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">using a live environment from another track</h3><p>Put <code>Scene Placer Environment Sender v0.1.amxd</code> on the environment track and choose <b>Live</b> in the main device. The sender is transparent — it passes that track through unchanged. <b>Use only one sender at a time in a Set.</b></p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">12.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>The sample path is remembered by <code>live.drop</code>. Keep the source file available, or use <b>Collect All and Save</b> when moving the Set.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">12.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>node scripts/build_scene_placer.js</code>, then <code>node tests/test_structure.js</code>.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="manual-tape.html"><span>previous</span>manual tape</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="false-memory.html"><span>next</span>false memory</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

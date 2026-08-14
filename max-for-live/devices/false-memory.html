@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>false memory — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">13</p>
+  <h1>false memory</h1>
+  <p class="ch-sub">Degradation effect — parallel analog and digital damage paths under one intensity macro.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/false–memory.png" alt="False Memory"></div><figcaption>false memory</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">13.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">A clean-room build from the published False Memory documentation. <b>Memory</b> is the master destruction intensity; <b>Character</b> crossfades between parallel analog and digital paths, and Drift, oxide dropout, Fog and Ghosts follow that stage. At Memory 0 the output is guaranteed clean even if Mix is fully wet.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>gpt-5.6</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>folder</dt><dd>false-memory</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">13.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drag <code>device/False Memory.amxd</code> onto an audio or MIDI track.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Raise <b>Memory</b> — that&#x27;s the master intensity for everything else.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Move <b>Character</b> to crossfade between the analog and digital paths, then pick the Type for each.</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>Randomize</b> for a new starting point — it leaves Mix, Hiss and Crackle alone.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">13.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">performance</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Memory<span class="rng">0 – 1</span></dt><dd>Master destruction intensity. <b>At zero the output is clean</b>, whatever Mix is doing.</dd></div>
+<div class="ctl-row"><dt>Character<span class="rng">0 – 1</span></dt><dd>Crossfades the parallel analog and digital paths.</dd></div>
+<div class="ctl-row"><dt>Damage<span class="rng">0 – 1</span></dt><dd>Severity of the degradation.</dd></div>
+<div class="ctl-row"><dt>Drift<span class="rng">0 – 1</span></dt><dd>Pitch/time instability.</dd></div>
+<div class="ctl-row"><dt>Fog<span class="rng">0 – 1</span></dt><dd>Smearing haze over the signal.</dd></div>
+<div class="ctl-row"><dt>Ghosts<span class="rng">0 – 1</span></dt><dd>Displaced repeats and imprints.</dd></div>
+<div class="ctl-row"><dt>Mix<span class="rng">0 – 1</span></dt><dd>Dry/wet.</dd></div>
+<div class="ctl-row"><dt>Randomize<span class="rng">button</span></dt><dd>Rerolls the controls — but leaves Mix, Hiss and Crackle unchanged, matching the documented exception.</dd></div>
+</dl>
+<h3 class="sub">modes &amp; texture</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Analog Type<span class="rng">Cassette / Reel / VHS</span></dt><dd>Analog modes emphasise bandwidth loss, saturation, wow/flutter and texture.</dd></div>
+<div class="ctl-row"><dt>Digital Type<span class="rng">Lo-fi / Circuit / Data-mosh</span></dt><dd>Digital modes emphasise sample-rate and bit-depth reduction, and buffer repeats.</dd></div>
+<div class="ctl-row"><dt>Fog Type<span class="rng">Tonal / Inharmonic / Evolving</span></dt><dd>Flavour of the fog.</dd></div>
+<div class="ctl-row"><dt>Ghost Type<span class="rng">Echoes / Imprints / Granular</span></dt><dd>Flavour of the ghosts.</dd></div>
+<div class="ctl-row"><dt>Hiss / Crackle<span class="rng">0 – 1</span></dt><dd>Noise floor and surface noise.</dd></div>
+<div class="ctl-row"><dt>Evolve<span class="rng">Off / On</span></dt><dd>Pushes Memory, Damage, Fog and Ghosts toward maximum over <b>Evolve Time</b>. Those four controls <b>resist manual changes</b> until Evolve is switched off.</dd></div>
+<div class="ctl-row"><dt>Evolve Time<span class="rng">1 – 64 min</span></dt><dd>How long the journey takes.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">13.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">performance</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Memory</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Character</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Damage</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Drift</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Fog</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Ghosts</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Mix</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Randomize</span></div>
+</div>
+<p class="bank-note">Arranged for live playing — macro intensity and the six most audible gestures under one hand, Randomize at the far right.</p>
+</div>
+<div class="bank">
+<div class="bank-head">modes</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Analog Type</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Digital Type</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Fog Type</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Ghost Type</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Hiss</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Crackle</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Evolve Time</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Evolve</span></div>
+</div>
+<p class="bank-note">The choices you change less often.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">13.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">memory is the safety valve</h3><p>Because zero Memory guarantees a clean output regardless of Mix, you can automate Memory alone to bring the whole effect in and out without touching anything else.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">13.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>While <b>Evolve</b> is on, Memory, Damage, Fog and Ghosts won&#x27;t respond to manual changes — switch it off first.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">13.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>node scripts/build_false_memory.js</code>, then <code>node tests/test_structure.js</code>. The editable <code>.maxpat</code> and the packaged <code>.amxd</code> are generated together; no external abstractions, samples or js at runtime.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="scene-placer.html"><span>previous</span>scene placer</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="tape-error.html"><span>next</span>tape error</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

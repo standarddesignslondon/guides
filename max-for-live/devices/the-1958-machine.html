@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>the 1958 machine — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">05</p>
+  <h1>the 1958 machine</h1>
+  <p class="ch-sub">Turns anything into the sound of the early European electronic-music studios, c. 1950–65.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/the–1958–machine.png" alt="The 1958 Machine"></div><figcaption>the 1958 machine</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">05.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">A single chain modelled on the Philips NatLab / Room 306 workflow: band-limiting, a singing band-pass, ring modulation, bell resonators, a tape stage with true varispeed loop capture, a granular splicer, a delay wheel, an FDN chamber and tape echo. <b>Every module bypasses at 0</b>, so all dials down passes clean.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v2.1</dd></div><div class="fact"><dt>folder</dt><dd>The 1958 Machine</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">05.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>The1958Machine.amxd</code> on an audio track. All dials at 0 = clean pass-through.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Start with <b>Colour</b> and <b>Resonance</b> — the band-pass is the &quot;noise melody&quot; tool.</span></li>
+<li><span class="step-n">03</span><span class="step-t">For the tape workflow: <b>Capture</b> on → play material in → Capture off (loop length is stamped automatically) → <b>Play</b> on. Now <b>Speed</b> is true varispeed and <b>Reverse</b> plays it backwards.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Try the presets table below as starting points, then save each as an <code>.adv</code> once you&#x27;ve auditioned it.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">05.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">the chain (all dials 0–10 unless noted)</h3>
+<p class="lead">Signal flow: In → mono sum + DC block → <b>Era</b> band-limit → <b>Colour/Resonance</b> band-pass → <b>Metal</b> ring mod → <b>Bell</b> resonators → <b>Tape</b> → <b>Splice</b> delay wheel → FDN chamber → tape echo → width → limiter.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Era<span class="rng">0 – 10</span></dt><dd>Band-limit: HP 40→300 Hz, LP 14k→2.2 kHz. The single &quot;how old&quot; control.</dd></div>
+<div class="ctl-row"><dt>Colour / Resonance<span class="rng">0 – 10</span></dt><dd>SVF band-pass, 100 Hz–6 kHz, Q up to ~46. Ride Colour with Resonance at 10 over noise for the classic noise melody.</dd></div>
+<div class="ctl-row"><dt>Metal<span class="rng">0 – 10</span></dt><dd>Ring modulator, 60 Hz–1.8 kHz, tracking the dial.</dd></div>
+<div class="ctl-row"><dt>Bell<span class="rng">0 – 10</span></dt><dd>Five tuned comb resonators at 110 Hz plus inharmonic partials.</dd></div>
+<div class="ctl-row"><dt>Tape<span class="rng">0 – 10</span></dt><dd>Wow/flutter, hiss, <code>tanh</code> saturation and HF loss. Also carries the hiss/hum/crackle floor.</dd></div>
+<div class="ctl-row"><dt>Splice<span class="rng">0 – 10</span></dt><dd>The granular splicer: six grain voices cut from a rolling tape of the processed signal, each with random position, pitch (±1 octave at full), length, and a 20 % chance of playing reversed. Works on live input or a capture.</dd></div>
+<div class="ctl-row"><dt>Grain<span class="rng">18 – 103 ms</span></dt><dd>Base grain length for the splicer.</dd></div>
+<div class="ctl-row"><dt>Space / Feedback<span class="rng">0 – 10</span></dt><dd>The four-line FDN chamber (Householder). Both loops have <code>tanh</code> plus a final <code>limi~</code>, so Feedback + Space at 10 is a bounded scream, not a runaway.</dd></div>
+<div class="ctl-row"><dt>Instability<span class="rng">0 – 10</span></dt><dd>General pitch/time unsteadiness.</dd></div>
+<div class="ctl-row"><dt>EchoAmt / EchoTime<span class="rng">0 – 10 · 30 – 1000 ms</span></dt><dd>Flutter-modulated tape echo with damped repeats.</dd></div>
+<div class="ctl-row"><dt>Shift<span class="rng">±500 Hz</span></dt><dd>Bode-style SSB frequency shifter (IIR Hilbert pair). Sideband follows the dial&#x27;s sign; 0 = bypassed. Sits after the ring mod — the Varèse metallic-dissonance tool.</dd></div>
+<div class="ctl-row"><dt>Width / Mono<span class="rng">0 – 10 · toggle</span></dt><dd>Stereo width stage.</dd></div>
+</dl>
+<h3 class="sub">tape loop &amp; failure</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Capture<span class="rng">toggle</span></dt><dd>Records input into a 10 s mono buffer. Switching it off stamps the loop length (shown in the LOOP s readout).</dd></div>
+<div class="ctl-row"><dt>TapePlay<span class="rng">toggle</span></dt><dd>The tape stage now plays the captured loop instead of the live stream.</dd></div>
+<div class="ctl-row"><dt>Speed<span class="rng">±12 semitones</span></dt><dd>True varispeed — pitch and time linked.</dd></div>
+<div class="ctl-row"><dt>Reverse<span class="rng">toggle</span></dt><dd>Plays backwards; the crossfade passes through zero speed, like grabbing the reel.</dd></div>
+<div class="ctl-row"><dt>HandSync<span class="rng">0 – 10</span></dt><dd>A second playhead with independent slow drift, mixed with the first. Only audible with a captured loop playing — the two-machine hand-synchronisation wobble.</dd></div>
+<div class="ctl-row"><dt>Dropout<span class="rng">0 – 10</span></dt><dd><b>How often</b> tape-failure events happen — rare single events low, up to ~3/s high. 0 = off, fully clean.</dd></div>
+<div class="ctl-row"><dt>Damage<span class="rng">0 – 10</span></dt><dd><b>How bad</b> each one is: gentle level dips → deeper dips + oxide-shed HF choke → near-mutes, splice thumps and a pitch lurch as the splice passes the head. Every event rolls its own severity, length and direction.</dd></div>
+<div class="ctl-row"><dt>IRMix<span class="rng">0 – 10</span></dt><dd>Blend for the convolved impulse response (<b>Load IR</b> or drag onto <b>Drop IR</b>). The first ~93 ms is convolved with zero latency, in parallel with the chamber — real chamber/plate/spring <i>onsets</i> over the FDN tail.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">05.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">performance</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Colour</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Resonance</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Metal</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Tape</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Splice</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Space</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Feedback</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Instability</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">machine</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Era</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Bell</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Speed</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">EchoTime</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">EchoAmt</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Width</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Dropout</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Damage</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Capture</span>
+<span class="btn">TapePlay</span>
+<span class="btn">Reverse</span>
+<span class="btn">Mono</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">studio</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Shift</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">HandSync</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Grain</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">IRMix</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Capture</span>
+<span class="btn">TapePlay</span>
+<span class="btn">Reverse</span>
+<span class="btn">Mono</span>
+</div>
+<p class="bank-note">The four buttons appear on both Bank 2 and Bank 3. Banks are wiped on load before being recreated — harmless &quot;delete&quot; warnings may appear in the Max console.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">05.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">presets to dial in (values 0–10)</h3><p><b>1958 Pure</b> Era 3, Colour 5, Reson 6, Metal 1, Tape 2, Space 4, Fdbk 2, Instab 1, Echo 1 / 240 ms, Width 2 · <b>Noise Melody</b> Era 2, <i>ride Colour</i>, Reson 10, Tape 1, Space 3, Fdbk 1, Instab 2 (put noise or vinyl crackle in front) · <b>Concret PH</b> Era 4, Colour 4, Reson 3, Tape 4, Splice 8, Space 8, Fdbk 7, Instab 3, Echo 2 / 370 ms, Width 5 — wants a captured loop · <b>Kid Baltan</b> Era 1, Colour 7, Reson 4, Tape 3, Space 2, Fdbk 3, Instab 2, Echo 6 / 180 ms, Width 3 · <b>Kaïn en Abel</b> Era 3, Colour 4, Reson 3, Metal 6, Bell 8, Tape 2, Space 7, Fdbk 9, Instab 2, Echo 1 / 300 ms, Width 4 · <b>Poème Spatial</b> Era 4, Colour 4, Reson 4, Metal 3, Bell 2, Tape 4, Splice 4, Space 5, Fdbk 4, Instab 3, Echo 3 / 240 ms, Width 8.</p>
+<h3 class="sub">tired archive reel vs. genuinely broken tape</h3><p>Dropout 3 / Damage 4 on live input reads as a tired reel. Dropout 6 / Damage 8 on a captured loop is properly broken. The damage sits before the delay wheel, so it echoes through the space.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">05.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>With <b>Tape &gt; 0</b> on the <i>live</i> stream there&#x27;s a ~30 ms wobble-delay latency by design — you can&#x27;t flutter a signal that hasn&#x27;t happened yet.</li><li>The loaded IR is <b>not</b> stored in the Live Set. Reload it per session, or resave the device with a default.</li><li>If you hear pumping at silly settings, that&#x27;s the final <code>limi~ 2</code> doing its job.</li><li>If the <code>.amxd</code> ever refuses to load: open <code>The1958Machine.maxpat</code> in Max, select all, copy, paste into a blank Max Audio Effect, save.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">05.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_1958machine.py</code> regenerates both device files from <code>the1958machine_dsp.genexpr</code>. The DSP is embedded — no freeze needed.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="oram.html"><span>previous</span>oram</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="splice-tape-collage.html"><span>next</span>splice (tape collage)</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

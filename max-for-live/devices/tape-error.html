@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tape error — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">14</p>
+  <h1>tape error</h1>
+  <p class="ch-sub">Fire a tape fault on an audio track from a note on a MIDI track — velocity is severity.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/tape–error.png" alt="Tape Error"></div><figcaption>tape error</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/tape–error–trigger.png" alt="Tape Error Trigger (MIDI track)"></div><figcaption>tape error trigger (midi track)</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">14.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead"><b>Two devices</b>, communicating via a shared channel number (1–16), so you can run several independent pairs in one Set. Audio is written continuously to a 12-second tape buffer with a read head chasing the write head; a trigger sags the motor speed, so pitch drops, the head falls behind, and the dropout smears in earlier programme material before over-speeding to wind the tape back in.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>gpt-5.6</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>folder</dt><dd>Tape Error</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">14.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Put <b>Tape Error</b> on the audio track to be glitched, and <b>Tape Error Trigger</b> on the MIDI track that will fire it.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Set both devices&#x27; <b>Chan</b> to the same number.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Any note-on on the MIDI track fires one tape error. <b>Velocity = severity</b>, scaled by the Severity dial — so the dial sets the ceiling.</span></li>
+<li><span class="step-n">04</span><span class="step-t">The <b>Glitch</b> button on the audio device fires a test event (equivalent to velocity 100).</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">14.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">audio device</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Chan<span class="rng">1 – 16</span></dt><dd>Must match the trigger device. Lets several pairs coexist.</dd></div>
+<div class="ctl-row"><dt>Severity<span class="rng">0 – 1</span></dt><dd>Depth of slowdown, dropout and crackle — the ceiling that incoming velocity scales against.</dd></div>
+<div class="ctl-row"><dt>Length<span class="rng">0.05 – 2 s</span></dt><dd>Nominal event duration. Actual duration is randomised around this.</dd></div>
+<div class="ctl-row"><dt>Muffle<span class="rng">0 – 1</span></dt><dd>How dull the sound gets during slowdown and recovery.</dd></div>
+<div class="ctl-row"><dt>Vary<span class="rng">0 – 1</span></dt><dd>How much every parameter is re-randomised per event. 0 = repeatable, 1 = wild. (Appears as <code>Variation</code> in Live&#x27;s parameter list.)</dd></div>
+<div class="ctl-row"><dt>Dry/Wet<span class="rng">0 – 1</span></dt><dd>Usually leave at 100 % — the device is transparent when idle.</dd></div>
+<div class="ctl-row"><dt>Glitch<span class="rng">button</span></dt><dd>Fires a test event.</dd></div>
+</dl>
+<h3 class="sub">trigger device (midi track)</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Chan<span class="rng">1 – 16</span></dt><dd>Must match the audio device.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">14.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">tuning it by ear</h3><p>All DSP is one gen~ codebox. Values worth adjusting after listening: slowdown depth range (<code>rdepth</code>), motor inertia (<code>0.0012</code> — smaller is more sluggish and tapey), catch-up speed (<code>0.045</code>), crackle density (<code>0.9975</code> threshold), and the muffle floor (<code>650</code> Hz).</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">14.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li><b>These are <code>.maxpat</code> files, not draggable devices</b> in the original workflow: paste them into blank M4L shells. Drop a blank Max Audio Effect, click Edit, Select All + delete, then open <code>TapeError.maxpat</code> in Max, Select All, Copy, and Paste into the device patcher. Cmd+S. Same procedure with a blank Max <b>MIDI</b> Effect for <code>TapeErrorTrigger.maxpat</code>. (Built <code>.amxd</code> copies are in the folder.)</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">14.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>The patches are the source: <code>TapeError.maxpat</code> and <code>TapeErrorTrigger.maxpat</code>.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="false-memory.html"><span>previous</span>false memory</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="strip-silence.html"><span>next</span>strip silence</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

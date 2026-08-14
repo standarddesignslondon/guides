@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>strip silence — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">15</p>
+  <h1>strip silence</h1>
+  <p class="ch-sub">Removes the silence from arrangement recordings — non-destructive clip trimming, one undo step.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/stripsilence.png" alt="Strip Silence"></div><figcaption>strip silence</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">15.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Drop it on an audio track, set a threshold, press <b>Strip</b> — every unwarped arrangement clip on that track is rebuilt with its silent sections removed, muted, or split out, exactly as if you&#x27;d cut and trimmed by hand. No new audio files are created, and one Cmd+Z undoes the whole run. Every operation is verified by reading back what Live actually did; on any mismatch the original clip is restored automatically.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>gpt-5.6</dd></div><div class="fact"><dt>state</dt><dd>v2</dd></div><div class="fact"><dt>folder</dt><dd>StripSilence</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">15.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>StripSilence.amxd</code> onto the <b>audio track</b> containing the recording. It must sit directly on the track, not inside a rack.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Set <b>Thresh</b> (start ~−48 dB), <b>MinSil</b>, <b>Pad</b> and <b>MinAud</b>.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Choose a <b>Mode</b> and press <b>Strip</b>. The status line reports progress and the result.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Optionally press <b>Close Gaps</b> afterwards to ripple everything together.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Not happy? <b>Cmd+Z once</b> — each button press is a single undo step.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">15.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">controls</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Thresh<span class="rng">−80 … −12 dB</span></dt><dd>Anything quieter counts as silence. Start around −48 dB; raise toward −36 for noisy recordings.</dd></div>
+<div class="ctl-row"><dt>MinSil<span class="rng">20 – 2000 ms</span></dt><dd>Silences shorter than this are left alone — stops it chopping between words. Default 250 ms.</dd></div>
+<div class="ctl-row"><dt>Pad<span class="rng">0 – 500 ms</span></dt><dd>Audio kept either side of each region so attacks and tails aren&#x27;t clipped. Default 40 ms.</dd></div>
+<div class="ctl-row"><dt>MinAud<span class="rng">20 – 1000 ms</span></dt><dd>Audio blips shorter than this are treated as silence — removes clicks. Default 80 ms.</dd></div>
+<div class="ctl-row"><dt>Mode<span class="rng">Delete / Mute / Split</span></dt><dd><b>Delete</b> removes silence and leaves gaps. <b>Mute</b> makes silent parts separate muted clips. <b>Split</b> just cuts at the boundaries.</dd></div>
+<div class="ctl-row"><dt>Strip<span class="rng">button</span></dt><dd>Runs the pass.</dd></div>
+<div class="ctl-row"><dt>Close Gaps<span class="rng">button</span></dt><dd>Ripples everything together: the first clip stays put, every following clip shifts left to sit back-to-back. Works on any clips (no analysis involved); contiguous or overlapping clips are left alone.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">15.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">close gaps changes musical timing</h3><p>Rippling clips together moves them relative to the grid and to other tracks. It&#x27;s meant for spoken word and sound-design edits, not beat-aligned material.</p>
+<h3 class="sub">if something fails</h3><p>The status line says so, and full diagnostics print to the Max window — open the device in the Max editor to see them. Trim support is probed on a backup copy <i>before</i> your original is touched.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">15.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li><b>Unwarped clips only.</b> Warped clips are skipped. Arrangement recordings are unwarped by default; to process a warped clip, switch Warp off first.</li><li><b>Live 12.1 or later</b> — it needs the Max 9 engine, because the JS is embedded via <code>v8</code>. On Live 12.0, edit the device and replace the <code>v8</code> object with <code>js strip_silence.js</code>, keeping the .js beside the .amxd.</li><li>Constant tempo assumed — tempo automation across the clip will misplace regions.</li><li>Use <b>one instance at a time</b>: instances share the analysis buffer name.</li><li>Clip fades aren&#x27;t recreated on the new boundaries; add them after stripping.</li><li>Each file is loaded fully into RAM during analysis. As with anything that edits your arrangement — test on a copy of the Set first.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">15.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_device.py</code> rebuilds the <code>.amxd</code> and <code>.maxpat</code> from <code>strip_silence.js</code>, giving a code-only edit → rebuild → drop-into-Live workflow.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="tape-error.html"><span>previous</span>tape error</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="disintegration.html"><span>next</span>disintegration</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

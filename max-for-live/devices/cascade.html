@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cascade — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">01</p>
+  <h1>cascade</h1>
+  <p class="ch-sub">Multi-tap machine — up to 64 echoes spread across a window you shape by hand.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/cascade.png" alt="Cascade"></div><figcaption>cascade</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">01.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">An UltraTap-equivalent built from scratch. Rather than one delay time, Cascade scatters 1–64 taps across a <b>Length</b> window and lets you reshape their spacing (Spread), level contour (Taper) and stereo placement (Width). Add Feedback, Tone, Slurm and a Chop block in front and it runs from tight slapback through rhythmic clouds to full soundscape wash. Wet level is energy-normalised, so Taps and Taper change <i>character</i>, not loudness.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete</dd></div><div class="fact"><dt>folder</dt><dd>Cascade Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">01.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Cascade.amxd</code> on an audio track — drums or a short vocal phrase show it off best.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Mix ~50, Taps 8, Length ~800 ms gives eight even echoes. That&#x27;s the baseline everything else deforms.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Sweep <b>Spread</b> to hear the taps bunch toward the end (+) or the start (−); <b>Taper</b> fades them down (+) or swells them up (−).</span></li>
+<li><span class="step-n">04</span><span class="step-t">For the soundscape: Taps 30+, Length 5 s, Slurm 80, Feedback 70, Taper −30, Tone −80.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">01.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">tap machine</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Length<span class="rng">10 ms – 10 s (log)</span></dt><dd>The time over which all the taps are spaced. Dragging it crossfades each tap to its new position (40 ms, equal-power) so there is <b>no pitch shift and no judder</b>.</dd></div>
+<div class="ctl-row"><dt>Taps<span class="rng">1 – 64</span></dt><dd>How many echoes fill the window.</dd></div>
+<div class="ctl-row"><dt>Pre-delay<span class="rng">0 – 1 s</span></dt><dd>Silence before the first tap.</dd></div>
+<div class="ctl-row"><dt>Spread<span class="rng">±100</span></dt><dd>0 = even. Positive groups taps toward the end (speeding up), negative toward the start (slowing down). Past ±50 the spacing goes exponential.</dd></div>
+<div class="ctl-row"><dt>Taper<span class="rng">±100</span></dt><dd>Positive fades the taps down, negative fades them up (reverse-ish). Past ±50 exponential.</dd></div>
+<div class="ctl-row"><dt>Width<span class="rng">±100</span></dt><dd>Alternating equal-power pans; the sign picks which side the first tap lands on. 0 = centred, stereo input preserved.</dd></div>
+<div class="ctl-row"><dt>Feedback<span class="rng">0 – 100 %</span></dt><dd>The whole tap pattern repeats every Length. <code>tanh</code> in the loop means it saturates rather than running away, even at 100.</dd></div>
+<div class="ctl-row"><dt>Sync<span class="rng">Free / Sync</span></dt><dd>Sync quantises Length, Pre-delay and the Chop LFO to note values at Live&#x27;s tempo (1/64 to 8 bars, incl. dotted and triplet). The same dials keep working — values snap to the grid. Swell/Trig envelope times stay free.</dd></div>
+</dl>
+<h3 class="sub">signal</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Mix<span class="rng">0 – 100 %</span></dt><dd>100 = all wet. Gentle nonlinear taper.</dd></div>
+<div class="ctl-row"><dt>In / Out<span class="rng">−60 … +12 dB</span></dt><dd>In feeds wet <b>and</b> dry, as on the original.</dd></div>
+<div class="ctl-row"><dt>Tone<span class="rng">±100</span></dt><dd>Tilt at 700 Hz: negative darker taps, positive brighter (±10 dB shelves). Wet only — the dry signal is untouched.</dd></div>
+<div class="ctl-row"><dt>Slurm<span class="rng">0 – 100 %</span></dt><dd>Slow multi-voice detune (~8–17 cents at full) plus small-reverb diffusion. Taps lose their attacks and chorus into a wash as it rises. 0 is exactly transparent.</dd></div>
+</dl>
+<h3 class="sub">chop (pre-tap, wet input only)</h3>
+<p class="lead">Chop happens <i>before</i> the tap machine, so feedback tails are not re-chopped.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Chop<span class="rng">Off / Tri / Saw / Ramp / Sqr / S+H / Swell / Trig</span></dt><dd>Tri through S+H are tremolo LFOs. <b>Swell</b> removes attacks so notes fade up. <b>Trig</b> lets each hit through then chokes it; silence re-arms it.</dd></div>
+<div class="ctl-row"><dt>Rate<span class="rng">0 – 100</span></dt><dd>Multi-function: LFO speed 0.1–20 Hz; Swell rise 5 ms–2 s; Trig release 10 ms–2 s. All log.</dd></div>
+<div class="ctl-row"><dt>Sens<span class="rng">0 – 100 %</span></dt><dd>Onset threshold for Swell and Trig — higher is more sensitive. Ignored by the LFO modes.</dd></div>
+</dl>
+<h3 class="sub">morph</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Morph<span class="rng">0 – 100 %</span></dt><dd>Travels 12 sound parameters (everything except In/Out/Chop mode/Sync) from the <b>current</b> dial positions toward the stored B snapshot. 0 = dials live and exact; 100 = pinned to B. Automate 0↔100 for the Hotswitch trick.</dd></div>
+<div class="ctl-row"><dt>Set B<span class="rng">button</span></dt><dd>Captures the current dial state as the B snapshot. Persists with the Set.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">01.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">machine</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Length</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Taps</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Pre-delay</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Spread</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Taper</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Width</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Feedback</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Sync</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">perform</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Morph</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Mix</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Tone</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Slurm</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Chop</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Rate</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Sens</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Set B</span>
+</div>
+<p class="bank-note">Set B on Push is momentary — it fires the snapshot capture and resets itself.</p>
+</div>
+<div class="bank">
+<div class="bank-head">levels</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">In</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Out</span></div>
+<div class="enc empty"><span class="enc-n">3</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">4</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">01.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">length is a shape control, not a time control</h3><p>Because each tap crossfades to its new position rather than the read head travelling, you can drag Length live — even with feedback up — and hear the echo pattern redistribute smoothly. That&#x27;s the whole point of the machine.</p>
+<h3 class="sub">the party trick</h3><p>Square Chop + Slurm 60 + Feedback 60 + Taps 30 — chopped fragments smear into rhythmic clouds.</p>
+<h3 class="sub">morph as a performance move</h3><p>Dial a sound, press Set B, twist the dials somewhere else, then ride Morph. The journey survives a Set save/reload.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">01.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li><b>Freeze after every rebuild.</b> <code>build_cascade.py</code> writes an <i>unfrozen</i> device; without a freeze the js can&#x27;t be found and Morph is dead. Open in Live → Edit (spanner) → snowflake → Cmd+S.</li><li>&quot;no function cur&quot; errors <i>at device load</i> are benign (messages beat the js compile). The same errors <i>after</i> load mean the freeze didn&#x27;t happen.</li><li>Never rescue a copy from an old Set — rebuild from the script instead.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">01.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_cascade.py</code> builds <code>Cascade.amxd</code> + <code>Cascade.maxpat</code> from nothing and runs the wiring post-checks. Then <b>freeze</b>.</p>
+<p><code>python3 sim_cascade.py</code> is an offline mirror of the DSP maths — run it after any change to the gen~ code.</p></div>
+</section>
+<nav class="chapnav"><span class="cn empty"></span><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="microcosmos.html"><span>next</span>microcosmos</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>disintegration — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">16</p>
+  <h1>disintegration</h1>
+  <p class="ch-sub">Cumulative tape-oxide loss — one reel, deterministic damage, 256 passes.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/disintegration.png" alt="Disintegration"></div><figcaption>disintegration</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">16.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Models a reel wearing out. The damage pattern is <b>deterministic for one reel</b>: increasing Passes adds damage without moving or healing any of the earlier dropouts. High-frequency material fails faster than the low-frequency body, so early wear is heard as lost sheen before it becomes silence. Fixed &quot;relic&quot; islands guarantee that pass 256 leaves a few filtered fragments rather than mathematical silence.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>gpt-5.6</dd></div><div class="fact"><dt>state</dt><dd>prototype 0.3.1</dd></div><div class="fact"><dt>folder</dt><dd>Disintegration</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">16.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drag <code>Disintegration.amxd</code> onto an audio track.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Move <b>Passes</b> by hand to audition any state from 0 (clean) to 256.</span></li>
+<li><span class="step-n">03</span><span class="step-t">For automatic ageing, turn <b>Run</b> on: Passes increments by one at each loop boundary while the transport runs.</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>Follow = Clip</b> uses a looped Session clip on the device&#x27;s track for its loop length. <b>Manual</b> uses the <b>Cycle</b> setting instead.</span></li>
+<li><span class="step-n">05</span><span class="step-t"><b>New Reel</b> generates a different permanent damage map.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">16.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">controls</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Passes<span class="rng">0 – 256</span></dt><dd>0 = clean, 256 = near-total loss with a few surviving fragments.</dd></div>
+<div class="ctl-row"><dt>Run<span class="rng">Off / On</span></dt><dd>Increments Passes by one at each playing-clip loop boundary (or manual Cycle boundary) while Live&#x27;s transport runs.</dd></div>
+<div class="ctl-row"><dt>Follow<span class="rng">Manual / Clip</span></dt><dd><b>Clip</b> uses a looped Session clip playing on the device&#x27;s track for its exact loop length and boundary events. <b>Manual</b> uses Cycle.</dd></div>
+<div class="ctl-row"><dt>Cycle<span class="rng">1 / 2 / 4 / 8 / 16 bars</span></dt><dd>Bar length follows Live&#x27;s current time-signature numerator. Used whenever Clip follow is off or no looped Session clip is playing.</dd></div>
+<div class="ctl-row"><dt>New Reel<span class="rng">button</span></dt><dd>Generates a different permanent damage map, then returns to Ready.</dd></div>
+<div class="ctl-row"><dt>Reel Seed<span class="rng">1 – 999999</span></dt><dd>The reel&#x27;s identity — the number behind the damage map.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">16.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">bank 1</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Passes</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Run</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Follow</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Cycle</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">New Reel</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<p class="bank-note">The remaining three encoders are intentionally empty. The buttons above the display toggle Run and Follow, advance Cycle and trigger New Reel. On the Push display Follow reads Manual or Clip; New Reel reads Ready and briefly shows New.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">16.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">the damage model</h3><p>Four fixed scales combine: broad holes that emerge late and expand slowly; medium oxide-loss regions; short pits and frayed edges; and dust-scale losses that break the final passes into fragments. Sustained material falls away first, while strong attacks can briefly print through resilient regions. A restrained nonlinear stage adds compression as the reel ages.</p>
+<h3 class="sub">it&#x27;s source-dependent on purpose</h3><p>Pads, drums, speech and full mixes expose different remnants at the same Passes value. Judge the voicing by ear against your own material. The horizontal meter shows how much material is surviving.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">16.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Automatic following currently targets <b>looped Session View clips</b>. Arrangement playback, stopped tracks and non-looped clips fall back to the manual Cycle value.</li><li>Developed and tested for the Push 3 controller; Standalone hasn&#x27;t been tested.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">16.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>source/Disintegration.maxpat</code> is the readable patch; the <code>.amxd</code> is built by <code>scripts/build_device.mjs</code>. Earlier builds and their notes are in <code>releases/</code>.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="strip-silence.html"><span>previous</span>strip silence</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

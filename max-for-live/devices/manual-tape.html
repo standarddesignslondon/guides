@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>manual tape — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">11</p>
+  <h1>manual tape</h1>
+  <p class="ch-sub">Hand-controlled sample playback — a tape reel you push forwards and backwards by hand.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/manual–tape.png" alt="Manual Tape"></div><figcaption>manual tape</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">11.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Load an audio file and drive it with a speed dial that stops at the centre, reverses below it and runs forward above it. The selected Start–End region loops continuously; you can either let pitch rise and fall naturally with speed, or lock it and timestretch instead.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>instrument</dd></div><div class="fact"><dt>built by</dt><dd>gpt-5.6</dd></div><div class="fact"><dt>state</dt><dd>v0.2.1</dd></div><div class="fact"><dt>folder</dt><dd>manual-tape</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">11.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drag <code>device/Manual Tape v0.2.1.amxd</code> onto a <b>MIDI track</b>.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Click <b>Load Tape</b> and choose a file, or drop audio onto <b>Drop Audio Here</b>.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Drag the <b>orange</b> line for Start, the <b>amber</b> line for End, and click or drag the <b>white</b> line for Playhead.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Turn <b>Tape Speed</b> off centre to move. Use <b>Engage Head</b> to set a speed silently first, then start.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">11.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">controls</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Tape File<span class="rng">drop / Load Tape</span></dt><dd>The loaded sample. Drop audio on <b>Drop Audio Here</b> or use the <b>Load Tape</b> button. The main tape window shows the whole waveform with the Start–End region and playhead drawn over it.</dd></div>
+<div class="ctl-row"><dt>Start / End<span class="rng">0 – 1</span></dt><dd>The looping region. Drag the orange (start) and amber (end) lines in the waveform.</dd></div>
+<div class="ctl-row"><dt>Playhead<span class="rng">0 – 1</span></dt><dd>The white line — click or drag it to move the head.</dd></div>
+<div class="ctl-row"><dt>Tape Speed<span class="rng">−127 … +127</span></dt><dd>Zero stops; negative reverses; positive runs forward. At zero the output fades to silence so the held sample doesn&#x27;t become DC.</dd></div>
+<div class="ctl-row"><dt>Max Range<span class="rng">±2x / 4x / 8x / 16x / 32x</span></dt><dd>What the ends of the Tape Speed dial mean. Default ±8x. (Labelled <b>Max Range</b> on the device face, <b>Max Speed</b> in Live&#x27;s parameter list and on Push.)</dd></div>
+<div class="ctl-row"><dt>Engaged<span class="rng">Off / On</span></dt><dd>Lets you prepare a speed silently, then engage playback.</dd></div>
+<div class="ctl-row"><dt>Gate Mode<span class="rng">Manual / MIDI</span></dt><dd><b>Manual</b>: Engage Head controls playback. <b>MIDI</b>: any note-on engages the tape and the final held note-off stops it. Note pitch and channel don&#x27;t affect the tape.</dd></div>
+<div class="ctl-row"><dt>Pitch Lock<span class="rng">Off / On</span></dt><dd>On = timestretched playback at the sample&#x27;s original pitch. Off = pitch rises and falls naturally with speed.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">11.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">tape</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Start</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">End</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Playhead</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Tape Speed</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Max Speed</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Engaged</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Pitch Lock</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Gate Mode</span></div>
+</div>
+<p class="bank-note">Engaged and Pitch Lock are toggle parameters, so Push can switch them straight from their parameter slots.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">11.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">the file is referenced, not embedded</h3><p>The path is stored with the Live Set and the sample reloads automatically when the Set reopens — but keep the source audio in place, or use <b>Collect All and Save</b> when moving the project. The display reads <b>Missing</b> if the stored file can&#x27;t be reopened; dropping or loading it again repairs the reference.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">11.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>The older <code>Manual Tape v0.1.amxd</code> audio-effect build is still in the folder for compatibility, but it has <b>no MIDI gating and no automatic sample recall</b>.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">11.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>node scripts/build_manual_tape.js</code>, then <code>node tests/test_structure.js</code> and <code>node tests/test_engine.js</code>. No external js, patcher or media dependencies.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="preset-scroll.html"><span>previous</span>preset scroll</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="scene-placer.html"><span>next</span>scene placer</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

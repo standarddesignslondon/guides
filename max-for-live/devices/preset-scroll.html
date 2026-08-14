@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>preset scroll — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">10</p>
+  <h1>preset scroll</h1>
+  <p class="ch-sub">Scroll an Arturia plugin&#x27;s preset browser from a Push encoder.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/preset–scroll.png" alt="Preset Scroll"></div><figcaption>preset scroll</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">10.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Arturia plugins don&#x27;t expose their preset library to the host, and MIDI Program Change only addresses a 128-slot playlist — useless for a ~2000-patch filtered list. But the <b>Next/Previous Preset arrows in the plugin GUI are MIDI-learnable</b>, and each trigger steps one preset through whatever list is currently showing. This device drives those.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>midi effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>folder</dt><dd>Preset Scroll Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">10.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drag <code>Preset Scroll.amxd</code> onto a <b>MIDI track</b>. It must sit <b>before the instrument</b> in the chain.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Use the <b>AU or VST2</b> version of the Arturia plugin — Live does not pass MIDI to VST3 instruments.</span></li>
+<li><span class="step-n">03</span><span class="step-t">In the plugin, MIDI-learn <b>Next Preset</b> to <b>CC 29</b> and <b>Previous Preset</b> to <b>CC 28</b>, both on channel 1. (Analog Lab uses 28/29 by default, so you may not need to.)</span></li>
+<li><span class="step-n">04</span><span class="step-t">Map the <b>Preset</b> dial to a Push encoder — it&#x27;s the first parameter. Right = next, left = previous.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">10.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">controls</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Preset<span class="rng">spring-back dial</span></dt><dd>Rests at centre (127) and never hits an end stop, so you can keep scrolling indefinitely. Spin fast to skip several; nudge slowly to audition one at a time.</dd></div>
+<div class="ctl-row"><dt>Next CC / Prev CC<span class="rng">0 – 127</span></dt><dd>Retarget the controllers for other plugins. Channel is fixed to 1 in this version.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">10.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">how it works</h3><p><code>midiin → midiout</code> passes all incoming MIDI through. The Preset dial outputs on turn; the patch takes the delta from 127, fires that many momentary CC pulses (value 127 then 0) on the Next or Prev controller, then sends <code>set 127</code> to recentre the dial without retriggering. The same spring-back pattern as the SW Radio fine-tune dial.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">10.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li><b>VST3 will not work</b> — Live doesn&#x27;t pass MIDI to VST3 instruments. Use AU or VST2.</li><li>The device must be <b>before</b> the instrument in the chain.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">10.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_preset_scroll.py</code> — pure Python, no dependencies. It hand-authors the patcher JSON and assembles the <code>.amxd</code> chunk format with the <code>mmmm</code> (MIDI effect) type code. Live&#x27;s title-bar reload button picks up a rebuild without re-adding the device.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="yt-sampler.html"><span>previous</span>yt sampler</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="manual-tape.html"><span>next</span>manual tape</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+{
+ "subject": {
+  "short": "max for live",
+  "title": "max for live devices",
+  "subtitle": "user guide",
+  "blurb": "An aide-m\u00e9moire for the devices in the Max for Live folder \u2014 what every control does, how the Push 3 encoders are laid out, and the handful of things each one needs you to remember.",
+  "noun": "device",
+  "noun_plural": "devices",
+  "page_dir": "devices"
+ },
+ "generated": "2026-08-14",
+ "items": [
+  {
+   "num": "01",
+   "slug": "cascade",
+   "name": "Cascade",
+   "tagline": "Multi-tap machine \u2014 up to 64 echoes spread across a window you shape by hand.",
+   "url": "devices/cascade.html",
+   "image": "images/cascade.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "02",
+   "slug": "microcosmos",
+   "name": "Microcosmos",
+   "tagline": "Replica of the Hologram Microcosm pedal \u2014 11 granular / loop effects, 44 variations, and a 30-second phrase looper.",
+   "url": "devices/microcosmos.html",
+   "image": "images/microcosmos.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "03",
+   "slug": "pulsograph",
+   "name": "Pulsograph",
+   "tagline": "Early-electronic rhythm machine \u2014 four synthesis lanes on a 32-step grid that drifts like a real motor.",
+   "url": "devices/pulsograph.html",
+   "image": "images/pulsograph.png",
+   "facets": {
+    "kind": "Instrument",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "04",
+   "slug": "oram",
+   "name": "ORAM",
+   "tagline": "Drawn sound after Daphne Oram's Oramics \u2014 paint film strips and the machine performs them.",
+   "url": "devices/oram.html",
+   "image": "images/oram.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "05",
+   "slug": "the-1958-machine",
+   "name": "The 1958 Machine",
+   "tagline": "Turns anything into the sound of the early European electronic-music studios, c. 1950\u201365.",
+   "url": "devices/the-1958-machine.html",
+   "image": "images/the\u20131958\u2013machine.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "06",
+   "slug": "splice-tape-collage",
+   "name": "Splice (Tape Collage)",
+   "tagline": "A 1950s random tape editor \u2014 razor-blades your recordings and splices them back together, imperfections included.",
+   "url": "devices/splice-tape-collage.html",
+   "image": "images/splice1.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "07",
+   "slug": "ondes-martenot",
+   "name": "Ondes Martenot",
+   "tagline": "Monophonic MPE Ondes voice for Push 3 pads \u2014 pressure is the envelope.",
+   "url": "devices/ondes-martenot.html",
+   "image": "images/ondes\u2013martenot\u2013fond\u2013version.png",
+   "facets": {
+    "kind": "Instrument",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "08",
+   "slug": "sw-radio",
+   "name": "SW Radio",
+   "tagline": "Tunes a KiwiSDR shortwave receiver anywhere in the world from inside Live.",
+   "url": "devices/sw-radio.html",
+   "image": "images/sw\u2013radio.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "09",
+   "slug": "yt-sampler",
+   "name": "YT Sampler",
+   "tagline": "Paste a YouTube link, bracket a phrase, drop it into Session view as a clip.",
+   "url": "devices/yt-sampler.html",
+   "image": "images/youtube\u2013sampler.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "10",
+   "slug": "preset-scroll",
+   "name": "Preset Scroll",
+   "tagline": "Scroll an Arturia plugin's preset browser from a Push encoder.",
+   "url": "devices/preset-scroll.html",
+   "image": "images/preset\u2013scroll.png",
+   "facets": {
+    "kind": "MIDI Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "11",
+   "slug": "manual-tape",
+   "name": "Manual Tape",
+   "tagline": "Hand-controlled sample playback \u2014 a tape reel you push forwards and backwards by hand.",
+   "url": "devices/manual-tape.html",
+   "image": "images/manual\u2013tape.png",
+   "facets": {
+    "kind": "Instrument",
+    "author": "GPT-5.6"
+   }
+  },
+  {
+   "num": "12",
+   "slug": "scene-placer",
+   "name": "Scene Placer",
+   "tagline": "Places a voice or source inside a loaded environment recording.",
+   "url": "devices/scene-placer.html",
+   "image": "images/scene\u2013placer.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "GPT-5.6"
+   }
+  },
+  {
+   "num": "13",
+   "slug": "false-memory",
+   "name": "False Memory",
+   "tagline": "Degradation effect \u2014 parallel analog and digital damage paths under one intensity macro.",
+   "url": "devices/false-memory.html",
+   "image": "images/false\u2013memory.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "GPT-5.6"
+   }
+  },
+  {
+   "num": "14",
+   "slug": "tape-error",
+   "name": "Tape Error",
+   "tagline": "Fire a tape fault on an audio track from a note on a MIDI track \u2014 velocity is severity.",
+   "url": "devices/tape-error.html",
+   "image": "images/tape\u2013error.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "GPT-5.6"
+   }
+  },
+  {
+   "num": "15",
+   "slug": "strip-silence",
+   "name": "Strip Silence",
+   "tagline": "Removes the silence from arrangement recordings \u2014 non-destructive clip trimming, one undo step.",
+   "url": "devices/strip-silence.html",
+   "image": "images/stripsilence.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "GPT-5.6"
+   }
+  },
+  {
+   "num": "16",
+   "slug": "disintegration",
+   "name": "Disintegration",
+   "tagline": "Cumulative tape-oxide loss \u2014 one reel, deterministic damage, 256 passes.",
+   "url": "devices/disintegration.html",
+   "image": "images/disintegration.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "GPT-5.6"
+   }
+  }
+ ]
+}

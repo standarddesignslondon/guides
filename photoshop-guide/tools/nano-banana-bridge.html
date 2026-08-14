@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nano banana bridge — photoshop</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">photoshop</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">01</p>
+  <h1>nano banana bridge</h1>
+  <p class="ch-sub">Sends the canvas and a marked-up selection to Nano Banana, then brings the result back as a masked layer.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/nano-banana-bridge.png" alt="Nano Banana Bridge"></div><figcaption>nano banana bridge</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">01.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">A Photoshop panel that closes the loop between a selection and Nano Banana. It exports a flattened copy of the document with your selection stroked on as an annotation outline, wraps your instruction in a template telling the model to edit only inside that outline and then erase it, and sends the lot by one of three routes: the Gemini app, the AI Studio Playground, or the Gemini API. What comes back is imported as a layer masked to the original selection, so every pixel outside the edit stays exactly as it was.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.4.1</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.nanobananabridge</dd></div><div class="fact"><dt>folder</dt><dd>NanoBanana-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="installing">
+  <div class="block-label"><span class="bl-num">01.1</span>
+  <h2>installing</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Open the <b>Creative Cloud desktop app</b>, search All apps for <b>UXP Developer Tools</b>, and install it.</span></li>
+<li><span class="step-n">02</span><span class="step-t">In Photoshop, go to <b>Settings &gt; Plugins</b> and tick <b>Enable Developer Mode</b>. Restart Photoshop if asked.</span></li>
+<li><span class="step-n">03</span><span class="step-t">In UXP Developer Tools, choose <b>Add Plugin</b> and select <code>manifest.json</code> in the plugin folder.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Click <b>Load</b>. The panel appears in Photoshop under <b>Plugins</b>.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Open <b>Settings</b> at the foot of the panel and set the staging folder, the downloads folder, and the API key if you intend to use the API route.</span></li>
+<li><span class="step-n">06</span><span class="step-t">While UXP Developer Tools stays open you also get <b>Watch</b>, which reloads the panel whenever a file changes, and <b>Debug</b>, which opens a console.</span></li>
+</ol></div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">01.2</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Make a selection around the thing you want changed. Lasso, marquee or subject select all work, and a feather of about 5px gives the reimport mask a cleaner edge. No selection means a whole-image edit.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Type the instruction in plain language, for example <i>replace the glass of brown milkshake with a clean glass of fresh orange juice</i>. The panel builds the full annotation template around it.</span></li>
+<li><span class="step-n">03</span><span class="step-t">If you are matching a style, add up to three reference images and set the influence.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Choose a destination and press <b>Stage / Send</b>.</span></li>
+<li><span class="step-n">05</span><span class="step-t">On the Gemini and AI Studio routes, drag <code>nb-stage.png</code> into the browser tab that opened, then any <code>nb-ref-N</code> files after it in order, paste the prompt with Cmd+V and run it. Download the result.</span></li>
+<li><span class="step-n">06</span><span class="step-t">Press <b>Import result</b>. On the API route this happens by itself.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">01.3</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">destination</h3>
+<p class="lead">Sets which of the three routes the staged image takes. The panel shows and hides the sections below to match.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Gemini app<span class="rng">default</span></dt><dd>Opens gemini.google.com/app. Free on the AI Pro subscription, within its compute-based 5-hour and weekly limits. You drag the file in and paste the prompt yourself. The Model section is hidden, because you pick the model in the browser.</dd></div>
+<div class="ctl-row"><dt>AI Studio</dt><dd>Opens the AI Studio Playground at a new chat, deep-linked to the model chosen below. Draws on the separate free daily pool. Resolution is set in the Playground sidebar, not here.</dd></div>
+<div class="ctl-row"><dt>Gemini API</dt><dd>Fully automatic. The panel posts to generativelanguage.googleapis.com, writes the result into the staging folder and imports it without you leaving Photoshop. Billed against Developer Program credits, and needs an API key in Settings.</dd></div>
+</dl>
+<h3 class="sub">model</h3>
+<p class="lead">Hidden on the Gemini app route. On AI Studio it only sets the deep link; on the API route it is the model actually called.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>NB2 Lite<span class="rng">gemini-3.1-flash-lite-image</span></dt><dd>Cheapest and quickest.</dd></div>
+<div class="ctl-row"><dt>NB2<span class="rng">gemini-3.1-flash-image</span></dt><dd>The middle option.</dd></div>
+<div class="ctl-row"><dt>NB Pro<span class="rng">gemini-3-pro-image</span></dt><dd>Default, and the best quality of the three.</dd></div>
+</dl>
+<h3 class="sub">resolution</h3>
+<p class="lead">API route only.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>1K / 2K / 4K<span class="rng">1K default</span></dt><dd>Sent as <code>imageConfig.imageSize</code>, alongside whichever supported aspect ratio sits closest to your canvas (1:1, 4:3, 3:4, 3:2, 2:3, 16:9, 9:16, 5:4, 4:5, 21:9).</dd></div>
+</dl>
+<h3 class="sub">outline colour</h3>
+<p class="lead">The colour the selection is stroked in on the exported copy, and the colour named in the prompt. Pick one the picture does not already contain.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Green<span class="rng">0, 255, 60</span></dt><dd>Default. Described to the model as “bright green”.</dd></div>
+<div class="ctl-row"><dt>Magenta<span class="rng">255, 0, 200</span></dt><dd>Described as “bright magenta”. Use it on foliage and other green-heavy scenes.</dd></div>
+<div class="ctl-row"><dt>Red<span class="rng">255, 0, 0</span></dt><dd>Described as “bright red”. The fallback when both green and magenta appear in the image.</dd></div>
+</dl>
+<h3 class="sub">edit instruction</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Edit instruction<span class="rng">free text</span></dt><dd>What should change inside the outline. Write it plainly; the panel supplies the surrounding template. Stage / Send refuses an empty box.</dd></div>
+<div class="ctl-row"><dt>Cost hint</dt><dd>The line under the box. On the API route it shows the estimated cost for the current model and resolution; on the other routes it reminds you which free pool you are drawing on.</dd></div>
+</dl>
+<h3 class="sub">reference images</h3>
+<p class="lead">Style transfer, maximum of three. They last for the session only and are not remembered across restarts.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Add reference…<span class="rng">png, jpg, jpeg, webp</span></dt><dd>Multi-select is allowed; anything beyond the third file is ignored. The button disables once three are loaded.</dd></div>
+<div class="ctl-row"><dt>✕</dt><dd>Removes that reference. The remaining ones renumber, so reference 1 is always the first in the list.</dd></div>
+</dl>
+<h3 class="sub">reference influence</h3>
+<p class="lead">Only appears once at least one reference is loaded. It swaps a sentence into the prompt.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Subtle</dt><dd>A light touch of the references&#x27; palette and mood. The written instruction takes priority over them.</dd></div>
+<div class="ctl-row"><dt>Moderate<span class="rng">default</span></dt><dd>Follow the references&#x27; style closely, adopting palette, texture and overall look while carrying out the instruction.</dd></div>
+<div class="ctl-row"><dt>Strict</dt><dd>Replicate the style exactly, down to grain, contrast, era and rendering technique, as though the output came from the same source as the references.</dd></div>
+</dl>
+<h3 class="sub">temperature</h3>
+<p class="lead">API route only.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Temperature<span class="rng">0 – 2, default 1.0</span></dt><dd>Lower is more literal. Values outside the range are clamped, and anything that will not parse as a number falls back to 1.</dd></div>
+</dl>
+<h3 class="sub">if result size differs from canvas</h3>
+<p class="lead">Nano Banana often returns more pixels than it was given. This decides which of the two gives way.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Result → canvas<span class="rng">default</span></dt><dd>Shrinks the returned image to the document&#x27;s exact dimensions. Your document size is preserved.</dd></div>
+<div class="ctl-row"><dt>Canvas → result</dt><dd>Resamples the whole document up to the result&#x27;s dimensions, keeping every returned pixel. Layers and the stored selection channel are resampled with it, so the mask still lines up.</dd></div>
+</dl>
+<h3 class="sub">buttons</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Stage / Send</dt><dd>Exports the staged PNG, then either opens the browser route with the prompt on the clipboard or posts straight to the API.</dd></div>
+<div class="ctl-row"><dt>Import result</dt><dd>Takes the newest image from the downloads and staging folders, whichever is more recent, ignoring <code>nb-stage.png</code>, and brings it in as a masked layer.</dd></div>
+</dl>
+<h3 class="sub">settings</h3>
+<p class="lead">Collapsed by default. The disclosure triangle at the foot of the panel opens it.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Gemini API key<span class="rng">API destination only</span></dt><dd>Held in the panel&#x27;s local storage. Get one at aistudio.google.com/apikey.</dd></div>
+<div class="ctl-row"><dt>Staging…</dt><dd>Where <code>nb-stage.png</code>, the copied <code>nb-ref-N</code> files and API results are written. Kept as a persistent token, so it survives restarts.</dd></div>
+<div class="ctl-row"><dt>Downloads…</dt><dd>Where Import result looks for images you downloaded by hand. Point it at your browser&#x27;s download folder.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="how-it-works">
+  <div class="block-label"><span class="bl-num">01.4</span>
+  <h2>how it works</h2></div>
+  <div class="block-body"><h3 class="sub">what actually gets sent</h3><p>The staged export is a flattened duplicate of the document, not the document itself. If a selection exists it is first saved to an alpha channel called <code>NB_SELECTION</code>, then stroked onto a temporary <code>NB_OUTLINE</code> layer at a width of the long edge divided by 250, minimum 4px. The duplicate is flattened, downscaled if its long edge exceeds 4096px, and saved as <code>nb-stage.png</code>. Both the temporary layer and the duplicate are disposed of afterwards, so your document is left as it was apart from the alpha channel.</p>
+<h3 class="sub">the prompt wrapper</h3><p>Your instruction is dropped into a two-part template: change what is inside the coloured outline and leave everything else inside it alone, then remove the outline entirely and restore whatever the line covered. A closing paragraph asks for the edit to match the scene&#x27;s lighting, colour temperature, perspective, shadows, reflections and grain, and for the composition, dimensions and aspect ratio to be kept. With references loaded, a preamble goes in front explaining that image 1 is the canvas and the rest are reference 1 onward, followed by the influence sentence.</p>
+<h3 class="sub">whole-image edits</h3><p>With no selection, no outline is drawn and the instruction is sent on its own. A selection whose bounds cover 95% or more of the canvas area is treated the same way, because a stroke running along the canvas edge makes the model render a picture frame. In that case the <code>NB_SELECTION</code> channel is deleted, so a stale one cannot wrongly mask the next import.</p>
+<h3 class="sub">the reimport mask</h3><p>The imported layer is centred on the canvas by moving its top-left corner to a calculated position, rather than by any alignment command, then given a layer mask loaded from <code>NB_SELECTION</code>. Everything outside your selection therefore stays 100% original, with no model smoothing on faces or fine detail. If the returned aspect ratio differs from the canvas by more than 2%, masking is skipped and the panel says so.</p>
+<h3 class="sub">the manual routes</h3><p>Stage / Send copies any references into the staging folder as <code>nb-ref-1</code>, <code>nb-ref-2</code> and so on, puts the wrapped prompt on the clipboard, opens the browser and tries to reveal the staging folder in Finder. Drag <code>nb-stage.png</code> in first and the references after it in order, so the numbering matches what the prompt describes.</p></div>
+</section>
+<section class="block" id="api-cost">
+  <div class="block-label"><span class="bl-num">01.5</span>
+  <h2>api cost</h2></div>
+  <div class="block-body"><p class="lead">Approximate GBP per image at list price on the standard tier, as shown live under the instruction box. Free while Developer Program credits last.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>NB2 Lite<span class="rng">1K / 2K / 4K</span></dt><dd>~2.5p at every resolution.</dd></div>
+<div class="ctl-row"><dt>NB2<span class="rng">1K / 2K / 4K</span></dt><dd>~5p / ~7.5p / ~11p.</dd></div>
+<div class="ctl-row"><dt>NB Pro<span class="rng">1K / 2K / 4K</span></dt><dd>~10p / ~10p / ~18p.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">01.6</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Photoshop 24.2 or later, with developer mode enabled. The panel is loaded through UXP Developer Tools, not installed from the Creative Cloud plugin marketplace.</li><li>Reference images last for the session only. Close Photoshop and you add them again.</li><li>Exports whose long edge exceeds 4096px are downscaled before sending, so a very large document comes back at less than its native resolution unless you use Canvas → result.</li><li><b>Canvas → result resamples your entire document</b>, every layer included. That is a real change to the file, not something confined to the imported layer.</li><li>If the result&#x27;s aspect ratio differs from the canvas, the layer is width-fitted and left unmasked. For a canvas extension, use Image &gt; Reveal All to grow the canvas afterwards.</li><li>The API key sits in the panel&#x27;s local storage in plain text.</li><li>Model IDs are hard-coded. If Google renames them or adds a <code>-preview</code> suffix, the API route fails until <code>main.js</code> is updated.</li><li>The <code>NB_SELECTION</code> alpha channel is left behind in the document after a masked import. It is harmless and safe to delete.</li></ul></div>
+</section>
+<nav class="chapnav"><span class="cn empty"></span><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>photoshop</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

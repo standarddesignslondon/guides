@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>microcosmos — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">02</p>
+  <h1>microcosmos</h1>
+  <p class="ch-sub">Replica of the Hologram Microcosm pedal — 11 granular / loop effects, 44 variations, and a 30-second phrase looper.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/microcosmos.png" alt="Microcosmos"></div><figcaption>microcosmos</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">02.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Eleven effects in four families (Micro Loop, Granules, Glitch, Multidelay), each with four variations, sitting in front of a post section of pitch modulation, four-mode reverb and a master filter. <b>Activity</b> and <b>Repeats</b> are the two macros that reshape whatever effect you&#x27;re in. Tempo follows Live. The signal path is engines → pitch mod → reverb (Space) → filter → mix.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete</dd></div><div class="fact"><dt>folder</dt><dd>Microcosmos Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">02.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Microcosmos.amxd</code> on an audio track and play something.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Turn <b>Effect</b> and <b>Variation</b> — that&#x27;s most of it.</span></li>
+<li><span class="step-n">03</span><span class="step-t"><b>Activity</b> = more of whatever this effect does. <b>Repeats</b> = how long it goes on for.</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>Subdiv</b> sets the musical grid the effect works on (and the Hold capture length).</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">02.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">engine</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Effect<span class="rng">Mosaic · Seq · Glide · Haze · Tunnel · Strum · Blocks · Intrpt · Arp · Pattern · Warp</span></dt><dd>Manual order — the four families are Micro Loop (1–3), Granules (4–6), Glitch (7–9), Multidelay (10–11).</dd></div>
+<div class="ctl-row"><dt>Variation<span class="rng">A / B / C / D</span></dt><dd>Four per effect, 44 in total.</dd></div>
+<div class="ctl-row"><dt>Subdiv<span class="rng">1/4 – 8x</span></dt><dd>The effect&#x27;s musical grid: loop lengths, tap spacing, step sizes, and the Hold capture length.</dd></div>
+<div class="ctl-row"><dt>Activity<span class="rng">0 – 100</span></dt><dd>The &quot;more of what this effect does&quot; macro — voices, density, glide rate, manipulation or step count depending on the effect.</dd></div>
+<div class="ctl-row"><dt>Repeats<span class="rng">0 – 100</span></dt><dd>The &quot;how long it goes on&quot; macro — feedback, loop decay, or burst frequency in Interrupt.</dd></div>
+<div class="ctl-row"><dt>Direction<span class="rng">Fwd / Rev</span></dt><dd>Reverse playback of the effect engines — backwards grains and loops at true pitch.</dd></div>
+<div class="ctl-row"><dt>Shape<span class="rng">Rise / Flat / Fall / Tri</span></dt><dd>Gain contour across voices/taps; the glide pattern in Glide.</dd></div>
+<div class="ctl-row"><dt>Hold<span class="rng">toggle</span></dt><dd>Freezes the last Subdiv of input and loops it into the engines indefinitely. Dry stays live so you play on top. Cleared when the looper activates.</dd></div>
+</dl>
+<h3 class="sub">post section</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Space<span class="rng">0 – 100</span></dt><dd>Wet ↔ reverb blend. 100 % = reverb only.</dd></div>
+<div class="ctl-row"><dt>Reverb<span class="rng">Room / Dark / Hall / Amb</span></dt><dd>Fixed-geometry tank; switchable mid-tail without clicks.</dd></div>
+<div class="ctl-row"><dt>Filter / Reso<span class="rng">0 – 100</span></dt><dd>Master resonant low-pass at the end of the chain. 100 = bypass, 0 kills the wet.</dd></div>
+<div class="ctl-row"><dt>Mod Depth / Mod Rate<span class="rng">0 – 100 · 0.1–8 Hz</span></dt><dd>Pitch modulation: 0 = off and exactly transparent, through chorus, to a ±4.6-semitone wobble.</dd></div>
+<div class="ctl-row"><dt>Mix<span class="rng">0 – 100</span></dt><dd>Dry/wet crossfade. 100 % mutes the dry, so Interrupt truly interrupts — as on the pedal.</dd></div>
+<div class="ctl-row"><dt>Eff Vol<span class="rng">−60 … +12 dB</span></dt><dd>Wet master volume.</dd></div>
+</dl>
+<h3 class="sub">phrase looper (30 s stereo + overdub layer)</h3>
+<p class="lead">The round light beside the PHRASE LOOPER label is the pedal&#x27;s indicator LED: <b>red = recording, green = playing, amber = overdub, off = empty or stopped</b>.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Looper<span class="rng">Off / On</span></dt><dd>Master on/off for the looper. Turning it on clears Hold.</dd></div>
+<div class="ctl-row"><dt>Rec<span class="rng">footswitch-style</span></dt><dd>Empty → <b>Recording</b> (capturing silently) → press again: loop closes and <b>Playing</b> starts → again: <b>Overdub</b> → again: back to Playing. From Stopped, Rec resumes playback.</dd></div>
+<div class="ctl-row"><dt>Stop / Undo / Erase<span class="rng">buttons</span></dt><dd>Stop keeps the loop. Undo wipes overdubs, leaving the first phrase. Erase clears everything.</dd></div>
+<div class="ctl-row"><dt>Loop Spd<span class="rng">1/4x – 4x</span></dt><dd>Playback speed of the loop.</dd></div>
+<div class="ctl-row"><dt>Loop Dir<span class="rng">Fwd / Rev</span></dt><dd>Loop playback direction.</dd></div>
+<div class="ctl-row"><dt>Loop Lvl<span class="rng">0 – 100</span></dt><dd>Loop return level.</dd></div>
+<div class="ctl-row"><dt>Routing<span class="rng">Post / Pre</span></dt><dd><b>Post</b> records the wet — layer different effects per pass. <b>Pre</b> records dry and replays it through the engines, so tweaking knobs reprocesses the loop.</dd></div>
+<div class="ctl-row"><dt>Quantize<span class="rng">Free / Quant</span></dt><dd>Rounds the loop to Live&#x27;s beat grid when it closes.</dd></div>
+<div class="ctl-row"><dt>Loop Only<span class="rng">FX / Loop</span></dt><dd>Mutes the engines; the loop passes through the post section alone.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">02.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">engine</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Effect</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Variation</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Subdiv</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Activity</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Repeats</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Mix</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Shape</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Direction</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">post</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Filter</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Reso</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Space</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Reverb</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Mod Depth</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Mod Rate</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Eff Vol</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Hold</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">looper</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Loop Spd</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Loop Dir</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Loop Lvl</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Routing</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Quantize</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Loop Only</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Looper</span>
+<span class="btn">Rec</span>
+<span class="btn">Stop</span>
+<span class="btn">Undo</span>
+<span class="btn">Erase</span>
+</div>
+<p class="bank-note">Button rows start at slot 2 — Push 3 reserves the leftmost top-row button for the device name.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">02.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">to record a new phrase over an old one, erase first</h3><p>Like the pedal, pressing Rec on an existing loop means overdub or resume — never re-record.</p>
+<h3 class="sub">the two routing modes are different instruments</h3><p>Post-routing layers finished sounds pass by pass. Pre-routing keeps the loop dry, so every knob move reprocesses the whole phrase live.</p>
+<h3 class="sub">the eleven effects, briefly</h3><p><b>Mosaic</b> layered octave-stacked loopers · <b>Seq</b> 8-step slice sequencer · <b>Glide</b> four loopers gliding in pitch · <b>Haze</b> grain cloud · <b>Tunnel</b> three drone micro-loopers · <b>Strum</b> repeats of the last note onset · <b>Blocks</b> step glitch rearranger · <b>Intrpt</b> clean passthrough interrupted by micro-montage bursts · <b>Arp</b> arpeggiates slices of the last 8 onsets · <b>Pattern</b> multi-tap in 4 rhythms · <b>Warp</b> multi-tap with per-tap treatments.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">02.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>The looper is 30 s at 48 kHz and drops proportionally at higher sample rates — it&#x27;s sized to stay under gen~&#x27;s per-device memory ceiling. Going bigger makes Live silently bypass the device (knobs inert, audio dry: that&#x27;s the tell).</li><li><b>Strum</b> waits for a note onset before it does anything.</li><li>Push banks are baked statically into the device file, so they exist before Push scans the device — fresh adds, Set loads and Push reconnects all show the same layout.</li><li>Not replicated on purpose: the 16 preset slots (Live&#x27;s presets cover it), expression pedal, MIDI CC map, bypass/trails modes, and the Burst looper mode.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">02.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_microcosmos.py</code> regenerates the <code>.amxd</code> + <code>.maxpat</code> with full validation. <b>No freeze is ever needed</b> — there&#x27;s no external js anywhere.</p>
+<p><code>python3 sim_microcosmos.py</code> runs 15 suites / 102 checks mirroring the DSP maths.</p>
+<p>Never rescue a copy from an old Live Set — rebuild instead.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="cascade.html"><span>previous</span>cascade</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="pulsograph.html"><span>next</span>pulsograph</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

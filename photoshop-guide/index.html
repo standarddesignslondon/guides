@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>photoshop — process guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="index">
+<header class="topbar"><a class="wordmark" href="../index.html">guides</a><a class="topbar-mid" href="index.html">photoshop</a><a class="topbar-right" href="../all.html">everything</a></header>
+<main>
+<header class="hero">
+  <h1>photoshop<br>tools</h1>
+  <p class="hero-sub">process guide</p>
+  <p class="hero-blurb">Panels, scripts and actions built for Photoshop. What every control does, how a file travels from the canvas out to whatever does the work and back again, and the things each one needs you to remember.</p>
+  <p class="hero-count">1 tools</p>
+</header>
+<div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="UXP panel">uxp panel</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
+<div class="index-list" id="grid">
+<a class="row" href="tools/nano-banana-bridge.html"
+   data-kind="UXP panel" data-author="Claude" data-text="nano banana bridge sends the canvas and a marked-up selection to nano banana, then brings the result back as a masked layer. a photoshop panel that closes the loop between a selection and nano banana. it exports a flattened copy of the document with your selection stroked on as an annotation outline, wraps your instruction in a template telling the model to edit only inside that outline and then erase it, and sends the lot by one of three routes: the gemini app, the ai studio playground, or the gemini api. what comes back is imported as a layer masked to the original selection, so every pixel outside the edit stays exactly as it was. uxp panel claude">
+  <span class="r-num">01</span>
+  <span class="r-name">nano banana bridge</span>
+  <span class="r-desc">Sends the canvas and a marked-up selection to Nano Banana, then brings the result back as a masked layer.</span>
+  <span class="r-kind">uxp panel</span>
+  <span class="r-thumb"><img src="images/nano-banana-bridge.png" alt="" loading="lazy"></span>
+</a>
+</div>
+<p class="empty-msg" id="empty" hidden>nothing matches that.</p>
+<script src="app.js"></script>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>photoshop</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

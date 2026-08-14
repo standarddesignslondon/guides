@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sw radio — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">08</p>
+  <h1>sw radio</h1>
+  <p class="ch-sub">Tunes a KiwiSDR shortwave receiver anywhere in the world from inside Live.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/sw–radio.png" alt="SW Radio"></div><figcaption>sw radio</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">08.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">A Max for Live device can&#x27;t carry live audio in from the internet, so this is a <b>controller</b>: it launches KiwiSDR&#x27;s <code>kiwiclientd</code> in the background, which plays the radio audio into the free <b>BlackHole</b> virtual audio device. Live records that as an input. Frequency and mode change live over rigctl — no restart, no gaps. Only changing server restarts the stream.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>folder</dt><dd>SW Radio Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">08.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">One-time: run <code>SW Radio - SETUP.command</code> (installs the Python packages and <code>kiwiclient</code> into <code>~/SWRadio</code>), and install <b>BlackHole</b> from existential.audio/blackhole.</span></li>
+<li><span class="step-n">02</span><span class="step-t">In Live: Preferences → Audio → Input Device = <code>BlackHole 2ch</code>. On the track: Audio From = Ext. In 1/2, Monitor = In, armed.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Drop <code>SW Radio.amxd</code> on that track. Pick a <b>Receiver</b> — this fills in the server and port for you.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Pick a <b>Mode</b>, set the <b>Freq</b>, then flick <b>Connect</b> on. The status line reads ready → connecting → connected.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Tune live. Switching receiver while connected re-tunes automatically.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">08.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">tuning</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Receiver<span class="rng">37 curated KiwiSDRs</span></dt><dd>Public receivers around the world — UK, Europe, Africa, Asia, Oceania, the Americas. The list is long for redundancy; if one is silent, pick another.</dd></div>
+<div class="ctl-row"><dt>Freq<span class="rng">0 – 30000 kHz</span></dt><dd>The frequency, in kHz.</dd></div>
+<div class="ctl-row"><dt>Freq Fine<span class="rng">relative dial</span></dt><dd>A spring-back fine-tune encoder — rests at centre, never hits an end stop.</dd></div>
+<div class="ctl-row"><dt>Mode<span class="rng">AM / LSB / USB / CW / NBFM</span></dt><dd>Demodulation mode.</dd></div>
+<div class="ctl-row"><dt>Connect<span class="rng">off / on</span></dt><dd>Starts and stops the background client.</dd></div>
+<div class="ctl-row"><dt>Region<span class="rng">36 regions</span></dt><dd>Which target region the <b>what&#x27;s on now</b> list is built for — Europe, Africa, Asia, the Americas, Global and their sub-regions.</dd></div>
+<div class="ctl-row"><dt>Station<span class="rng">browse encoder</span></dt><dd>Steps through the broadcasts on the air <i>right now</i> beamed at that region, from the EiBi shortwave schedule. Picking one tunes frequency <b>and</b> mode. The readout shows e.g. &quot;West Europe: 41 on now&quot;.</dd></div>
+<div class="ctl-row"><dt>Refresh list<span class="rng">button</span></dt><dd>Re-downloads the EiBi season file. It&#x27;s cached in <code>~/SWRadio/eibi/</code> and re-downloaded automatically when more than a week old; the on-now filter re-runs every 5 minutes.</dd></div>
+<div class="ctl-row"><dt>Favourite<span class="rng">0 – 32</span></dt><dd>Recall a saved favourite — each stores frequency <b>and</b> mode.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">08.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">favourites</h3><p>Type an optional name and press <b>Add</b> to save the current Freq and Mode (blank auto-names it, e.g. &quot;9250 kHz AM&quot;). The <b>Recall</b> menu loads one and retunes live if connected; <b>Del</b> removes the selected one. They live in <code>~/SWRadio/favourites.json</code> — hand-editable to rename or reorder.</p>
+<h3 class="sub">editing the receiver list</h3><p>The drop-down is built from the <code>SERVERS</code> array near the top of <code>swradio.js</code>, and the first entry is the default. Because the menu is a Push-controllable Live parameter (a fixed list), changing that array means <b>re-running <code>build_patch.py</code></b> — reloading the JS isn&#x27;t enough.</p>
+<h3 class="sub">troubleshooting</h3><p>Open the Max window — the device prints <code>[SWRadio]</code> and <code>[kiwi]</code> lines including the exact command it ran. Status stuck on &quot;connecting&quot; = wrong host/port or the receiver is full. No audio = check <code>kiwiclientd</code> found the sound device name and that Live&#x27;s track input matches. &quot;spawn failed&quot; = <code>PYTHON_BIN</code> / <code>KIWI_DIR</code> paths are wrong.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">08.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>The folder&#x27;s README predates the <b>Region / Station</b> &quot;what&#x27;s on now&quot; browser and still calls the KiwiSDR picker <i>Station</i>. On the current device face that picker is <b>Receiver</b>, and Station is the schedule browser.</li><li>Keep <code>SW Radio.amxd</code> and <code>swradio.js</code> in the <b>same folder</b>.</li><li>Config lives at the top of <code>swradio.js</code>: <code>PYTHON_BIN</code> (<code>python3</code>), <code>KIWI_DIR</code> (<code>~/SWRadio/kiwiclient</code>), <code>SND_DEVICE</code> (<code>BlackHole 2ch</code>), <code>RIGCTL_PORT</code> (<code>6400</code>).</li><li>To use a BlackHole variant (e.g. 16ch), edit <code>SND_DEVICE</code> or send the device a <code>device &lt;name&gt;</code> message.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">08.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_patch.py</code> rebuilds the device. Required after any change to the <code>SERVERS</code> array, since the receiver menu is a fixed-list Live parameter.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="ondes-martenot.html"><span>previous</span>ondes martenot</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="yt-sampler.html"><span>next</span>yt sampler</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-14</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>
