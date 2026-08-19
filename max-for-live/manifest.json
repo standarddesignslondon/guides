@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-08-14",
+ "generated": "2026-08-19",
  "items": [
   {
    "num": "01",
@@ -200,6 +200,18 @@
    "facets": {
     "kind": "Audio Effect",
     "author": "GPT-5.6"
+   }
+  },
+  {
+   "num": "17",
+   "slug": "magnabelt",
+   "name": "Magnabelt",
+   "tagline": "Spiral-belt sampler after Holger Czukay's IBM dictaphone \u2014 one wandering head, adjacent passes, imperfect erasure.",
+   "url": "devices/magnabelt.html",
+   "image": "images/magnabelt.png",
+   "facets": {
+    "kind": "Instrument",
+    "author": "ChatGPT"
    }
   }
  ]

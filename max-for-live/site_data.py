@@ -1899,3 +1899,174 @@ ITEMS.append({
         "are in `releases/`.",
     ],
 })
+
+# --------------------------------------------------------------------------
+# MAGNABELT
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "magnabelt",
+    "name": "Magnabelt",
+    "kind": "Instrument",
+    "author": "ChatGPT",
+    "status": "v1.0",
+    "folder": "magnabelt",
+    "tagline": "Spiral-belt sampler after Holger Czukay's IBM dictaphone — "
+               "one wandering head, adjacent passes, imperfect erasure.",
+    "blurb":
+        "Inspired by the IBM Executary 213 dictation machines Czukay played "
+        "on David Sylvian's *Brilliant Trees*. A loaded sample becomes a "
+        "circular magnetic belt with a three-layer memory: the **current "
+        "pass** (the head, inside Start/End), **adjacent passes** one Turn "
+        "Time either side (Tracking), and **old residue** seven turns back "
+        "(Ghost — imperfect erasure, not a delay tap). Machine wear, rare "
+        "slips and a deliberately grubby internal ambience sit on top. Not a "
+        "circuit model — an interpretation of the technique.",
+    "quickstart": [
+        "Drop `Magnabelt v1.0.amxd` on a **MIDI track**. Drop audio on "
+        "**DROP AUDIO HERE** or press **LOAD BELT**.",
+        "Gate Mode **Manual** = self-running; **MIDI** = notes or Push pads "
+        "open the playback key like an instrument.",
+        "Drag the orange **Start**, amber **End** and white **Head** lines on "
+        "the belt display. Move **Speed** away from zero — negative reverses.",
+        "Raise **Tracking**, then **Ghost**, then moderate **Instability**.",
+        "A good first setting: Manual, Speed +0.45x, Turn 6 s, Tracking 35, "
+        "Ghost 20, Instability 30, Wander 35, Flutter 20, Slip 8, Send 30, "
+        "Decay 55, Dark 65, Wear 25 — then move only Head, Speed and Send "
+        "for a minute.",
+    ],
+    "controls": [
+        {
+            "title": "Belt / key",
+            "rows": [
+                ["Start / End", "0 – 100 %",
+                 "The active circular region. Every adjacent pass and ghost "
+                 "wraps inside these boundaries."],
+                ["Head Position", "0 – 100 %",
+                 "Moves the reader **immediately** — drag the white line, "
+                 "automate it, or play it from Push for abrupt fragments."],
+                ["Tape Speed", "−2x … +2x",
+                 "True varispeed: pitch and duration together. Zero stops "
+                 "audible playback; negative reverses the belt."],
+                ["Turn Time", "1 – 12 s",
+                 "Source-time spacing between neighbouring spiral passes. "
+                 "Sets what Tracking and Ghost reach, and how far one "
+                 "Backstep jumps. It does **not** resize the loop or set an "
+                 "echo tempo."],
+                ["Key / Gate Mode", "toggle · Manual / MIDI",
+                 "The IBM-style playback key. Manual latches it; MIDI follows "
+                 "held notes."],
+                ["Backstep", "button",
+                 "Jumps exactly one Turn Time backwards from the position "
+                 "currently playing."],
+            ],
+        },
+        {
+            "title": "Machine",
+            "rows": [
+                ["Tracking", "0 – 100 %",
+                 "Blends the neighbouring pass before or after the head — "
+                 "the head hearing sideways into nearby memory."],
+                ["Ghost", "0 – 100 %",
+                 "Faint material **seven turns behind** — incompletely "
+                 "erased residue. Long loops and big Turn values make it "
+                 "feel most remote."],
+                ["Instability", "0 – 100 %",
+                 "Master depth for wander, flutter and tracking drift; also "
+                 "raises the probability of rare faults."],
+                ["Wander / Flutter", "0 – 100 %",
+                 "Wander is slow, non-repeating speed drift (seasick, not "
+                 "vibrato); Flutter is faster pitch tremor from two "
+                 "mismatched cycles."],
+                ["Slip", "0 – 100 %",
+                 "Likelihood and severity of occasional slowdowns, dropouts "
+                 "or temporary jumps to a neighbouring pass. Intentionally "
+                 "rare — it never becomes metronomic."],
+                ["Bandwidth / Drive", "0 – 100 %",
+                 "Bandwidth opens from veiled dictation tone to a clearer "
+                 "path; Drive saturates."],
+                ["Hiss / Hum / Output", "0 – 100 % · dB",
+                 "Hiss is high-frequency grain; Hum is 50/100 Hz mains "
+                 "residue; Output is the final trim — leave headroom when "
+                 "Drive, Tracking and Space are high."],
+            ],
+        },
+        {
+            "title": "Studio space",
+            "intro": "A worn internal ambience **after** the playback key — "
+                     "close the key and the room finishes the phrase. Short "
+                     "recirculating delays and diffusion, not a pristine hall.",
+            "rows": [
+                ["Send", "0 – 100 %", "How much machine output enters the room."],
+                ["Decay", "0 – 100 %",
+                 "Feedback and tail length. High settings can accumulate."],
+                ["Dark", "0 – 100 %",
+                 "Lowers the return bandwidth for a distant, enclosed room."],
+                ["Wear", "0 – 100 %",
+                 "Saturation and slow level movement inside the return."],
+                ["Space Type", "Room / Plate / Chamber",
+                 "Room is compact, Plate balanced, Chamber largest."],
+            ],
+        },
+    ],
+    "banks": [
+        {"name": "Perform",
+         "encoders": ["Head", "Speed", "Key", "Backstep", "Tracking", "Ghost",
+                      "Instability", "Space"],
+         "note": "Deliberately performance-led — motion, memory, keying and "
+                 "ambience under one hand."},
+        {"name": "Belt",
+         "encoders": ["Start", "End", "Head", "Speed", "Turn", "Gate", "Key",
+                      "Backstep"]},
+        {"name": "Machine",
+         "encoders": ["Instability", "Wander", "Flutter", "Slip", "Tracking",
+                      "Ghost", "Bandwidth", "Drive"]},
+        {"name": "Texture Space",
+         "encoders": ["Hiss", "Hum", "Space", "Decay", "Dark", "Wear", "Mode",
+                      "Output"]},
+    ],
+    "workflow": [
+        {"title": "Three performance gestures",
+         "text": "**Pad and reveal** — MIDI gate, hold a pad, move Head, "
+                 "release; the belt keeps travelling silently so the next "
+                 "note reveals a different moment. **Turn and answer** — "
+                 "press Backstep, then raise Tracking: the new turn and its "
+                 "damaged neighbour at once. **Send the absence** — raise "
+                 "Space Send, then close the Key; the source disappears "
+                 "while the worn room finishes the phrase."},
+        {"title": "Recipes",
+         "text": "**Haunted room** Manual, Speed −0.35, Turn 6, Track 55, "
+                 "Ghost 45, Instability 35, Send 55, Dark 75, Wear 30 · "
+                 "**Cut-up instrument** MIDI, Speed +1.0 or −0.7, Turn 2, "
+                 "Track 30, Ghost 12, Instability 20, Slip 5, Send 22 · "
+                 "**Unstable archive** Manual, Speed +0.25, Turn 9, Track "
+                 "72, Ghost 65, Instability 70, Slip 25, Send 65, Chamber."},
+        {"title": "The animated reels",
+         "text": "The belt display — draggable Start/End/Head lines and the "
+                 "two spinning reels whose speed follows Tape Speed — is a "
+                 "single **v8ui** object with its drawing code embedded in "
+                 "the patch (mgraphics vector drawing, a `metro 50` driving "
+                 "a `tick` that advances the reel angle by the current rate). "
+                 "No external js file, so **no freeze is needed** — the "
+                 "technique to steal for future devices."},
+    ],
+    "gotchas": [
+        "The **Turn readout is mislabelled 'ms'** in v1.0 — read it as "
+        "seconds: 3.25 means 3.25 s between passes. The engine is correct; "
+        "only the unit label is wrong.",
+        "**Head movement crackles by design** — the reader jumps without a "
+        "crossfade, so continuous dial ramps become rough scrubbing. "
+        "Automate sparse jumps rather than drawing ramps.",
+        "The Live Set stores the sample **path**, not the audio. If the "
+        "file moves, drop it in again — and use Collect All and Save for "
+        "portability.",
+        "No sound? Check: belt loaded, Speed not zero, Key open, Start "
+        "before End, Output up.",
+    ],
+    "rebuild": [
+        "`node scripts/build_magnabelt.js` generates `Magnabelt.maxpat`, "
+        "`Magnabelt.amxd` and `Magnabelt v1.0.amxd` from nothing. All code "
+        "is embedded (v8ui + v8.codebox) — **no freeze needed**.",
+        "Tests live in `tests/` — packaging, banks, head/backstep, MIDI "
+        "gating and pass gains — plus a Max host test patch.",
+    ],
+})

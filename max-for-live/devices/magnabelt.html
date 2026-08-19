@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>magnabelt — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">17</p>
+  <h1>magnabelt</h1>
+  <p class="ch-sub">Spiral-belt sampler after Holger Czukay&#x27;s IBM dictaphone — one wandering head, adjacent passes, imperfect erasure.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/magnabelt.png" alt="Magnabelt"></div><figcaption>magnabelt</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">17.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Inspired by the IBM Executary 213 dictation machines Czukay played on David Sylvian&#x27;s <i>Brilliant Trees</i>. A loaded sample becomes a circular magnetic belt with a three-layer memory: the <b>current pass</b> (the head, inside Start/End), <b>adjacent passes</b> one Turn Time either side (Tracking), and <b>old residue</b> seven turns back (Ghost — imperfect erasure, not a delay tap). Machine wear, rare slips and a deliberately grubby internal ambience sit on top. Not a circuit model — an interpretation of the technique.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>instrument</dd></div><div class="fact"><dt>built by</dt><dd>chatgpt</dd></div><div class="fact"><dt>state</dt><dd>v1.0</dd></div><div class="fact"><dt>folder</dt><dd>magnabelt</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">17.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Magnabelt v1.0.amxd</code> on a <b>MIDI track</b>. Drop audio on <b>DROP AUDIO HERE</b> or press <b>LOAD BELT</b>.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Gate Mode <b>Manual</b> = self-running; <b>MIDI</b> = notes or Push pads open the playback key like an instrument.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Drag the orange <b>Start</b>, amber <b>End</b> and white <b>Head</b> lines on the belt display. Move <b>Speed</b> away from zero — negative reverses.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Raise <b>Tracking</b>, then <b>Ghost</b>, then moderate <b>Instability</b>.</span></li>
+<li><span class="step-n">05</span><span class="step-t">A good first setting: Manual, Speed +0.45x, Turn 6 s, Tracking 35, Ghost 20, Instability 30, Wander 35, Flutter 20, Slip 8, Send 30, Decay 55, Dark 65, Wear 25 — then move only Head, Speed and Send for a minute.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">17.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">belt / key</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Start / End<span class="rng">0 – 100 %</span></dt><dd>The active circular region. Every adjacent pass and ghost wraps inside these boundaries.</dd></div>
+<div class="ctl-row"><dt>Head Position<span class="rng">0 – 100 %</span></dt><dd>Moves the reader <b>immediately</b> — drag the white line, automate it, or play it from Push for abrupt fragments.</dd></div>
+<div class="ctl-row"><dt>Tape Speed<span class="rng">−2x … +2x</span></dt><dd>True varispeed: pitch and duration together. Zero stops audible playback; negative reverses the belt.</dd></div>
+<div class="ctl-row"><dt>Turn Time<span class="rng">1 – 12 s</span></dt><dd>Source-time spacing between neighbouring spiral passes. Sets what Tracking and Ghost reach, and how far one Backstep jumps. It does <b>not</b> resize the loop or set an echo tempo.</dd></div>
+<div class="ctl-row"><dt>Key / Gate Mode<span class="rng">toggle · Manual / MIDI</span></dt><dd>The IBM-style playback key. Manual latches it; MIDI follows held notes.</dd></div>
+<div class="ctl-row"><dt>Backstep<span class="rng">button</span></dt><dd>Jumps exactly one Turn Time backwards from the position currently playing.</dd></div>
+</dl>
+<h3 class="sub">machine</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Tracking<span class="rng">0 – 100 %</span></dt><dd>Blends the neighbouring pass before or after the head — the head hearing sideways into nearby memory.</dd></div>
+<div class="ctl-row"><dt>Ghost<span class="rng">0 – 100 %</span></dt><dd>Faint material <b>seven turns behind</b> — incompletely erased residue. Long loops and big Turn values make it feel most remote.</dd></div>
+<div class="ctl-row"><dt>Instability<span class="rng">0 – 100 %</span></dt><dd>Master depth for wander, flutter and tracking drift; also raises the probability of rare faults.</dd></div>
+<div class="ctl-row"><dt>Wander / Flutter<span class="rng">0 – 100 %</span></dt><dd>Wander is slow, non-repeating speed drift (seasick, not vibrato); Flutter is faster pitch tremor from two mismatched cycles.</dd></div>
+<div class="ctl-row"><dt>Slip<span class="rng">0 – 100 %</span></dt><dd>Likelihood and severity of occasional slowdowns, dropouts or temporary jumps to a neighbouring pass. Intentionally rare — it never becomes metronomic.</dd></div>
+<div class="ctl-row"><dt>Bandwidth / Drive<span class="rng">0 – 100 %</span></dt><dd>Bandwidth opens from veiled dictation tone to a clearer path; Drive saturates.</dd></div>
+<div class="ctl-row"><dt>Hiss / Hum / Output<span class="rng">0 – 100 % · dB</span></dt><dd>Hiss is high-frequency grain; Hum is 50/100 Hz mains residue; Output is the final trim — leave headroom when Drive, Tracking and Space are high.</dd></div>
+</dl>
+<h3 class="sub">studio space</h3>
+<p class="lead">A worn internal ambience <b>after</b> the playback key — close the key and the room finishes the phrase. Short recirculating delays and diffusion, not a pristine hall.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Send<span class="rng">0 – 100 %</span></dt><dd>How much machine output enters the room.</dd></div>
+<div class="ctl-row"><dt>Decay<span class="rng">0 – 100 %</span></dt><dd>Feedback and tail length. High settings can accumulate.</dd></div>
+<div class="ctl-row"><dt>Dark<span class="rng">0 – 100 %</span></dt><dd>Lowers the return bandwidth for a distant, enclosed room.</dd></div>
+<div class="ctl-row"><dt>Wear<span class="rng">0 – 100 %</span></dt><dd>Saturation and slow level movement inside the return.</dd></div>
+<div class="ctl-row"><dt>Space Type<span class="rng">Room / Plate / Chamber</span></dt><dd>Room is compact, Plate balanced, Chamber largest.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">17.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">perform</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Head</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Speed</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Key</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Backstep</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Tracking</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Ghost</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Instability</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Space</span></div>
+</div>
+<p class="bank-note">Deliberately performance-led — motion, memory, keying and ambience under one hand.</p>
+</div>
+<div class="bank">
+<div class="bank-head">belt</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Start</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">End</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Head</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Speed</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Turn</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Gate</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Key</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Backstep</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">machine</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Instability</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Wander</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Flutter</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Slip</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Tracking</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Ghost</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Bandwidth</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Drive</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">texture space</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Hiss</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Hum</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Space</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Decay</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Dark</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Wear</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Mode</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Output</span></div>
+</div>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">17.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">three performance gestures</h3><p><b>Pad and reveal</b> — MIDI gate, hold a pad, move Head, release; the belt keeps travelling silently so the next note reveals a different moment. <b>Turn and answer</b> — press Backstep, then raise Tracking: the new turn and its damaged neighbour at once. <b>Send the absence</b> — raise Space Send, then close the Key; the source disappears while the worn room finishes the phrase.</p>
+<h3 class="sub">recipes</h3><p><b>Haunted room</b> Manual, Speed −0.35, Turn 6, Track 55, Ghost 45, Instability 35, Send 55, Dark 75, Wear 30 · <b>Cut-up instrument</b> MIDI, Speed +1.0 or −0.7, Turn 2, Track 30, Ghost 12, Instability 20, Slip 5, Send 22 · <b>Unstable archive</b> Manual, Speed +0.25, Turn 9, Track 72, Ghost 65, Instability 70, Slip 25, Send 65, Chamber.</p>
+<h3 class="sub">the animated reels</h3><p>The belt display — draggable Start/End/Head lines and the two spinning reels whose speed follows Tape Speed — is a single <b>v8ui</b> object with its drawing code embedded in the patch (mgraphics vector drawing, a <code>metro 50</code> driving a <code>tick</code> that advances the reel angle by the current rate). No external js file, so <b>no freeze is needed</b> — the technique to steal for future devices.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">17.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>The <b>Turn readout is mislabelled &#x27;ms&#x27;</b> in v1.0 — read it as seconds: 3.25 means 3.25 s between passes. The engine is correct; only the unit label is wrong.</li><li><b>Head movement crackles by design</b> — the reader jumps without a crossfade, so continuous dial ramps become rough scrubbing. Automate sparse jumps rather than drawing ramps.</li><li>The Live Set stores the sample <b>path</b>, not the audio. If the file moves, drop it in again — and use Collect All and Save for portability.</li><li>No sound? Check: belt loaded, Speed not zero, Key open, Start before End, Output up.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">17.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>node scripts/build_magnabelt.js</code> generates <code>Magnabelt.maxpat</code>, <code>Magnabelt.amxd</code> and <code>Magnabelt v1.0.amxd</code> from nothing. All code is embedded (v8ui + v8.codebox) — <b>no freeze needed</b>.</p>
+<p>Tests live in <code>tests/</code> — packaging, banks, head/backstep, MIDI gating and pass gains — plus a Max host test patch.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="disintegration.html"><span>previous</span>disintegration</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-19</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>
