@@ -50,15 +50,30 @@ Simon's own devices are collapsed to one entry each (SW Radio alone has
 seventeen `.amxd` files on disk) and link across to their written chapter in
 `../max-for-live/` rather than out to the web.
 
-## Adding or refreshing
+## Refreshing
 
-There is no incremental path — regenerate the whole thing from a fresh copy of
-the Live Database folder. `_source/` holds what it takes to do that:
+Ask Claude to update the plugin list and the `refresh-plugin-library` skill
+takes it from here. By hand, it is five steps in `_source/`:
 
-- `merge.py` — reads the two databases plus the researched links and writes
-  `catalogue.json`
-- `gen_data.py` — turns that into `catalogue_data.py`
-- `links_*.json` — the raw research, one file per batch of manufacturers
+```
+python3 extract.py     # read Live's databases   → plugins.json, m4l2.json
+python3 diff.py        # what changed?           → new_entries.json
+                       # research only those, add to links_*.json
+python3 merge.py       # data + links            → catalogue.json
+python3 gen_data.py    #                         → ../catalogue_data.py
+cd .. && python3 build_catalogue.py
+cd .. && python3 build_site.py hub && ./publish.sh
+```
+
+`extract.py` finds the Live Database folder in a connected folder, or takes a
+path as its argument. **Diff before researching** — a refresh usually has a
+handful of new entries, and re-researching all 790 would take hours and lose
+the hand-checked corrections.
+
+`collapse.py` holds the rules both `merge.py` and `diff.py` need to agree on:
+which VST2/VST3 spellings are the same plugin, which files belong to a device
+built here, and what counts as in scope. When they disagreed, the diff reported
+fifty phantom changes — keep those rules in the one place.
 
 `merge.py` ends with a `CORRECTIONS` table for entries found to be wrong after
 checking the real page. Fix things there, never in `catalogue_data.py`, or the

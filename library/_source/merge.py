@@ -1,4 +1,5 @@
 import json, glob, re, collections, unicodedata, os
+from collapse import collapse_plugins, own_prefix, guide_name, device_in_scope
 HERE=os.path.dirname(os.path.abspath(__file__))
 os.chdir(HERE)
 
@@ -40,34 +41,8 @@ SUBMAP={'delay':'delay','reverb':'reverb','eq':'eq','dynamics':'dynamics',
         'channel strip':'dynamics','guitar':'amp','vocals':'vocal',
         'generator':'synth','instrument':'synth','instrument synth':'synth'}
 
-# --- collapse VST2/VST3 name variants of the same plugin ---
-def _n(x):
-    x=x.lower()
-    x=re.sub(r'^(tr5|uvi|air|uadx|waves)\s+','',x)
-    x=re.sub(r'\s*(mono/stereo|mono|stereo)$','',x)
-    x=re.sub(r'vst$','',x)
-    return re.sub(r'[^a-z0-9]','',x)
-
-_g=collections.defaultdict(list)
-for p in P: _g[(p['vendor'],_n(p['name']))].append(p)
-_P=[]
-for (vendor,_),group in _g.items():
-    if len(group)==1: _P.append(group[0]); continue
-    names=[g['name'] for g in group]
-    stem=re.sub(r'\s*(Mono/Stereo|Mono|Stereo)$','',names[0])
-    if all(re.sub(r'\s*(Mono/Stereo|Mono|Stereo)$','',x)==stem for x in names):
-        pick=dict(group[0]); pick['name']=stem          # Waves channel variants
-    else:
-        pick=dict(max(group,key=lambda g:(' ' in g['name'], len(g['name']))))
-    fmts=set()
-    for g in group: fmts.update(g['formats'].split('/'))
-    pick['formats']='/'.join(sorted(fmts))
-    # keep whichever spelling carries the researched link data
-    L=plug_links.get(vendor,{}).get('products',{})
-    for g in group:
-        if L.get(g['name'],{}).get('product_url'): pick['_link_name']=g['name']; break
-    _P.append(pick)
-P=sorted(_P,key=lambda x:(x['vendor'].lower(),x['name'].lower()))
+P=collapse_plugins(P, has_link=lambda v,n:
+    bool(plug_links.get(v,{}).get('products',{}).get(n,{}).get('product_url')))
 print('plugins after collapsing format variants:',len(P))
 
 rows=[]
@@ -98,20 +73,18 @@ for p in P:
 def cls(r):
     q=r['path']
     if 'Ableton Live 12 Suite.app' in q: return 'Live built-in'
-    if '/Live Sets/' in q or 'Live Sets Archive' in q or ' Project/' in q: return 'Project copy'
+    if not device_in_scope(r): return 'Out of scope'
     if '/User Library/' in q: return 'User Library'
-    if r['source']=='Pack' or 'Factory Packs' in q or '/Packs/' in q: return 'Pack'
-    return 'Elsewhere'
+    return 'Pack'
 
-# Simon's own — collapse variants, link to the guide
+# guide-page slug per built-here device (names live in collapse.py)
 OWN={'Cascade':'cascade','Microcosmos':'microcosmos','Pulsograph':'pulsograph',
      'ORAM':'oram','The1958Machine':'the-1958-machine','Ondes Martenot':'ondes-martenot',
      'SW Radio':'sw-radio','YT Sampler':'yt-sampler','Preset Scroll':'preset-scroll',
      'Manual Tape':'manual-tape','Scene Placer':'scene-placer','False Memory':'false-memory',
      'Tape Error':'tape-error','StripSilence':'strip-silence',
      'Disintegration':'disintegration','Magnabelt':'magnabelt','Splice 1':'splice-tape-collage'}
-OWN_NAME={'The1958Machine':'The 1958 Machine','StripSilence':'Strip Silence',
-          'Splice 1':'Splice (Tape Collage)'}
+# the guide-page slug for each; the display name comes from collapse.py
 
 pack_of={}
 for r in M:
@@ -120,8 +93,8 @@ for r in M:
 best={}
 for r in M:
     c=cls(r)
-    if c in ('Project copy','Elsewhere'): continue
-    own=next((k for k in OWN if r['name'].startswith(k)),None)
+    if c=='Out of scope': continue
+    own=own_prefix(r['name'])
     key=('own',own) if own else (c, r['name'])
     cur=best.get(key)
     if cur is None or r['used']>cur['used']: best[key]=r
@@ -129,7 +102,7 @@ for r in M:
 for (kind,k),r in best.items():
     c=cls(r)
     if kind=='own':
-        rows.append(dict(slug=slug('m-'+k),name=OWN_NAME.get(k,k),source='Max for Live',
+        rows.append(dict(slug=slug('m-'+k),name=guide_name(k),source='Max for Live',
             type=None,maker='Claude + Simon',fmt=r['kind'],origin='Built here',
             note='',version='',url='',manual='',guide=f'../max-for-live/devices/{OWN[k]}.html'))
         continue

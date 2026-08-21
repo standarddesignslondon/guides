@@ -1,826 +1,398 @@
 [
  {
-  "ModuleId": "585",
-  "Path": "/Library/Audio/Plug-Ins/VST3/EC300.vst3",
-  "Arch": "3",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "288cff0:60563ae9"
- },
- {
-  "ModuleId": "658",
-  "Path": "/Library/Audio/Plug-Ins/VST3/Philharmonik 2.vst3",
-  "Arch": "3",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "5a2d0:5e21d4a0"
- },
- {
-  "ModuleId": "686",
-  "Path": "/Library/Audio/Plug-Ins/VST3/WaveShell6-VST3 11.0.vst3",
-  "Arch": "3",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "13d7ea4:6a01fb0a"
- },
- {
-  "ModuleId": "691",
-  "Path": "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 11.0.vst3",
-  "Arch": "3",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "13b2d4c:6a01fb0a"
- },
- {
-  "ModuleId": "700",
-  "Path": "/Library/Audio/Plug-Ins/VST3/WaveShell9-VST3 11.0.vst3",
-  "Arch": "3",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "13e9818:6a01fb0a"
- },
- {
-  "ModuleId": "749",
-  "Path": "/Library/Audio/Plug-Ins/VST3/WaveShell3-VST3 11.0.vst3",
-  "Arch": "3",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "13be758:6a01fb0a"
- },
- {
-  "ModuleId": "873",
-  "Path": "/Library/Audio/Plug-Ins/VST/Ozone Imager 2.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "a3640:6823d81e"
- },
- {
-  "ModuleId": "874",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_ReelBus_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "6e120:64c970f4"
- },
- {
-  "ModuleId": "875",
-  "Path": "/Library/Audio/Plug-Ins/VST/Battery 4.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "415e010:677d3b08"
- },
- {
-  "ModuleId": "881",
-  "Path": "/Library/Audio/Plug-Ins/VST/Relay.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "a3630:68471d45"
- },
- {
-  "ModuleId": "883",
-  "Path": "/Library/Audio/Plug-Ins/VST/WaveShell6-VST 11.0.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "132c248:5e78a6dd"
- },
- {
-  "ModuleId": "885",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_TimeMachine_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "63e00:64c97101"
- },
- {
-  "ModuleId": "887",
-  "Path": "/Library/Audio/Plug-Ins/VST/Bite.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "3ac3d30:6942c3f9"
+  "path": "/Library/Audio/Plug-Ins/VST3/EC300.vst3",
+  "state": 3
  },
  {
-  "ModuleId": "894",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Broadcast_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "7f6c0:64c970f8"
+  "path": "/Library/Audio/Plug-Ins/VST3/Philharmonik 2.vst3",
+  "state": 3
  },
  {
-  "ModuleId": "896",
-  "Path": "/Library/Audio/Plug-Ins/VST/Wurli V2.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "disabled",
-  "Fingerprint": "2eb8cf0:64001539"
+  "path": "/Library/Audio/Plug-Ins/VST/Insight 2.vst",
+  "state": 3
  },
  {
-  "ModuleId": "901",
-  "Path": "/Library/Audio/Plug-Ins/VST/Supercharger.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "1f60af0:6942c85e"
+  "path": "/Library/Audio/Plug-Ins/VST/Ozone Imager 2.vst",
+  "state": 3
  },
  {
-  "ModuleId": "908",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_FlX_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "837b0:64c970f1"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_ReelBus_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "926",
-  "Path": "/Library/Audio/Plug-Ins/VST/Reaktor 6.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "49ae7a0:64255a66"
+  "path": "/Library/Audio/Plug-Ins/VST/Battery 4.vst",
+  "state": 3
  },
  {
-  "ModuleId": "927",
-  "Path": "/Library/Audio/Plug-Ins/VST/Reaktor 6 FX.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "92cf0:64255a66"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Broadcast_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "928",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Glasgow.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/Relay.vst",
+  "state": 3
  },
  {
-  "ModuleId": "933",
-  "Path": "/Library/Audio/Plug-Ins/VST/Supercharger GT.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "1bad150:6942c984"
+  "path": "/Library/Audio/Plug-Ins/VST/WaveShell6-VST 11.0.vst",
+  "state": 3
  },
  {
-  "ModuleId": "935",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Reverb_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "63db0:64c97100"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_TimeMachine_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "939",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_EBUCompact_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "69ff0:64c970ef"
+  "path": "/Library/Audio/Plug-Ins/VST/Bite.vst",
+  "state": 3
  },
  {
-  "ModuleId": "940",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Kingston.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_EBUCompact_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "944",
-  "Path": "/Library/Audio/Plug-Ins/VST/Massive X.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "76b8040:69a97148"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Kingston.vst",
+  "state": 3
  },
  {
-  "ModuleId": "950",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_VoicePitcher_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "65f40:64c970f5"
+  "path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Phosphor.vst",
+  "state": 3
  },
  {
-  "ModuleId": "954",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Compressor_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "6d1a0:64c970fa"
+  "path": "/Library/Audio/Plug-Ins/VST/Supercharger.vst",
+  "state": 3
  },
  {
-  "ModuleId": "958",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Sibalance_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "7a5d0:64c970f5"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_FlX_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "961",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Rosario.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/Reaktor 6.vst",
+  "state": 3
  },
  {
-  "ModuleId": "967",
-  "Path": "/Library/Audio/Plug-Ins/VST/M-Tron Pro.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "142850:5e8b8338"
+  "path": "/Library/Audio/Plug-Ins/VST/Reaktor 6 FX.vst",
+  "state": 3
  },
  {
-  "ModuleId": "972",
-  "Path": "/Library/Audio/Plug-Ins/VST/Freak.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "3adfbd0:6942d3fc"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Glasgow.vst",
+  "state": 3
  },
  {
-  "ModuleId": "981",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_MidSideTransformer_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "5dae0:64c970f6"
+  "path": "/Library/Audio/Plug-Ins/VST/Supercharger GT.vst",
+  "state": 3
  },
  {
-  "ModuleId": "982",
-  "Path": "/Library/Audio/Plug-Ins/VST/Kontakt.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "3c8fdd0:647da294"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Reverb_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "987",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Barricade_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "77660:64c970ec"
+  "path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Vapor.vst",
+  "state": 3
  },
  {
-  "ModuleId": "993",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_EBULoudness_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "70230:64c970f0"
+  "path": "/Library/Audio/Plug-Ins/VST/Massive X.vst",
+  "state": 3
  },
  {
-  "ModuleId": "998",
-  "Path": "/Library/Audio/Plug-Ins/VST/Raum.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "3adf440:6942d7a2"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_VoicePitcher_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "999",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Dublin.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Compressor_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1006",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Dither_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "70220:64c970ee"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Sibalance_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1014",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_EZQ_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "78490:64c970f7"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_FlX4_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1023",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Ferox_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "66f20:64c970fd"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Firenze.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1030",
-  "Path": "/Library/Audio/Plug-Ins/VST/WaveShell1-VST 11.0.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "1307d68:5d8b8da0"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Rosario.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1039",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/London.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/M-Tron Pro.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1045",
-  "Path": "/Library/Audio/Plug-Ins/VST/Philharmonik 2.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "28330:5e21d498"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_MidSideTransformer_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1046",
-  "Path": "/Library/Audio/Plug-Ins/VST/WaveShell9-VST 11.0.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "1348e94:5ec2a74f"
+  "path": "/Library/Audio/Plug-Ins/VST/Kontakt.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1048",
-  "Path": "/Library/Audio/Plug-Ins/VST/Dirt.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "3abeca0:6942d981"
+  "path": "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 11.0.vst3",
+  "state": 3
  },
  {
-  "ModuleId": "1049",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Bilbao.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST3/WaveShell9-VST3 11.0.vst3",
+  "state": 3
  },
  {
-  "ModuleId": "1050",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Stockholm.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Barricade_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1051",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Milpitas.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_EBULoudness_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1052",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Module_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "6e0f0:64c970ff"
+  "path": "/Library/Audio/Plug-Ins/VST/Freak.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1056",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Kiev.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/Raum.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1057",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Tokyo.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Dublin.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1058",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Equalizer_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "775e0:64c970fc"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Dither_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1061",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Marseille.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_EZQ_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1065",
-  "Path": "/Library/Audio/Plug-Ins/VST/Vinyl.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "a3630:681e4e5f"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Berlin.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1066",
-  "Path": "/Library/Audio/Plug-Ins/VST/WaveShell3-VST 11.0.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "1313654:5e14c1d1"
+  "path": "/Library/Audio/Plug-Ins/VST/WaveShell1-VST 11.0.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1068",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Darwin.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/Audio Damage/BigSeq2.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1071",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Berlin.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/London.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1082",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Gate_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "67fe0:64c970fe"
+  "path": "/Library/Audio/Plug-Ins/VST/Philharmonik 2.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1083",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Phoenix.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/WaveShell9-VST 11.0.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1086",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Montreal.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/Dirt.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1088",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Isone_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "75410:64c970f3"
+  "path": "/Library/Audio/Plug-Ins/VST3/WaveShell6-VST3 11.0.vst3",
+  "state": 3
  },
  {
-  "ModuleId": "1092",
-  "Path": "/Library/Audio/Plug-Ins/VST/Emulator II V.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "37f3bf0:68e6cf1d"
+  "path": "/Library/Audio/Plug-Ins/VST3/WaveShell3-VST3 11.0.vst3",
+  "state": 3
  },
  {
-  "ModuleId": "1094",
-  "Path": "/Library/Audio/Plug-Ins/VST/Farfisa V.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "disabled",
-  "Fingerprint": "3614580:68e6c7ed"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Module_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1096",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Firenze.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/Vinyl.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1097",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_FlX4_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "837b0:64c970f2"
+  "path": "/Library/Audio/Plug-Ins/VST/WaveShell3-VST 11.0.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1098",
-  "Path": "/Library/Audio/Plug-Ins/VST/Vocal Doubler.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "a3640:683fa475"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Darwin.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1104",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_BusCompressor_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "7b6d0:64c970ed"
+  "path": "/Library/Audio/Plug-Ins/VST/Vocal Doubler.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1106",
-  "Path": "/Library/Audio/Plug-Ins/VST/Replika.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "528ac10:6942ced3"
+  "path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Tattoo.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1107",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Lisbon.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Equalizer_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1110",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Recife.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Tokyo.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1115",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/AbuDhabi.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Replicant 2.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1116",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Kamata.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Montreal.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1117",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Brussels.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Isone_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1119",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_Evoke_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "7d720:64c970f0"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Marseille.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1120",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Miami.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Bilbao.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1122",
-  "Path": "/Library/Audio/Plug-Ins/VST/Transient Master.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "12f0e50:6942c900"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Stockholm.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1125",
-  "Path": "/Library/Audio/Plug-Ins/VST/TB_DeEsser_v3.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "690b0:64c970fb"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Milpitas.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1133",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Helsinki.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Ferox_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1134",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Alexandria.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Axon.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1135",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Zurich.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Gate_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1138",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Chicago.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Phoenix.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1140",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Vancouver.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_BusCompressor_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1141",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Montpellier.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/Replika.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1143",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Wolfsburg.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Lisbon.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1144",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Gladstone.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/AbuDhabi.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1145",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Amsterdam.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Kamata.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1148",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Lexington.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Brussels.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1149",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Salzburg.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_Evoke_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1152",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Chiangmai.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b24:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/Audio Damage/RatshackReverb2.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1155",
-  "Path": "/Library/Audio/Plug-Ins/VST/KORG/Madrid.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "9b1c:5cb93a92"
+  "path": "/Library/Audio/Plug-Ins/VST/TB_DeEsser_v3.vst",
+  "state": 3
  },
  {
-  "ModuleId": "1168",
-  "Path": "/Library/Audio/Plug-Ins/VST/Insight 2.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "a3630:680176b6"
- },
- {
-  "ModuleId": "1172",
-  "Path": "/Library/Audio/Plug-Ins/VST3/Eventide/Temperance Lite.vst3",
-  "Arch": "3",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "2458430:6938e9d4"
- },
- {
-  "ModuleId": "1225",
-  "Path": "/Library/Audio/Plug-Ins/VST3/Replicant 2.vst3",
-  "Arch": "3",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "5b5c3c:59717276"
- },
- {
-  "ModuleId": "1226",
-  "Path": "/Library/Audio/Plug-Ins/VST/Audio Damage/BigSeq2.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "255494:5403e7f8"
- },
- {
-  "ModuleId": "1227",
-  "Path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Phosphor.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "1a0cc4:54e4a5df"
- },
- {
-  "ModuleId": "1228",
-  "Path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Vapor.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "11e5a8:532aff4e"
- },
- {
-  "ModuleId": "1229",
-  "Path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Tattoo.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "262240:530b530b"
- },
- {
-  "ModuleId": "1230",
-  "Path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Replicant 2.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "57c578:59717276"
- },
- {
-  "ModuleId": "1231",
-  "Path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Axon.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "1aa82c:54342188"
- },
- {
-  "ModuleId": "1232",
-  "Path": "/Library/Audio/Plug-Ins/VST/Audio Damage/RatshackReverb2.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "11cf90:530e3dc6"
- },
- {
-  "ModuleId": "1233",
-  "Path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Mangleverb.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "1b9204:53fba258"
- },
- {
-  "ModuleId": "1234",
-  "Path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Automaton.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "213228:54186350"
- },
- {
-  "ModuleId": "1235",
-  "Path": "/Library/Audio/Plug-Ins/VST/Audio Damage/DubStation_15.vst",
-  "Arch": "2",
-  "Processor": "2",
-  "ScanState": "not-a-plugin",
-  "Fingerprint": "1069e0:52bc475d"
+  "path": "/Library/Audio/Plug-Ins/VST3/Replicant 2.vst3",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Gladstone.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Helsinki.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Lexington.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Chicago.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Vancouver.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Wolfsburg.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Chiangmai.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Amsterdam.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Salzburg.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/Transient Master.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Miami.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Madrid.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Alexandria.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Mangleverb.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Recife.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/Audio Damage/Automaton.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Zurich.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Montpellier.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/KORG/Kiev.vst",
+  "state": 3
+ },
+ {
+  "path": "/Library/Audio/Plug-Ins/VST/Audio Damage/DubStation_15.vst",
+  "state": 3
  }
 ]
