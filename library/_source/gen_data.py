@@ -1,24 +1,28 @@
-import json, collections, pprint, re
+import json, collections, pprint, re, os, sys
+HERE=os.path.dirname(os.path.abspath(__file__))
+GUIDES=os.path.dirname(os.path.dirname(HERE))
 
-rows=json.load(open('catalogue.json'))
+rows=json.load(open(os.path.join(HERE,'catalogue.json')))
 
 # --- Simon's own devices: type, note and maker taken from the guide's own site_data ---
-OWN={
- 'Cascade':('delay','Claude'),'Microcosmos':('granular','Claude'),
- 'Pulsograph':('drums','Claude'),'ORAM':('synth','Claude'),
- 'The 1958 Machine':('tape','Claude'),'Splice (Tape Collage)':('tape','Claude'),
- 'Ondes Martenot':('synth','Claude'),'SW Radio':('other','Claude'),
- 'YT Sampler':('sampler','Claude'),'Preset Scroll':('utility','Claude'),
- 'Manual Tape':('sampler','GPT-5.6'),'Scene Placer':('spatial','GPT-5.6'),
- 'False Memory':('distortion','GPT-5.6'),'Tape Error':('tape','GPT-5.6'),
- 'Strip Silence':('utility','GPT-5.6'),'Disintegration':('tape','GPT-5.6'),
- 'Magnabelt':('sampler','ChatGPT'),
+# Only the fine-grained type lives here. Everything else about these devices —
+# who built it, what it does, what kind of device it is — is read out of the
+# guide's own site_data.py below, so the two can't drift apart.
+OWN_TYPE={
+ 'Cascade':'delay','Microcosmos':'granular','Pulsograph':'drums',
+ 'ORAM':'synth','The 1958 Machine':'tape','Splice (Tape Collage)':'tape',
+ 'Ondes Martenot':'synth','SW Radio':'other','YT Sampler':'sampler',
+ 'Preset Scroll':'utility','Manual Tape':'sampler','Scene Placer':'spatial',
+ 'False Memory':'distortion','Tape Error':'tape','Strip Silence':'utility',
+ 'Disintegration':'tape','Magnabelt':'sampler',
 }
-import sys
-sys.path.insert(0,'/sessions/vibrant-blissful-thompson/mnt/Guides/max-for-live')
+sys.path.insert(0, os.path.join(GUIDES,'max-for-live'))
 import site_data as SD
 tagline={i['name']:i['tagline'] for i in SD.ITEMS}
 kindof={i['name']:i['kind'] for i in SD.ITEMS}
+authorof={i['name']:i['author'] for i in SD.ITEMS}
+missing=[n for n in OWN_TYPE if n not in tagline]
+assert not missing, 'not in the guide: %s' % missing
 
 INSTRUMENT_TYPES={'synth','sampler','drums'}
 def role(e):
@@ -29,10 +33,10 @@ def role(e):
 out=[]
 for e in rows:
     if e['origin']=='Built here':
-        t,a=OWN[e['name']]
-        e['type']=t; e['maker']=a
-        e['note']=tagline.get(e['name'],'')
-        e['fmt']=kindof.get(e['name'],e['fmt'])
+        e['type']=OWN_TYPE[e['name']]
+        e['maker']=authorof[e['name']]
+        e['note']=tagline[e['name']]
+        e['fmt']=kindof[e['name']]
     e['role']=role(e)
     if e['type']=='tutorial': e['role']='Audio Effect'
     out.append({k:e.get(k,'') or '' for k in
@@ -71,7 +75,7 @@ SUBJECT={
  ],
 }
 
-with open('/sessions/vibrant-blissful-thompson/mnt/Guides/library/catalogue_data.py','w') as f:
+with open(os.path.join(GUIDES,'library','catalogue_data.py'),'w') as f:
     f.write('"""Catalogue content for the library subject.\n\n'
             'Generated from Ableton Live 12.4.3\'s own databases:\n'
             '  Live-plugins-1.db   the plugin scanner database\n'

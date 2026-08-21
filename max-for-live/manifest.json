@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-08-19",
+ "generated": "2026-08-21",
  "items": [
   {
    "num": "01",
@@ -139,7 +139,7 @@
    "image": "images/manual\u2013tape.png",
    "facets": {
     "kind": "Instrument",
-    "author": "GPT-5.6"
+    "author": "ChatGPT"
    }
   },
   {
@@ -151,7 +151,7 @@
    "image": "images/scene\u2013placer.png",
    "facets": {
     "kind": "Audio Effect",
-    "author": "GPT-5.6"
+    "author": "ChatGPT"
    }
   },
   {
@@ -163,7 +163,7 @@
    "image": "images/false\u2013memory.png",
    "facets": {
     "kind": "Audio Effect",
-    "author": "GPT-5.6"
+    "author": "ChatGPT"
    }
   },
   {
@@ -175,7 +175,7 @@
    "image": "images/tape\u2013error.png",
    "facets": {
     "kind": "Audio Effect",
-    "author": "GPT-5.6"
+    "author": "ChatGPT"
    }
   },
   {
@@ -187,7 +187,7 @@
    "image": "images/stripsilence.png",
    "facets": {
     "kind": "Audio Effect",
-    "author": "GPT-5.6"
+    "author": "ChatGPT"
    }
   },
   {
@@ -199,7 +199,7 @@
    "image": "images/disintegration.png",
    "facets": {
     "kind": "Audio Effect",
-    "author": "GPT-5.6"
+    "author": "ChatGPT"
    }
   },
   {

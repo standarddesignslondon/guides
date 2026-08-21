@@ -1,4 +1,6 @@
-import json, glob, re, collections, unicodedata
+import json, glob, re, collections, unicodedata, os
+HERE=os.path.dirname(os.path.abspath(__file__))
+os.chdir(HERE)
 
 def load(f):
     try: return json.load(open(f))

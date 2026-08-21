@@ -1372,7 +1372,7 @@ ITEMS.append({
     "slug": "manual-tape",
     "name": "Manual Tape",
     "kind": "Instrument",
-    "author": "GPT-5.6",
+    "author": "ChatGPT",
     "status": "v0.2.1",
     "folder": "manual-tape",
     "tagline": "Hand-controlled sample playback — a tape reel you push forwards "
@@ -1460,7 +1460,7 @@ ITEMS.append({
     "slug": "scene-placer",
     "name": "Scene Placer",
     "kind": "Audio Effect",
-    "author": "GPT-5.6",
+    "author": "ChatGPT",
     "status": "v0.1",
     "folder": "scene-placer",
     "tagline": "Places a voice or source inside a loaded environment recording.",
@@ -1542,7 +1542,7 @@ ITEMS.append({
     "slug": "false-memory",
     "name": "False Memory",
     "kind": "Audio Effect",
-    "author": "GPT-5.6",
+    "author": "ChatGPT",
     "status": "Working",
     "folder": "false-memory",
     "tagline": "Degradation effect — parallel analog and digital damage paths "
@@ -1640,7 +1640,7 @@ ITEMS.append({
                       "caption": "Tape Error Trigger (MIDI track)"}],
     "name": "Tape Error",
     "kind": "Audio Effect",
-    "author": "GPT-5.6",
+    "author": "ChatGPT",
     "status": "Working",
     "folder": "Tape Error",
     "tagline": "Fire a tape fault on an audio track from a note on a MIDI "
@@ -1722,7 +1722,7 @@ ITEMS.append({
     "image_aliases": ["stripsilence"],
     "name": "Strip Silence",
     "kind": "Audio Effect",
-    "author": "GPT-5.6",
+    "author": "ChatGPT",
     "status": "v2",
     "folder": "StripSilence",
     "tagline": "Removes the silence from arrangement recordings — non-"
@@ -1816,7 +1816,7 @@ ITEMS.append({
     "slug": "disintegration",
     "name": "Disintegration",
     "kind": "Audio Effect",
-    "author": "GPT-5.6",
+    "author": "ChatGPT",
     "status": "Prototype 0.3.1",
     "folder": "Disintegration",
     "tagline": "Cumulative tape-oxide loss — one reel, deterministic damage, "

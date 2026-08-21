@@ -1,0 +1,3746 @@
+[
+ {
+  "vendor": "2Rule",
+  "name": "2RuleSynthV-3-1",
+  "version": "3.2.0",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "https://akyuz5.wixsite.com/mysite",
+  "new": false
+ },
+ {
+  "vendor": "2Rule",
+  "name": "TugGlicento",
+  "version": "3.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "www.yourcompany.com",
+  "new": false
+ },
+ {
+  "vendor": "2Rule",
+  "name": "TugImgSynth",
+  "version": "1.2.0",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "https://akyuz5.wixsite.com/mysite",
+  "new": false
+ },
+ {
+  "vendor": "2Rule",
+  "name": "TugMidiSeq",
+  "version": "2.3.0",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "https://akyuz5.wixsite.com/mysite",
+  "new": false
+ },
+ {
+  "vendor": "2Rule",
+  "name": "TugMultiEffect",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://akyuz5.wixsite.com/mysite",
+  "new": false
+ },
+ {
+  "vendor": "2Rule",
+  "name": "TugPhonon",
+  "version": "1.3.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://akyuz5.wixsite.com/mysite",
+  "new": false
+ },
+ {
+  "vendor": "2Rule",
+  "name": "TugSpect",
+  "version": "1.0.4.2",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://akyuz5.wixsite.com/mysite",
+  "new": false
+ },
+ {
+  "vendor": "Aberrant DSP",
+  "name": "Cataclysm",
+  "version": "1.0",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "aberrantdsp.com",
+  "new": false
+ },
+ {
+  "vendor": "Aberrant DSP",
+  "name": "Lofi Oddity",
+  "version": "1.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "aberrantdsp.com",
+  "new": false
+ },
+ {
+  "vendor": "AIR Music Technology",
+  "name": "AIR Multiband Filterbank",
+  "version": "1.0.0.37",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "www.inmusicbrands.com",
+  "new": false
+ },
+ {
+  "vendor": "AIR Music Technology",
+  "name": "AIR Tape Double Track",
+  "version": "1.0.0.25",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "akaipro.com",
+  "new": false
+ },
+ {
+  "vendor": "Airwindows",
+  "name": "Airwindows Consolidated",
+  "version": "1.2025.63",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://airwindows.com/",
+  "new": false
+ },
+ {
+  "vendor": "AnalogObsession",
+  "name": "Chopa",
+  "version": "3.0.0",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "http://www.analogobsession.com/",
+  "new": false
+ },
+ {
+  "vendor": "AnalogObsession",
+  "name": "DrGate",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.analogobsession.com/",
+  "new": false
+ },
+ {
+  "vendor": "AnalogObsession",
+  "name": "RazorClip",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.analogobsession.com/",
+  "new": false
+ },
+ {
+  "vendor": "AnalogObsession",
+  "name": "ReLife",
+  "version": "2.0.0",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.analogobsession.com/",
+  "new": false
+ },
+ {
+  "vendor": "Applied Acoustics Systems",
+  "name": "Lounge Lizard Session 4",
+  "version": "4",
+  "formats": "VST2/VST3",
+  "category": "Instrument",
+  "url": "www.applied-acoustics.com",
+  "new": false
+ },
+ {
+  "vendor": "Applied Acoustics Systems",
+  "name": "Strum Session 2",
+  "version": "2",
+  "formats": "VST2/VST3",
+  "category": "Instrument",
+  "url": "www.applied-acoustics.com",
+  "new": false
+ },
+ {
+  "vendor": "Applied Acoustics Systems",
+  "name": "Ultra Analog Session 2",
+  "version": "2",
+  "formats": "VST2/VST3",
+  "category": "Instrument",
+  "url": "www.applied-acoustics.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Acid V",
+  "version": "1.1.5.6367",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Analog Lab V",
+  "version": "5.12.4.6686",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "ARP 2600 V3",
+  "version": "3.13.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Augmented BRASS",
+  "version": "2.0.2.6369",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Augmented GRAND PIANO",
+  "version": "2.0.2.6369",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Augmented MALLETS",
+  "version": "2.0.2.6369",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Augmented PERSIA",
+  "version": "2.0.2.192",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Augmented STRINGS",
+  "version": "2.0.2.6369",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Augmented VOICES",
+  "version": "2.0.2.6369",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Augmented WOODWINDS",
+  "version": "2.0.2.6369",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Augmented YANGTZE",
+  "version": "2.0.2.6369",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "B-3 V2",
+  "version": "2.9.5.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Buchla Easel V",
+  "version": "1.13.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Bus EXCITER-104",
+  "version": "1.0.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Bus FORCE",
+  "version": "1.4.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Mastering",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Bus PEAK",
+  "version": "1.0.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Bus TRANSIENT",
+  "version": "1.0.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Tools",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Chorus DIMENSION-D",
+  "version": "1.5.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Modulation",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Chorus JUN-6",
+  "version": "1.5.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Modulation",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Clavinet V",
+  "version": "1.13.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "CMI V",
+  "version": "1.13.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Comp DIODE-609",
+  "version": "1.4.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Comp FET-76",
+  "version": "1.7.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Comp TUBE-STA",
+  "version": "1.7.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Comp VCA-65",
+  "version": "1.7.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "CP-70 V",
+  "version": "1.0.5.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "CS-80 V4",
+  "version": "4.3.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "CZ V",
+  "version": "1.9.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Delay BRIGADE",
+  "version": "1.7.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Delay",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Delay ETERNITY",
+  "version": "1.7.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Delay",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Delay TAPE-201",
+  "version": "1.7.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Delay",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Dist COLDFIRE",
+  "version": "1.2.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Dist OPAMP-21",
+  "version": "1.2.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Dist TUBE-CULTURE",
+  "version": "1.2.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "DX7 V",
+  "version": "1.13.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Efx AMBIENT",
+  "version": "1.0.0.6577",
+  "formats": "VST2/VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Efx FRAGMENTS",
+  "version": "1.3.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Tools",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Efx MOTIONS",
+  "version": "1.1.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Tools",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Efx REFRACT",
+  "version": "1.1.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Modulation",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Emulator II V",
+  "version": "1.6.4.6366",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "EQ SITRAL-295",
+  "version": "1.4.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Farfisa V",
+  "version": "1.13.4.6366",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Filter M12",
+  "version": "1.8.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Filter",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Filter MINI",
+  "version": "1.9.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Filter",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Filter MS-20",
+  "version": "1.2.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Filter",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Filter SEM",
+  "version": "1.8.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Filter",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Flanger BL-20",
+  "version": "1.5.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Modulation",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Jun-6 V",
+  "version": "1.6.6.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Jup-8 V4",
+  "version": "4.6.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Jup-8000 V",
+  "version": "1.0.1.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "KORG MS-20 V",
+  "version": "1.3.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Matrix-12 V2",
+  "version": "2.13.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Mellotron V",
+  "version": "1.9.5.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Memory V",
+  "version": "1.0.0.8646",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Mini V3",
+  "version": "3.12.0.3422",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Mini V4",
+  "version": "4.0.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "MiniBrute V",
+  "version": "1.0.6.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "MiniFreak V",
+  "version": "4.0.2.6369",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "https://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Mix DRUMS",
+  "version": "1.0.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Tools",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Modular V3",
+  "version": "3.13.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "OP-Xa V",
+  "version": "1.7.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Phaser BI-TRON",
+  "version": "1.5.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Modulation",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Piano V3",
+  "version": "3.3.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Pigments",
+  "version": "7.0.0.6447",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Pitch SHIFTER-910",
+  "version": "1.0.0.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Tools",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Pre 1973",
+  "version": "1.9.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Pre TridA",
+  "version": "1.8.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Pre V76",
+  "version": "1.8.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Prophet-5 V",
+  "version": "1.3.5.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Prophet-VS V",
+  "version": "1.3.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Pure LoFi",
+  "version": "1.0.1.6372",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Rev INTENSITY",
+  "version": "1.6.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Rev LX-24",
+  "version": "1.2.1.6567",
+  "formats": "VST2/VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Rev OCEAN",
+  "version": "1.0.0.5848",
+  "formats": "VST2/VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Rev PLATE-140",
+  "version": "1.7.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Rev SPRING-636",
+  "version": "1.6.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Rotary CLS-222",
+  "version": "1.2.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Modulation",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "SEM V2",
+  "version": "2.13.2.5305",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "SEM V3",
+  "version": "3.0.1.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Solina V2",
+  "version": "2.13.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "SQ80 V",
+  "version": "1.6.5.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Stage-73 V2",
+  "version": "2.6.5.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Synclavier V",
+  "version": "2.13.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Synthi V",
+  "version": "1.9.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Synthx V",
+  "version": "1.0.7.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Tape J-37",
+  "version": "1.1.0.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Tools",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Tape MELLO-FI",
+  "version": "1.4.1.6566",
+  "formats": "VST2/VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Vocoder V",
+  "version": "1.6.5.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "VOX Continental V2",
+  "version": "2.13.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Wurli V2",
+  "version": "2.12.0.3420",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Arturia",
+  "name": "Wurli V3",
+  "version": "3.0.4.6366",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.arturia.com",
+  "new": false
+ },
+ {
+  "vendor": "Audio Damage, Inc.",
+  "name": "ShinRonin",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "http://www.audiodamage.com",
+  "new": false
+ },
+ {
+  "vendor": "Audiomodern",
+  "name": "Filterstep",
+  "version": "1.1.3",
+  "formats": "VST2/VST3",
+  "category": "Fx, Filter, Generator, Modulation, Tools",
+  "url": "https://www.audiomodern.com",
+  "new": false
+ },
+ {
+  "vendor": "Audiomodern",
+  "name": "Gatelab",
+  "version": "1.1.3",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "https://www.audiomodern.com",
+  "new": false
+ },
+ {
+  "vendor": "Audiomodern",
+  "name": "Panflow",
+  "version": "1.0.1",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "https://www.audiomodern.com",
+  "new": false
+ },
+ {
+  "vendor": "Audiomodern",
+  "name": "Soundbox",
+  "version": "1.0.7",
+  "formats": "VST3",
+  "category": "Instrument, Instrument Synth",
+  "url": "https://www.audiomodern.com",
+  "new": false
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Fog Convolver 2",
+  "version": "2.3.0",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "https://www.audiothing.net",
+  "new": false
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Moon Echo",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx, Delay, Reverb",
+  "url": "https://www.audiothing.net",
+  "new": false
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Octaves",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx, Filter",
+  "url": "https://www.audiothing.net",
+  "new": false
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Reels",
+  "version": "1.5.4",
+  "formats": "VST3",
+  "category": "Fx, Delay, Distortion",
+  "url": "https://audiothing.net",
+  "new": true
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Speakers",
+  "version": "1.3.3",
+  "formats": "VST3",
+  "category": "Fx, Distortion, EQ, Mastering",
+  "url": "https://www.audiothing.net",
+  "new": true
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Springs",
+  "version": "1.3.5",
+  "formats": "VST3",
+  "category": "Fx, EQ, Reverb",
+  "url": "https://www.audiothing.net",
+  "new": false
+ },
+ {
+  "vendor": "BABY Audio",
+  "name": "Beat Slammer",
+  "version": "1.2",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "BABY Audio",
+  "name": "Comeback Kid",
+  "version": "1.5",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "BABY Audio",
+  "name": "Magic Dice",
+  "version": "1.1",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "BABY Audio",
+  "name": "Magic Switch",
+  "version": "1.1",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "BABY Audio",
+  "name": "Pitch Drift",
+  "version": "1.1",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "BABY Audio",
+  "name": "Super VHS",
+  "version": "1.6",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "BABY Audio",
+  "name": "Tekno",
+  "version": "1.1",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "BABY Audio",
+  "name": "Warp",
+  "version": "1.0",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "www.babyaud.io",
+  "new": false
+ },
+ {
+  "vendor": "Crow Hill",
+  "name": "Vaults",
+  "version": "1.0.6",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "www.thecrowhillcompany.com",
+  "new": false
+ },
+ {
+  "vendor": "Cymatics",
+  "name": "Cymatics Deja Vu",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx, Pitch Shift",
+  "url": "https://cymatics.fm",
+  "new": false
+ },
+ {
+  "vendor": "Cymatics",
+  "name": "Cymatics Memory",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx, Pitch Shift",
+  "url": "https://cymatics.fm",
+  "new": false
+ },
+ {
+  "vendor": "Cymatics",
+  "name": "Cymatics Origin",
+  "version": "1.0.0",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Dawesome",
+  "name": "Sol",
+  "version": "1.0",
+  "formats": "VST3",
+  "category": "Fx, Distortion, Generator, Reverb",
+  "url": "https://www.dawesomemusic.com",
+  "new": false
+ },
+ {
+  "vendor": "Decidedly",
+  "name": "DecentSampler",
+  "version": "1.12.6",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://decided.ly",
+  "new": false
+ },
+ {
+  "vendor": "Eventide",
+  "name": "Temperance Lite",
+  "version": "1.0.8",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "www.eventideaudio.com",
+  "new": true
+ },
+ {
+  "vendor": "every something",
+  "name": "artikulation",
+  "version": "2.0.7",
+  "formats": "VST3",
+  "category": "Fx, Modulation",
+  "url": "https://plugins.every-something.com",
+  "new": false
+ },
+ {
+  "vendor": "every something",
+  "name": "glosso",
+  "version": "2.0.7",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "https://plugins.every-something.com",
+  "new": false
+ },
+ {
+  "vendor": "Excite Audio",
+  "name": "Bloom Mura Masa",
+  "version": "1.0.0",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "FKFX Audio",
+  "name": "FKFX Nanomix",
+  "version": "1.0.6",
+  "formats": "VST2/VST3",
+  "category": "Fx, Dynamics, Modulation, Tools",
+  "url": "https://www.fkfxaudio.com",
+  "new": false
+ },
+ {
+  "vendor": "Fors",
+  "name": "Junior-Lite",
+  "version": "1.0",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Fors",
+  "name": "Pivot-Lite",
+  "version": "1.22",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Full Bucket Music",
+  "name": "Bucket ONE",
+  "version": "1.1.2",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.fullbucket.de/music/",
+  "new": false
+ },
+ {
+  "vendor": "Full Bucket Music",
+  "name": "BucketOne",
+  "version": "10102",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Full Bucket Music",
+  "name": "Grain Strain",
+  "version": "1.1.2",
+  "formats": "VST3",
+  "category": "Fx, Modulation",
+  "url": "http://www.fullbucket.de/music/",
+  "new": false
+ },
+ {
+  "vendor": "Full Bucket Music",
+  "name": "GrainStrain",
+  "version": "10102",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Full Bucket Music",
+  "name": "PECS",
+  "version": "1.0.4",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.fullbucket.de/music/",
+  "new": false
+ },
+ {
+  "vendor": "GForce",
+  "name": "M-Tron Pro IV",
+  "version": "1.0.2",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "www.gforcesoftware.com",
+  "new": false
+ },
+ {
+  "vendor": "Glitchmachines",
+  "name": "Hysteresis",
+  "version": "1.4.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Higher Plane Software",
+  "name": "SpaceWalk",
+  "version": "1.1.0",
+  "formats": "VST3",
+  "category": "Instrument",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "AmpliTube 5",
+  "version": "5.10.7",
+  "formats": "VST2/VST3",
+  "category": "Fx, Distortion",
+  "url": "www.IKMultimediaProduction.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "ARC 3",
+  "version": "3.1.0",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "Black76",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "BrickwallLimiter",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "BritishChannel",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "BusCompressor",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "ClassicClipper",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "ClassicComp",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "ClassicEQ",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "ClassicLimiter",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "Comprexxor",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "CSRHall",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "CSRInverse",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "CSRPlate",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "CSRRoom",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "DeEsser",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "DynaMu",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "EQ432",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "EQ73",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "EQ81",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "EQPA",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "EQPB",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "EQPG",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "EQual",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "Fame",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "FarmStoneRoom",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "JCVocalStrip",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "Leslie",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "LinearPhaseEQ",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "MasterMatch",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "MBandComp",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "MBandImage",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "MBandLim",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "MicR",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "MODO BASS 2",
+  "version": "2.0.5",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "https://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "MODO DRUM",
+  "version": "1.5.0",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Drum",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "One",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "OptoComp",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "PreCL",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "ReSing",
+  "version": "1.0.5",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "www.IKMultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "SampleTank 4",
+  "version": "4.2.6",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "www.IKMultimediaProduction.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "SatX",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "SpaceDelay",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "StealthLimiter",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "SunsetSound",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "Syntronik 2",
+  "version": "2.1.3",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "https://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "T-RackS 5",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "T-RackS 5 Metering",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TapeEcho",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TapeMachine24",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TapeMachine440",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TapeMachine80",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TapeMachine99",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "Tascam388",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TascamPortaOne",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TeacA3340S",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TeacA6100MKII",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TONEX",
+  "version": "1.12.0",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "www.IKMultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Black 76",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Brickwall Limiter",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 British Channel",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Bus Compressor",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Classic Clipper",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics, Distortion",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Classic Comp",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Classic EQ",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Classic Multi Band Limiter",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Comprexxor",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 CSR Hall",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 CSR Inverse",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 CSR Plate",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 CSR Room",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 De Esser",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Dyna-Mu",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics, Distortion",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 EQ-73",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 EQ-81",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 EQ-PA",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 EQ-PB",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 EQ-PG",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 EQP-1A",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 EQual",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Fame Studio Reverb",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Joe Chiccarelli Vocal Strip",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Leslie",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Linear Phase EQ",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Master EQ-432",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Master Match",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Metering",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Mic Room",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 One",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Opto Comp",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Precision Comp-Limiter",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Quad Compressor",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Quad Image",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Spatial",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Quad Limiter",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Saturator X",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics, Distortion",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Space Delay",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Delay",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Stealth Limiter",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Suite",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Sunset Sound Studio Reverb",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Tape Echo",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Delay",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Tape Machine 24",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Tape Machine 440",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Tape Machine 80",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 Tape Machine 99",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 TASCAM 388",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 TASCAM PORTA ONE",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 TEAC A-3340S",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 TEAC A-6100 MKII",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 The Farm Stone Room",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 VC-670",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 White 2A",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "TR5 White Channel",
+  "version": "5.10.4",
+  "formats": "VST3",
+  "category": "Fx, EQ, Dynamics",
+  "url": "http://www.ikmultimedia.com",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "VC670",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "VintageProgramEQ1A",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "White2A",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "WhiteChannel",
+  "version": "330244",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "iZotope",
+  "name": "Insight 2",
+  "version": "2.6.0",
+  "formats": "VST3",
+  "category": "Fx, Analyzer",
+  "url": "http://www.izotope.com",
+  "new": false
+ },
+ {
+  "vendor": "iZotope",
+  "name": "Neutron 4 Elements",
+  "version": "4.6.0",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.izotope.com",
+  "new": false
+ },
+ {
+  "vendor": "iZotope",
+  "name": "Ozone 11 Elements",
+  "version": "11.3.0",
+  "formats": "VST3",
+  "category": "Fx, Mastering",
+  "url": "http://www.izotope.com",
+  "new": false
+ },
+ {
+  "vendor": "iZotope",
+  "name": "Ozone 11 Equalizer",
+  "version": "11.3.0",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.izotope.com",
+  "new": false
+ },
+ {
+  "vendor": "iZotope",
+  "name": "Ozone Imager 2",
+  "version": "2.3.0",
+  "formats": "VST3",
+  "category": "Fx, Spatial",
+  "url": "http://www.izotope.com",
+  "new": false
+ },
+ {
+  "vendor": "iZotope",
+  "name": "Relay",
+  "version": "1.7.0",
+  "formats": "VST3",
+  "category": "Fx, Spatial",
+  "url": "http://www.izotope.com",
+  "new": false
+ },
+ {
+  "vendor": "iZotope",
+  "name": "Tonal Balance Control 2",
+  "version": "2.10.0",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "http://www.izotope.com",
+  "new": false
+ },
+ {
+  "vendor": "iZotope",
+  "name": "Trash",
+  "version": "1.3.0",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.izotope.com",
+  "new": false
+ },
+ {
+  "vendor": "iZotope",
+  "name": "Vinyl",
+  "version": "1.13.0",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.izotope.com",
+  "new": false
+ },
+ {
+  "vendor": "iZotope",
+  "name": "Vocal Doubler",
+  "version": "1.4.0",
+  "formats": "VST3",
+  "category": "Fx, Modulation, Vocals",
+  "url": "http://www.izotope.com",
+  "new": false
+ },
+ {
+  "vendor": "JMGSound",
+  "name": "Lofinity",
+  "version": "1.0",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "www.unitedplugins.com",
+  "new": false
+ },
+ {
+  "vendor": "Justin Sheriff",
+  "name": "De-Space",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Karanyi Sounds",
+  "name": "Breeze Black Edition",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://karanyisounds.com/",
+  "new": false
+ },
+ {
+  "vendor": "Karanyi Sounds",
+  "name": "Matra",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "http://karanyisounds.com",
+  "new": false
+ },
+ {
+  "vendor": "Klanghelm",
+  "name": "DC1A3",
+  "version": "3.5.0",
+  "formats": "VST2/VST3",
+  "category": "Fx, Dynamics",
+  "url": "www.klanghelm.com",
+  "new": false
+ },
+ {
+  "vendor": "Klevgrand",
+  "name": "Degrader",
+  "version": "1.0.5",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "https://www.klevgrand.se",
+  "new": false
+ },
+ {
+  "vendor": "Klevgrand",
+  "name": "R0Verb",
+  "version": "1.0.4",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "https://www.klevgrand.se",
+  "new": false
+ },
+ {
+  "vendor": "LANDR",
+  "name": "LANDR FX Bass",
+  "version": "1.0.2.18",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://audified.com/",
+  "new": false
+ },
+ {
+  "vendor": "LANDR",
+  "name": "LANDR FX Beats",
+  "version": "1.0.2.18",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://audified.com/",
+  "new": false
+ },
+ {
+  "vendor": "LANDR",
+  "name": "LANDR FX Electric",
+  "version": "1.0.2.18",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://audified.com/",
+  "new": false
+ },
+ {
+  "vendor": "LANDR",
+  "name": "LANDR FX Voice",
+  "version": "1.0.2.18",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://audified.com/",
+  "new": false
+ },
+ {
+  "vendor": "Lese",
+  "name": "Codec",
+  "version": "2.0.0",
+  "formats": "VST3",
+  "category": "Fx, Distortion, Tools",
+  "url": "https://lese.io",
+  "new": false
+ },
+ {
+  "vendor": "Lese",
+  "name": "Sweep",
+  "version": "1.3.5",
+  "formats": "VST3",
+  "category": "Fx, Filter",
+  "url": "https://lese.io",
+  "new": false
+ },
+ {
+  "vendor": "Lunacy Audio",
+  "name": "BEAM Filter",
+  "version": "2.0.24",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://www.lunacy.audio",
+  "new": false
+ },
+ {
+  "vendor": "Lunacy Audio",
+  "name": "BEAM Haze",
+  "version": "2.0.24",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://www.lunacy.audio",
+  "new": false
+ },
+ {
+  "vendor": "Minuit",
+  "name": "Solstice",
+  "version": "1.0.1",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Mixed In Key",
+  "name": "Captain Beat Epic",
+  "version": "8.0.0.10287",
+  "formats": "VST2/VST3",
+  "category": "Instrument",
+  "url": "https://www.mixedinkey.com",
+  "new": false
+ },
+ {
+  "vendor": "Mixed In Key",
+  "name": "Captain Chords Epic",
+  "version": "8.0.0.10287",
+  "formats": "VST2/VST3",
+  "category": "Instrument",
+  "url": "https://www.mixedinkey.com",
+  "new": false
+ },
+ {
+  "vendor": "Mixed In Key",
+  "name": "Captain Deep Epic",
+  "version": "8.0.0.10287",
+  "formats": "VST2/VST3",
+  "category": "Instrument",
+  "url": "https://www.mixedinkey.com",
+  "new": false
+ },
+ {
+  "vendor": "Mixed In Key",
+  "name": "Captain Melody Epic",
+  "version": "8.0.0.10287",
+  "formats": "VST2/VST3",
+  "category": "Instrument",
+  "url": "https://www.mixedinkey.com",
+  "new": false
+ },
+ {
+  "vendor": "Mixed In Key",
+  "name": "Captain Play Epic",
+  "version": "8.0.0.10287",
+  "formats": "VST2/VST3",
+  "category": "Instrument",
+  "url": "https://www.mixedinkey.com",
+  "new": false
+ },
+ {
+  "vendor": "Mixed In Key LLC",
+  "name": "Captain Beat",
+  "version": "1",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Mixed In Key LLC",
+  "name": "Captain Chords",
+  "version": "1",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Mixed In Key LLC",
+  "name": "Captain Deep",
+  "version": "1",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Mixed In Key LLC",
+  "name": "Captain Melody",
+  "version": "1",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Mixed In Key LLC",
+  "name": "Captain Play",
+  "version": "1",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Moog",
+  "name": "Mariana",
+  "version": "1.2.0",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "www.moogmusic.com",
+  "new": false
+ },
+ {
+  "vendor": "Moonwave",
+  "name": "Parallax",
+  "version": "1.5.1",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://moonwavefx.com",
+  "new": false
+ },
+ {
+  "vendor": "MSXII Sound Design",
+  "name": "Fly Tape II",
+  "version": "1.0.0.27",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "www.msxaudio.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Absynth 6",
+  "version": "6.0.1",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "https://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Absynth 6 FX",
+  "version": "6.0.1",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Battery 4",
+  "version": "4.3",
+  "formats": "VST3",
+  "category": "Instrument",
+  "url": "https://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Bite",
+  "version": "1.3.7 (R34)",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Dirt",
+  "version": "1.3.7 (R34)",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Freak",
+  "version": "1.3.7 (R34)",
+  "formats": "VST3",
+  "category": "Fx, Modulation",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Guitar Rig 7",
+  "version": "7.0.2 (R0)",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Kontakt",
+  "version": "6.8.0",
+  "formats": "VST3",
+  "category": "Instrument",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Kontakt 7",
+  "version": "7.10.9",
+  "formats": "VST3",
+  "category": "Instrument",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Kontakt 8",
+  "version": "8.10.2",
+  "formats": "VST3",
+  "category": "Instrument",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Massive X",
+  "version": "1.7.1 (R0)",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Raum",
+  "version": "1.3.7 (R34)",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Reaktor 6",
+  "version": "6.5.0",
+  "formats": "VST3",
+  "category": "Instrument",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Reaktor 6 FX",
+  "version": "6.5.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Replika",
+  "version": "1.6.7 (R34)",
+  "formats": "VST3",
+  "category": "Fx, Delay",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Supercharger",
+  "version": "1.4.11 (R34)",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Supercharger GT",
+  "version": "1.4.11 (R34)",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Native Instruments",
+  "name": "Transient Master",
+  "version": "1.4.11 (R34)",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.native-instruments.com",
+  "new": false
+ },
+ {
+  "vendor": "Neutone",
+  "name": "Neutone FX",
+  "version": "1.5.1",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Neutone",
+  "name": "Neutone Morpho",
+  "version": "1.1.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Overloud",
+  "name": "Gem ECHOSON",
+  "version": "1.0.5",
+  "formats": "VST2/VST3",
+  "category": "Fx, Delay",
+  "url": "www.overloud.com",
+  "new": false
+ },
+ {
+  "vendor": "Phase Fiasco",
+  "name": "Annulus",
+  "version": "0.1.0",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Phase Fiasco",
+  "name": "Tape Fiasco",
+  "version": "1.2.2",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Puremagnetik",
+  "name": "Driftmaker",
+  "version": "2.8.73",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Puremagnetik",
+  "name": "Expanse",
+  "version": "2.8.73",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Puremagnetik",
+  "name": "Klamur",
+  "version": "2.9.45",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Puremagnetik",
+  "name": "MimikOD",
+  "version": "2.8.128",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Puremagnetik",
+  "name": "Partikl",
+  "version": "2.8.128",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Puremagnetik",
+  "name": "Pastfabric2",
+  "version": "2.9.45",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Puremagnetik",
+  "name": "Permute",
+  "version": "2.9.45",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Puremagnetik",
+  "name": "Replicas",
+  "version": "2.8.128",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Puremagnetik",
+  "name": "Swarm",
+  "version": "2.8.128",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Puremagnetik",
+  "name": "Verv",
+  "version": "2.8.155",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Puremagnetik",
+  "name": "Zerone",
+  "version": "2.8.128",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Session Loops",
+  "name": "PitchNet",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://sessionloops.com",
+  "new": false
+ },
+ {
+  "vendor": "Sinevibes",
+  "name": "Skew v2",
+  "version": "2.0.1",
+  "formats": "VST3",
+  "category": "Fx, Delay",
+  "url": "https://www.sinevibes.com",
+  "new": false
+ },
+ {
+  "vendor": "Sonnox",
+  "name": "Soften",
+  "version": "1.00.0[6004]",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "https://www.sonnox.com",
+  "new": false
+ },
+ {
+  "vendor": "Sound Particles",
+  "name": "AirMusic",
+  "version": "1.0.2",
+  "formats": "VST3",
+  "category": "Fx, EQ, Filter",
+  "url": "https://www.soundparticles.com",
+  "new": false
+ },
+ {
+  "vendor": "SoundeviceDigital",
+  "name": "Randomachine",
+  "version": "1.0",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "www.unitedplugins.com",
+  "new": false
+ },
+ {
+  "vendor": "SoundGhost",
+  "name": "Ekko Demo",
+  "version": "1.0.1",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://soundghost.net/",
+  "new": false
+ },
+ {
+  "vendor": "SoundGhost",
+  "name": "Texturize",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://soundghost.net/",
+  "new": false
+ },
+ {
+  "vendor": "SoundMorph",
+  "name": "Dust",
+  "version": "1.2.7",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "www.soundmorph.com",
+  "new": false
+ },
+ {
+  "vendor": "SoundMorph",
+  "name": "Dust (fx)",
+  "version": "1.2.7",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "www.soundmorph.com",
+  "new": false
+ },
+ {
+  "vendor": "SoundMorph",
+  "name": "WaveWarper 2",
+  "version": "1.1.0",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "www.soundmorph.com",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "Devil-Loc",
+  "version": "5.5.4.18982",
+  "formats": "VST3",
+  "category": "Fx, Dynamics, Distortion",
+  "url": "http://www.soundtoys.com",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "DevilLoc",
+  "version": "1",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "EchoBoy Jr",
+  "version": "5.5.4.18982",
+  "formats": "VST3",
+  "category": "Fx, Delay",
+  "url": "http://www.soundtoys.com",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "EchoBoyJr",
+  "version": "1",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "Little MicroShift",
+  "version": "5.5.4.18982",
+  "formats": "VST3",
+  "category": "Fx, Pitch Shift, Spatial",
+  "url": "http://www.soundtoys.com",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "Little Plate",
+  "version": "5.5.4.18982",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.soundtoys.com",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "Little PrimalTap",
+  "version": "5.5.4.18982",
+  "formats": "VST3",
+  "category": "Delay, Pitch Shift, Fx",
+  "url": "http://www.soundtoys.com",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "Little Radiator",
+  "version": "5.3.8.16762",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "http://www.soundtoys.com",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "LittleMicroShift",
+  "version": "1",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "LittlePlate",
+  "version": "1",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "LittlePrimalTap",
+  "version": "1",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "LittleRadiator",
+  "version": "1",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "PhaseMistress",
+  "version": "5.4.3.17500",
+  "formats": "VST2/VST3",
+  "category": "Fx, Modulation",
+  "url": "http://www.soundtoys.com",
+  "new": false
+ },
+ {
+  "vendor": "Soundtoys",
+  "name": "SpaceBlender",
+  "version": "5.5.4.18982",
+  "formats": "VST2/VST3",
+  "category": "Fx, Reverb",
+  "url": "http://www.soundtoys.com",
+  "new": false
+ },
+ {
+  "vendor": "Spitfire Audio",
+  "name": "BBC Symphony Orchestra",
+  "version": "1.7.0",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Spitfire Audio",
+  "name": "LABS",
+  "version": "3.7.8",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Spitfire Audio",
+  "name": "Solar",
+  "version": "1.6.12",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Splice",
+  "name": "Splice Bridge",
+  "version": "5.1.1",
+  "formats": "VST3",
+  "category": "Instrument",
+  "url": "https://splice.com",
+  "new": false
+ },
+ {
+  "vendor": "Splice",
+  "name": "Splice INSTRUMENT",
+  "version": "2.3.5",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "https://splice.com",
+  "new": false
+ },
+ {
+  "vendor": "Splice",
+  "name": "Splice Sounds",
+  "version": "0.3.5",
+  "formats": "VST3",
+  "category": "Instrument",
+  "url": "https://splice.com",
+  "new": false
+ },
+ {
+  "vendor": "Splice",
+  "name": "Splice Sounds Listener",
+  "version": "0.0.1",
+  "formats": "VST3",
+  "category": "Fx, Analyzer",
+  "url": "https://splice.com",
+  "new": false
+ },
+ {
+  "vendor": "Superlunar",
+  "name": "GX-8600",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Synful",
+  "name": "SynfulOrchestra",
+  "version": "2.7.1",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": "http://www.synful.com",
+  "new": false
+ },
+ {
+  "vendor": "Ternar Music Technology",
+  "name": "ChannelStrip",
+  "version": "2.0.3",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://www.ternar.tech",
+  "new": false
+ },
+ {
+  "vendor": "Ternar Music Technology",
+  "name": "Flechtwerk",
+  "version": "2.1.0",
+  "formats": "VST3",
+  "category": "Instrument",
+  "url": "https://www.ternar.tech",
+  "new": false
+ },
+ {
+  "vendor": "UJAM",
+  "name": "FIN-RETRO",
+  "version": "1.3.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "https://www.ujam.com",
+  "new": false
+ },
+ {
+  "vendor": "Unfiltered Audio",
+  "name": "BattleFX",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Universal Audio (UADx)",
+  "name": "UADx 1176 FET Compressor",
+  "version": "1.0.3",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Universal Audio (UADx)",
+  "name": "UADx 610-A Preamp and EQ",
+  "version": "1.0.15",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Universal Audio (UADx)",
+  "name": "UADx 610-B Preamp and EQ",
+  "version": "1.0.15",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Universal Audio (UADx)",
+  "name": "UADx Century Tube Channel Strip",
+  "version": "1.0.16",
+  "formats": "VST3",
+  "category": "Fx, Channel Strip, EQ, Dynamics",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Universal Audio (UADx)",
+  "name": "UADx Galaxy Tape Echo",
+  "version": "1.3.16",
+  "formats": "VST3",
+  "category": "Fx, Delay",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Universal Audio (UADx)",
+  "name": "UADx Oxide Tape Recorder",
+  "version": "1.0.17",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Universal Audio (UADx)",
+  "name": "UADx PolyMAX Synth",
+  "version": "1.0.16",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Universal Audio (UADx)",
+  "name": "UADx Pure Plate Reverb",
+  "version": "1.4.16",
+  "formats": "VST3",
+  "category": "Fx, Reverb",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Universal Audio (UADx)",
+  "name": "UADx Showtime 64 Tube Amp",
+  "version": "1.0.1",
+  "formats": "VST3",
+  "category": "Fx, Guitar",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Universal Audio (UADx)",
+  "name": "UADx Verve Analog Machines",
+  "version": "1.0.5",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Universal Audio (UADx)",
+  "name": "UADx Vibe Analog Machines Essentials",
+  "version": "1.1.0",
+  "formats": "VST3",
+  "category": "Fx, Distortion",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "UVI",
+  "name": "Tape Chorus",
+  "version": "1.0.1",
+  "formats": "VST3",
+  "category": "Fx, Modulation",
+  "url": "www.uvi.net",
+  "new": false
+ },
+ {
+  "vendor": "UVI",
+  "name": "Tape Color",
+  "version": "1.0.1",
+  "formats": "VST3",
+  "category": "Fx, Modulation",
+  "url": "www.uvi.net",
+  "new": false
+ },
+ {
+  "vendor": "UVI",
+  "name": "Tape Delay",
+  "version": "1.0.1",
+  "formats": "VST3",
+  "category": "Fx, Delay",
+  "url": "www.uvi.net",
+  "new": false
+ },
+ {
+  "vendor": "UVI",
+  "name": "Tape Flanger",
+  "version": "1.0.1",
+  "formats": "VST3",
+  "category": "Fx, Modulation",
+  "url": "www.uvi.net",
+  "new": false
+ },
+ {
+  "vendor": "UVI",
+  "name": "UVI Tape Chorus",
+  "version": "65537",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "UVI",
+  "name": "UVI Tape Color",
+  "version": "65537",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "UVI",
+  "name": "UVI Tape Delay",
+  "version": "65537",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "UVI",
+  "name": "UVI Tape Flanger",
+  "version": "65537",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "UVI",
+  "name": "UVIWorkstation",
+  "version": "4.0.2",
+  "formats": "VST3",
+  "category": "Instrument, Sampler, Synth",
+  "url": "www.uvi.net",
+  "new": false
+ },
+ {
+  "vendor": "UVI",
+  "name": "UVIWorkstationVST",
+  "version": "262146",
+  "formats": "VST2",
+  "category": "",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Valhalla DSP, LLC",
+  "name": "ValhallaFreqEcho",
+  "version": "1.2.8",
+  "formats": "VST2/VST3",
+  "category": "Fx, Delay",
+  "url": "www.valhalladsp.com",
+  "new": false
+ },
+ {
+  "vendor": "Valhalla DSP, LLC",
+  "name": "ValhallaSpaceModulator",
+  "version": "1.2.8",
+  "formats": "VST2/VST3",
+  "category": "Fx, Modulation",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Valhalla DSP, LLC",
+  "name": "ValhallaSupermassive",
+  "version": "5.0.0",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "www.valhalladsp.com",
+  "new": false
+ },
+ {
+  "vendor": "Wave Alchemy",
+  "name": "Triaz Player",
+  "version": "1.1.1",
+  "formats": "VST3",
+  "category": "Instrument, Drum",
+  "url": "https://www.wavealchemy.co.uk/",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "Curves Resolve Live Mono",
+  "version": "16.7.76.232",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "Curves Resolve Live Stereo",
+  "version": "16.7.76.232",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "Curves Resolve Mono",
+  "version": "16.7.76.232",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "Curves Resolve Stereo",
+  "version": "16.7.76.232",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "IDX Intelligent Dynamics Mono",
+  "version": "15.5.79.262",
+  "formats": "VST3",
+  "category": "Fx, Dynamics - Multiband",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "IDX Intelligent Dynamics Stereo",
+  "version": "15.5.79.262",
+  "formats": "VST3",
+  "category": "Fx, Dynamics - Multiband",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "IDX LIVE Intelligent Dynamics Mono",
+  "version": "15.5.79.262",
+  "formats": "VST3",
+  "category": "Fx, Dynamics - Multiband",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "IDX LIVE Intelligent Dynamics Stereo",
+  "version": "15.5.79.262",
+  "formats": "VST3",
+  "category": "Fx, Dynamics - Multiband",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "Magma StressBox Mono",
+  "version": "16.6.53.160",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "Magma StressBox Stereo",
+  "version": "16.6.53.160",
+  "formats": "VST3",
+  "category": "Fx, Dynamics",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "Waves Harmony Mono/Stereo",
+  "version": "16.7.33.189",
+  "formats": "VST3",
+  "category": "Fx, Pitch Shift",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Waves",
+  "name": "Waves Harmony Stereo",
+  "version": "16.7.33.189",
+  "formats": "VST3",
+  "category": "Fx, Pitch Shift",
+  "url": "http://www.waves.com",
+  "new": false
+ },
+ {
+  "vendor": "Wildergarden",
+  "name": "Maim",
+  "version": "1.0.0",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "Xynth Audio",
+  "name": "LePhonk",
+  "version": "1.0.4",
+  "formats": "VST3",
+  "category": "Fx, Distortion, Dynamics",
+  "url": "",
+  "new": false
+ },
+ {
+  "vendor": "ZL",
+  "name": "ZL Equalizer 2",
+  "version": "1.1.0",
+  "formats": "VST3",
+  "category": "Fx, EQ",
+  "url": "",
+  "new": false
+ }
+]
