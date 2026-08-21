@@ -1,0 +1,703 @@
+{
+  "IK Multimedia": {
+    "vendor_url": "https://www.ikmultimedia.com/",
+    "products": {
+      "ARC 3": {
+        "product_url": "https://www.ikmultimedia.com/products/arc3/",
+        "manual_url": "https://www.manua.ls/ik-multimedia/arc-system-3/manual",
+        "category": "utility",
+        "note": "Measurement-based room and monitor correction system for studio listening."
+      },
+      "AmpliTube 5": {
+        "product_url": "https://www.ikmultimedia.com/products/amplitube5/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/AmpliTube5/AmpliTube_5_User_Manual.pdf",
+        "category": "amp",
+        "note": "Guitar and bass amp, cab and stompbox modelling suite."
+      },
+      "Black76": {
+        "product_url": "https://www.ikmultimedia.com/products/trblack76/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "FET compressor modelled on the UREI 1176, a T-RackS module."
+      },
+      "BrickwallLimiter": {
+        "product_url": "https://www.ikmultimedia.com/products/trbricklim/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Transparent brickwall peak limiter for mastering, a T-RackS module."
+      },
+      "BritishChannel": {
+        "product_url": "https://www.ikmultimedia.com/products/trbritchannel/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Neve 1073-style preamp and EQ channel strip, a T-RackS module."
+      },
+      "BusCompressor": {
+        "product_url": "https://www.ikmultimedia.com/products/trbuscomp/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "SSL-style VCA bus compressor for mix glue, a T-RackS module."
+      },
+      "CSRHall": {
+        "product_url": "https://www.ikmultimedia.com/products/trcsrhall/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Classik Studio Reverb hall algorithm, a T-RackS module."
+      },
+      "CSRInverse": {
+        "product_url": "https://www.ikmultimedia.com/products/trcsrinverse/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Classik Studio Reverb inverse/reverse algorithm, a T-RackS module."
+      },
+      "CSRPlate": {
+        "product_url": "https://www.ikmultimedia.com/products/trcsrplate/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Classik Studio Reverb plate algorithm, a T-RackS module."
+      },
+      "CSRRoom": {
+        "product_url": "https://www.ikmultimedia.com/products/trcsrroom/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Classik Studio Reverb room algorithm, a T-RackS module."
+      },
+      "ClassicClipper": {
+        "product_url": "https://www.ikmultimedia.com/products/trclassclipper/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Digital clipper for adding loudness without pumping, a T-RackS module."
+      },
+      "ClassicComp": {
+        "product_url": "https://www.ikmultimedia.com/products/trclasscomp/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Classic mastering compressor from the original T-RackS, a T-RackS module."
+      },
+      "ClassicEQ": {
+        "product_url": "https://www.ikmultimedia.com/products/trclasseq/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Classic analogue-voiced mastering equaliser, a T-RackS module."
+      },
+      "ClassicLimiter": {
+        "product_url": "https://www.ikmultimedia.com/products/trclasslim/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Classic multi-band mastering limiter, a T-RackS module."
+      },
+      "Comprexxor": {
+        "product_url": "https://www.ikmultimedia.com/products/trcomprexxor/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Distressor-style aggressive compressor with distortion modes, a T-RackS module."
+      },
+      "DeEsser": {
+        "product_url": "https://www.ikmultimedia.com/products/trdeesser/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Sibilance control processor for vocals, a T-RackS module."
+      },
+      "DynaMu": {
+        "product_url": "https://www.ikmultimedia.com/products/trdynamu/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Vari-mu valve compressor modelled on the Manley Variable Mu."
+      },
+      "EQ432": {
+        "product_url": "https://www.ikmultimedia.com/products/trmastereq432/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Mastering EQ modelled on the Sontec MES-432, a T-RackS module."
+      },
+      "EQ73": {
+        "product_url": "https://www.ikmultimedia.com/products/treq73/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Neve 1073-style three-band console EQ, a T-RackS module."
+      },
+      "EQ81": {
+        "product_url": "https://www.ikmultimedia.com/products/treq81/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Neve 1081-style four-band console EQ, a T-RackS module."
+      },
+      "EQPA": {
+        "product_url": "https://www.ikmultimedia.com/products/treqpa/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Pultec-style passive program EQ variant A, a T-RackS module."
+      },
+      "EQPB": {
+        "product_url": "https://www.ikmultimedia.com/products/treqpb/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Pultec-style passive program EQ variant B, a T-RackS module."
+      },
+      "EQPG": {
+        "product_url": "https://www.ikmultimedia.com/products/treqpg/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Pultec-style passive program EQ variant G, a T-RackS module."
+      },
+      "EQual": {
+        "product_url": "https://www.ikmultimedia.com/products/trequal/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Modern surgical mixing EQ with dynamic bands, a T-RackS module."
+      },
+      "Fame": {
+        "product_url": "https://www.ikmultimedia.com/products/trfame/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Convolution reverb capturing Fame Studios, Muscle Shoals, a T-RackS module."
+      },
+      "FarmStoneRoom": {
+        "product_url": "https://www.ikmultimedia.com/products/trfarmstoneroom/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Convolution reverb of The Farm studio stone room, a T-RackS module."
+      },
+      "JCVocalStrip": {
+        "product_url": "https://www.ikmultimedia.com/products/trjcvocalstrip/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "vocal",
+        "note": "Joe Chiccarelli signature vocal channel strip, a T-RackS module."
+      },
+      "Leslie": {
+        "product_url": "https://www.ikmultimedia.com/products/trleslie/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "modulation",
+        "note": "Officially licensed Leslie rotary speaker simulation, a T-RackS module."
+      },
+      "LinearPhaseEQ": {
+        "product_url": "https://www.ikmultimedia.com/products/trlinphaseeq/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Phase-coherent linear phase mastering equaliser, a T-RackS module."
+      },
+      "MBandComp": {
+        "product_url": "https://www.ikmultimedia.com/products/trquadcomp/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Four-band multiband compressor, formerly Multiband Compressor, a T-RackS module."
+      },
+      "MBandImage": {
+        "product_url": "https://www.ikmultimedia.com/products/trquadimage/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "spatial",
+        "note": "Four-band stereo width and imaging processor, a T-RackS module."
+      },
+      "MBandLim": {
+        "product_url": "https://www.ikmultimedia.com/products/trquadlim/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Four-band multiband limiter for mastering, a T-RackS module."
+      },
+      "MODO BASS 2": {
+        "product_url": "https://www.ikmultimedia.com/products/modobass2/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/MODOBASS2/MODO_BASS_2_User_Manual.pdf",
+        "category": "synth",
+        "note": "Physically modelled electric bass instrument with playable articulations."
+      },
+      "MODO DRUM": {
+        "product_url": "https://www.ikmultimedia.com/products/mododrum/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/MODODRUM/MODO_DRUM_User_Manual.pdf",
+        "category": "drums",
+        "note": "Physically modelled acoustic drum kit instrument."
+      },
+      "MasterMatch": {
+        "product_url": "https://www.ikmultimedia.com/products/trmastermatch/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "utility",
+        "note": "Automatically matches your master to reference tracks, a T-RackS module."
+      },
+      "MicR": {
+        "product_url": "https://www.ikmultimedia.com/products/trmicroom/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "utility",
+        "note": "Microphone modelling that re-voices recordings as other mics."
+      },
+      "One": {
+        "product_url": "https://www.ikmultimedia.com/products/trone/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Single-knob mastering chain combining EQ, compression and limiting."
+      },
+      "OptoComp": {
+        "product_url": "https://www.ikmultimedia.com/products/troptocomp/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Optical compressor with smooth programme-dependent behaviour, a T-RackS module."
+      },
+      "PreCL": {
+        "product_url": "https://www.ikmultimedia.com/products/trpreccomplim/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Precision digital compressor-limiter with transparent control, a T-RackS module."
+      },
+      "ReSing": {
+        "product_url": "https://www.ikmultimedia.com/products/resing/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/ReSing/ReSing_User_Manual.pdf",
+        "category": "vocal",
+        "note": "AI voice conversion that re-sings a vocal with modelled voices."
+      },
+      "SampleTank 4": {
+        "product_url": "https://www.ikmultimedia.com/products/sampletank4/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/SampleTank4/SampleTank_4_User_Manual.pdf",
+        "category": "sampler",
+        "note": "Multi-instrument sample workstation with large sound library."
+      },
+      "SatX": {
+        "product_url": "https://www.ikmultimedia.com/products/trsaturatorx/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "distortion",
+        "note": "Multi-mode saturation and harmonic distortion processor, a T-RackS module."
+      },
+      "SpaceDelay": {
+        "product_url": "https://www.ikmultimedia.com/products/trspacedelay/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "delay",
+        "note": "Roland Space Echo-style tape delay with spring reverb, a T-RackS module."
+      },
+      "StealthLimiter": {
+        "product_url": "https://www.ikmultimedia.com/products/trstealthlimiter/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Ultra-transparent mastering limiter for maximum loudness, a T-RackS module."
+      },
+      "SunsetSound": {
+        "product_url": "https://www.ikmultimedia.com/products/trsunsetsound/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Convolution reverb of Sunset Sound Studios echo chambers, a T-RackS module."
+      },
+      "Syntronik 2": {
+        "product_url": "https://www.ikmultimedia.com/products/syntronik2/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/Syntronik2/Syntronik_2_User_Manual.pdf",
+        "category": "synth",
+        "note": "Sampled and modelled emulations of classic vintage hardware synthesisers."
+      },
+      "T-RackS 5": {
+        "product_url": "https://www.ikmultimedia.com/products/tr5/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "utility",
+        "note": "Modular mixing and mastering suite hosting the T-RackS processor modules."
+      },
+      "T-RackS 5 Metering": {
+        "product_url": "https://www.ikmultimedia.com/products/trmetering/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "analyser",
+        "note": "Metering suite with loudness, spectrum, phase and RTA displays."
+      },
+      "TONEX": {
+        "product_url": "https://www.ikmultimedia.com/products/tonex/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/TONEXMacPC/TONEX_for_Mac_PC_User_Manual.pdf",
+        "category": "amp",
+        "note": "AI amp and pedal capture player and modeller for guitar."
+      },
+      "TR5 Black 76": {
+        "product_url": "https://www.ikmultimedia.com/products/trblack76/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "FET compressor modelled on the UREI 1176, a T-RackS module."
+      },
+      "TR5 Brickwall Limiter": {
+        "product_url": "https://www.ikmultimedia.com/products/trbricklim/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Transparent brickwall peak limiter for mastering, a T-RackS module."
+      },
+      "TR5 British Channel": {
+        "product_url": "https://www.ikmultimedia.com/products/trbritchannel/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Neve 1073-style preamp and EQ channel strip, a T-RackS module."
+      },
+      "TR5 Bus Compressor": {
+        "product_url": "https://www.ikmultimedia.com/products/trbuscomp/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "SSL-style VCA bus compressor for mix glue, a T-RackS module."
+      },
+      "TR5 CSR Hall": {
+        "product_url": "https://www.ikmultimedia.com/products/trcsrhall/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Classik Studio Reverb hall algorithm, a T-RackS module."
+      },
+      "TR5 CSR Inverse": {
+        "product_url": "https://www.ikmultimedia.com/products/trcsrinverse/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Classik Studio Reverb inverse/reverse algorithm, a T-RackS module."
+      },
+      "TR5 CSR Plate": {
+        "product_url": "https://www.ikmultimedia.com/products/trcsrplate/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Classik Studio Reverb plate algorithm, a T-RackS module."
+      },
+      "TR5 CSR Room": {
+        "product_url": "https://www.ikmultimedia.com/products/trcsrroom/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Classik Studio Reverb room algorithm, a T-RackS module."
+      },
+      "TR5 Classic Clipper": {
+        "product_url": "https://www.ikmultimedia.com/products/trclassclipper/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Digital clipper for adding loudness without pumping, a T-RackS module."
+      },
+      "TR5 Classic Comp": {
+        "product_url": "https://www.ikmultimedia.com/products/trclasscomp/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Classic mastering compressor from the original T-RackS, a T-RackS module."
+      },
+      "TR5 Classic EQ": {
+        "product_url": "https://www.ikmultimedia.com/products/trclasseq/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Classic analogue-voiced mastering equaliser, a T-RackS module."
+      },
+      "TR5 Classic Multi Band Limiter": {
+        "product_url": "https://www.ikmultimedia.com/products/trclasslim/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Classic multi-band mastering limiter, a T-RackS module."
+      },
+      "TR5 Comprexxor": {
+        "product_url": "https://www.ikmultimedia.com/products/trcomprexxor/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Distressor-style aggressive compressor with distortion modes, a T-RackS module."
+      },
+      "TR5 De Esser": {
+        "product_url": "https://www.ikmultimedia.com/products/trdeesser/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Sibilance control processor for vocals, a T-RackS module."
+      },
+      "TR5 Dyna-Mu": {
+        "product_url": "https://www.ikmultimedia.com/products/trdynamu/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Vari-mu valve compressor modelled on the Manley Variable Mu."
+      },
+      "TR5 EQ-73": {
+        "product_url": "https://www.ikmultimedia.com/products/treq73/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Neve 1073-style three-band console EQ, a T-RackS module."
+      },
+      "TR5 EQ-81": {
+        "product_url": "https://www.ikmultimedia.com/products/treq81/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Neve 1081-style four-band console EQ, a T-RackS module."
+      },
+      "TR5 EQ-PA": {
+        "product_url": "https://www.ikmultimedia.com/products/treqpa/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Pultec-style passive program EQ variant A, a T-RackS module."
+      },
+      "TR5 EQ-PB": {
+        "product_url": "https://www.ikmultimedia.com/products/treqpb/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Pultec-style passive program EQ variant B, a T-RackS module."
+      },
+      "TR5 EQ-PG": {
+        "product_url": "https://www.ikmultimedia.com/products/treqpg/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Pultec-style passive program EQ variant G, a T-RackS module."
+      },
+      "TR5 EQP-1A": {
+        "product_url": "https://www.ikmultimedia.com/products/trvintubprogeq/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Pultec EQP-1A vintage tube program equaliser, a T-RackS module."
+      },
+      "TR5 EQual": {
+        "product_url": "https://www.ikmultimedia.com/products/trequal/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Modern surgical mixing EQ with dynamic bands, a T-RackS module."
+      },
+      "TR5 Fame Studio Reverb": {
+        "product_url": "https://www.ikmultimedia.com/products/trfame/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Convolution reverb capturing Fame Studios, Muscle Shoals, a T-RackS module."
+      },
+      "TR5 Joe Chiccarelli Vocal Strip": {
+        "product_url": "https://www.ikmultimedia.com/products/trjcvocalstrip/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "vocal",
+        "note": "Joe Chiccarelli signature vocal channel strip, a T-RackS module."
+      },
+      "TR5 Leslie": {
+        "product_url": "https://www.ikmultimedia.com/products/trleslie/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "modulation",
+        "note": "Officially licensed Leslie rotary speaker simulation, a T-RackS module."
+      },
+      "TR5 Linear Phase EQ": {
+        "product_url": "https://www.ikmultimedia.com/products/trlinphaseeq/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Phase-coherent linear phase mastering equaliser, a T-RackS module."
+      },
+      "TR5 Master EQ-432": {
+        "product_url": "https://www.ikmultimedia.com/products/trmastereq432/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Mastering EQ modelled on the Sontec MES-432, a T-RackS module."
+      },
+      "TR5 Master Match": {
+        "product_url": "https://www.ikmultimedia.com/products/trmastermatch/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "utility",
+        "note": "Automatically matches your master to reference tracks, a T-RackS module."
+      },
+      "TR5 Metering": {
+        "product_url": "https://www.ikmultimedia.com/products/trmetering/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "analyser",
+        "note": "Metering suite with loudness, spectrum, phase and RTA displays."
+      },
+      "TR5 Mic Room": {
+        "product_url": "https://www.ikmultimedia.com/products/trmicroom/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "utility",
+        "note": "Microphone modelling that re-voices recordings as other mics."
+      },
+      "TR5 One": {
+        "product_url": "https://www.ikmultimedia.com/products/trone/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Single-knob mastering chain combining EQ, compression and limiting."
+      },
+      "TR5 Opto Comp": {
+        "product_url": "https://www.ikmultimedia.com/products/troptocomp/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Optical compressor with smooth programme-dependent behaviour, a T-RackS module."
+      },
+      "TR5 Precision Comp-Limiter": {
+        "product_url": "https://www.ikmultimedia.com/products/trpreccomplim/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Precision digital compressor-limiter with transparent control, a T-RackS module."
+      },
+      "TR5 Quad Compressor": {
+        "product_url": "https://www.ikmultimedia.com/products/trquadcomp/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Four-band multiband compressor, formerly Multiband Compressor, a T-RackS module."
+      },
+      "TR5 Quad Image": {
+        "product_url": "https://www.ikmultimedia.com/products/trquadimage/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "spatial",
+        "note": "Four-band stereo width and imaging processor, a T-RackS module."
+      },
+      "TR5 Quad Limiter": {
+        "product_url": "https://www.ikmultimedia.com/products/trquadlim/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Four-band multiband limiter for mastering, a T-RackS module."
+      },
+      "TR5 Saturator X": {
+        "product_url": "https://www.ikmultimedia.com/products/trsaturatorx/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "distortion",
+        "note": "Multi-mode saturation and harmonic distortion processor, a T-RackS module."
+      },
+      "TR5 Space Delay": {
+        "product_url": "https://www.ikmultimedia.com/products/trspacedelay/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "delay",
+        "note": "Roland Space Echo-style tape delay with spring reverb, a T-RackS module."
+      },
+      "TR5 Stealth Limiter": {
+        "product_url": "https://www.ikmultimedia.com/products/trstealthlimiter/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Ultra-transparent mastering limiter for maximum loudness, a T-RackS module."
+      },
+      "TR5 Suite": {
+        "product_url": "https://www.ikmultimedia.com/products/tr5/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "utility",
+        "note": "Modular mixing and mastering suite hosting the T-RackS processor modules."
+      },
+      "TR5 Sunset Sound Studio Reverb": {
+        "product_url": "https://www.ikmultimedia.com/products/trsunsetsound/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Convolution reverb of Sunset Sound Studios echo chambers, a T-RackS module."
+      },
+      "TR5 TASCAM 388": {
+        "product_url": "https://www.ikmultimedia.com/products/trtascam388/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the TASCAM 388 cassette-based multitrack recorder."
+      },
+      "TR5 TASCAM PORTA ONE": {
+        "product_url": "https://www.ikmultimedia.com/products/trtascamportaone/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the TASCAM Porta One cassette Portastudio."
+      },
+      "TR5 TEAC A-3340S": {
+        "product_url": "https://www.ikmultimedia.com/products/trteaca3340s/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the TEAC A-3340S four-track reel-to-reel recorder."
+      },
+      "TR5 TEAC A-6100 MKII": {
+        "product_url": "https://www.ikmultimedia.com/products/trteaca6100/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the TEAC A-6100 MKII reel-to-reel tape recorder."
+      },
+      "TR5 Tape Echo": {
+        "product_url": "https://www.ikmultimedia.com/products/trtapeecho/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "delay",
+        "note": "Vintage tape echo delay emulation, a T-RackS module."
+      },
+      "TR5 Tape Machine 24": {
+        "product_url": "https://www.ikmultimedia.com/products/trtapemac24/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of a vintage 1/4-inch reel-to-reel tape machine."
+      },
+      "TR5 Tape Machine 440": {
+        "product_url": "https://www.ikmultimedia.com/products/trtapemac440/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the Ampex ATR-440 reel-to-reel tape machine."
+      },
+      "TR5 Tape Machine 80": {
+        "product_url": "https://www.ikmultimedia.com/products/trtapemac80/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the Studer A80 reel-to-reel tape machine."
+      },
+      "TR5 Tape Machine 99": {
+        "product_url": "https://www.ikmultimedia.com/products/trtapemac99/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the Studer A820 reel-to-reel tape machine."
+      },
+      "TR5 The Farm Stone Room": {
+        "product_url": "https://www.ikmultimedia.com/products/trfarmstoneroom/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "reverb",
+        "note": "Convolution reverb of The Farm studio stone room, a T-RackS module."
+      },
+      "TR5 VC-670": {
+        "product_url": "https://www.ikmultimedia.com/products/trvintubcomplim/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Fairchild 670 vintage tube compressor-limiter emulation, a T-RackS module."
+      },
+      "TR5 White 2A": {
+        "product_url": "https://www.ikmultimedia.com/products/trwhite2a/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "LA-2A style optical tube levelling amplifier, a T-RackS module."
+      },
+      "TR5 White Channel": {
+        "product_url": "https://www.ikmultimedia.com/products/trwhitechannel/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "SSL 4000-style console channel strip with EQ and dynamics."
+      },
+      "TapeEcho": {
+        "product_url": "https://www.ikmultimedia.com/products/trtapeecho/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "delay",
+        "note": "Vintage tape echo delay emulation, a T-RackS module."
+      },
+      "TapeMachine24": {
+        "product_url": "https://www.ikmultimedia.com/products/trtapemac24/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of a vintage 1/4-inch reel-to-reel tape machine."
+      },
+      "TapeMachine440": {
+        "product_url": "https://www.ikmultimedia.com/products/trtapemac440/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the Ampex ATR-440 reel-to-reel tape machine."
+      },
+      "TapeMachine80": {
+        "product_url": "https://www.ikmultimedia.com/products/trtapemac80/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the Studer A80 reel-to-reel tape machine."
+      },
+      "TapeMachine99": {
+        "product_url": "https://www.ikmultimedia.com/products/trtapemac99/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the Studer A820 reel-to-reel tape machine."
+      },
+      "Tascam388": {
+        "product_url": "https://www.ikmultimedia.com/products/trtascam388/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the TASCAM 388 cassette-based multitrack recorder."
+      },
+      "TascamPortaOne": {
+        "product_url": "https://www.ikmultimedia.com/products/trtascamportaone/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the TASCAM Porta One cassette Portastudio."
+      },
+      "TeacA3340S": {
+        "product_url": "https://www.ikmultimedia.com/products/trteaca3340s/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the TEAC A-3340S four-track reel-to-reel recorder."
+      },
+      "TeacA6100MKII": {
+        "product_url": "https://www.ikmultimedia.com/products/trteaca6100/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "tape",
+        "note": "Emulation of the TEAC A-6100 MKII reel-to-reel tape recorder."
+      },
+      "VC670": {
+        "product_url": "https://www.ikmultimedia.com/products/trvintubcomplim/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "Fairchild 670 vintage tube compressor-limiter emulation, a T-RackS module."
+      },
+      "VintageProgramEQ1A": {
+        "product_url": "https://www.ikmultimedia.com/products/trvintubprogeq/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "Pultec EQP-1A vintage tube program equaliser, a T-RackS module."
+      },
+      "White2A": {
+        "product_url": "https://www.ikmultimedia.com/products/trwhite2a/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "dynamics",
+        "note": "LA-2A style optical tube levelling amplifier, a T-RackS module."
+      },
+      "WhiteChannel": {
+        "product_url": "https://www.ikmultimedia.com/products/trwhitechannel/",
+        "manual_url": "https://g1.ikmultimedia.com/html/Manuals/T-RackS5/T-RackS_5_User_Manual.pdf",
+        "category": "eq",
+        "note": "SSL 4000-style console channel strip with EQ and dynamics."
+      }
+    }
+  }
+}

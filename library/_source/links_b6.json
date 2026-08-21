@@ -1,0 +1,272 @@
+{
+ "Universal Audio (UADx)": {
+  "vendor_url": "https://www.uaudio.com/",
+  "products": {
+   "UADx 1176 FET Compressor": {
+    "product_url": "https://www.uaudio.com/products/ua-1176-fet",
+    "manual_url": "https://help.uaudio.com/hc/en-us/articles/34530260482324-1176-Classic-FET-Compressor-Manual",
+    "category": "dynamics",
+    "note": "Native emulation of the classic 1176 FET compressor/limiter."
+   },
+   "UADx 610-A Preamp and EQ": {
+    "product_url": "https://www.uaudio.com/products/610-collection",
+    "manual_url": "https://help.uaudio.com/hc/en-us/articles/17475989779860-UA-610-Tube-Preamp-EQ-Collection-Manual",
+    "category": "eq",
+    "note": "Emulation of UA's vintage 610-A tube preamp and EQ."
+   },
+   "UADx 610-B Preamp and EQ": {
+    "product_url": "https://www.uaudio.com/products/610-collection",
+    "manual_url": "https://help.uaudio.com/hc/en-us/articles/17475989779860-UA-610-Tube-Preamp-EQ-Collection-Manual",
+    "category": "eq",
+    "note": "Emulation of UA's later 610-B tube preamp and EQ."
+   },
+   "UADx Century Tube Channel Strip": {
+    "product_url": "https://www.uaudio.com/products/century-tube-channel-strip",
+    "manual_url": "https://help.uaudio.com/hc/en-us/articles/11912560531860-Century-Tube-Channel-Strip-Manual",
+    "category": "eq",
+    "note": "Vintage German tube preamp and EQ channel strip emulation."
+   },
+   "UADx Galaxy Tape Echo": {
+    "product_url": "https://www.uaudio.com/products/galaxy-tape-echo",
+    "manual_url": "https://help.uaudio.com/hc/en-us/articles/4419513003668-Galaxy-Tape-Echo-Manual",
+    "category": "delay",
+    "note": "Emulation of the Roland RE-201 Space Echo tape delay."
+   },
+   "UADx Oxide Tape Recorder": {
+    "product_url": "https://www.uaudio.com/products/oxide-tape-recorder",
+    "manual_url": "https://help.uaudio.com/hc/en-us/articles/11914703390740-Oxide-Tape-Recorder-Manual",
+    "category": "tape",
+    "note": "Streamlined analogue tape machine emulation for warmth and saturation."
+   },
+   "UADx PolyMAX Synth": {
+    "product_url": "https://www.uaudio.com/products/polymax-synth",
+    "manual_url": "https://help.uaudio.com/hc/en-us/articles/10207494851220-PolyMAX-Synth-Manual",
+    "category": "synth",
+    "note": "Polyphonic analogue-modelled synthesizer inspired by classic 1980s polysynths."
+   },
+   "UADx Pure Plate Reverb": {
+    "product_url": "https://www.uaudio.com/products/pure-plate-reverb",
+    "manual_url": "https://help.uaudio.com/hc/en-us/articles/4419497304340-Pure-Plate-Reverb-Manual",
+    "category": "reverb",
+    "note": "Simple plate reverb modelled on a vintage EMT 140."
+   },
+   "UADx Showtime 64 Tube Amp": {
+    "product_url": "https://www.uaudio.com/products/showtime-64-tube-amp",
+    "manual_url": "https://help.uaudio.com/hc/en-us/articles/40062124308756-Showtime-64-Tube-Amp-Manual",
+    "category": "amp",
+    "note": "Emulation of a 1964 blackface-era tube guitar amplifier."
+   },
+   "UADx Verve Analog Machines": {
+    "product_url": "https://www.uaudio.com/products/vibe-analog-machines",
+    "manual_url": "https://help.uaudio.com/hc/en-us/articles/25190283956500-Vibe-Analog-Machines-Manual",
+    "category": "tape",
+    "note": "Ten tape and preamp saturation machines; since renamed Vibe Analog Machines."
+   },
+   "UADx Vibe Analog Machines Essentials": {
+    "product_url": "https://www.uaudio.com/products/vibe-analog-machines-essentials",
+    "manual_url": "https://help.uaudio.com/hc/en-us/articles/25190283956500-Vibe-Analog-Machines-Manual",
+    "category": "tape",
+    "note": "Cut-down edition of Vibe Analog Machines retro saturation plugin."
+   }
+  }
+ },
+ "2Rule": {
+  "vendor_url": "https://akyuz5.wixsite.com/mysite",
+  "products": {
+   "2RuleSynthV-3-1": {
+    "product_url": "https://akyuz5.wixsite.com/mysite/2rulesynth",
+    "manual_url": null,
+    "category": "synth",
+    "note": "Free experimental subtractive synthesizer with matrix modulation and effects."
+   },
+   "TugGlicento": {
+    "product_url": "https://tugrulakyuz.gumroad.com/l/jpzjej",
+    "manual_url": null,
+    "category": "other",
+    "note": "Trigger-matrix multi-effect that plays several glitch effects simultaneously."
+   },
+   "TugImgSynth": {
+    "product_url": "https://tugrulakyuz.gumroad.com/l/rakfr",
+    "manual_url": null,
+    "category": "synth",
+    "note": "Wavetable synthesizer that builds wavetables from dropped-in images."
+   },
+   "TugMidiSeq": {
+    "product_url": "https://tugrulakyuz.gumroad.com/l/xfzgta",
+    "manual_url": null,
+    "category": "sequencer",
+    "note": "Polyphonic MIDI arpeggiator and step sequencer driven by held chords."
+   },
+   "TugMultiEffect": {
+    "product_url": "https://tugrulakyuz.gumroad.com/l/vppufb",
+    "manual_url": null,
+    "category": "other",
+    "note": "Freely routable multi-effect with eleven drag-and-drop effect blocks."
+   },
+   "TugPhonon": {
+    "product_url": "https://tugrulakyuz.gumroad.com/l/xtwcn",
+    "manual_url": null,
+    "category": "delay",
+    "note": "Rotating magnetic-disc tape delay with eight heads and resonators."
+   },
+   "TugSpect": {
+    "product_url": "https://tugrulakyuz.gumroad.com/l/ssxrm",
+    "manual_url": null,
+    "category": "filter",
+    "note": "FFT spectral filter that shapes audio from image pixel values."
+   }
+  }
+ },
+ "AnalogObsession": {
+  "vendor_url": "https://analogobsession.com/",
+  "products": {
+   "Chopa": {
+    "product_url": "https://www.patreon.com/analogobsession/posts/chopa-67845888",
+    "manual_url": null,
+    "category": "modulation",
+    "note": "Free chopper/vibrato effect adding rhythmic movement to any source."
+   },
+   "DrGate": {
+    "product_url": "https://analogobsession.com/dynamicprocessing/",
+    "manual_url": null,
+    "category": "dynamics",
+    "note": "Drum-specific noise gate plugin from Analog Obsession."
+   },
+   "RazorClip": {
+    "product_url": "https://analogobsession.com/color-preamp-saturation/",
+    "manual_url": null,
+    "category": "distortion",
+    "note": "Analogue-modelled clipper with tape, transformer, BJT, tube and diode modes."
+   },
+   "ReLife": {
+    "product_url": "https://analogobsession.com/color-preamp-saturation/",
+    "manual_url": null,
+    "category": "distortion",
+    "note": "Saturation and dynamic EQ enhancer for reviving lifeless tracks."
+   }
+  }
+ },
+ "Applied Acoustics Systems": {
+  "vendor_url": "https://www.applied-acoustics.com/",
+  "products": {
+   "Lounge Lizard Session 4": {
+    "product_url": "https://www.applied-acoustics.com/session-bundle/#lounge-lizard-session",
+    "manual_url": "https://www.applied-acoustics.com/lounge-lizard-session-4/manual/",
+    "category": "synth",
+    "note": "Cut-down physically modelled electric piano from the Lounge Lizard range."
+   },
+   "Strum Session 2": {
+    "product_url": "https://www.applied-acoustics.com/session-bundle/#strum-session",
+    "manual_url": "https://www.applied-acoustics.com/strum-session-2/manual/",
+    "category": "synth",
+    "note": "Modelled acoustic and electric guitar with strumming and chord recognition."
+   },
+   "Ultra Analog Session 2": {
+    "product_url": "https://www.applied-acoustics.com/session-bundle/#ultra-analog-session",
+    "manual_url": "https://www.applied-acoustics.com/ultra-analog-session-2/manual/",
+    "category": "synth",
+    "note": "Simplified analogue-modelled synthesizer from the Ultra Analog VA range."
+   }
+  }
+ },
+ "AIR Music Technology": {
+  "vendor_url": "https://www.airmusictech.com/",
+  "products": {
+   "AIR Multiband Filterbank": {
+    "product_url": "https://www.airmusictech.com/effects/multiband-filterbank/",
+    "manual_url": "https://cdn.inmusicbrands.com/air/Guides/multibandfilterbank.pdf",
+    "category": "filter",
+    "note": "Three-band filter bank with five filter modes and envelope followers."
+   },
+   "AIR Tape Double Track": {
+    "product_url": "https://www.airmusictech.com/effects/tape-double-track/",
+    "manual_url": "https://cdn.inmusicbrands.com/air/Guides/airtapedoubletrack.pdf",
+    "category": "modulation",
+    "note": "Tape-style automatic double-tracking effect for thickening vocals and instruments."
+   }
+  }
+ },
+ "Lunacy Audio": {
+  "vendor_url": "https://lunacy.audio/",
+  "products": {
+   "BEAM Filter": {
+    "product_url": "https://lunacy.audio/products/filter/",
+    "manual_url": null,
+    "category": "filter",
+    "note": "Free state-variable filter with formant and comb modes, from BEAM."
+   },
+   "BEAM Haze": {
+    "product_url": "https://lunacy.audio/products/haze/",
+    "manual_url": null,
+    "category": "modulation",
+    "note": "Free chorus, phase and dispersion effect with diffusion reverb."
+   }
+  }
+ },
+ "Audio Damage, Inc.": {
+  "vendor_url": "https://www.audiodamage.com/",
+  "products": {
+   "ShinRonin": {
+    "product_url": "https://www.audiodamage.com/pages/shin-ronin",
+    "manual_url": "https://audio-damage-inc.github.io/manuals/ShinRonin_Manual.pdf",
+    "category": "delay",
+    "note": "Free modular filter and delay, a rebuild of 2003's Ronin."
+   }
+  }
+ },
+ "FKFX Audio": {
+  "vendor_url": "https://fkfxaudio.com/",
+  "products": {
+   "FKFX Nanomix": {
+    "product_url": "https://www.kvraudio.com/product/nanomix-by-fkfx-audio",
+    "manual_url": null,
+    "category": "utility",
+    "note": "Humanizer creating slow micro-variations in level, pan and MIDI."
+   }
+  }
+ },
+ "Klanghelm": {
+  "vendor_url": "https://klanghelm.com/",
+  "products": {
+   "DC1A3": {
+    "product_url": "https://klanghelm.com/contents/products/DC1A.html",
+    "manual_url": "https://klanghelm.com/docs/DC1A3-manual.pdf",
+    "category": "dynamics",
+    "note": "Free two-knob character compressor with negative ratio and saturation."
+   }
+  }
+ },
+ "Session Loops": {
+  "vendor_url": "https://sessionloops.com/",
+  "products": {
+   "PitchNet": {
+    "product_url": "https://sessionloops.com/pitchnet",
+    "manual_url": "https://github.com/SessionLoops/PitchNet",
+    "category": "pitch",
+    "note": "Free open-source vocal tuning editor using neural pitch resynthesis."
+   }
+  }
+ },
+ "Synful": {
+  "vendor_url": "https://www.synful.com/",
+  "products": {
+   "SynfulOrchestra": {
+    "product_url": "https://www.synful.com/",
+    "manual_url": "https://www.synful.com/usersguide",
+    "category": "synth",
+    "note": "Orchestral instrument using Reconstructive Phrase Modeling for expressive solo lines."
+   }
+  }
+ },
+ "ZL": {
+  "vendor_url": "https://zl-audio.github.io/",
+  "products": {
+   "ZL Equalizer 2": {
+    "product_url": "https://zl-audio.github.io/plugins/zlequalizer2/",
+    "manual_url": "https://zl-audio.github.io/plugins/zlequalizer2/manual/",
+    "category": "eq",
+    "note": "Free open-source parametric equalizer with dynamic bands and matching."
+   }
+  }
+ }
+}

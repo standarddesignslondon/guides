@@ -1,0 +1,797 @@
+{
+  "Brass Quartet by Spitfire Audio": {
+    "pack_url": "https://www.ableton.com/en/packs/brass-quartet/",
+    "docs_url": "https://d3a0bdvj9eysmp.cloudfront.net/ableton/Brass_Quartet_by_Spitfire_Audio.pdf",
+    "devices": {
+      "Group Start": {
+        "category": "utility",
+        "note": "Gates MIDI on a Control value to stop samples triggering at silent chain volumes.",
+        "device_url": null
+      },
+      "MPE Note Off": {
+        "category": "utility",
+        "note": "Stores each note's pressure, slide and pitch bend, replaying them on release.",
+        "device_url": null
+      },
+      "Mod Table": {
+        "category": "modulation",
+        "note": "Translates a macro's value through non-linear curves to set sample layers' chain volume.",
+        "device_url": null
+      }
+    }
+  },
+  "Connection Kit": {
+    "pack_url": "https://www.ableton.com/en/packs/connection-kit/",
+    "docs_url": "https://github.com/Ableton/m4l-connection-kit",
+    "devices": {
+      "Arduino": {
+        "category": "utility",
+        "note": "Connects switches, potentiometers and sensors to control Live parameters via Arduino Uno.",
+        "device_url": null
+      },
+      "Camera": {
+        "category": "utility",
+        "note": "Fetches webcam data to control mappable Live parameters.",
+        "device_url": null
+      },
+      "JSON Video": {
+        "category": "utility",
+        "note": "Fetches tagged looped video data from a web service using JSON.",
+        "device_url": null
+      },
+      "JSON Weather": {
+        "category": "utility",
+        "note": "Fetches live weather data from a web API in JSON format.",
+        "device_url": null
+      },
+      "LEGO MINDSTORMS EV3": {
+        "category": "utility",
+        "note": "Connects an EV3 Programmable Brick to Live, accessing its sensors and motors.",
+        "device_url": null
+      },
+      "OSC Leap Motion": {
+        "category": "utility",
+        "note": "Uses a Leap Motion controller via an OSC bridge app to generate MIDI notes.",
+        "device_url": null
+      },
+      "OSC MIDI Send": {
+        "category": "utility",
+        "note": "Sends MIDI note and velocity data out as OSC messages.",
+        "device_url": null
+      },
+      "OSC Monitor": {
+        "category": "utility",
+        "note": "A simple monitor for viewing incoming OSC messages.",
+        "device_url": null
+      },
+      "OSC Send": {
+        "category": "utility",
+        "note": "Converts any mappable Live parameter into outgoing OSC data.",
+        "device_url": null
+      },
+      "OSC TouchOSC": {
+        "category": "utility",
+        "note": "Maps controllers from a TouchOSC layout to elements in Live.",
+        "device_url": null
+      },
+      "littleBits": {
+        "category": "utility",
+        "note": "Uses the littleBits Arduino module with sensor Bits to control Live, and vice versa.",
+        "device_url": null
+      }
+    }
+  },
+  "Convolution Reverb": {
+    "pack_url": "https://www.ableton.com/en/packs/convolution-reverb/",
+    "docs_url": "https://www.ableton.com/en/live-manual/12/max-for-live-devices/",
+    "devices": {
+      "Convolution Reverb": {
+        "category": "reverb",
+        "note": "Sample-based reverb using real-world impulse responses, with zero-latency processing.",
+        "device_url": null
+      },
+      "Convolution Reverb Pro": {
+        "category": "reverb",
+        "note": "Adds EQ, damping, modulation and IR-reversing controls beyond standard Convolution Reverb.",
+        "device_url": null
+      },
+      "IR Measurement Device": {
+        "category": "utility",
+        "note": "Utility for recording custom impulse responses to use in Convolution Reverb.",
+        "device_url": null
+      }
+    }
+  },
+  "Creative Extensions": {
+    "pack_url": "https://www.ableton.com/en/packs/creative-extensions/",
+    "docs_url": "https://www.ableton.com/en/blog/now-live-10-suite-creative-extensions/",
+    "devices": {
+      "Bass": {
+        "category": "synth",
+        "note": "Monophonic virtual analog synth covering clean to heavily distorted bass tones.",
+        "device_url": null
+      },
+      "Color Limiter": {
+        "category": "dynamics",
+        "note": "Gritty hardware-style limiter with Loudness, Ceiling, Lookahead, Saturation and Color controls.",
+        "device_url": null
+      },
+      "Gated Delay": {
+        "category": "delay",
+        "note": "A gate sequencer routes the signal into a delay line on rhythmic steps.",
+        "device_url": null
+      },
+      "Melodic Steps": {
+        "category": "sequencer",
+        "note": "Fast MIDI sequencer creating evolving, polyrhythmic or randomised melodies.",
+        "device_url": null
+      },
+      "Pitch Hack": {
+        "category": "pitch",
+        "note": "Single delay line with semitone and cent transposition, reverse and randomised pitch.",
+        "device_url": null
+      },
+      "Poli": {
+        "category": "synth",
+        "note": "Polyphonic virtual analog synth with detunable oscillators and built-in chorus.",
+        "device_url": null
+      },
+      "Re-Enveloper": {
+        "category": "dynamics",
+        "note": "Multiband processor that compresses or expands the signal's envelope per frequency band.",
+        "device_url": null
+      },
+      "Spectral Blur": {
+        "category": "reverb",
+        "note": "Blurs a chosen frequency range into a dense, reverb-like cloud, with Freeze.",
+        "device_url": null
+      }
+    }
+  },
+  "CV Tools": {
+    "pack_url": "https://www.ableton.com/en/packs/cv-tools/",
+    "docs_url": "https://help.ableton.com/hc/en-us/articles/360004966139-CV-Tools-Overview-Technical-FAQ",
+    "devices": {
+      "CV Clock In": {
+        "category": "utility",
+        "note": "Controls Live's tempo from an external Eurorack modular clock signal.",
+        "device_url": null
+      },
+      "CV Clock Out": {
+        "category": "utility",
+        "note": "Sends a CV clock signal out to sync modular gear to Live's tempo.",
+        "device_url": null
+      },
+      "CV Envelope Follower": {
+        "category": "modulation",
+        "note": "Converts audio inside Live into CV for controlling modular gear.",
+        "device_url": null
+      },
+      "CV In": {
+        "category": "modulation",
+        "note": "Uses incoming CV from a modular rig to modulate parameters in Live.",
+        "device_url": null
+      },
+      "CV Instrument": {
+        "category": "synth",
+        "note": "Plays modular oscillators from MIDI with flexible voicing and cent-accurate tuning.",
+        "device_url": null
+      },
+      "CV LFO": {
+        "category": "modulation",
+        "note": "Adds an extra LFO modulation source for a connected modular system.",
+        "device_url": null
+      },
+      "CV Shaper": {
+        "category": "modulation",
+        "note": "Draw custom CV envelope shapes in Live to send out to modular gear.",
+        "device_url": null
+      },
+      "CV Triggers": {
+        "category": "sequencer",
+        "note": "Sequences modular drum modules with trigger signals from inside Live.",
+        "device_url": null
+      },
+      "CV Utility": {
+        "category": "utility",
+        "note": "Adds, multiplies and offsets control voltages, processing CV like audio.",
+        "device_url": null
+      },
+      "Rotating Rhythm Generator": {
+        "category": "sequencer",
+        "note": "MIDI effect generating organic, modular-style polyrhythms and beat patterns.",
+        "device_url": null
+      }
+    }
+  },
+  "Drone Lab": {
+    "pack_url": "https://www.ableton.com/en/packs/drone-lab/",
+    "docs_url": null,
+    "devices": {
+      "Harmonic Drone Generator": {
+        "category": "synth",
+        "note": "Eight-voice drone synth tunable to equal temperament or just intonation.",
+        "device_url": null
+      }
+    }
+  },
+  "Expressive Choir by Spitfire Audio": {
+    "pack_url": "https://www.ableton.com/en/packs/expressive-choir/",
+    "docs_url": null,
+    "devices": {
+      "Mod Table": {
+        "category": "modulation",
+        "note": "Shapes crossfades between the choir's mouth shapes and dynamic layers via curves.",
+        "device_url": null
+      }
+    }
+  },
+  "Expressive Chords": {
+    "pack_url": "https://www.ableton.com/en/packs/expressive-chords/",
+    "docs_url": null,
+    "devices": {
+      "Expressive Chords": {
+        "category": "other",
+        "note": "Turns single notes into chords from curated sets, with MPE and Push support.",
+        "device_url": null
+      }
+    }
+  },
+  "Generators by Iftah": {
+    "pack_url": "https://www.ableton.com/en/packs/generators-by-iftah/",
+    "docs_url": "https://www.if-tah.com/devices",
+    "devices": {
+      "Patterns by Iftah": {
+        "category": "sequencer",
+        "note": "Algorithmic drum pattern generator with a separate generation algorithm per voice.",
+        "device_url": null
+      },
+      "Sting by Iftah": {
+        "category": "sequencer",
+        "note": "Improvisational 16-step acid line generator with Type, Root, Transpose, Rate and Density.",
+        "device_url": null
+      }
+    }
+  },
+  "Granulator III": {
+    "pack_url": "https://www.ableton.com/en/packs/granulator-iii/",
+    "docs_url": "https://roberthenke.com/technology/granulator3.html",
+    "devices": {
+      "Granulator III": {
+        "category": "granular",
+        "note": "Granular synth with Classic, Loop and Cloud modes plus MPE modulation.",
+        "device_url": "https://roberthenke.com/technology/granulator3.html"
+      }
+    }
+  },
+  "Inspired by Nature by Dillon Bastan": {
+    "pack_url": "https://www.ableton.com/en/packs/inspired-nature/",
+    "docs_url": "https://dillonbastan.com/inspiredbynature_manuals/",
+    "devices": {
+      "Bouncy Notes": {
+        "category": "sequencer",
+        "note": "Gravity-based sequencer where a dropped ball bounces on a piano roll triggering notes.",
+        "device_url": "https://dillonbastan.com/inspiredbynature_manuals/Bouncy%20Notes%20User%20Manual.pdf"
+      },
+      "Emit": {
+        "category": "granular",
+        "note": "Visual granular synth using phase vocoder playback, with particles crossing a spectrogram.",
+        "device_url": "https://dillonbastan.com/inspiredbynature_manuals/Emit%20User%20Manual.pdf"
+      },
+      "Tree Tone": {
+        "category": "synth",
+        "note": "Grows fractal tree-shaped resonator banks excited by internal noise or external audio.",
+        "device_url": "https://dillonbastan.com/inspiredbynature_manuals/Tree%20Tone%20User%20Manual.pdf"
+      },
+      "Vector Delay": {
+        "category": "delay",
+        "note": "Multitap delay whose particles are separate delay lines with pitch-shift and reverse.",
+        "device_url": "https://dillonbastan.com/inspiredbynature_manuals/Vector%20Delay%20User%20Manual.pdf"
+      },
+      "Vector FM": {
+        "category": "synth",
+        "note": "FM synth where each particle represents an operator oscillator pair.",
+        "device_url": "https://dillonbastan.com/inspiredbynature_manuals/Vector%20FM%20User%20Manual.pdf"
+      },
+      "Vector Grain": {
+        "category": "granular",
+        "note": "Granular looper where particles are grains mapped to pitch, position, filter and reverse.",
+        "device_url": "https://dillonbastan.com/inspiredbynature_manuals/Vector%20Grain%20User%20Manual.pdf"
+      },
+      "Vector Map": {
+        "category": "modulation",
+        "note": "Maps particle motion such as size, direction and velocity to eight parameters.",
+        "device_url": null
+      }
+    }
+  },
+  "Lost and Found": {
+    "pack_url": "https://www.ableton.com/en/packs/lost-and-found/",
+    "docs_url": null,
+    "devices": {
+      "4Xfade": {
+        "category": "utility",
+        "note": "The Pack's single bundled Max device; Ableton's pack page does not describe it.",
+        "device_url": null
+      }
+    }
+  },
+  "M4L Granulator II": {
+    "pack_url": "https://www.ableton.com/en/packs/granulator-ii/",
+    "docs_url": "https://roberthenke.com/technology/granulator.html",
+    "devices": {
+      "Granulator II": {
+        "category": "granular",
+        "note": "Quasi-synchronous granular synth with two multimode filters in series.",
+        "device_url": "https://roberthenke.com/technology/granulator.html"
+      },
+      "GranulatorFollow II": {
+        "category": "granular",
+        "note": "Companion device linking to Granulator II to expand voices across instances.",
+        "device_url": null
+      },
+      "GranulatorInput II": {
+        "category": "granular",
+        "note": "Captures live audio from a track as Granulator II's source sample.",
+        "device_url": null
+      }
+    }
+  },
+  "Max for Live Essentials": {
+    "pack_url": "https://www.ableton.com/en/packs/max-live-essentials/",
+    "docs_url": "https://www.ableton.com/en/live-manual/12/max-for-live-devices/",
+    "devices": {
+      "Arp": {
+        "category": "sequencer",
+        "note": "Pattern-based MIDI arpeggiator that sorts, repeats and transposes incoming notes.",
+        "device_url": null
+      },
+      "Bass": {
+        "category": "synth",
+        "note": "Monophonic virtual analog synth covering clean to heavily distorted bass tones.",
+        "device_url": null
+      },
+      "Buffer Shuffler 2.0": {
+        "category": "sequencer",
+        "note": "Sequences buffer glitch effects such as stutter, gate, pitch and frequency shift.",
+        "device_url": null
+      },
+      "Convolution Reverb": {
+        "category": "reverb",
+        "note": "Sample-based reverb using real-world impulse responses, with zero-latency processing.",
+        "device_url": null
+      },
+      "Convolution Reverb Pro": {
+        "category": "reverb",
+        "note": "Adds EQ, damping, modulation and IR-reversing controls beyond standard Convolution Reverb.",
+        "device_url": null
+      },
+      "Device Randomizer": {
+        "category": "utility",
+        "note": "Randomly generates new parameter values for the device it is applied to.",
+        "device_url": null
+      },
+      "DrumSynth Clap": {
+        "category": "drums",
+        "note": "Synthesises handclap sounds with velocity control over nearly every parameter.",
+        "device_url": null
+      },
+      "DrumSynth Clave": {
+        "category": "drums",
+        "note": "Synthesises clave and woodblock percussion with velocity-controllable parameters.",
+        "device_url": null
+      },
+      "DrumSynth Cymbal": {
+        "category": "drums",
+        "note": "Synthesises cymbal-style percussion with velocity-controllable parameters.",
+        "device_url": null
+      },
+      "DrumSynth FM2": {
+        "category": "drums",
+        "note": "FM-based drum synthesiser for percussive and bass-like tones.",
+        "device_url": null
+      },
+      "DrumSynth FMPerc": {
+        "category": "drums",
+        "note": "FM-based percussion synthesiser with velocity control over its parameters.",
+        "device_url": null
+      },
+      "DrumSynth Glass": {
+        "category": "drums",
+        "note": "Synthesises glassy, bell-like percussion tones with velocity-controllable parameters.",
+        "device_url": null
+      },
+      "DrumSynth HH": {
+        "category": "drums",
+        "note": "Synthesises hi-hat sounds with velocity control over nearly every parameter.",
+        "device_url": null
+      },
+      "DrumSynth Kick": {
+        "category": "drums",
+        "note": "Synthesises kick drum sounds with velocity control over nearly every parameter.",
+        "device_url": null
+      },
+      "DrumSynth Kplus": {
+        "category": "drums",
+        "note": "Extended kick drum synthesiser with additional tone-shaping parameters.",
+        "device_url": null
+      },
+      "DrumSynth Shaker": {
+        "category": "drums",
+        "note": "Synthesises shaker percussion with velocity control over nearly every parameter.",
+        "device_url": null
+      },
+      "DrumSynth Snare": {
+        "category": "drums",
+        "note": "Synthesises snare drum sounds with velocity control over nearly every parameter.",
+        "device_url": null
+      },
+      "DrumSynth Snare2": {
+        "category": "drums",
+        "note": "Alternate snare drum synthesiser with velocity-controllable parameters.",
+        "device_url": null
+      },
+      "DrumSynth Tom": {
+        "category": "drums",
+        "note": "Synthesises tom drum sounds with velocity control over nearly every parameter.",
+        "device_url": null
+      },
+      "Envelope": {
+        "category": "modulation",
+        "note": "Uses an envelope function generator to modulate a mapped Live parameter.",
+        "device_url": null
+      },
+      "Envelope Follower": {
+        "category": "modulation",
+        "note": "Tracks incoming audio amplitude and uses it to modulate mapped parameters.",
+        "device_url": null
+      },
+      "Expression Control": {
+        "category": "modulation",
+        "note": "Controls mapped parameters from MIDI and MPE expression sources.",
+        "device_url": null
+      },
+      "IR Measurement Device": {
+        "category": "utility",
+        "note": "Utility for recording custom impulse responses to use in Convolution Reverb.",
+        "device_url": null
+      },
+      "Instant Haus": {
+        "category": "sequencer",
+        "note": "Beat generator with patterns aimed at house music and broken beats.",
+        "device_url": null
+      },
+      "LFO": {
+        "category": "modulation",
+        "note": "Uses a low frequency oscillator to modulate mapped Live parameters.",
+        "device_url": null
+      },
+      "LFO MIDI": {
+        "category": "modulation",
+        "note": "MIDI-domain version of the LFO device for modulating parameters.",
+        "device_url": null
+      },
+      "MIDIMonitor": {
+        "category": "utility",
+        "note": "Displays incoming MIDI data for monitoring and troubleshooting.",
+        "device_url": null
+      },
+      "Map8": {
+        "category": "utility",
+        "note": "Maps up to eight parameters, suited to Push and eight-knob controllers.",
+        "device_url": null
+      },
+      "Mono Sequencer": {
+        "category": "sequencer",
+        "note": "Sequences a monophonic line with lanes for note, velocity, octave and duration.",
+        "device_url": null
+      },
+      "Multi": {
+        "category": "synth",
+        "note": "Multimode synthesiser combining several different synth engines in one device.",
+        "device_url": null
+      },
+      "MultiMap": {
+        "category": "utility",
+        "note": "Maps up to eight parameters anywhere in the Live Set.",
+        "device_url": null
+      },
+      "Note Echo": {
+        "category": "delay",
+        "note": "Creates echoed MIDI notes at set intervals with decreasing velocity.",
+        "device_url": null
+      },
+      "PitchDrop": {
+        "category": "pitch",
+        "note": "Recreates a vinyl record's motor slowing down, pitching the sound downward.",
+        "device_url": null
+      },
+      "Poli": {
+        "category": "synth",
+        "note": "Polyphonic virtual analog synth with detunable oscillators and built-in chorus.",
+        "device_url": null
+      },
+      "XY Pad": {
+        "category": "utility",
+        "note": "Controls two mapped Live parameters from an X/Y pad.",
+        "device_url": null
+      }
+    }
+  },
+  "Microtuner": {
+    "pack_url": "https://www.ableton.com/en/packs/microtuner/",
+    "docs_url": "https://www.ableton.com/en/live-manual/12/max-for-live-devices/",
+    "devices": {
+      "Microtuner": {
+        "category": "pitch",
+        "note": "Imports, edits and generates microtonal scales, with MPE and lead/follow sync.",
+        "device_url": null
+      }
+    }
+  },
+  "MIDI Tools by Philip Meyer": {
+    "pack_url": "https://www.ableton.com/en/packs/midi-tools/",
+    "docs_url": "https://meyer-devices.com/products/midi-tools-manual",
+    "devices": {
+      "Phase Pattern": {
+        "category": "sequencer",
+        "note": "Manipulates timing, pitch and velocity across a clip for organic phasing results.",
+        "device_url": null
+      },
+      "Polyrhythm": {
+        "category": "sequencer",
+        "note": "Produces polymetric and polyrhythmic patterns via six generators, including Euclidean modes.",
+        "device_url": null
+      },
+      "Retrigger": {
+        "category": "sequencer",
+        "note": "Creates repeats of some or all MIDI notes in a clip, with velocity shaping.",
+        "device_url": null
+      },
+      "Slice Shuffler": {
+        "category": "sequencer",
+        "note": "Applies variations such as reversal or randomness to separate slices of a clip.",
+        "device_url": null
+      },
+      "Stages": {
+        "category": "sequencer",
+        "note": "Turns simple MIDI notes into longer patterns using sliders for pitch, repeats and rests.",
+        "device_url": null
+      }
+    }
+  },
+  "Performance Pack by Iftah": {
+    "pack_url": "https://www.ableton.com/en/packs/performance-pack/",
+    "docs_url": "https://www.if-tah.com/devices",
+    "devices": {
+      "Arrangement Looper": {
+        "category": "utility",
+        "note": "Loops your current position in Arrangement View using four customisable loop lengths.",
+        "device_url": null
+      },
+      "Performer": {
+        "category": "utility",
+        "note": "Modular macro control device with faders, crossfaders, buttons and dials.",
+        "device_url": null
+      },
+      "Prearranger": {
+        "category": "utility",
+        "note": "Pre-arranges clip placement so Live fills the slots with recorded content.",
+        "device_url": null
+      },
+      "Variations": {
+        "category": "utility",
+        "note": "Captures and recalls snapshots of an entire Live Set, with parts included or excluded.",
+        "device_url": null
+      }
+    }
+  },
+  "PitchLoop89": {
+    "pack_url": "https://www.ableton.com/en/packs/pitchloop89/",
+    "docs_url": "https://roberthenke.com/technology/pitchloop89.html",
+    "devices": {
+      "PitchLoop89": {
+        "category": "pitch",
+        "note": "Two pitch-shifting delays inspired by the Publison DHM 89, with Push integration.",
+        "device_url": "https://roberthenke.com/technology/pitchloop89.html"
+      }
+    }
+  },
+  "Probability Pack by Sonic Faction": {
+    "pack_url": "https://www.ableton.com/en/packs/probability-pack/",
+    "docs_url": "https://www.ableton.com/en/blog/probability-pack-sonic-faction-new-live-10-suite/",
+    "devices": {
+      "Dr Chaos": {
+        "category": "sequencer",
+        "note": "A neural network strings notes together to generate melodies unpredictably.",
+        "device_url": null
+      },
+      "Melodic Probability": {
+        "category": "sequencer",
+        "note": "Monophonic step sequencer setting probability of event, pitch and octave per step.",
+        "device_url": null
+      },
+      "Probability Arp": {
+        "category": "sequencer",
+        "note": "Arpeggiator with chord generator and probability for rate, direction, length and octave.",
+        "device_url": null
+      },
+      "Rhythmic Probability": {
+        "category": "sequencer",
+        "note": "Polyphonic sequencer setting probability of velocity, length and event per step.",
+        "device_url": null
+      },
+      "Step Divider": {
+        "category": "sequencer",
+        "note": "Polyphonic sequencer dividing each step into subdivisions for glitchy results.",
+        "device_url": null
+      }
+    }
+  },
+  "Sequencers": {
+    "pack_url": "https://www.ableton.com/en/packs/sequencers/",
+    "docs_url": null,
+    "devices": {
+      "Rhythmic Steps": {
+        "category": "sequencer",
+        "note": "Step sequencer for Drum Racks with trigger probability, alternate lanes and swing.",
+        "device_url": null
+      },
+      "SQ Sequencer": {
+        "category": "sequencer",
+        "note": "16-step hardware-style sequencer where each lane has its own length and direction.",
+        "device_url": null
+      },
+      "Step Arp": {
+        "category": "sequencer",
+        "note": "Step arpeggiator controlling velocity, note length, chance and transposition per step.",
+        "device_url": null
+      }
+    }
+  },
+  "Stray Cats Collection by Max for Cats": {
+    "pack_url": "https://www.ableton.com/en/packs/stray-cats-collection/",
+    "docs_url": null,
+    "devices": {
+      "Color": {
+        "category": "distortion",
+        "note": "Texture device adding vinyl noise, hiss, drive, wobble and analog warmth.",
+        "device_url": null
+      },
+      "ConChord": {
+        "category": "sequencer",
+        "note": "Pulse-based chord step sequencer where each step varies pulse count and generates chords.",
+        "device_url": null
+      },
+      "MSE": {
+        "category": "synth",
+        "note": "Small synth module played mono or poly, from fat bass sounds to lush pads.",
+        "device_url": null
+      },
+      "Quad": {
+        "category": "synth",
+        "note": "Four MSE synths stacked, each note playing one module in turn like an Oberheim.",
+        "device_url": null
+      },
+      "Seq8": {
+        "category": "sequencer",
+        "note": "Analog-style eight-step sequencer with swing, MIDI scaling and a map function.",
+        "device_url": null
+      },
+      "SkramDelay": {
+        "category": "delay",
+        "note": "Dual-channel delay with modulated, randomised delay times for glitch effects.",
+        "device_url": "http://maxforcats.com/skram-delay/"
+      },
+      "Stochastic Delay": {
+        "category": "delay",
+        "note": "Two stochastically driven delay engines with post filters and built-in reverb.",
+        "device_url": "http://maxforcats.com/stochastic-delay/"
+      },
+      "Verbotron": {
+        "category": "reverb",
+        "note": "Stereo reverb effect built on the original Gigaverb algorithm.",
+        "device_url": null
+      }
+    }
+  },
+  "String Quartet by Spitfire Audio": {
+    "pack_url": "https://www.ableton.com/en/packs/string-quartet/",
+    "docs_url": "https://d3a0bdvj9eysmp.cloudfront.net/ableton/String_Quartet_by_Spitfire_Audio.pdf",
+    "devices": {
+      "Group Start": {
+        "category": "utility",
+        "note": "Gates MIDI on a Control value to stop samples triggering at silent chain volumes.",
+        "device_url": null
+      },
+      "MPE Note Off": {
+        "category": "utility",
+        "note": "Stores each note's pressure, slide and pitch bend, replaying them on release.",
+        "device_url": null
+      },
+      "Mod Table": {
+        "category": "modulation",
+        "note": "Translates a macro's value through non-linear curves to set sample layers' chain volume.",
+        "device_url": null
+      }
+    }
+  },
+  "Surround Panner": {
+    "pack_url": "https://www.ableton.com/en/packs/surround-panner/",
+    "docs_url": null,
+    "devices": {
+      "Surround Panner": {
+        "category": "spatial",
+        "note": "XY multi-speaker panner with Rotate, Smooth, Focus and Center controls.",
+        "device_url": null
+      }
+    }
+  },
+  "The Forge by Hecq": {
+    "pack_url": "https://www.ableton.com/en/packs/forge/",
+    "docs_url": "https://www.ableton.com/en/blog/hecq-forge-new-premium-sounds-live-9-suite/",
+    "devices": {
+      "Max AutoPanner": {
+        "category": "modulation",
+        "note": "Auto-panning utility that moves the signal across the stereo field.",
+        "device_url": null
+      },
+      "Max CombFilter": {
+        "category": "filter",
+        "note": "A stereo comb filter with pitch control.",
+        "device_url": null
+      },
+      "Max Compressor": {
+        "category": "dynamics",
+        "note": "A stereo compression device.",
+        "device_url": null
+      },
+      "Max DelayTaps": {
+        "category": "delay",
+        "note": "Delay effect offering up to 32 delay taps.",
+        "device_url": null
+      },
+      "Max SpectralHarm": {
+        "category": "pitch",
+        "note": "An FFT-based frequency shifter.",
+        "device_url": null
+      },
+      "PluggoFuzz": {
+        "category": "distortion",
+        "note": "Distorts the input using four clipping modes and multi-mode filters.",
+        "device_url": null
+      },
+      "Speed Shifter": {
+        "category": "pitch",
+        "note": "Simulates two tape loops running at different speeds feeding back into each other.",
+        "device_url": null
+      },
+      "Tapped Delay": {
+        "category": "delay",
+        "note": "Delay line with 16 equally spaced taps, each adjustable in level and pan.",
+        "device_url": null
+      }
+    }
+  },
+  "Upright Piano by Spitfire Audio": {
+    "pack_url": "https://www.ableton.com/en/packs/upright-piano/",
+    "docs_url": "https://d3a0bdvj9eysmp.cloudfront.net/ableton/Upright_Piano_by_Spitfire_Audio.pdf",
+    "devices": {
+      "Custom Note Off": {
+        "category": "utility",
+        "note": "Triggers hammer-noise samples on key release, even while the sustain pedal is held.",
+        "device_url": null
+      },
+      "Pedal Noise": {
+        "category": "utility",
+        "note": "Triggers recorded pedal-press and pedal-release noise samples from sustain pedal data.",
+        "device_url": null
+      },
+      "Piano Pedal Trigger": {
+        "category": "utility",
+        "note": "Gates MIDI to switch between pedal-up and pedal-down sustained sample layers.",
+        "device_url": null
+      }
+    }
+  }
+}

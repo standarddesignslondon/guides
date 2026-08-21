@@ -1,0 +1,278 @@
+{
+ "Automate Rack Macro Variations V1 AbletonDrummer": {
+  "url": "https://blog.abletondrummer.com/how-to-automate-macro-variations-in-ableton-live/",
+  "maker": "AbletonDrummer",
+  "category": "utility",
+  "note": "Automates Ableton rack macro variation changes; from the Macro Variations Control pack."
+ },
+ "Boss DD-3 Digital Delay": {
+  "url": null,
+  "maker": null,
+  "category": "delay",
+  "note": null
+ },
+ "Boss TR-2 Tremolo": {
+  "url": null,
+  "maker": null,
+  "category": "modulation",
+  "note": null
+ },
+ "Chord Generator": {
+  "url": "https://maxforlive.com/library/device/917/chord-generator",
+  "maker": "nordmann",
+  "category": "pitch",
+  "note": "Turns single MIDI notes into chords with inversions and random chord types."
+ },
+ "Coral": {
+  "url": null,
+  "maker": null,
+  "category": "other",
+  "note": null
+ },
+ "Drox II Free": {
+  "url": "https://maxforlive.com/library/device/13765/drox-ii",
+  "maker": "Dystopian Waves",
+  "category": "other",
+  "note": "Free real-time glitch, stutter and jump audio manipulation device."
+ },
+ "Expressive Chords 1.1": {
+  "url": "https://www.ableton.com/en/packs/expressive-chords/",
+  "maker": "Ableton",
+  "category": "pitch",
+  "note": "Chord bank device turning single notes into fully voiced, expressive chords."
+ },
+ "Friend": {
+  "url": "https://www.s8jfou.com/maxmsp.html",
+  "maker": "S8JFOU",
+  "category": "synth",
+  "note": "Playful generative music instrument designed so non-musicians can perform with a mouse."
+ },
+ "GrainFreeze": {
+  "url": "https://maxforlive.com/library/device/240/grain-freeze",
+  "maker": "Monolake (Robert Henke)",
+  "category": "granular",
+  "note": "Granular audio freezer that turns any input into sustained lush textures."
+ },
+ "HarmoChordFilter J74": {
+  "url": "https://fabriziopoce.com/HarmoTools.html",
+  "maker": "Fabrizio Poce (J74)",
+  "category": "pitch",
+  "note": "Harmonises MIDI to a leading track's chords; part of J74 HarmoTools set."
+ },
+ "HarmoChordSend J74": {
+  "url": "https://fabriziopoce.com/HarmoTools.html",
+  "maker": "Fabrizio Poce (J74)",
+  "category": "pitch",
+  "note": "Sends chord data from a leading track; part of J74 HarmoTools set."
+ },
+ "HarmoPadFilter J74": {
+  "url": "https://fabriziopoce.com/HarmoTools.html",
+  "maker": "Fabrizio Poce (J74)",
+  "category": "pitch",
+  "note": "Adapts held pad notes to the leading chords; part of J74 HarmoTools."
+ },
+ "HarmoScaleFilterAPI J74": {
+  "url": "https://fabriziopoce.com/HarmoTools.html",
+  "maker": "Fabrizio Poce (J74)",
+  "category": "pitch",
+  "note": "Filters incoming notes to a scale; part of the J74 HarmoTools set."
+ },
+ "Hocket 2": {
+  "url": "https://maxforlive.com/library/device/7934/hocket-2",
+  "maker": "ricoL",
+  "category": "utility",
+  "note": "Splits a melody's notes across up to eight tracks for hocketing."
+ },
+ "Inflation(OS)": {
+  "url": "https://maxforlive.com/library/device/13205/inflation",
+  "maker": "Stevon",
+  "category": "dynamics",
+  "note": "Max for Live clone of the Sonnox Oxford Inflator loudness enhancer."
+ },
+ "KGlitch": {
+  "url": "https://maxforlive.com/library/device/5909/kglitch",
+  "maker": "grahamf",
+  "category": "other",
+  "note": "Beat-glitching effect modelled on a well-known commercial glitch plugin."
+ },
+ "LFO Random-1": {
+  "url": "https://maxforlive.com/library/device/8530/lfo-random",
+  "maker": "S8JFOU",
+  "category": "modulation",
+  "note": "Ableton's LFO device rebuilt so every waveform is random."
+ },
+ "Lode": {
+  "url": "https://fors.fm/lode",
+  "maker": "Fors",
+  "category": "synth",
+  "note": "Free monophonic subtractive bass synth with 303-like character, sized for Push."
+ },
+ "M2TM Notes": {
+  "url": "https://midi2themax.gumroad.com/",
+  "maker": "Midi-2-the-Max",
+  "category": "sequencer",
+  "note": "MIDI tool that turns typed note and chord text into clips."
+ },
+ "MDD___SNAKE_V3.2.3": {
+  "url": "https://maximedanglesdevice.gumroad.com/l/SvjgC",
+  "maker": "Maxime Dangles",
+  "category": "sequencer",
+  "note": "Grid sequencer inspired by Make Noise Rene, generating endless MIDI patterns."
+ },
+ "MFA Autodubber": {
+  "url": "https://manifest.audio/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "Probabilistic dub-throw modulator; one of fifteen devices in Mod Squad Free."
+ },
+ "MFA Follower": {
+  "url": "https://manifest.audio/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "Envelope follower with BPM-synced rate; part of the Mod Squad Free bundle."
+ },
+ "MFA MIDI Cycler": {
+  "url": "https://manifest.audio/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "Steps through values on MIDI note triggers; part of Mod Squad Free."
+ },
+ "MFA MIDI X-Control": {
+  "url": "https://manifest.audio/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "Macro knob quantised to incoming MIDI notes; part of Mod Squad Free."
+ },
+ "MFA Solarus": {
+  "url": "https://manifest.audio/solarus",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "LFO whose rate follows the orbit or rotation of celestial bodies."
+ },
+ "Mix Matcher": {
+  "url": "https://maxforlive.com/library/device/4662/mix-matcher",
+  "maker": "Funkatronics",
+  "category": "utility",
+  "note": "Mix referencing tool for comparing your track against references or pink noise."
+ },
+ "Nirvana": {
+  "url": "https://isotonikstudios.com/product/nirvana-by-dillon-bastan/",
+  "maker": "Dillon Bastan",
+  "category": "synth",
+  "note": "Polyphonic feedback-network instrument; product page also covers the NirvanaFX effect."
+ },
+ "NirvanaFX C": {
+  "url": "https://isotonikstudios.com/product/nirvana-by-dillon-bastan/",
+  "maker": "Dillon Bastan",
+  "category": "other",
+  "note": "Audio-effect version of Nirvana's feedback network; shares the Nirvana product page."
+ },
+ "Oscillosope V1.4": {
+  "url": "https://maxforlive.com/library/device/12589/oscilloscope",
+  "maker": "Supertramp162",
+  "category": "analyser",
+  "note": "Oscilloscope waveform display for visualising audio inside Ableton Live."
+ },
+ "Premo": {
+  "url": "https://maxforlive.com/library/device/8528/premo",
+  "maker": "S8JFOU",
+  "category": "utility",
+  "note": "Stores eight device presets and recalls them instantly with MIDI notes."
+ },
+ "Pyr by Iftah 1.2": {
+  "url": "https://maxforlive.com/library/device/8993/pyr-by-iftah-a-microtonal-string-model",
+  "maker": "Iftah",
+  "category": "synth",
+  "note": "Twelve-voice plucked string model with polyphonic pitch bend for microtonal playing."
+ },
+ "Resampler Pro": {
+  "url": "https://www.abletonpodcast.com/resampler-pro",
+  "maker": "Live Producer Online / AbletonDrummer",
+  "category": "sampler",
+  "note": "Automates multisampling instruments and plugins into Ableton Sampler instruments."
+ },
+ "STRIKE_Resonator": {
+  "url": "https://hannesdhoine.net/",
+  "maker": "Hannes d'Hoine",
+  "category": "filter",
+  "note": "Port of Mutable Instruments Rings as a resonator audio effect."
+ },
+ "Select + MAP Single Variation AUDIO V1 AbletonDrummer": {
+  "url": "https://blog.abletondrummer.com/how-to-automate-macro-variations-in-ableton-live/",
+  "maker": "AbletonDrummer",
+  "category": "utility",
+  "note": "MIDI-triggers a specific rack macro variation; same Macro Variations Control pack."
+ },
+ "Smooth Automator Audio": {
+  "url": "https://maxforlive.com/library/device/6767/smooth-automator",
+  "maker": "KB Devices",
+  "category": "utility",
+  "note": "Automates and smoothly morphs between Ableton rack macro variations."
+ },
+ "Sting 2": {
+  "url": "https://www.if-tah.com/devices/sting-2",
+  "maker": "Iftah",
+  "category": "sequencer",
+  "note": "Acid line generator and performance sequencer with dedicated Push takeover mode."
+ },
+ "Tombola": {
+  "url": "https://maxforlive.com/library/device/8201/tombola-sequencer",
+  "maker": "Joel Powell",
+  "category": "sequencer",
+  "note": "Physics-based bouncing-ball sequencer recreating the OP-1's Tombola."
+ },
+ "Widen": {
+  "url": "https://maxforlive.com/library/device/10173/widen",
+  "maker": "effree",
+  "category": "spatial",
+  "note": "Adds stereo width to sounds and tracks while keeping mono compatibility."
+ },
+ "j11-tone-Resonator v1": {
+  "url": "https://maxforlive.com/library/device/8441/j11-tone-resonator",
+  "maker": "jaspermarsalis",
+  "category": "filter",
+  "note": "Eleven-note atonal resonator inspired by the Ondes Martenot's Palme diffuser."
+ },
+ "jBi-Phase v2.7": {
+  "url": "https://maxforlive.com/library/device/8440/jbi-phase",
+  "maker": "jaspermarsalis",
+  "category": "modulation",
+  "note": "Clone of the Mu-Tron Bi-Phase dual phaser pedal."
+ },
+ "jKnob v1.6": {
+  "url": "https://maxforlive.com/library/device/8889/jknob",
+  "maker": "jaspermarsalis",
+  "category": "filter",
+  "note": "Big fixed-frequency highpass filter modelled on King Tubby's Altec 9069B."
+ },
+ "jOdyssey v5.2": {
+  "url": "https://maxforlive.com/library/device/11568/jodyssey",
+  "maker": "jaspermarsalis",
+  "category": "synth",
+  "note": "Emulation of the ARP Odyssey analogue synthesizer."
+ },
+ "jPro v1.2": {
+  "url": "https://maxforlive.com/library/device/13434/jpro",
+  "maker": "jaspermarsalis",
+  "category": "synth",
+  "note": "gen~ port of Native Instruments Pro-53, itself a Prophet-5 emulation."
+ },
+ "jTap 3.1": {
+  "url": "https://maxforlive.com/library/device/7493/jtap",
+  "maker": "jaspermarsalis",
+  "category": "utility",
+  "note": "Tap-tempo device for controlling any time-based parameter such as delay time."
+ },
+ "trnr.DmmG": {
+  "url": "https://maxforlive.com/library/device/8824/dmmg",
+  "maker": "TRNR (Ternaer Music Technology)",
+  "category": "dynamics",
+  "note": "MIDI-triggered multi-mode gate with VCA and VCF for playing audio tracks."
+ },
+ "trnr.RetroSampler": {
+  "url": "https://maxforlive.com/library/device/8386/retrosampler",
+  "maker": "TRNR (Ternaer Music Technology)",
+  "category": "sampler",
+  "note": "Lo-fi sample player emulating 1990s hardware samplers with bit and rate reduction."
+ }
+}

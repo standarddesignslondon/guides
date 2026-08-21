@@ -1,0 +1,117 @@
+{
+  "Align Delay": {
+    "category": "utility",
+    "note": "Utility device that delays incoming signals in samples, milliseconds, or meters/feet.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#align-delay"
+  },
+  "Color Limiter": {
+    "category": "dynamics",
+    "note": "Limiter with Saturation and Color controls, inspired by gritty hardware limiter sounds.",
+    "manual_url": "https://www.ableton.com/en/packs/creative-extensions/"
+  },
+  "Envelope Follower": {
+    "category": "modulation",
+    "note": "Turns an incoming signal's amplitude into a curve that modulates mapped parameters.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#envelope-follower"
+  },
+  "Envelope MIDI": {
+    "category": "modulation",
+    "note": "Modulator device using an ADSR envelope to control up to eight mapped parameters.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#envelope-midi"
+  },
+  "Euclidean": {
+    "category": "sequencer",
+    "note": "MIDI generator creating Euclidean rhythm patterns for up to four voices.",
+    "manual_url": "https://www.ableton.com/en/manual/midi-tools/#euclidean"
+  },
+  "Expression Control": {
+    "category": "modulation",
+    "note": "Modulator controlling mapped parameters from MIDI and MPE sources like velocity, pressure and slide.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#expression-control"
+  },
+  "Expression Control Legacy": {
+    "category": "modulation",
+    "note": "The Live 11 version of Expression Control, loaded in Sets made before Live 12.",
+    "manual_url": "https://www.ableton.com/en/live-manual/11/max-for-live-devices/#expression-control"
+  },
+  "LFO": {
+    "category": "modulation",
+    "note": "Modulator device controlling mapped parameters using low-frequency oscillation.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#lfo"
+  },
+  "MIDI Monitor": {
+    "category": "analyser",
+    "note": "Utility MIDI device that displays incoming MIDI and MPE data.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#midi-monitor"
+  },
+  "MPE Control": {
+    "category": "utility",
+    "note": "Shapes incoming MPE data and can convert MPE signals to standard MIDI.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#mpe-control"
+  },
+  "Note Echo": {
+    "category": "delay",
+    "note": "MIDI echo creating extra notes at timed intervals with decreasing velocity.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#note-echo"
+  },
+  "Shaper": {
+    "category": "modulation",
+    "note": "Modulator device using a breakpoint envelope to generate mappable modulation data.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#shaper"
+  },
+  "Shaper MIDI": {
+    "category": "modulation",
+    "note": "Breakpoint-envelope modulator retriggered by each MIDI note and affected by velocity.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#shaper-midi"
+  },
+  "Velocity Shaper": {
+    "category": "utility",
+    "note": "MIDI transformation reshaping velocities of selected notes using an adjustable envelope.",
+    "manual_url": "https://www.ableton.com/en/manual/midi-tools/#velocity-shaper"
+  },
+  "DS Clang": {
+    "category": "drums",
+    "note": "Drum synth of two tones, noise and filter for cowbell and clave sounds.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#ds-clang"
+  },
+  "DS Clap": {
+    "category": "drums",
+    "note": "Drum synth mixing filtered noise and an impulse through panned delay lines.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#ds-clap"
+  },
+  "DS Cymbal": {
+    "category": "drums",
+    "note": "Drum synth combining sine and pulse waves with high-passed noise for cymbals.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#ds-cymbal"
+  },
+  "DS FM": {
+    "category": "drums",
+    "note": "FM drum synth producing everything from static bursts to metallic lasers.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#ds-fm"
+  },
+  "DS HH": {
+    "category": "drums",
+    "note": "Drum synth blending noise and sine waves for closed and open hi-hats.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#ds-hh"
+  },
+  "DS Kick": {
+    "category": "drums",
+    "note": "Kick drum synth built on a modulated sine wave.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#ds-kick"
+  },
+  "DS Sampler": {
+    "category": "drums",
+    "note": "Drum synth module built from your own loaded sample; deprecated since Live 12.",
+    "manual_url": "https://www.ableton.com/en/live-manual/11/max-for-live-devices/#ds-sampler"
+  },
+  "DS Snare": {
+    "category": "drums",
+    "note": "Drum synth of pitched oscillator and noise, from acoustic to gated electronic snares.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#ds-snare"
+  },
+  "DS Tom": {
+    "category": "drums",
+    "note": "Drum synth combining an impulse with pitched oscillator waveforms to synthesize toms.",
+    "manual_url": "https://www.ableton.com/en/manual/max-for-live-devices/#ds-tom"
+  }
+}

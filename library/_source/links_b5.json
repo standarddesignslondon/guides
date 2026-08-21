@@ -1,0 +1,267 @@
+{
+  "Puremagnetik": {
+    "vendor_url": "https://puremagnetik.com",
+    "products": {
+      "Driftmaker": {
+        "product_url": "https://puremagnetik.com/products/driftmaker-delay-disintegration-device-1",
+        "manual_url": null,
+        "category": "delay",
+        "note": "Free delay disintegration device that recalls and degrades fragments of incoming audio."
+      },
+      "Expanse": {
+        "product_url": "https://puremagnetik.com/products/expanse-texture-generator",
+        "manual_url": null,
+        "category": "synth",
+        "note": "Free noise and drone generator with spectral blur, pitch and filtering."
+      },
+      "Klamur": {
+        "product_url": "https://puremagnetik.com/products/klamur-dual-lookback-processor-looper-ableton-bitwig-vst",
+        "manual_url": null,
+        "category": "sampler",
+        "note": "Always-on lookback recorder that captures and loops the past 90 seconds."
+      },
+      "MimikOD": {
+        "product_url": "https://puremagnetik.com/products/mimik-od-pitch-time-repeater-with-od",
+        "manual_url": null,
+        "category": "pitch",
+        "note": "Buffer-based pitch and time repeater with overdrive for stutter effects."
+      },
+      "Partikl": {
+        "product_url": "https://puremagnetik.com/products/partikl-particle-delay-temporal-shifter",
+        "manual_url": null,
+        "category": "granular",
+        "note": "Granular delay and temporal shifting device for reshaping audio."
+      },
+      "Pastfabric2": {
+        "product_url": "https://puremagnetik.com/products/pastfabric-ii-micro-memory-reverb",
+        "manual_url": null,
+        "category": "granular",
+        "note": "Micro-memory reverb that micro-splices incoming audio in real time."
+      },
+      "Permute": {
+        "product_url": "https://puremagnetik.com/products/permute-buffer-modulation-matrix-ableton-effects-plugin",
+        "manual_url": null,
+        "category": "granular",
+        "note": "Buffer modulation matrix combining granular looping, spectral shaping and spatial processing."
+      },
+      "Replicas": {
+        "product_url": "https://puremagnetik.com/products/replicas-creative-splice-sampler",
+        "manual_url": null,
+        "category": "sampler",
+        "note": "Splice sampler manipulating audio with three simultaneous looped, pitched segments."
+      },
+      "Swarm": {
+        "product_url": "https://puremagnetik.com/products/swarm-particle-diffusion-sampler",
+        "manual_url": null,
+        "category": "granular",
+        "note": "Particle diffusion sampler that scatters incoming audio into granular clouds."
+      },
+      "Verv": {
+        "product_url": "https://puremagnetik.com/products/verv-sunbaked-tape-loop-synthesizer",
+        "manual_url": null,
+        "category": "synth",
+        "note": "Free string-machine synthesizer modelled on Solina and tape-loop Mellotron sounds."
+      },
+      "Zerone": {
+        "product_url": "https://puremagnetik.com/products/zerone-granular-audio-particle-splitter",
+        "manual_url": null,
+        "category": "granular",
+        "note": "Audio particle splitter using two granular processors to dissect and stretch sound."
+      }
+    }
+  },
+  "BABY Audio": {
+    "vendor_url": "https://babyaud.io",
+    "products": {
+      "Beat Slammer": {
+        "product_url": "https://babyaud.io/freebies",
+        "manual_url": null,
+        "category": "dynamics",
+        "note": "Free one-gesture parallel compressor for smashing drums and mix busses."
+      },
+      "Comeback Kid": {
+        "product_url": "https://babyaud.io/comeback-kid-delay-plugin",
+        "manual_url": "https://babyaudiosoftware.s3.us-east-2.amazonaws.com/Comeback+Kid+Baby+Audio+Manual.pdf",
+        "category": "delay",
+        "note": "Analog-flavoured delay plugin with simplified one-screen controls."
+      },
+      "Magic Dice": {
+        "product_url": "https://babyaud.io/freebies",
+        "manual_url": null,
+        "category": "other",
+        "note": "Free randomiser generating new delay, reverb and modulation chains per click."
+      },
+      "Magic Switch": {
+        "product_url": "https://babyaud.io/freebies",
+        "manual_url": null,
+        "category": "modulation",
+        "note": "Free Juno-inspired chorus with a dark, detuned vintage character."
+      },
+      "Pitch Drift": {
+        "product_url": "https://babyaud.io/freebies",
+        "manual_url": null,
+        "category": "pitch",
+        "note": "Free effect adding organic pitch fluctuations, from subtle to lo-fi."
+      },
+      "Super VHS": {
+        "product_url": "https://babyaud.io/super-vhs-multi-fx-plugin",
+        "manual_url": "https://babyaudiosoftware.s3.us-east-2.amazonaws.com/Super+VHS+Baby+Audio+Manual.pdf",
+        "category": "tape",
+        "note": "80s nostalgia channel strip emulating VHS-era lo-fi colour and modulation."
+      },
+      "Tekno": {
+        "product_url": "https://babyaud.io/tekno",
+        "manual_url": "https://babyaudiosoftware.s3.us-east-2.amazonaws.com/Tekno+Baby+Audio+Manual.pdf",
+        "category": "drums",
+        "note": "Drum synthesizer instrument for building electronic kits and patterns."
+      },
+      "Warp": {
+        "product_url": "https://babyaud.io/freebies",
+        "manual_url": null,
+        "category": "pitch",
+        "note": "Free varispeed effect with independent stretch control, from Transit 2."
+      }
+    }
+  },
+  "LANDR": {
+    "vendor_url": "https://www.landr.com",
+    "products": {
+      "LANDR FX Bass": {
+        "product_url": "https://www.landr.com/plugins/landr-fx-bass",
+        "manual_url": "https://support.landr.com/hc/en-us/sections/4416169458455-LANDR-FX",
+        "category": "other",
+        "note": "Preset-driven multi-effect plugin for shaping bass tracks."
+      },
+      "LANDR FX Beats": {
+        "product_url": "https://www.landr.com/plugins/landr-fx-beats",
+        "manual_url": "https://support.landr.com/hc/en-us/sections/4416169458455-LANDR-FX",
+        "category": "other",
+        "note": "Preset-driven multi-effect plugin for drums and percussion."
+      },
+      "LANDR FX Electric": {
+        "product_url": "https://www.landr.com/plugins/landr-fx-electric",
+        "manual_url": "https://support.landr.com/hc/en-us/sections/4416169458455-LANDR-FX",
+        "category": "other",
+        "note": "Preset-driven multi-effect plugin for guitars and electric instruments."
+      },
+      "LANDR FX Voice": {
+        "product_url": "https://www.landr.com/plugins/landr-fx-voice",
+        "manual_url": "https://support.landr.com/hc/en-us/sections/4416169458455-LANDR-FX",
+        "category": "vocal",
+        "note": "Preset-driven multi-effect plugin for vocal tracks."
+      }
+    }
+  },
+  "Valhalla DSP, LLC": {
+    "vendor_url": "https://valhalladsp.com",
+    "products": {
+      "ValhallaFreqEcho": {
+        "product_url": "https://valhalladsp.com/shop/delay/valhalla-freq-echo/",
+        "manual_url": null,
+        "category": "delay",
+        "note": "Free Bode-style frequency shifter combined with analog echo emulation."
+      },
+      "ValhallaSpaceModulator": {
+        "product_url": "https://valhalladsp.com/shop/modulation/valhalla-space-modulator/",
+        "manual_url": null,
+        "category": "modulation",
+        "note": "Free flanger with eleven algorithms including through-zero and barberpole flanging."
+      },
+      "ValhallaSupermassive": {
+        "product_url": "https://valhalladsp.com/shop/reverb/valhalla-supermassive/",
+        "manual_url": null,
+        "category": "reverb",
+        "note": "Free reverb and delay plugin with 22 huge, feedback-driven modes."
+      }
+    }
+  },
+  "Klevgrand": {
+    "vendor_url": "https://klevgrand.com",
+    "products": {
+      "Degrader": {
+        "product_url": "https://klevgrand.com/products/degrader",
+        "manual_url": "https://cdn.klevgrand.com/manuals/degrader_docs.pdf",
+        "category": "distortion",
+        "note": "Combined resampler and bitcrusher for lo-fi and vintage digital distortion."
+      },
+      "R0Verb": {
+        "product_url": "https://klevgrand.com/products/r0verb",
+        "manual_url": "https://cdn.klevgrand.com/manuals/r0verb_docs.pdf",
+        "category": "reverb",
+        "note": "Hybrid reverb and delay built from up to 50 separate delay lines."
+      }
+    }
+  },
+  "Ternar Music Technology": {
+    "vendor_url": "https://ternar.tech",
+    "products": {
+      "ChannelStrip": {
+        "product_url": "https://trnr.gumroad.com/l/channelstrip",
+        "manual_url": null,
+        "category": "eq",
+        "note": "Free modelled tube preamp with three-band EQ and oscilloscope; sold via Gumroad."
+      },
+      "Flechtwerk": {
+        "product_url": "https://trnr.gumroad.com/l/flechtwerk",
+        "manual_url": null,
+        "category": "synth",
+        "note": "Free macro synthesizer based on Mutable Instruments Plaits; sold via Gumroad."
+      }
+    }
+  },
+  "Excite Audio": {
+    "vendor_url": "https://www.excite-audio.com",
+    "products": {
+      "Bloom Mura Masa": {
+        "product_url": "https://www.excite-audio.com/bloommuramasa",
+        "manual_url": "https://www.excite-audio.com/s/Bloom-Mura-Masa-User-Manual.pdf",
+        "category": "sampler",
+        "note": "Sample-based instrument built from Mura Masa's personal session archives."
+      }
+    }
+  },
+  "Justin Sheriff": {
+    "vendor_url": "https://plugins.justinsheriff.com",
+    "products": {
+      "De-Space": {
+        "product_url": "https://plugins.justinsheriff.com/l/fejpwe",
+        "manual_url": null,
+        "category": "utility",
+        "note": "Home-studio cleanup tool combining de-reverb, denoise, gate and tone; Gumroad storefront."
+      }
+    }
+  },
+  "Overloud": {
+    "vendor_url": "https://www.overloud.com",
+    "products": {
+      "Gem ECHOSON": {
+        "product_url": "https://www.overloud.com/products/echoson",
+        "manual_url": "https://s3.amazonaws.com/Overloud/GEMS/Overloud+Gems+-+User+Manual.pdf",
+        "category": "delay",
+        "note": "Emulation of a 1970s Italian magnetic drum delay with four playback heads."
+      }
+    }
+  },
+  "Superlunar": {
+    "vendor_url": "https://www.suprlunr.com",
+    "products": {
+      "GX-8600": {
+        "product_url": "https://www.suprlunr.com/products/gx-8600",
+        "manual_url": "https://cdn.shopify.com/s/files/1/0243/9387/5508/files/Superlunar_GX-8600_User_Manual.pdf?v=1785438123",
+        "category": "other",
+        "note": "Glitch and corrupt effect pairing a rhythmic glitch engine with digital degradation."
+      }
+    }
+  },
+  "Xynth Audio": {
+    "vendor_url": "https://www.xynth.audio",
+    "products": {
+      "LePhonk": {
+        "product_url": "https://www.xynth.audio/purchase/lephonk",
+        "manual_url": "https://www.xynth.audio/docs/plugins/lephonk",
+        "category": "distortion",
+        "note": "Free distortion combining six drive flavours with OTT and soft clipping."
+      }
+    }
+  }
+}

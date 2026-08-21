@@ -1,0 +1,7152 @@
+{
+ "subject": {
+  "short": "library",
+  "title": "plugin & m4l library",
+  "subtitle": "searchable inventory",
+  "blurb": "Everything Ableton can load on this machine \u2014 every plugin and every Max for Live device, with a link out to the product page and the manual wherever one exists. Read straight out of Live\u2019s own plugin database and browser index, so it is what Live actually sees, not what I remember installing.",
+  "noun": "entry",
+  "noun_plural": "entries",
+  "page_dir": "."
+ },
+ "generated": "2026-08-21",
+ "in_all": false,
+ "items": [
+  {
+   "num": "001",
+   "slug": "m-cascade",
+   "name": "Cascade",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "002",
+   "slug": "m-disintegration",
+   "name": "Disintegration",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "003",
+   "slug": "m-false-memory",
+   "name": "False Memory",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "004",
+   "slug": "m-magnabelt",
+   "name": "Magnabelt",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "005",
+   "slug": "m-manual-tape",
+   "name": "Manual Tape",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "006",
+   "slug": "m-microcosmos",
+   "name": "Microcosmos",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "007",
+   "slug": "m-ondes-martenot",
+   "name": "Ondes Martenot",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "008",
+   "slug": "m-oram",
+   "name": "ORAM",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "009",
+   "slug": "m-preset-scroll",
+   "name": "Preset Scroll",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "010",
+   "slug": "m-pulsograph",
+   "name": "Pulsograph",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "011",
+   "slug": "m-scene-placer",
+   "name": "Scene Placer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "012",
+   "slug": "m-splice-1",
+   "name": "Splice (Tape Collage)",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "013",
+   "slug": "m-stripsilence",
+   "name": "Strip Silence",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "014",
+   "slug": "m-sw-radio",
+   "name": "SW Radio",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "015",
+   "slug": "m-tape-error",
+   "name": "Tape Error",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "016",
+   "slug": "m-the1958machine",
+   "name": "The 1958 Machine",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "017",
+   "slug": "m-yt-sampler",
+   "name": "YT Sampler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "018",
+   "slug": "m-pack-building-max-devices-1",
+   "name": "1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "019",
+   "slug": "m-pack-building-max-devices-1-another-input",
+   "name": "1 Another input",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "020",
+   "slug": "m-pack-building-max-devices-1-audio-signals",
+   "name": "1 Audio signals",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "021",
+   "slug": "m-pack-building-max-devices-1-listening-to-live",
+   "name": "1 Listening to Live",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "022",
+   "slug": "m-pack-building-max-devices-1-notes-to-audio",
+   "name": "1 Notes to audio",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "023",
+   "slug": "m-pack-building-max-devices-1-splitting-notes",
+   "name": "1 Splitting notes",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "024",
+   "slug": "m-pack-building-max-devices-2",
+   "name": "2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "025",
+   "slug": "m-pack-building-max-devices-2-mono-fm",
+   "name": "2 Mono FM",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "026",
+   "slug": "m-pack-building-max-devices-2-random-launching",
+   "name": "2 Random launching",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "027",
+   "slug": "m-pack-building-max-devices-2-selecting-parameter",
+   "name": "2 Selecting Parameter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "028",
+   "slug": "m-pack-building-max-devices-2-signal-generation",
+   "name": "2 Signal generation",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "029",
+   "slug": "m-pack-building-max-devices-2-ui-and-values",
+   "name": "2 UI and Values",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "030",
+   "slug": "p-2rule-2rulesynthv-3-1",
+   "name": "2RuleSynthV-3-1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "031",
+   "slug": "m-pack-building-max-devices-3",
+   "name": "3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "032",
+   "slug": "m-pack-building-max-devices-3-event-flow",
+   "name": "3 Event flow",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "033",
+   "slug": "m-pack-building-max-devices-3-polyphony",
+   "name": "3 Polyphony",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "034",
+   "slug": "m-pack-building-max-devices-3-remote-control",
+   "name": "3 Remote Control",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "035",
+   "slug": "m-pack-building-max-devices-3-showing-clip-names",
+   "name": "3 Showing clip names",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "036",
+   "slug": "m-pack-building-max-devices-3-writing-to-a-buffer",
+   "name": "3 Writing to a buffer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "037",
+   "slug": "m-pack-building-max-devices-4",
+   "name": "4",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "038",
+   "slug": "m-pack-building-max-devices-4-adding-randomness",
+   "name": "4 Adding randomness",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "039",
+   "slug": "m-pack-building-max-devices-4-copy-from-macro-knob",
+   "name": "4 Copy from Macro Knob",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "040",
+   "slug": "m-pack-building-max-devices-4-encapsulation",
+   "name": "4 Encapsulation",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "041",
+   "slug": "m-pack-building-max-devices-4-launching-earlier",
+   "name": "4 Launching earlier",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "042",
+   "slug": "m-pack-building-max-devices-4-polyphony-pt2",
+   "name": "4 Polyphony pt2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "043",
+   "slug": "m-pack-lost-and-found-4xfade",
+   "name": "4Xfade",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "044",
+   "slug": "m-pack-building-max-devices-5",
+   "name": "5",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "045",
+   "slug": "m-pack-building-max-devices-5-adding-feedback",
+   "name": "5 Adding feedback",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "046",
+   "slug": "m-pack-building-max-devices-5-adding-progress",
+   "name": "5 Adding progress",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "047",
+   "slug": "m-pack-building-max-devices-5-bonus-push",
+   "name": "5 Bonus - Push",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "048",
+   "slug": "m-pack-building-max-devices-5-next",
+   "name": "5 Next",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "049",
+   "slug": "m-pack-building-max-devices-5-polishing",
+   "name": "5 Polishing",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "050",
+   "slug": "m-pack-building-max-devices-6-adding-pitch",
+   "name": "6 Adding pitch",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "051",
+   "slug": "m-pack-building-max-devices-6-bonus-doubling",
+   "name": "6 Bonus - Doubling",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "052",
+   "slug": "m-pack-building-max-devices-6-pitch-lfo",
+   "name": "6 Pitch LFO",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "053",
+   "slug": "m-pack-building-max-devices-6-stay-in-blocks",
+   "name": "6 Stay in blocks",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "054",
+   "slug": "m-pack-building-max-devices-7-cleaning-up",
+   "name": "7 Cleaning up",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "055",
+   "slug": "m-pack-building-max-devices-7-going-stereo",
+   "name": "7 Going Stereo",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "056",
+   "slug": "m-pack-building-max-devices-7-spread",
+   "name": "7 Spread",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "057",
+   "slug": "m-pack-building-max-devices-8-bonus-ui",
+   "name": "8 Bonus - UI",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "058",
+   "slug": "m-pack-building-max-devices-8-multichannel",
+   "name": "8 Multichannel",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "059",
+   "slug": "m-user-ableton-youtube-player-v1-abletondrummer",
+   "name": "Ableton Youtube Player V1 AbletonDrummer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "060",
+   "slug": "p-native-instruments-absynth-6",
+   "name": "Absynth 6",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "061",
+   "slug": "p-native-instruments-absynth-6-fx",
+   "name": "Absynth 6 FX",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "062",
+   "slug": "p-arturia-acid-v",
+   "name": "Acid V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "063",
+   "slug": "m-pack-building-max-devices-after-effects-export",
+   "name": "After Effects Export",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "064",
+   "slug": "p-air-music-technology-air-multiband-filterbank",
+   "name": "AIR Multiband Filterbank",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "065",
+   "slug": "p-air-music-technology-air-tape-double-track",
+   "name": "AIR Tape Double Track",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "066",
+   "slug": "p-sound-particles-airmusic",
+   "name": "AirMusic",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "067",
+   "slug": "p-airwindows-airwindows-consolidated",
+   "name": "Airwindows Consolidated",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "068",
+   "slug": "m-builtin-align-delay",
+   "name": "Align Delay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "069",
+   "slug": "p-ik-multimedia-amplitube-5",
+   "name": "AmpliTube 5",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "070",
+   "slug": "p-arturia-analog-lab-v",
+   "name": "Analog Lab V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "071",
+   "slug": "p-phase-fiasco-annulus",
+   "name": "Annulus",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "072",
+   "slug": "m-pack-building-max-devices-antialiased",
+   "name": "Antialiased",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "073",
+   "slug": "m-pack-building-max-devices-api-browser",
+   "name": "API Browser",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "074",
+   "slug": "p-ik-multimedia-arc-3",
+   "name": "ARC 3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "075",
+   "slug": "m-pack-connection-kit-arduino",
+   "name": "Arduino",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "076",
+   "slug": "m-pack-max-for-live-essentials-arp",
+   "name": "Arp",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "077",
+   "slug": "p-arturia-arp-2600-v3",
+   "name": "ARP 2600 V3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "078",
+   "slug": "m-pack-building-max-devices-arpeggiator",
+   "name": "Arpeggiator",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "079",
+   "slug": "m-pack-building-max-devices-arrangement-clips",
+   "name": "Arrangement Clips",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "080",
+   "slug": "m-pack-performance-pack-by-iftah-arrangement-looper",
+   "name": "Arrangement Looper",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "081",
+   "slug": "p-every-something-artikulation",
+   "name": "artikulation",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "082",
+   "slug": "p-arturia-augmented-brass",
+   "name": "Augmented BRASS",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "083",
+   "slug": "p-arturia-augmented-grand-piano",
+   "name": "Augmented GRAND PIANO",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "084",
+   "slug": "p-arturia-augmented-mallets",
+   "name": "Augmented MALLETS",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "085",
+   "slug": "p-arturia-augmented-persia",
+   "name": "Augmented PERSIA",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "086",
+   "slug": "p-arturia-augmented-strings",
+   "name": "Augmented STRINGS",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "087",
+   "slug": "p-arturia-augmented-voices",
+   "name": "Augmented VOICES",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "088",
+   "slug": "p-arturia-augmented-woodwinds",
+   "name": "Augmented WOODWINDS",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "089",
+   "slug": "p-arturia-augmented-yangtze",
+   "name": "Augmented YANGTZE",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "090",
+   "slug": "m-user-automate-rack-macro-variations-v1-abletondrummer",
+   "name": "Automate Rack Macro Variations V1 AbletonDrummer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "091",
+   "slug": "p-arturia-b-3-v2",
+   "name": "B-3 V2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "092",
+   "slug": "m-user-backspin-v1-0-1",
+   "name": "Backspin v1.0.1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "093",
+   "slug": "m-user-backspin-v1-0-2",
+   "name": "Backspin v1.0.2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "094",
+   "slug": "m-pack-building-max-devices-basic-saw",
+   "name": "Basic Saw",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "095",
+   "slug": "m-pack-creative-extensions-bass",
+   "name": "Bass",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "096",
+   "slug": "p-native-instruments-battery-4",
+   "name": "Battery 4",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "097",
+   "slug": "p-unfiltered-audio-battlefx",
+   "name": "BattleFX",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "098",
+   "slug": "p-spitfire-audio-bbc-symphony-orchestra",
+   "name": "BBC Symphony Orchestra",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "099",
+   "slug": "p-lunacy-audio-beam-filter",
+   "name": "BEAM Filter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "100",
+   "slug": "p-lunacy-audio-beam-haze",
+   "name": "BEAM Haze",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "101",
+   "slug": "m-user-beast-repeat",
+   "name": "BEAST Repeat",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "102",
+   "slug": "p-baby-audio-beat-slammer",
+   "name": "Beat Slammer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "103",
+   "slug": "m-pack-building-max-devices-bell-tower",
+   "name": "Bell Tower",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "104",
+   "slug": "p-native-instruments-bite",
+   "name": "Bite",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "105",
+   "slug": "p-excite-audio-bloom-mura-masa",
+   "name": "Bloom Mura Masa",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "106",
+   "slug": "m-user-boss-dd-3-digital-delay",
+   "name": "Boss DD-3 Digital Delay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "107",
+   "slug": "m-user-boss-ds-1-distortion-v1-1",
+   "name": "Boss DS-1 Distortion v1.1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "108",
+   "slug": "m-user-boss-ge-7-equalizer",
+   "name": "Boss GE-7 Equalizer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "109",
+   "slug": "m-user-boss-ns-2-noise-suppressor",
+   "name": "Boss NS-2 Noise Suppressor",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "110",
+   "slug": "m-user-boss-tr-2-tremolo",
+   "name": "Boss TR-2 Tremolo",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "111",
+   "slug": "m-pack-inspired-by-nature-by-dillon-bastan-bouncy-notes",
+   "name": "Bouncy Notes",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "112",
+   "slug": "p-karanyi-sounds-breeze-black-edition",
+   "name": "Breeze Black Edition",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "113",
+   "slug": "p-arturia-buchla-easel-v",
+   "name": "Buchla Easel V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "114",
+   "slug": "p-full-bucket-music-bucket-one",
+   "name": "Bucket ONE",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "115",
+   "slug": "m-pack-max-for-live-essentials-buffer-shuffler-2-0",
+   "name": "Buffer Shuffler 2.0",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "116",
+   "slug": "p-arturia-bus-exciter-104",
+   "name": "Bus EXCITER-104",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "117",
+   "slug": "p-arturia-bus-force",
+   "name": "Bus FORCE",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "118",
+   "slug": "p-arturia-bus-peak",
+   "name": "Bus PEAK",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "119",
+   "slug": "p-arturia-bus-transient",
+   "name": "Bus TRANSIENT",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "120",
+   "slug": "m-user-bve-glitchlooper",
+   "name": "bve.glitchlooper",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "121",
+   "slug": "m-pack-connection-kit-camera",
+   "name": "Camera",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "122",
+   "slug": "p-mixed-in-key-llc-captain-beat",
+   "name": "Captain Beat",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "123",
+   "slug": "p-mixed-in-key-captain-beat-epic",
+   "name": "Captain Beat Epic",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "124",
+   "slug": "p-mixed-in-key-llc-captain-chords",
+   "name": "Captain Chords",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "125",
+   "slug": "p-mixed-in-key-captain-chords-epic",
+   "name": "Captain Chords Epic",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "126",
+   "slug": "p-mixed-in-key-llc-captain-deep",
+   "name": "Captain Deep",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "127",
+   "slug": "p-mixed-in-key-captain-deep-epic",
+   "name": "Captain Deep Epic",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "128",
+   "slug": "p-mixed-in-key-llc-captain-melody",
+   "name": "Captain Melody",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "129",
+   "slug": "p-mixed-in-key-captain-melody-epic",
+   "name": "Captain Melody Epic",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "130",
+   "slug": "p-mixed-in-key-llc-captain-play",
+   "name": "Captain Play",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "131",
+   "slug": "p-mixed-in-key-captain-play-epic",
+   "name": "Captain Play Epic",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "132",
+   "slug": "p-aberrant-dsp-cataclysm",
+   "name": "Cataclysm",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "133",
+   "slug": "m-user-cb-rainer-1-6",
+   "name": "cb_rainer 1.6",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "134",
+   "slug": "m-pack-building-max-devices-channel-eq",
+   "name": "Channel EQ",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "135",
+   "slug": "p-ternar-music-technology-channelstrip",
+   "name": "ChannelStrip",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "136",
+   "slug": "m-user-channelstrip",
+   "name": "ChannelStrip",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "137",
+   "slug": "m-user-channelstrip-1",
+   "name": "ChannelStrip-1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "138",
+   "slug": "p-analogobsession-chopa",
+   "name": "Chopa",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "139",
+   "slug": "m-user-chorb",
+   "name": "Chorb",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "140",
+   "slug": "m-user-chord-generator",
+   "name": "Chord Generator",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "141",
+   "slug": "m-pack-building-max-devices-chorus",
+   "name": "Chorus",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "142",
+   "slug": "p-arturia-chorus-dimension-d",
+   "name": "Chorus DIMENSION-D",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "143",
+   "slug": "p-arturia-chorus-jun-6",
+   "name": "Chorus JUN-6",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "144",
+   "slug": "p-ik-multimedia-classiclimiter",
+   "name": "ClassicLimiter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "145",
+   "slug": "p-arturia-clavinet-v",
+   "name": "Clavinet V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "146",
+   "slug": "p-arturia-cmi-v",
+   "name": "CMI V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "147",
+   "slug": "p-lese-codec",
+   "name": "Codec",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "148",
+   "slug": "m-pack-stray-cats-collection-by-max-for-cats-color",
+   "name": "Color",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "149",
+   "slug": "m-pack-creative-extensions-color-limiter",
+   "name": "Color Limiter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "150",
+   "slug": "m-user-colour",
+   "name": "Colour",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "151",
+   "slug": "p-baby-audio-comeback-kid",
+   "name": "Comeback Kid",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "152",
+   "slug": "p-arturia-comp-diode-609",
+   "name": "Comp DIODE-609",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "153",
+   "slug": "p-arturia-comp-fet-76",
+   "name": "Comp FET-76",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "154",
+   "slug": "p-arturia-comp-tube-sta",
+   "name": "Comp TUBE-STA",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "155",
+   "slug": "p-arturia-comp-vca-65",
+   "name": "Comp VCA-65",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "156",
+   "slug": "m-pack-stray-cats-collection-by-max-for-cats-conchord",
+   "name": "ConChord",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "157",
+   "slug": "m-user-contemporary-texture",
+   "name": "Contemporary texture",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "158",
+   "slug": "m-pack-convolution-reverb-convolution-reverb",
+   "name": "Convolution Reverb",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "159",
+   "slug": "m-pack-convolution-reverb-convolution-reverb-pro",
+   "name": "Convolution Reverb Pro",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "160",
+   "slug": "m-user-copy-machine",
+   "name": "Copy Machine",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "161",
+   "slug": "m-user-coral",
+   "name": "Coral",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "162",
+   "slug": "p-arturia-cp-70-v",
+   "name": "CP-70 V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "163",
+   "slug": "m-user-crap-cassette-v1-0",
+   "name": "Crap Cassette v1.0",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "164",
+   "slug": "p-arturia-cs-80-v4",
+   "name": "CS-80 V4",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "165",
+   "slug": "p-waves-curves-resolve",
+   "name": "Curves Resolve",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "166",
+   "slug": "p-waves-curves-resolve-live",
+   "name": "Curves Resolve Live",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "167",
+   "slug": "m-pack-upright-piano-by-spitfire-audio-custom-note-off",
+   "name": "Custom Note Off",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "168",
+   "slug": "m-pack-cv-tools-cv-clock-in",
+   "name": "CV Clock In",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "169",
+   "slug": "m-pack-cv-tools-cv-clock-out",
+   "name": "CV Clock Out",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "170",
+   "slug": "m-pack-cv-tools-cv-envelope-follower",
+   "name": "CV Envelope Follower",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "171",
+   "slug": "m-pack-cv-tools-cv-in",
+   "name": "CV In",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "172",
+   "slug": "m-pack-cv-tools-cv-instrument",
+   "name": "CV Instrument",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "173",
+   "slug": "m-pack-cv-tools-cv-lfo",
+   "name": "CV LFO",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "174",
+   "slug": "m-pack-cv-tools-cv-shaper",
+   "name": "CV Shaper",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "175",
+   "slug": "m-pack-cv-tools-cv-triggers",
+   "name": "CV Triggers",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "176",
+   "slug": "m-pack-cv-tools-cv-utility",
+   "name": "CV Utility",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "177",
+   "slug": "m-user-cycle-variations-up-down-v1-abletondrummer",
+   "name": "Cycle Variations Up + Down V1 AbletonDrummer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "178",
+   "slug": "p-cymatics-cymatics-deja-vu",
+   "name": "Cymatics Deja Vu",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "179",
+   "slug": "p-cymatics-cymatics-memory",
+   "name": "Cymatics Memory",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "180",
+   "slug": "p-cymatics-cymatics-origin",
+   "name": "Cymatics Origin",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "181",
+   "slug": "p-arturia-cz-v",
+   "name": "CZ V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "182",
+   "slug": "p-klanghelm-dc1a3",
+   "name": "DC1A3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "183",
+   "slug": "p-justin-sheriff-de-space",
+   "name": "De-Space",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "184",
+   "slug": "p-decidedly-decentsampler",
+   "name": "DecentSampler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "185",
+   "slug": "p-klevgrand-degrader",
+   "name": "Degrader",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "186",
+   "slug": "m-pack-building-max-devices-delay",
+   "name": "Delay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "187",
+   "slug": "p-arturia-delay-brigade",
+   "name": "Delay BRIGADE",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "188",
+   "slug": "p-arturia-delay-eternity",
+   "name": "Delay ETERNITY",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "189",
+   "slug": "p-arturia-delay-tape-201",
+   "name": "Delay TAPE-201",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "190",
+   "slug": "m-pack-max-for-live-essentials-device-randomizer",
+   "name": "Device Randomizer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "191",
+   "slug": "p-soundtoys-devil-loc",
+   "name": "Devil-Loc",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "192",
+   "slug": "p-native-instruments-dirt",
+   "name": "Dirt",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "193",
+   "slug": "p-arturia-dist-coldfire",
+   "name": "Dist COLDFIRE",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "194",
+   "slug": "p-arturia-dist-opamp-21",
+   "name": "Dist OPAMP-21",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "195",
+   "slug": "p-arturia-dist-tube-culture",
+   "name": "Dist TUBE-CULTURE",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "196",
+   "slug": "m-pack-probability-pack-by-sonic-faction-dr-chaos",
+   "name": "Dr Chaos",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "197",
+   "slug": "m-user-dr01d",
+   "name": "DR01D",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "198",
+   "slug": "p-analogobsession-drgate",
+   "name": "DrGate",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "199",
+   "slug": "p-puremagnetik-driftmaker",
+   "name": "Driftmaker",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "200",
+   "slug": "m-user-drox-ii-free",
+   "name": "Drox II Free",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "201",
+   "slug": "m-user-drox-ii-pro",
+   "name": "Drox II Pro",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "202",
+   "slug": "m-user-drumbrain",
+   "name": "DrumBrain",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "203",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-clap",
+   "name": "DrumSynth Clap",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "204",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-clave",
+   "name": "DrumSynth Clave",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "205",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-cymbal",
+   "name": "DrumSynth Cymbal",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "206",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-fm2",
+   "name": "DrumSynth FM2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "207",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-fmperc",
+   "name": "DrumSynth FMPerc",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "208",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-glass",
+   "name": "DrumSynth Glass",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "209",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-hh",
+   "name": "DrumSynth HH",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "210",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-kick",
+   "name": "DrumSynth Kick",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "211",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-kplus",
+   "name": "DrumSynth Kplus",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "212",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-shaker",
+   "name": "DrumSynth Shaker",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "213",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-snare",
+   "name": "DrumSynth Snare",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "214",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-snare2",
+   "name": "DrumSynth Snare2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "215",
+   "slug": "m-pack-max-for-live-essentials-drumsynth-tom",
+   "name": "DrumSynth Tom",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "216",
+   "slug": "m-builtin-ds-clang",
+   "name": "DS Clang",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "217",
+   "slug": "m-builtin-ds-clap",
+   "name": "DS Clap",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "218",
+   "slug": "m-builtin-ds-cymbal",
+   "name": "DS Cymbal",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "219",
+   "slug": "m-builtin-ds-fm",
+   "name": "DS FM",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "220",
+   "slug": "m-builtin-ds-hh",
+   "name": "DS HH",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "221",
+   "slug": "m-builtin-ds-kick",
+   "name": "DS Kick",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "222",
+   "slug": "m-builtin-ds-sampler",
+   "name": "DS Sampler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "223",
+   "slug": "m-builtin-ds-snare",
+   "name": "DS Snare",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "224",
+   "slug": "m-builtin-ds-tom",
+   "name": "DS Tom",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "225",
+   "slug": "p-soundmorph-dust",
+   "name": "Dust",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "226",
+   "slug": "p-soundmorph-dust-fx",
+   "name": "Dust (fx)",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "227",
+   "slug": "p-arturia-dx7-v",
+   "name": "DX7 V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "228",
+   "slug": "p-soundtoys-echoboy-jr",
+   "name": "EchoBoy Jr",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "229",
+   "slug": "p-arturia-efx-ambient",
+   "name": "Efx AMBIENT",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "230",
+   "slug": "p-arturia-efx-fragments",
+   "name": "Efx FRAGMENTS",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "231",
+   "slug": "p-arturia-efx-motions",
+   "name": "Efx MOTIONS",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "232",
+   "slug": "p-arturia-efx-refract",
+   "name": "Efx REFRACT",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "233",
+   "slug": "p-soundghost-ekko-demo",
+   "name": "Ekko Demo",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "234",
+   "slug": "m-pack-inspired-by-nature-by-dillon-bastan-emit",
+   "name": "Emit",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "235",
+   "slug": "p-arturia-emulator-ii-v",
+   "name": "Emulator II V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "236",
+   "slug": "m-pack-max-for-live-essentials-envelope",
+   "name": "Envelope",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "237",
+   "slug": "m-builtin-envelope-follower",
+   "name": "Envelope Follower",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "238",
+   "slug": "m-pack-max-for-live-essentials-envelope-follower",
+   "name": "Envelope Follower",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "239",
+   "slug": "m-builtin-envelope-midi",
+   "name": "Envelope MIDI",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "240",
+   "slug": "p-arturia-eq-sitral-295",
+   "name": "EQ SITRAL-295",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "241",
+   "slug": "p-ik-multimedia-eq432",
+   "name": "EQ432",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "242",
+   "slug": "m-builtin-euclidean",
+   "name": "Euclidean",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "243",
+   "slug": "m-user-excite",
+   "name": "Excite",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "244",
+   "slug": "p-puremagnetik-expanse",
+   "name": "Expanse",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "245",
+   "slug": "m-builtin-expression-control",
+   "name": "Expression Control",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "246",
+   "slug": "m-pack-max-for-live-essentials-expression-control",
+   "name": "Expression Control",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "247",
+   "slug": "m-builtin-expression-control-legacy",
+   "name": "Expression Control Legacy",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "248",
+   "slug": "m-pack-expressive-chords-expressive-chords",
+   "name": "Expressive Chords",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "249",
+   "slug": "m-user-expressive-chords-1-1",
+   "name": "Expressive Chords 1.1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "250",
+   "slug": "p-ik-multimedia-fame",
+   "name": "Fame",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "251",
+   "slug": "p-arturia-farfisa-v",
+   "name": "Farfisa V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "252",
+   "slug": "p-ik-multimedia-farmstoneroom",
+   "name": "FarmStoneRoom",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "253",
+   "slug": "m-pack-building-max-devices-filler",
+   "name": "Filler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "254",
+   "slug": "m-user-filter",
+   "name": "Filter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "255",
+   "slug": "m-user-filter-glass",
+   "name": "Filter Glass",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "256",
+   "slug": "p-arturia-filter-m12",
+   "name": "Filter M12",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "257",
+   "slug": "p-arturia-filter-mini",
+   "name": "Filter MINI",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "258",
+   "slug": "p-arturia-filter-ms-20",
+   "name": "Filter MS-20",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "259",
+   "slug": "p-arturia-filter-sem",
+   "name": "Filter SEM",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "260",
+   "slug": "p-audiomodern-filterstep",
+   "name": "Filterstep",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "261",
+   "slug": "p-ujam-fin-retro",
+   "name": "FIN-RETRO",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "262",
+   "slug": "p-fkfx-audio-fkfx-nanomix",
+   "name": "FKFX Nanomix",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "263",
+   "slug": "m-pack-building-max-devices-flanger",
+   "name": "Flanger",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "264",
+   "slug": "p-arturia-flanger-bl-20",
+   "name": "Flanger BL-20",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "265",
+   "slug": "p-ternar-music-technology-flechtwerk",
+   "name": "Flechtwerk",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "266",
+   "slug": "m-user-flow-demo",
+   "name": "Flow Demo",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "267",
+   "slug": "p-msxii-sound-design-fly-tape-ii",
+   "name": "Fly Tape II",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "268",
+   "slug": "p-audiothing-fog-convolver-2",
+   "name": "Fog Convolver 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "269",
+   "slug": "p-native-instruments-freak",
+   "name": "Freak",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "270",
+   "slug": "m-user-friend",
+   "name": "Friend",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "271",
+   "slug": "m-pack-building-max-devices-game-of-live",
+   "name": "Game of Live",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "272",
+   "slug": "m-pack-creative-extensions-gated-delay",
+   "name": "Gated Delay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "273",
+   "slug": "p-audiomodern-gatelab",
+   "name": "Gatelab",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "274",
+   "slug": "m-user-geiger-lfo",
+   "name": "Geiger LFO",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "275",
+   "slug": "p-overloud-gem-echoson",
+   "name": "Gem ECHOSON",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "276",
+   "slug": "m-user-glitch-loop",
+   "name": "GLITCH LOOP",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "277",
+   "slug": "m-user-glitchera",
+   "name": "Glitchera",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "278",
+   "slug": "p-every-something-glosso",
+   "name": "glosso",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "279",
+   "slug": "m-pack-building-max-devices-grain-cloud-simpler",
+   "name": "Grain Cloud Simpler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "280",
+   "slug": "p-full-bucket-music-grain-strain",
+   "name": "Grain Strain",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "281",
+   "slug": "m-user-grainfreeze",
+   "name": "GrainFreeze",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "282",
+   "slug": "m-pack-m4l-granulator-ii-granulator-ii",
+   "name": "Granulator II",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "283",
+   "slug": "m-pack-granulator-iii-granulator-iii",
+   "name": "Granulator III",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "284",
+   "slug": "m-pack-m4l-granulator-ii-granulatorfollow-ii",
+   "name": "GranulatorFollow II",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "285",
+   "slug": "m-pack-m4l-granulator-ii-granulatorinput-ii",
+   "name": "GranulatorInput II",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "286",
+   "slug": "m-pack-string-quartet-by-spitfire-audio-group-start",
+   "name": "Group Start",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "287",
+   "slug": "p-native-instruments-guitar-rig-7",
+   "name": "Guitar Rig 7",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "288",
+   "slug": "p-superlunar-gx-8600",
+   "name": "GX-8600",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "289",
+   "slug": "m-user-harmoadaptfilter-j74",
+   "name": "HarmoAdaptFilter J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "290",
+   "slug": "m-user-harmochord-j74",
+   "name": "HarmoChord J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "291",
+   "slug": "m-user-harmochordbass-j74",
+   "name": "HarmoChordBass J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "292",
+   "slug": "m-user-harmochordfilter-j74",
+   "name": "HarmoChordFilter J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "293",
+   "slug": "m-user-harmochordfilterapi-j74",
+   "name": "HarmoChordFilterAPI J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "294",
+   "slug": "m-user-harmochordnotesout-j74",
+   "name": "HarmoChordNotesOut J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "295",
+   "slug": "m-user-harmochordrecv-j74",
+   "name": "HarmoChordRecv J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "296",
+   "slug": "m-user-harmochordsend-j74",
+   "name": "HarmoChordSend J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "297",
+   "slug": "m-user-harmodisplay-j74",
+   "name": "HarmoDisplay J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "298",
+   "slug": "m-user-harmodisplayguitar-j74",
+   "name": "HarmoDisplayGuitar J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "299",
+   "slug": "m-user-harmoguessscale-j74",
+   "name": "HarmoGuessScale J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "300",
+   "slug": "m-pack-drone-lab-harmonic-drone-generator",
+   "name": "Harmonic Drone Generator",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "301",
+   "slug": "m-user-harmopadfilter-j74",
+   "name": "HarmoPadFilter J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "302",
+   "slug": "m-user-harmoscale-j74",
+   "name": "HarmoScale J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "303",
+   "slug": "m-user-harmoscale2chords-j74",
+   "name": "HarmoScale2Chords J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "304",
+   "slug": "m-user-harmoscalefilter-j74",
+   "name": "HarmoScaleFilter J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "305",
+   "slug": "m-user-harmoscalefilterapi-j74",
+   "name": "HarmoScaleFilterAPI J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "306",
+   "slug": "m-user-harmoscalerecv-j74",
+   "name": "HarmoScaleRecv J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "307",
+   "slug": "m-user-harmoscalesend-j74",
+   "name": "HarmoScaleSend J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "308",
+   "slug": "m-user-harmotonicfilter-j74",
+   "name": "HarmoTonicFilter J74",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "309",
+   "slug": "m-user-hocket-2",
+   "name": "Hocket 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "310",
+   "slug": "m-user-html-instruments",
+   "name": "html instruments",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "311",
+   "slug": "m-pack-building-max-devices-human-lfo",
+   "name": "Human LFO",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "312",
+   "slug": "m-pack-building-max-devices-humanizer",
+   "name": "Humanizer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "313",
+   "slug": "p-glitchmachines-hysteresis",
+   "name": "Hysteresis",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "314",
+   "slug": "p-waves-idx-intelligent-dynamics",
+   "name": "IDX Intelligent Dynamics",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "315",
+   "slug": "p-waves-idx-live-intelligent-dynamics",
+   "name": "IDX LIVE Intelligent Dynamics",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "316",
+   "slug": "m-user-image2wavetable",
+   "name": "Image2Wavetable",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "317",
+   "slug": "m-user-image2wavetable-1",
+   "name": "Image2Wavetable-1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "318",
+   "slug": "m-user-inflation",
+   "name": "Inflation",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "319",
+   "slug": "m-user-inflation-os",
+   "name": "Inflation(OS)",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "320",
+   "slug": "p-izotope-insight-2",
+   "name": "Insight 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "321",
+   "slug": "m-pack-max-for-live-essentials-instant-haus",
+   "name": "Instant Haus",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "322",
+   "slug": "m-pack-building-max-devices-introduction",
+   "name": "Introduction",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "323",
+   "slug": "m-pack-convolution-reverb-ir-measurement-device",
+   "name": "IR Measurement Device",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "324",
+   "slug": "m-user-irrational-delay",
+   "name": "Irrational Delay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "325",
+   "slug": "m-user-j11-tone-resonator-v1",
+   "name": "j11-tone-Resonator v1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "326",
+   "slug": "m-user-j90-1-5",
+   "name": "j90 1.5",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "327",
+   "slug": "m-user-j90-1-7",
+   "name": "j90 1.7",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "328",
+   "slug": "m-user-jbbl-v3-3",
+   "name": "jBBL v3.3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "329",
+   "slug": "m-user-jbi-phase-v2-7",
+   "name": "jBi-Phase v2.7",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "330",
+   "slug": "m-user-jchorus-6-v1-3",
+   "name": "jChorus-6 v1.3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "331",
+   "slug": "m-user-jchorus-6-v1-4",
+   "name": "jChorus-6 v1.4",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "332",
+   "slug": "p-ik-multimedia-jcvocalstrip",
+   "name": "JCVocalStrip",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "333",
+   "slug": "m-user-jdisperser3-v1-1",
+   "name": "jDisperser3 v1.1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "334",
+   "slug": "m-user-jg-multibanddelay",
+   "name": "JG.MultibandDelay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "335",
+   "slug": "m-user-jg-spectraldelay",
+   "name": "JG.SpectralDelay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "336",
+   "slug": "m-user-jknob-v1-6",
+   "name": "jKnob v1.6",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "337",
+   "slug": "m-user-jl3v3ll3r-v1-4",
+   "name": "jL3v3ll3r v1.4",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "338",
+   "slug": "m-user-jleslie-v2-8",
+   "name": "jLeslie v2.8",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "339",
+   "slug": "m-user-jmackie-feedback-v4-0",
+   "name": "jMackie-Feedback v4.0",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "340",
+   "slug": "m-user-jodyssey-v5-2",
+   "name": "jOdyssey v5.2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "341",
+   "slug": "m-user-jodyssey-v6-0",
+   "name": "jOdyssey v6.0",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "342",
+   "slug": "m-user-jpalme-v1-2",
+   "name": "jPalme v1.2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "343",
+   "slug": "m-user-jpalme3-v1-2",
+   "name": "jPalme3 v1.2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "344",
+   "slug": "m-user-jpro-v1-2",
+   "name": "jPro v1.2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "345",
+   "slug": "m-user-jrat-v2-0",
+   "name": "jRat v2.0",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "346",
+   "slug": "m-user-jrat-v3-1",
+   "name": "jRat v3.1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "347",
+   "slug": "m-pack-connection-kit-json-video",
+   "name": "JSON Video",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "348",
+   "slug": "m-pack-connection-kit-json-weather",
+   "name": "JSON Weather",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "349",
+   "slug": "m-user-jspring-tank-v1-3",
+   "name": "jSpring-Tank v1.3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "350",
+   "slug": "m-user-jtap-3-1",
+   "name": "jTap 3.1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "351",
+   "slug": "p-arturia-jun-6-v",
+   "name": "Jun-6 V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "352",
+   "slug": "p-fors-junior-lite",
+   "name": "Junior-Lite",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "353",
+   "slug": "p-arturia-jup-8-v4",
+   "name": "Jup-8 V4",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "354",
+   "slug": "p-arturia-jup-8000-v",
+   "name": "Jup-8000 V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "355",
+   "slug": "m-user-key-detector",
+   "name": "Key-Detector",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "356",
+   "slug": "m-user-kglitch",
+   "name": "KGlitch",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "357",
+   "slug": "p-puremagnetik-klamur",
+   "name": "Klamur",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "358",
+   "slug": "p-native-instruments-kontakt",
+   "name": "Kontakt",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "359",
+   "slug": "p-native-instruments-kontakt-7",
+   "name": "Kontakt 7",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "360",
+   "slug": "p-native-instruments-kontakt-8",
+   "name": "Kontakt 8",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "361",
+   "slug": "p-arturia-korg-ms-20-v",
+   "name": "KORG MS-20 V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "362",
+   "slug": "m-user-l-obliquestrategies-v1-2",
+   "name": "L.ObliqueStrategies.v1.2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "363",
+   "slug": "p-spitfire-audio-labs",
+   "name": "LABS",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "364",
+   "slug": "m-user-labyrinth-seq-1-0-0",
+   "name": "Labyrinth Seq 1.0.0",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "365",
+   "slug": "p-landr-landr-fx-bass",
+   "name": "LANDR FX Bass",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "366",
+   "slug": "p-landr-landr-fx-beats",
+   "name": "LANDR FX Beats",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "367",
+   "slug": "p-landr-landr-fx-electric",
+   "name": "LANDR FX Electric",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "368",
+   "slug": "p-landr-landr-fx-voice",
+   "name": "LANDR FX Voice",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "369",
+   "slug": "m-pack-building-max-devices-launcher",
+   "name": "Launcher",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "370",
+   "slug": "m-user-learn-chords",
+   "name": "Learn Chords",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "371",
+   "slug": "m-user-learn-scales",
+   "name": "Learn Scales",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "372",
+   "slug": "m-pack-connection-kit-lego-mindstorms-ev3",
+   "name": "LEGO MINDSTORMS EV3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "373",
+   "slug": "p-xynth-audio-lephonk",
+   "name": "LePhonk",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "374",
+   "slug": "m-builtin-lfo",
+   "name": "LFO",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "375",
+   "slug": "m-pack-max-for-live-essentials-lfo",
+   "name": "LFO",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "376",
+   "slug": "m-pack-max-for-live-essentials-lfo-midi",
+   "name": "LFO MIDI",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "377",
+   "slug": "m-user-lfo-random",
+   "name": "LFO Random",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "378",
+   "slug": "m-user-lfo-random-1",
+   "name": "LFO Random-1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "379",
+   "slug": "m-pack-building-max-devices-limiter",
+   "name": "Limiter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "380",
+   "slug": "p-soundtoys-little-microshift",
+   "name": "Little MicroShift",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "381",
+   "slug": "p-soundtoys-little-plate",
+   "name": "Little Plate",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "382",
+   "slug": "p-soundtoys-little-primaltap",
+   "name": "Little PrimalTap",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "383",
+   "slug": "p-soundtoys-little-radiator",
+   "name": "Little Radiator",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "384",
+   "slug": "m-pack-connection-kit-littlebits",
+   "name": "littleBits",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "385",
+   "slug": "m-user-lode",
+   "name": "Lode",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "386",
+   "slug": "p-aberrant-dsp-lofi-oddity",
+   "name": "Lofi Oddity",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "387",
+   "slug": "p-jmgsound-lofinity",
+   "name": "Lofinity",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "388",
+   "slug": "m-user-lood",
+   "name": "Lood",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "389",
+   "slug": "m-pack-building-max-devices-looper",
+   "name": "Looper",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "390",
+   "slug": "p-applied-acoustics-systems-lounge-lizard-session-4",
+   "name": "Lounge Lizard Session 4",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "391",
+   "slug": "p-gforce-m-tron-pro-iv",
+   "name": "M-Tron Pro IV",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "392",
+   "slug": "m-user-m2tm-chords",
+   "name": "M2TM Chords",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "393",
+   "slug": "m-user-m2tm-chords-dv",
+   "name": "M2TM Chords DV",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "394",
+   "slug": "m-user-m2tm-notes",
+   "name": "M2TM Notes",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "395",
+   "slug": "m-user-m2tm-progressions",
+   "name": "M2TM Progressions",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "396",
+   "slug": "m-pack-building-max-devices-macro-knob",
+   "name": "Macro Knob",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "397",
+   "slug": "p-baby-audio-magic-dice",
+   "name": "Magic Dice",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "398",
+   "slug": "p-baby-audio-magic-switch",
+   "name": "Magic Switch",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "399",
+   "slug": "p-waves-magma-stressbox",
+   "name": "Magma StressBox",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "400",
+   "slug": "p-wildergarden-maim",
+   "name": "Maim",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "401",
+   "slug": "m-pack-max-for-live-essentials-map8",
+   "name": "Map8",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "402",
+   "slug": "m-pack-building-max-devices-mapping",
+   "name": "Mapping",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "403",
+   "slug": "m-user-mapr16x2",
+   "name": "Mapr16x2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "404",
+   "slug": "p-moog-mariana",
+   "name": "Mariana",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "405",
+   "slug": "p-native-instruments-massive-x",
+   "name": "Massive X",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "406",
+   "slug": "p-karanyi-sounds-matra",
+   "name": "Matra",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "407",
+   "slug": "p-arturia-matrix-12-v2",
+   "name": "Matrix-12 V2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "408",
+   "slug": "m-pack-the-forge-by-hecq-max-autopanner",
+   "name": "Max AutoPanner",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "409",
+   "slug": "m-pack-the-forge-by-hecq-max-combfilter",
+   "name": "Max CombFilter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "410",
+   "slug": "m-pack-the-forge-by-hecq-max-compressor",
+   "name": "Max Compressor",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "411",
+   "slug": "m-pack-the-forge-by-hecq-max-delaytaps",
+   "name": "Max DelayTaps",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "412",
+   "slug": "m-pack-the-forge-by-hecq-max-spectralharm",
+   "name": "Max SpectralHarm",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "413",
+   "slug": "p-ik-multimedia-mbandcomp",
+   "name": "MBandComp",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "414",
+   "slug": "p-ik-multimedia-mbandimage",
+   "name": "MBandImage",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "415",
+   "slug": "p-ik-multimedia-mbandlim",
+   "name": "MBandLim",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "416",
+   "slug": "m-user-mdd-arpooo-v2",
+   "name": "MDD___ARPOoO_V2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "417",
+   "slug": "m-user-mdd-snake-v3-2-3",
+   "name": "MDD___SNAKE_V3.2.3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "418",
+   "slug": "m-user-mdd-marionnette-1-3",
+   "name": "MDD_MARIONNETTE_1.3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "419",
+   "slug": "p-arturia-mellotron-v",
+   "name": "Mellotron V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "420",
+   "slug": "m-pack-probability-pack-by-sonic-faction-melodic-probability",
+   "name": "Melodic Probability",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "421",
+   "slug": "m-pack-creative-extensions-melodic-steps",
+   "name": "Melodic Steps",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "422",
+   "slug": "p-arturia-memory-v",
+   "name": "Memory V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "423",
+   "slug": "m-user-mfa-audio-cycler",
+   "name": "MFA Audio Cycler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "424",
+   "slug": "m-user-mfa-audio-s-h",
+   "name": "MFA Audio S&H",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "425",
+   "slug": "m-user-mfa-audiodubber",
+   "name": "MFA Audiodubber",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "426",
+   "slug": "m-user-mfa-autodubber",
+   "name": "MFA Autodubber",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "427",
+   "slug": "m-user-mfa-cheat-code",
+   "name": "MFA Cheat Code",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "428",
+   "slug": "m-user-mfa-cosmus",
+   "name": "MFA Cosmus",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "429",
+   "slug": "m-user-mfa-errata",
+   "name": "MFA Errata",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "430",
+   "slug": "m-user-mfa-follower",
+   "name": "MFA Follower",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "431",
+   "slug": "m-user-mfa-gain-tracker",
+   "name": "MFA Gain Tracker",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "432",
+   "slug": "m-user-mfa-lfox",
+   "name": "MFA LFOx",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "433",
+   "slug": "m-user-mfa-manual-s-h",
+   "name": "MFA Manual S&H",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "434",
+   "slug": "m-user-mfa-midi-adsrx",
+   "name": "MFA MIDI ADSRx",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "435",
+   "slug": "m-user-mfa-midi-cycler",
+   "name": "MFA MIDI Cycler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "436",
+   "slug": "m-user-mfa-midi-dubber",
+   "name": "MFA MIDI Dubber",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "437",
+   "slug": "m-user-mfa-midi-key-tracker",
+   "name": "MFA MIDI Key Tracker",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "438",
+   "slug": "m-user-mfa-midi-lfox",
+   "name": "MFA MIDI LFOx",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "439",
+   "slug": "m-user-mfa-midi-x-control",
+   "name": "MFA MIDI X-Control",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "440",
+   "slug": "m-user-mfa-mutator-free",
+   "name": "MFA Mutator Free",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "441",
+   "slug": "m-user-mfa-note-raum",
+   "name": "MFA Note Raum",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "442",
+   "slug": "m-user-mfa-solarus",
+   "name": "MFA Solarus",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "443",
+   "slug": "m-user-mfa-tactum",
+   "name": "MFA Tactum",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "444",
+   "slug": "m-user-mfa-x-control",
+   "name": "MFA X-Control",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "445",
+   "slug": "p-ik-multimedia-micr",
+   "name": "MicR",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "446",
+   "slug": "m-pack-microtuner-microtuner",
+   "name": "Microtuner",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "447",
+   "slug": "m-pack-building-max-devices-midi-echo",
+   "name": "MIDI Echo",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "448",
+   "slug": "m-builtin-midi-monitor",
+   "name": "MIDI Monitor",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "449",
+   "slug": "m-pack-building-max-devices-midi-routing-input",
+   "name": "MIDI Routing Input",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "450",
+   "slug": "m-pack-building-max-devices-midi-routing-output",
+   "name": "MIDI Routing Output",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "451",
+   "slug": "m-pack-max-for-live-essentials-midimonitor",
+   "name": "MIDIMonitor",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "452",
+   "slug": "p-puremagnetik-mimikod",
+   "name": "MimikOD",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "453",
+   "slug": "p-arturia-mini-v3",
+   "name": "Mini V3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "454",
+   "slug": "p-arturia-mini-v4",
+   "name": "Mini V4",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "455",
+   "slug": "p-arturia-minibrute-v",
+   "name": "MiniBrute V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "456",
+   "slug": "p-arturia-minifreak-v",
+   "name": "MiniFreak V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "457",
+   "slug": "p-arturia-mix-drums",
+   "name": "Mix DRUMS",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "458",
+   "slug": "m-user-mix-matcher",
+   "name": "Mix Matcher",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "459",
+   "slug": "m-user-ml-distance",
+   "name": "ml.distance",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "460",
+   "slug": "m-pack-string-quartet-by-spitfire-audio-mod-table",
+   "name": "Mod Table",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "461",
+   "slug": "p-ik-multimedia-modo-bass-2",
+   "name": "MODO BASS 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "462",
+   "slug": "p-ik-multimedia-modo-drum",
+   "name": "MODO DRUM",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "463",
+   "slug": "p-arturia-modular-v3",
+   "name": "Modular V3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "464",
+   "slug": "m-pack-max-for-live-essentials-mono-sequencer",
+   "name": "Mono Sequencer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "465",
+   "slug": "m-pack-building-max-devices-mono-synth",
+   "name": "Mono Synth",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "466",
+   "slug": "p-audiothing-moon-echo",
+   "name": "Moon Echo",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "467",
+   "slug": "m-pack-building-max-devices-mpe",
+   "name": "MPE",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "468",
+   "slug": "m-builtin-mpe-control",
+   "name": "MPE Control",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "469",
+   "slug": "m-pack-string-quartet-by-spitfire-audio-mpe-note-off",
+   "name": "MPE Note Off",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "470",
+   "slug": "m-pack-stray-cats-collection-by-max-for-cats-mse",
+   "name": "MSE",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "471",
+   "slug": "m-pack-max-for-live-essentials-multi",
+   "name": "Multi",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "472",
+   "slug": "m-pack-max-for-live-essentials-multimap",
+   "name": "MultiMap",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "473",
+   "slug": "m-user-multimapper32audio-v2-7",
+   "name": "MultiMapper32Audio V2.7",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "474",
+   "slug": "m-user-multisquisher",
+   "name": "MultiSquisher",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "475",
+   "slug": "m-pack-building-max-devices-naive",
+   "name": "Naive",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "476",
+   "slug": "p-neutone-neutone-fx",
+   "name": "Neutone FX",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "477",
+   "slug": "p-neutone-neutone-morpho",
+   "name": "Neutone Morpho",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "478",
+   "slug": "p-izotope-neutron-4-elements",
+   "name": "Neutron 4 Elements",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "479",
+   "slug": "m-user-nirvana",
+   "name": "Nirvana",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "480",
+   "slug": "m-user-nirvana-c",
+   "name": "Nirvana C",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "481",
+   "slug": "m-user-nirvana-sm",
+   "name": "Nirvana SM",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "482",
+   "slug": "m-user-nirvanafx",
+   "name": "NirvanaFX",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "483",
+   "slug": "m-user-nirvanafx-c",
+   "name": "NirvanaFX C",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "484",
+   "slug": "m-user-nirvanafx-sm",
+   "name": "NirvanaFX SM",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "485",
+   "slug": "m-user-no-input-synth",
+   "name": "No_Input Synth",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "486",
+   "slug": "m-pack-building-max-devices-noise-adder",
+   "name": "Noise Adder",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "487",
+   "slug": "m-pack-building-max-devices-note-change-colors",
+   "name": "Note Change Colors",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "488",
+   "slug": "m-pack-building-max-devices-note-doubler",
+   "name": "Note Doubler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "489",
+   "slug": "m-builtin-note-echo",
+   "name": "Note Echo",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "490",
+   "slug": "m-pack-max-for-live-essentials-note-echo",
+   "name": "Note Echo",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "491",
+   "slug": "m-pack-building-max-devices-note-monitor",
+   "name": "Note Monitor",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "492",
+   "slug": "m-pack-building-max-devices-note-player",
+   "name": "Note Player",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "493",
+   "slug": "m-user-note-triggered-modulator",
+   "name": "Note Triggered Modulator",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "494",
+   "slug": "m-pack-building-max-devices-notes-api",
+   "name": "Notes API",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "495",
+   "slug": "m-user-nts-streamer",
+   "name": "NTS Streamer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "496",
+   "slug": "m-pack-building-max-devices-octave",
+   "name": "Octave",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "497",
+   "slug": "m-pack-building-max-devices-octave-adder",
+   "name": "Octave Adder",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "498",
+   "slug": "p-audiothing-octaves",
+   "name": "Octaves",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "499",
+   "slug": "p-arturia-op-xa-v",
+   "name": "OP-Xa V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "500",
+   "slug": "m-pack-connection-kit-osc-leap-motion",
+   "name": "OSC Leap Motion",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "501",
+   "slug": "m-pack-connection-kit-osc-midi-send",
+   "name": "OSC MIDI Send",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "502",
+   "slug": "m-pack-connection-kit-osc-monitor",
+   "name": "OSC Monitor",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "503",
+   "slug": "m-pack-connection-kit-osc-send",
+   "name": "OSC Send",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "504",
+   "slug": "m-pack-connection-kit-osc-touchosc",
+   "name": "OSC TouchOSC",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "505",
+   "slug": "m-user-oscillosope-v1-4",
+   "name": "Oscillosope V1.4",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "506",
+   "slug": "m-pack-building-max-devices-overdrive",
+   "name": "Overdrive",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "507",
+   "slug": "m-user-oxide-v1-02",
+   "name": "Oxide v1.02",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "508",
+   "slug": "p-izotope-ozone-11-elements",
+   "name": "Ozone 11 Elements",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "509",
+   "slug": "p-izotope-ozone-11-equalizer",
+   "name": "Ozone 11 Equalizer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "510",
+   "slug": "p-izotope-ozone-imager-2",
+   "name": "Ozone Imager 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "511",
+   "slug": "p-audiomodern-panflow",
+   "name": "Panflow",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "512",
+   "slug": "m-pack-building-max-devices-panner",
+   "name": "Panner",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "513",
+   "slug": "p-moonwave-parallax",
+   "name": "Parallax",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "514",
+   "slug": "p-puremagnetik-partikl",
+   "name": "Partikl",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "515",
+   "slug": "p-puremagnetik-pastfabric2",
+   "name": "Pastfabric2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "516",
+   "slug": "m-pack-generators-by-iftah-patterns-by-iftah",
+   "name": "Patterns by Iftah",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "517",
+   "slug": "p-full-bucket-music-pecs",
+   "name": "PECS",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "518",
+   "slug": "m-pack-upright-piano-by-spitfire-audio-pedal-noise",
+   "name": "Pedal Noise",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "519",
+   "slug": "m-pack-performance-pack-by-iftah-performer",
+   "name": "Performer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "520",
+   "slug": "p-puremagnetik-permute",
+   "name": "Permute",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "521",
+   "slug": "m-pack-midi-tools-by-philip-meyer-phase-pattern",
+   "name": "Phase Pattern",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "522",
+   "slug": "p-soundtoys-phasemistress",
+   "name": "PhaseMistress",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "523",
+   "slug": "p-arturia-phaser-bi-tron",
+   "name": "Phaser BI-TRON",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "524",
+   "slug": "m-pack-upright-piano-by-spitfire-audio-piano-pedal-trigger",
+   "name": "Piano Pedal Trigger",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "525",
+   "slug": "p-arturia-piano-v3",
+   "name": "Piano V3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "526",
+   "slug": "p-arturia-pigments",
+   "name": "Pigments",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "527",
+   "slug": "p-baby-audio-pitch-drift",
+   "name": "Pitch Drift",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "528",
+   "slug": "m-pack-creative-extensions-pitch-hack",
+   "name": "Pitch Hack",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "529",
+   "slug": "m-pack-building-max-devices-pitch-shifter",
+   "name": "Pitch Shifter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "530",
+   "slug": "p-arturia-pitch-shifter-910",
+   "name": "Pitch SHIFTER-910",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "531",
+   "slug": "m-pack-max-for-live-essentials-pitchdrop",
+   "name": "PitchDrop",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "532",
+   "slug": "m-pack-pitchloop89-pitchloop89",
+   "name": "PitchLoop89",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "533",
+   "slug": "p-session-loops-pitchnet",
+   "name": "PitchNet",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "534",
+   "slug": "p-fors-pivot-lite",
+   "name": "Pivot-Lite",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "535",
+   "slug": "m-pack-building-max-devices-plate-reverb",
+   "name": "Plate Reverb",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "536",
+   "slug": "m-user-pluck",
+   "name": "Pluck",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "537",
+   "slug": "m-pack-the-forge-by-hecq-pluggofuzz",
+   "name": "PluggoFuzz",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "538",
+   "slug": "m-pack-creative-extensions-poli",
+   "name": "Poli",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "539",
+   "slug": "m-pack-building-max-devices-poly-synth",
+   "name": "Poly Synth",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "540",
+   "slug": "m-pack-midi-tools-by-philip-meyer-polyrhythm",
+   "name": "Polyrhythm",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "541",
+   "slug": "m-user-polyrhythmus-v1-01",
+   "name": "polyrhythmus v1.01",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "542",
+   "slug": "m-user-potee",
+   "name": "Potee",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "543",
+   "slug": "p-arturia-pre-1973",
+   "name": "Pre 1973",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "544",
+   "slug": "p-arturia-pre-trida",
+   "name": "Pre TridA",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "545",
+   "slug": "p-arturia-pre-v76",
+   "name": "Pre V76",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "546",
+   "slug": "m-pack-performance-pack-by-iftah-prearranger",
+   "name": "Prearranger",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "547",
+   "slug": "p-ik-multimedia-precl",
+   "name": "PreCL",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "548",
+   "slug": "m-user-premo",
+   "name": "Premo",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "549",
+   "slug": "m-pack-probability-pack-by-sonic-faction-probability-arp",
+   "name": "Probability Arp",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "550",
+   "slug": "m-user-probee",
+   "name": "Probee",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "551",
+   "slug": "m-user-probee-1",
+   "name": "Probee-1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "552",
+   "slug": "m-user-program-change",
+   "name": "Program Change",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "553",
+   "slug": "p-arturia-prophet-5-v",
+   "name": "Prophet-5 V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "554",
+   "slug": "p-arturia-prophet-vs-v",
+   "name": "Prophet-VS V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "555",
+   "slug": "p-arturia-pure-lofi",
+   "name": "Pure LoFi",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "556",
+   "slug": "m-user-pyr-by-iftah-1-2",
+   "name": "Pyr by Iftah 1.2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "557",
+   "slug": "m-pack-stray-cats-collection-by-max-for-cats-quad",
+   "name": "Quad",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "558",
+   "slug": "p-klevgrand-r0verb",
+   "name": "R0Verb",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "559",
+   "slug": "m-user-radio-garden",
+   "name": "Radio Garden",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "560",
+   "slug": "p-soundevicedigital-randomachine",
+   "name": "Randomachine",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "561",
+   "slug": "m-user-randomise-session-colours",
+   "name": "Randomise Session Colours",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "562",
+   "slug": "p-native-instruments-raum",
+   "name": "Raum",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "563",
+   "slug": "m-user-ravel-1-1",
+   "name": "Ravel 1.1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "564",
+   "slug": "p-analogobsession-razorclip",
+   "name": "RazorClip",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "565",
+   "slug": "m-pack-creative-extensions-re-enveloper",
+   "name": "Re-Enveloper",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "566",
+   "slug": "p-native-instruments-reaktor-6",
+   "name": "Reaktor 6",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "567",
+   "slug": "p-native-instruments-reaktor-6-fx",
+   "name": "Reaktor 6 FX",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "568",
+   "slug": "p-audiothing-reels",
+   "name": "Reels",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "569",
+   "slug": "p-izotope-relay",
+   "name": "Relay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "570",
+   "slug": "p-analogobsession-relife",
+   "name": "ReLife",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "571",
+   "slug": "p-puremagnetik-replicas",
+   "name": "Replicas",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "572",
+   "slug": "p-native-instruments-replika",
+   "name": "Replika",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "573",
+   "slug": "m-user-resampler-pro",
+   "name": "Resampler Pro",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "574",
+   "slug": "p-ik-multimedia-resing",
+   "name": "ReSing",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "575",
+   "slug": "m-pack-midi-tools-by-philip-meyer-retrigger",
+   "name": "Retrigger",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "576",
+   "slug": "p-arturia-rev-intensity",
+   "name": "Rev INTENSITY",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "577",
+   "slug": "p-arturia-rev-lx-24",
+   "name": "Rev LX-24",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "578",
+   "slug": "p-arturia-rev-ocean",
+   "name": "Rev OCEAN",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "579",
+   "slug": "p-arturia-rev-plate-140",
+   "name": "Rev PLATE-140",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "580",
+   "slug": "p-arturia-rev-spring-636",
+   "name": "Rev SPRING-636",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "581",
+   "slug": "m-user-rhythmic-crazy-slicer",
+   "name": "Rhythmic Crazy Slicer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "582",
+   "slug": "m-pack-probability-pack-by-sonic-faction-rhythmic-probability",
+   "name": "Rhythmic Probability",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "583",
+   "slug": "m-pack-sequencers-rhythmic-steps",
+   "name": "Rhythmic Steps",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "584",
+   "slug": "p-arturia-rotary-cls-222",
+   "name": "Rotary CLS-222",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "585",
+   "slug": "m-pack-cv-tools-rotating-rhythm-generator",
+   "name": "Rotating Rhythm Generator",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "586",
+   "slug": "p-ik-multimedia-sampletank-4",
+   "name": "SampleTank 4",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "587",
+   "slug": "p-ik-multimedia-satx",
+   "name": "SatX",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "588",
+   "slug": "m-user-schaeffer-s-nightmare",
+   "name": "Schaeffer's Nightmare",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "589",
+   "slug": "m-user-scratchbacker-v3",
+   "name": "ScratchBacker-v3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "590",
+   "slug": "m-user-sektor",
+   "name": "Sektor",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "591",
+   "slug": "m-user-select-map-single-variation-audio-v1-abletondrummer",
+   "name": "Select + MAP Single Variation AUDIO V1 AbletonDrummer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "592",
+   "slug": "m-user-select-map-single-variation-midi-v1-abletondrummer",
+   "name": "Select + MAP Single Variation MIDI V1 AbletonDrummer ",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "593",
+   "slug": "p-arturia-sem-v2",
+   "name": "SEM V2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "594",
+   "slug": "p-arturia-sem-v3",
+   "name": "SEM V3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "595",
+   "slug": "m-pack-stray-cats-collection-by-max-for-cats-seq8",
+   "name": "Seq8",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "596",
+   "slug": "m-builtin-shaper",
+   "name": "Shaper",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "597",
+   "slug": "m-builtin-shaper-midi",
+   "name": "Shaper MIDI",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "598",
+   "slug": "m-user-shift",
+   "name": "Shift",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "599",
+   "slug": "p-audio-damage-inc-shinronin",
+   "name": "ShinRonin",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "600",
+   "slug": "m-pack-building-max-devices-side-drive",
+   "name": "Side Drive",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "601",
+   "slug": "m-pack-building-max-devices-sidechain-modulator",
+   "name": "Sidechain Modulator",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "602",
+   "slug": "m-pack-building-max-devices-simpler-slices",
+   "name": "Simpler Slices",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "603",
+   "slug": "m-user-simulscrub-v6",
+   "name": "SimulScrub-v6",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "604",
+   "slug": "p-sinevibes-skew-v2",
+   "name": "Skew v2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "605",
+   "slug": "m-pack-stray-cats-collection-by-max-for-cats-skramdelay",
+   "name": "SkramDelay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "606",
+   "slug": "m-pack-midi-tools-by-philip-meyer-slice-shuffler",
+   "name": "Slice Shuffler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "607",
+   "slug": "m-user-smooth-automator-audio",
+   "name": "Smooth Automator Audio",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "608",
+   "slug": "m-user-smooth-automator-midi",
+   "name": "Smooth Automator MIDI",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "609",
+   "slug": "m-pack-building-max-devices-snipper",
+   "name": "Snipper",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "610",
+   "slug": "p-sonnox-soften",
+   "name": "Soften",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "611",
+   "slug": "p-dawesome-sol",
+   "name": "Sol",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "612",
+   "slug": "p-spitfire-audio-solar",
+   "name": "Solar",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "613",
+   "slug": "p-arturia-solina-v2",
+   "name": "Solina V2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "614",
+   "slug": "p-minuit-solstice",
+   "name": "Solstice",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "615",
+   "slug": "p-audiomodern-soundbox",
+   "name": "Soundbox",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "616",
+   "slug": "p-soundtoys-spaceblender",
+   "name": "SpaceBlender",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "617",
+   "slug": "p-higher-plane-software-spacewalk",
+   "name": "SpaceWalk",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "618",
+   "slug": "p-audiothing-speakers",
+   "name": "Speakers",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "619",
+   "slug": "m-user-spect-1-3",
+   "name": "Spect 1.3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "620",
+   "slug": "m-pack-creative-extensions-spectral-blur",
+   "name": "Spectral Blur",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "621",
+   "slug": "m-pack-the-forge-by-hecq-speed-shifter",
+   "name": "Speed Shifter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "622",
+   "slug": "p-splice-splice-bridge",
+   "name": "Splice Bridge",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "623",
+   "slug": "p-splice-splice-instrument",
+   "name": "Splice INSTRUMENT",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "624",
+   "slug": "p-splice-splice-sounds",
+   "name": "Splice Sounds",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "625",
+   "slug": "p-splice-splice-sounds-listener",
+   "name": "Splice Sounds Listener",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "626",
+   "slug": "p-audiothing-springs",
+   "name": "Springs",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "627",
+   "slug": "m-pack-sequencers-sq-sequencer",
+   "name": "SQ Sequencer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "628",
+   "slug": "p-arturia-sq80-v",
+   "name": "SQ80 V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "629",
+   "slug": "p-arturia-stage-73-v2",
+   "name": "Stage-73 V2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "630",
+   "slug": "m-pack-midi-tools-by-philip-meyer-stages",
+   "name": "Stages",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "631",
+   "slug": "m-pack-sequencers-step-arp",
+   "name": "Step Arp",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "632",
+   "slug": "m-user-step-copy",
+   "name": "Step Copy",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "633",
+   "slug": "m-pack-probability-pack-by-sonic-faction-step-divider",
+   "name": "Step Divider",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "634",
+   "slug": "m-user-sting-2",
+   "name": "Sting 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "635",
+   "slug": "m-pack-generators-by-iftah-sting-by-iftah",
+   "name": "Sting by Iftah",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "636",
+   "slug": "m-user-sting-64-by-skinnerbox",
+   "name": "STING!64 by SKINNERBOX",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "637",
+   "slug": "m-pack-stray-cats-collection-by-max-for-cats-stochastic-delay",
+   "name": "Stochastic Delay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "638",
+   "slug": "m-pack-building-max-devices-stretch-simpler",
+   "name": "Stretch Simpler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "639",
+   "slug": "m-user-strike-midi",
+   "name": "STRIKE_MIDI",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "640",
+   "slug": "m-user-strike-resonator",
+   "name": "STRIKE_Resonator",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "641",
+   "slug": "p-applied-acoustics-systems-strum-session-2",
+   "name": "Strum Session 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "642",
+   "slug": "p-ik-multimedia-sunsetsound",
+   "name": "SunsetSound",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "643",
+   "slug": "p-baby-audio-super-vhs",
+   "name": "Super VHS",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "644",
+   "slug": "p-native-instruments-supercharger",
+   "name": "Supercharger",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "645",
+   "slug": "p-native-instruments-supercharger-gt",
+   "name": "Supercharger GT",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "646",
+   "slug": "m-pack-surround-panner-surround-panner",
+   "name": "Surround Panner",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "647",
+   "slug": "p-puremagnetik-swarm",
+   "name": "Swarm",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "648",
+   "slug": "p-lese-sweep",
+   "name": "Sweep",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "649",
+   "slug": "p-arturia-synclavier-v",
+   "name": "Synclavier V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "650",
+   "slug": "p-synful-synfulorchestra",
+   "name": "SynfulOrchestra",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "651",
+   "slug": "p-arturia-synthi-v",
+   "name": "Synthi V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "652",
+   "slug": "p-arturia-synthx-v",
+   "name": "Synthx V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "653",
+   "slug": "p-ik-multimedia-syntronik-2",
+   "name": "Syntronik 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "654",
+   "slug": "p-ik-multimedia-t-racks-5",
+   "name": "T-RackS 5",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "655",
+   "slug": "p-ik-multimedia-t-racks-5-metering",
+   "name": "T-RackS 5 Metering",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "656",
+   "slug": "p-phase-fiasco-tape-fiasco",
+   "name": "Tape Fiasco",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "657",
+   "slug": "p-arturia-tape-j-37",
+   "name": "Tape J-37",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "658",
+   "slug": "p-arturia-tape-mello-fi",
+   "name": "Tape MELLO-FI",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "659",
+   "slug": "m-user-tapestop-2-0",
+   "name": "TapeStop 2.0",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "660",
+   "slug": "m-user-tappanzeit-v12",
+   "name": "TapPanZeit-v12",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "661",
+   "slug": "m-pack-the-forge-by-hecq-tapped-delay",
+   "name": "Tapped Delay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "662",
+   "slug": "p-baby-audio-tekno",
+   "name": "Tekno",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "663",
+   "slug": "p-eventide-temperance-lite",
+   "name": "Temperance Lite",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "664",
+   "slug": "p-soundghost-texturize",
+   "name": "Texturize",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "665",
+   "slug": "m-user-the-lot-radio",
+   "name": "The Lot Radio",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "666",
+   "slug": "m-user-tombola",
+   "name": "Tombola",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "667",
+   "slug": "p-izotope-tonal-balance-control-2",
+   "name": "Tonal Balance Control 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "668",
+   "slug": "p-ik-multimedia-tonex",
+   "name": "TONEX",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "669",
+   "slug": "p-ik-multimedia-tr5-black-76",
+   "name": "TR5 Black 76",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "670",
+   "slug": "p-ik-multimedia-tr5-brickwall-limiter",
+   "name": "TR5 Brickwall Limiter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "671",
+   "slug": "p-ik-multimedia-tr5-british-channel",
+   "name": "TR5 British Channel",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "672",
+   "slug": "p-ik-multimedia-tr5-bus-compressor",
+   "name": "TR5 Bus Compressor",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "673",
+   "slug": "p-ik-multimedia-tr5-classic-clipper",
+   "name": "TR5 Classic Clipper",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "674",
+   "slug": "p-ik-multimedia-tr5-classic-comp",
+   "name": "TR5 Classic Comp",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "675",
+   "slug": "p-ik-multimedia-tr5-classic-eq",
+   "name": "TR5 Classic EQ",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "676",
+   "slug": "p-ik-multimedia-tr5-classic-multi-band-limiter",
+   "name": "TR5 Classic Multi Band Limiter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "677",
+   "slug": "p-ik-multimedia-tr5-comprexxor",
+   "name": "TR5 Comprexxor",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "678",
+   "slug": "p-ik-multimedia-tr5-csr-hall",
+   "name": "TR5 CSR Hall",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "679",
+   "slug": "p-ik-multimedia-tr5-csr-inverse",
+   "name": "TR5 CSR Inverse",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "680",
+   "slug": "p-ik-multimedia-tr5-csr-plate",
+   "name": "TR5 CSR Plate",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "681",
+   "slug": "p-ik-multimedia-tr5-csr-room",
+   "name": "TR5 CSR Room",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "682",
+   "slug": "p-ik-multimedia-tr5-de-esser",
+   "name": "TR5 De Esser",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "683",
+   "slug": "p-ik-multimedia-tr5-dyna-mu",
+   "name": "TR5 Dyna-Mu",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "684",
+   "slug": "p-ik-multimedia-tr5-eq-73",
+   "name": "TR5 EQ-73",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "685",
+   "slug": "p-ik-multimedia-tr5-eq-81",
+   "name": "TR5 EQ-81",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "686",
+   "slug": "p-ik-multimedia-tr5-eq-pa",
+   "name": "TR5 EQ-PA",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "687",
+   "slug": "p-ik-multimedia-tr5-eq-pb",
+   "name": "TR5 EQ-PB",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "688",
+   "slug": "p-ik-multimedia-tr5-eq-pg",
+   "name": "TR5 EQ-PG",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "689",
+   "slug": "p-ik-multimedia-tr5-eqp-1a",
+   "name": "TR5 EQP-1A",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "690",
+   "slug": "p-ik-multimedia-tr5-equal",
+   "name": "TR5 EQual",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "691",
+   "slug": "p-ik-multimedia-tr5-fame-studio-reverb",
+   "name": "TR5 Fame Studio Reverb",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "692",
+   "slug": "p-ik-multimedia-tr5-joe-chiccarelli-vocal-strip",
+   "name": "TR5 Joe Chiccarelli Vocal Strip",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "693",
+   "slug": "p-ik-multimedia-tr5-leslie",
+   "name": "TR5 Leslie",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "694",
+   "slug": "p-ik-multimedia-tr5-linear-phase-eq",
+   "name": "TR5 Linear Phase EQ",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "695",
+   "slug": "p-ik-multimedia-tr5-master-eq-432",
+   "name": "TR5 Master EQ-432",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "696",
+   "slug": "p-ik-multimedia-tr5-master-match",
+   "name": "TR5 Master Match",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "697",
+   "slug": "p-ik-multimedia-tr5-metering",
+   "name": "TR5 Metering",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "698",
+   "slug": "p-ik-multimedia-tr5-mic-room",
+   "name": "TR5 Mic Room",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "699",
+   "slug": "p-ik-multimedia-tr5-one",
+   "name": "TR5 One",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "700",
+   "slug": "p-ik-multimedia-tr5-opto-comp",
+   "name": "TR5 Opto Comp",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "701",
+   "slug": "p-ik-multimedia-tr5-precision-comp-limiter",
+   "name": "TR5 Precision Comp-Limiter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "702",
+   "slug": "p-ik-multimedia-tr5-quad-compressor",
+   "name": "TR5 Quad Compressor",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "703",
+   "slug": "p-ik-multimedia-tr5-quad-image",
+   "name": "TR5 Quad Image",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "704",
+   "slug": "p-ik-multimedia-tr5-quad-limiter",
+   "name": "TR5 Quad Limiter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "705",
+   "slug": "p-ik-multimedia-tr5-saturator-x",
+   "name": "TR5 Saturator X",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "706",
+   "slug": "p-ik-multimedia-tr5-space-delay",
+   "name": "TR5 Space Delay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "707",
+   "slug": "p-ik-multimedia-tr5-stealth-limiter",
+   "name": "TR5 Stealth Limiter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "708",
+   "slug": "p-ik-multimedia-tr5-suite",
+   "name": "TR5 Suite",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "709",
+   "slug": "p-ik-multimedia-tr5-sunset-sound-studio-reverb",
+   "name": "TR5 Sunset Sound Studio Reverb",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "710",
+   "slug": "p-ik-multimedia-tr5-tape-echo",
+   "name": "TR5 Tape Echo",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "711",
+   "slug": "p-ik-multimedia-tr5-tape-machine-24",
+   "name": "TR5 Tape Machine 24",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "712",
+   "slug": "p-ik-multimedia-tr5-tape-machine-440",
+   "name": "TR5 Tape Machine 440",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "713",
+   "slug": "p-ik-multimedia-tr5-tape-machine-80",
+   "name": "TR5 Tape Machine 80",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "714",
+   "slug": "p-ik-multimedia-tr5-tape-machine-99",
+   "name": "TR5 Tape Machine 99",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "715",
+   "slug": "p-ik-multimedia-tr5-tascam-388",
+   "name": "TR5 TASCAM 388",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "716",
+   "slug": "p-ik-multimedia-tr5-tascam-porta-one",
+   "name": "TR5 TASCAM PORTA ONE",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "717",
+   "slug": "p-ik-multimedia-tr5-teac-a-3340s",
+   "name": "TR5 TEAC A-3340S",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "718",
+   "slug": "p-ik-multimedia-tr5-teac-a-6100-mkii",
+   "name": "TR5 TEAC A-6100 MKII",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "719",
+   "slug": "p-ik-multimedia-tr5-the-farm-stone-room",
+   "name": "TR5 The Farm Stone Room",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "720",
+   "slug": "p-ik-multimedia-tr5-vc-670",
+   "name": "TR5 VC-670",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "721",
+   "slug": "p-ik-multimedia-tr5-white-2a",
+   "name": "TR5 White 2A",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "722",
+   "slug": "p-ik-multimedia-tr5-white-channel",
+   "name": "TR5 White Channel",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "723",
+   "slug": "p-native-instruments-transient-master",
+   "name": "Transient Master",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "724",
+   "slug": "m-user-transientdesigner",
+   "name": "TransientDesigner",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "725",
+   "slug": "p-izotope-trash",
+   "name": "Trash",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "726",
+   "slug": "m-pack-inspired-by-nature-by-dillon-bastan-tree-tone",
+   "name": "Tree Tone",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "727",
+   "slug": "p-wave-alchemy-triaz-player",
+   "name": "Triaz Player",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "728",
+   "slug": "m-user-trnr-bitecho",
+   "name": "trnr.BitEcho",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "729",
+   "slug": "m-user-trnr-dmmg",
+   "name": "trnr.DmmG",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "730",
+   "slug": "m-user-trnr-duckling",
+   "name": "trnr.Duckling",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "731",
+   "slug": "m-user-trnr-flechtwerk",
+   "name": "trnr.Flechtwerk",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "732",
+   "slug": "m-user-trnr-hatster",
+   "name": "trnr.Hatster",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "733",
+   "slug": "m-user-trnr-retrosampler",
+   "name": "trnr.RetroSampler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "734",
+   "slug": "m-user-trnr-triplexclassic",
+   "name": "trnr.TriplexClassic",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "735",
+   "slug": "p-2rule-tugglicento",
+   "name": "TugGlicento",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "736",
+   "slug": "p-2rule-tugimgsynth",
+   "name": "TugImgSynth",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "737",
+   "slug": "p-2rule-tugmidiseq",
+   "name": "TugMidiSeq",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "738",
+   "slug": "p-2rule-tugmultieffect",
+   "name": "TugMultiEffect",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "739",
+   "slug": "p-2rule-tugphonon",
+   "name": "TugPhonon",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "740",
+   "slug": "p-2rule-tugspect",
+   "name": "TugSpect",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "741",
+   "slug": "m-user-turing-machine-3-1",
+   "name": "Turing Machine 3.1",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "742",
+   "slug": "p-universal-audio-uadx-uadx-1176-fet-compressor",
+   "name": "UADx 1176 FET Compressor",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "743",
+   "slug": "p-universal-audio-uadx-uadx-610-a-preamp-and-eq",
+   "name": "UADx 610-A Preamp and EQ",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "744",
+   "slug": "p-universal-audio-uadx-uadx-610-b-preamp-and-eq",
+   "name": "UADx 610-B Preamp and EQ",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "745",
+   "slug": "p-universal-audio-uadx-uadx-century-tube-channel-strip",
+   "name": "UADx Century Tube Channel Strip",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "746",
+   "slug": "p-universal-audio-uadx-uadx-galaxy-tape-echo",
+   "name": "UADx Galaxy Tape Echo",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "747",
+   "slug": "p-universal-audio-uadx-uadx-oxide-tape-recorder",
+   "name": "UADx Oxide Tape Recorder",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "748",
+   "slug": "p-universal-audio-uadx-uadx-polymax-synth",
+   "name": "UADx PolyMAX Synth",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "749",
+   "slug": "p-universal-audio-uadx-uadx-pure-plate-reverb",
+   "name": "UADx Pure Plate Reverb",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "750",
+   "slug": "p-universal-audio-uadx-uadx-showtime-64-tube-amp",
+   "name": "UADx Showtime 64 Tube Amp",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "751",
+   "slug": "p-universal-audio-uadx-uadx-verve-analog-machines",
+   "name": "UADx Verve Analog Machines",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "752",
+   "slug": "p-universal-audio-uadx-uadx-vibe-analog-machines-essentials",
+   "name": "UADx Vibe Analog Machines Essentials",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "753",
+   "slug": "p-applied-acoustics-systems-ultra-analog-session-2",
+   "name": "Ultra Analog Session 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "754",
+   "slug": "p-uvi-uvi-tape-chorus",
+   "name": "UVI Tape Chorus",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "755",
+   "slug": "p-uvi-uvi-tape-color",
+   "name": "UVI Tape Color",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "756",
+   "slug": "p-uvi-uvi-tape-delay",
+   "name": "UVI Tape Delay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "757",
+   "slug": "p-uvi-uvi-tape-flanger",
+   "name": "UVI Tape Flanger",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "758",
+   "slug": "p-uvi-uviworkstationvst",
+   "name": "UVIWorkstationVST",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "759",
+   "slug": "p-valhalla-dsp-llc-valhallafreqecho",
+   "name": "ValhallaFreqEcho",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "760",
+   "slug": "p-valhalla-dsp-llc-valhallaspacemodulator",
+   "name": "ValhallaSpaceModulator",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "761",
+   "slug": "p-valhalla-dsp-llc-valhallasupermassive",
+   "name": "ValhallaSupermassive",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "762",
+   "slug": "m-pack-performance-pack-by-iftah-variations",
+   "name": "Variations",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "763",
+   "slug": "p-crow-hill-vaults",
+   "name": "Vaults",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "764",
+   "slug": "m-user-vc3-5",
+   "name": "VC3.5",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "765",
+   "slug": "m-pack-inspired-by-nature-by-dillon-bastan-vector-delay",
+   "name": "Vector Delay",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "766",
+   "slug": "m-pack-inspired-by-nature-by-dillon-bastan-vector-fm",
+   "name": "Vector FM",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "767",
+   "slug": "m-pack-inspired-by-nature-by-dillon-bastan-vector-grain",
+   "name": "Vector Grain",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "768",
+   "slug": "m-pack-inspired-by-nature-by-dillon-bastan-vector-map",
+   "name": "Vector Map",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "769",
+   "slug": "m-pack-building-max-devices-velocity-randomizer",
+   "name": "Velocity Randomizer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "770",
+   "slug": "m-builtin-velocity-shaper",
+   "name": "Velocity Shaper",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "771",
+   "slug": "m-pack-stray-cats-collection-by-max-for-cats-verbotron",
+   "name": "Verbotron",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "772",
+   "slug": "p-puremagnetik-verv",
+   "name": "Verv",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "773",
+   "slug": "m-pack-building-max-devices-video-slicer",
+   "name": "Video Slicer",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "774",
+   "slug": "p-ik-multimedia-vintageprogrameq1a",
+   "name": "VintageProgramEQ1A",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "775",
+   "slug": "p-izotope-vinyl",
+   "name": "Vinyl",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "776",
+   "slug": "m-user-visage-1-0",
+   "name": "visage_1.0",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "777",
+   "slug": "m-pack-building-max-devices-visuals-builder",
+   "name": "Visuals Builder",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "778",
+   "slug": "m-pack-building-max-devices-visuals-exporter",
+   "name": "Visuals Exporter",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "779",
+   "slug": "p-izotope-vocal-doubler",
+   "name": "Vocal Doubler",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "780",
+   "slug": "p-arturia-vocoder-v",
+   "name": "Vocoder V",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "781",
+   "slug": "p-arturia-vox-continental-v2",
+   "name": "VOX Continental V2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "782",
+   "slug": "p-baby-audio-warp",
+   "name": "Warp",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "783",
+   "slug": "m-pack-building-max-devices-warp-markers",
+   "name": "Warp Markers",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "784",
+   "slug": "p-waves-waves-harmony",
+   "name": "Waves Harmony",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "785",
+   "slug": "p-soundmorph-wavewarper-2",
+   "name": "WaveWarper 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "786",
+   "slug": "m-user-widen",
+   "name": "Widen",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "787",
+   "slug": "p-arturia-wurli-v2",
+   "name": "Wurli V2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "788",
+   "slug": "p-arturia-wurli-v3",
+   "name": "Wurli V3",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "789",
+   "slug": "m-pack-building-max-devices-xy",
+   "name": "XY",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "790",
+   "slug": "m-pack-building-max-devices-xy-controller",
+   "name": "XY Controller",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "791",
+   "slug": "m-pack-max-for-live-essentials-xy-pad",
+   "name": "XY Pad",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "792",
+   "slug": "p-puremagnetik-zerone",
+   "name": "Zerone",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "793",
+   "slug": "p-zl-zl-equalizer-2",
+   "name": "ZL Equalizer 2",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  }
+ ]
+}

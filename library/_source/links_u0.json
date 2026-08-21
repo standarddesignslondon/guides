@@ -1,0 +1,278 @@
+{
+ "Ableton Youtube Player V1 AbletonDrummer": {
+  "url": "https://maxforlive.com/library/device/13216/ableton-live-youtube-player",
+  "maker": "AbletonDrummer / Ableton Kurse",
+  "category": "utility",
+  "note": "Embeds a YouTube player in Live for playback and resampling."
+ },
+ "Backspin v1.0.2": {
+  "url": "https://maxforlive.com/library/device/14124/backspin",
+  "maker": "Andrew Norris",
+  "category": "tape",
+  "note": "DJ tape-stop, wind-down, rewind and backspin effects."
+ },
+ "Boss NS-2 Noise Suppressor": {
+  "url": null,
+  "maker": null,
+  "category": "dynamics",
+  "note": null
+ },
+ "Chorb": {
+  "url": "https://maxforlive.com/library/device/6333/chorb",
+  "maker": "s8jfou",
+  "category": "sequencer",
+  "note": "Chord generator with built-in scaler and pitch randomiser."
+ },
+ "Copy Machine": {
+  "url": "https://maxforlive.com/library/device/7480/copy-machine",
+  "maker": "ricoL",
+  "category": "sampler",
+  "note": "Plays multiple simultaneous copies of one audio file."
+ },
+ "DR01D": {
+  "url": null,
+  "maker": null,
+  "category": "synth",
+  "note": null
+ },
+ "Excite": {
+  "url": null,
+  "maker": null,
+  "category": "other",
+  "note": null
+ },
+ "Flow Demo": {
+  "url": null,
+  "maker": null,
+  "category": "other",
+  "note": null
+ },
+ "Glitchera": {
+  "url": "https://maxforlive.com/library/device/5016/glitchera",
+  "maker": "aftersound",
+  "category": "other",
+  "note": "Adds random glitches and clicks to incoming audio."
+ },
+ "HarmoChordBass J74": {
+  "url": "https://maxforlive.com/library/device/1177/j74-harmotools",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "sequencer",
+  "note": "Plays a bass line from detected chord roots; part of HarmoTools."
+ },
+ "HarmoChordRecv J74": {
+  "url": "https://maxforlive.com/library/device/1177/j74-harmotools",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "utility",
+  "note": "Receives chord data from HarmoChord; part of the HarmoTools pack."
+ },
+ "HarmoGuessScale J74": {
+  "url": "https://maxforlive.com/library/device/1177/j74-harmotools",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "analyser",
+  "note": "Detects key and scale of incoming MIDI; part of HarmoTools."
+ },
+ "HarmoScaleFilter J74": {
+  "url": "https://maxforlive.com/library/device/1177/j74-harmotools",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "utility",
+  "note": "Constrains incoming MIDI to the detected scale; part of HarmoTools."
+ },
+ "HarmoTonicFilter J74": {
+  "url": "https://maxforlive.com/library/device/1177/j74-harmotools",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "utility",
+  "note": "Filters MIDI notes to the current harmonic context; part of HarmoTools."
+ },
+ "Inflation": {
+  "url": "https://maxforlive.com/library/device/13205/inflation",
+  "maker": "Stevon",
+  "category": "dynamics",
+  "note": "Clone of the Sonnox Oxford Inflator loudness processor."
+ },
+ "JG.SpectralDelay": {
+  "url": null,
+  "maker": null,
+  "category": "delay",
+  "note": null
+ },
+ "LFO Random": {
+  "url": "https://maxforlive.com/library/device/8530/lfo-random",
+  "maker": "s8jfou",
+  "category": "modulation",
+  "note": "Live's LFO modulator restricted to random shapes only."
+ },
+ "Learn Scales": {
+  "url": "https://maxforlive.com/library/device/3315/learn-scales-music-theory-helper",
+  "maker": "Joshua Casper",
+  "category": "utility",
+  "note": "Music theory helper that displays notes of a chosen scale."
+ },
+ "M2TM Chords DV": {
+  "url": null,
+  "maker": null,
+  "category": "other",
+  "note": null
+ },
+ "MDD___ARPOoO_V2": {
+  "url": "https://maxforlive.com/library/device/4559/mdd-arpooo",
+  "maker": "Maxime Dangles",
+  "category": "sequencer",
+  "note": "Arpeggiator modelled on the Roland SH-101 and Jupiter-6."
+ },
+ "MFA Audiodubber": {
+  "url": "https://maxforlive.com/library/device/7518/mod-squad",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "Audio-triggered probabilistic modulation gate; part of Mod Squad bundle."
+ },
+ "MFA Errata": {
+  "url": "https://maxforlive.com/library/device/11152/errata",
+  "maker": "Manifest Audio",
+  "category": "distortion",
+  "note": "Bit-shifting digital distortion with filtering and stereo width."
+ },
+ "MFA MIDI ADSRx": {
+  "url": "https://maxforlive.com/library/device/7518/mod-squad",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "MIDI-triggered ADSR envelope modulator; part of Mod Squad bundle."
+ },
+ "MFA MIDI LFOx": {
+  "url": "https://maxforlive.com/library/device/7518/mod-squad",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "MIDI-triggered synchronised LFO modulator; part of Mod Squad bundle."
+ },
+ "MFA Note Raum": {
+  "url": "https://maxforlive.com/library/device/7420/note-raum",
+  "maker": "Manifest Audio",
+  "category": "sequencer",
+  "note": "MIDI note echo with limit, wrap and bounce reflection modes."
+ },
+ "Mapr16x2": {
+  "url": "https://maxforlive.com/library/device/7905/mapr16x2",
+  "maker": "tomdusk",
+  "category": "utility",
+  "note": "Multi-parameter mapper based on the Mothergarage Multimapper."
+ },
+ "NTS Streamer": {
+  "url": "https://maxforlive.com/library/device/12277/nts-streamer",
+  "maker": "wavefolded",
+  "category": "utility",
+  "note": "Streams NTS Radio directly inside Ableton Live."
+ },
+ "NirvanaFX": {
+  "url": "https://maxforlive.com/library/device/12567/nirvana",
+  "maker": "ndivuyo",
+  "category": "other",
+  "note": "Feedback device; audio-effect version of the Nirvana instrument."
+ },
+ "Note Triggered Modulator": {
+  "url": "https://maxforlive.com/library/device/9077/note-triggered-modulator",
+  "maker": "Dennis DeSantis",
+  "category": "modulation",
+  "note": "Variable-length parameter sequencer advanced by incoming MIDI notes."
+ },
+ "Potee": {
+  "url": "https://maxforlive.com/library/device/8529/potee",
+  "maker": "s8jfou",
+  "category": "sequencer",
+  "note": "A single knob that generates MIDI notes as you turn it."
+ },
+ "Program Change": {
+  "url": null,
+  "maker": null,
+  "category": "utility",
+  "note": null
+ },
+ "Ravel 1.1": {
+  "url": "https://maxforlive.com/library/device/12080/ravel",
+  "maker": "beatbaker",
+  "category": "sequencer",
+  "note": "Creates and colours chords in real time from any MIDI controller."
+ },
+ "STRIKE_MIDI": {
+  "url": null,
+  "maker": null,
+  "category": "synth",
+  "note": null
+ },
+ "Sektor": {
+  "url": "https://maxforlive.com/library/device/9527/sektor",
+  "maker": "David Johannes Meyer",
+  "category": "filter",
+  "note": "FFT frequency gate splitting audio into four routable bands."
+ },
+ "SimulScrub-v6": {
+  "url": "https://maxforlive.com/library/device/10345/simulscrub",
+  "maker": "zsteinkamp",
+  "category": "sampler",
+  "note": "Plays several simultaneous scrubbing copies of an audio file."
+ },
+ "Step Copy": {
+  "url": null,
+  "maker": null,
+  "category": "utility",
+  "note": null
+ },
+ "The Lot Radio": {
+  "url": "https://maxforlive.com/library/device/12286/the-lot-radio",
+  "maker": "wavefolded",
+  "category": "utility",
+  "note": "Streams The Lot Radio's live DJ mixes inside Live."
+ },
+ "VC3.5": {
+  "url": null,
+  "maker": null,
+  "category": "other",
+  "note": null
+ },
+ "html instruments": {
+  "url": "https://maxforlive.com/library/device/15551/html-instruments",
+  "maker": "Remo De Vico",
+  "category": "synth",
+  "note": "Lets you play web-based HTML instruments inside Ableton Live."
+ },
+ "jBBL v3.3": {
+  "url": "https://maxforlive.com/library/device/9434/jbbl",
+  "maker": "Jasper Marsalis",
+  "category": "delay",
+  "note": "Bucket-brigade delay inspired by the Moog 104."
+ },
+ "jDisperser3 v1.1": {
+  "url": "https://maxforlive.com/library/device/9229/jdisperser3",
+  "maker": "Jasper Marsalis",
+  "category": "filter",
+  "note": "Smears high-energy transients through space and time."
+ },
+ "jMackie-Feedback v4.0": {
+  "url": "https://maxforlive.com/library/device/8442/jmackie-feedback",
+  "maker": "Jasper Marsalis",
+  "category": "distortion",
+  "note": "Mackie mixer inspired negative feedback loop EQ distortion."
+ },
+ "jPalme3 v1.2": {
+  "url": "https://maxforlive.com/library/device/8891/jpalme3",
+  "maker": "Jasper Marsalis",
+  "category": "reverb",
+  "note": "String piano style reverb effect."
+ },
+ "jSpring-Tank v1.3": {
+  "url": "https://maxforlive.com/library/device/13377/jspring-tank",
+  "maker": "Jasper Marsalis",
+  "category": "reverb",
+  "note": "Spring reverb ported to gen~ from a Reaktor ensemble."
+ },
+ "trnr.BitEcho": {
+  "url": "https://maxforlive.com/library/device/8352/bitecho",
+  "maker": "TRNR (Ternar Music Technology)",
+  "category": "delay",
+  "note": "80s-inspired 12-bit digital hardware delay emulation."
+ },
+ "trnr.Hatster": {
+  "url": "https://maxforlive.com/library/device/8347/hatster",
+  "maker": "TRNR (Ternar Music Technology)",
+  "category": "drums",
+  "note": "Hi-hat synthesizer with modelled low-pass gate and LFOs."
+ }
+}

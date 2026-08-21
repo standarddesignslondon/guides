@@ -1,0 +1,553 @@
+{
+  "Arturia": {
+    "vendor_url": "https://www.arturia.com",
+    "products": {
+      "ARP 2600 V3": {
+        "product_url": "https://www.arturia.com/products/software-instruments/arp2600v/overview",
+        "manual_url": "https://dl.arturia.net/products/arp2600v/manual/ARP_2600_V_Manual_3_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the ARP 2600 semi-modular analogue synthesizer."
+      },
+      "Acid V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/acid-v/overview",
+        "manual_url": "https://dl.arturia.net/products/acid-v/manual/acid-v_Manual_1_1_1_EN.pdf",
+        "category": "synth",
+        "note": "Roland TB-303 style bassline synthesizer with built-in sequencer and effects."
+      },
+      "Analog Lab V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/analoglab/overview",
+        "manual_url": "https://dl.arturia.net/products/analoglab-v/manual/analog-lab_Manual_5_11_1_EN.pdf",
+        "category": "synth",
+        "note": "Preset browser and player combining sounds from Arturia's V Collection instruments."
+      },
+      "Augmented BRASS": {
+        "product_url": "https://www.arturia.com/products/software-instruments/augmented/brass",
+        "manual_url": "https://dl.arturia.net/products/augmented-strings/manual/augmented-series_Manual_2_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Hybrid instrument layering sampled brass with synthesis engines."
+      },
+      "Augmented GRAND PIANO": {
+        "product_url": "https://www.arturia.com/products/software-instruments/augmented/grand-piano",
+        "manual_url": "https://dl.arturia.net/products/augmented-strings/manual/augmented-series_Manual_2_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Hybrid instrument layering sampled grand pianos with synthesis engines."
+      },
+      "Augmented MALLETS": {
+        "product_url": "https://www.arturia.com/products/software-instruments/augmented/mallets",
+        "manual_url": "https://dl.arturia.net/products/augmented-strings/manual/augmented-series_Manual_2_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Hybrid instrument layering sampled mallet percussion with synthesis engines."
+      },
+      "Augmented PERSIA": {
+        "product_url": "https://www.arturia.com/products/software-instruments/augmented/persia",
+        "manual_url": "https://dl.arturia.net/products/augmented-strings/manual/augmented-series_Manual_2_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Hybrid instrument layering sampled Persian instruments with synthesis engines."
+      },
+      "Augmented STRINGS": {
+        "product_url": "https://www.arturia.com/products/software-instruments/augmented/strings",
+        "manual_url": "https://dl.arturia.net/products/augmented-strings/manual/augmented-series_Manual_2_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Hybrid instrument layering sampled strings with synthesis engines."
+      },
+      "Augmented VOICES": {
+        "product_url": "https://www.arturia.com/products/software-instruments/augmented/voices",
+        "manual_url": "https://dl.arturia.net/products/augmented-strings/manual/augmented-series_Manual_2_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Hybrid instrument layering sampled choral voices with synthesis engines."
+      },
+      "Augmented WOODWINDS": {
+        "product_url": "https://www.arturia.com/products/software-instruments/augmented/woodwinds",
+        "manual_url": "https://dl.arturia.net/products/augmented-strings/manual/augmented-series_Manual_2_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Hybrid instrument layering sampled woodwinds with synthesis engines."
+      },
+      "Augmented YANGTZE": {
+        "product_url": "https://www.arturia.com/products/software-instruments/augmented/yangtze",
+        "manual_url": "https://dl.arturia.net/products/augmented-strings/manual/augmented-series_Manual_2_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Hybrid instrument layering sampled Chinese instruments with synthesis engines."
+      },
+      "B-3 V2": {
+        "product_url": "https://www.arturia.com/products/software-instruments/b-3-v/overview",
+        "manual_url": "https://dl.arturia.net/products/b-3-v/manual/B-3_V_Manual_2_0_3_EN.pdf",
+        "category": "synth",
+        "note": "Modelled Hammond B-3 tonewheel organ with rotary speaker and effects."
+      },
+      "Buchla Easel V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/buchla-easel-v/overview",
+        "manual_url": "https://dl.arturia.net/products/buchla-easel-v/manual/buchla-easel-v_Manual_1_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Buchla Music Easel West Coast synthesizer."
+      },
+      "Bus EXCITER-104": {
+        "product_url": "https://www.arturia.com/products/software-effects/bus-exciter-104/overview",
+        "manual_url": "https://downloads.arturia.net/products/bus-exciter-104/manual/bus-exciter-104_Manual_1_0_0_EN.pdf",
+        "category": "distortion",
+        "note": "Harmonic exciter modelled on the Aphex Aural Exciter Type C."
+      },
+      "Bus FORCE": {
+        "product_url": "https://www.arturia.com/products/software-effects/bus-force/overview",
+        "manual_url": "https://dl.arturia.net/products/bus-force/manual/bus-force_Manual_1_0_EN.pdf",
+        "category": "dynamics",
+        "note": "Multi-stage bus processor combining drive, compression, EQ and limiting."
+      },
+      "Bus PEAK": {
+        "product_url": "https://www.arturia.com/products/software-effects/bus-peak/overview",
+        "manual_url": "https://dl.arturia.net/products/bus-peak/manual/bus-peak_Manual_1_0_1_EN.pdf",
+        "category": "dynamics",
+        "note": "Transparent peak limiter and loudness maximiser for mix and master bus."
+      },
+      "Bus TRANSIENT": {
+        "product_url": "https://www.arturia.com/products/software-effects/bus-transient/overview",
+        "manual_url": "https://dl.arturia.net/products/bus-transient/manual/bus-transient_Manual_1_0_0_EN.pdf",
+        "category": "dynamics",
+        "note": "Multi-band transient shaper for attack and sustain control."
+      },
+      "CMI V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/cmi-v/overview",
+        "manual_url": "https://dl.arturia.net/products/cmi-v/manual/cmi-v_Manual_1_0_EN.pdf",
+        "category": "sampler",
+        "note": "Emulation of the Fairlight CMI sampling and additive workstation."
+      },
+      "CP-70 V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/cp-70-v/overview",
+        "manual_url": "https://dl.arturia.net/products/cp-70-v/manual/cp-70-v_Manual_1_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Modelled Yamaha CP-70 electric grand piano with effects."
+      },
+      "CS-80 V4": {
+        "product_url": "https://www.arturia.com/products/software-instruments/cs-80v/overview",
+        "manual_url": "https://dl.arturia.net/products/cs-80v/manual/cs-80-v_Manual_4_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Yamaha CS-80 polyphonic analogue synthesizer."
+      },
+      "CZ V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/cz-v/overview",
+        "manual_url": "https://dl.arturia.net/products/cz-v/manual/CZ_V_Manual_1_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Casio CZ phase-distortion synthesizer."
+      },
+      "Chorus DIMENSION-D": {
+        "product_url": "https://www.arturia.com/products/software-effects/chorus-dimension-d/overview",
+        "manual_url": "https://dl.arturia.net/products/chorus-dimension-d/manual/chorus-dimension-d_Manual_1_1_EN.pdf",
+        "category": "modulation",
+        "note": "Emulation of the Roland Dimension D stereo chorus unit."
+      },
+      "Chorus JUN-6": {
+        "product_url": "https://www.arturia.com/products/software-effects/chorus-jun-6/overview",
+        "manual_url": "https://dl.arturia.net/products/chorus-jun-6/manual/juno-chorus_Manual_1_0_EN.pdf",
+        "category": "modulation",
+        "note": "Emulation of the Roland Juno-6 bucket-brigade chorus circuit."
+      },
+      "Clavinet V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/clavinet-v/overview",
+        "manual_url": "https://dl.arturia.net/products/clavinet-v/manual/clavinet-v_Manual_1_0_EN.pdf",
+        "category": "synth",
+        "note": "Modelled Hohner Clavinet D6 with amp and effects."
+      },
+      "Comp DIODE-609": {
+        "product_url": "https://www.arturia.com/products/software-effects/comp-diode-609/overview",
+        "manual_url": "https://dl.arturia.net/products/comp-diode-609/manual/comp-diode-609_Manual_1_0_EN.pdf",
+        "category": "dynamics",
+        "note": "Emulation of a diode-bridge stereo compressor and limiter."
+      },
+      "Comp FET-76": {
+        "product_url": "https://www.arturia.com/products/software-effects/comp-fet76/overview",
+        "manual_url": "https://dl.arturia.net/products/comp-fet76/manual/comp-fet76_Manual_1_0_1_EN.pdf",
+        "category": "dynamics",
+        "note": "Emulation of the UREI 1176 FET compressor."
+      },
+      "Comp TUBE-STA": {
+        "product_url": "https://www.arturia.com/products/software-effects/comp-tubesta/overview",
+        "manual_url": "https://dl.arturia.net/products/comp-tubesta/manual/comp-tubesta_Manual_1_0_1_EN.pdf",
+        "category": "dynamics",
+        "note": "Emulation of the Gates STA-Level vari-mu tube compressor."
+      },
+      "Comp VCA-65": {
+        "product_url": "https://www.arturia.com/products/software-effects/comp-vca65/overview",
+        "manual_url": "https://dl.arturia.net/products/comp-vca65/manual/comp-vca65_Manual_1_0_1_EN.pdf",
+        "category": "dynamics",
+        "note": "Emulation of the dbx 165A VCA compressor and limiter."
+      },
+      "DX7 V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/dx7-v/overview",
+        "manual_url": "https://dl.arturia.net/products/dx7-v/manual/dx7-v_Manual_1_0_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Yamaha DX7 FM synthesizer with extended features."
+      },
+      "Delay BRIGADE": {
+        "product_url": "https://www.arturia.com/products/software-effects/delay-brigade/overview",
+        "manual_url": "https://dl.arturia.net/products/delay-brigade/manual/delay-brigade_Manual_1_5_0_EN.pdf",
+        "category": "delay",
+        "note": "Bucket-brigade analogue delay modelled on the Boss DM-2."
+      },
+      "Delay ETERNITY": {
+        "product_url": "https://www.arturia.com/products/software-effects/delay-eternity/overview",
+        "manual_url": "https://dl.arturia.net/products/delay-eternity/manual/Delay-Eternity_Manual_1_0_0_EN.pdf",
+        "category": "delay",
+        "note": "Creative digital delay with multiple modes and modulation."
+      },
+      "Delay TAPE-201": {
+        "product_url": "https://www.arturia.com/products/software-effects/delay-tape201/overview",
+        "manual_url": "https://dl.arturia.net/products/delay-tape201/manual/delay-tape-201_Manual_1_3_0_EN.pdf",
+        "category": "delay",
+        "note": "Emulation of the Roland RE-201 Space Echo tape delay."
+      },
+      "Dist COLDFIRE": {
+        "product_url": "https://www.arturia.com/products/software-effects/dist-coldfire/overview",
+        "manual_url": "https://dl.arturia.net/products/dist-coldfire/manual/dist-coldfire_Manual_1_0_0_EN.pdf",
+        "category": "distortion",
+        "note": "Dual-engine distortion with many algorithms and modulation routing."
+      },
+      "Dist OPAMP-21": {
+        "product_url": "https://www.arturia.com/products/software-effects/dist-opamp-21/overview",
+        "manual_url": "https://dl.arturia.net/products/dist-opamp-21/manual/dist-opamp-21_Manual_1_0_0_EN.pdf",
+        "category": "distortion",
+        "note": "Op-amp based distortion and saturation modelled on classic circuits."
+      },
+      "Dist TUBE-CULTURE": {
+        "product_url": "https://www.arturia.com/products/software-effects/dist-tube-culture/overview",
+        "manual_url": "https://dl.arturia.net/products/dist-tube-culture/manual/dist-tube-culture_Manual_1_0_0_EN.pdf",
+        "category": "distortion",
+        "note": "Tube harmonic saturator modelled on the Thermionic Culture Vulture."
+      },
+      "EQ SITRAL-295": {
+        "product_url": "https://www.arturia.com/products/software-effects/eq-sitral-295/overview",
+        "manual_url": "https://dl.arturia.net/products/eq-sitral-295/manual/eq-sitral-295_Manual_1_0_EN.pdf",
+        "category": "eq",
+        "note": "Emulation of the Siemens Sitral broadcast console equaliser."
+      },
+      "Efx AMBIENT": {
+        "product_url": "https://www.arturia.com/products/software-effects/efx-ambient/overview",
+        "manual_url": "https://dl.arturia.net/products/efx-ambient/manual/efx-ambient_Manual_1_0_0_EN.pdf",
+        "category": "reverb",
+        "note": "Multi-dimensional ambience processor blending reverb, delay and modulation."
+      },
+      "Efx FRAGMENTS": {
+        "product_url": "https://www.arturia.com/products/software-effects/efx-fragments/overview",
+        "manual_url": "https://dl.arturia.net/products/efx-fragments/manual/efx-fragments_Manual_1_0_0_EN.pdf",
+        "category": "granular",
+        "note": "Granular effect processor for texture, cloud and stutter treatments."
+      },
+      "Efx MOTIONS": {
+        "product_url": "https://www.arturia.com/products/software-effects/efx-motions/overview",
+        "manual_url": "https://dl.arturia.net/products/efx-motions/manual/efx-motions_Manual_1_0_1_EN.pdf",
+        "category": "modulation",
+        "note": "Rhythmic modulation multi-effect driven by step and LFO sequencers."
+      },
+      "Efx REFRACT": {
+        "product_url": "https://www.arturia.com/products/software-effects/efx-refract/overview",
+        "manual_url": "https://dl.arturia.net/products/efx-refract/manual/efx-refract_Manual_1_0_0_EN.pdf",
+        "category": "other",
+        "note": "Creative multi-effect that splits and reshapes signals through effect chains."
+      },
+      "Emulator II V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/emulator-ii-v/overview",
+        "manual_url": "https://dl.arturia.net/products/emulator-ii-v/manual/emulator-II-v_Manual_1_0_1_EN.pdf",
+        "category": "sampler",
+        "note": "Emulation of the E-mu Emulator II 8-bit sampler."
+      },
+      "Farfisa V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/farfisa-v/overview",
+        "manual_url": "https://dl.arturia.net/products/farfisa-v/manual/farfisa-v_Manual_1_9_1_EN.pdf",
+        "category": "synth",
+        "note": "Modelled Farfisa Compact Deluxe combo organ with effects."
+      },
+      "Filter M12": {
+        "product_url": "https://www.arturia.com/products/software-effects/m12-filter/overview",
+        "manual_url": "https://dl.arturia.net/products/m12-filter/manual/filter-m12_Manual_1_2_0_EN.pdf",
+        "category": "filter",
+        "note": "Dual multimode filter modelled on the Oberheim Matrix-12."
+      },
+      "Filter MINI": {
+        "product_url": "https://www.arturia.com/products/software-effects/mini-filter/overview",
+        "manual_url": "https://dl.arturia.net/products/mini-filter/manual/filter-mini_Manual_1_3_0_EN.pdf",
+        "category": "filter",
+        "note": "Moog ladder filter emulation with modulation and sequencer."
+      },
+      "Filter MS-20": {
+        "product_url": "https://www.arturia.com/products/software-effects/filter-ms-20/overview",
+        "manual_url": "https://dl.arturia.net/products/filter-ms-20/manual/filter-ms-20_Manual_1_0_1_EN.pdf",
+        "category": "filter",
+        "note": "Korg MS-20 highpass and lowpass filter emulation with modulation."
+      },
+      "Filter SEM": {
+        "product_url": "https://www.arturia.com/products/software-effects/sem-filter/overview",
+        "manual_url": "https://dl.arturia.net/products/sem-filter/manual/filter-sem_Manual_1_2_1_EN.pdf",
+        "category": "filter",
+        "note": "Oberheim SEM state-variable filter emulation with modulation."
+      },
+      "Flanger BL-20": {
+        "product_url": "https://www.arturia.com/products/software-effects/flanger-bl-20/overview",
+        "manual_url": "https://dl.arturia.net/products/flanger-bl-20/manual/flanger-bl-20_Manual_1_1_EN.pdf",
+        "category": "modulation",
+        "note": "Emulation of the Bel BF-20 stereo flanger."
+      },
+      "Jun-6 V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/jun-6-v/overview",
+        "manual_url": "https://dl.arturia.net/products/jun-6-v/manual/jun-6-v_Manual_1_6_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Roland Juno-6 polyphonic analogue synthesizer."
+      },
+      "Jup-8 V4": {
+        "product_url": "https://www.arturia.com/products/software-instruments/jup-8-v/overview",
+        "manual_url": "https://dl.arturia.net/products/jup-8-v/manual/Jup-8-V4_Manual_1_0_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Roland Jupiter-8 polyphonic analogue synthesizer."
+      },
+      "Jup-8000 V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/jup-8000-v/overview",
+        "manual_url": "https://dl.arturia.net/products/jup-8000-v/manual/jup-8000-v_Manual_1_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Roland JP-8000 supersaw digital synthesizer."
+      },
+      "KORG MS-20 V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/korg-ms-20-v/overview",
+        "manual_url": "https://dl.arturia.net/products/korg-ms-20-v/manual/korg-ms-20-v_Manual_1_0_2_EN.pdf",
+        "category": "synth",
+        "note": "Officially licensed emulation of the Korg MS-20 semi-modular synthesizer."
+      },
+      "Matrix-12 V2": {
+        "product_url": "https://www.arturia.com/products/software-instruments/matrix-12-v/overview",
+        "manual_url": "https://dl.arturia.net/products/matrix-12-v/manual/Matrix-12_V_Manual_2_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Oberheim Matrix-12 polyphonic analogue synthesizer."
+      },
+      "Mellotron V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/mellotron-v/overview",
+        "manual_url": "https://dl.arturia.net/products/mellotron-v/manual/Mellotron_V_Manual_1_0_2_EN.pdf",
+        "category": "sampler",
+        "note": "Emulation of the Mellotron tape-replay keyboard with large tape library."
+      },
+      "Memory V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/memory-v/overview",
+        "manual_url": "https://dl.arturia.net/products/memory-v/manual/memory-v_Manual_1_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Moog Memorymoog polyphonic analogue synthesizer."
+      },
+      "Mini V3": {
+        "product_url": "https://www.arturia.com/products/software-instruments/mini-v/overview",
+        "manual_url": "https://dl.arturia.net/products/mini-v/manual/mini-v_Manual_4_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Minimoog Model D monosynth."
+      },
+      "Mini V4": {
+        "product_url": "https://www.arturia.com/products/software-instruments/mini-v/overview",
+        "manual_url": "https://dl.arturia.net/products/mini-v/manual/mini-v_Manual_4_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Minimoog Model D monosynth, fourth generation."
+      },
+      "MiniBrute V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/minibrute-v/overview",
+        "manual_url": "https://dl.arturia.net/products/minibrute-v/manual/minibrute-v_Manual_1_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Software version of Arturia's MiniBrute analogue monosynth."
+      },
+      "MiniFreak V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/minifreak-v/overview",
+        "manual_url": "https://dl.arturia.net/products/minifreak-v/manual/minifreak-v_Manual_4_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Software version of the Arturia MiniFreak hybrid digital-analogue synthesizer."
+      },
+      "Mix DRUMS": {
+        "product_url": "https://www.arturia.com/products/software-effects/mix-drums/overview",
+        "manual_url": "https://dl.arturia.net/products/mix-drums/manual/mix-drums_Manual_1_0_0_EN.pdf",
+        "category": "dynamics",
+        "note": "All-in-one drum bus processor with transient, compression, EQ and saturation."
+      },
+      "Modular V3": {
+        "product_url": "https://www.arturia.com/products/software-instruments/modular-v/overview",
+        "manual_url": "https://dl.arturia.net/products/modular-v/manual/Modular_V_Manual_3_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Moog Modular System 55 modular synthesizer."
+      },
+      "OP-Xa V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/op-xa-v/overview",
+        "manual_url": "https://dl.arturia.net/products/op-xa-v/manual/op-xa-v_Manual_1_4_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Oberheim OB-Xa polyphonic analogue synthesizer."
+      },
+      "Phaser BI-TRON": {
+        "product_url": "https://www.arturia.com/products/software-effects/phaser-bi-tron/overview",
+        "manual_url": "https://dl.arturia.net/products/phaser-bi-tron/manual/phaser-bi-tron_Manual_1_1_EN.pdf",
+        "category": "modulation",
+        "note": "Emulation of the Mu-Tron Bi-Phase dual analogue phaser."
+      },
+      "Piano V3": {
+        "product_url": "https://www.arturia.com/products/software-instruments/piano-v/overview",
+        "manual_url": "https://dl.arturia.net/products/piano-v/manual/piano-v_Manual_3_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Physically modelled acoustic and electric grand and upright pianos."
+      },
+      "Pigments": {
+        "product_url": "https://www.arturia.com/products/software-instruments/pigments/overview",
+        "manual_url": "https://dl.arturia.net/products/pigments/manual/pigments_Manual_7_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Flagship multi-engine software synthesizer with wavetable, virtual analogue, granular and sampling."
+      },
+      "Pitch SHIFTER-910": {
+        "product_url": "https://www.arturia.com/products/software-effects/pitch-shifter-910/overview",
+        "manual_url": "https://dl.arturia.net/products/pitch-shifter-910/manual/pitch-shifter-910_Manual_1_0_0_EN.pdf",
+        "category": "pitch",
+        "note": "Emulation of the Eventide H910 Harmonizer pitch and formant shifter."
+      },
+      "Pre 1973": {
+        "product_url": "https://www.arturia.com/products/software-effects/1973-pre/overview",
+        "manual_url": "https://dl.arturia.net/products/1973-pre/manual/pre-1973_Manual_1_2_EN.pdf",
+        "category": "eq",
+        "note": "Emulation of the Neve 1073 microphone preamp and equaliser."
+      },
+      "Pre TridA": {
+        "product_url": "https://www.arturia.com/products/software-effects/trida-pre/overview",
+        "manual_url": "https://dl.arturia.net/products/trida-pre/manual/pre-trida_Manual_1_2_EN.pdf",
+        "category": "eq",
+        "note": "Emulation of the Trident A-Range console preamp and equaliser."
+      },
+      "Pre V76": {
+        "product_url": "https://www.arturia.com/products/software-effects/v76-pre/overview",
+        "manual_url": "https://dl.arturia.net/products/v76-pre/manual/pre-v76_Manual_1_2_EN.pdf",
+        "category": "eq",
+        "note": "Emulation of the Telefunken V76 tube microphone preamplifier."
+      },
+      "Prophet-5 V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/prophet-5-v/overview",
+        "manual_url": "https://dl.arturia.net/products/prophet-5-v/manual/prophet-5-v_Manual_1_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Sequential Prophet-5 polyphonic analogue synthesizer."
+      },
+      "Prophet-VS V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/prophet-vs-v/overview",
+        "manual_url": "https://dl.arturia.net/products/prophet-vs-v/manual/prophet-vs-v_Manual_1_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Sequential Prophet VS vector synthesizer."
+      },
+      "Pure LoFi": {
+        "product_url": "https://www.arturia.com/products/software-instruments/pure-lofi/overview",
+        "manual_url": "https://dl.arturia.net/products/pure-lofi/manual/pure-lofi_Manual_1_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Lo-fi sample-based instrument built from degraded tape and vintage sources."
+      },
+      "Rev INTENSITY": {
+        "product_url": "https://www.arturia.com/products/software-effects/rev-intensity/overview",
+        "manual_url": "https://dl.arturia.net/products/rev-intensity/manual/ReverbIntensity_Manual_1_0_1_EN.pdf",
+        "category": "reverb",
+        "note": "Creative reverb with modulation, distortion and dynamic shaping."
+      },
+      "Rev LX-24": {
+        "product_url": "https://www.arturia.com/products/software-effects/rev-lx-24/overview",
+        "manual_url": "https://downloads.arturia.net/products/rev-lx-24/manual/rev-lx-24_Manual_1_0_1_EN.pdf",
+        "category": "reverb",
+        "note": "Emulation of the Lexicon 224 digital reverb."
+      },
+      "Rev OCEAN": {
+        "product_url": "https://www.arturia.com/products/software-effects/rev-ocean/overview",
+        "manual_url": "https://dl.arturia.net/products/rev-ocean/manual/rev-ocean_Manual_1_0_0_EN.pdf",
+        "category": "reverb",
+        "note": "Multi-tank tidal reverb designed for evolving ambient spaces."
+      },
+      "Rev PLATE-140": {
+        "product_url": "https://www.arturia.com/products/software-effects/rev-plate140/overview",
+        "manual_url": "https://dl.arturia.net/products/rev-plate140/manual/ReverbPlate_Manual_1_0_0_EN.pdf",
+        "category": "reverb",
+        "note": "Emulation of the EMT 140 plate reverb."
+      },
+      "Rev SPRING-636": {
+        "product_url": "https://www.arturia.com/products/software-effects/rev-spring636/overview",
+        "manual_url": "https://dl.arturia.net/products/rev-spring636/manual/rev-spring-636_Manual_1_0_2_EN.pdf",
+        "category": "reverb",
+        "note": "Emulation of the Grampian 636 spring reverb."
+      },
+      "Rotary CLS-222": {
+        "product_url": "https://www.arturia.com/products/software-effects/rotary-cls-222/overview",
+        "manual_url": "https://downloads.arturia.net/products/rotary-cls-222/manual/rotary-cls-222_Manual_1_0_1_EN.pdf",
+        "category": "modulation",
+        "note": "Emulation of the Dynacord CLS-222 rotary speaker simulator."
+      },
+      "SEM V2": {
+        "product_url": "https://www.arturia.com/products/software-instruments/sem-v/overview",
+        "manual_url": "https://dl.arturia.net/products/sem-v/manual/sem-v_Manual_3_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Oberheim SEM analogue synthesizer module."
+      },
+      "SEM V3": {
+        "product_url": "https://www.arturia.com/products/software-instruments/sem-v/overview",
+        "manual_url": "https://dl.arturia.net/products/sem-v/manual/sem-v_Manual_3_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Oberheim SEM analogue synthesizer module, third generation."
+      },
+      "SQ80 V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/sq80-v/overview",
+        "manual_url": "https://dl.arturia.net/products/sq80-v/manual/sq80-v_Manual_1_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Ensoniq SQ-80 cross-wave digital-analogue hybrid synthesizer."
+      },
+      "Solina V2": {
+        "product_url": "https://www.arturia.com/products/software-instruments/solina-v/overview",
+        "manual_url": "https://dl.arturia.net/products/solina-v/manual/solina-v_Manual_2_10_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the ARP/Eminent Solina String Ensemble."
+      },
+      "Stage-73 V2": {
+        "product_url": "https://www.arturia.com/products/software-instruments/stage-73-v/overview",
+        "manual_url": "https://dl.arturia.net/products/stage-73-v/manual/Stage-73-V2_Manual_2_0_EN.pdf",
+        "category": "synth",
+        "note": "Modelled Fender Rhodes Stage and Suitcase electric pianos."
+      },
+      "Synclavier V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/synclavier-v/overview",
+        "manual_url": "https://dl.arturia.net/products/synclavier-v/manual/synclavier-v2_Manual_2_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the New England Digital Synclavier II FM synthesizer."
+      },
+      "Synthi V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/synthi-v/overview",
+        "manual_url": "https://dl.arturia.net/products/synthi-v/manual/Synthi_V_Manual_1_0_2_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the EMS Synthi AKS with pin-matrix patching."
+      },
+      "Synthx V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/synthx-v/overview",
+        "manual_url": "https://dl.arturia.net/products/synthx-v/manual/synthx-v_Manual_1_0_1_EN.pdf",
+        "category": "synth",
+        "note": "Emulation of the Elka Synthex multitimbral analogue polysynth."
+      },
+      "Tape J-37": {
+        "product_url": "https://www.arturia.com/products/software-effects/tape-j37/overview",
+        "manual_url": "https://dl.arturia.net/products/tape-j37/manual/tape-j-37_Manual_1_0_0_EN.pdf",
+        "category": "tape",
+        "note": "Emulation of the Studer J37 four-track tape machine."
+      },
+      "Tape MELLO-FI": {
+        "product_url": "https://www.arturia.com/products/software-effects/tape-mello-fi/overview",
+        "manual_url": "https://dl.arturia.net/products/tape-mello-fi/manual/tape-mello-fi_Manual_1_0_0_EN.pdf",
+        "category": "tape",
+        "note": "Lo-fi tape effect modelled on Mellotron tape playback wear."
+      },
+      "VOX Continental V2": {
+        "product_url": "https://www.arturia.com/products/software-instruments/vox-continental-v/overview",
+        "manual_url": "https://dl.arturia.net/products/vox-continental-v/manual/VOX_Continental_V_Manual_2_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Modelled Vox Continental combo organ with effects."
+      },
+      "Vocoder V": {
+        "product_url": "https://www.arturia.com/products/software-instruments/vocoder-v/overview",
+        "manual_url": "https://dl.arturia.net/products/vocoder-v/manual/vocoder-v_Manual_1_0_1_EN.pdf",
+        "category": "vocal",
+        "note": "Emulation of the Bode/Moog 16-band vocoder with built-in synthesizer."
+      },
+      "Wurli V2": {
+        "product_url": "https://www.arturia.com/products/software-instruments/wurli-v/overview",
+        "manual_url": "https://dl.arturia.net/products/wurli-v/manual/wurli-v_Manual_3_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Modelled Wurlitzer 200A electric piano with amp and effects."
+      },
+      "Wurli V3": {
+        "product_url": "https://www.arturia.com/products/software-instruments/wurli-v/overview",
+        "manual_url": "https://dl.arturia.net/products/wurli-v/manual/wurli-v_Manual_3_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Modelled Wurlitzer 200A electric piano, third generation."
+      }
+    }
+  }
+}

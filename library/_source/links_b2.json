@@ -1,0 +1,262 @@
+{
+ "Native Instruments": {
+  "vendor_url": "https://www.native-instruments.com/",
+  "products": {
+   "Absynth 6": {
+    "product_url": "https://www.native-instruments.com/products/absynth",
+    "manual_url": "https://www.native-instruments.com/ni-tech-manuals/absynth-6-user-guide/en/welcome-to-absynth-6",
+    "category": "synth",
+    "note": "Semi-modular hybrid synthesizer combining granular, FM, wavetable and subtractive synthesis."
+   },
+   "Absynth 6 FX": {
+    "product_url": "https://www.native-instruments.com/products/absynth",
+    "manual_url": "https://www.native-instruments.com/ni-tech-manuals/absynth-6-user-guide/en/welcome-to-absynth-6",
+    "category": "other",
+    "note": "Effect-plugin version of Absynth 6 for processing audio through its engine."
+   },
+   "Battery 4": {
+    "product_url": "https://www.native-instruments.com/products/battery",
+    "manual_url": "https://docs.native-instruments.com/online-guides/battery-manual/en/welcome-to-battery",
+    "category": "drums",
+    "note": "Drum sampler with cell-based kit layout and large factory kit library."
+   },
+   "Bite": {
+    "product_url": "https://www.native-instruments.com/products/effects-series-crush-pack",
+    "manual_url": "https://www.native-instruments.com/ni-tech-manuals/crush-pack-manual/en/welcome-to-crush-pack",
+    "category": "distortion",
+    "note": "Anti-aliased bit-crusher and sample-rate reducer from the Crush Pack."
+   },
+   "Dirt": {
+    "product_url": "https://www.native-instruments.com/products/effects-series-crush-pack",
+    "manual_url": "https://www.native-instruments.com/ni-tech-manuals/crush-pack-manual/en/welcome-to-crush-pack",
+    "category": "distortion",
+    "note": "Analogue-modelled dual-stage distortion unit from the Crush Pack."
+   },
+   "Freak": {
+    "product_url": "https://www.native-instruments.com/products/effects-series-crush-pack",
+    "manual_url": "https://www.native-instruments.com/ni-tech-manuals/crush-pack-manual/en/welcome-to-crush-pack",
+    "category": "modulation",
+    "note": "Ring modulation and frequency shifting effect from the Crush Pack."
+   },
+   "Guitar Rig 7": {
+    "product_url": "https://www.native-instruments.com/products/guitar-rig-pro",
+    "manual_url": "https://www.native-instruments.com/ni-tech-manuals/guitar-rig-manual/en/welcome-to-guitar-rig",
+    "category": "amp",
+    "note": "Amp and cabinet simulator with a modular multi-effects rack."
+   },
+   "Kontakt": {
+    "product_url": "https://www.native-instruments.com/products/kontakt",
+    "manual_url": "https://docs.native-instruments.com/online-guides/kontakt-manual/en/welcome-to-kontakt",
+    "category": "sampler",
+    "note": "Industry-standard sampler and host platform for third-party sample libraries."
+   },
+   "Kontakt 7": {
+    "product_url": "https://www.native-instruments.com/products/kontakt",
+    "manual_url": "https://docs.native-instruments.com/online-guides/kontakt-manual/en/welcome-to-kontakt",
+    "category": "sampler",
+    "note": "Previous generation of the Kontakt sampler; superseded by Kontakt 8."
+   },
+   "Kontakt 8": {
+    "product_url": "https://www.native-instruments.com/products/kontakt",
+    "manual_url": "https://docs.native-instruments.com/online-guides/kontakt-manual/en/welcome-to-kontakt",
+    "category": "sampler",
+    "note": "Current generation of the Kontakt sampler and library host."
+   },
+   "Massive X": {
+    "product_url": "https://www.native-instruments.com/products/massive-x",
+    "manual_url": "https://www.native-instruments.com/ni-tech-manuals/massive-x-manual/en/welcome-to-massive-x",
+    "category": "synth",
+    "note": "Polyphonic wavetable synthesizer with modular routing and deep modulation."
+   },
+   "Raum": {
+    "product_url": "https://www.native-instruments.com/products/raum",
+    "manual_url": "https://docs.native-instruments.com/online-guides/raum-manual/en/welcome-to-raum",
+    "category": "reverb",
+    "note": "Creative reverb with three algorithms, freeze function and predelay feedback."
+   },
+   "Reaktor 6": {
+    "product_url": "https://www.native-instruments.com/products/reaktor",
+    "manual_url": "https://www.native-instruments.com/fileadmin/ni_media/downloads/manuals/REAKTOR_6_Getting_Started_English_0419.pdf",
+    "category": "synth",
+    "note": "Modular environment for building and playing custom instruments and effects."
+   },
+   "Reaktor 6 FX": {
+    "product_url": "https://www.native-instruments.com/products/reaktor",
+    "manual_url": "https://www.native-instruments.com/fileadmin/ni_media/downloads/manuals/REAKTOR_6_Getting_Started_English_0419.pdf",
+    "category": "other",
+    "note": "Effect-plugin version of Reaktor 6 for running ensembles on audio tracks."
+   },
+   "Replika": {
+    "product_url": "https://www.native-instruments.com/products/replika",
+    "manual_url": "https://docs.native-instruments.com/online-guides/replika-manual/en/welcome-to-replika",
+    "category": "delay",
+    "note": "True-stereo delay with Modern, Vintage Digital and Diffusion character modes."
+   },
+   "Supercharger": {
+    "product_url": "https://www.native-instruments.com/products/supercharger",
+    "manual_url": null,
+    "category": "dynamics",
+    "note": "One-knob tube-modelled compressor for quick colouring and glue."
+   },
+   "Supercharger GT": {
+    "product_url": "https://www.native-instruments.com/products/supercharger-gt",
+    "manual_url": "https://docs.native-instruments.com/online-guides/supercharger-gt-manual/en/welcome-to-supercharger-gt",
+    "category": "dynamics",
+    "note": "Tube compressor with three saturation flavours and spectral tone shaping."
+   },
+   "Transient Master": {
+    "product_url": "https://www.native-instruments.com/products/transient-master",
+    "manual_url": "https://docs.native-instruments.com/online-guides/transient-master-manual/en/welcome-to-transient-master",
+    "category": "dynamics",
+    "note": "Transient shaper controlling attack and sustain independently of level."
+   }
+  }
+ },
+ "Mixed In Key": {
+  "vendor_url": "https://mixedinkey.com/",
+  "products": {
+   "Captain Beat Epic": {
+    "product_url": "https://mixedinkey.com/captain-plugins/captain-beat/",
+    "manual_url": "https://mixedinkey.com/captain-epic-tutorials/captain-beat-epic-guide/",
+    "category": "drums",
+    "note": "MIDI drum pattern plugin with kits, pattern library and rhythm editing."
+   },
+   "Captain Chords Epic": {
+    "product_url": "https://mixedinkey.com/captain-plugins/captain-chords/",
+    "manual_url": "https://mixedinkey.com/captain-epic-tutorials/captain-chords-epic-how-to-guide/",
+    "category": "sequencer",
+    "note": "MIDI plugin that builds and edits chord progressions in key."
+   },
+   "Captain Deep Epic": {
+    "product_url": "https://mixedinkey.com/captain-plugins/captain-deep/",
+    "manual_url": "https://mixedinkey.com/captain-epic-tutorials/captain-deep-epic-how-to-guide/",
+    "category": "sequencer",
+    "note": "MIDI plugin for writing basslines that follow your chord progression."
+   },
+   "Captain Melody Epic": {
+    "product_url": "https://mixedinkey.com/captain-plugins/captain-melody/",
+    "manual_url": "https://mixedinkey.com/captain-epic-tutorials/captain-melody-epic-guide/",
+    "category": "sequencer",
+    "note": "MIDI plugin for writing and editing melodies locked to key."
+   },
+   "Captain Play Epic": {
+    "product_url": "https://mixedinkey.com/captain-plugins/captain-play/",
+    "manual_url": "https://mixedinkey.com/captain-epic-tutorials/captain-play-epic-guide/",
+    "category": "sequencer",
+    "note": "MIDI plugin for performing in-key chords and melodies from single keys."
+   }
+  }
+ },
+ "Cymatics": {
+  "vendor_url": "https://cymatics.fm/",
+  "products": {
+   "Cymatics Deja Vu": {
+    "product_url": "https://cymatics.fm/products/deja-vu-plugin",
+    "manual_url": null,
+    "category": "pitch",
+    "note": "Time-warp effect that pitch-shifts and time-stretches audio in musical intervals."
+   },
+   "Cymatics Memory": {
+    "product_url": "https://cymatics.fm/products/memory-plugin",
+    "manual_url": null,
+    "category": "modulation",
+    "note": "Analogue-style chorus plugin for widening and thickening sounds."
+   },
+   "Cymatics Origin": {
+    "product_url": "https://cymatics.fm/products/origin-vintage-plugin",
+    "manual_url": null,
+    "category": "tape",
+    "note": "Vintage lo-fi effect with resampler, tape saturation, noise, wow and chorus."
+   }
+  }
+ },
+ "every something": {
+  "vendor_url": "https://plugins.every-something.com/",
+  "products": {
+   "artikulation": {
+    "product_url": "https://plugins.every-something.com/",
+    "manual_url": "https://plugins.every-something.com/faq",
+    "category": "modulation",
+    "note": "Effect that shapes rhythms and grooves, from simple patterns to complex polymeters."
+   },
+   "glosso": {
+    "product_url": "https://plugins.every-something.com/",
+    "manual_url": "https://plugins.every-something.com/faq",
+    "category": "vocal",
+    "note": "Instrument plugin that generates chaotic synthetic vocal and speech-like sounds."
+   }
+  }
+ },
+ "Neutone": {
+  "vendor_url": "https://neutone.ai/",
+  "products": {
+   "Neutone FX": {
+    "product_url": "https://neutone.ai/fx",
+    "manual_url": null,
+    "category": "other",
+    "note": "Free host plugin running community neural-network audio models in real time."
+   },
+   "Neutone Morpho": {
+    "product_url": "https://neutone.ai/morpho",
+    "manual_url": "https://neutone.supabase.co/storage/v1/object/public/morpho-public/manual/2026-06-25_NeutoneMorpho_Manual.pdf",
+    "category": "other",
+    "note": "Real-time AI tone morphing plugin that resynthesises input into other timbres."
+   }
+  }
+ },
+ "Dawesome": {
+  "vendor_url": "https://www.tracktion.com/collections/dawesome",
+  "products": {
+   "Sol": {
+    "product_url": "https://www.tracktion.com/products/sol",
+    "manual_url": null,
+    "category": "reverb",
+    "note": "Free textural effects engine pairing a granular engine with a clouds reverb."
+   }
+  }
+ },
+ "Glitchmachines": {
+  "vendor_url": "https://glitchmachines.com/",
+  "products": {
+   "Hysteresis": {
+    "product_url": "https://glitchmachines.com/products/hysteresis/",
+    "manual_url": "https://glitchmachines.com/wp-content/uploads/HYSTERESIS_User_Guide.pdf",
+    "category": "delay",
+    "note": "Free glitch delay with stutter, lowpass filter and modulation in the feedback path."
+   }
+  }
+ },
+ "Moog": {
+  "vendor_url": "https://www.moogmusic.com/",
+  "products": {
+   "Mariana": {
+    "product_url": "https://software.moogmusic.com/store/mariana",
+    "manual_url": "https://moogconnect.net/m/mariana/",
+    "category": "synth",
+    "note": "Dual-layer software bass synthesizer with mod matrix and built-in effects."
+   }
+  }
+ },
+ "Sonnox": {
+  "vendor_url": "https://sonnox.com/",
+  "products": {
+   "Soften": {
+    "product_url": "https://sonnox.com/articles/soften-free-for-focusrite-novation-customers/",
+    "manual_url": null,
+    "category": "eq",
+    "note": "One-knob three-mode plugin taming harshness and sibilance; Focusrite/Novation exclusive."
+   }
+  }
+ },
+ "Unfiltered Audio": {
+  "vendor_url": "https://www.unfilteredaudio.com/",
+  "products": {
+   "BattleFX": {
+    "product_url": "https://www.unfilteredaudio.com/products/battlefx",
+    "manual_url": null,
+    "category": "other",
+    "note": "Free multi-effects plugin derived from the send effects of Battalion drum synth."
+   }
+  }
+ }
+}

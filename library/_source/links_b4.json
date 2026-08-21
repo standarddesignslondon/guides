@@ -1,0 +1,267 @@
+{
+ "Waves": {
+  "vendor_url": "https://www.waves.com/",
+  "products": {
+   "Curves Resolve Live Mono": {
+    "product_url": "https://www.waves.com/plugins/curves-resolve",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/curves-resolve.pdf",
+    "category": "eq",
+    "note": "Zero-latency Live version of Curves Resolve dynamic unmasking EQ."
+   },
+   "Curves Resolve Live Stereo": {
+    "product_url": "https://www.waves.com/plugins/curves-resolve",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/curves-resolve.pdf",
+    "category": "eq",
+    "note": "Zero-latency Live version of Curves Resolve dynamic unmasking EQ."
+   },
+   "Curves Resolve Mono": {
+    "product_url": "https://www.waves.com/plugins/curves-resolve",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/curves-resolve.pdf",
+    "category": "eq",
+    "note": "Intelligent dynamic EQ that unmasks one track by listening to another."
+   },
+   "Curves Resolve Stereo": {
+    "product_url": "https://www.waves.com/plugins/curves-resolve",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/curves-resolve.pdf",
+    "category": "eq",
+    "note": "Intelligent dynamic EQ that unmasks one track by listening to another."
+   },
+   "IDX Intelligent Dynamics Mono": {
+    "product_url": "https://www.waves.com/plugins/idx-intelligent-dynamics",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/idx-intelligent-dynamics.pdf",
+    "category": "dynamics",
+    "note": "One-knob multiband intelligent compressor adding punch and focus to tracks."
+   },
+   "IDX Intelligent Dynamics Stereo": {
+    "product_url": "https://www.waves.com/plugins/idx-intelligent-dynamics",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/idx-intelligent-dynamics.pdf",
+    "category": "dynamics",
+    "note": "One-knob multiband intelligent compressor adding punch and focus to tracks."
+   },
+   "IDX LIVE Intelligent Dynamics Mono": {
+    "product_url": "https://www.waves.com/plugins/idx-intelligent-dynamics",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/idx-intelligent-dynamics.pdf",
+    "category": "dynamics",
+    "note": "Zero-latency LIVE version of the IDX intelligent dynamics processor."
+   },
+   "IDX LIVE Intelligent Dynamics Stereo": {
+    "product_url": "https://www.waves.com/plugins/idx-intelligent-dynamics",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/idx-intelligent-dynamics.pdf",
+    "category": "dynamics",
+    "note": "Zero-latency LIVE version of the IDX intelligent dynamics processor."
+   },
+   "Magma StressBox Mono": {
+    "product_url": "https://www.waves.com/plugins/magma-stressbox",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/magma-stressbox.pdf",
+    "category": "dynamics",
+    "note": "One-knob analog-style dynamics processor for compression and downward expansion."
+   },
+   "Magma StressBox Stereo": {
+    "product_url": "https://www.waves.com/plugins/magma-stressbox",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/magma-stressbox.pdf",
+    "category": "dynamics",
+    "note": "One-knob analog-style dynamics processor for compression and downward expansion."
+   },
+   "Waves Harmony Mono/Stereo": {
+    "product_url": "https://www.waves.com/plugins/waves-harmony",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/waves-harmony.pdf",
+    "category": "vocal",
+    "note": "Real-time vocal harmoniser generating up to eight harmony voices."
+   },
+   "Waves Harmony Stereo": {
+    "product_url": "https://www.waves.com/plugins/waves-harmony",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/waves-harmony.pdf",
+    "category": "vocal",
+    "note": "Real-time vocal harmoniser generating up to eight harmony voices."
+   }
+  }
+ },
+ "AudioThing": {
+  "vendor_url": "https://www.audiothing.net/",
+  "products": {
+   "Fog Convolver 2": {
+    "product_url": "https://www.audiothing.net/effects/fog-convolver/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_FogConvolver2.pdf",
+    "category": "reverb",
+    "note": "True-stereo convolution reverb with modulation, effects and IR generator."
+   },
+   "Moon Echo": {
+    "product_url": "https://www.audiothing.net/effects/moon-echo/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_MoonEcho.pdf",
+    "category": "delay",
+    "note": "Free delay modelled on moon-bounce radio reflections, with lunar-distance timing."
+   },
+   "Octaves": {
+    "product_url": "https://www.audiothing.net/effects/octaves/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_Octaves.pdf",
+    "category": "filter",
+    "note": "Passive octave-band bandpass filter bank based on Hainbach's hardware."
+   },
+   "Reels": {
+    "product_url": "https://www.audiothing.net/effects/reels/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_Reels.pdf",
+    "category": "tape",
+    "note": "Lo-fi tape machine emulation with built-in echo and tape-stop."
+   },
+   "Speakers": {
+    "product_url": "https://www.audiothing.net/effects/speakers/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_Speakers.pdf",
+    "category": "amp",
+    "note": "Speaker and microphone cabinet simulator with distortion and degradation."
+   },
+   "Springs": {
+    "product_url": "https://www.audiothing.net/effects/springs/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_Springs.pdf",
+    "category": "reverb",
+    "note": "Collection of vintage spring reverb emulations with Baxandall EQ."
+   }
+  }
+ },
+ "Mixed In Key LLC": {
+  "vendor_url": "https://mixedinkey.com/",
+  "products": {
+   "Captain Beat": {
+    "product_url": "https://mixedinkey.com/captain-plugins/captain-beat/",
+    "manual_url": "https://mixedinkey.com/captain-epic-tutorials/captain-beat-epic-guide/",
+    "category": "drums",
+    "note": "Drum pattern and beat-making plugin with kits and editable rhythms."
+   },
+   "Captain Chords": {
+    "product_url": "https://mixedinkey.com/captain-plugins/captain-chords/",
+    "manual_url": "https://mixedinkey.com/captain-epic-tutorials/captain-chords-epic-how-to-guide/",
+    "category": "sequencer",
+    "note": "Chord progression writing plugin that outputs MIDI in key."
+   },
+   "Captain Deep": {
+    "product_url": "https://mixedinkey.com/captain-plugins/captain-deep/",
+    "manual_url": "https://mixedinkey.com/captain-epic-tutorials/captain-deep-epic-how-to-guide/",
+    "category": "sequencer",
+    "note": "Bassline generator that follows chords from Captain Chords."
+   },
+   "Captain Melody": {
+    "product_url": "https://mixedinkey.com/captain-plugins/captain-melody/",
+    "manual_url": "https://mixedinkey.com/captain-epic-tutorials/captain-melody-epic-guide/",
+    "category": "sequencer",
+    "note": "Melody writing plugin that stays in key with your chords."
+   },
+   "Captain Play": {
+    "product_url": "https://mixedinkey.com/captain-plugins/captain-play/",
+    "manual_url": "https://mixedinkey.com/captain-epic-tutorials/captain-play-epic-guide/",
+    "category": "sequencer",
+    "note": "Lets you play in-key chords and melodies from single keys."
+   }
+  }
+ },
+ "Spitfire Audio": {
+  "vendor_url": "https://www.spitfireaudio.com/",
+  "products": {
+   "BBC Symphony Orchestra": {
+    "product_url": "https://www.spitfireaudio.com/collections/bbc-symphony-orchestra",
+    "manual_url": "https://d1t3zg51rvnesz.cloudfront.net/p/files/product-manuals/2557/1572001359/BBCSO_Manual_v1.4.pdf",
+    "category": "sampler",
+    "note": "Full orchestral sample library recorded at Maida Vale Studios."
+   },
+   "LABS": {
+    "product_url": "https://legacylabs.spitfireaudio.com/",
+    "manual_url": "https://support.spitfireaudio.com/en/collections/14448942-labs",
+    "category": "sampler",
+    "note": "Free series of sampled software instruments in a single plugin."
+   },
+   "Solar": {
+    "product_url": "https://www.spitfireaudio.com/collections/solar",
+    "manual_url": null,
+    "category": "sampler",
+    "note": "eDNA-based sample engine hosting Mercury, Jupiter and Radiophonic libraries."
+   }
+  }
+ },
+ "Karanyi Sounds": {
+  "vendor_url": "https://karanyisounds.com/",
+  "products": {
+   "Breeze Black Edition": {
+    "product_url": "https://karanyisounds.com/products/cloudmax-breeze-black-edition",
+    "manual_url": null,
+    "category": "vocal",
+    "note": "One-knob vocal processor combining reverb, EQ, saturation and compression."
+   },
+   "Matra": {
+    "product_url": "https://www.pluginboutique.com/product/2-Effects/53-Multi-Effect-/11832-Matra",
+    "manual_url": null,
+    "category": "delay",
+    "note": "Dual-engine resonant delay with reverb and granular Wash control."
+   }
+  }
+ },
+ "SoundGhost": {
+  "vendor_url": "https://soundghost.net/",
+  "products": {
+   "Ekko Demo": {
+    "product_url": "https://soundghost.net/product/ekko/",
+    "manual_url": "https://dl.dropboxusercontent.com/scl/fi/dfuqc7a5j2qc4oyjzfo6m/Ekko_Manual_V1_0.pdf?rlkey=l1qgkyxpm1hpozdtxkhicx5xq&dl=0",
+    "category": "delay",
+    "note": "Trial version of Ekko, a lo-fi cassette delay with Scramble."
+   },
+   "Texturize": {
+    "product_url": "https://soundghost.net/product/texturize/",
+    "manual_url": "https://dl.dropboxusercontent.com/s/7sipxfdpj3hdw22/Texturize_Manual.pdf?dl=0",
+    "category": "other",
+    "note": "Envelope-following noise layerer adding texture from 200 recorded sources."
+   }
+  }
+ },
+ "Eventide": {
+  "vendor_url": "https://www.eventideaudio.com/",
+  "products": {
+   "Temperance Lite": {
+    "product_url": "https://www.eventideaudio.com/plug-ins/temperance-lite/",
+    "manual_url": "https://www.eventideaudio.com/downloads/?product=Temperance+Lite",
+    "category": "reverb",
+    "note": "Free modal reverb tuning resonances to the 12-note chromatic scale."
+   }
+  }
+ },
+ "JMGSound": {
+  "vendor_url": "https://unitedplugins.com/jmg-sound",
+  "products": {
+   "Lofinity": {
+    "product_url": "https://unitedplugins.com/Lofinity/",
+    "manual_url": "https://unitedplugins.com/Lofinity/documentation",
+    "category": "distortion",
+    "note": "Lo-fi degrader with 100+ FX blocks driven by one HIFI/LOFI knob."
+   }
+  }
+ },
+ "MSXII Sound Design": {
+  "vendor_url": "https://www.msxaudio.com/",
+  "products": {
+   "Fly Tape II": {
+    "product_url": "https://www.airmusictech.com/effects/fly-tape-ii/",
+    "manual_url": "https://cdn.inmusicbrands.com/Software/SI03/FLYTAPEII/Fly%20Tape%20II%20-%20User%20Guide%20-%20v1.1.pdf",
+    "category": "tape",
+    "note": "Cassette-style performance FX with eight tape modes, published by AIR."
+   }
+  }
+ },
+ "SoundeviceDigital": {
+  "vendor_url": "https://unitedplugins.com/soundevice-digital",
+  "products": {
+   "Randomachine": {
+    "product_url": "https://unitedplugins.com/Randomachine/",
+    "manual_url": "https://unitedplugins.com/Randomachine/documentation",
+    "category": "other",
+    "note": "Randomises distortion, pan, ambience, time, pitch and formant per hit."
+   }
+  }
+ },
+ "Wildergarden": {
+  "vendor_url": "https://wildergardenaudio.com/",
+  "products": {
+   "Maim": {
+    "product_url": "https://wildergardenaudio.com/maim/",
+    "manual_url": "https://github.com/ArdenButterfield/Maim/blob/main/Docs/Manual.md",
+    "category": "distortion",
+    "note": "Free open-source MP3-encoder abuse plugin for glitch and spectral distortion."
+   }
+  }
+ }
+}

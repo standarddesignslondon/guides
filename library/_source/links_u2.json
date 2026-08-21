@@ -1,0 +1,278 @@
+{
+ "BEAST Repeat": {
+  "url": "https://dillonbastan.com/store/maxforlive/index.php?product=beast-repeat",
+  "maker": "Dillon Bastan",
+  "category": "other",
+  "note": "Expanded Beat Repeat with pitch, granular stretching, filtering and snapshots."
+ },
+ "Boss DS-1 Distortion v1.1": {
+  "url": null,
+  "maker": "Patrice Elise Earle",
+  "category": "distortion",
+  "note": "Emulation of the Boss DS-1 distortion pedal; maxforlive page no longer online."
+ },
+ "ChannelStrip": {
+  "url": "https://maxforlive.com/library/device/8688/channelstrip",
+  "maker": "TRNR (Ternaer Music Technology)",
+  "category": "eq",
+  "note": "Modelled tube preamp with three-band EQ and an oscilloscope."
+ },
+ "Colour": {
+  "url": "https://elphnt.io/store/essentials/",
+  "maker": "ELPHNT",
+  "category": "distortion",
+  "note": "Analog-style colouration with six modes; part of ELPHNT's ESSENTIALS bundle."
+ },
+ "Crap Cassette v1.0": {
+  "url": "https://maxforlive.com/library/device/3035/crap-cassette",
+  "maker": "SESDevices",
+  "category": "tape",
+  "note": "Emulates a worn C90 cassette: noise, wow, flutter and dropouts."
+ },
+ "Drox II Pro": {
+  "url": "https://dystopianwaves.gumroad.com/l/droxiip",
+  "maker": "Dystopian Waves",
+  "category": "other",
+  "note": "Glitch multi-effect with dropout, CD-skip, tape stop and stutter engines."
+ },
+ "Filter": {
+  "url": "https://elphnt.io/store/essentials/",
+  "maker": "ELPHNT",
+  "category": "filter",
+  "note": "Creative performance filter with analog character; part of ELPHNT's ESSENTIALS bundle."
+ },
+ "GLITCH LOOP": {
+  "url": "https://maxforlive.com/library/device/10694/glitch-loop",
+  "maker": "Remo De Vico",
+  "category": "other",
+  "note": "Glitch looper that turns incoming audio into stuttering loops."
+ },
+ "HarmoAdaptFilter J74": {
+  "url": "https://fabriziopoce.com/HarmoTools.html",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "pitch",
+  "note": "Adapts incoming MIDI to the selected chord and scale; part of J74 HarmoTools."
+ },
+ "HarmoChordFilterAPI J74": {
+  "url": "https://fabriziopoce.com/HarmoTools.html",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "pitch",
+  "note": "Chord filtering module of the J74 HarmoTools bundle."
+ },
+ "HarmoDisplay J74": {
+  "url": "https://fabriziopoce.com/HarmoTools.html",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "analyser",
+  "note": "Displays detected chords and scales; part of J74 HarmoTools."
+ },
+ "HarmoScale J74": {
+  "url": "https://fabriziopoce.com/HarmoTools.html",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "pitch",
+  "note": "Detects and selects scales for the J74 HarmoTools system."
+ },
+ "HarmoScaleRecv J74": {
+  "url": "https://fabriziopoce.com/HarmoTools.html",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "pitch",
+  "note": "Receives scale data from HarmoScale to constrain notes; part of J74 HarmoTools."
+ },
+ "Image2Wavetable": {
+  "url": "https://dillonbastan.com/store/maxforlive/index.php?product=image2wavetable",
+  "maker": "Dillon Bastan",
+  "category": "utility",
+  "note": "Turns image files into single-cycle wavetables for Live's Wavetable."
+ },
+ "Irrational Delay": {
+  "url": "https://maxforlive.com/library/device/10953/irrational-delay",
+  "maker": "Remo De Vico",
+  "category": "delay",
+  "note": "Delay effect using irrational, non-grid delay time ratios."
+ },
+ "Key-Detector": {
+  "url": null,
+  "maker": null,
+  "category": "analyser",
+  "note": null
+ },
+ "Labyrinth Seq 1.0.0": {
+  "url": "https://maxforlive.com/library/device/12643/labyrinth-seq",
+  "maker": "MrPreskovik",
+  "category": "sequencer",
+  "note": "Dual generative MIDI sequencer."
+ },
+ "Lood": {
+  "url": "https://github.com/ess-m/lood",
+  "maker": "Fors (Ess Mattisson)",
+  "category": "synth",
+  "note": "Free monophonic bass synth with a ladder filter; sister device to Lode."
+ },
+ "M2TM Progressions": {
+  "url": "https://midi2themax.gumroad.com/l/m2tm-progressions",
+  "maker": "MIDI 2 The Max",
+  "category": "sequencer",
+  "note": "Live 12 MIDI tool that generates harmonic chord progressions."
+ },
+ "MFA Audio Cycler": {
+  "url": "https://manifest.audio/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "utility",
+  "note": "Audio-triggered stepwise modulator from the free Mod Squad bundle."
+ },
+ "MFA Cheat Code": {
+  "url": "https://manifest.audio/cheat-code",
+  "maker": "Manifest Audio",
+  "category": "other",
+  "note": "Transforms stale or sloppy MIDI input into new musical ideas."
+ },
+ "MFA Gain Tracker": {
+  "url": "https://manifest.audio/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "utility",
+  "note": "Amplitude-based audio-rate modulator from the free Mod Squad bundle."
+ },
+ "MFA MIDI Dubber": {
+  "url": "https://manifest.audio/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "utility",
+  "note": "MIDI-triggered dub-throw value modulator from the free Mod Squad bundle."
+ },
+ "MFA Manual S&H": {
+  "url": "https://manifest.audio/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "utility",
+  "note": "Button-triggered random value generator from the free Mod Squad bundle."
+ },
+ "MFA Tactum": {
+  "url": "https://maxforlive.com/library/device/14202/tactum",
+  "maker": "Manifest Audio",
+  "category": "synth",
+  "note": "Free dual-oscillator stochastic monosynth."
+ },
+ "MultiMapper32Audio V2.7": {
+  "url": "https://maxforlive.com/library/device/2348/multimapper32audio",
+  "maker": "mothergarage",
+  "category": "utility",
+  "note": "32-dial macro mapper with a tabbed interface for mapping many parameters."
+ },
+ "Nirvana C": {
+  "url": "https://dillonbastan.com/store/maxforlive/index.php?product=nirvana",
+  "maker": "Dillon Bastan",
+  "category": "synth",
+  "note": "Circuit-mode instrument version of Nirvana, a feedback simulation sandbox."
+ },
+ "NirvanaFX SM": {
+  "url": "https://dillonbastan.com/store/maxforlive/index.php?product=nirvana",
+  "maker": "Dillon Bastan",
+  "category": "other",
+  "note": "Effect version of Nirvana using its space and material feedback simulations."
+ },
+ "Oxide v1.02": {
+  "url": "https://maxforlive.com/library/device/12412/oxide",
+  "maker": "ijoaudio",
+  "category": "tape",
+  "note": "Tape simulation effect for Ableton Live."
+ },
+ "Probee": {
+  "url": "https://maxforlive.com/library/device/8527/probee",
+  "maker": "s8jfou",
+  "category": "utility",
+  "note": "Free random value generator triggered by incoming MIDI notes."
+ },
+ "Radio Garden": {
+  "url": "https://maxforlive.com/library/device/12279/radio-garden",
+  "maker": "wavefolded",
+  "category": "other",
+  "note": "Streams live radio stations from around the world into Live."
+ },
+ "Rhythmic Crazy Slicer": {
+  "url": "https://maxforlive.com/library/device/15885/rhythmic-crazy-slicer",
+  "maker": "Remo De Vico",
+  "category": "sampler",
+  "note": "Rhythmic sample-slicing instrument."
+ },
+ "Schaeffer's Nightmare": {
+  "url": "https://maxforlive.com/library/device/12414/schaeffersnightmare",
+  "maker": "Remo De Vico",
+  "category": "sampler",
+  "note": "Generative sampler dedicated to musique concrete pioneer Pierre Schaeffer."
+ },
+ "Select + MAP Single Variation MIDI V1 AbletonDrummer": {
+  "url": "https://abletonkurse.gumroad.com/l/Control-and-Automate-Variations-in-Ableton-Live",
+  "maker": "AbletonDrummer",
+  "category": "utility",
+  "note": "Selects and MIDI-maps a single macro variation; part of the Macro Variations pack."
+ },
+ "Smooth Automator MIDI": {
+  "url": "https://maxforlive.com/library/device/6767/smooth-automator",
+  "maker": "KBDevices",
+  "category": "utility",
+  "note": "Creates automation and morphing between Live's macro variations."
+ },
+ "TapPanZeit-v12": {
+  "url": "https://maxforlive.com/library/device/11327/tappanzeit",
+  "maker": "zsteinkamp",
+  "category": "delay",
+  "note": "Delay turned inside out: sculpt the level and panning of each tap."
+ },
+ "TransientDesigner": {
+  "url": "https://maxforlive.com/library/device/1775/transient-designer",
+  "maker": "David Braun",
+  "category": "dynamics",
+  "note": "Shapes the attack and sustain transients of incoming audio."
+ },
+ "bve.glitchlooper": {
+  "url": "https://maxforlive.com/library/device/6833/bve-glitchlooper",
+  "maker": "ithkaa",
+  "category": "other",
+  "note": "Turns incoming audio into glitchy, bleepy stuttered loops."
+ },
+ "j90 1.5": {
+  "url": "https://maxforlive.com/library/device/9462/j90",
+  "maker": "Jasper Marsalis",
+  "category": "modulation",
+  "note": "Phaser based on the MXR Phase 45, 90 and 100."
+ },
+ "jChorus-6 v1.3": {
+  "url": "https://maxforlive.com/library/device/9936/jchorus-6",
+  "maker": "Jasper Marsalis",
+  "category": "modulation",
+  "note": "Juno 60/106 style ensemble chorus."
+ },
+ "jL3v3ll3r v1.4": {
+  "url": "https://maxforlive.com/library/device/9935/jl3v3ll3r",
+  "maker": "Jasper Marsalis",
+  "category": "dynamics",
+  "note": "Clone of Dan Worrall's L3V3LL3R compressor Reaktor ensemble."
+ },
+ "jOdyssey v6.0": {
+  "url": "https://maxforlive.com/library/device/11568/jodyssey",
+  "maker": "Jasper Marsalis",
+  "category": "synth",
+  "note": "Emulation of the ARP Odyssey synthesizer."
+ },
+ "jRat v2.0": {
+  "url": "https://maxforlive.com/library/device/9937/jrat",
+  "maker": "Jasper Marsalis",
+  "category": "distortion",
+  "note": "ProCo Rat distortion emulation with a turbo mode."
+ },
+ "ml.distance": {
+  "url": "https://maxforlive.com/library/device/5228/ml-distance",
+  "maker": "alkman (interface for Robert Henke's ml.Distance)",
+  "category": "spatial",
+  "note": "Places sounds at a distance using delay, filtering and reverb."
+ },
+ "trnr.Duckling": {
+  "url": "https://maxforlive.com/library/device/9202/duckling",
+  "maker": "TRNR (Ternaer Music Technology)",
+  "category": "dynamics",
+  "note": "Free MIDI-triggered ducker with an adjustable envelope."
+ },
+ "trnr.TriplexClassic": {
+  "url": "https://maxforlive.com/library/device/9320/triplex-machines",
+  "maker": "TRNR (Ternaer Music Technology)",
+  "category": "synth",
+  "note": "Classic machine of Triplex, a retro FM synthesizer."
+ }
+}

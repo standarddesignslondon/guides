@@ -835,6 +835,10 @@ def hub_index(subs):
 
 
 def hub_all(subs):
+    # A subject may set "in_all": false in its manifest to stay off the
+    # combined list — catalogue subjects with hundreds of rows would otherwise
+    # swamp the written guides. It still gets its own panel on the hub index.
+    subs = [s for s in subs if s.get("in_all", True)]
     rows = []
     for s in subs:
         sub = s["subject"]

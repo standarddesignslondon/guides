@@ -1,0 +1,261 @@
+{
+ "iZotope": {
+  "vendor_url": "https://www.izotope.com/",
+  "products": {
+   "Insight 2": {
+    "product_url": "https://www.native-instruments.com/products/insight",
+    "manual_url": "https://s3.amazonaws.com/izotopedownloads/docs/insight200/en/index.html",
+    "category": "analyser",
+    "note": "Metering suite for loudness, levels, spectrum and stereo imaging analysis."
+   },
+   "Neutron 4 Elements": {
+    "product_url": "https://www.native-instruments.com/products/neutron-elements",
+    "manual_url": "https://s3.amazonaws.com/izotopedownloads/docs/neutron4/en/getting-started/index.html",
+    "category": "dynamics",
+    "note": "Entry-level mixing channel strip with EQ, compressor and exciter modules."
+   },
+   "Ozone 11 Elements": {
+    "product_url": "https://www.native-instruments.com/products/ozone-elements",
+    "manual_url": "https://docs.izotope.com/ozone11/en/index.html",
+    "category": "dynamics",
+    "note": "Entry-level mastering plugin with assistant-driven EQ, maximizer and imager."
+   },
+   "Ozone 11 Equalizer": {
+    "product_url": "https://www.native-instruments.com/products/ozone-eq",
+    "manual_url": "https://docs.izotope.com/ozone11/en/index.html",
+    "category": "eq",
+    "note": "Standalone version of Ozone's mastering equalizer module."
+   },
+   "Ozone Imager 2": {
+    "product_url": "https://www.native-instruments.com/products/ozone-imager",
+    "manual_url": null,
+    "category": "spatial",
+    "note": "Free stereo widening and imaging plugin with vectorscope display."
+   },
+   "Relay": {
+    "product_url": "https://www.izotope.com/products/relay",
+    "manual_url": null,
+    "category": "utility",
+    "note": "Free gain and mix-staging plugin that communicates with other iZotope plugins."
+   },
+   "Tonal Balance Control 2": {
+    "product_url": "https://www.izotope.com/products/tonal-balance-control",
+    "manual_url": "https://s3.amazonaws.com/izotopedownloads/docs/tbc2/en/index.html",
+    "category": "analyser",
+    "note": "Analyser comparing a mix's tonal balance against genre reference curves."
+   },
+   "Trash": {
+    "product_url": "https://www.native-instruments.com/products/trash",
+    "manual_url": "https://docs.izotope.com/trash/en/index-en.html",
+    "category": "distortion",
+    "note": "Multiband distortion and saturation plugin with convolution cabinets and effects."
+   },
+   "Vinyl": {
+    "product_url": "https://www.native-instruments.com/products/vinyl",
+    "manual_url": "https://s3.amazonaws.com/izotopedownloads/docs/vinyl/en/index.html",
+    "category": "distortion",
+    "note": "Free lo-fi plugin simulating vinyl record and turntable playback artefacts."
+   },
+   "Vocal Doubler": {
+    "product_url": "https://www.izotope.com/products/vocal-doubler",
+    "manual_url": null,
+    "category": "vocal",
+    "note": "Free plugin adding natural-sounding vocal doubling with depth and width."
+   }
+  }
+ },
+ "UVI": {
+  "vendor_url": "https://www.uvi.net/",
+  "products": {
+   "Tape Chorus": {
+    "product_url": "https://www.uvi.net/tape-suite",
+    "manual_url": "https://cdn.uvi.net/UVISC124_Tape_suite/manuals/20250520_143428/tape-suite_manual.pdf",
+    "category": "modulation",
+    "note": "Tape-modelled chorus with up to eight voices and adjustable stereo spread."
+   },
+   "Tape Color": {
+    "product_url": "https://www.uvi.net/tape-suite",
+    "manual_url": "https://cdn.uvi.net/UVISC124_Tape_suite/manuals/20250520_143428/tape-suite_manual.pdf",
+    "category": "tape",
+    "note": "Tape saturation and convolution colour processor from UVI's Tape Suite."
+   },
+   "Tape Delay": {
+    "product_url": "https://www.uvi.net/tape-suite",
+    "manual_url": "https://cdn.uvi.net/UVISC124_Tape_suite/manuals/20250520_143428/tape-suite_manual.pdf",
+    "category": "delay",
+    "note": "Four-head tape delay with per-head pan, sync and feedback selection."
+   },
+   "Tape Flanger": {
+    "product_url": "https://www.uvi.net/tape-suite",
+    "manual_url": "https://cdn.uvi.net/UVISC124_Tape_suite/manuals/20250520_143428/tape-suite_manual.pdf",
+    "category": "modulation",
+    "note": "Through-zero tape flanger with manual and LFO modulation modes."
+   },
+   "UVI Tape Chorus": {
+    "product_url": "https://www.uvi.net/tape-suite",
+    "manual_url": "https://cdn.uvi.net/UVISC124_Tape_suite/manuals/20250520_143428/tape-suite_manual.pdf",
+    "category": "modulation",
+    "note": "Tape-modelled chorus with up to eight voices and adjustable stereo spread."
+   },
+   "UVI Tape Color": {
+    "product_url": "https://www.uvi.net/tape-suite",
+    "manual_url": "https://cdn.uvi.net/UVISC124_Tape_suite/manuals/20250520_143428/tape-suite_manual.pdf",
+    "category": "tape",
+    "note": "Tape saturation and convolution colour processor from UVI's Tape Suite."
+   },
+   "UVI Tape Delay": {
+    "product_url": "https://www.uvi.net/tape-suite",
+    "manual_url": "https://cdn.uvi.net/UVISC124_Tape_suite/manuals/20250520_143428/tape-suite_manual.pdf",
+    "category": "delay",
+    "note": "Four-head tape delay with per-head pan, sync and feedback selection."
+   },
+   "UVI Tape Flanger": {
+    "product_url": "https://www.uvi.net/tape-suite",
+    "manual_url": "https://cdn.uvi.net/UVISC124_Tape_suite/manuals/20250520_143428/tape-suite_manual.pdf",
+    "category": "modulation",
+    "note": "Through-zero tape flanger with manual and LFO modulation modes."
+   },
+   "UVIWorkstation": {
+    "product_url": "https://www.uvi.net/uvi-workstation",
+    "manual_url": "https://cdn.uvi.net/UVIWS_Uvi_workstation/manuals/UVI_Workstation_manual_en.pdf",
+    "category": "sampler",
+    "note": "Free sample-based instrument player for UVI soundbanks and libraries."
+   },
+   "UVIWorkstationVST": {
+    "product_url": "https://www.uvi.net/uvi-workstation",
+    "manual_url": "https://cdn.uvi.net/UVIWS_Uvi_workstation/manuals/UVI_Workstation_manual_en.pdf",
+    "category": "sampler",
+    "note": "Free sample-based instrument player for UVI soundbanks and libraries."
+   }
+  }
+ },
+ "Splice": {
+  "vendor_url": "https://splice.com/",
+  "products": {
+   "Splice Bridge": {
+    "product_url": "https://splice.com/tools/bridge",
+    "manual_url": "https://support.splice.com/en/articles/8652856-how-do-i-install-splice-bridge",
+    "category": "utility",
+    "note": "Free plugin syncing Splice Desktop sample previews to session key and tempo."
+   },
+   "Splice INSTRUMENT": {
+    "product_url": "https://splice.com/instrument",
+    "manual_url": "https://support.splice.com/en/articles/12277768-splice-instrument-faq",
+    "category": "sampler",
+    "note": "Free multi-sampled virtual instrument with monthly free sound drops."
+   },
+   "Splice Sounds": {
+    "product_url": "https://splice.com/tools/sounds-plugin",
+    "manual_url": "https://support.splice.com/en/articles/13860589-how-to-use-search-with-sound-splice-sounds-plugin",
+    "category": "sampler",
+    "note": "Beta plugin for searching, previewing and dragging Splice samples inside a DAW."
+   },
+   "Splice Sounds Listener": {
+    "product_url": "https://splice.com/tools/sounds-plugin",
+    "manual_url": "https://support.splice.com/en/articles/13860589-how-to-use-search-with-sound-splice-sounds-plugin",
+    "category": "utility",
+    "note": "Audio-effect component of the Splice Sounds plugin enabling search-with-sound."
+   }
+  }
+ },
+ "Aberrant DSP": {
+  "vendor_url": "https://aberrantdsp.com/",
+  "products": {
+   "Cataclysm": {
+    "product_url": "https://aberrantdsp.com/plugins/cataclysm/",
+    "manual_url": null,
+    "category": "distortion",
+    "note": "Signal destruction multi-effect inspired by malfunctioning test equipment and analog hardware."
+   },
+   "Lofi Oddity": {
+    "product_url": "https://aberrantdsp.com/plugins/lofi-oddity/",
+    "manual_url": null,
+    "category": "distortion",
+    "note": "Free lo-fi toolkit combining effects from SketchCassette, Digitalis, ShapeShifter and Lair."
+   }
+  }
+ },
+ "Lese": {
+  "vendor_url": "https://lese.io/",
+  "products": {
+   "Codec": {
+    "product_url": "https://lese.io/plugin/codec/",
+    "manual_url": "https://docs.lese.io/plugins/codec/",
+    "category": "distortion",
+    "note": "Free plugin applying real-time audio codec compression artefacts and bandwidth limiting."
+   },
+   "Sweep": {
+    "product_url": "https://lese.io/plugin/sweep/",
+    "manual_url": "https://docs.lese.io/plugins/sweep/",
+    "category": "filter",
+    "note": "Free filter plugin creating endlessly rising or falling Shepard-tone style sweeps."
+   }
+  }
+ },
+ "Airwindows": {
+  "vendor_url": "https://www.airwindows.com/",
+  "products": {
+   "Airwindows Consolidated": {
+    "product_url": "https://www.airwindows.com/consolidated/",
+    "manual_url": "https://github.com/baconpaul/airwin2rack/blob/main/doc/manualdaw.md",
+    "category": "other",
+    "note": "Single free plugin containing the entire Airwindows library of nearly 400 effects."
+   }
+  }
+ },
+ "Crow Hill": {
+  "vendor_url": "https://thecrowhillcompany.com/",
+  "products": {
+   "Vaults": {
+    "product_url": "https://thecrowhillcompany.com/product-category/vaults/",
+    "manual_url": null,
+    "category": "sampler",
+    "note": "Free sample-player plugin hosting Crow Hill's monthly Vaults instrument libraries."
+   }
+  }
+ },
+ "GForce": {
+  "vendor_url": "https://www.gforcesoftware.com/",
+  "products": {
+   "M-Tron Pro IV": {
+    "product_url": "https://www.gforcesoftware.com/product/m-tron-pro-iv/",
+    "manual_url": "https://gforcesoftware.notion.site/M-Tron-Pro-IV-Manual-63f41cc4579542cc9614e278c2383200",
+    "category": "sampler",
+    "note": "Mellotron and Chamberlin emulation with a large tape-sample library and effects."
+   }
+  }
+ },
+ "Minuit": {
+  "vendor_url": "https://minuit.am/",
+  "products": {
+   "Solstice": {
+    "product_url": "https://minuit.am/",
+    "manual_url": "https://minuit.am/docs",
+    "category": "synth",
+    "note": "Spectral synthesizer turning any sample into a playable sound map."
+   }
+  }
+ },
+ "Sinevibes": {
+  "vendor_url": "https://www.sinevibes.com/",
+  "products": {
+   "Skew v2": {
+    "product_url": "https://www.sinevibes.com/skew/",
+    "manual_url": "https://www.sinevibes.com/media/skew/Skew%20v2%20User%20Manual.pdf",
+    "category": "delay",
+    "note": "Non-linear reverse delay with three playheads and twelve pitch-warping curves."
+   }
+  }
+ },
+ "UJAM": {
+  "vendor_url": "https://www.ujam.com/",
+  "products": {
+   "FIN-RETRO": {
+    "product_url": "https://www.ujam.com/finisher/retro/",
+    "manual_url": "https://www.ujam.com/fileadmin/products/Manuals/FIN-RETRO_User_Guide.pdf",
+    "category": "other",
+    "note": "Finisher RETRO multi-effect delivering vintage 60s to 90s production vibes."
+   }
+  }
+ }
+}

@@ -1,0 +1,267 @@
+{
+  "Soundtoys": {
+    "vendor_url": "https://www.soundtoys.com/",
+    "products": {
+      "Devil-Loc": {
+        "product_url": "https://www.soundtoys.com/product/devil-loc/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/Devil-Loc-Manual.pdf",
+        "category": "dynamics",
+        "note": "Free cut-down version of Devil-Loc Deluxe extreme crushing limiter."
+      },
+      "DevilLoc": {
+        "product_url": "https://www.soundtoys.com/product/devil-loc/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/Devil-Loc-Manual.pdf",
+        "category": "dynamics",
+        "note": "Free cut-down version of Devil-Loc Deluxe extreme crushing limiter."
+      },
+      "EchoBoy Jr": {
+        "product_url": "https://www.soundtoys.com/product/echoboy-jr/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/EchoBoyJr-Manual.pdf",
+        "category": "delay",
+        "note": "Simplified junior edition of the EchoBoy echo and delay plugin."
+      },
+      "EchoBoyJr": {
+        "product_url": "https://www.soundtoys.com/product/echoboy-jr/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/EchoBoyJr-Manual.pdf",
+        "category": "delay",
+        "note": "Simplified junior edition of the EchoBoy echo and delay plugin."
+      },
+      "Little MicroShift": {
+        "product_url": "https://www.soundtoys.com/product/little-microshift/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/Little-MicroShift-Manual.pdf",
+        "category": "pitch",
+        "note": "One-knob micro pitch shifter for classic stereo vocal widening."
+      },
+      "Little Plate": {
+        "product_url": "https://www.soundtoys.com/product/little-plate/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/Little-Plate-Manual.pdf",
+        "category": "reverb",
+        "note": "EMT 140 plate reverb emulation with modulation and infinite decay."
+      },
+      "Little PrimalTap": {
+        "product_url": "https://www.soundtoys.com/product/little-primaltap/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/Little-PrimalTap-Manual.pdf",
+        "category": "delay",
+        "note": "Simplified Lexicon Prime Time style lo-fi delay and freeze."
+      },
+      "Little Radiator": {
+        "product_url": "https://www.soundtoys.com/product/little-radiator/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/Little-Radiator-Manual.pdf",
+        "category": "distortion",
+        "note": "Altec 1566A tube preamp emulation for warmth and saturation."
+      },
+      "LittleMicroShift": {
+        "product_url": "https://www.soundtoys.com/product/little-microshift/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/Little-MicroShift-Manual.pdf",
+        "category": "pitch",
+        "note": "One-knob micro pitch shifter for classic stereo vocal widening."
+      },
+      "LittlePlate": {
+        "product_url": "https://www.soundtoys.com/product/little-plate/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/Little-Plate-Manual.pdf",
+        "category": "reverb",
+        "note": "EMT 140 plate reverb emulation with modulation and infinite decay."
+      },
+      "LittlePrimalTap": {
+        "product_url": "https://www.soundtoys.com/product/little-primaltap/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/Little-PrimalTap-Manual.pdf",
+        "category": "delay",
+        "note": "Simplified Lexicon Prime Time style lo-fi delay and freeze."
+      },
+      "LittleRadiator": {
+        "product_url": "https://www.soundtoys.com/product/little-radiator/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/Little-Radiator-Manual.pdf",
+        "category": "distortion",
+        "note": "Altec 1566A tube preamp emulation for warmth and saturation."
+      },
+      "PhaseMistress": {
+        "product_url": "https://www.soundtoys.com/product/phasemistress/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/PhaseMistress-Manual.pdf",
+        "category": "modulation",
+        "note": "Analogue-modelled phaser with many vintage phaser emulations and rhythms."
+      },
+      "SpaceBlender": {
+        "product_url": "https://www.soundtoys.com/product/spaceblender/",
+        "manual_url": "https://www.soundtoys.com/wp-content/uploads/SpaceBlender-Manual.pdf",
+        "category": "reverb",
+        "note": "Experimental swarm-synthesis reverb for evolving ambient spaces."
+      }
+    }
+  },
+  "Full Bucket Music": {
+    "vendor_url": "https://www.fullbucket.de/music/",
+    "products": {
+      "Bucket ONE": {
+        "product_url": "https://www.fullbucket.de/music/bucketone.html",
+        "manual_url": "https://www.fullbucket.de/music/dl/bucketone_manual_1_1.pdf",
+        "category": "synth",
+        "note": "Free emulation of the 1985 Crumar Bit 01/99 synthesizer."
+      },
+      "BucketOne": {
+        "product_url": "https://www.fullbucket.de/music/bucketone.html",
+        "manual_url": "https://www.fullbucket.de/music/dl/bucketone_manual_1_1.pdf",
+        "category": "synth",
+        "note": "Free emulation of the 1985 Crumar Bit 01/99 synthesizer."
+      },
+      "Grain Strain": {
+        "product_url": "https://www.fullbucket.de/music/grainstrain.html",
+        "manual_url": "https://www.fullbucket.de/music/dl/grainstrain_manual_1_1.pdf",
+        "category": "granular",
+        "note": "Free grain-straining effect that loops short grains of input audio."
+      },
+      "GrainStrain": {
+        "product_url": "https://www.fullbucket.de/music/grainstrain.html",
+        "manual_url": "https://www.fullbucket.de/music/dl/grainstrain_manual_1_1.pdf",
+        "category": "granular",
+        "note": "Free grain-straining effect that loops short grains of input audio."
+      },
+      "PECS": {
+        "product_url": "https://www.fullbucket.de/music/pecs.html",
+        "manual_url": "https://www.fullbucket.de/music/dl/pecs_manual_1_0.pdf",
+        "category": "synth",
+        "note": "Free emulation of the Korg PE-2000 Poly-Ensemble S string machine."
+      }
+    }
+  },
+  "Audiomodern": {
+    "vendor_url": "https://audiomodern.com/",
+    "products": {
+      "Filterstep": {
+        "product_url": "https://audiomodern.com/shop/plugins/filterstep/",
+        "manual_url": null,
+        "category": "filter",
+        "note": "Free creative motion filter with randomised rhythmic filter sequences."
+      },
+      "Gatelab": {
+        "product_url": "https://audiomodern.com/shop/plugins/gatelab-2/",
+        "manual_url": null,
+        "category": "modulation",
+        "note": "Gate sequencer and volume modulation generator with randomisation."
+      },
+      "Panflow": {
+        "product_url": "https://audiomodern.com/shop/plugins/panflow/",
+        "manual_url": null,
+        "category": "modulation",
+        "note": "Free creative panning modulator and stereo rhythm generator."
+      },
+      "Soundbox": {
+        "product_url": "https://audiomodern.com/soundbox/",
+        "manual_url": "https://audiomodern.zendesk.com/hc/en-us/articles/360012310617-Soundbox-Manual-PDF",
+        "category": "sampler",
+        "note": "Free MPE sampler engine that loads Audiomodern and third-party libraries."
+      }
+    }
+  },
+  "SoundMorph": {
+    "vendor_url": "https://soundmorph.com/",
+    "products": {
+      "Dust": {
+        "product_url": "https://soundmorph.com/products/dust",
+        "manual_url": "https://app.filemonk.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxrTlROaVkyTTBNUzAzTVRoaExUUmxNRGN0WVRsaE1pMWxNMkl3T0RZeFptVm1aallHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--5fb0398cc68ded9410df0dd9f302ea2ff3831589/Dust%20Manual.pdf",
+        "category": "granular",
+        "note": "Binaural granular synthesizer for evolving textures and spatial movement."
+      },
+      "Dust (fx)": {
+        "product_url": "https://soundmorph.com/products/dust",
+        "manual_url": "https://app.filemonk.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxrTlROaVkyTTBNUzAzTVRoaExUUmxNRGN0WVRsaE1pMWxNMkl3T0RZeFptVm1aallHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--5fb0398cc68ded9410df0dd9f302ea2ff3831589/Dust%20Manual.pdf",
+        "category": "granular",
+        "note": "Audio-effect build of Dust, the binaural granular processor."
+      },
+      "WaveWarper 2": {
+        "product_url": "https://soundmorph.com/products/wave-warper-2",
+        "manual_url": "https://app.filemonk.io/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWswWW1VNVpqY3dOQzB6T1RZMExUUmlPRFl0WVdVeU1TMW1ZalU0WlRneE1tTmxNamdHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--f5965c70f8c5488c7031d737619551996a16c792/Wave%20Warper%202%20Manual.pdf",
+        "category": "granular",
+        "note": "Sound-design instrument with granular engine and eight movable emitters."
+      }
+    }
+  },
+  "Fors": {
+    "vendor_url": "https://fors.fm/",
+    "products": {
+      "Junior-Lite": {
+        "product_url": "https://fors.fm/junior",
+        "manual_url": "https://api.fors.fm/storage/v1/object/public/manuals/junior-guide.pdf",
+        "category": "synth",
+        "note": "Free cut-down version of Junior, a 4-bit wavetable synthesizer."
+      },
+      "Pivot-Lite": {
+        "product_url": "https://fors.fm/pivot",
+        "manual_url": "https://api.fors.fm/storage/v1/object/public/manuals/pivot-lite-guide.pdf",
+        "category": "synth",
+        "note": "Free two-operator version of Pivot, an FM synthesizer."
+      }
+    }
+  },
+  "Phase Fiasco": {
+    "vendor_url": "https://www.phasefiasco.com/",
+    "products": {
+      "Annulus": {
+        "product_url": "https://www.phasefiasco.com/annulus",
+        "manual_url": null,
+        "category": "synth",
+        "note": "Free polyphonic resonator synth modelled on Mutable Instruments Rings."
+      },
+      "Tape Fiasco": {
+        "product_url": "https://www.phasefiasco.com/tapefiasco",
+        "manual_url": null,
+        "category": "tape",
+        "note": "Creative tape effect combining granular stretch, varispeed and stutter."
+      }
+    }
+  },
+  "Decidedly": {
+    "vendor_url": "https://www.decentsamples.com/",
+    "products": {
+      "DecentSampler": {
+        "product_url": "https://www.decentsamples.com/product/decent-sampler-plugin/",
+        "manual_url": "https://www.decentsamples.com/how-to-use-decent-sampler/",
+        "category": "sampler",
+        "note": "Free sample player for dspreset and dslibrary format libraries."
+      }
+    }
+  },
+  "Higher Plane Software": {
+    "vendor_url": "https://www.higher-plane.uk/",
+    "products": {
+      "SpaceWalk": {
+        "product_url": "https://www.higher-plane.uk/apps/spacewalk",
+        "manual_url": "https://docs.higher-plane.uk/spacewalk/SpaceWalk-User-Manual.pdf",
+        "category": "sequencer",
+        "note": "Free MIDI generator producing endless ambient chord progressions."
+      }
+    }
+  },
+  "Moonwave": {
+    "vendor_url": "https://moonwavefx.com/",
+    "products": {
+      "Parallax": {
+        "product_url": "https://moonwavefx.com/effects/parallax-dual-multi-effect/",
+        "manual_url": null,
+        "category": "other",
+        "note": "Dual-engine multi-effect morphing between clean punch and dissolved texture."
+      }
+    }
+  },
+  "Sound Particles": {
+    "vendor_url": "https://soundparticles.com/",
+    "products": {
+      "AirMusic": {
+        "product_url": "https://soundparticles.com/products/air-music-edition",
+        "manual_url": "https://soundparticles.com/assets/files/support/airmusicedition_manual.pdf",
+        "category": "spatial",
+        "note": "Free Music Edition of Air; one knob simulates distance and depth."
+      }
+    }
+  },
+  "Wave Alchemy": {
+    "vendor_url": "https://www.wavealchemy.co.uk/",
+    "products": {
+      "Triaz Player": {
+        "product_url": "https://www.wavealchemy.co.uk/product/triaz-player/",
+        "manual_url": "https://www.wavealchemy.co.uk/wp-content/uploads/2024/07/Triaz_Plugin_Manual_1.1.0.pdf",
+        "category": "drums",
+        "note": "Free player version of Triaz drum plugin with 4000 samples."
+      }
+    }
+  }
+}

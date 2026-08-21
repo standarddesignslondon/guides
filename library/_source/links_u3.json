@@ -1,0 +1,278 @@
+{
+ "Backspin v1.0.1": {
+  "url": "https://maxforlive.com/library/device/14124/backspin",
+  "maker": "Andrew Norris",
+  "category": "tape",
+  "note": "Adds realistic vinyl-style backspins and rewinds to a track."
+ },
+ "Boss GE-7 Equalizer": {
+  "url": null,
+  "maker": null,
+  "category": "eq",
+  "note": null
+ },
+ "ChannelStrip-1": {
+  "url": "https://maxforlive.com/library/device/8688/channelstrip",
+  "maker": "Ternär Music Technology (TRNR)",
+  "category": "eq",
+  "note": "Modelled tube preamp with three-band EQ and oversampling."
+ },
+ "Contemporary texture": {
+  "url": "https://maxforlive.com/library/device/11823/contemporary-texture",
+  "maker": "Remo De Vico",
+  "category": "pitch",
+  "note": "Three independent pitch-shift and time-stretch lines for building textures."
+ },
+ "Cycle Variations Up + Down V1 AbletonDrummer": {
+  "url": "https://abletonkurse.gumroad.com/l/Control-and-Automate-Variations-in-Ableton-Live",
+  "maker": "AbletonDrummer",
+  "category": "utility",
+  "note": "Steps Rack macro variations up or down; part of the Variations pack."
+ },
+ "DrumBrain": {
+  "url": "https://maxforlive.com/library/device/5462/drumbrain",
+  "maker": "mganss",
+  "category": "sequencer",
+  "note": "808/909-style drum pattern generator and sequencer."
+ },
+ "Filter Glass": {
+  "url": "https://maxforlive.com/library/device/11486/filter-glass",
+  "maker": "Remo De Vico",
+  "category": "filter",
+  "note": "Free filter audio effect by Remo De Vico."
+ },
+ "Geiger LFO": {
+  "url": "https://maxforlive.com/library/device/5941/geiger-lfo-randomized-on-off-modulation",
+  "maker": "GlintEye",
+  "category": "modulation",
+  "note": "Randomised on-off LFO modulation with several modulation modes."
+ },
+ "HarmoChord J74": {
+  "url": "https://maxforlive.com/library/device/1177/j74-harmotools",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "pitch",
+  "note": "Chord device from the free J74 HarmoTools real-time harmonisation bundle."
+ },
+ "HarmoChordNotesOut J74": {
+  "url": "https://maxforlive.com/library/device/1177/j74-harmotools",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "pitch",
+  "note": "Part of the free J74 HarmoTools real-time MIDI harmonisation bundle."
+ },
+ "HarmoDisplayGuitar J74": {
+  "url": "https://maxforlive.com/library/device/1177/j74-harmotools",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "pitch",
+  "note": "Guitar display device from the free J74 HarmoTools bundle."
+ },
+ "HarmoScale2Chords J74": {
+  "url": "https://maxforlive.com/library/device/1177/j74-harmotools",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "pitch",
+  "note": "Part of the free J74 HarmoTools real-time MIDI harmonisation bundle."
+ },
+ "HarmoScaleSend J74": {
+  "url": "https://maxforlive.com/library/device/1177/j74-harmotools",
+  "maker": "J74 (Fabrizio Poce)",
+  "category": "pitch",
+  "note": "Part of the free J74 HarmoTools real-time MIDI harmonisation bundle."
+ },
+ "Image2Wavetable-1": {
+  "url": "https://maxforlive.com/library/device/5291/image2wavetable",
+  "maker": "ndivuyo",
+  "category": "utility",
+  "note": "Turns an image into a wavetable for Live's Wavetable synth."
+ },
+ "JG.MultibandDelay": {
+  "url": "https://maxforlive.com/library/device/158/jg-delays",
+  "maker": "pp",
+  "category": "delay",
+  "note": "Multiband delay from the free JG.Delays bundle."
+ },
+ "L.ObliqueStrategies.v1.2": {
+  "url": "https://maxforlive.com/library/device/1466/l-obliquestrategies",
+  "maker": "Lokua (Joshua Kleckner)",
+  "category": "utility",
+  "note": "Shows a random Oblique Strategy when you click the device."
+ },
+ "Learn Chords": {
+  "url": null,
+  "maker": null,
+  "category": "other",
+  "note": null
+ },
+ "M2TM Chords": {
+  "url": "https://midi2themax.gumroad.com/l/m2tm-chords-dv",
+  "maker": "MIDI 2 the Max",
+  "category": "sequencer",
+  "note": "Type in chord names and it generates the MIDI progression."
+ },
+ "MDD_MARIONNETTE_1.3": {
+  "url": "https://maxforlive.com/library/device/6284/mdd-marionnette",
+  "maker": "Maxime Dangles",
+  "category": "sequencer",
+  "note": "MIDI sequencer inspired by the Monome White Whale module."
+ },
+ "MFA Audio S&H": {
+  "url": "https://manifestaudio.gumroad.com/l/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "Sample-and-hold random modulator triggered by audio; part of Mod Squad."
+ },
+ "MFA Cosmus": {
+  "url": "https://manifest.audio/solarus",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "Sets the universal day rate for all Solarus modulators in a set."
+ },
+ "MFA LFOx": {
+  "url": "https://manifestaudio.gumroad.com/l/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "Advanced synced LFO with curves and cycle reset; part of Mod Squad."
+ },
+ "MFA MIDI Key Tracker": {
+  "url": "https://manifestaudio.gumroad.com/l/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "Makes modulation from MIDI pitch, velocity or gate; part of Mod Squad."
+ },
+ "MFA Mutator Free": {
+  "url": "https://manifestaudio.gumroad.com/l/mutator-free",
+  "maker": "Manifest Audio",
+  "category": "sequencer",
+  "note": "MIDI tool that randomly mutes notes for instant pattern variations."
+ },
+ "MFA X-Control": {
+  "url": "https://manifestaudio.gumroad.com/l/mod-squad-free",
+  "maker": "Manifest Audio",
+  "category": "modulation",
+  "note": "Quantised macro knob for ladder-style parameter changes; part of Mod Squad."
+ },
+ "MultiSquisher": {
+  "url": "https://maxforlive.com/library/device/14361/multisquisher",
+  "maker": "opticon93",
+  "category": "synth",
+  "note": "Polyphonic version of the developer's monophonic Squisher instrument."
+ },
+ "Nirvana SM": {
+  "url": "https://maxforlive.com/library/device/12567/nirvana",
+  "maker": "ndivuyo",
+  "category": "synth",
+  "note": "Feedback device that can be used as a polyphonic instrument."
+ },
+ "No_Input Synth": {
+  "url": null,
+  "maker": null,
+  "category": "synth",
+  "note": null
+ },
+ "Pluck": {
+  "url": "https://maxforlive.com/library/device/6582/pluck",
+  "maker": "Tilman Ehrhorn",
+  "category": "synth",
+  "note": "Polyphonic physical modelling synthesizer."
+ },
+ "Probee-1": {
+  "url": "https://maxforlive.com/library/device/8527/probee",
+  "maker": "s8jfou",
+  "category": "modulation",
+  "note": "Free random value generator triggered by incoming MIDI notes."
+ },
+ "Randomise Session Colours": {
+  "url": null,
+  "maker": null,
+  "category": "utility",
+  "note": null
+ },
+ "STING!64 by SKINNERBOX": {
+  "url": "https://maxforlive.com/library/device/4260/sting-by-skinnerbox",
+  "maker": "Skinnerbox",
+  "category": "sequencer",
+  "note": "MIDI step sequencer for acid basslines and live performance."
+ },
+ "ScratchBacker-v3": {
+  "url": "https://plugins.steinkamp.us/m4l-ScratchBacker",
+  "maker": "Zack Steinkamp",
+  "category": "sampler",
+  "note": "Sample playback instrument with twelve triggerable turntablism scratch presets."
+ },
+ "Shift": {
+  "url": null,
+  "maker": null,
+  "category": "other",
+  "note": null
+ },
+ "Spect 1.3": {
+  "url": null,
+  "maker": null,
+  "category": "other",
+  "note": null
+ },
+ "TapeStop 2.0": {
+  "url": "https://maxforlive.com/library/device/217/tapestop",
+  "maker": "zalo",
+  "category": "tape",
+  "note": "Tape-stop effect that slows audio to a halt."
+ },
+ "Turing Machine 3.1": {
+  "url": "https://maxforlive.com/library/device/5988/turing-machine",
+  "maker": "mindlesstrx",
+  "category": "sequencer",
+  "note": "Random looping sequencer based on Music Thing Modules' Turing Machine."
+ },
+ "cb_rainer 1.6": {
+  "url": null,
+  "maker": null,
+  "category": "synth",
+  "note": null
+ },
+ "j90 1.7": {
+  "url": "https://maxforlive.com/library/device/9462/j90",
+  "maker": "Jasper Marsalis",
+  "category": "modulation",
+  "note": "Phaser modelled on the MXR Phase 45/90/100 pedals."
+ },
+ "jChorus-6 v1.4": {
+  "url": "https://maxforlive.com/library/device/9936/jchorus-6",
+  "maker": "Jasper Marsalis",
+  "category": "modulation",
+  "note": "Juno 60/106-style ensemble chorus."
+ },
+ "jLeslie v2.8": {
+  "url": "https://maxforlive.com/library/device/8890/jleslie",
+  "maker": "Jasper Marsalis",
+  "category": "modulation",
+  "note": "Rotary speaker (Leslie) emulation."
+ },
+ "jPalme v1.2": {
+  "url": "https://maxforlive.com/library/device/8891/jpalme",
+  "maker": "Jasper Marsalis",
+  "category": "reverb",
+  "note": "String-resonator reverb modelled on the Ondes Martenot palme diffuser."
+ },
+ "jRat v3.1": {
+  "url": "https://maxforlive.com/library/device/9937/jrat",
+  "maker": "Jasper Marsalis",
+  "category": "distortion",
+  "note": "ProCo RAT distortion emulation with turbo mode."
+ },
+ "polyrhythmus v1.01": {
+  "url": "https://maxforlive.com/library/device/2431/polyrhythmus-a-modular-euclidean-rhythm-builder",
+  "maker": "bennniii",
+  "category": "sequencer",
+  "note": "Modular Euclidean rhythm builder for polyrhythmic MIDI patterns."
+ },
+ "trnr.Flechtwerk": {
+  "url": "https://trnr.gumroad.com/l/flechtwerk",
+  "maker": "Ternär Music Technology",
+  "category": "synth",
+  "note": "Macro-oscillator synth cloning Mutable Instruments Plaits; M4L build discontinued."
+ },
+ "visage_1.0": {
+  "url": "https://maxforlive.com/library/device/11620/visage-fm-drum-machine",
+  "maker": "sseker",
+  "category": "drums",
+  "note": "Four-track FM drum synthesizer built for Ableton Live."
+ }
+}
