@@ -1,0 +1,22 @@
+{
+    "id": "com.simonmorse.misprint",
+    "name": "Misregistered Print",
+    "version": "1.0.0",
+    "main": "index.html",
+    "manifestVersion": 5,
+    "host": {
+        "app": "PS",
+        "minVersion": "24.2.0"
+    },
+    "entrypoints": [
+        {
+            "type": "panel",
+            "id": "misprint.panel",
+            "label": { "default": "Misregistered Print" },
+            "minimumSize": { "width": 240, "height": 260 },
+            "maximumSize": { "width": 600, "height": 2400 },
+            "preferredDockedSize": { "width": 300, "height": 520 },
+            "preferredFloatingSize": { "width": 300, "height": 520 }
+        }
+    ]
+}

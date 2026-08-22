@@ -2070,3 +2070,159 @@ ITEMS.append({
         "gating and pass gains — plus a Max host test patch.",
     ],
 })
+
+# --------------------------------------------------------------------------
+# EVENING STAR
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "evening-star",
+    "name": "Evening Star",
+    "kind": "Audio Effect",
+    "author": "Claude",
+    "status": "v0.2",
+    "folder": "Evening Star Device",
+    "tagline": "Frippertronics twin tape-loop system — two machine pairs "
+               "that build slow soundscapes, darken with every pass and ebb "
+               "away on command.",
+    "blurb":
+        "The two-Revox tape-delay feedback rig Eno set up for Fripp in 1972 "
+        "(*No Pussyfooting*, *Evening Star*, the *Gone to Earth* loops), "
+        "twice over. Each of the two loops is a circular tape whose length "
+        "**is** the delay time: what you play recirculates, and every pass "
+        "is a new tape generation — high end fades, saturation creeps in, "
+        "and at higher **Wear** settings dropouts get printed permanently "
+        "onto the tape. Separate Record and Listen switches per loop let "
+        "you build on one machine, freeze it, work on the other, then bring "
+        "both back and overdub over the lot. Named after the 1975 Fripp & "
+        "Eno album.",
+    "quickstart": [
+        "Drop `Evening Star v0.2.amxd` on an **audio track**, in front of "
+        "guitar or any input. Loop 1 starts armed (REC and EAR on).",
+        "Play a phrase; it returns after **Time 1** and stacks up at the "
+        "**Feedback 1** rate. Keep playing into the wash.",
+        "Switch loop 1's **REC** off (its tape keeps playing), switch loop "
+        "2's **REC** and **EAR** on, and build something different at a "
+        "different Time.",
+        "Bring loop 1's REC back and overdub over everything.",
+        "Press **Ebb** and let the whole thing fade over **Ebb Time**; "
+        "press again mid-fade to catch it and hold.",
+        "For Basinski-style disintegration: build a loop, REC off, "
+        "Feedback 100 %, Wear above 70 %, walk away.",
+    ],
+    "controls": [
+        {
+            "title": "Per machine pair",
+            "rows": [
+                ["Time 1 / Time 2", "0.5 - 30 s",
+                 "The loop length — the distance between the two tape "
+                 "machines. The right-hand reel in the display moves with "
+                 "it. Changes glide over about a second, like dragging a "
+                 "machine across the floor, rather than jumping cleanly."],
+                ["Feedback 1 / 2", "0 - 105 %",
+                 "Per-pass survival. 100 % sustains (Wear still dulls it — "
+                 "that's the tape); above 100 % swells; below, the loop "
+                 "ebbs at its own rate."],
+                ["Record (REC)", "toggle",
+                 "Feeds the input onto that loop's tape. Red dot in the "
+                 "display — clickable there too."],
+                ["Listen (EAR)", "toggle",
+                 "Makes the loop audible. **Both off = full freeze**: the "
+                 "tape holds its contents exactly, silently, indefinitely. "
+                 "Record on with Listen off = silent overdub. Listen on "
+                 "with Record off = playback, still decaying per pass."],
+                ["Speed 1 / 2", "Reverse / Rev Half / Half / Normal",
+                 "Normal locks the read head to the write head — a true "
+                 "tape pair. Half plays an octave down; Reverse and Rev "
+                 "Half let the head drift round the loop against the "
+                 "writing, endlessly recombining the material."],
+                ["Level 1 / 2", "0 - 100 %", "That loop's output volume."],
+            ],
+        },
+        {
+            "title": "Tape",
+            "rows": [
+                ["Wear", "0 - 100 %",
+                 "Generation loss, on a power curve. Below ~30 % it is "
+                 "gentle dulling; at full, each pass is filtered down "
+                 "toward ~440 Hz, saturated hard, and random segments are "
+                 "dipped — and because the damage is written back onto the "
+                 "tape, it accumulates pass after pass."],
+                ["Wow", "0 - 100 %",
+                 "Slow twin-sine pitch drift on both loops' read heads."],
+                ["Hiss", "0 - 100 %",
+                 "Tape-noise floor added on every pass while a loop "
+                 "circulates — an idling loop slowly drowns in it. "
+                 "Wear-scaled crackle rides on top."],
+                ["Sync", "Free / Half / Same / Double",
+                 "Locks Loop 2's time to a ratio of Loop 1's. In Free, "
+                 "Time 2 is its own dial. Mismatched times are where the "
+                 "deep tidal washes live — two loops that never realign."],
+                ["Ebb / Ebb Time", "button - 5 - 300 s",
+                 "One press starts a slow fade of both loops over Ebb "
+                 "Time; a second press catches the fade and holds at that "
+                 "level. The amber bar in the display tracks it. After a "
+                 "full fade the tapes are wiped and feedback restores "
+                 "itself."],
+            ],
+        },
+        {
+            "title": "Mix",
+            "rows": [
+                ["Dry", "0 - 100 %", "The untreated input, always live."],
+                ["Loops", "0 - 100 %", "Both loops' combined return."],
+                ["Output", "-18 - +6 dB", "Final trim before the safety clip."],
+            ],
+        },
+    ],
+    "banks": [
+        {"name": "Perform",
+         "encoders": ["Feedbk 1", "Feedbk 2", "Time 1", "Time 2", "Dry",
+                      "Loops", "Ebb Time", "Output"],
+         "buttons": ["Rec 1", "Ear 1", "Rec 2", "Ear 2", "Ebb"],
+         "note": "The playing surface: both feedbacks and times under one "
+                 "hand, transport on the button row."},
+        {"name": "Machines",
+         "encoders": ["Time 1", "Speed 1", "Feedbk 1", "Level 1", "Time 2",
+                      "Speed 2", "Feedbk 2", "Level 2"],
+         "buttons": ["Rec 1", "Ear 1", "Rec 2", "Ear 2"]},
+        {"name": "Tape",
+         "encoders": ["Wear", "Wow", "Hiss", "Sync", "Ebb Time", "Dry",
+                      "Loops", "Output"],
+         "buttons": ["Ebb"]},
+    ],
+    "workflow": [
+        {"title": "the display",
+         "text": "Each row is one machine pair: reel spacing follows that "
+                 "loop's Time, the spokes rotate at its speed and direction, "
+                 "and the tape line between the reels darkens as the loop "
+                 "fills. The REC and EAR dots are clickable."},
+        {"title": "driving it like Fripp",
+         "text": "It rewards restraint: long gaps between phrases, one loop "
+                 "carrying a drone while the other takes melody, and "
+                 "Feedback ridden like a fader rather than set and left. "
+                 "Half speed on a loop of sustained playing is the classic "
+                 "shimmering undertow."},
+    ],
+    "gotchas": [
+        "Both switches off is a **freeze**, not a mute — the loop keeps its "
+        "contents and stops decaying. If a loop seems to have vanished, "
+        "check its EAR dot before assuming it's gone.",
+        "Hiss builds on every circulating pass, not just while recording — "
+        "at high settings an idling loop will eventually become pure tape "
+        "noise. That's a feature, but mind it in quiet mixes.",
+        "Wear dropouts above ~40 % are printed permanently onto the tape. "
+        "There is no undo — reduce Wear **before** the pass you want to "
+        "keep, not after.",
+        "Loop buffers hold 30 s at 48 kHz; at 88.2/96 kHz the maximum Time "
+        "shrinks proportionally.",
+    ],
+    "rebuild": [
+        "`node build_eveningstar.js` in `Evening Star Device/` regenerates "
+        "the `.maxpat` and both `.amxd` files from scratch.",
+        "`node tests/sim_eveningstar.js` runs the 53-check suite: a JS port "
+        "of the gen~ loop engine (recirculation, decay, freeze/overdub "
+        "semantics, head motion, ebb, NaN safety) plus structural checks.",
+        "Everything is embedded — gen~ codebox, inline v8ui and v8.codebox "
+        "— **no freeze needed**, ever.",
+    ],
+})

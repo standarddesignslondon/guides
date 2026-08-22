@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body { margin: 0; padding: 10px 12px 14px; font-family: "SF Pro Text", "Helvetica Neue", sans-serif; font-size: 12px; color: #d6d6d6; }
+    h2 { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9a9a9a; margin: 14px 0 6px; border-bottom: 1px solid #3a3a3a; padding-bottom: 3px; }
+    .row { display: flex; align-items: center; justify-content: space-between; margin: 5px 0; gap: 8px; }
+    .row label { flex: 1 1 auto; }
+    input[type="number"] { width: 62px; background: #262626; color: #e6e6e6; border: 1px solid #444; border-radius: 3px; padding: 3px 5px; font-size: 12px; }
+    select { width: 130px; background: #262626; color: #e6e6e6; border: 1px solid #444; border-radius: 3px; padding: 3px; font-size: 12px; }
+    .hint { font-size: 10px; color: #7a7a7a; margin: 2px 0 6px; line-height: 1.35; }
+    .check { display: flex; align-items: center; gap: 6px; margin: 5px 0; }
+    .buttons { display: flex; gap: 8px; margin-top: 14px; }
+    button { flex: 1; padding: 7px 0; border-radius: 4px; border: 1px solid #555; background: #333; color: #e6e6e6; font-size: 12px; cursor: pointer; }
+    button:hover { background: #3e3e3e; }
+    #runBtn { background: #2d5b9e; border-color: #3a6cb5; font-weight: 600; }
+    #runBtn:hover { background: #366bb8; }
+    #status { margin-top: 10px; font-size: 11px; color: #8fae8f; min-height: 14px; white-space: pre-line; }
+    #status.err { color: #c98080; }
+</style>
+</head>
+<body>
+
+    <div class="hint" style="margin-top:2px">Generates a noise layer the size of the canvas, built from the ingredients below. Anything at 0 is left out.</div>
+
+    <h2>Ingredients</h2>
+    <div class="row"><label>Fine static</label><input type="number" id="staticAmt" min="0" max="127" value="40"></div>
+    <div class="row"><label>Streaking strength</label><input type="number" id="streakAmt" min="0" max="100" value="25"></div>
+    <div class="row"><label>Streak length (px)</label><input type="number" id="streakLen" min="1" max="500" value="30"></div>
+    <div class="hint">Horizontal smearing of the noise — the soft sideways grain of a weak signal.</div>
+    <div class="row"><label>Hum bars (count)</label><input type="number" id="humCount" min="0" max="8" value="2"></div>
+    <div class="row"><label>Hum strength</label><input type="number" id="humStrength" min="0" max="100" value="30"></div>
+    <div class="row"><label>Hum thickness (px)</label><input type="number" id="humThickness" min="4" max="2000" value="60"></div>
+    <div class="row"><label>Scanline spacing (px)</label><input type="number" id="scanSpacing" min="0" max="50" value="0"></div>
+    <div class="row"><label>Scanline darkness</label><input type="number" id="scanDark" min="0" max="100" value="40"></div>
+    <div class="row"><label>Dropout density</label><input type="number" id="dropDensity" min="0" max="100" value="10"></div>
+    <div class="row"><label>Dropout max length (px)</label><input type="number" id="dropLen" min="2" max="500" value="60"></div>
+    <div class="hint">Short bright or dark horizontal flecks, like tape dropout.</div>
+
+    <h2>Character</h2>
+    <div class="row"><label>Contrast (−50 to 100)</label><input type="number" id="contrast" min="-50" max="100" value="0"></div>
+    <div class="check"><input type="checkbox" id="chroma"><label for="chroma">Chroma noise (colour static)</label></div>
+
+    <h2>Layer</h2>
+    <div class="row">
+        <label for="blend">Blend mode</label>
+        <select id="blend">
+            <option value="normal">Normal</option>
+            <option value="overlay" selected>Overlay</option>
+            <option value="softLight">Soft Light</option>
+            <option value="screen">Screen</option>
+            <option value="multiply">Multiply</option>
+            <option value="linearLight">Linear Light</option>
+        </select>
+    </div>
+    <div class="row"><label>Opacity (%)</label><input type="number" id="opacity" min="1" max="100" value="35"></div>
+
+    <div class="buttons">
+        <button id="randomBtn">Randomise all</button>
+        <button id="runBtn">Generate</button>
+    </div>
+
+    <div id="status"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

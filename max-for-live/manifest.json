@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-08-21",
+ "generated": "2026-08-23",
  "items": [
   {
    "num": "01",
@@ -212,6 +212,18 @@
    "facets": {
     "kind": "Instrument",
     "author": "ChatGPT"
+   }
+  },
+  {
+   "num": "18",
+   "slug": "evening-star",
+   "name": "Evening Star",
+   "tagline": "Frippertronics twin tape-loop system \u2014 two machine pairs that build slow soundscapes, darken with every pass and ebb away on command.",
+   "url": "devices/evening-star.html",
+   "image": "images/evening-star.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
    }
   }
  ]

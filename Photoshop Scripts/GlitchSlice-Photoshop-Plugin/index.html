@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        margin: 0;
+        padding: 10px 12px 14px;
+        font-family: "SF Pro Text", "Helvetica Neue", sans-serif;
+        font-size: 12px;
+        color: #d6d6d6;
+    }
+    h2 {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #9a9a9a;
+        margin: 14px 0 6px;
+        border-bottom: 1px solid #3a3a3a;
+        padding-bottom: 3px;
+    }
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 5px 0;
+        gap: 8px;
+    }
+    .row label { flex: 1 1 auto; }
+    input[type="number"] {
+        width: 62px;
+        background: #262626;
+        color: #e6e6e6;
+        border: 1px solid #444;
+        border-radius: 3px;
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+    select {
+        width: 150px;
+        background: #262626;
+        color: #e6e6e6;
+        border: 1px solid #444;
+        border-radius: 3px;
+        padding: 3px;
+        font-size: 12px;
+    }
+    input[type="range"] { width: 110px; }
+    .val { width: 28px; text-align: right; color: #9a9a9a; }
+    .hint { font-size: 10px; color: #7a7a7a; margin: 2px 0 6px; line-height: 1.35; }
+    .check { display: flex; align-items: center; gap: 6px; margin: 5px 0; }
+    .buttons { display: flex; gap: 8px; margin-top: 14px; }
+    button {
+        flex: 1;
+        padding: 7px 0;
+        border-radius: 4px;
+        border: 1px solid #555;
+        background: #333;
+        color: #e6e6e6;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    button:hover { background: #3e3e3e; }
+    #runBtn { background: #2d5b9e; border-color: #3a6cb5; font-weight: 600; }
+    #runBtn:hover { background: #366bb8; }
+    #status {
+        margin-top: 10px;
+        font-size: 11px;
+        color: #8fae8f;
+        min-height: 14px;
+        white-space: pre-line;
+    }
+    #status.err { color: #c98080; }
+</style>
+</head>
+<body>
+
+    <h2>Slices</h2>
+    <div class="row">
+        <label for="orientation">Orientation</label>
+        <select id="orientation">
+            <option value="0">Vertical slices</option>
+            <option value="1">Horizontal slices</option>
+        </select>
+    </div>
+    <div class="row"><label>Target slice count</label><input type="number" id="targetCount" min="0" value=""></div>
+    <div class="hint">Optional: leave empty to use the width controls below. With a count, widths are derived from the layer size instead (randomness and growth still shape them).</div>
+    <div class="row"><label>Min width (px)</label><input type="number" id="minW" min="1" value="10"></div>
+    <div class="row"><label>Max width (px)</label><input type="number" id="maxW" min="1" value="80"></div>
+    <div class="row">
+        <label>Width randomness</label>
+        <input type="range" id="spread" min="0" max="100" value="100">
+        <span class="val" id="spreadVal">100</span>
+    </div>
+    <div class="row"><label>Width growth</label><input type="number" id="widthGrowth" step="0.1" min="0.05" max="20" value="1"></div>
+    <div class="hint">Growth multiplies values by growth^t across the layer. 1 = none, &gt;1 grows, &lt;1 shrinks (try 0.3 or 3).</div>
+    <div class="row"><label>Min feather (px)</label><input type="number" id="featherMin" min="0" value="0"></div>
+    <div class="row"><label>Max feather (px)</label><input type="number" id="featherMax" min="0" value="0"></div>
+    <div class="row">
+        <label>Feather randomness</label>
+        <input type="range" id="featherVar" min="0" max="100" value="100">
+        <span class="val" id="featherVarVal">100</span>
+    </div>
+    <div class="hint">Feather softens each slice's cut edges (and the hole it leaves). Both at 0 = hard edges.</div>
+
+    <h2>Scatter</h2>
+    <div class="row">
+        <label for="direction">Direction</label>
+        <select id="direction">
+            <option value="0">Up</option>
+            <option value="1">Down</option>
+            <option value="2">Left</option>
+            <option value="3">Right</option>
+            <option value="4">Random up/down</option>
+            <option value="5">Random left/right</option>
+        </select>
+    </div>
+    <div class="row">
+        <label for="offMode">Offset distance</label>
+        <select id="offMode">
+            <option value="0">Fixed (= max)</option>
+            <option value="1">Random, 0 to max</option>
+            <option value="2">Random, min to max</option>
+        </select>
+    </div>
+    <div class="row"><label>Min offset (px)</label><input type="number" id="offMin" min="0" value="20"></div>
+    <div class="row"><label>Max offset (px)</label><input type="number" id="offMax" min="0" value="200"></div>
+    <div class="row"><label>Offset growth</label><input type="number" id="offGrowth" step="0.1" min="0.05" max="20" value="1"></div>
+    <div class="row">
+        <label>Chance a slice moves</label>
+        <input type="range" id="probability" min="0" max="100" value="40">
+        <span class="val" id="probabilityVal">40</span>
+    </div>
+    <div class="row"><label>Cross-shift max (px)</label><input type="number" id="crossShift" min="0" value="0"></div>
+    <div class="hint">Cross-shift also nudges each moved slice a random amount (±) on the other axis, so slices slide along themselves as well as scattering. 0 = off.</div>
+
+    <h2>Options</h2>
+    <div class="check"><input type="checkbox" id="mergeResult" checked><label for="mergeResult">Merge result into a single layer</label></div>
+    <div class="check"><input type="checkbox" id="workOnCopy" checked><label for="workOnCopy">Work on a copy (hide original)</label></div>
+
+    <div class="buttons">
+        <button id="randomBtn">Randomise all</button>
+        <button id="runBtn">Run pass</button>
+    </div>
+
+    <div id="status"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

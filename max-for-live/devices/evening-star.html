@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>evening star — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">18</p>
+  <h1>evening star</h1>
+  <p class="ch-sub">Frippertronics twin tape-loop system — two machine pairs that build slow soundscapes, darken with every pass and ebb away on command.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/evening-star.png" alt="Evening Star"></div><figcaption>evening star</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">18.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">The two-Revox tape-delay feedback rig Eno set up for Fripp in 1972 (<i>No Pussyfooting</i>, <i>Evening Star</i>, the <i>Gone to Earth</i> loops), twice over. Each of the two loops is a circular tape whose length <b>is</b> the delay time: what you play recirculates, and every pass is a new tape generation — high end fades, saturation creeps in, and at higher <b>Wear</b> settings dropouts get printed permanently onto the tape. Separate Record and Listen switches per loop let you build on one machine, freeze it, work on the other, then bring both back and overdub over the lot. Named after the 1975 Fripp &amp; Eno album.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v0.2</dd></div><div class="fact"><dt>folder</dt><dd>Evening Star Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">18.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Evening Star v0.2.amxd</code> on an <b>audio track</b>, in front of guitar or any input. Loop 1 starts armed (REC and EAR on).</span></li>
+<li><span class="step-n">02</span><span class="step-t">Play a phrase; it returns after <b>Time 1</b> and stacks up at the <b>Feedback 1</b> rate. Keep playing into the wash.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Switch loop 1&#x27;s <b>REC</b> off (its tape keeps playing), switch loop 2&#x27;s <b>REC</b> and <b>EAR</b> on, and build something different at a different Time.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Bring loop 1&#x27;s REC back and overdub over everything.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Press <b>Ebb</b> and let the whole thing fade over <b>Ebb Time</b>; press again mid-fade to catch it and hold.</span></li>
+<li><span class="step-n">06</span><span class="step-t">For Basinski-style disintegration: build a loop, REC off, Feedback 100 %, Wear above 70 %, walk away.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">18.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">per machine pair</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Time 1 / Time 2<span class="rng">0.5 - 30 s</span></dt><dd>The loop length — the distance between the two tape machines. The right-hand reel in the display moves with it. Changes glide over about a second, like dragging a machine across the floor, rather than jumping cleanly.</dd></div>
+<div class="ctl-row"><dt>Feedback 1 / 2<span class="rng">0 - 105 %</span></dt><dd>Per-pass survival. 100 % sustains (Wear still dulls it — that&#x27;s the tape); above 100 % swells; below, the loop ebbs at its own rate.</dd></div>
+<div class="ctl-row"><dt>Record (REC)<span class="rng">toggle</span></dt><dd>Feeds the input onto that loop&#x27;s tape. Red dot in the display — clickable there too.</dd></div>
+<div class="ctl-row"><dt>Listen (EAR)<span class="rng">toggle</span></dt><dd>Makes the loop audible. <b>Both off = full freeze</b>: the tape holds its contents exactly, silently, indefinitely. Record on with Listen off = silent overdub. Listen on with Record off = playback, still decaying per pass.</dd></div>
+<div class="ctl-row"><dt>Speed 1 / 2<span class="rng">Reverse / Rev Half / Half / Normal</span></dt><dd>Normal locks the read head to the write head — a true tape pair. Half plays an octave down; Reverse and Rev Half let the head drift round the loop against the writing, endlessly recombining the material.</dd></div>
+<div class="ctl-row"><dt>Level 1 / 2<span class="rng">0 - 100 %</span></dt><dd>That loop&#x27;s output volume.</dd></div>
+</dl>
+<h3 class="sub">tape</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Wear<span class="rng">0 - 100 %</span></dt><dd>Generation loss, on a power curve. Below ~30 % it is gentle dulling; at full, each pass is filtered down toward ~440 Hz, saturated hard, and random segments are dipped — and because the damage is written back onto the tape, it accumulates pass after pass.</dd></div>
+<div class="ctl-row"><dt>Wow<span class="rng">0 - 100 %</span></dt><dd>Slow twin-sine pitch drift on both loops&#x27; read heads.</dd></div>
+<div class="ctl-row"><dt>Hiss<span class="rng">0 - 100 %</span></dt><dd>Tape-noise floor added on every pass while a loop circulates — an idling loop slowly drowns in it. Wear-scaled crackle rides on top.</dd></div>
+<div class="ctl-row"><dt>Sync<span class="rng">Free / Half / Same / Double</span></dt><dd>Locks Loop 2&#x27;s time to a ratio of Loop 1&#x27;s. In Free, Time 2 is its own dial. Mismatched times are where the deep tidal washes live — two loops that never realign.</dd></div>
+<div class="ctl-row"><dt>Ebb / Ebb Time<span class="rng">button - 5 - 300 s</span></dt><dd>One press starts a slow fade of both loops over Ebb Time; a second press catches the fade and holds at that level. The amber bar in the display tracks it. After a full fade the tapes are wiped and feedback restores itself.</dd></div>
+</dl>
+<h3 class="sub">mix</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Dry<span class="rng">0 - 100 %</span></dt><dd>The untreated input, always live.</dd></div>
+<div class="ctl-row"><dt>Loops<span class="rng">0 - 100 %</span></dt><dd>Both loops&#x27; combined return.</dd></div>
+<div class="ctl-row"><dt>Output<span class="rng">-18 - +6 dB</span></dt><dd>Final trim before the safety clip.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">18.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">perform</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Feedbk 1</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Feedbk 2</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Time 1</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Time 2</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Dry</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Loops</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Ebb Time</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Output</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Rec 1</span>
+<span class="btn">Ear 1</span>
+<span class="btn">Rec 2</span>
+<span class="btn">Ear 2</span>
+<span class="btn">Ebb</span>
+</div>
+<p class="bank-note">The playing surface: both feedbacks and times under one hand, transport on the button row.</p>
+</div>
+<div class="bank">
+<div class="bank-head">machines</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Time 1</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Speed 1</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Feedbk 1</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Level 1</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Time 2</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Speed 2</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Feedbk 2</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Level 2</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Rec 1</span>
+<span class="btn">Ear 1</span>
+<span class="btn">Rec 2</span>
+<span class="btn">Ear 2</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">tape</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Wear</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Wow</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Hiss</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Sync</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Ebb Time</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Dry</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Loops</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Output</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Ebb</span>
+</div>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">18.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">the display</h3><p>Each row is one machine pair: reel spacing follows that loop&#x27;s Time, the spokes rotate at its speed and direction, and the tape line between the reels darkens as the loop fills. The REC and EAR dots are clickable.</p>
+<h3 class="sub">driving it like fripp</h3><p>It rewards restraint: long gaps between phrases, one loop carrying a drone while the other takes melody, and Feedback ridden like a fader rather than set and left. Half speed on a loop of sustained playing is the classic shimmering undertow.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">18.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Both switches off is a <b>freeze</b>, not a mute — the loop keeps its contents and stops decaying. If a loop seems to have vanished, check its EAR dot before assuming it&#x27;s gone.</li><li>Hiss builds on every circulating pass, not just while recording — at high settings an idling loop will eventually become pure tape noise. That&#x27;s a feature, but mind it in quiet mixes.</li><li>Wear dropouts above ~40 % are printed permanently onto the tape. There is no undo — reduce Wear <b>before</b> the pass you want to keep, not after.</li><li>Loop buffers hold 30 s at 48 kHz; at 88.2/96 kHz the maximum Time shrinks proportionally.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">18.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>node build_eveningstar.js</code> in <code>Evening Star Device/</code> regenerates the <code>.maxpat</code> and both <code>.amxd</code> files from scratch.</p>
+<p><code>node tests/sim_eveningstar.js</code> runs the 53-check suite: a JS port of the gen~ loop engine (recirculation, decay, freeze/overdub semantics, head motion, ebb, NaN safety) plus structural checks.</p>
+<p>Everything is embedded — gen~ codebox, inline v8ui and v8.codebox — <b>no freeze needed</b>, ever.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="magnabelt.html"><span>previous</span>magnabelt</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-23</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

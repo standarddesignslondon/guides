@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body { margin: 0; padding: 10px 12px 14px; font-family: "SF Pro Text", "Helvetica Neue", sans-serif; font-size: 12px; color: #d6d6d6; }
+    h2 { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #9a9a9a; margin: 14px 0 6px; border-bottom: 1px solid #3a3a3a; padding-bottom: 3px; }
+    .row { display: flex; align-items: center; justify-content: space-between; margin: 5px 0; gap: 8px; }
+    .row label { flex: 1 1 auto; }
+    input[type="number"] { width: 62px; background: #262626; color: #e6e6e6; border: 1px solid #444; border-radius: 3px; padding: 3px 5px; font-size: 12px; }
+    .hint { font-size: 10px; color: #7a7a7a; margin: 2px 0 6px; line-height: 1.35; }
+    .check { display: flex; align-items: center; gap: 6px; margin: 5px 0; }
+    .buttons { display: flex; gap: 8px; margin-top: 14px; }
+    button { flex: 1; padding: 7px 0; border-radius: 4px; border: 1px solid #555; background: #333; color: #e6e6e6; font-size: 12px; cursor: pointer; }
+    button:hover { background: #3e3e3e; }
+    #runBtn { background: #2d5b9e; border-color: #3a6cb5; font-weight: 600; }
+    #runBtn:hover { background: #366bb8; }
+    #status { margin-top: 10px; font-size: 11px; color: #8fae8f; min-height: 14px; white-space: pre-line; }
+    #status.err { color: #c98080; }
+</style>
+</head>
+<body>
+
+    <div class="hint" style="margin-top:2px">Cheap-print look: optionally halftones the image, then knocks its colour plates out of register and roughs up the surface. Anything at 0 is skipped.</div>
+
+    <h2>Print</h2>
+    <div class="row"><label>Halftone dot size (px)</label><input type="number" id="dotSize" min="0" max="60" value="8"></div>
+    <div class="hint">0 = no halftone. 4–10 is a newspaper feel at print resolution.</div>
+    <div class="row"><label>Misregistration max (px)</label><input type="number" id="maxShift" min="0" max="100" value="6"></div>
+    <div class="hint">Each colour plate drifts by its own random amount and direction, up to this.</div>
+
+    <h2>Paper</h2>
+    <div class="row"><label>Paper grain (%)</label><input type="number" id="grain" min="0" max="50" value="5"></div>
+    <div class="row"><label>Warmth (%)</label><input type="number" id="warmth" min="0" max="100" value="15"></div>
+    <div class="hint">A warm photo-filter wash, like aged stock or cheap ink on off-white.</div>
+
+    <h2>Options</h2>
+    <div class="check"><input type="checkbox" id="workOnCopy" checked><label for="workOnCopy">Work on a copy (hide original)</label></div>
+
+    <div class="buttons">
+        <button id="randomBtn">Randomise all</button>
+        <button id="runBtn">Run pass</button>
+    </div>
+
+    <div id="status"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

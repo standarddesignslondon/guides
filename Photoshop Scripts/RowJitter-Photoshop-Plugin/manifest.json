@@ -1,0 +1,22 @@
+{
+    "id": "com.simonmorse.rowjitter",
+    "name": "Row Jitter",
+    "version": "1.0.0",
+    "main": "index.html",
+    "manifestVersion": 5,
+    "host": {
+        "app": "PS",
+        "minVersion": "24.4.0"
+    },
+    "entrypoints": [
+        {
+            "type": "panel",
+            "id": "rowjitter.panel",
+            "label": { "default": "Row Jitter" },
+            "minimumSize": { "width": 240, "height": 300 },
+            "maximumSize": { "width": 600, "height": 2400 },
+            "preferredDockedSize": { "width": 300, "height": 640 },
+            "preferredFloatingSize": { "width": 300, "height": 640 }
+        }
+    ]
+}
