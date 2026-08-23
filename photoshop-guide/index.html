@@ -13,7 +13,7 @@
   <h1>photoshop<br>tools</h1>
   <p class="hero-sub">process guide</p>
   <p class="hero-blurb">Panels, scripts and actions built for Photoshop. What every control does, how a file travels from the canvas out to whatever does the work and back again, and the things each one needs you to remember.</p>
-  <p class="hero-count">1 tools</p>
+  <p class="hero-count">6 tools</p>
 </header>
 <div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="UXP panel">uxp panel</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
 <div class="index-list" id="grid">
@@ -24,6 +24,41 @@
   <span class="r-desc">Sends the canvas and a marked-up selection to Nano Banana, then brings the result back as a masked layer.</span>
   <span class="r-kind">uxp panel</span>
   <span class="r-thumb"><img src="images/nano-banana-bridge.png" alt="" loading="lazy"></span>
+</a><a class="row" href="tools/glitchslice.html"
+   data-kind="UXP panel" data-author="Claude" data-text="glitchslice slices a layer into strips and scatters them — the criss-cross glitch pass, one direction at a time. cuts the active layer into vertical or horizontal strips of randomised width, then offsets a chosen proportion of them. each press of run pass is one pass and one undo step, so the intended workflow is iterative: run a vertical pass, run a horizontal pass on the result, repeat until it looks right, undo anything that doesn&#x27;t. gaps left behind are transparent, so lower layers show through — stack two source images and the scatter reveals one inside the other. uxp panel claude">
+  <span class="r-num">02</span>
+  <span class="r-name">glitchslice</span>
+  <span class="r-desc">Slices a layer into strips and scatters them — the criss-cross glitch pass, one direction at a time.</span>
+  <span class="r-kind">uxp panel</span>
+  <span class="r-thumb"><img src="images/glitchslice.png" alt="" loading="lazy"></span>
+</a><a class="row" href="tools/signal-degrade.html"
+   data-kind="UXP panel" data-author="Claude" data-text="signal degrade one pass of lo-fi abuse: misregistration, halo, crush, grain, vignette — any stage at 0 is skipped. runs a fixed chain of degradations over the active layer: colour plate misregistration, softening, oversharpened halos, tonal crush with optional dither, grain, desaturation, contrast and a vignette. every stage is switched off by setting it to 0, so the panel is equally a one-trick tool (just a vignette, just misregistration) and a full worn-transmission treatment. four presets cover the obvious destinations; the status line lists which stages actually ran. uxp panel claude">
+  <span class="r-num">03</span>
+  <span class="r-name">signal degrade</span>
+  <span class="r-desc">One pass of lo-fi abuse: misregistration, halo, crush, grain, vignette — any stage at 0 is skipped.</span>
+  <span class="r-kind">uxp panel</span>
+  <span class="r-thumb"><img src="images/signal-degrade.png" alt="" loading="lazy"></span>
+</a><a class="row" href="tools/static.html"
+   data-kind="UXP panel" data-author="Claude" data-text="static generates a canvas-sized noise layer from mixable ingredients — radio static, hum bars, scanlines, dropout. synthesises texture from scratch rather than working on existing pixels: each press of generate computes a canvas-sized noise field in the panel and writes it into a fresh layer through photoshop&#x27;s imaging api. the field is mixed from ingredients — fine static, horizontal streaking, drifting hum bars, scanlines and tape-dropout flecks — any of which is left out at 0. the layer arrives with a chosen blend mode and opacity already set, ready to sit over artwork as texture, or on its own as raw static. uxp panel claude">
+  <span class="r-num">04</span>
+  <span class="r-name">static</span>
+  <span class="r-desc">Generates a canvas-sized noise layer from mixable ingredients — radio static, hum bars, scanlines, dropout.</span>
+  <span class="r-kind">uxp panel</span>
+  <span class="r-thumb"><img src="images/static.png" alt="" loading="lazy"></span>
+</a><a class="row" href="tools/row-jitter.html"
+   data-kind="UXP panel" data-author="Claude" data-text="row jitter shifts every horizontal band of a layer sideways — vhs tracking, worn tape, a scan gone wrong. where glitchslice is bold and structural, row jitter is a fine-grained shimmer: it reads the active layer&#x27;s pixels, offsets every horizontal band by a wobbly waveform plus smoothed noise, with occasional larger tears, and writes them back through the imaging api. band height sets the character — 1 – 2 px is a video-ish shimmer, 8 – 16 px chunky tracking error. pixels pushed off one edge wrap around to the other by default. uxp panel claude">
+  <span class="r-num">05</span>
+  <span class="r-name">row jitter</span>
+  <span class="r-desc">Shifts every horizontal band of a layer sideways — VHS tracking, worn tape, a scan gone wrong.</span>
+  <span class="r-kind">uxp panel</span>
+  <span class="r-thumb"><img src="images/row-jitter.png" alt="" loading="lazy"></span>
+</a><a class="row" href="tools/misregistered-print.html"
+   data-kind="UXP panel" data-author="Claude" data-text="misregistered print the cheap-print look: halftone dots, colour plates out of register, paper grain and warmth. treats the active layer as a badly printed reproduction of itself. optionally halftones the image first, then splits it into colour plates and drifts each by its own random distance and direction — the blue plate anchors, red and green wander — before finishing with paper grain and a warm photo-filter wash like aged stock. anything at 0 is skipped, so it also serves as a plain halftone or plain warmth pass. uxp panel claude">
+  <span class="r-num">06</span>
+  <span class="r-name">misregistered print</span>
+  <span class="r-desc">The cheap-print look: halftone dots, colour plates out of register, paper grain and warmth.</span>
+  <span class="r-kind">uxp panel</span>
+  <span class="r-thumb"><img src="images/misregistered-print.png" alt="" loading="lazy"></span>
 </a>
 </div>
 <p class="empty-msg" id="empty" hidden>nothing matches that.</p>
@@ -32,7 +67,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>photoshop</span>
   <span>process guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-14</span>
+  <div class="sf-col"><span>generated 2026-08-23</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

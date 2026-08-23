@@ -141,12 +141,12 @@
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>Photoshop 24.2 or later, with developer mode enabled. The panel is loaded through UXP Developer Tools, not installed from the Creative Cloud plugin marketplace.</li><li>Reference images last for the session only. Close Photoshop and you add them again.</li><li>Exports whose long edge exceeds 4096px are downscaled before sending, so a very large document comes back at less than its native resolution unless you use Canvas → result.</li><li><b>Canvas → result resamples your entire document</b>, every layer included. That is a real change to the file, not something confined to the imported layer.</li><li>If the result&#x27;s aspect ratio differs from the canvas, the layer is width-fitted and left unmasked. For a canvas extension, use Image &gt; Reveal All to grow the canvas afterwards.</li><li>The API key sits in the panel&#x27;s local storage in plain text.</li><li>Model IDs are hard-coded. If Google renames them or adds a <code>-preview</code> suffix, the API route fails until <code>main.js</code> is updated.</li><li>The <code>NB_SELECTION</code> alpha channel is left behind in the document after a masked import. It is harmless and safe to delete.</li></ul></div>
 </section>
-<nav class="chapnav"><span class="cn empty"></span><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+<nav class="chapnav"><span class="cn empty"></span><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="glitchslice.html"><span>next</span>glitchslice</a></nav>
 </main>
 <footer class="siteftr">
   <div class="sf-col"><span>photoshop</span>
   <span>process guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-14</span>
+  <div class="sf-col"><span>generated 2026-08-23</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

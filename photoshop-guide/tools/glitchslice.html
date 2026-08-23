@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>glitchslice — photoshop</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">photoshop</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">02</p>
+  <h1>glitchslice</h1>
+  <p class="ch-sub">Slices a layer into strips and scatters them — the criss-cross glitch pass, one direction at a time.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/glitchslice.png" alt="GlitchSlice"></div><figcaption>glitchslice</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">02.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Cuts the active layer into vertical or horizontal strips of randomised width, then offsets a chosen proportion of them. Each press of Run pass is one pass and one undo step, so the intended workflow is iterative: run a vertical pass, run a horizontal pass on the result, repeat until it looks right, undo anything that doesn&#x27;t. Gaps left behind are transparent, so lower layers show through — stack two source images and the scatter reveals one inside the other.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.2.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.glitchslice</dd></div><div class="fact"><dt>folder</dt><dd>GlitchSlice-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">02.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Select a pixel layer (not a group) and open the panel from <b>Plugins</b>.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Pick an orientation, set the width and offset ranges or just press <b>Randomise all</b>, and press <b>Run pass</b>.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Run further passes, alternating orientation, on the resulting layer. The status line reports how many slices moved each time.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Undo removes a whole pass in one step.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">02.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">slices</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Orientation<span class="rng">vertical / horizontal</span></dt><dd>Vertical slices are cut left to right; horizontal, top to bottom.</dd></div>
+<div class="ctl-row"><dt>Target slice count<span class="rng">optional</span></dt><dd>Leave empty to use the width fields. With a number (2+), exactly that many slices are cut and widths are derived from the layer size instead — randomness and growth still shape them.</dd></div>
+<div class="ctl-row"><dt>Min / Max width<span class="rng">px</span></dt><dd>The range slice widths are drawn from. The count that results is roughly the layer span divided by the average of the two.</dd></div>
+<div class="ctl-row"><dt>Width randomness<span class="rng">0 – 100</span></dt><dd>0 = every slice at the midpoint of the range; 100 = the full min–max spread.</dd></div>
+<div class="ctl-row"><dt>Width growth<span class="rng">0.05 – 20, 1 = none</span></dt><dd>Widths are multiplied by growth^t across the layer, so &gt;1 makes slices progressively wider, &lt;1 progressively narrower. Try 0.3 or 3.</dd></div>
+<div class="ctl-row"><dt>Min / Max feather<span class="rng">px, 0/0 = hard edges</span></dt><dd>Feathers each slice&#x27;s selection before the cut, softening both the strip and the hole it leaves.</dd></div>
+<div class="ctl-row"><dt>Feather randomness<span class="rng">0 – 100</span></dt><dd>Spread of per-slice feather within its range, same scheme as width randomness.</dd></div>
+</dl>
+<h3 class="sub">scatter</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Direction<span class="rng">up / down / left / right / random</span></dt><dd>Where moved slices go. The two random options pick a direction per slice along one axis — the quickest route to the criss-cross look.</dd></div>
+<div class="ctl-row"><dt>Offset distance<span class="rng">fixed / random 0–max / random min–max</span></dt><dd>How far each moved slice travels.</dd></div>
+<div class="ctl-row"><dt>Offset growth<span class="rng">0.05 – 20, 1 = none</span></dt><dd>Multiplies offsets by growth^t across the layer, like width growth.</dd></div>
+<div class="ctl-row"><dt>Chance a slice moves<span class="rng">0 – 100%</span></dt><dd>Slices that fail the roll stay exactly where they were — untouched passages are a big part of the look.</dd></div>
+<div class="ctl-row"><dt>Cross-shift max<span class="rng">px, 0 = off</span></dt><dd>Adds a random ± nudge on the other axis to every moved slice, so strips also slide along themselves.</dd></div>
+</dl>
+<h3 class="sub">options</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Merge result into a single layer<span class="rng">default on</span></dt><dd>Merges the moved strips back into one layer so the next pass can cut across them. Untick to keep each moved slice as its own layer.</dd></div>
+<div class="ctl-row"><dt>Work on a copy<span class="rng">default on</span></dt><dd>Duplicates the layer, hides the original, and slices the copy.</dd></div>
+<div class="ctl-row"><dt>Randomise all</dt><dd>Rolls fresh values into every parameter except the two checkboxes and the target count, then waits for Run pass.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">02.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">the criss-cross</h3><p>One pass reads as stripes; the style comes from alternation. Vertical pass, then horizontal on the result, then vertical again with different widths. Because gaps are transparent, doing this over a second image on a layer below interleaves the two.</p>
+<h3 class="sub">with the other plugins</h3><p>Slice first and degrade after (<i>Signal Degrade</i>, <i>Row Jitter</i>) for soft, broadcast-like tears; degrade first and slice after for crisp cuts through already-filthy material.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">02.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Pixel layers only — select a layer, not a group. Slices whose region is fully transparent are skipped.</li><li>Feather eats into a strip from both sides: keep max feather well under half the min slice width or thin strips nearly vanish.</li><li>Settings persist between sessions in the panel&#x27;s local storage; what you see is what the last run used.</li><li>A superseded ExtendScript version, <code>GlitchSlice.jsx</code>, sits in <code>Photoshop Scripts/</code> — the panel replaces it.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">02.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>For quick iteration, load the folder&#x27;s <code>manifest.json</code> in <b>UXP Developer Tools</b> instead — dev-loads are live-reloadable but vanish when Photoshop restarts.</p>
+<p>To update the installed copy: bump <code>version</code> in <code>manifest.json</code>, zip <code>manifest.json</code> + <code>index.html</code> + <code>main.js</code> (at the archive root) with a <code>.ccx</code> extension, and run the installer agent again.</p></div>
+</section>
+<section class="block" id="installing">
+  <div class="block-label"><span class="bl-num">02.6</span>
+  <h2>installing</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">In Terminal, run Adobe&#x27;s installer agent on the plugin&#x27;s <code>.ccx</code> from <code>Photoshop Scripts/CCX Installers</code>: <code>&quot;/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent&quot; --install &lt;plugin&gt;.ccx</code></span></li>
+<li><span class="step-n">02</span><span class="step-t">Restart Photoshop. The panel appears under <b>Plugins</b> and survives restarts — UXP Developer Tools is not needed.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Do not double-click the <code>.ccx</code>: Creative Cloud wrongly reports <i>Compatible app required</i> for unsigned plugins.</span></li>
+</ol></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="nano-banana-bridge.html"><span>previous</span>nano banana bridge</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="signal-degrade.html"><span>next</span>signal degrade</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>photoshop</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-23</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

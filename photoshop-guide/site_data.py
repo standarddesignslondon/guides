@@ -322,3 +322,463 @@ ITEMS.append({
     # instruction and two references loaded (right). Originals kept in
     # images/_source/ — rebuild the composite from those if either is replaced.
 })
+
+# Shared by the five lo-fi plugins below: they are installed from .ccx
+# packages via Adobe's installer agent, because double-clicking an unsigned
+# .ccx makes Creative Cloud claim no compatible app is installed.
+UPIA = ('"/Library/Application Support/Adobe/Adobe Desktop Common/'
+        'RemoteComponents/UPI/UnifiedPluginInstallerAgent/'
+        'UnifiedPluginInstallerAgent.app/Contents/MacOS/'
+        'UnifiedPluginInstallerAgent"')
+
+INSTALL_STEPS = [
+    "In Terminal, run Adobe's installer agent on the plugin's `.ccx` from "
+    "`Photoshop Scripts/CCX Installers`: "
+    "`" + UPIA + " --install <plugin>.ccx`",
+    "Restart Photoshop. The panel appears under **Plugins** and survives "
+    "restarts — UXP Developer Tools is not needed.",
+    "Do not double-click the `.ccx`: Creative Cloud wrongly reports "
+    "*Compatible app required* for unsigned plugins.",
+]
+
+REBUILD_NOTE = [
+    "For quick iteration, load the folder's `manifest.json` in **UXP "
+    "Developer Tools** instead — dev-loads are live-reloadable but vanish "
+    "when Photoshop restarts.",
+    "To update the installed copy: bump `version` in `manifest.json`, zip "
+    "`manifest.json` + `index.html` + `main.js` (at the archive root) with a "
+    "`.ccx` extension, and run the installer agent again.",
+]
+
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "glitchslice",
+    "name": "GlitchSlice",
+    "kind": "UXP panel",
+    "author": "Claude",
+    "status": "Working",
+    "folder": "GlitchSlice-Photoshop-Plugin",
+    "tagline": "Slices a layer into strips and scatters them — the "
+               "criss-cross glitch pass, one direction at a time.",
+    "blurb":
+        "Cuts the active layer into vertical or horizontal strips of "
+        "randomised width, then offsets a chosen proportion of them. Each "
+        "press of Run pass is one pass and one undo step, so the intended "
+        "workflow is iterative: run a vertical pass, run a horizontal pass "
+        "on the result, repeat until it looks right, undo anything that "
+        "doesn't. Gaps left behind are transparent, so lower layers show "
+        "through — stack two source images and the scatter reveals one "
+        "inside the other.",
+    "facts": {
+        "version": "1.2.0",
+        "requires": "Photoshop 24.2+",
+        "plugin id": "com.simonmorse.glitchslice",
+    },
+    "quickstart": [
+        "Select a pixel layer (not a group) and open the panel from "
+        "**Plugins**.",
+        "Pick an orientation, set the width and offset ranges or just press "
+        "**Randomise all**, and press **Run pass**.",
+        "Run further passes, alternating orientation, on the resulting "
+        "layer. The status line reports how many slices moved each time.",
+        "Undo removes a whole pass in one step.",
+    ],
+    "controls": [
+        {"title": "Slices",
+         "rows": [
+             ["Orientation", "vertical / horizontal",
+              "Vertical slices are cut left to right; horizontal, top to "
+              "bottom."],
+             ["Target slice count", "optional",
+              "Leave empty to use the width fields. With a number (2+), "
+              "exactly that many slices are cut and widths are derived from "
+              "the layer size instead — randomness and growth still shape "
+              "them."],
+             ["Min / Max width", "px",
+              "The range slice widths are drawn from. The count that "
+              "results is roughly the layer span divided by the average of "
+              "the two."],
+             ["Width randomness", "0 – 100",
+              "0 = every slice at the midpoint of the range; 100 = the full "
+              "min–max spread."],
+             ["Width growth", "0.05 – 20, 1 = none",
+              "Widths are multiplied by growth^t across the layer, so >1 "
+              "makes slices progressively wider, <1 progressively narrower. "
+              "Try 0.3 or 3."],
+             ["Min / Max feather", "px, 0/0 = hard edges",
+              "Feathers each slice's selection before the cut, softening "
+              "both the strip and the hole it leaves."],
+             ["Feather randomness", "0 – 100",
+              "Spread of per-slice feather within its range, same scheme as "
+              "width randomness."],
+         ]},
+        {"title": "Scatter",
+         "rows": [
+             ["Direction", "up / down / left / right / random",
+              "Where moved slices go. The two random options pick a "
+              "direction per slice along one axis — the quickest route to "
+              "the criss-cross look."],
+             ["Offset distance", "fixed / random 0–max / random min–max",
+              "How far each moved slice travels."],
+             ["Offset growth", "0.05 – 20, 1 = none",
+              "Multiplies offsets by growth^t across the layer, like width "
+              "growth."],
+             ["Chance a slice moves", "0 – 100%",
+              "Slices that fail the roll stay exactly where they were — "
+              "untouched passages are a big part of the look."],
+             ["Cross-shift max", "px, 0 = off",
+              "Adds a random ± nudge on the other axis to every moved "
+              "slice, so strips also slide along themselves."],
+         ]},
+        {"title": "Options",
+         "rows": [
+             ["Merge result into a single layer", "default on",
+              "Merges the moved strips back into one layer so the next pass "
+              "can cut across them. Untick to keep each moved slice as its "
+              "own layer."],
+             ["Work on a copy", "default on",
+              "Duplicates the layer, hides the original, and slices the "
+              "copy."],
+             ["Randomise all", "",
+              "Rolls fresh values into every parameter except the two "
+              "checkboxes and the target count, then waits for Run pass."],
+         ]},
+    ],
+    "workflow": [
+        {"title": "The criss-cross",
+         "text": "One pass reads as stripes; the style comes from "
+                 "alternation. Vertical pass, then horizontal on the "
+                 "result, then vertical again with different widths. "
+                 "Because gaps are transparent, doing this over a second "
+                 "image on a layer below interleaves the two."},
+        {"title": "With the other plugins",
+         "text": "Slice first and degrade after (*Signal Degrade*, *Row "
+                 "Jitter*) for soft, broadcast-like tears; degrade first "
+                 "and slice after for crisp cuts through already-filthy "
+                 "material."},
+    ],
+    "gotchas": [
+        "Pixel layers only — select a layer, not a group. Slices whose "
+        "region is fully transparent are skipped.",
+        "Feather eats into a strip from both sides: keep max feather well "
+        "under half the min slice width or thin strips nearly vanish.",
+        "Settings persist between sessions in the panel's local storage; "
+        "what you see is what the last run used.",
+        "A superseded ExtendScript version, `GlitchSlice.jsx`, sits in "
+        "`Photoshop Scripts/` — the panel replaces it.",
+    ],
+    "sections": [
+        {"label": "installing", "type": "steps", "data": INSTALL_STEPS},
+    ],
+    "rebuild": REBUILD_NOTE,
+})
+
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "signal-degrade",
+    "name": "Signal Degrade",
+    "kind": "UXP panel",
+    "author": "Claude",
+    "status": "Working",
+    "folder": "SignalDegrade-Photoshop-Plugin",
+    "tagline": "One pass of lo-fi abuse: misregistration, halo, crush, "
+               "grain, vignette — any stage at 0 is skipped.",
+    "blurb":
+        "Runs a fixed chain of degradations over the active layer: colour "
+        "plate misregistration, softening, oversharpened halos, tonal crush "
+        "with optional dither, grain, desaturation, contrast and a "
+        "vignette. Every stage is switched off by setting it to 0, so the "
+        "panel is equally a one-trick tool (just a vignette, just "
+        "misregistration) and a full worn-transmission treatment. Four "
+        "presets cover the obvious destinations; the status line lists "
+        "which stages actually ran.",
+    "facts": {
+        "version": "1.0.0",
+        "requires": "Photoshop 24.2+",
+        "plugin id": "com.simonmorse.signaldegrade",
+    },
+    "quickstart": [
+        "Select a pixel layer and pick a preset — **Off-air recording**, "
+        "**Fourth-gen photocopy**, **Worn print** or **Subtle wear** — or "
+        "set values by hand.",
+        "Press **Run pass**. The whole chain is one undo step.",
+        "Touching any control flips the preset back to Custom; "
+        "**Randomise all** rolls a plausible chain rather than pure chaos.",
+    ],
+    "controls": [
+        {"title": "Signal",
+         "rows": [
+             ["Channel misregistration", "px",
+              "Red shifts left, blue shifts right, green stays put — the "
+              "classic fringed-edges break-up."],
+             ["Soften", "blur px", "Gaussian blur before the halo."],
+             ["Halo", "sharpen %",
+              "Unsharp mask at a radius keyed to the blur, so high values "
+              "ring — the over-corrected look of cheap sharpening."],
+         ]},
+        {"title": "Tone",
+         "rows": [
+             ["Crush", "posterise levels, 0 = off",
+              "4 – 8 is brutal, 16 – 32 gentle banding."],
+             ["Dither", "%",
+              "Noise added before the crush so the bands break into "
+              "speckle. Does nothing when crush is 0."],
+             ["Contrast", "−50 to 100", "Straight contrast move."],
+         ]},
+        {"title": "Surface",
+         "rows": [
+             ["Grain", "%", "Monochrome gaussian noise."],
+             ["Desaturate", "0 – 100%", "100 = fully mono."],
+             ["Vignette", "%",
+              "Feathered corner darkening, filled in multiply and "
+              "preserving transparency."],
+         ]},
+    ],
+    "workflow": [
+        {"title": "Stage order is fixed",
+         "text": "Misregistration → soften → halo → crush → grain → "
+                 "desaturate → contrast → vignette, top of the panel to the "
+                 "bottom. For a different order, run several passes with "
+                 "only some stages switched on."},
+    ],
+    "gotchas": [
+        "Misregistration needs colour to fringe — combined with Desaturate "
+        "100 in one pass it still runs, but the desaturation happens after, "
+        "greying the fringes. Run separate passes if you want mono first.",
+        "Dither without crush is silently skipped.",
+        "The vignette is sized to the canvas, not the layer.",
+    ],
+    "sections": [
+        {"label": "installing", "type": "steps", "data": INSTALL_STEPS},
+    ],
+    "rebuild": REBUILD_NOTE,
+})
+
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "static",
+    "name": "Static",
+    "kind": "UXP panel",
+    "author": "Claude",
+    "status": "Working",
+    "folder": "Static-Photoshop-Plugin",
+    "tagline": "Generates a canvas-sized noise layer from mixable "
+               "ingredients — radio static, hum bars, scanlines, dropout.",
+    "blurb":
+        "Synthesises texture from scratch rather than working on existing "
+        "pixels: each press of Generate computes a canvas-sized noise field "
+        "in the panel and writes it into a fresh layer through Photoshop's "
+        "imaging API. The field is mixed from ingredients — fine static, "
+        "horizontal streaking, drifting hum bars, scanlines and "
+        "tape-dropout flecks — any of which is left out at 0. The layer "
+        "arrives with a chosen blend mode and opacity already set, ready "
+        "to sit over artwork as texture, or on its own as raw static.",
+    "facts": {
+        "version": "1.0.0",
+        "requires": "Photoshop 24.4+",
+        "plugin id": "com.simonmorse.staticgen",
+    },
+    "quickstart": [
+        "Open a document and press **Generate** — no layer selection "
+        "needed; the result is always a new layer called *Static*.",
+        "Adjust ingredients and generate again; each run is a fresh layer "
+        "and one undo step.",
+        "For texture over artwork, leave the blend mode on **Overlay** or "
+        "**Soft Light** at 20 – 40% opacity. For raw static, set "
+        "**Normal** at 100%.",
+    ],
+    "controls": [
+        {"title": "Ingredients",
+         "rows": [
+             ["Fine static", "0 – 127", "Per-pixel random noise, the base "
+              "hiss."],
+             ["Streaking strength / length", "0 – 100 / px",
+              "Smears the noise horizontally — the soft sideways grain of "
+              "a weak signal. Length is how far the smear correlates."],
+             ["Hum bars", "count / strength / thickness",
+              "Soft dark horizontal bands at random heights, like mains "
+              "hum rolling through a picture."],
+             ["Scanline spacing / darkness", "px, 0 = off / 0 – 100",
+              "Darkens one row every N pixels. 2 – 4 px spacing reads as "
+              "CRT at print size."],
+             ["Dropout density / max length", "0 – 100 / px",
+              "Short bright or dark horizontal flecks, one or two pixels "
+              "tall, like tape dropout."],
+         ]},
+        {"title": "Character",
+         "rows": [
+             ["Contrast", "−50 to 100", "Pushes the whole field away from "
+              "mid-grey."],
+             ["Chroma noise", "checkbox",
+              "Randomises the channels independently — coloured confetti "
+              "static instead of mono."],
+         ]},
+        {"title": "Layer",
+         "rows": [
+             ["Blend mode", "Normal / Overlay / Soft Light / Screen / "
+              "Multiply / Linear Light",
+              "Applied to the generated layer. The field is built around "
+              "mid-grey, so Overlay and Soft Light treat it as pure "
+              "texture."],
+             ["Opacity", "1 – 100%", "Also applied on arrival."],
+         ]},
+    ],
+    "gotchas": [
+        "Needs Photoshop 24.4 or later — the imaging API is how the pixels "
+        "get in.",
+        "Generation is computed in the panel: a large canvas (A2 at 300dpi "
+        "and up) takes several seconds and a fair chunk of memory. The "
+        "status line says when it is working.",
+        "The layer arrives with blend mode and opacity already set — easy "
+        "to forget it landed on Overlay at 35% and wonder why it looks "
+        "faint on its own.",
+    ],
+    "sections": [
+        {"label": "installing", "type": "steps", "data": INSTALL_STEPS},
+    ],
+    "rebuild": REBUILD_NOTE,
+})
+
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "row-jitter",
+    "name": "Row Jitter",
+    "kind": "UXP panel",
+    "author": "Claude",
+    "status": "Working",
+    "folder": "RowJitter-Photoshop-Plugin",
+    "tagline": "Shifts every horizontal band of a layer sideways — VHS "
+               "tracking, worn tape, a scan gone wrong.",
+    "blurb":
+        "Where GlitchSlice is bold and structural, Row Jitter is a "
+        "fine-grained shimmer: it reads the active layer's pixels, offsets "
+        "every horizontal band by a wobbly waveform plus smoothed noise, "
+        "with occasional larger tears, and writes them back through the "
+        "imaging API. Band height sets the character — 1 – 2 px is a "
+        "video-ish shimmer, 8 – 16 px chunky tracking error. Pixels "
+        "pushed off one edge wrap around to the other by default.",
+    "facts": {
+        "version": "1.0.0",
+        "requires": "Photoshop 24.4+",
+        "plugin id": "com.simonmorse.rowjitter",
+    },
+    "quickstart": [
+        "Select a pixel layer and press **Run pass** — the defaults are a "
+        "gentle tracking wobble.",
+        "Each pass is one undo step. Repeated passes accumulate; the wave "
+        "phase is random every run, so two passes never line up.",
+    ],
+    "controls": [
+        {"title": "Bands",
+         "rows": [
+             ["Band height", "1 – 64 px",
+              "Rows are shifted in bands of this height. The single most "
+              "character-defining control."],
+         ]},
+        {"title": "Wobble",
+         "rows": [
+             ["Wave amplitude / wavelength", "px",
+              "A sine sweep down the layer: amplitude is how far bands "
+              "swing, wavelength how quickly the swing repeats."],
+             ["Noise jitter", "px", "Random per-band offset layered on the "
+              "wave."],
+             ["Jitter smoothing", "0 – 95%",
+              "0 = every band independent (fizzy); 90 = slow drift shared "
+              "by neighbouring bands."],
+         ]},
+        {"title": "Tears",
+         "rows": [
+             ["Tear chance per band", "%",
+              "Occasionally a band (and the few after it) lurches much "
+              "further — the dropout moment."],
+             ["Tear max shift", "px", "How far a tear can go."],
+         ]},
+        {"title": "Options",
+         "rows": [
+             ["Wrap pixels around", "default on",
+              "Pixels pushed off one edge reappear at the other. Off "
+              "leaves transparency instead."],
+             ["Work on a copy", "default on", "As in the other panels."],
+         ]},
+    ],
+    "gotchas": [
+        "Needs Photoshop 24.4 or later (imaging API).",
+        "Wrap is forced on for layers without an alpha channel — a "
+        "Background layer can't hold the transparency the off setting "
+        "needs. Work on a copy avoids this.",
+        "Bands are measured from the top of the layer's own bounds, not "
+        "the canvas.",
+    ],
+    "sections": [
+        {"label": "installing", "type": "steps", "data": INSTALL_STEPS},
+    ],
+    "rebuild": REBUILD_NOTE,
+})
+
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "misregistered-print",
+    "name": "Misregistered Print",
+    "kind": "UXP panel",
+    "author": "Claude",
+    "status": "Working",
+    "folder": "MisregisteredPrint-Photoshop-Plugin",
+    "tagline": "The cheap-print look: halftone dots, colour plates out of "
+               "register, paper grain and warmth.",
+    "blurb":
+        "Treats the active layer as a badly printed reproduction of "
+        "itself. Optionally halftones the image first, then splits it into "
+        "colour plates and drifts each by its own random distance and "
+        "direction — the blue plate anchors, red and green wander — before "
+        "finishing with paper grain and a warm photo-filter wash like aged "
+        "stock. Anything at 0 is skipped, so it also serves as a plain "
+        "halftone or plain warmth pass.",
+    "facts": {
+        "version": "1.0.0",
+        "requires": "Photoshop 24.2+",
+        "plugin id": "com.simonmorse.misprint",
+    },
+    "quickstart": [
+        "Select a pixel layer and press **Run pass**; the defaults give a "
+        "modest newspaper drift.",
+        "For heavier riso-style separation, push misregistration to 10 – "
+        "20 px and add halftone.",
+    ],
+    "controls": [
+        {"title": "Print",
+         "rows": [
+             ["Halftone dot size", "px, 0 = off",
+              "Photoshop's colour halftone at standard screen angles. "
+              "4 – 10 px reads as newsprint at print resolution; values "
+              "below 4 are treated as off."],
+             ["Misregistration max", "px",
+              "Each drifting plate picks its own random direction and a "
+              "distance between 40% and 100% of this."],
+         ]},
+        {"title": "Paper",
+         "rows": [
+             ["Paper grain", "%", "Monochrome noise over everything."],
+             ["Warmth", "%",
+              "A warming photo filter, luminosity preserved — cheap ink "
+              "on off-white."],
+         ]},
+    ],
+    "workflow": [
+        {"title": "Order with the others",
+         "text": "This one usually goes last: halftone dots and plate "
+                 "drift read as the final reproduction of whatever mess "
+                 "the other passes made. Static over the top afterwards "
+                 "breaks the dots up nicely."},
+    ],
+    "gotchas": [
+        "Halftone below 4 px is ignored — the filter needs room for a "
+        "dot.",
+        "Misregistration fringes are colour by definition; on a mono "
+        "image, desaturate *after* this pass and the fringes grey out to "
+        "tonal wobble, which can also be the point.",
+    ],
+    "sections": [
+        {"label": "installing", "type": "steps", "data": INSTALL_STEPS},
+    ],
+    "rebuild": REBUILD_NOTE,
+})

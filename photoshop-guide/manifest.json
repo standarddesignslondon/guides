@@ -8,7 +8,7 @@
   "noun_plural": "tools",
   "page_dir": "tools"
  },
- "generated": "2026-08-14",
+ "generated": "2026-08-23",
  "items": [
   {
    "num": "01",
@@ -17,6 +17,66 @@
    "tagline": "Sends the canvas and a marked-up selection to Nano Banana, then brings the result back as a masked layer.",
    "url": "tools/nano-banana-bridge.html",
    "image": "images/nano-banana-bridge.png",
+   "facets": {
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "02",
+   "slug": "glitchslice",
+   "name": "GlitchSlice",
+   "tagline": "Slices a layer into strips and scatters them \u2014 the criss-cross glitch pass, one direction at a time.",
+   "url": "tools/glitchslice.html",
+   "image": "images/glitchslice.png",
+   "facets": {
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "03",
+   "slug": "signal-degrade",
+   "name": "Signal Degrade",
+   "tagline": "One pass of lo-fi abuse: misregistration, halo, crush, grain, vignette \u2014 any stage at 0 is skipped.",
+   "url": "tools/signal-degrade.html",
+   "image": "images/signal-degrade.png",
+   "facets": {
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "04",
+   "slug": "static",
+   "name": "Static",
+   "tagline": "Generates a canvas-sized noise layer from mixable ingredients \u2014 radio static, hum bars, scanlines, dropout.",
+   "url": "tools/static.html",
+   "image": "images/static.png",
+   "facets": {
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "05",
+   "slug": "row-jitter",
+   "name": "Row Jitter",
+   "tagline": "Shifts every horizontal band of a layer sideways \u2014 VHS tracking, worn tape, a scan gone wrong.",
+   "url": "tools/row-jitter.html",
+   "image": "images/row-jitter.png",
+   "facets": {
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "06",
+   "slug": "misregistered-print",
+   "name": "Misregistered Print",
+   "tagline": "The cheap-print look: halftone dots, colour plates out of register, paper grain and warmth.",
+   "url": "tools/misregistered-print.html",
+   "image": "images/misregistered-print.png",
    "facets": {
     "kind": "UXP panel",
     "author": "Claude"

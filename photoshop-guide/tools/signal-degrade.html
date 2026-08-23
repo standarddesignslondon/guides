@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>signal degrade — photoshop</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">photoshop</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">03</p>
+  <h1>signal degrade</h1>
+  <p class="ch-sub">One pass of lo-fi abuse: misregistration, halo, crush, grain, vignette — any stage at 0 is skipped.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/signal-degrade.png" alt="Signal Degrade"></div><figcaption>signal degrade</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">03.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Runs a fixed chain of degradations over the active layer: colour plate misregistration, softening, oversharpened halos, tonal crush with optional dither, grain, desaturation, contrast and a vignette. Every stage is switched off by setting it to 0, so the panel is equally a one-trick tool (just a vignette, just misregistration) and a full worn-transmission treatment. Four presets cover the obvious destinations; the status line lists which stages actually ran.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.0.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.signaldegrade</dd></div><div class="fact"><dt>folder</dt><dd>SignalDegrade-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">03.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Select a pixel layer and pick a preset — <b>Off-air recording</b>, <b>Fourth-gen photocopy</b>, <b>Worn print</b> or <b>Subtle wear</b> — or set values by hand.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Press <b>Run pass</b>. The whole chain is one undo step.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Touching any control flips the preset back to Custom; <b>Randomise all</b> rolls a plausible chain rather than pure chaos.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">03.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">signal</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Channel misregistration<span class="rng">px</span></dt><dd>Red shifts left, blue shifts right, green stays put — the classic fringed-edges break-up.</dd></div>
+<div class="ctl-row"><dt>Soften<span class="rng">blur px</span></dt><dd>Gaussian blur before the halo.</dd></div>
+<div class="ctl-row"><dt>Halo<span class="rng">sharpen %</span></dt><dd>Unsharp mask at a radius keyed to the blur, so high values ring — the over-corrected look of cheap sharpening.</dd></div>
+</dl>
+<h3 class="sub">tone</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Crush<span class="rng">posterise levels, 0 = off</span></dt><dd>4 – 8 is brutal, 16 – 32 gentle banding.</dd></div>
+<div class="ctl-row"><dt>Dither<span class="rng">%</span></dt><dd>Noise added before the crush so the bands break into speckle. Does nothing when crush is 0.</dd></div>
+<div class="ctl-row"><dt>Contrast<span class="rng">−50 to 100</span></dt><dd>Straight contrast move.</dd></div>
+</dl>
+<h3 class="sub">surface</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Grain<span class="rng">%</span></dt><dd>Monochrome gaussian noise.</dd></div>
+<div class="ctl-row"><dt>Desaturate<span class="rng">0 – 100%</span></dt><dd>100 = fully mono.</dd></div>
+<div class="ctl-row"><dt>Vignette<span class="rng">%</span></dt><dd>Feathered corner darkening, filled in multiply and preserving transparency.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">03.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">stage order is fixed</h3><p>Misregistration → soften → halo → crush → grain → desaturate → contrast → vignette, top of the panel to the bottom. For a different order, run several passes with only some stages switched on.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">03.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Misregistration needs colour to fringe — combined with Desaturate 100 in one pass it still runs, but the desaturation happens after, greying the fringes. Run separate passes if you want mono first.</li><li>Dither without crush is silently skipped.</li><li>The vignette is sized to the canvas, not the layer.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">03.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>For quick iteration, load the folder&#x27;s <code>manifest.json</code> in <b>UXP Developer Tools</b> instead — dev-loads are live-reloadable but vanish when Photoshop restarts.</p>
+<p>To update the installed copy: bump <code>version</code> in <code>manifest.json</code>, zip <code>manifest.json</code> + <code>index.html</code> + <code>main.js</code> (at the archive root) with a <code>.ccx</code> extension, and run the installer agent again.</p></div>
+</section>
+<section class="block" id="installing">
+  <div class="block-label"><span class="bl-num">03.6</span>
+  <h2>installing</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">In Terminal, run Adobe&#x27;s installer agent on the plugin&#x27;s <code>.ccx</code> from <code>Photoshop Scripts/CCX Installers</code>: <code>&quot;/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent&quot; --install &lt;plugin&gt;.ccx</code></span></li>
+<li><span class="step-n">02</span><span class="step-t">Restart Photoshop. The panel appears under <b>Plugins</b> and survives restarts — UXP Developer Tools is not needed.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Do not double-click the <code>.ccx</code>: Creative Cloud wrongly reports <i>Compatible app required</i> for unsigned plugins.</span></li>
+</ol></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="glitchslice.html"><span>previous</span>glitchslice</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="static.html"><span>next</span>static</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>photoshop</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-23</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

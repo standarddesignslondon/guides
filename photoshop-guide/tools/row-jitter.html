@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>row jitter — photoshop</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">photoshop</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">05</p>
+  <h1>row jitter</h1>
+  <p class="ch-sub">Shifts every horizontal band of a layer sideways — VHS tracking, worn tape, a scan gone wrong.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/row-jitter.png" alt="Row Jitter"></div><figcaption>row jitter</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">05.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Where GlitchSlice is bold and structural, Row Jitter is a fine-grained shimmer: it reads the active layer&#x27;s pixels, offsets every horizontal band by a wobbly waveform plus smoothed noise, with occasional larger tears, and writes them back through the imaging API. Band height sets the character — 1 – 2 px is a video-ish shimmer, 8 – 16 px chunky tracking error. Pixels pushed off one edge wrap around to the other by default.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.0.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.4+</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.rowjitter</dd></div><div class="fact"><dt>folder</dt><dd>RowJitter-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">05.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Select a pixel layer and press <b>Run pass</b> — the defaults are a gentle tracking wobble.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Each pass is one undo step. Repeated passes accumulate; the wave phase is random every run, so two passes never line up.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">05.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">bands</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Band height<span class="rng">1 – 64 px</span></dt><dd>Rows are shifted in bands of this height. The single most character-defining control.</dd></div>
+</dl>
+<h3 class="sub">wobble</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Wave amplitude / wavelength<span class="rng">px</span></dt><dd>A sine sweep down the layer: amplitude is how far bands swing, wavelength how quickly the swing repeats.</dd></div>
+<div class="ctl-row"><dt>Noise jitter<span class="rng">px</span></dt><dd>Random per-band offset layered on the wave.</dd></div>
+<div class="ctl-row"><dt>Jitter smoothing<span class="rng">0 – 95%</span></dt><dd>0 = every band independent (fizzy); 90 = slow drift shared by neighbouring bands.</dd></div>
+</dl>
+<h3 class="sub">tears</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Tear chance per band<span class="rng">%</span></dt><dd>Occasionally a band (and the few after it) lurches much further — the dropout moment.</dd></div>
+<div class="ctl-row"><dt>Tear max shift<span class="rng">px</span></dt><dd>How far a tear can go.</dd></div>
+</dl>
+<h3 class="sub">options</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Wrap pixels around<span class="rng">default on</span></dt><dd>Pixels pushed off one edge reappear at the other. Off leaves transparency instead.</dd></div>
+<div class="ctl-row"><dt>Work on a copy<span class="rng">default on</span></dt><dd>As in the other panels.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">05.3</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Needs Photoshop 24.4 or later (imaging API).</li><li>Wrap is forced on for layers without an alpha channel — a Background layer can&#x27;t hold the transparency the off setting needs. Work on a copy avoids this.</li><li>Bands are measured from the top of the layer&#x27;s own bounds, not the canvas.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">05.4</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>For quick iteration, load the folder&#x27;s <code>manifest.json</code> in <b>UXP Developer Tools</b> instead — dev-loads are live-reloadable but vanish when Photoshop restarts.</p>
+<p>To update the installed copy: bump <code>version</code> in <code>manifest.json</code>, zip <code>manifest.json</code> + <code>index.html</code> + <code>main.js</code> (at the archive root) with a <code>.ccx</code> extension, and run the installer agent again.</p></div>
+</section>
+<section class="block" id="installing">
+  <div class="block-label"><span class="bl-num">05.5</span>
+  <h2>installing</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">In Terminal, run Adobe&#x27;s installer agent on the plugin&#x27;s <code>.ccx</code> from <code>Photoshop Scripts/CCX Installers</code>: <code>&quot;/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent&quot; --install &lt;plugin&gt;.ccx</code></span></li>
+<li><span class="step-n">02</span><span class="step-t">Restart Photoshop. The panel appears under <b>Plugins</b> and survives restarts — UXP Developer Tools is not needed.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Do not double-click the <code>.ccx</code>: Creative Cloud wrongly reports <i>Compatible app required</i> for unsigned plugins.</span></li>
+</ol></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="static.html"><span>previous</span>static</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="misregistered-print.html"><span>next</span>misregistered print</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>photoshop</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-23</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

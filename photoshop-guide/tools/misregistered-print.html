@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>misregistered print — photoshop</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">photoshop</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">06</p>
+  <h1>misregistered print</h1>
+  <p class="ch-sub">The cheap-print look: halftone dots, colour plates out of register, paper grain and warmth.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/misregistered-print.png" alt="Misregistered Print"></div><figcaption>misregistered print</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">06.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Treats the active layer as a badly printed reproduction of itself. Optionally halftones the image first, then splits it into colour plates and drifts each by its own random distance and direction — the blue plate anchors, red and green wander — before finishing with paper grain and a warm photo-filter wash like aged stock. Anything at 0 is skipped, so it also serves as a plain halftone or plain warmth pass.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.0.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.misprint</dd></div><div class="fact"><dt>folder</dt><dd>MisregisteredPrint-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">06.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Select a pixel layer and press <b>Run pass</b>; the defaults give a modest newspaper drift.</span></li>
+<li><span class="step-n">02</span><span class="step-t">For heavier riso-style separation, push misregistration to 10 – 20 px and add halftone.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">06.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">print</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Halftone dot size<span class="rng">px, 0 = off</span></dt><dd>Photoshop&#x27;s colour halftone at standard screen angles. 4 – 10 px reads as newsprint at print resolution; values below 4 are treated as off.</dd></div>
+<div class="ctl-row"><dt>Misregistration max<span class="rng">px</span></dt><dd>Each drifting plate picks its own random direction and a distance between 40% and 100% of this.</dd></div>
+</dl>
+<h3 class="sub">paper</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Paper grain<span class="rng">%</span></dt><dd>Monochrome noise over everything.</dd></div>
+<div class="ctl-row"><dt>Warmth<span class="rng">%</span></dt><dd>A warming photo filter, luminosity preserved — cheap ink on off-white.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">06.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">order with the others</h3><p>This one usually goes last: halftone dots and plate drift read as the final reproduction of whatever mess the other passes made. Static over the top afterwards breaks the dots up nicely.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">06.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Halftone below 4 px is ignored — the filter needs room for a dot.</li><li>Misregistration fringes are colour by definition; on a mono image, desaturate <i>after</i> this pass and the fringes grey out to tonal wobble, which can also be the point.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">06.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>For quick iteration, load the folder&#x27;s <code>manifest.json</code> in <b>UXP Developer Tools</b> instead — dev-loads are live-reloadable but vanish when Photoshop restarts.</p>
+<p>To update the installed copy: bump <code>version</code> in <code>manifest.json</code>, zip <code>manifest.json</code> + <code>index.html</code> + <code>main.js</code> (at the archive root) with a <code>.ccx</code> extension, and run the installer agent again.</p></div>
+</section>
+<section class="block" id="installing">
+  <div class="block-label"><span class="bl-num">06.6</span>
+  <h2>installing</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">In Terminal, run Adobe&#x27;s installer agent on the plugin&#x27;s <code>.ccx</code> from <code>Photoshop Scripts/CCX Installers</code>: <code>&quot;/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent&quot; --install &lt;plugin&gt;.ccx</code></span></li>
+<li><span class="step-n">02</span><span class="step-t">Restart Photoshop. The panel appears under <b>Plugins</b> and survives restarts — UXP Developer Tools is not needed.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Do not double-click the <code>.ccx</code>: Creative Cloud wrongly reports <i>Compatible app required</i> for unsigned plugins.</span></li>
+</ol></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="row-jitter.html"><span>previous</span>row jitter</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>photoshop</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-23</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

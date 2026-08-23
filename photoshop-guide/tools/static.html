@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>static — photoshop</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">photoshop</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">04</p>
+  <h1>static</h1>
+  <p class="ch-sub">Generates a canvas-sized noise layer from mixable ingredients — radio static, hum bars, scanlines, dropout.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/static.png" alt="Static"></div><figcaption>static</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">04.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Synthesises texture from scratch rather than working on existing pixels: each press of Generate computes a canvas-sized noise field in the panel and writes it into a fresh layer through Photoshop&#x27;s imaging API. The field is mixed from ingredients — fine static, horizontal streaking, drifting hum bars, scanlines and tape-dropout flecks — any of which is left out at 0. The layer arrives with a chosen blend mode and opacity already set, ready to sit over artwork as texture, or on its own as raw static.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.0.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.4+</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.staticgen</dd></div><div class="fact"><dt>folder</dt><dd>Static-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">04.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Open a document and press <b>Generate</b> — no layer selection needed; the result is always a new layer called <i>Static</i>.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Adjust ingredients and generate again; each run is a fresh layer and one undo step.</span></li>
+<li><span class="step-n">03</span><span class="step-t">For texture over artwork, leave the blend mode on <b>Overlay</b> or <b>Soft Light</b> at 20 – 40% opacity. For raw static, set <b>Normal</b> at 100%.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">04.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">ingredients</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Fine static<span class="rng">0 – 127</span></dt><dd>Per-pixel random noise, the base hiss.</dd></div>
+<div class="ctl-row"><dt>Streaking strength / length<span class="rng">0 – 100 / px</span></dt><dd>Smears the noise horizontally — the soft sideways grain of a weak signal. Length is how far the smear correlates.</dd></div>
+<div class="ctl-row"><dt>Hum bars<span class="rng">count / strength / thickness</span></dt><dd>Soft dark horizontal bands at random heights, like mains hum rolling through a picture.</dd></div>
+<div class="ctl-row"><dt>Scanline spacing / darkness<span class="rng">px, 0 = off / 0 – 100</span></dt><dd>Darkens one row every N pixels. 2 – 4 px spacing reads as CRT at print size.</dd></div>
+<div class="ctl-row"><dt>Dropout density / max length<span class="rng">0 – 100 / px</span></dt><dd>Short bright or dark horizontal flecks, one or two pixels tall, like tape dropout.</dd></div>
+</dl>
+<h3 class="sub">character</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Contrast<span class="rng">−50 to 100</span></dt><dd>Pushes the whole field away from mid-grey.</dd></div>
+<div class="ctl-row"><dt>Chroma noise<span class="rng">checkbox</span></dt><dd>Randomises the channels independently — coloured confetti static instead of mono.</dd></div>
+</dl>
+<h3 class="sub">layer</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Blend mode<span class="rng">Normal / Overlay / Soft Light / Screen / Multiply / Linear Light</span></dt><dd>Applied to the generated layer. The field is built around mid-grey, so Overlay and Soft Light treat it as pure texture.</dd></div>
+<div class="ctl-row"><dt>Opacity<span class="rng">1 – 100%</span></dt><dd>Also applied on arrival.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">04.3</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Needs Photoshop 24.4 or later — the imaging API is how the pixels get in.</li><li>Generation is computed in the panel: a large canvas (A2 at 300dpi and up) takes several seconds and a fair chunk of memory. The status line says when it is working.</li><li>The layer arrives with blend mode and opacity already set — easy to forget it landed on Overlay at 35% and wonder why it looks faint on its own.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">04.4</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>For quick iteration, load the folder&#x27;s <code>manifest.json</code> in <b>UXP Developer Tools</b> instead — dev-loads are live-reloadable but vanish when Photoshop restarts.</p>
+<p>To update the installed copy: bump <code>version</code> in <code>manifest.json</code>, zip <code>manifest.json</code> + <code>index.html</code> + <code>main.js</code> (at the archive root) with a <code>.ccx</code> extension, and run the installer agent again.</p></div>
+</section>
+<section class="block" id="installing">
+  <div class="block-label"><span class="bl-num">04.5</span>
+  <h2>installing</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">In Terminal, run Adobe&#x27;s installer agent on the plugin&#x27;s <code>.ccx</code> from <code>Photoshop Scripts/CCX Installers</code>: <code>&quot;/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent&quot; --install &lt;plugin&gt;.ccx</code></span></li>
+<li><span class="step-n">02</span><span class="step-t">Restart Photoshop. The panel appears under <b>Plugins</b> and survives restarts — UXP Developer Tools is not needed.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Do not double-click the <code>.ccx</code>: Creative Cloud wrongly reports <i>Compatible app required</i> for unsigned plugins.</span></li>
+</ol></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="signal-degrade.html"><span>previous</span>signal degrade</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="row-jitter.html"><span>next</span>row jitter</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>photoshop</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-23</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>
