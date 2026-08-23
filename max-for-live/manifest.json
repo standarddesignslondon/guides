@@ -225,6 +225,42 @@
     "kind": "Audio Effect",
     "author": "Claude"
    }
+  },
+  {
+   "num": "19",
+   "slug": "mood",
+   "name": "Mood",
+   "tagline": "Micro-looper into reverb, delay or slip sampler after the Chase Bliss MOOD MKII \u2014 with a shared sample-rate clock.",
+   "url": "devices/mood.html",
+   "image": "images/Mood.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "20",
+   "slug": "bad-mood",
+   "name": "Bad Mood",
+   "tagline": "Clocked micro-looper into a synthetic wet channel, after the Chase Bliss BAD MOOD \u2014 Burst/Radio/Mask loops, Soup/Relay/Flip, Cross and Glue.",
+   "url": "devices/bad-mood.html",
+   "image": "images/bad-mood.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "21",
+   "slug": "gen-loss",
+   "name": "Gen Loss",
+   "tagline": "Tape degradation after the Chase Bliss Generation Loss MKII \u2014 wow, flutter, saturation, eleven tape models and a Failure knob.",
+   "url": "devices/gen-loss.html",
+   "image": "images/gen-loss.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
   }
  ]
 }

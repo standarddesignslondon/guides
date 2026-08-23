@@ -2226,3 +2226,354 @@ ITEMS.append({
         "— **no freeze needed**, ever.",
     ],
 })
+
+# --------------------------------------------------------------------------
+# MOOD
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "mood",
+    "name": "Mood",
+    "kind": "Audio Effect",
+    "author": "Claude",
+    "status": "Awaiting test",
+    "folder": "Mood Device",
+    "tagline": "Micro-looper into reverb, delay or slip sampler after the "
+               "Chase Bliss MOOD MKII — with a shared sample-rate clock.",
+    "blurb":
+        "Two channels, exactly like the pedal: a **micro-looper** (Env / Tape "
+        "/ Stretch) that is always listening and loops the last LENGTH of "
+        "audio when you flip it to play, feeding a **wet channel** (Reverb / "
+        "Delay / Slip) with Freeze. One CLOCK sets the sample rate of both, "
+        "stepping through harmonized ratios so loops change length and pitch "
+        "together with the delay times. The whole DSP is one gen~ codebox; "
+        "four Push 3 banks cover the panel, the switches, the hidden options "
+        "and the dips.",
+    "quickstart": [
+        "Drop `Mood.amxd` on an audio track.",
+        "Play something, then flip **Loop** to play: the last **Length** of "
+        "audio loops. **L.Modify** sets Tape speed in octaves.",
+        "Set **Wet Mode** and **Routing** to Loop to send the loop through "
+        "Reverb, Delay or Slip; **Freeze** holds it.",
+        "Turn **Clock** down for longer, lower, crunchier loops and delays.",
+    ],
+    "controls": [
+        {"title": "Mood", "rows": [
+            ["Mix", "0 - 100%",
+             "Equal-power balance between input and both channels. With both "
+             "channels off the dry passes at unity regardless."],
+            ["Clock", "0 - 100%",
+             "Shared sample rate in harmonized steps (1, 4/3, 3/2, 2, 3, 4, "
+             "6, 8); loop length/pitch and delay times follow. Changing it "
+             "while a loop plays re-pitches the loop, like the pedal."],
+            ["Time", "0 - 100%",
+             "Reverb decay/size, delay time, slip refresh rate."],
+            ["Modify", "0 - 100%",
+             "Reverb smear, delay feedback, slip speed and direction (left "
+             "half reverse, 75% = normal, 100% = double)."],
+            ["Length", "0 - 100%",
+             "Loop length (Tape) or slice size (Env, Stretch) — 21 ms to "
+             "2.7 s at full clock, up to 22 s at clock 0."],
+            ["L.Modify", "0 - 100%",
+             "Env sensitivity; Tape speed in octave steps −4× to 4×, reverse "
+             "on the left (70% = 1×); Stretch amount and direction (50% = "
+             "frozen)."],
+            ["Wet Mode", "Reverb / Delay / Slip", "Wet channel algorithm."],
+            ["Loop Mode", "Env / Tape / Stretch", "Micro-looper algorithm."]]},
+        {"title": "Switches", "rows": [
+            ["Loop", "listen / play",
+             "Always recording while listening (the wet channel's output "
+             "when it is on); play loops what it just heard."],
+            ["Overdub", "off / on",
+             "Records the clean input on top of the playing loop (never the "
+             "wet channel)."],
+            ["Wet On", "off / on", "Wet channel footswitch."],
+            ["Freeze", "off / on",
+             "Infinitely repeats the current wet sound. Reverb/Delay: "
+             "feedback to 1, input muted. Slip: the sampler stops "
+             "refreshing."],
+            ["Routing", "Input / In+Loop / Loop",
+             "What the wet channel processes when both channels are on."],
+            ["Spread", "off / on",
+             "Stereo processing, per mode: offset read heads, separate L/R "
+             "comb sets, right delay at 2/3 time."],
+            ["MISO", "off / on", "Mono in, stereo out."],
+            ["Dry Kill", "off / on", "Removes the dry signal."]]},
+        {"title": "Hidden", "rows": [
+            ["Tone", "0 - 100%",
+             "Hi-cut on the wet channel — 0 open, 100% down to 1 kHz."],
+            ["Width", "0 - 100%", "Wet stereo width when Spread is on."],
+            ["Direct", "0 - 100%",
+             "Clean micro-loop blend when routed through the wet channel."],
+            ["Fade", "0 - 100%", "How fast loops fade while overdubbing."],
+            ["Balance", "0 - 100%",
+             "Relative level of the two channels; 50% = both unity."],
+            ["Sync", "off / on",
+             "Delay time / slip refresh follow the loop length."],
+            ["Trails", "off / on",
+             "Wet tail keeps fading after Wet On goes off."],
+            ["No Dub", "off / on", "Overdub replaces instead of adds."]]},
+        {"title": "Dips", "rows": [
+            ["Half", "full / half", "Loop length half."],
+            ["Smooth", "off / on",
+             "Continuous Clock instead of harmonized steps."],
+            ["Spr Solo", "Both / Looper / Wet",
+             "Which channel Spread affects."]]},
+    ],
+    "banks": [
+        {"name": "Mood",
+         "encoders": ["Mix", "Clock", "Time", "Modify", "Length", "L.Modify",
+                      "Wet Mode", "Loop Mode"]},
+        {"name": "Switches",
+         "encoders": ["Loop", "Overdub", "Wet On", "Freeze", "Routing",
+                      "Spread", "MISO", "Dry Kill"]},
+        {"name": "Hidden",
+         "encoders": ["Tone", "Width", "Direct", "Fade", "Balance", "Sync",
+                      "Trails", "No Dub"]},
+        {"name": "Dips",
+         "encoders": ["Half", "Smooth", "Spr Solo", None, None, None, None,
+                      None]},
+    ],
+    "gotchas": [
+        "The looper only records while **Loop** is on *listen*; flipping to "
+        "*play* freezes the buffer. Nothing plays if you flip it before any "
+        "audio has gone in.",
+        "With **Routing** on Loop and **Wet On**, the loop is 100% wet — use "
+        "**Direct** to hear it clean as well.",
+        "**Mix** at 100% with both channels off still passes the dry at "
+        "unity (pedal-style bypass).",
+        "Hold functions (Overdub, Freeze) are toggles: map them to pads for "
+        "momentary use.",
+        "At Tape speeds other than 1×, overdubs do not land exactly where "
+        "you hear the playback — the write follows the loop's own clock "
+        "position.",
+    ],
+    "rebuild": [
+        "`python3 build.py` in `Mood Device/Mood source/` regenerates the "
+        "`.amxd` from `dsp.genexpr`; `python3 proto.py` runs the offline DSP "
+        "checks (about 3 minutes).",
+    ],
+})
+
+# --------------------------------------------------------------------------
+# BAD MOOD
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "bad-mood",
+    "name": "Bad Mood",
+    "kind": "Audio Effect",
+    "author": "Claude",
+    "status": "Awaiting test",
+    "folder": "Bad Mood Device",
+    "tagline": "Clocked micro-looper into a synthetic wet channel, after the "
+               "Chase Bliss BAD MOOD — Burst/Radio/Mask loops, "
+               "Soup/Relay/Flip, Cross and Glue.",
+    "blurb":
+        "A stereo audio effect that follows the pedal's signal flow: "
+        "**Micro-looper channel → Wet channel → Glue → Output**. The looper "
+        "is always listening; switch **Loop** on to play the last "
+        "loop-length back as a step sequence (Burst), a five-station "
+        "shortwave radio (Radio) or a threshold-masked loop (Mask). The wet "
+        "channel is a modulated feedback reverb with shimmer (Soup), an "
+        "equal-volume repeater with 1–8 repeats (Relay) or time-spread pitch "
+        "harmonies (Flip). **Clock** sets the sample rate of both channels "
+        "in harmonized steps. The whole DSP is one gen~ codebox, so the "
+        "device has no dependencies. Four Push 3 banks mirror the front "
+        "panel, the footswitches and dips, the character options and setup.",
+    "quickstart": [
+        "Drop `Bad Mood.amxd` on an audio track; map **Loop**, **Overdub**, "
+        "**Wet On** and **Freeze** to pads.",
+        "Play a phrase, switch **Loop** on: the last 0.68 s (Clock at 0) "
+        "plays back. Pick a **Loop Mode**.",
+        "Set **Wet Mode** to Soup and raise **Time**; **Modify** pushes it "
+        "synthetic/metallic.",
+        "Turn **Clock** to change sample rate, loop length and pitch in "
+        "harmonized steps.",
+    ],
+    "controls": [
+        {"title": "Bad Mood", "rows": [
+            ["Mix", "0 - 100%", "Input vs BAD MOOD, both channels."],
+            ["Clock", "8 steps",
+             "Sample rate: loop length/resolution and wet quality/time. "
+             "Steps 1, 4/3, 3/2, 2, 3, 4, 6, 8 unless **Smooth**."],
+            ["Time", "0 - 100%",
+             "Soup decay / Relay delay time / Flip lag between notes."],
+            ["Modify", "0 - 100%",
+             "Soup character / Relay repeats (1-8) / Flip harmony (8 sets)."],
+            ["Length", "0 - 100%",
+             "Burst step speed / Radio per-station parameter / Mask "
+             "character."],
+            ["L.Modify", "0 - 100%",
+             "Burst sensitivity / Radio station scan / Mask threshold."],
+            ["Wet Mode", "Soup / Relay / Flip",
+             "Synthetic reverb, abstract repeater, chordcaster."],
+            ["Loop Mode", "Burst / Radio / Mask",
+             "Loop sequencer, shortwave looper, loop disguiser."]]},
+        {"title": "Switches", "rows": [
+            ["Loop", "listen / play",
+             "Record (always listening) or play the micro-loop."],
+            ["Overdub", "off / on",
+             "Layer clean input onto the playing loop."],
+            ["Wet On", "off / on", "Wet channel footswitch."],
+            ["Freeze", "off / on", "Infinitely repeat the current sound."],
+            ["Routing", "Input / In+Loop / Looper",
+             "What feeds the wet channel when both are on."],
+            ["Spread", "off / on",
+             "Stereo spread: different L/R modulation, ping-pong repeats, "
+             "detuned harmonies, offset loop read."],
+            ["MISO", "off / on", "Mono in, stereo out."],
+            ["Dry Kill", "off / on", "Remove the dry signal."]]},
+        {"title": "Character", "rows": [
+            ["Cross", "0 - 100%",
+             "Pitch + loudness modulation from the other channel. Off by "
+             "default."],
+            ["Input Mod", "off / on", "Cross source becomes the input."],
+            ["Glue", "0 - 100%",
+             "End-of-chain saturator / destroyer — warming to bit-crushed "
+             "above 50%."],
+            ["Dry Glue", "off / on", "Glue on the dry signal too."],
+            ["EQ", "0 - 100%",
+             "Tilt: cw removes lows, ccw removes highs, noon = no effect."],
+            ["Balance", "0 - 100%", "Looper vs wet loudness."],
+            ["Blend", "0 - 100%",
+             "Clean loop when routed through the wet channel."],
+            ["Fade", "0 - 100%", "Old layers fade while overdubbing."]]},
+        {"title": "Setup", "rows": [
+            ["Sync", "off / on",
+             "Wet times lock to loop-length divisions (÷1–8 set by Time)."],
+            ["Trails", "off / on",
+             "Wet tails continue after Wet On goes off."],
+            ["Half", "off / on", "Loop length halved."],
+            ["Smooth", "off / on", "Continuous Clock."],
+            ["Spread Solo", "off / on", "Spread on the wet channel only."]]},
+    ],
+    "banks": [
+        {"name": "Bad Mood",
+         "encoders": ["Mix", "Clock", "Time", "Modify", "Length", "L.Modify",
+                      "Wet Mode", "Loop Mode"]},
+        {"name": "Switches",
+         "encoders": ["Loop", "Overdub", "Wet On", "Freeze", "Routing",
+                      "Spread", "MISO", "Dry Kill"]},
+        {"name": "Character",
+         "encoders": ["Cross", "Input Mod", "Glue", "Dry Glue", "EQ",
+                      "Balance", "Blend", "Fade"]},
+        {"name": "Setup",
+         "encoders": ["Sync", "Trails", "Half", "Smooth", "Spread Solo",
+                      None, None, None]},
+    ],
+    "workflow": [
+        {"title": "the radio dial",
+         "text": "In Radio mode, **L.Modify** scans five stations with "
+                 "filtered static between them: Tape (Length = speed and "
+                 "direction, ccw reverses), Ambient (slowdown, pitch kept), "
+                 "Orchestral (octave and fifth voices drift in and out), "
+                 "Shoegaze (frozen grains) and Dance (normal → half → "
+                 "double speed)."},
+    ],
+    "gotchas": [
+        "Soup is a modulated feedback network with shimmer, not a true "
+        "spectral resynthesis (no FFT in gen~); high **Modify** shortens "
+        "its tail a little.",
+        "The loop is the last 0.68 s × Clock ratio (at 48 kHz) of what the "
+        "looper heard — there is no separate record button.",
+        "**Loop**, **Overdub**, **Wet On** and **Freeze** are toggles, not "
+        "momentary switches: map them to pads.",
+    ],
+    "rebuild": [
+        "`python3 build.py` in `Bad Mood Device/Bad Mood source/` "
+        "regenerates the `.amxd` from `dsp.genexpr`; `python3 proto.py` "
+        "runs the Python prototype checks.",
+    ],
+})
+
+# --------------------------------------------------------------------------
+# GEN LOSS
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "gen-loss",
+    "name": "Gen Loss",
+    "kind": "Audio Effect",
+    "author": "Claude",
+    "status": "Awaiting test",
+    "folder": "Generation Loss Device",
+    "tagline": "Tape degradation after the Chase Bliss Generation Loss MKII "
+               "— wow, flutter, saturation, eleven tape models and a "
+               "Failure knob.",
+    "blurb":
+        "A stereo audio effect that follows the pedal's signal flow: "
+        "**Saturate → Model → Drops → Wow/Flutter → Dry blend**. The whole "
+        "DSP is one gen~ codebox, so the device has no dependencies. Three "
+        "Push 3 banks mirror the pedal's knobs, its toggles and dip "
+        "switches, and its hidden options.",
+    "quickstart": [
+        "Drop `Gen Loss.amxd` on an audio track.",
+        "Pick a **Model** (CPR-3300 G3 or Dictatron IN for the heaviest "
+        "degradation).",
+        "Raise **Wow** and **Flutter** to taste; add **Failure** for drops, "
+        "snags and crackle.",
+        "Set **Aux** to Stop and map **Aux On** to a pad for tape-stops.",
+    ],
+    "controls": [
+        {"title": "Pedal", "rows": [
+            ["Wow", "0 - 100%",
+             "Slow random pitch drift. Sweet spot around 30–40%."],
+            ["Flutter", "0 - 100%",
+             "Fast random pitch and level modulation."],
+            ["Saturate", "0 - 100%",
+             "Tape saturation with a hysteresis \"memory\" term, so the "
+             "shape depends on what came before."],
+            ["Failure", "0 - 100%", "Drops, snags, crinkles and pops."],
+            ["Model", "Off + 11",
+             "Tape machine EQ profiles, VHS to reel-to-reel: CPR-3300 "
+             "G1/G2/G3 (VHS, each generation worse), Portamax RT/HT "
+             "(cassette), CAM-8, Dictatron EX/IN, Fishy 60, MS-Walker, "
+             "AMU-2."],
+            ["Volume", "0 - 2", "Wet level; 1 is unity, 2 is +6 dB."],
+            ["Dry", "0 - 100%", "Clean blend; 50% is unity."],
+            ["Noise", "off / on", "Hiss and mechanical noise."]]},
+        {"title": "Aux & stereo", "rows": [
+            ["Aux", "Stop / Filter / Fail",
+             "What Aux On does: tape-stop to a halt, bypass the Model EQ, "
+             "or max Failure."],
+            ["Aux On", "off / on", "The footswitch."],
+            ["Onset", "10 ms - 4 s", "Arrival time of the Aux effect."],
+            ["Spread", "0 - 100%",
+             "L/R wow offset; independent drops above 50%."],
+            ["MISO", "off / on", "Mono in, stereo out."],
+            ["Dry Type", "clean / tape",
+             "With tape, the dry also passes Saturate, Model and Drops — "
+             "just not Wow/Flutter."],
+            ["Drop Byp / Snag Byp", "off / on",
+             "Remove that component of Failure."]]},
+        {"title": "Hidden", "rows": [
+            ["Hiss", "0 - 100%", "Hiss level for the Noise toggle."],
+            ["Hum", "0 - 100%", "Mechanical noise level."],
+            ["Hum Type", "hum / VCR",
+             "50 Hz buzz or 15.7 kHz whine + rumble."],
+            ["Crinkle", "0 - 100%", "Audible crinkle/pop level."],
+            ["Hum Byp", "off / on", "Remove mechanical noise."],
+            ["In Gain", "0 - 100%", "Drive into the saturation."]]},
+    ],
+    "banks": [
+        {"name": "Pedal",
+         "encoders": ["Wow", "Flutter", "Saturate", "Failure", "Model",
+                      "Volume", "Dry", "Noise"]},
+        {"name": "Aux & Stereo",
+         "encoders": ["Aux", "Aux On", "Onset", "Spread", "MISO", "Dry Type",
+                      "Drop Byp", "Snag Byp"]},
+        {"name": "Hidden",
+         "encoders": ["Hiss", "Hum", "Hum Type", "Crinkle", "Hum Byp",
+                      "In Gain", None, None]},
+    ],
+    "gotchas": [
+        "The wet path has a fixed 10 ms delay, so a high **Dry** setting "
+        "combs against it — that is the chorus effect the manual describes, "
+        "not a fault.",
+        "**Aux On** is a parameter, not a momentary switch: map it to a pad "
+        "for footswitch behaviour.",
+    ],
+    "rebuild": [
+        "`python3 build_amxd.py` in `Generation Loss Device/Gen Loss "
+        "source/` regenerates the `.amxd` from `dsp.genexpr`; `proto.py` is "
+        "the offline Python port of the DSP.",
+    ],
+})

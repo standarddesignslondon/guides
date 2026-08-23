@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gen loss — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">21</p>
+  <h1>gen loss</h1>
+  <p class="ch-sub">Tape degradation after the Chase Bliss Generation Loss MKII — wow, flutter, saturation, eleven tape models and a Failure knob.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/gen-loss.png" alt="Gen Loss"></div><figcaption>gen loss</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">21.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">A stereo audio effect that follows the pedal&#x27;s signal flow: <b>Saturate → Model → Drops → Wow/Flutter → Dry blend</b>. The whole DSP is one gen~ codebox, so the device has no dependencies. Three Push 3 banks mirror the pedal&#x27;s knobs, its toggles and dip switches, and its hidden options.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>awaiting test</dd></div><div class="fact"><dt>folder</dt><dd>Generation Loss Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">21.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Gen Loss.amxd</code> on an audio track.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Pick a <b>Model</b> (CPR-3300 G3 or Dictatron IN for the heaviest degradation).</span></li>
+<li><span class="step-n">03</span><span class="step-t">Raise <b>Wow</b> and <b>Flutter</b> to taste; add <b>Failure</b> for drops, snags and crackle.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Set <b>Aux</b> to Stop and map <b>Aux On</b> to a pad for tape-stops.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">21.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">pedal</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Wow<span class="rng">0 - 100%</span></dt><dd>Slow random pitch drift. Sweet spot around 30–40%.</dd></div>
+<div class="ctl-row"><dt>Flutter<span class="rng">0 - 100%</span></dt><dd>Fast random pitch and level modulation.</dd></div>
+<div class="ctl-row"><dt>Saturate<span class="rng">0 - 100%</span></dt><dd>Tape saturation with a hysteresis &quot;memory&quot; term, so the shape depends on what came before.</dd></div>
+<div class="ctl-row"><dt>Failure<span class="rng">0 - 100%</span></dt><dd>Drops, snags, crinkles and pops.</dd></div>
+<div class="ctl-row"><dt>Model<span class="rng">Off + 11</span></dt><dd>Tape machine EQ profiles, VHS to reel-to-reel: CPR-3300 G1/G2/G3 (VHS, each generation worse), Portamax RT/HT (cassette), CAM-8, Dictatron EX/IN, Fishy 60, MS-Walker, AMU-2.</dd></div>
+<div class="ctl-row"><dt>Volume<span class="rng">0 - 2</span></dt><dd>Wet level; 1 is unity, 2 is +6 dB.</dd></div>
+<div class="ctl-row"><dt>Dry<span class="rng">0 - 100%</span></dt><dd>Clean blend; 50% is unity.</dd></div>
+<div class="ctl-row"><dt>Noise<span class="rng">off / on</span></dt><dd>Hiss and mechanical noise.</dd></div>
+</dl>
+<h3 class="sub">aux &amp; stereo</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Aux<span class="rng">Stop / Filter / Fail</span></dt><dd>What Aux On does: tape-stop to a halt, bypass the Model EQ, or max Failure.</dd></div>
+<div class="ctl-row"><dt>Aux On<span class="rng">off / on</span></dt><dd>The footswitch.</dd></div>
+<div class="ctl-row"><dt>Onset<span class="rng">10 ms - 4 s</span></dt><dd>Arrival time of the Aux effect.</dd></div>
+<div class="ctl-row"><dt>Spread<span class="rng">0 - 100%</span></dt><dd>L/R wow offset; independent drops above 50%.</dd></div>
+<div class="ctl-row"><dt>MISO<span class="rng">off / on</span></dt><dd>Mono in, stereo out.</dd></div>
+<div class="ctl-row"><dt>Dry Type<span class="rng">clean / tape</span></dt><dd>With tape, the dry also passes Saturate, Model and Drops — just not Wow/Flutter.</dd></div>
+<div class="ctl-row"><dt>Drop Byp / Snag Byp<span class="rng">off / on</span></dt><dd>Remove that component of Failure.</dd></div>
+</dl>
+<h3 class="sub">hidden</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Hiss<span class="rng">0 - 100%</span></dt><dd>Hiss level for the Noise toggle.</dd></div>
+<div class="ctl-row"><dt>Hum<span class="rng">0 - 100%</span></dt><dd>Mechanical noise level.</dd></div>
+<div class="ctl-row"><dt>Hum Type<span class="rng">hum / VCR</span></dt><dd>50 Hz buzz or 15.7 kHz whine + rumble.</dd></div>
+<div class="ctl-row"><dt>Crinkle<span class="rng">0 - 100%</span></dt><dd>Audible crinkle/pop level.</dd></div>
+<div class="ctl-row"><dt>Hum Byp<span class="rng">off / on</span></dt><dd>Remove mechanical noise.</dd></div>
+<div class="ctl-row"><dt>In Gain<span class="rng">0 - 100%</span></dt><dd>Drive into the saturation.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">21.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">pedal</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Wow</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Flutter</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Saturate</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Failure</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Model</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Volume</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Dry</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Noise</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">aux &amp; stereo</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Aux</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Aux On</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Onset</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Spread</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">MISO</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Dry Type</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Drop Byp</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Snag Byp</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">hidden</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Hiss</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Hum</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Hum Type</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Crinkle</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Hum Byp</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">In Gain</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">21.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>The wet path has a fixed 10 ms delay, so a high <b>Dry</b> setting combs against it — that is the chorus effect the manual describes, not a fault.</li><li><b>Aux On</b> is a parameter, not a momentary switch: map it to a pad for footswitch behaviour.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">21.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_amxd.py</code> in <code>Generation Loss Device/Gen Loss source/</code> regenerates the <code>.amxd</code> from <code>dsp.genexpr</code>; <code>proto.py</code> is the offline Python port of the DSP.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="bad-mood.html"><span>previous</span>bad mood</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-23</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

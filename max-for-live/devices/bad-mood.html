@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bad mood — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">20</p>
+  <h1>bad mood</h1>
+  <p class="ch-sub">Clocked micro-looper into a synthetic wet channel, after the Chase Bliss BAD MOOD — Burst/Radio/Mask loops, Soup/Relay/Flip, Cross and Glue.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/bad-mood.png" alt="Bad Mood"></div><figcaption>bad mood</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">20.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">A stereo audio effect that follows the pedal&#x27;s signal flow: <b>Micro-looper channel → Wet channel → Glue → Output</b>. The looper is always listening; switch <b>Loop</b> on to play the last loop-length back as a step sequence (Burst), a five-station shortwave radio (Radio) or a threshold-masked loop (Mask). The wet channel is a modulated feedback reverb with shimmer (Soup), an equal-volume repeater with 1–8 repeats (Relay) or time-spread pitch harmonies (Flip). <b>Clock</b> sets the sample rate of both channels in harmonized steps. The whole DSP is one gen~ codebox, so the device has no dependencies. Four Push 3 banks mirror the front panel, the footswitches and dips, the character options and setup.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>awaiting test</dd></div><div class="fact"><dt>folder</dt><dd>Bad Mood Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">20.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Bad Mood.amxd</code> on an audio track; map <b>Loop</b>, <b>Overdub</b>, <b>Wet On</b> and <b>Freeze</b> to pads.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Play a phrase, switch <b>Loop</b> on: the last 0.68 s (Clock at 0) plays back. Pick a <b>Loop Mode</b>.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Set <b>Wet Mode</b> to Soup and raise <b>Time</b>; <b>Modify</b> pushes it synthetic/metallic.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Turn <b>Clock</b> to change sample rate, loop length and pitch in harmonized steps.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">20.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">bad mood</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Mix<span class="rng">0 - 100%</span></dt><dd>Input vs BAD MOOD, both channels.</dd></div>
+<div class="ctl-row"><dt>Clock<span class="rng">8 steps</span></dt><dd>Sample rate: loop length/resolution and wet quality/time. Steps 1, 4/3, 3/2, 2, 3, 4, 6, 8 unless <b>Smooth</b>.</dd></div>
+<div class="ctl-row"><dt>Time<span class="rng">0 - 100%</span></dt><dd>Soup decay / Relay delay time / Flip lag between notes.</dd></div>
+<div class="ctl-row"><dt>Modify<span class="rng">0 - 100%</span></dt><dd>Soup character / Relay repeats (1-8) / Flip harmony (8 sets).</dd></div>
+<div class="ctl-row"><dt>Length<span class="rng">0 - 100%</span></dt><dd>Burst step speed / Radio per-station parameter / Mask character.</dd></div>
+<div class="ctl-row"><dt>L.Modify<span class="rng">0 - 100%</span></dt><dd>Burst sensitivity / Radio station scan / Mask threshold.</dd></div>
+<div class="ctl-row"><dt>Wet Mode<span class="rng">Soup / Relay / Flip</span></dt><dd>Synthetic reverb, abstract repeater, chordcaster.</dd></div>
+<div class="ctl-row"><dt>Loop Mode<span class="rng">Burst / Radio / Mask</span></dt><dd>Loop sequencer, shortwave looper, loop disguiser.</dd></div>
+</dl>
+<h3 class="sub">switches</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Loop<span class="rng">listen / play</span></dt><dd>Record (always listening) or play the micro-loop.</dd></div>
+<div class="ctl-row"><dt>Overdub<span class="rng">off / on</span></dt><dd>Layer clean input onto the playing loop.</dd></div>
+<div class="ctl-row"><dt>Wet On<span class="rng">off / on</span></dt><dd>Wet channel footswitch.</dd></div>
+<div class="ctl-row"><dt>Freeze<span class="rng">off / on</span></dt><dd>Infinitely repeat the current sound.</dd></div>
+<div class="ctl-row"><dt>Routing<span class="rng">Input / In+Loop / Looper</span></dt><dd>What feeds the wet channel when both are on.</dd></div>
+<div class="ctl-row"><dt>Spread<span class="rng">off / on</span></dt><dd>Stereo spread: different L/R modulation, ping-pong repeats, detuned harmonies, offset loop read.</dd></div>
+<div class="ctl-row"><dt>MISO<span class="rng">off / on</span></dt><dd>Mono in, stereo out.</dd></div>
+<div class="ctl-row"><dt>Dry Kill<span class="rng">off / on</span></dt><dd>Remove the dry signal.</dd></div>
+</dl>
+<h3 class="sub">character</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Cross<span class="rng">0 - 100%</span></dt><dd>Pitch + loudness modulation from the other channel. Off by default.</dd></div>
+<div class="ctl-row"><dt>Input Mod<span class="rng">off / on</span></dt><dd>Cross source becomes the input.</dd></div>
+<div class="ctl-row"><dt>Glue<span class="rng">0 - 100%</span></dt><dd>End-of-chain saturator / destroyer — warming to bit-crushed above 50%.</dd></div>
+<div class="ctl-row"><dt>Dry Glue<span class="rng">off / on</span></dt><dd>Glue on the dry signal too.</dd></div>
+<div class="ctl-row"><dt>EQ<span class="rng">0 - 100%</span></dt><dd>Tilt: cw removes lows, ccw removes highs, noon = no effect.</dd></div>
+<div class="ctl-row"><dt>Balance<span class="rng">0 - 100%</span></dt><dd>Looper vs wet loudness.</dd></div>
+<div class="ctl-row"><dt>Blend<span class="rng">0 - 100%</span></dt><dd>Clean loop when routed through the wet channel.</dd></div>
+<div class="ctl-row"><dt>Fade<span class="rng">0 - 100%</span></dt><dd>Old layers fade while overdubbing.</dd></div>
+</dl>
+<h3 class="sub">setup</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Sync<span class="rng">off / on</span></dt><dd>Wet times lock to loop-length divisions (÷1–8 set by Time).</dd></div>
+<div class="ctl-row"><dt>Trails<span class="rng">off / on</span></dt><dd>Wet tails continue after Wet On goes off.</dd></div>
+<div class="ctl-row"><dt>Half<span class="rng">off / on</span></dt><dd>Loop length halved.</dd></div>
+<div class="ctl-row"><dt>Smooth<span class="rng">off / on</span></dt><dd>Continuous Clock.</dd></div>
+<div class="ctl-row"><dt>Spread Solo<span class="rng">off / on</span></dt><dd>Spread on the wet channel only.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">20.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">bad mood</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Mix</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Clock</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Time</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Modify</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Length</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">L.Modify</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Wet Mode</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Loop Mode</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">switches</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Loop</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Overdub</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Wet On</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Freeze</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Routing</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Spread</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">MISO</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Dry Kill</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">character</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Cross</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Input Mod</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Glue</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Dry Glue</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">EQ</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Balance</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Blend</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Fade</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">setup</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Sync</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Trails</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Half</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Smooth</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Spread Solo</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">20.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">the radio dial</h3><p>In Radio mode, <b>L.Modify</b> scans five stations with filtered static between them: Tape (Length = speed and direction, ccw reverses), Ambient (slowdown, pitch kept), Orchestral (octave and fifth voices drift in and out), Shoegaze (frozen grains) and Dance (normal → half → double speed).</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">20.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Soup is a modulated feedback network with shimmer, not a true spectral resynthesis (no FFT in gen~); high <b>Modify</b> shortens its tail a little.</li><li>The loop is the last 0.68 s × Clock ratio (at 48 kHz) of what the looper heard — there is no separate record button.</li><li><b>Loop</b>, <b>Overdub</b>, <b>Wet On</b> and <b>Freeze</b> are toggles, not momentary switches: map them to pads.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">20.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build.py</code> in <code>Bad Mood Device/Bad Mood source/</code> regenerates the <code>.amxd</code> from <code>dsp.genexpr</code>; <code>python3 proto.py</code> runs the Python prototype checks.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="mood.html"><span>previous</span>mood</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="gen-loss.html"><span>next</span>gen loss</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-23</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>
