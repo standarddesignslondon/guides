@@ -344,6 +344,196 @@ ITEMS.append({
 })
 
 # --------------------------------------------------------------------------
+# KURZWELLEN
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "kurzwellen",
+    "name": "Kurzwellen",
+    "kind": "Audio Effect",
+    "author": "Claude",
+    "status": "Complete",
+    "folder": "Kurzwellen Device",
+    "tagline": "Shortwave-radio simulator \u2014 makes anything sound like it is "
+               "being received rather than played.",
+    "blurb":
+        "Not another tape device. Tape degradation is **mechanical**; shortwave "
+        "degradation is **atmospheric**, and the signatures are completely "
+        "different \u2014 multipath comb filtering that sweeps as the ionosphere "
+        "moves, fades that an AGC chases back up, a receiver hissing into its "
+        "own noise floor, and interference arriving in bursts. Nine modules, "
+        "each with a toggle and an amount, all breathing together under one "
+        "shared drift source: the coherence of everything degrading *at the "
+        "same time* is what sells it. Named for Stockhausen's *Kurzwellen* "
+        "(1968), for players with shortwave receivers.",
+    "quickstart": [
+        "Drop `Kurzwellen.amxd` on an audio track. Play something with a voice "
+        "in it.",
+        "That's most of it \u2014 the defaults are the classic \"voice on a "
+        "distant station\".",
+        "**Bandwidth** is how much radio. **Fade** is how much ionosphere.",
+        "**Shape** and **Depth** set how the whole device moves. Depth 0 "
+        "freezes everything and costs nothing in level.",
+    ],
+    "controls": [
+        {
+            "title": "Receiver",
+            "intro": "The chain models propagation then reception: "
+                     "Width \u2192 Tune \u2192 Fade \u2192 Band \u2192 Grit "
+                     "\u2192 AGC \u2192 Events \u2192 +Het \u2192 Mix.",
+            "rows": [
+                ["Bandwidth", "1.0 \u2013 8.0 kHz",
+                 "The IF filter, and the thing that makes it a radio. Fixed "
+                 "90 Hz high-pass plus a 4-pole low-pass, 24 dB/oct \u2014 "
+                 "shortwave sounds *band-limited*, not merely darkened. Always "
+                 "on; there is no bypass."],
+                ["Width", "0 \u2013 100",
+                 "Stereo \u2192 mono collapse. 100 is bit-exact passthrough, 0 "
+                 "is full L+R mono. Defaults to 0 because real shortwave is "
+                 "mono."],
+                ["Mix", "0 \u2013 100",
+                 "Dry/wet. 100 mutes the dry entirely \u2014 this is usually an "
+                 "insert \"make it radio\" effect, so that is the default."],
+            ],
+        },
+        {
+            "title": "Ionosphere",
+            "rows": [
+                ["Fade", "0 \u2013 100 + toggle",
+                 "Multipath. Direct plus two delayed copies (0.7 and 1.9 ms) "
+                 "whose times and gains drift independently, making a slowly "
+                 "sweeping comb \u2014 the hollow, almost-reverby character. "
+                 "Plus a flat fade of up to \u221214 dB on the slowest drift "
+                 "phase. Sets blend only; **Depth** sets how far things move."],
+                ["Tune", "\u2212150 \u2026 +150 Hz + toggle",
+                 "A **frequency** shifter, not a pitch shifter: every partial "
+                 "moves by a fixed number of Hz, so the harmonic series goes "
+                 "inharmonic. That is the queasy metallic sound of a mistuned "
+                 "SSB receiver. Centre-detented \u2014 \u00b12 Hz snaps to "
+                 "zero, and at zero it is exactly zero."],
+            ],
+        },
+        {
+            "title": "Detector and gain",
+            "rows": [
+                ["Grit", "0 \u2013 100 + toggle",
+                 "Detector distortion plus signal-correlated noise. The noise "
+                 "is multiplied by the input envelope, so it makes the *signal* "
+                 "gritty and dies when the input stops \u2014 it will not fight "
+                 "anything layered underneath. Subtle around 20\u201335, proper "
+                 "AM overmodulation crunch at 100."],
+                ["AGC", "0 \u2013 100 + toggle",
+                 "The receiver's gain stage. Boost only, up to +18 dB, slewing "
+                 "down fast and up slowly. That recovery lag is the breathing, "
+                 "and it is what chases Fade's flat fades back up \u2014 "
+                 "blooming slightly loud before it settles."],
+            ],
+        },
+        {
+            "title": "Interference",
+            "rows": [
+                ["Events", "0 \u2013 100 + toggle",
+                 "Density, from roughly one every 20 s at 10 to one every "
+                 "1.5 s at 100. Three types, weighted 4/2/2: **Dropout** "
+                 "(ducks 20\u201340 dB for 60\u2013400 ms, and dips the AGC "
+                 "detector too, so you get a swell afterwards), **Crash** "
+                 "(band-passed noise burst, 80\u2013300 ms decay, louder at "
+                 "higher density) and **Flutter** (200\u2013600 ms of "
+                 "8\u201320 Hz shallow AM, 6 dB deep)."],
+                ["Hetero", "0 \u2013 100 + toggle",
+                 "The adjacent-carrier whistle. One sine wandering 400\u20132800 "
+                 "Hz with a slow amplitude wobble so it never sounds like a "
+                 "test tone. **Defaults off.**"],
+            ],
+        },
+        {
+            "title": "Conditions",
+            "intro": "One generator with eight decorrelated output phases, one "
+                     "per consumer \u2014 not eight LFOs. Everything degrades "
+                     "together, which is the whole illusion.",
+            "rows": [
+                ["Shape", "Sine / Drift / Jump / Iono",
+                 "**Sine** plain LFO, predictable. **Drift** smoothed random "
+                 "walk \u2014 the default, and the one that sounds most like "
+                 "real propagation. **Jump** sample-and-hold steps. **Iono** "
+                 "Drift with sudden lurches every 10\u201330 s, which also "
+                 "double the event rate for about a second afterwards."],
+                ["Rate", "0.02 \u2013 2 Hz",
+                 "Log-scaled. The flat fade deliberately rides the slowest "
+                 "phase, so at the default 0.12 Hz it takes around 25 seconds "
+                 "to come round."],
+                ["Depth", "0 \u2013 100",
+                 "Scales every consumer's modulation span. 0 freezes all drift "
+                 "\u2014 still filtered and gritty, but stationary \u2014 and "
+                 "costs exactly nothing in level."],
+            ],
+        },
+    ],
+    "banks": [
+        {"name": "Signal",
+         "encoders": ["Bandwidth", "Fade", "Tune", "Grit", "AGC", "Events",
+                      "Hetero", "Mix"]},
+        {"name": "Conditions",
+         "encoders": ["Shape", "Rate", "Depth", "Width"],
+         "buttons": ["Fade On", "Tune On", "Grit On", "AGC On", "Events On",
+                     "Het On"],
+         "note": "Button rows start at slot 2 \u2014 Push 3 reserves the "
+                 "leftmost top-row button for the device name."},
+    ],
+    "workflow": [
+        {"title": "It processes only what you feed it",
+         "text": "There is no background static bed \u2014 that was left out on "
+                 "purpose. Layer real atmosphere from the **SW Radio** device "
+                 "underneath if you want it. What Kurzwellen *does* generate is "
+                 "receiver behaviour: correlated detector noise, AGC hiss, "
+                 "static crashes and the heterodyne whistle."},
+        {"title": "Set the weather first, then the radio",
+         "text": "Shape, Rate and Depth decide how the whole device moves; the "
+                 "module amounts decide how much of each symptom you hear. "
+                 "Getting the Conditions right first makes the rest quick."},
+        {"title": "Iono is the one to reach for when it feels too even",
+         "text": "Lurches arrive every 10\u201330 s and drag everything with "
+                 "them, and they double the event rate while they last. Bad "
+                 "conditions cluster; that is what stops long passages sounding "
+                 "like an LFO."},
+        {"title": "The whistle re-tunes itself in Jump and Iono",
+         "text": "It rides the same Conditions phase everything else does, so "
+                 "when that phase steps, the whistle steps with it \u2014 like "
+                 "a neighbouring station being retuned. No separate control for "
+                 "it."},
+    ],
+    "gotchas": [
+        "**AGC only boosts.** On a signal already above its target it correctly "
+        "sits at unity and does nothing \u2014 that is what an AGC does, not a "
+        "fault. It earns its keep on quieter material and on anything Fade is "
+        "already pulling down.",
+        "**With AGC on, silence does not go fully silent.** The receiver turns "
+        "itself up into its own noise floor between phrases: about \u221255 dB "
+        "at the default 45, rising to a \u221230 dB ceiling at 100. Turn AGC "
+        "off if that is a nuisance.",
+        "**Width does not deepen Fade's comb**, despite what you might expect. "
+        "Fade processes left and right with shared control signals, so each "
+        "channel gets an identically-defined comb whatever the source "
+        "correlation \u2014 measured, it is 10.7 dB at Width 0 against 10.8 dB "
+        "at Width 100. Width is a stereo-image utility, nothing more.",
+        "**Tune's wander scales with the dial.** At centre it is exactly 0 Hz. "
+        "That is deliberate: applied at centre the wander was the entire shift, "
+        "and \u00b16.6 Hz is 93 cents on a 120 Hz voice \u2014 nearly a "
+        "semitone of wobble.",
+        "Every module is bit-exact transparent at amount 0 or toggle off. All "
+        "eight of them, verified individually and together.",
+    ],
+    "rebuild": [
+        "`python3 build_kurzwellen.py` regenerates the `.amxd` + `.maxpat` with "
+        "full validation. **No freeze is ever needed** \u2014 there is no "
+        "external js anywhere.",
+        "`python3 sim_kurzwellen.py` runs 11 suites mirroring the DSP maths "
+        "(about 150 s). `--full` adds the 60 s stability soak.",
+        "Rebuilding from the script alone into an empty folder produces "
+        "byte-identical files. Never rescue a copy from an old Live Set.",
+    ],
+})
+
+# --------------------------------------------------------------------------
 # PULSOGRAPH
 # --------------------------------------------------------------------------
 ITEMS.append({

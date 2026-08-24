@@ -10,20 +10,20 @@
 <header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
 <main>
 <header class="chapter">
-  <p class="ch-num">07</p>
+  <p class="ch-num">08</p>
   <h1>ondes martenot</h1>
   <p class="ch-sub">Monophonic MPE Ondes voice for Push 3 pads — pressure is the envelope.</p>
 </header>
 <figure class="shot"><div class="shot-frame"><img src="../images/ondes–martenot–fond–version.png" alt="Ondes Martenot"></div><figcaption>ondes martenot</figcaption></figure>
 <section class="block" id="about">
-  <div class="block-label"><span class="bl-num">07.0</span><h2>about</h2></div>
+  <div class="block-label"><span class="bl-num">08.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Not a museum replica, but built around the three things that make the Ondes sound like the Ondes: combinable timbre stops from drifting &quot;tube&quot; oscillators, the <i>touche d&#x27;intensité</i> (<b>pressure is the envelope</b> — there is no fixed one), and the <i>diffuseurs</i>, the resonating speakers: spring, gong, and sympathetic strings.</p>
     <dl class="facts"><div class="fact"><dt>type</dt><dd>instrument</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete (frozen build)</dd></div><div class="fact"><dt>folder</dt><dd>Ondes Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
-  <div class="block-label"><span class="bl-num">07.1</span>
+  <div class="block-label"><span class="bl-num">08.1</span>
   <h2>quick start</h2></div>
   <div class="block-body"><ol class="steps">
 <li><span class="step-n">01</span><span class="step-t">Drop <code>Ondes Martenot.amxd</code> on a MIDI track.</span></li>
@@ -33,7 +33,7 @@
 </ol></div>
 </section>
 <section class="block" id="controls">
-  <div class="block-label"><span class="bl-num">07.2</span>
+  <div class="block-label"><span class="bl-num">08.2</span>
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">timbre stops</h3>
 <p class="lead">Mix these like drawbars — they combine rather than switch.</p>
@@ -62,7 +62,7 @@
 </dl></div>
 </section>
 <section class="block" id="push-3">
-  <div class="block-label"><span class="bl-num">07.3</span>
+  <div class="block-label"><span class="bl-num">08.3</span>
   <h2>push 3</h2></div>
   <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
 <div class="bank">
@@ -108,18 +108,18 @@
 </div></div>
 </section>
 <section class="block" id="workflow">
-  <div class="block-label"><span class="bl-num">07.4</span>
+  <div class="block-label"><span class="bl-num">08.4</span>
   <h2>workflow</h2></div>
   <div class="block-body"><h3 class="sub">the ribbon — two ways, and one of them is better</h3><p><b>Portamento (recommended):</b> take the Push pads <i>out</i> of MPE (Setup → Expression → Mono or Poly Aftertouch). Moving across pads then plays stepped notes on one channel, and turning up <b>Glide</b> slurs the mono voice between them — the <i>au ruban</i> feel. Keep aftertouch on so the touche still works. <b>MPE on</b> gives true per-note bend, but Push&#x27;s pads only emit continuous bend <i>within</i> a pad — sliding across pads retriggers notes. So MPE = per-pad vibrato, not long sweeps.</p>
 <h3 class="sub">starting points</h3><p><i>Messiaen</i>: Onde 0.9, Octave 0.2, Drift 0.35, Spring 0.3, Palme 0.5, Glide 80 ms, slow pressure swells. <i>Radiophonic</i>: Creux 0.7, Nasal 0.3, Drift 0.6, Metal 0.5, Touche 0.7. <i>Ghost choir</i>: Souffle 0.4, Onde 0.5, Palme 0.7, Spring 0.5, slide low.</p></div>
 </section>
 <section class="block" id="gotchas">
-  <div class="block-label"><span class="bl-num">07.5</span>
+  <div class="block-label"><span class="bl-num">08.5</span>
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>If pressure or bend seem global rather than per-note, check the track is receiving MPE. If you edit the patch in Max, the inspector&#x27;s Max for Live → <code>is_mpe</code> flag must stay on.</li><li>The shipped device is <b>frozen</b> (<code>ondes_voice.js</code> embedded). <code>build_ondes.py</code> now writes a frozen, self-contained device — there&#x27;s no manual freeze step any more.</li><li>A blank black UI means the background panel was drawn first — in patcher JSON the <i>first</i> box draws frontmost. The build script appends the panel last.</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
-  <div class="block-label"><span class="bl-num">07.6</span>
+  <div class="block-label"><span class="bl-num">08.6</span>
   <h2>rebuilding</h2></div>
   <div class="block-body"><p><code>python3 build_ondes.py</code> writes a frozen <code>.amxd</code> with the current <code>ondes_voice.js</code> embedded. Run <code>python3 sim_test.py</code> first after any DSP change to catch instabilities.</p>
 <p><code>Ondes Martenot.amxd.frozen-bak</code> is a known-good copy.</p></div>
@@ -129,7 +129,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-24</span>
+  <div class="sf-col"><span>generated 2026-08-25</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

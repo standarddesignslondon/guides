@@ -10,20 +10,20 @@
 <header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
 <main>
 <header class="chapter">
-  <p class="ch-num">21</p>
+  <p class="ch-num">22</p>
   <h1>gen loss</h1>
   <p class="ch-sub">Tape degradation after the Chase Bliss Generation Loss MKII — wow, flutter, saturation, eleven tape models and a Failure knob.</p>
 </header>
 <figure class="shot"><div class="shot-frame"><img src="../images/gen-loss.png" alt="Gen Loss"></div><figcaption>gen loss</figcaption></figure>
 <section class="block" id="about">
-  <div class="block-label"><span class="bl-num">21.0</span><h2>about</h2></div>
+  <div class="block-label"><span class="bl-num">22.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">A stereo audio effect that follows the pedal&#x27;s signal flow: <b>Saturate → Model → Drops → Wow/Flutter → Dry blend</b>. The whole DSP is one gen~ codebox, so the device has no dependencies. Three Push 3 banks mirror the pedal&#x27;s knobs, its toggles and dip switches, and its hidden options.</p>
     <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>awaiting test</dd></div><div class="fact"><dt>folder</dt><dd>Generation Loss Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
-  <div class="block-label"><span class="bl-num">21.1</span>
+  <div class="block-label"><span class="bl-num">22.1</span>
   <h2>quick start</h2></div>
   <div class="block-body"><ol class="steps">
 <li><span class="step-n">01</span><span class="step-t">Drop <code>Gen Loss.amxd</code> on an audio track.</span></li>
@@ -33,7 +33,7 @@
 </ol></div>
 </section>
 <section class="block" id="controls">
-  <div class="block-label"><span class="bl-num">21.2</span>
+  <div class="block-label"><span class="bl-num">22.2</span>
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">pedal</h3>
 <dl class="ctl">
@@ -67,7 +67,7 @@
 </dl></div>
 </section>
 <section class="block" id="push-3">
-  <div class="block-label"><span class="bl-num">21.3</span>
+  <div class="block-label"><span class="bl-num">22.3</span>
   <h2>push 3</h2></div>
   <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
 <div class="bank">
@@ -111,12 +111,12 @@
 </div></div>
 </section>
 <section class="block" id="gotchas">
-  <div class="block-label"><span class="bl-num">21.4</span>
+  <div class="block-label"><span class="bl-num">22.4</span>
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>The wet path has a fixed 10 ms delay, so a high <b>Dry</b> setting combs against it — that is the chorus effect the manual describes, not a fault.</li><li><b>Aux On</b> is a parameter, not a momentary switch: map it to a pad for footswitch behaviour.</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
-  <div class="block-label"><span class="bl-num">21.5</span>
+  <div class="block-label"><span class="bl-num">22.5</span>
   <h2>rebuilding</h2></div>
   <div class="block-body"><p><code>python3 build_amxd.py</code> in <code>Generation Loss Device/Gen Loss source/</code> regenerates the <code>.amxd</code> from <code>dsp.genexpr</code>; <code>proto.py</code> is the offline Python port of the DSP.</p></div>
 </section>
@@ -125,7 +125,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-24</span>
+  <div class="sf-col"><span>generated 2026-08-25</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

@@ -10,20 +10,20 @@
 <header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
 <main>
 <header class="chapter">
-  <p class="ch-num">03</p>
+  <p class="ch-num">04</p>
   <h1>pulsograph</h1>
   <p class="ch-sub">Early-electronic rhythm machine — four synthesis lanes on a 32-step grid that drifts like a real motor.</p>
 </header>
 <figure class="shot"><div class="shot-frame"><img src="../images/pulsograph.png" alt="Pulsograph"></div><figcaption>pulsograph</figcaption></figure>
 <section class="block" id="about">
-  <div class="block-label"><span class="bl-num">03.0</span><h2>about</h2></div>
+  <div class="block-label"><span class="bl-num">04.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Four lane voices, each able to be any of four classes (Thud, Tick, Burst, Odd), sequenced on a 32-step grid with per-lane length, direction and rate. Timing is sample-accurate inside gen~ and derived from Live&#x27;s transport, so loops and relocates resync for free — but <b>Drift</b> lets the whole thing breathe against the grid like a machine with a motor. Add per-lane Grit, slow parameter wander (Var), a delay circuit and hum/hiss, and it exports to audio or MIDI.</p>
     <dl class="facts"><div class="fact"><dt>type</dt><dd>instrument</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete</dd></div><div class="fact"><dt>folder</dt><dd>Pulsograph Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
-  <div class="block-label"><span class="bl-num">03.1</span>
+  <div class="block-label"><span class="bl-num">04.1</span>
   <h2>quick start</h2></div>
   <div class="block-body"><ol class="steps">
 <li><span class="step-n">01</span><span class="step-t">Drop <code>Pulsograph.amxd</code> on a MIDI track. The face is cream; the grid is top-left.</span></li>
@@ -34,7 +34,7 @@
 </ol></div>
 </section>
 <section class="block" id="controls">
-  <div class="block-label"><span class="bl-num">03.2</span>
+  <div class="block-label"><span class="bl-num">04.2</span>
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">per lane (×4)</h3>
 <p class="lead">Tune, Tone and Decay are <b>class-relative</b> — the same dial means something different per class.</p>
@@ -74,7 +74,7 @@
 </dl></div>
 </section>
 <section class="block" id="push-3">
-  <div class="block-label"><span class="bl-num">03.3</span>
+  <div class="block-label"><span class="bl-num">04.3</span>
   <h2>push 3</h2></div>
   <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
 <div class="bank">
@@ -162,29 +162,29 @@
 </div></div>
 </section>
 <section class="block" id="workflow">
-  <div class="block-label"><span class="bl-num">03.4</span>
+  <div class="block-label"><span class="bl-num">04.4</span>
   <h2>workflow</h2></div>
   <div class="block-body"><h3 class="sub">polyrhythm comes from lane lengths, not from the grid</h3><p>Different lengths per lane phase against each other. Add per-lane Rate dividers on top and complex patterns fall out of very few clicks.</p>
 <h3 class="sub">var is what makes it a piece rather than a loop</h3><p>Small Var values (~0.15) make a lane drift in character over a minute or two without you touching anything. It&#x27;s the difference between a pattern and a performance.</p>
 <h3 class="sub">bounce captures the imperfections</h3><p>To MIDI gives you the notes; Bounce gives you the actual sound including drift, hum and delay. If you play the exported MIDI clip on the same track it will retrigger the lanes — mute them (Level 0) or move the clip elsewhere.</p></div>
 </section>
 <section class="block" id="gotchas">
-  <div class="block-label"><span class="bl-num">03.5</span>
+  <div class="block-label"><span class="bl-num">04.5</span>
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li><b>Freeze required from stage 2 on</b> — there&#x27;s external js. Rebuild → Edit in Max → snowflake → Cmd+S. A blank/white grid area means the device isn&#x27;t frozen.</li><li>&quot;no function beats&quot; errors at the <i>top</i> of the Max console are benign — messages arriving before the js engines compile.</li><li>Bounces land in <b><code>~/Music/Pulsograph</code></b> — create that folder once in Finder; the device can&#x27;t make it.</li><li>Don&#x27;t change tempo mid-bounce.</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
-  <div class="block-label"><span class="bl-num">03.6</span>
+  <div class="block-label"><span class="bl-num">04.6</span>
   <h2>rebuilding</h2></div>
   <div class="block-body"><p><code>python3 build_pulsograph.py</code>, then add to Live and <b>freeze</b>.</p>
 <p>Offline checks: <code>sim_voice.py</code>, <code>sim_seq.py</code>, <code>sim_drift.py</code>, <code>sim_delay.py</code>, <code>sim_grit.py</code>, plus <code>node test_grid_node.js</code> and <code>node test_export_node.js</code>.</p></div>
 </section>
-<nav class="chapnav"><a class="cn prev" href="microcosmos.html"><span>previous</span>microcosmos</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="oram.html"><span>next</span>oram</a></nav>
+<nav class="chapnav"><a class="cn prev" href="kurzwellen.html"><span>previous</span>kurzwellen</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="oram.html"><span>next</span>oram</a></nav>
 </main>
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-24</span>
+  <div class="sf-col"><span>generated 2026-08-25</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

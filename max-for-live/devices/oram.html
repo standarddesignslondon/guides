@@ -10,20 +10,20 @@
 <header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
 <main>
 <header class="chapter">
-  <p class="ch-num">04</p>
+  <p class="ch-num">05</p>
   <h1>oram</h1>
   <p class="ch-sub">Drawn sound after Daphne Oram&#x27;s Oramics — paint film strips and the machine performs them.</p>
 </header>
 <figure class="shot"><div class="shot-frame"><img src="../images/oram.png" alt="ORAM"></div><figcaption>oram</figcaption></figure>
 <section class="block" id="about">
-  <div class="block-label"><span class="bl-num">04.0</span><h2>about</h2></div>
+  <div class="block-label"><span class="bl-num">05.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Four voices read single-cycle waveforms (&quot;slides&quot;) from a 128-strong library; seven painted lanes (&quot;film strips&quot;) drive pitch, vibrato, four voice volumes and a reverb send across a bar-synced loop. It also listens: <b>Capture</b> turns whatever is playing into a new slide, and <b>To Score</b> transcribes a phrase you just played straight into the strips. Then you vandalise the drawing.</p>
     <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>stages 1–5 passed · 6a–6d awaiting test</dd></div><div class="fact"><dt>folder</dt><dd>ORAM Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
-  <div class="block-label"><span class="bl-num">04.1</span>
+  <div class="block-label"><span class="bl-num">05.1</span>
   <h2>quick start</h2></div>
   <div class="block-body"><ol class="steps">
 <li><span class="step-n">01</span><span class="step-t">Drop <code>ORAM.amxd</code> on an audio track — it&#x27;s an audio effect so it can hear the instrument before it.</span></li>
@@ -34,7 +34,7 @@
 </ol></div>
 </section>
 <section class="block" id="controls">
-  <div class="block-label"><span class="bl-num">04.2</span>
+  <div class="block-label"><span class="bl-num">05.2</span>
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">voices</h3>
 <dl class="ctl">
@@ -72,7 +72,7 @@
 </dl></div>
 </section>
 <section class="block" id="push-3">
-  <div class="block-label"><span class="bl-num">04.3</span>
+  <div class="block-label"><span class="bl-num">05.3</span>
   <h2>push 3</h2></div>
   <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
 <div class="bank">
@@ -123,7 +123,7 @@
 </div></div>
 </section>
 <section class="block" id="workflow">
-  <div class="block-label"><span class="bl-num">04.4</span>
+  <div class="block-label"><span class="bl-num">05.4</span>
   <h2>workflow</h2></div>
   <div class="block-body"><h3 class="sub">scoring passes — build the score up in layers</h3><p>Play the line with Target = Score, then switch to Vol 2, choose a different slide for voice 2, play the phrase again (only its dynamics are kept), and so on. Four performances breathing inside one drawn melody. One pitch serves all four voices — that&#x27;s the machine&#x27;s own monophony.</p>
 <h3 class="sub">the send-lane trap</h3><p>With <b>Scan on</b>, the chamber only sounds where the Send lane is painted — and both the default lanes and To Score leave Send at zero. If the chamber seems dead, turn Scan off first and check the wet meter.</p>
@@ -131,12 +131,12 @@
 <h3 class="sub">where the breadcrumbs live</h3><p>All capture diagnostics print to the <b>Max window</b> prefixed &quot;ORAM:&quot;. In Live: right-click the device title bar → Open Max Window. They name the failing step instantly.</p></div>
 </section>
 <section class="block" id="gotchas">
-  <div class="block-label"><span class="bl-num">04.5</span>
+  <div class="block-label"><span class="bl-num">05.5</span>
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li><b>Freezing is required</b> from stage 3 on — two external js files. Delete the old instance, drag <code>ORAM.amxd</code> in fresh from the folder (<i>not</i> from an old Set), Edit in Max, snowflake, Cmd+S. A healthy freeze prints &quot;Adding file oram_strips.js&quot; and &quot;Adding file oram_capture.js&quot; with no &quot;Unable to add&quot;.</li><li>Script builds are <b>always unfrozen</b>. If a device opens in Max already frozen, it isn&#x27;t a fresh build — delete it, don&#x27;t save it. Saving a stale frozen instance overwrites the good <code>ORAM.amxd</code>.</li><li>Slide files are indexed by their 3-digit filename prefix. <b>Never rename them</b> — captured slides continue the numbering.</li><li>A flat Pitch line after To Score is usually correct: a single repeated pitch transcribes as a level line. Play a phrase with moving notes.</li><li>The slide-library path is baked into the device&#x27;s readfolder message. If the folder moves, re-run <code>build_oram.py</code>.</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
-  <div class="block-label"><span class="bl-num">04.6</span>
+  <div class="block-label"><span class="bl-num">05.6</span>
   <h2>rebuilding</h2></div>
   <div class="block-body"><p><code>python3 build_oram.py</code> regenerates <code>ORAM.maxpat</code> + <code>ORAM.amxd</code>. Then freeze. <code>generate_slides.py</code> rewrites the 128-slide starter library (deterministic, seed 1957).</p>
 <p>Parked by choice: scores-on-disk, a FIDELITY/anti-alias switch, and a manual.</p></div>
@@ -146,7 +146,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-24</span>
+  <div class="sf-col"><span>generated 2026-08-25</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

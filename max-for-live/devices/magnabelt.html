@@ -10,20 +10,20 @@
 <header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
 <main>
 <header class="chapter">
-  <p class="ch-num">17</p>
+  <p class="ch-num">18</p>
   <h1>magnabelt</h1>
   <p class="ch-sub">Spiral-belt sampler after Holger Czukay&#x27;s IBM dictaphone — one wandering head, adjacent passes, imperfect erasure.</p>
 </header>
 <figure class="shot"><div class="shot-frame"><img src="../images/magnabelt.png" alt="Magnabelt"></div><figcaption>magnabelt</figcaption></figure>
 <section class="block" id="about">
-  <div class="block-label"><span class="bl-num">17.0</span><h2>about</h2></div>
+  <div class="block-label"><span class="bl-num">18.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Inspired by the IBM Executary 213 dictation machines Czukay played on David Sylvian&#x27;s <i>Brilliant Trees</i>. A loaded sample becomes a circular magnetic belt with a three-layer memory: the <b>current pass</b> (the head, inside Start/End), <b>adjacent passes</b> one Turn Time either side (Tracking), and <b>old residue</b> seven turns back (Ghost — imperfect erasure, not a delay tap). Machine wear, rare slips and a deliberately grubby internal ambience sit on top. Not a circuit model — an interpretation of the technique.</p>
     <dl class="facts"><div class="fact"><dt>type</dt><dd>instrument</dd></div><div class="fact"><dt>built by</dt><dd>chatgpt</dd></div><div class="fact"><dt>state</dt><dd>v1.0</dd></div><div class="fact"><dt>folder</dt><dd>magnabelt</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
-  <div class="block-label"><span class="bl-num">17.1</span>
+  <div class="block-label"><span class="bl-num">18.1</span>
   <h2>quick start</h2></div>
   <div class="block-body"><ol class="steps">
 <li><span class="step-n">01</span><span class="step-t">Drop <code>Magnabelt v1.0.amxd</code> on a <b>MIDI track</b>. Drop audio on <b>DROP AUDIO HERE</b> or press <b>LOAD BELT</b>.</span></li>
@@ -34,7 +34,7 @@
 </ol></div>
 </section>
 <section class="block" id="controls">
-  <div class="block-label"><span class="bl-num">17.2</span>
+  <div class="block-label"><span class="bl-num">18.2</span>
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">belt / key</h3>
 <dl class="ctl">
@@ -66,7 +66,7 @@
 </dl></div>
 </section>
 <section class="block" id="push-3">
-  <div class="block-label"><span class="bl-num">17.3</span>
+  <div class="block-label"><span class="bl-num">18.3</span>
   <h2>push 3</h2></div>
   <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
 <div class="bank">
@@ -124,19 +124,19 @@
 </div></div>
 </section>
 <section class="block" id="workflow">
-  <div class="block-label"><span class="bl-num">17.4</span>
+  <div class="block-label"><span class="bl-num">18.4</span>
   <h2>workflow</h2></div>
   <div class="block-body"><h3 class="sub">three performance gestures</h3><p><b>Pad and reveal</b> — MIDI gate, hold a pad, move Head, release; the belt keeps travelling silently so the next note reveals a different moment. <b>Turn and answer</b> — press Backstep, then raise Tracking: the new turn and its damaged neighbour at once. <b>Send the absence</b> — raise Space Send, then close the Key; the source disappears while the worn room finishes the phrase.</p>
 <h3 class="sub">recipes</h3><p><b>Haunted room</b> Manual, Speed −0.35, Turn 6, Track 55, Ghost 45, Instability 35, Send 55, Dark 75, Wear 30 · <b>Cut-up instrument</b> MIDI, Speed +1.0 or −0.7, Turn 2, Track 30, Ghost 12, Instability 20, Slip 5, Send 22 · <b>Unstable archive</b> Manual, Speed +0.25, Turn 9, Track 72, Ghost 65, Instability 70, Slip 25, Send 65, Chamber.</p>
 <h3 class="sub">the animated reels</h3><p>The belt display — draggable Start/End/Head lines and the two spinning reels whose speed follows Tape Speed — is a single <b>v8ui</b> object with its drawing code embedded in the patch (mgraphics vector drawing, a <code>metro 50</code> driving a <code>tick</code> that advances the reel angle by the current rate). No external js file, so <b>no freeze is needed</b> — the technique to steal for future devices.</p></div>
 </section>
 <section class="block" id="gotchas">
-  <div class="block-label"><span class="bl-num">17.5</span>
+  <div class="block-label"><span class="bl-num">18.5</span>
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>The <b>Turn readout is mislabelled &#x27;ms&#x27;</b> in v1.0 — read it as seconds: 3.25 means 3.25 s between passes. The engine is correct; only the unit label is wrong.</li><li><b>Head movement crackles by design</b> — the reader jumps without a crossfade, so continuous dial ramps become rough scrubbing. Automate sparse jumps rather than drawing ramps.</li><li>The Live Set stores the sample <b>path</b>, not the audio. If the file moves, drop it in again — and use Collect All and Save for portability.</li><li>No sound? Check: belt loaded, Speed not zero, Key open, Start before End, Output up.</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
-  <div class="block-label"><span class="bl-num">17.6</span>
+  <div class="block-label"><span class="bl-num">18.6</span>
   <h2>rebuilding</h2></div>
   <div class="block-body"><p><code>node scripts/build_magnabelt.js</code> generates <code>Magnabelt.maxpat</code>, <code>Magnabelt.amxd</code> and <code>Magnabelt v1.0.amxd</code> from nothing. All code is embedded (v8ui + v8.codebox) — <b>no freeze needed</b>.</p>
 <p>Tests live in <code>tests/</code> — packaging, banks, head/backstep, MIDI gating and pass gains — plus a Max host test patch.</p></div>
@@ -146,7 +146,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-24</span>
+  <div class="sf-col"><span>generated 2026-08-25</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

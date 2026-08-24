@@ -10,20 +10,20 @@
 <header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
 <main>
 <header class="chapter">
-  <p class="ch-num">20</p>
+  <p class="ch-num">21</p>
   <h1>bad mood</h1>
   <p class="ch-sub">Clocked micro-looper into a synthetic wet channel, after the Chase Bliss BAD MOOD — Burst/Radio/Mask loops, Soup/Relay/Flip, Cross and Glue.</p>
 </header>
 <figure class="shot"><div class="shot-frame"><img src="../images/bad-mood.png" alt="Bad Mood"></div><figcaption>bad mood</figcaption></figure>
 <section class="block" id="about">
-  <div class="block-label"><span class="bl-num">20.0</span><h2>about</h2></div>
+  <div class="block-label"><span class="bl-num">21.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">A stereo audio effect that follows the pedal&#x27;s signal flow: <b>Micro-looper channel → Wet channel → Glue → Output</b>. The looper is always listening; switch <b>Loop</b> on to play the last loop-length back as a step sequence (Burst), a five-station shortwave radio (Radio) or a threshold-masked loop (Mask). The wet channel is a modulated feedback reverb with shimmer (Soup), an equal-volume repeater with 1–8 repeats (Relay) or time-spread pitch harmonies (Flip). <b>Clock</b> sets the sample rate of both channels in harmonized steps. The whole DSP is one gen~ codebox, so the device has no dependencies. Four Push 3 banks mirror the front panel, the footswitches and dips, the character options and setup.</p>
     <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>awaiting test</dd></div><div class="fact"><dt>folder</dt><dd>Bad Mood Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
-  <div class="block-label"><span class="bl-num">20.1</span>
+  <div class="block-label"><span class="bl-num">21.1</span>
   <h2>quick start</h2></div>
   <div class="block-body"><ol class="steps">
 <li><span class="step-n">01</span><span class="step-t">Drop <code>Bad Mood.amxd</code> on an audio track; map <b>Loop</b>, <b>Overdub</b>, <b>Wet On</b> and <b>Freeze</b> to pads.</span></li>
@@ -33,7 +33,7 @@
 </ol></div>
 </section>
 <section class="block" id="controls">
-  <div class="block-label"><span class="bl-num">20.2</span>
+  <div class="block-label"><span class="bl-num">21.2</span>
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">bad mood</h3>
 <dl class="ctl">
@@ -78,7 +78,7 @@
 </dl></div>
 </section>
 <section class="block" id="push-3">
-  <div class="block-label"><span class="bl-num">20.3</span>
+  <div class="block-label"><span class="bl-num">21.3</span>
   <h2>push 3</h2></div>
   <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
 <div class="bank">
@@ -135,17 +135,17 @@
 </div></div>
 </section>
 <section class="block" id="workflow">
-  <div class="block-label"><span class="bl-num">20.4</span>
+  <div class="block-label"><span class="bl-num">21.4</span>
   <h2>workflow</h2></div>
   <div class="block-body"><h3 class="sub">the radio dial</h3><p>In Radio mode, <b>L.Modify</b> scans five stations with filtered static between them: Tape (Length = speed and direction, ccw reverses), Ambient (slowdown, pitch kept), Orchestral (octave and fifth voices drift in and out), Shoegaze (frozen grains) and Dance (normal → half → double speed).</p></div>
 </section>
 <section class="block" id="gotchas">
-  <div class="block-label"><span class="bl-num">20.5</span>
+  <div class="block-label"><span class="bl-num">21.5</span>
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>Soup is a modulated feedback network with shimmer, not a true spectral resynthesis (no FFT in gen~); high <b>Modify</b> shortens its tail a little.</li><li>The loop is the last 0.68 s × Clock ratio (at 48 kHz) of what the looper heard — there is no separate record button.</li><li><b>Loop</b>, <b>Overdub</b>, <b>Wet On</b> and <b>Freeze</b> are toggles, not momentary switches: map them to pads.</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
-  <div class="block-label"><span class="bl-num">20.6</span>
+  <div class="block-label"><span class="bl-num">21.6</span>
   <h2>rebuilding</h2></div>
   <div class="block-body"><p><code>python3 build.py</code> in <code>Bad Mood Device/Bad Mood source/</code> regenerates the <code>.amxd</code> from <code>dsp.genexpr</code>; <code>python3 proto.py</code> runs the Python prototype checks.</p></div>
 </section>
@@ -154,7 +154,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-24</span>
+  <div class="sf-col"><span>generated 2026-08-25</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

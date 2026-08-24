@@ -10,20 +10,20 @@
 <header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
 <main>
 <header class="chapter">
-  <p class="ch-num">18</p>
+  <p class="ch-num">19</p>
   <h1>evening star</h1>
   <p class="ch-sub">Frippertronics twin tape-loop system — two machine pairs that build slow soundscapes, darken with every pass and ebb away on command.</p>
 </header>
 <figure class="shot"><div class="shot-frame"><img src="../images/evening-star.png" alt="Evening Star"></div><figcaption>evening star</figcaption></figure>
 <section class="block" id="about">
-  <div class="block-label"><span class="bl-num">18.0</span><h2>about</h2></div>
+  <div class="block-label"><span class="bl-num">19.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">The two-Revox tape-delay feedback rig Eno set up for Fripp in 1972 (<i>No Pussyfooting</i>, <i>Evening Star</i>, the <i>Gone to Earth</i> loops), twice over. Each of the two loops is a circular tape whose length <b>is</b> the delay time: what you play recirculates, and every pass is a new tape generation — high end fades, saturation creeps in, and at higher <b>Wear</b> settings dropouts get printed permanently onto the tape. Separate Record and Listen switches per loop let you build on one machine, freeze it, work on the other, then bring both back and overdub over the lot. Named after the 1975 Fripp &amp; Eno album.</p>
     <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v0.2</dd></div><div class="fact"><dt>folder</dt><dd>Evening Star Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
-  <div class="block-label"><span class="bl-num">18.1</span>
+  <div class="block-label"><span class="bl-num">19.1</span>
   <h2>quick start</h2></div>
   <div class="block-body"><ol class="steps">
 <li><span class="step-n">01</span><span class="step-t">Drop <code>Evening Star v0.2.amxd</code> on an <b>audio track</b>, in front of guitar or any input. Loop 1 starts armed (REC and EAR on).</span></li>
@@ -35,7 +35,7 @@
 </ol></div>
 </section>
 <section class="block" id="controls">
-  <div class="block-label"><span class="bl-num">18.2</span>
+  <div class="block-label"><span class="bl-num">19.2</span>
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">per machine pair</h3>
 <dl class="ctl">
@@ -62,7 +62,7 @@
 </dl></div>
 </section>
 <section class="block" id="push-3">
-  <div class="block-label"><span class="bl-num">18.3</span>
+  <div class="block-label"><span class="bl-num">19.3</span>
   <h2>push 3</h2></div>
   <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
 <div class="bank">
@@ -123,18 +123,18 @@
 </div></div>
 </section>
 <section class="block" id="workflow">
-  <div class="block-label"><span class="bl-num">18.4</span>
+  <div class="block-label"><span class="bl-num">19.4</span>
   <h2>workflow</h2></div>
   <div class="block-body"><h3 class="sub">the display</h3><p>Each row is one machine pair: reel spacing follows that loop&#x27;s Time, the spokes rotate at its speed and direction, and the tape line between the reels darkens as the loop fills. The REC and EAR dots are clickable.</p>
 <h3 class="sub">driving it like fripp</h3><p>It rewards restraint: long gaps between phrases, one loop carrying a drone while the other takes melody, and Feedback ridden like a fader rather than set and left. Half speed on a loop of sustained playing is the classic shimmering undertow.</p></div>
 </section>
 <section class="block" id="gotchas">
-  <div class="block-label"><span class="bl-num">18.5</span>
+  <div class="block-label"><span class="bl-num">19.5</span>
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>Both switches off is a <b>freeze</b>, not a mute — the loop keeps its contents and stops decaying. If a loop seems to have vanished, check its EAR dot before assuming it&#x27;s gone.</li><li>Hiss builds on every circulating pass, not just while recording — at high settings an idling loop will eventually become pure tape noise. That&#x27;s a feature, but mind it in quiet mixes.</li><li>Wear dropouts above ~40 % are printed permanently onto the tape. There is no undo — reduce Wear <b>before</b> the pass you want to keep, not after.</li><li>Loop buffers hold 30 s at 48 kHz; at 88.2/96 kHz the maximum Time shrinks proportionally.</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
-  <div class="block-label"><span class="bl-num">18.6</span>
+  <div class="block-label"><span class="bl-num">19.6</span>
   <h2>rebuilding</h2></div>
   <div class="block-body"><p><code>node build_eveningstar.js</code> in <code>Evening Star Device/</code> regenerates the <code>.maxpat</code> and both <code>.amxd</code> files from scratch.</p>
 <p><code>node tests/sim_eveningstar.js</code> runs the 53-check suite: a JS port of the gen~ loop engine (recirculation, decay, freeze/overdub semantics, head motion, ebb, NaN safety) plus structural checks.</p>
@@ -145,7 +145,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-24</span>
+  <div class="sf-col"><span>generated 2026-08-25</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

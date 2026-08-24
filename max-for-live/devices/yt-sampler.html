@@ -10,20 +10,20 @@
 <header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
 <main>
 <header class="chapter">
-  <p class="ch-num">09</p>
+  <p class="ch-num">10</p>
   <h1>yt sampler</h1>
   <p class="ch-sub">Paste a YouTube link, bracket a phrase, drop it into Session view as a clip.</p>
 </header>
 <figure class="shot"><div class="shot-frame"><img src="../images/youtube–sampler.png" alt="YT Sampler"></div><figcaption>yt sampler</figcaption></figure>
 <section class="block" id="about">
-  <div class="block-label"><span class="bl-num">09.0</span><h2>about</h2></div>
+  <div class="block-label"><span class="bl-num">10.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Fetches a video&#x27;s audio, draws the whole waveform, and lets you bracket a section — by dragging, by typing millisecond values, by nudging from Push, or by <b>searching the transcript</b>. Hit Sample It and the selection lands as a wav clip in the first empty slot on the track. Personal sampling use only.</p>
     <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>folder</dt><dd>YT Sampler Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
-  <div class="block-label"><span class="bl-num">09.1</span>
+  <div class="block-label"><span class="bl-num">10.1</span>
   <h2>quick start</h2></div>
   <div class="block-body"><ol class="steps">
 <li><span class="step-n">01</span><span class="step-t">One-time: <code>brew install yt-dlp ffmpeg</code>, and keep the folder together (<code>ytsampler.js</code>, <code>ytclip.js</code>, <code>package.json</code> beside the <code>.amxd</code>).</span></li>
@@ -34,7 +34,7 @@
 </ol></div>
 </section>
 <section class="block" id="controls">
-  <div class="block-label"><span class="bl-num">09.2</span>
+  <div class="block-label"><span class="bl-num">10.2</span>
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">on the face</h3>
 <dl class="ctl">
@@ -47,7 +47,7 @@
 </dl></div>
 </section>
 <section class="block" id="push-3">
-  <div class="block-label"><span class="bl-num">09.3</span>
+  <div class="block-label"><span class="bl-num">10.3</span>
   <h2>push 3</h2></div>
   <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
 <div class="bank">
@@ -66,18 +66,18 @@
 </div></div>
 </section>
 <section class="block" id="workflow">
-  <div class="block-label"><span class="bl-num">09.4</span>
+  <div class="block-label"><span class="bl-num">10.4</span>
   <h2>workflow</h2></div>
   <div class="block-body"><h3 class="sub">the full push workflow</h3><p>Rough the brackets on the laptop (or with transcript search), then nudge Start/Length from Push, audition with Play, and drop the clip with Grab — no trackpad needed.</p>
 <h3 class="sub">where the files live</h3><p>Everything goes in <code>~/YTSampler/</code> — paths kept space-free on purpose. <code>downloads/&lt;videoid&gt;.wav</code> is the cached full audio (re-fetching the same video is instant; safe to clear). <code>samples/&lt;title&gt;_&lt;start&gt;-&lt;end&gt;.wav</code> are the rendered samples — <b>Live clips reference these</b>, so don&#x27;t delete ones you&#x27;re still using, or use <i>File → Collect All and Save</i>.</p></div>
 </section>
 <section class="block" id="gotchas">
-  <div class="block-label"><span class="bl-num">09.5</span>
+  <div class="block-label"><span class="bl-num">10.5</span>
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li><b>Freeze the device once after building.</b> <code>[js]</code> won&#x27;t reliably find <code>ytclip.js</code> on the search path; freezing embeds the js/node files inside the <code>.amxd</code>. Re-do it after any <code>build_yt_sampler.py</code> re-run.</li><li>If a fetch fails, first fix is always <code>brew upgrade yt-dlp</code> — YouTube changes things regularly. Other causes: age-restricted or region-locked videos, or a non-video link.</li><li>Auto-caption timings are good but not sample-accurate — nudge the brackets to taste. If a video has no captions the status line says so.</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
-  <div class="block-label"><span class="bl-num">09.6</span>
+  <div class="block-label"><span class="bl-num">10.6</span>
   <h2>rebuilding</h2></div>
   <div class="block-body"><p><code>python3 build_yt_sampler.py</code> authors the patcher JSON and assembles the <code>.amxd</code> from scratch, then <b>freeze</b>. The circular-arrows button in the device title bar reloads the <code>.amxd</code> from disk.</p></div>
 </section>
@@ -86,7 +86,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-24</span>
+  <div class="sf-col"><span>generated 2026-08-25</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

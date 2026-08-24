@@ -10,20 +10,20 @@
 <header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
 <main>
 <header class="chapter">
-  <p class="ch-num">22</p>
+  <p class="ch-num">23</p>
   <h1>composite</h1>
   <p class="ch-sub">Photoshop blend modes for two sample layers — Darken, Multiply, Difference and the rest, applied per frequency instead of per pixel.</p>
 </header>
 <figure class="shot"><div class="shot-frame"><img src="../images/composite.png" alt="Composite"></div><figcaption>composite</figcaption></figure>
 <section class="block" id="about">
-  <div class="block-label"><span class="bl-num">22.0</span><h2>about</h2></div>
+  <div class="block-label"><span class="bl-num">23.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Two sample players — <b>layer A on top, layer B beneath</b> — meet in an FFT where each frequency bin&#x27;s energy is treated as a pixel&#x27;s brightness, and all nine blend modes from the layers panel do what they do in Photoshop: Darken keeps only what both layers share, Multiply makes A mask B like a vocoder, Difference cancels the common material and leaves a ghost. Layers warp to Live&#x27;s grid or free-run and drift; loudness self-calibrates to the material via an adaptive white point. Fully self-contained, performs from Push 3 in Session view.</p>
     <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>folder</dt><dd>Composite Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
-  <div class="block-label"><span class="bl-num">22.1</span>
+  <div class="block-label"><span class="bl-num">23.1</span>
   <h2>quick start</h2></div>
   <div class="block-body"><ol class="steps">
 <li><span class="step-n">01</span><span class="step-t">Drop <code>Composite.amxd</code> on an audio track and drop a sample on each slot.</span></li>
@@ -34,7 +34,7 @@
 </ol></div>
 </section>
 <section class="block" id="controls">
-  <div class="block-label"><span class="bl-num">22.2</span>
+  <div class="block-label"><span class="bl-num">23.2</span>
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">blend</h3>
 <dl class="ctl">
@@ -60,7 +60,7 @@
 </dl></div>
 </section>
 <section class="block" id="push-3">
-  <div class="block-label"><span class="bl-num">22.3</span>
+  <div class="block-label"><span class="bl-num">23.3</span>
   <h2>push 3</h2></div>
   <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
 <div class="bank">
@@ -125,19 +125,19 @@
 </div></div>
 </section>
 <section class="block" id="workflow">
-  <div class="block-label"><span class="bl-num">22.4</span>
+  <div class="block-label"><span class="bl-num">23.4</span>
   <h2>workflow</h2></div>
   <div class="block-body"><h3 class="sub">the frozen stencil</h3><p>Freeze a pad mid-chord, switch to Darken, and run a busy loop on the other layer — only the frequencies of the held chord pass through. Multiply does the same but shaped by the moving layer&#x27;s dynamics.</p>
 <h3 class="sub">drifting knockouts</h3><p>Two loops of different lengths with SYNC off phase against each other, so Darken&#x27;s overlap — and the mask — never repeats. Resolution down and Contrast up makes the movement bold.</p>
 <h3 class="sub">difference as a lens</h3><p>Two takes or two mixes of the <i>same</i> material in Difference: everything they share cancels and you hear only what changed.</p></div>
 </section>
 <section class="block" id="gotchas">
-  <div class="block-label"><span class="bl-num">22.5</span>
+  <div class="block-label"><span class="bl-num">23.5</span>
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>The spectral chain adds <b>85 ms of latency</b>. Synced layers pre-read by exactly that and land on the grid; knob changes and free-running layers arrive 85 ms late — normal for FFT devices.</li><li>Bar maths assume <b>4/4</b>; odd meters lock to the beat count only.</li><li>Multiply is the geometric mean sqrt(a·b), not the raw product — the true Photoshop product doubles the darkness in dB and buries the output. Raise <b>Contrast</b> for the darker character.</li><li>Loop Length has a floor of about 50 ms.</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
-  <div class="block-label"><span class="bl-num">22.6</span>
+  <div class="block-label"><span class="bl-num">23.6</span>
   <h2>rebuilding</h2></div>
   <div class="block-body"><p><code>node build_composite.js</code> in <code>Composite Device/</code> regenerates the patcher and <code>.amxd</code> from scratch; <code>node tests/sim_composite.js</code> runs the 546-check suite (structural asserts plus a real-FFT port of the whole spectral chain). No external js — never needs freezing.</p></div>
 </section>
@@ -146,7 +146,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-24</span>
+  <div class="sf-col"><span>generated 2026-08-25</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

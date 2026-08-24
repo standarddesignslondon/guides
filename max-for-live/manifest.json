@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-08-24",
+ "generated": "2026-08-25",
  "items": [
   {
    "num": "01",
@@ -36,6 +36,18 @@
   },
   {
    "num": "03",
+   "slug": "kurzwellen",
+   "name": "Kurzwellen",
+   "tagline": "Shortwave-radio simulator \u2014 makes anything sound like it is being received rather than played.",
+   "url": "devices/kurzwellen.html",
+   "image": "images/kurzwellen.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "04",
    "slug": "pulsograph",
    "name": "Pulsograph",
    "tagline": "Early-electronic rhythm machine \u2014 four synthesis lanes on a 32-step grid that drifts like a real motor.",
@@ -47,7 +59,7 @@
    }
   },
   {
-   "num": "04",
+   "num": "05",
    "slug": "oram",
    "name": "ORAM",
    "tagline": "Drawn sound after Daphne Oram's Oramics \u2014 paint film strips and the machine performs them.",
@@ -59,7 +71,7 @@
    }
   },
   {
-   "num": "05",
+   "num": "06",
    "slug": "the-1958-machine",
    "name": "The 1958 Machine",
    "tagline": "Turns anything into the sound of the early European electronic-music studios, c. 1950\u201365.",
@@ -71,7 +83,7 @@
    }
   },
   {
-   "num": "06",
+   "num": "07",
    "slug": "splice-tape-collage",
    "name": "Splice (Tape Collage)",
    "tagline": "A 1950s random tape editor \u2014 razor-blades your recordings and splices them back together, imperfections included.",
@@ -83,7 +95,7 @@
    }
   },
   {
-   "num": "07",
+   "num": "08",
    "slug": "ondes-martenot",
    "name": "Ondes Martenot",
    "tagline": "Monophonic MPE Ondes voice for Push 3 pads \u2014 pressure is the envelope.",
@@ -95,7 +107,7 @@
    }
   },
   {
-   "num": "08",
+   "num": "09",
    "slug": "sw-radio",
    "name": "SW Radio",
    "tagline": "Tunes a KiwiSDR shortwave receiver anywhere in the world from inside Live.",
@@ -107,7 +119,7 @@
    }
   },
   {
-   "num": "09",
+   "num": "10",
    "slug": "yt-sampler",
    "name": "YT Sampler",
    "tagline": "Paste a YouTube link, bracket a phrase, drop it into Session view as a clip.",
@@ -119,7 +131,7 @@
    }
   },
   {
-   "num": "10",
+   "num": "11",
    "slug": "preset-scroll",
    "name": "Preset Scroll",
    "tagline": "Scroll an Arturia plugin's preset browser from a Push encoder.",
@@ -131,7 +143,7 @@
    }
   },
   {
-   "num": "11",
+   "num": "12",
    "slug": "manual-tape",
    "name": "Manual Tape",
    "tagline": "Hand-controlled sample playback \u2014 a tape reel you push forwards and backwards by hand.",
@@ -143,7 +155,7 @@
    }
   },
   {
-   "num": "12",
+   "num": "13",
    "slug": "scene-placer",
    "name": "Scene Placer",
    "tagline": "Places a voice or source inside a loaded environment recording.",
@@ -155,7 +167,7 @@
    }
   },
   {
-   "num": "13",
+   "num": "14",
    "slug": "false-memory",
    "name": "False Memory",
    "tagline": "Degradation effect \u2014 parallel analog and digital damage paths under one intensity macro.",
@@ -167,7 +179,7 @@
    }
   },
   {
-   "num": "14",
+   "num": "15",
    "slug": "tape-error",
    "name": "Tape Error",
    "tagline": "Fire a tape fault on an audio track from a note on a MIDI track \u2014 velocity is severity.",
@@ -179,7 +191,7 @@
    }
   },
   {
-   "num": "15",
+   "num": "16",
    "slug": "strip-silence",
    "name": "Strip Silence",
    "tagline": "Removes the silence from arrangement recordings \u2014 non-destructive clip trimming, one undo step.",
@@ -191,7 +203,7 @@
    }
   },
   {
-   "num": "16",
+   "num": "17",
    "slug": "disintegration",
    "name": "Disintegration",
    "tagline": "Cumulative tape-oxide loss \u2014 one reel, deterministic damage, 256 passes.",
@@ -203,7 +215,7 @@
    }
   },
   {
-   "num": "17",
+   "num": "18",
    "slug": "magnabelt",
    "name": "Magnabelt",
    "tagline": "Spiral-belt sampler after Holger Czukay's IBM dictaphone \u2014 one wandering head, adjacent passes, imperfect erasure.",
@@ -215,7 +227,7 @@
    }
   },
   {
-   "num": "18",
+   "num": "19",
    "slug": "evening-star",
    "name": "Evening Star",
    "tagline": "Frippertronics twin tape-loop system \u2014 two machine pairs that build slow soundscapes, darken with every pass and ebb away on command.",
@@ -227,7 +239,7 @@
    }
   },
   {
-   "num": "19",
+   "num": "20",
    "slug": "mood",
    "name": "Mood",
    "tagline": "Micro-looper into reverb, delay or slip sampler after the Chase Bliss MOOD MKII \u2014 with a shared sample-rate clock.",
@@ -239,7 +251,7 @@
    }
   },
   {
-   "num": "20",
+   "num": "21",
    "slug": "bad-mood",
    "name": "Bad Mood",
    "tagline": "Clocked micro-looper into a synthetic wet channel, after the Chase Bliss BAD MOOD \u2014 Burst/Radio/Mask loops, Soup/Relay/Flip, Cross and Glue.",
@@ -251,7 +263,7 @@
    }
   },
   {
-   "num": "21",
+   "num": "22",
    "slug": "gen-loss",
    "name": "Gen Loss",
    "tagline": "Tape degradation after the Chase Bliss Generation Loss MKII \u2014 wow, flutter, saturation, eleven tape models and a Failure knob.",
@@ -263,7 +275,7 @@
    }
   },
   {
-   "num": "22",
+   "num": "23",
    "slug": "composite",
    "name": "Composite",
    "tagline": "Photoshop blend modes for two sample layers \u2014 Darken, Multiply, Difference and the rest, applied per frequency instead of per pixel.",

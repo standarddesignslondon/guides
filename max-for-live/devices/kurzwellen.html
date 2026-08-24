@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kurzwellen — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">03</p>
+  <h1>kurzwellen</h1>
+  <p class="ch-sub">Shortwave-radio simulator — makes anything sound like it is being received rather than played.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/kurzwellen.png" alt="Kurzwellen"></div><figcaption>kurzwellen</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">03.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Not another tape device. Tape degradation is <b>mechanical</b>; shortwave degradation is <b>atmospheric</b>, and the signatures are completely different — multipath comb filtering that sweeps as the ionosphere moves, fades that an AGC chases back up, a receiver hissing into its own noise floor, and interference arriving in bursts. Nine modules, each with a toggle and an amount, all breathing together under one shared drift source: the coherence of everything degrading <i>at the same time</i> is what sells it. Named for Stockhausen&#x27;s <i>Kurzwellen</i> (1968), for players with shortwave receivers.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete</dd></div><div class="fact"><dt>folder</dt><dd>Kurzwellen Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">03.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Kurzwellen.amxd</code> on an audio track. Play something with a voice in it.</span></li>
+<li><span class="step-n">02</span><span class="step-t">That&#x27;s most of it — the defaults are the classic &quot;voice on a distant station&quot;.</span></li>
+<li><span class="step-n">03</span><span class="step-t"><b>Bandwidth</b> is how much radio. <b>Fade</b> is how much ionosphere.</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>Shape</b> and <b>Depth</b> set how the whole device moves. Depth 0 freezes everything and costs nothing in level.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">03.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">receiver</h3>
+<p class="lead">The chain models propagation then reception: Width → Tune → Fade → Band → Grit → AGC → Events → +Het → Mix.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Bandwidth<span class="rng">1.0 – 8.0 kHz</span></dt><dd>The IF filter, and the thing that makes it a radio. Fixed 90 Hz high-pass plus a 4-pole low-pass, 24 dB/oct — shortwave sounds <i>band-limited</i>, not merely darkened. Always on; there is no bypass.</dd></div>
+<div class="ctl-row"><dt>Width<span class="rng">0 – 100</span></dt><dd>Stereo → mono collapse. 100 is bit-exact passthrough, 0 is full L+R mono. Defaults to 0 because real shortwave is mono.</dd></div>
+<div class="ctl-row"><dt>Mix<span class="rng">0 – 100</span></dt><dd>Dry/wet. 100 mutes the dry entirely — this is usually an insert &quot;make it radio&quot; effect, so that is the default.</dd></div>
+</dl>
+<h3 class="sub">ionosphere</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Fade<span class="rng">0 – 100 + toggle</span></dt><dd>Multipath. Direct plus two delayed copies (0.7 and 1.9 ms) whose times and gains drift independently, making a slowly sweeping comb — the hollow, almost-reverby character. Plus a flat fade of up to −14 dB on the slowest drift phase. Sets blend only; <b>Depth</b> sets how far things move.</dd></div>
+<div class="ctl-row"><dt>Tune<span class="rng">−150 … +150 Hz + toggle</span></dt><dd>A <b>frequency</b> shifter, not a pitch shifter: every partial moves by a fixed number of Hz, so the harmonic series goes inharmonic. That is the queasy metallic sound of a mistuned SSB receiver. Centre-detented — ±2 Hz snaps to zero, and at zero it is exactly zero.</dd></div>
+</dl>
+<h3 class="sub">detector and gain</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Grit<span class="rng">0 – 100 + toggle</span></dt><dd>Detector distortion plus signal-correlated noise. The noise is multiplied by the input envelope, so it makes the <i>signal</i> gritty and dies when the input stops — it will not fight anything layered underneath. Subtle around 20–35, proper AM overmodulation crunch at 100.</dd></div>
+<div class="ctl-row"><dt>AGC<span class="rng">0 – 100 + toggle</span></dt><dd>The receiver&#x27;s gain stage. Boost only, up to +18 dB, slewing down fast and up slowly. That recovery lag is the breathing, and it is what chases Fade&#x27;s flat fades back up — blooming slightly loud before it settles.</dd></div>
+</dl>
+<h3 class="sub">interference</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Events<span class="rng">0 – 100 + toggle</span></dt><dd>Density, from roughly one every 20 s at 10 to one every 1.5 s at 100. Three types, weighted 4/2/2: <b>Dropout</b> (ducks 20–40 dB for 60–400 ms, and dips the AGC detector too, so you get a swell afterwards), <b>Crash</b> (band-passed noise burst, 80–300 ms decay, louder at higher density) and <b>Flutter</b> (200–600 ms of 8–20 Hz shallow AM, 6 dB deep).</dd></div>
+<div class="ctl-row"><dt>Hetero<span class="rng">0 – 100 + toggle</span></dt><dd>The adjacent-carrier whistle. One sine wandering 400–2800 Hz with a slow amplitude wobble so it never sounds like a test tone. <b>Defaults off.</b></dd></div>
+</dl>
+<h3 class="sub">conditions</h3>
+<p class="lead">One generator with eight decorrelated output phases, one per consumer — not eight LFOs. Everything degrades together, which is the whole illusion.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Shape<span class="rng">Sine / Drift / Jump / Iono</span></dt><dd><b>Sine</b> plain LFO, predictable. <b>Drift</b> smoothed random walk — the default, and the one that sounds most like real propagation. <b>Jump</b> sample-and-hold steps. <b>Iono</b> Drift with sudden lurches every 10–30 s, which also double the event rate for about a second afterwards.</dd></div>
+<div class="ctl-row"><dt>Rate<span class="rng">0.02 – 2 Hz</span></dt><dd>Log-scaled. The flat fade deliberately rides the slowest phase, so at the default 0.12 Hz it takes around 25 seconds to come round.</dd></div>
+<div class="ctl-row"><dt>Depth<span class="rng">0 – 100</span></dt><dd>Scales every consumer&#x27;s modulation span. 0 freezes all drift — still filtered and gritty, but stationary — and costs exactly nothing in level.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">03.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">signal</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Bandwidth</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Fade</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Tune</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Grit</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">AGC</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Events</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Hetero</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Mix</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">conditions</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Shape</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Rate</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Depth</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Width</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Fade On</span>
+<span class="btn">Tune On</span>
+<span class="btn">Grit On</span>
+<span class="btn">AGC On</span>
+<span class="btn">Events On</span>
+<span class="btn">Het On</span>
+</div>
+<p class="bank-note">Button rows start at slot 2 — Push 3 reserves the leftmost top-row button for the device name.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">03.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">it processes only what you feed it</h3><p>There is no background static bed — that was left out on purpose. Layer real atmosphere from the <b>SW Radio</b> device underneath if you want it. What Kurzwellen <i>does</i> generate is receiver behaviour: correlated detector noise, AGC hiss, static crashes and the heterodyne whistle.</p>
+<h3 class="sub">set the weather first, then the radio</h3><p>Shape, Rate and Depth decide how the whole device moves; the module amounts decide how much of each symptom you hear. Getting the Conditions right first makes the rest quick.</p>
+<h3 class="sub">iono is the one to reach for when it feels too even</h3><p>Lurches arrive every 10–30 s and drag everything with them, and they double the event rate while they last. Bad conditions cluster; that is what stops long passages sounding like an LFO.</p>
+<h3 class="sub">the whistle re-tunes itself in jump and iono</h3><p>It rides the same Conditions phase everything else does, so when that phase steps, the whistle steps with it — like a neighbouring station being retuned. No separate control for it.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">03.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li><b>AGC only boosts.</b> On a signal already above its target it correctly sits at unity and does nothing — that is what an AGC does, not a fault. It earns its keep on quieter material and on anything Fade is already pulling down.</li><li><b>With AGC on, silence does not go fully silent.</b> The receiver turns itself up into its own noise floor between phrases: about −55 dB at the default 45, rising to a −30 dB ceiling at 100. Turn AGC off if that is a nuisance.</li><li><b>Width does not deepen Fade&#x27;s comb</b>, despite what you might expect. Fade processes left and right with shared control signals, so each channel gets an identically-defined comb whatever the source correlation — measured, it is 10.7 dB at Width 0 against 10.8 dB at Width 100. Width is a stereo-image utility, nothing more.</li><li><b>Tune&#x27;s wander scales with the dial.</b> At centre it is exactly 0 Hz. That is deliberate: applied at centre the wander was the entire shift, and ±6.6 Hz is 93 cents on a 120 Hz voice — nearly a semitone of wobble.</li><li>Every module is bit-exact transparent at amount 0 or toggle off. All eight of them, verified individually and together.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">03.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_kurzwellen.py</code> regenerates the <code>.amxd</code> + <code>.maxpat</code> with full validation. <b>No freeze is ever needed</b> — there is no external js anywhere.</p>
+<p><code>python3 sim_kurzwellen.py</code> runs 11 suites mirroring the DSP maths (about 150 s). <code>--full</code> adds the 60 s stability soak.</p>
+<p>Rebuilding from the script alone into an empty folder produces byte-identical files. Never rescue a copy from an old Live Set.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="microcosmos.html"><span>previous</span>microcosmos</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="pulsograph.html"><span>next</span>pulsograph</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-25</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>
