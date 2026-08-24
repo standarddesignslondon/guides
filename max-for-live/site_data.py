@@ -2577,3 +2577,123 @@ ITEMS.append({
         "the offline Python port of the DSP.",
     ],
 })
+
+ITEMS.append({
+    "slug": "composite",
+    "name": "Composite",
+    "kind": "Audio Effect",
+    "author": "Claude",
+    "status": "Working",
+    "folder": "Composite Device",
+    "tagline": "Photoshop blend modes for two sample layers — Darken, "
+               "Multiply, Difference and the rest, applied per frequency "
+               "instead of per pixel.",
+    "blurb":
+        "Two sample players — **layer A on top, layer B beneath** — meet in "
+        "an FFT where each frequency bin's energy is treated as a pixel's "
+        "brightness, and all nine blend modes from the layers panel do what "
+        "they do in Photoshop: Darken keeps only what both layers share, "
+        "Multiply makes A mask B like a vocoder, Difference cancels the "
+        "common material and leaves a ghost. Layers warp to Live's grid or "
+        "free-run and drift; loudness self-calibrates to the material via an "
+        "adaptive white point. Fully self-contained, performs from Push 3 in "
+        "Session view.",
+    "quickstart": [
+        "Drop `Composite.amxd` on an audio track and drop a sample on each "
+        "slot.",
+        "Pick a **Mode** — start with Darken on two different loops, or "
+        "Multiply with drums on A and a pad on B.",
+        "**Opacity** is the layers-panel opacity: 100% = the blend, 0% = "
+        "layer B alone.",
+        "Turn **SYNC** off on one layer so the loops drift — the mask "
+        "evolves instead of repeating.",
+        "**Freeze** a sustained layer (FRZ) and play material through it: "
+        "the held spectrum becomes a fixed stencil.",
+    ],
+    "controls": [
+        {"title": "Blend", "rows": [
+            ["Mode", "9 modes",
+             "Normal, Darken (knockout), Multiply (cross-synthesis), "
+             "Lighten (union), Screen, Overlay, Difference, Exclusion, "
+             "Hard Mix."],
+            ["Opacity", "0 - 100%",
+             "Layers-panel opacity: blend down to layer B alone."],
+            ["Phase", "A - B",
+             "Whose phases the composite uses — same mask, different "
+             "fabric."],
+            ["Contrast", "0 - 100%",
+             "S-curve on the brightnesses before the mode math; higher is "
+             "more decisive, and drives how brutal Hard Mix is."],
+            ["Resolution", "2048 - 32 bands",
+             "Spectral pixelation: fine and vocal down to chunky "
+             "vocoder-ish blocks."],
+            ["Swap", "off / on",
+             "Flips which layer is on top — Overlay and Normal change "
+             "completely."],
+            ["Dry", "0 - 100%", "Track input passthrough (default 0)."],
+            ["Output", "-18 - +6 dB", "Device level."]]},
+        {"title": "Per layer (A and B)", "rows": [
+            ["Play", "off / on", "Layer gate. A stopped layer is "
+             "*transparent* to the blend, not silent black."],
+            ["Sync", "off / on",
+             "On: loop locks to whole bars of the transport, pitch-neutral, "
+             "Speed snaps to 0.25/0.5/1/2/4. Off: free-runs and drifts."],
+            ["Reverse", "off / on", "Read direction."],
+            ["Freeze", "off / on",
+             "Holds the playback position as a static texture; unfreeze in "
+             "Sync snaps back onto the grid."],
+            ["Gain", "0 - 100%", "Layer level into the blend."],
+            ["Pitch", "-12 - +12 st", "Independent of speed."],
+            ["Speed", "0.25 - 4x", "Independent of pitch."],
+            ["Start / Length", "% of file", "Loop brackets."]]},
+    ],
+    "banks": [
+        {"name": "Blend",
+         "encoders": ["Mode", "Opacity", "Phase", "Contrast", "Resolution",
+                      "Dry", "Output", None],
+         "buttons": ["Play A", "Play B", "Freeze A", "Freeze B", "Swap",
+                     "Sync A", "Sync B"]},
+        {"name": "Layer A",
+         "encoders": ["Gain A", "Pitch A", "Speed A", "Start A", "Length A",
+                      "Opacity", "Mode", None],
+         "buttons": ["Play A", "Sync A", "Reverse A", "Freeze A"]},
+        {"name": "Layer B",
+         "encoders": ["Gain B", "Pitch B", "Speed B", "Start B", "Length B",
+                      "Opacity", "Mode", None],
+         "buttons": ["Play B", "Sync B", "Reverse B", "Freeze B"]},
+    ],
+    "workflow": [
+        {"title": "the frozen stencil",
+         "text": "Freeze a pad mid-chord, switch to Darken, and run a busy "
+                 "loop on the other layer — only the frequencies of the "
+                 "held chord pass through. Multiply does the same but "
+                 "shaped by the moving layer's dynamics."},
+        {"title": "drifting knockouts",
+         "text": "Two loops of different lengths with SYNC off phase "
+                 "against each other, so Darken's overlap — and the mask — "
+                 "never repeats. Resolution down and Contrast up makes the "
+                 "movement bold."},
+        {"title": "difference as a lens",
+         "text": "Two takes or two mixes of the *same* material in "
+                 "Difference: everything they share cancels and you hear "
+                 "only what changed."},
+    ],
+    "gotchas": [
+        "The spectral chain adds **85 ms of latency**. Synced layers "
+        "pre-read by exactly that and land on the grid; knob changes and "
+        "free-running layers arrive 85 ms late — normal for FFT devices.",
+        "Bar maths assume **4/4**; odd meters lock to the beat count only.",
+        "Multiply is the geometric mean sqrt(a·b), not the raw "
+        "product — the true Photoshop product doubles the darkness in dB "
+        "and buries the output. Raise **Contrast** for the darker "
+        "character.",
+        "Loop Length has a floor of about 50 ms.",
+    ],
+    "rebuild": [
+        "`node build_composite.js` in `Composite Device/` regenerates the "
+        "patcher and `.amxd` from scratch; `node tests/sim_composite.js` "
+        "runs the 546-check suite (structural asserts plus a real-FFT port "
+        "of the whole spectral chain). No external js — never needs "
+        "freezing.",
+    ],
+})

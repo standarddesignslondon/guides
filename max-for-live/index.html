@@ -13,7 +13,7 @@
   <h1>max for live<br>devices</h1>
   <p class="hero-sub">user guide</p>
   <p class="hero-blurb">An aide-mémoire for the devices in the Max for Live folder — what every control does, how the Push 3 encoders are laid out, and the handful of things each one needs you to remember.</p>
-  <p class="hero-count">21 devices</p>
+  <p class="hero-count">22 devices</p>
 </header>
 <div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="Audio Effect">audio effect</button><button class="f" data-f="kind" data-v="Instrument">instrument</button><button class="f" data-f="kind" data-v="MIDI Effect">midi effect</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="ChatGPT">chatgpt</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
 <div class="index-list" id="grid">
@@ -164,6 +164,13 @@
   <span class="r-desc">Tape degradation after the Chase Bliss Generation Loss MKII — wow, flutter, saturation, eleven tape models and a Failure knob.</span>
   <span class="r-kind">audio effect</span>
   <span class="r-thumb"><img src="images/gen-loss.png" alt="" loading="lazy"></span>
+</a><a class="row" href="devices/composite.html"
+   data-kind="Audio Effect" data-author="Claude" data-text="composite photoshop blend modes for two sample layers — darken, multiply, difference and the rest, applied per frequency instead of per pixel. two sample players — **layer a on top, layer b beneath** — meet in an fft where each frequency bin&#x27;s energy is treated as a pixel&#x27;s brightness, and all nine blend modes from the layers panel do what they do in photoshop: darken keeps only what both layers share, multiply makes a mask b like a vocoder, difference cancels the common material and leaves a ghost. layers warp to live&#x27;s grid or free-run and drift; loudness self-calibrates to the material via an adaptive white point. fully self-contained, performs from push 3 in session view. audio effect claude">
+  <span class="r-num">22</span>
+  <span class="r-name">composite</span>
+  <span class="r-desc">Photoshop blend modes for two sample layers — Darken, Multiply, Difference and the rest, applied per frequency instead of per pixel.</span>
+  <span class="r-kind">audio effect</span>
+  <span class="r-thumb"><img src="images/composite.png" alt="" loading="lazy"></span>
 </a>
 </div>
 <p class="empty-msg" id="empty" hidden>nothing matches that.</p>
@@ -172,7 +179,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-23</span>
+  <div class="sf-col"><span>generated 2026-08-24</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

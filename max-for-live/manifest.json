@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-08-23",
+ "generated": "2026-08-24",
  "items": [
   {
    "num": "01",
@@ -257,6 +257,18 @@
    "tagline": "Tape degradation after the Chase Bliss Generation Loss MKII \u2014 wow, flutter, saturation, eleven tape models and a Failure knob.",
    "url": "devices/gen-loss.html",
    "image": "images/gen-loss.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "22",
+   "slug": "composite",
+   "name": "Composite",
+   "tagline": "Photoshop blend modes for two sample layers \u2014 Darken, Multiply, Difference and the rest, applied per frequency instead of per pixel.",
+   "url": "devices/composite.html",
+   "image": "images/composite.png",
    "facets": {
     "kind": "Audio Effect",
     "author": "Claude"
