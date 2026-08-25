@@ -52,6 +52,18 @@ as a whole, then `ITEMS` — one dict per device. Edit a description, add a
 control row, reorder a Push bank, then re-run. Inline markup: `**bold**`,
 `*italic*`, `` `code` ``.
 
+### How devices are numbered
+
+The chapter number is simply **position in the `ITEMS` list** — nothing derives
+it, and there is no ordering scheme. The list is neither chronological nor
+alphabetical; it's the order entries happened to be added, with the larger
+multi-stage builds sitting at the front.
+
+So when you add a device, *decide where you want it* rather than assuming a rule
+will place it. Appending puts it last; inserting anywhere renumbers everything
+below it. Page URLs are slugs (`devices/kurzwellen.html`), not numbers, so
+reordering never breaks a link you've shared.
+
 The generator is subject-agnostic — the same `build_site.py` runs other guides
 (Photoshop tools, bought plugins) from their own `site_data.py`. It's carried by
 the `reference-guide-site` skill, so any project can produce a matching site.
