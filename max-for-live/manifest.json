@@ -292,7 +292,7 @@
    "name": "Regatta",
    "tagline": "A drum sequencer where the grid is a seed, not the score \u2014 a restless Copeland-style drummer performs your beat in an endless, never-repeating MIDI stream.",
    "url": "devices/regatta.html",
-   "image": null,
+   "image": "images/regatta.png",
    "facets": {
     "kind": "MIDI Effect",
     "author": "Claude"

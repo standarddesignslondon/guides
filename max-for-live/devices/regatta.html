@@ -14,7 +14,7 @@
   <h1>regatta</h1>
   <p class="ch-sub">A drum sequencer where the grid is a seed, not the score — a restless Copeland-style drummer performs your beat in an endless, never-repeating MIDI stream.</p>
 </header>
-<figure class="shot"><div class="shot-frame empty"><span>images/regatta.png</span></div><figcaption>picture pending</figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="../images/regatta.png" alt="Regatta"></div><figcaption>regatta</figcaption></figure>
 <section class="block" id="about">
   <div class="block-label"><span class="bl-num">24.0</span><h2>about</h2></div>
   <div class="block-body">
@@ -98,12 +98,12 @@
 <section class="block" id="gotchas">
   <div class="block-label"><span class="bl-num">24.5</span>
   <h2>gotchas</h2></div>
-  <div class="block-body"><ul class="gotchas"><li><b>Freeze after every rebuild</b> — three external js files (grid, brain, print) must be embedded or the device is dead on another machine and the sequencer never loads.</li><li>Restless 0 really is off: no gestures, fills, modulations or excursions. If the device seems inert, look there first.</li><li>PRINT needs the transport running and at least one complete bar played; it prints <i>complete</i> bars only.</li><li>Mute the device (or the clip) after printing if both would play — otherwise everything doubles.</li><li>The drop gate means a hat lane can go quiet during fills and thin-8s episodes by design — that&#x27;s the drummer making room, not a bug.</li><li>MIDI timing is vector-quantised like every M4L MIDI device (~1.5 ms at a 64-sample buffer).</li></ul></div>
+  <div class="block-body"><ul class="gotchas"><li>Restless 0 really is off: no gestures, fills, modulations or excursions. If the device seems inert, look there first.</li><li>PRINT needs the transport running and at least one complete bar played; it prints <i>complete</i> bars only.</li><li>Mute the device (or the clip) after printing if both would play — otherwise everything doubles.</li><li>The drop gate means a hat lane can go quiet during fills and thin-8s episodes by design — that&#x27;s the drummer making room, not a bug.</li><li>MIDI timing is vector-quantised like every M4L MIDI device (~1.5 ms at a 64-sample buffer).</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
   <div class="block-label"><span class="bl-num">24.6</span>
   <h2>rebuilding</h2></div>
-  <div class="block-body"><p><code>python3 build_regatta.py</code> in <code>Regatta Device/</code> regenerates the <code>.amxd</code> (with full wiring validation); then freeze in Max. Offline suites: <code>sim_engine.py</code>, <code>sim_sched.py</code> (clock + scheduler maths) and <code>test_grid_node.js</code>, <code>test_brain_node.js</code>, <code>test_print_node.js</code> (the REAL js under node, LiveAPI stubbed).</p>
+  <div class="block-body"><p><code>python3 build_regatta.py</code> in <code>Regatta Device/</code> regenerates the <code>.amxd</code> (with full wiring validation) — <b>frozen at build</b>, all three js files embedded and byte-verified, so there is no Max freeze step. Offline suites: <code>sim_engine.py</code>, <code>sim_sched.py</code> (clock + scheduler maths) and <code>test_grid_node.js</code>, <code>test_brain_node.js</code>, <code>test_print_node.js</code> (the REAL js under node, LiveAPI stubbed).</p>
 <p>All taste numbers — gesture rates, fill shapes, episode probabilities — live in <code>regatta_brain.js</code>.</p></div>
 </section>
 <nav class="chapnav"><a class="cn prev" href="composite.html"><span>previous</span>composite</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>

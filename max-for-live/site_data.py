@@ -2988,9 +2988,6 @@ ITEMS.append({
                  "MIDI works too."},
     ],
     "gotchas": [
-        "**Freeze after every rebuild** — three external js files "
-        "(grid, brain, print) must be embedded or the device is dead on "
-        "another machine and the sequencer never loads.",
         "Restless 0 really is off: no gestures, fills, modulations or "
         "excursions. If the device seems inert, look there first.",
         "PRINT needs the transport running and at least one complete "
@@ -3005,10 +3002,12 @@ ITEMS.append({
     ],
     "rebuild": [
         "`python3 build_regatta.py` in `Regatta Device/` regenerates the "
-        "`.amxd` (with full wiring validation); then freeze in Max. "
-        "Offline suites: `sim_engine.py`, `sim_sched.py` (clock + "
-        "scheduler maths) and `test_grid_node.js`, `test_brain_node.js`, "
-        "`test_print_node.js` (the REAL js under node, LiveAPI stubbed).",
+        "`.amxd` (with full wiring validation) — **frozen at build**, all "
+        "three js files embedded and byte-verified, so there is no Max "
+        "freeze step. Offline suites: `sim_engine.py`, `sim_sched.py` "
+        "(clock + scheduler maths) and `test_grid_node.js`, "
+        "`test_brain_node.js`, `test_print_node.js` (the REAL js under "
+        "node, LiveAPI stubbed).",
         "All taste numbers — gesture rates, fill shapes, episode "
         "probabilities — live in `regatta_brain.js`.",
     ],
