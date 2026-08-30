@@ -17,7 +17,10 @@ OWN_PREFIXES = ("SW Radio", "Ondes Martenot", "YT Sampler", "Cascade",
                 "Microcosmos", "Pulsograph", "ORAM", "The1958Machine",
                 "Preset Scroll", "Manual Tape", "Scene Placer",
                 "False Memory", "Tape Error", "StripSilence",
-                "Disintegration", "Magnabelt", "Splice 1")
+                "Disintegration", "Magnabelt", "Splice 1",
+                # added 30 Aug 2026 with their guide chapters
+                "Evening Star", "Bad Mood", "Mood", "Gen Loss",
+                "Kurzwellen", "Composite", "Regatta")
 
 # filename prefix -> the name the guide gives it
 OWN_GUIDE_NAME = {"The1958Machine": "The 1958 Machine",

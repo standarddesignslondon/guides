@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-08-25",
+ "generated": "2026-08-30",
  "items": [
   {
    "num": "01",
@@ -283,6 +283,18 @@
    "image": "images/composite.png",
    "facets": {
     "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "24",
+   "slug": "regatta",
+   "name": "Regatta",
+   "tagline": "A drum sequencer where the grid is a seed, not the score \u2014 a restless Copeland-style drummer performs your beat in an endless, never-repeating MIDI stream.",
+   "url": "devices/regatta.html",
+   "image": null,
+   "facets": {
+    "kind": "MIDI Effect",
     "author": "Claude"
    }
   }

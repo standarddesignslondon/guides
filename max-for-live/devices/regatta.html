@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>regatta — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">24</p>
+  <h1>regatta</h1>
+  <p class="ch-sub">A drum sequencer where the grid is a seed, not the score — a restless Copeland-style drummer performs your beat in an endless, never-repeating MIDI stream.</p>
+</header>
+<figure class="shot"><div class="shot-frame empty"><span>images/regatta.png</span></div><figcaption>picture pending</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">24.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">You program a small base beat; Regatta plays it the way a restless, easily-bored drummer would. A <b>gesture engine</b> — coherent musical units, never per-step dice — adds ghosts, drags, doublings, drops and hat flourishes, all role-aware and anchored to your seed; <b>fills</b> build into phrase ends and land on the one; the <b>pattern itself modulates</b> for a phrase or two (hats go offbeat or onto the ride, accents migrate, kicks push late) before coming home; lanes occasionally <b>slip off-grid and get pulled back in</b>; and a slow ~30-bar contour breathes the whole performance between near-straight and busy. Sits before a Drum Rack, generates for ever, and <b>PRINT</b> nets the last N bars — exactly as played — into a Session clip.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>midi effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>folder</dt><dd>Regatta Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">24.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Regatta.amxd</code> on a MIDI track <b>before a Drum Rack</b>.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Draw a seed: click cells (off → ON → ACCENT), drag to paint, alt-click sets a lane&#x27;s length — lanes loop at their own length, so polymetre is free. A starter kick/snare/hat beat ships in.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Set each lane&#x27;s <b>Role</b> to match its drum — gestures read it (snares get ghosts and drags, hats get flourishes). Give one lane <b>Ride</b> so the hat-to-ride modulation has somewhere to go.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Play, then raise <b>Restless</b> and <b>Depth</b> until the drummer feels right. Add <b>Loose</b> for human timing.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Heard a keeper? <b>PRINT</b> drops the last N bars into this track&#x27;s first empty Session slot, unquantised, as played.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">24.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">per lane (grid rows 1-8)</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Note<span class="rng">0 - 127</span></dt><dd>MIDI note the lane fires; defaults 36-43, the Drum Rack&#x27;s bottom two rows.</dd></div>
+<div class="ctl-row"><dt>Role<span class="rng">Kick / Snare / Hat / Ride / Tom / Perc</span></dt><dd>What kind of drum this lane is. Steers every gesture, fill and modulation — set it honestly.</dd></div>
+<div class="ctl-row"><dt>Feel<span class="rng">-100 - +100 ms</span></dt><dd>Push/drag against the grid: negative plays ahead (eager hats), positive behind (lazy backbeat).</dd></div>
+<div class="ctl-row"><dt>Level<span class="rng">0 - 1</span></dt><dd>Velocity trim (a trim, not a mute — velocity floors at 1).</dd></div>
+</dl>
+<h3 class="sub">gestures</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Restless<span class="rng">0 - 1</span></dt><dd>How often the drummer intervenes. 0 = plays the seed dead straight; past ~0.55 a second ornament stream opens; 1 is properly busy.</dd></div>
+<div class="ctl-row"><dt>Depth<span class="rng">0 - 1</span></dt><dd>How far interventions go: ghosts and doublings at low settings, then drags and drops, then flourishes with 64th flavours. Also scales gesture velocities and fill length.</dd></div>
+<div class="ctl-row"><dt>Phrase<span class="rng">Off / 2 / 4 / 8 / 16 bars</span></dt><dd>Where fills land. <b>Off = no fills at all</b>; phrase weighting and pattern modulation carry on regardless.</dd></div>
+<div class="ctl-row"><dt>Loose<span class="rng">0 - 1</span></dt><dd>Timing master: human jitter on every hit (±6 ms at full, one sample per lane-step so a hand moves as a unit) and the licence for phase excursions. 0 = machine-tight.</dd></div>
+<div class="ctl-row"><dt>Print Bars + PRINT<span class="rng">1 - 32</span></dt><dd>Captures the last N complete bars of the performance into a fresh Session clip on this track (new scene if the column&#x27;s full). Refuses politely when stopped.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">24.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">lanes12</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Note 1</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Role 1</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Feel 1</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Level 1</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Note 2</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Role 2</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Feel 2</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Level 2</span></div>
+</div>
+<p class="bank-note">lanes never straddle banks — two lanes per bank, in order, through Lanes34, Lanes56 and Lanes78</p>
+</div>
+<div class="bank">
+<div class="bank-head">drummer</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Restless</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Depth</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Phrase</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Loose</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Print Bars</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Print</span>
+</div>
+<p class="bank-note">Print is momentary — fires a print and resets itself</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">24.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">the long take</h3><p>Restless ~0.4, Depth ~0.5, Loose ~0.3, Phrase 4 bars — then record 8+ minutes into Arrangement, or just play. The contour gives near-straight stretches and busy patches on its own; harvest the best bars with PRINT afterwards.</p>
+<h3 class="sub">the drummer, not the machine</h3><p>Keep the seed simple — kick, backbeat, 8th hats. The interest comes from what Regatta does to it, and simple seeds give the gestures the most room to read the beat.</p>
+<h3 class="sub">printing keepers</h3><p>Leave it running while you work on other tracks. When a fill or a modulated stretch grabs you, PRINT 8 bars, mute the device and keep the clip — it is exactly what you heard, off-grid timing included. Live&#x27;s Capture MIDI works too.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">24.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li><b>Freeze after every rebuild</b> — three external js files (grid, brain, print) must be embedded or the device is dead on another machine and the sequencer never loads.</li><li>Restless 0 really is off: no gestures, fills, modulations or excursions. If the device seems inert, look there first.</li><li>PRINT needs the transport running and at least one complete bar played; it prints <i>complete</i> bars only.</li><li>Mute the device (or the clip) after printing if both would play — otherwise everything doubles.</li><li>The drop gate means a hat lane can go quiet during fills and thin-8s episodes by design — that&#x27;s the drummer making room, not a bug.</li><li>MIDI timing is vector-quantised like every M4L MIDI device (~1.5 ms at a 64-sample buffer).</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">24.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_regatta.py</code> in <code>Regatta Device/</code> regenerates the <code>.amxd</code> (with full wiring validation); then freeze in Max. Offline suites: <code>sim_engine.py</code>, <code>sim_sched.py</code> (clock + scheduler maths) and <code>test_grid_node.js</code>, <code>test_brain_node.js</code>, <code>test_print_node.js</code> (the REAL js under node, LiveAPI stubbed).</p>
+<p>All taste numbers — gesture rates, fill shapes, episode probabilities — live in <code>regatta_brain.js</code>.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="composite.html"><span>previous</span>composite</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-08-30</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>
