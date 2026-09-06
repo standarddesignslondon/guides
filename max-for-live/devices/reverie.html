@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reverie — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">26</p>
+  <h1>reverie</h1>
+  <p class="ch-sub">A Lucid-style granular playground: grains that stay in key (pitch tracking, scale retune, chords and arps, tuned filters, scale-locked grain delays) and in time (grid retriggers, synced rates, timeline-locked scrub and LFOs).</p>
+</header>
+<figure class="shot"><div class="shot-frame empty"><span>images/reverie.png</span></div><figcaption>picture pending</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">26.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Built overnight from the Minimal Audio Lucid manual. A 43-second capture ring records everything; a playhead moves through it (<b>Stretch</b> — slowed, reversed or frozen from each Grid, Transient or Manual retrigger — or <b>Scrub</b>, placed by hand or by an LFO); a scheduler fires grains at a free, note-synced or scale-note rate. Every grain gets its own pitch (detected, retuned to the scale, transposed in degrees, chorded or arpeggiated), its own filter (SVF, tuned comb or reducer), its own pan position from a pattern, and up to eight delayed copies shifted by a pattern that stays in key. Two LFOs and an envelope follower reach sixteen engine targets. Working title.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v0.1 — awaiting first test</dd></div><div class="fact"><dt>folder</dt><dd>Reverie Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">26.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Reverie.amxd</code> on a monophonic source. At defaults it is the input with a granular shimmer, ~30 ms late; the LED is grey and the PLAYHEAD bar sits at the right (live).</span></li>
+<li><span class="step-n">02</span><span class="step-t">Set <b>Trigger</b> Manual and <b>Stretch</b> 100: the last moment freezes. Raise <b>Blur</b> to soften the ring; flick <b>Activate</b> off and on to grab a new moment; <b>Reverse</b> walks it backwards.</span></li>
+<li><span class="step-n">03</span><span class="step-t"><b>Pitch Mode</b> Scale, choose <b>Root</b> and <b>Scale</b>, then turn <b>Pitch</b> — it counts in scale degrees, so +2 is a third and +4 a fifth, always in tune. <b>Chord</b> = Chord stacks Int 1–3; Arp cycles them one grain at a time (use a Sync rate for tempo-locked arps).</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>Taps</b> 4, <b>Pattern</b> Ramp, <b>Shift</b> 7 in Scale mode, <b>Space</b> 60: an in-key shimmer delay. Feedback repeats the last tap without re-pitching, exactly as the manual describes.</span></li>
+<li><span class="step-n">05</span><span class="step-t"><b>Play Mode</b> Scrub, <b>Loop Len</b> 1 bar, <b>Scrub Mode</b> 1/16, LFO 1 → Scrub with Sync 1 bar and Shape S&amp;H: the last bar resequences itself in time.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">26.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">grain</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Rate Mode / Rate ms / Rate Div / Rate Note<span class="rng">Free · Sync · Scale</span></dt><dd>Free = ms between grains (audio rate below ~20 ms); Sync = a note division from Live&#x27;s tempo (straight, triplet, dotted); Scale = the frequency of a scale note, degrees up from C1, so the engine is a tuned oscillator with the input as waveform.</dd></div>
+<div class="ctl-row"><dt>Size / Link<span class="rng">1–2000 ms · ms/Ratio</span></dt><dd>Grain length. Link makes Size a ratio of the rate (120 = 1.2× overlap) so density holds while Rate moves.</dd></div>
+<div class="ctl-row"><dt>Shape / Skew<span class="rng">-100…100</span></dt><dd>Window: sharp (−) to plateau (+); fast attack (−) to slow swell (+).</dd></div>
+<div class="ctl-row"><dt>Jitter<span class="rng">0–100</span></dt><dd>Random grain timing.</dd></div>
+</dl>
+<h3 class="sub">playback</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Play Mode<span class="rng">Stretch / Scrub</span></dt><dd>Stretch moves the playhead at 1/Stretch speed from each retrigger; Scrub places it inside Loop Len.</dd></div>
+<div class="ctl-row"><dt>Trigger / Retrig / Sens<span class="rng">Grid · Transient · Manual</span></dt><dd>What restarts a stretch: the beat grid (song position, or an internal clock when stopped), a detected transient, or the Activate edge (and Reverse) in Manual.</dd></div>
+<div class="ctl-row"><dt>Stretch<span class="rng">1–100</span></dt><dd>1 = live, 100 = frozen.</dd></div>
+<div class="ctl-row"><dt>Activate / Reverse / Rev Prob<span class="rng">buttons · 0–100</span></dt><dd>Activate off = live passthrough of the granulator; on-edge = new stretch. Reverse flips playhead and grains; Rev Prob reverses individual grains.</dd></div>
+<div class="ctl-row"><dt>Scrub / Scrub Mode / Loop Len / Hold<span class="rng">0–100 · Free…1 bar · 1 beat…8 bars</span></dt><dd>Position (100 = newest), optional note quantise, the range, and a capture freeze so a fixed section can be scrubbed.</dd></div>
+<div class="ctl-row"><dt>Spray / Blur / Level<span class="rng">0–100 · 0–100 · −60…+6 dB</span></dt><dd>Random start within ±half of Loop Len; small ±half-grain randomisation that de-rings freezes; grain level captured per grain.</dd></div>
+</dl>
+<h3 class="sub">pitch</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Pitch / Pitch Mode<span class="rng">−24…24 · Repitch / Free / Scale</span></dt><dd>Repitch also scales playhead speed (tape); Free is pitch only; Scale tracks the input pitch (zero-crossing tracker, stored per block of the capture), retunes each grain to the nearest scale note and transposes in degrees. No pitch → degrees from the Root, as in Lucid.</dd></div>
+<div class="ctl-row"><dt>Detune / Retune<span class="rng">0–100 · Off / Smooth / Hard</span></dt><dd>Random ±1 st per grain; correction strength in Scale mode.</dd></div>
+<div class="ctl-row"><dt>Root / Scale<span class="rng">C…B · 15 scales</span></dt><dd>Shared by pitch, Rate Note, F Scale and Shift.</dd></div>
+<div class="ctl-row"><dt>Chord / Voices / Int 1–3 / Arp Rand / Chord Spread<span class="rng">Off · Arp · Chord</span></dt><dd>Root + up to three intervals (degrees in Scale mode). Arp cycles one voice per grain; Chord stacks them (÷√voices). Spread alternates voices L/R.</dd></div>
+</dl>
+<h3 class="sub">grain filter — one per grain, reset on every grain</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Filter<span class="rng">Off · LP · HP · BP · Notch · Morph · Comb · Reducer</span></dt><dd>ZDF SVF modes, Morph sweeps LP→BP→HP→Notch, Comb is a resonator at Cutoff (tuned with F Scale; Morph = damping), Reducer decimates at Cutoff (Morph = bits).</dd></div>
+<div class="ctl-row"><dt>Cutoff / F Scale<span class="rng">20 Hz–20 kHz · button</span></dt><dd>Base cutoff, optionally snapped to the scale.</dd></div>
+<div class="ctl-row"><dt>Mod Depth / Mod Rate<span class="rng">±100 · 0–16</span></dt><dd>Cutoff sweep of ±3 octaves per grain, Rate cycles per grain; Rate 0 = a random offset per grain instead (the manual&#x27;s Random button).</dd></div>
+<div class="ctl-row"><dt>Reso / Drive / Morph / F Mix<span class="rng">0–100</span></dt><dd>Resonance (comb feedback), per-grain soft clip, morph position, filtered/dry per grain.</dd></div>
+</dl>
+<h3 class="sub">imager</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Image<span class="rng">Alternate · Pendulum · Helix · Bloom · Scatter · Drift</span></dt><dd>Pan pattern for successive grains.</dd></div>
+<div class="ctl-row"><dt>Spread / Pan / Smooth<span class="rng">0–100 · ±100 · button</span></dt><dd>Pattern width, centre (per grain), and glide to the next position over the grain&#x27;s life.</dd></div>
+<div class="ctl-row"><dt>Width / Dimension<span class="rng">0–200 · 0–100</span></dt><dd>Mid/side width of the wet signal; modulated short-delay stereo expander.</dd></div>
+</dl>
+<h3 class="sub">grain delay — every tap is a grain</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Taps / Dly Sync / Dly ms / Dly Div<span class="rng">0–8 · button · 1–2000 ms · 1/32…1 bar</span></dt><dd>Delayed copies of every grain from the same source position, so Time can sweep without pitch artefacts. Taps 0 = off.</dd></div>
+<div class="ctl-row"><dt>Pattern / Shift<span class="rng">8 patterns · ±24</span></dt><dd>How Shift spreads over the taps (Hold, Alternate, Ramp, Pulse, Triangle, Diverge, Random, Chaos); degrees in Scale mode.</dd></div>
+<div class="ctl-row"><dt>Feedback / Dly LP / Dly HP<span class="rng">0–100 · Hz</span></dt><dd>The last tap feeds an audio delay line — repeats are not re-pitched — with both filters in the loop.</dd></div>
+<div class="ctl-row"><dt>Space / Dly Mix / Stereo<span class="rng">0–100 · 0–100 · Normal / Ping Pong / Swap</span></dt><dd>Diffuse tank on the delay; grains vs delay; tap panning and cross-fed feedback, or L/R swap on odd taps.</dd></div>
+</dl>
+<h3 class="sub">modulation</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>LFO 1 / LFO 2<span class="rng">Target · Rate · Sync · Shape · Depth</span></dt><dd>Sixteen targets (Pitch, Cutoff, Scrub, Spray, Size, Rate, Pan, Stretch, Morph, Dly Time, Level, Reso, Detune, Spread, Shift). Sync locks the phase to the song position (8 bars…1/16); shapes Sine, Tri, Ramp, Square, S&amp;H, Drift.</dd></div>
+<div class="ctl-row"><dt>Env<span class="rng">Target · Attack · Release · Depth</span></dt><dd>Envelope follower of the input, 0 at −48 dB to 1 at 0 dB.</dd></div>
+<div class="ctl-row"><dt>Dry/Wet / Gain / Limiter<span class="rng">0–100 · ±dB · button</span></dt><dd>Equal-power mix, output trim, fast peak limiter.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">26.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">grain</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Rate Mode</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Rate ms</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Rate Div</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Rate Note</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Size</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Shape</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Skew</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Jitter</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Link</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">play 1</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Play Mode</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Trigger</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Retrig</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Stretch</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Sens</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Rev Prob</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Spray</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Blur</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Activate</span>
+<span class="btn">Reverse</span>
+<span class="btn">Hold</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">play 2</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Scrub</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Scrub Mode</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Loop Len</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Level</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Activate</span>
+<span class="btn">Reverse</span>
+<span class="btn">Hold</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">pitch</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Pitch</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Pitch Mode</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Detune</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Retune</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Root</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Scale</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Chord</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Voices</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">chord</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Int 1</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Int 2</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Int 3</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Arp Rand</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Chord Spread</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">filter</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Filter</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Cutoff</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Mod Depth</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Mod Rate</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Reso</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Drive</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Morph</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">F Mix</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">F Scale</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">image+out</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Image</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Spread</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Pan</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Width</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Dimension</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Dry Wet</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Gain</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Smooth</span>
+<span class="btn">Limiter</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">delay 1</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Taps</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Dly ms</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Dly Div</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Pattern</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Shift</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Feedback</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Space</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Dly Mix</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Dly Sync</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">delay 2</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Dly LP</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Dly HP</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Stereo</span></div>
+<div class="enc empty"><span class="enc-n">4</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Dly Sync</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">lfo 1</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">L1 Target</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">L1 Rate</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">L1 Sync</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">L1 Shape</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">L1 Depth</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Env Target</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Env Attack</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Env Release</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">lfo 2</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">L2 Target</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">L2 Rate</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">L2 Sync</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">L2 Shape</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">L2 Depth</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Env Depth</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<p class="bank-note">Static banks baked into the device (right on a fresh add); toggles are the top-row buttons from slot 2.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">26.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">freeze pad</h3><p>Trigger Manual, Stretch 100, Size 300, Blur 60, Spray 20, Chord = Chord with Voices 3. Each Activate off/on grabs a new moment; Reverse in Manual also regrabs.</p>
+<h3 class="sub">tuned oscillator</h3><p>Rate Mode Scale, Rate Note 14, Link on, Size 200, Pitch Mode Scale. A single line in comes out as the scale note, with the input&#x27;s timbre.</p>
+<h3 class="sub">rhythmic gate</h3><p>Rate Mode Sync 1/16, Size ms 40, Shape −60, Trigger Grid, Retrig 1 bar, Stretch 4: the bar plays back at quarter speed as a 16th-note gate, restarting every bar.</p>
+<h3 class="sub">grain delay only</h3><p>Dly Mix 100 and Dry/Wet 50 turns the device into a dedicated in-key grain delay, per the manual&#x27;s tip.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">26.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Grains are read ~32 ms behind the live input, plus the grain length when a grain is longer than that (a forward grain can never read the future). Live does not compensate M4L latency; treat it like Lucid&#x27;s own 28 ms.</li><li>Pitch tracking is monophonic. Chords and noise report no pitch, so Scale mode then transposes in degrees from the Root — musical, but no retune.</li><li>A freeze is protected: if the capture ring is about to overwrite a frozen region (≈ 37 s of new input at 48 kHz), recording pauses until the playhead returns towards live.</li><li>The voice pool is 40 grains; at audio-rate Rates with long Sizes (or many taps) extra spawns are dropped rather than stolen — turn Link on to keep density sane.</li><li>Working title, untested in Live when written. Knobs inert but audio passes = gen~ failed to compile/allocate; plays briefly then dies = a NaN. Report which.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">26.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_reverie.py</code> in the device folder regenerates <code>Reverie.amxd</code> (+ <code>.maxpat</code> / <code>.genexpr</code>) with static genexpr checks and patcher/bank asserts; <code>python3 sim_reverie.py</code> transpiles the real engine to Python and runs 13 suites / 151 checks.</p>
+<p>No external files, so no freeze step. gen~ memory ≈ 26 MB (2^21 capture ring, 40 voices, 8 tap queues × 256, per-voice comb buffers).</p>
+<p>Lessons: a genexpr→Python transpiler in the sim tests the shipped code rather than a re-implementation; store positions as ring indices so float32 Data keeps them exact; a playhead clamp must sit deeper than the recording backstop or the backstop never fires.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="remainder.html"><span>previous</span>remainder</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-09-06</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

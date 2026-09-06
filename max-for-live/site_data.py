@@ -3200,3 +3200,220 @@ ITEMS.append({
         "captures 'just before it went quiet' must normalise the capture.",
     ],
 })
+
+ITEMS.append({
+    "slug": "reverie",
+    "name": "Reverie",
+    "kind": "Audio Effect",
+    "author": "Claude",
+    "status": "v0.1 — awaiting first test",
+    "folder": "Reverie Device",
+    "tagline": "A Lucid-style granular playground: grains that stay in key "
+               "(pitch tracking, scale retune, chords and arps, tuned "
+               "filters, scale-locked grain delays) and in time (grid "
+               "retriggers, synced rates, timeline-locked scrub and LFOs).",
+    "blurb": "Built overnight from the Minimal Audio Lucid manual. A 43-second "
+             "capture ring records everything; a playhead moves through it "
+             "(**Stretch** — slowed, reversed or frozen from each Grid, "
+             "Transient or Manual retrigger — or **Scrub**, placed by hand or "
+             "by an LFO); a scheduler fires grains at a free, note-synced or "
+             "scale-note rate. Every grain gets its own pitch (detected, "
+             "retuned to the scale, transposed in degrees, chorded or "
+             "arpeggiated), its own filter (SVF, tuned comb or reducer), its "
+             "own pan position from a pattern, and up to eight delayed copies "
+             "shifted by a pattern that stays in key. Two LFOs and an "
+             "envelope follower reach sixteen engine targets. Working title.",
+    "quickstart": [
+        "Drop `Reverie.amxd` on a monophonic source. At defaults it is the "
+        "input with a granular shimmer, ~30 ms late; the LED is grey and the "
+        "PLAYHEAD bar sits at the right (live).",
+        "Set **Trigger** Manual and **Stretch** 100: the last moment freezes. "
+        "Raise **Blur** to soften the ring; flick **Activate** off and on to "
+        "grab a new moment; **Reverse** walks it backwards.",
+        "**Pitch Mode** Scale, choose **Root** and **Scale**, then turn "
+        "**Pitch** — it counts in scale degrees, so +2 is a third and +4 a "
+        "fifth, always in tune. **Chord** = Chord stacks Int 1–3; Arp cycles "
+        "them one grain at a time (use a Sync rate for tempo-locked arps).",
+        "**Taps** 4, **Pattern** Ramp, **Shift** 7 in Scale mode, **Space** "
+        "60: an in-key shimmer delay. Feedback repeats the last tap without "
+        "re-pitching, exactly as the manual describes.",
+        "**Play Mode** Scrub, **Loop Len** 1 bar, **Scrub Mode** 1/16, LFO 1 "
+        "→ Scrub with Sync 1 bar and Shape S&H: the last bar resequences "
+        "itself in time.",
+    ],
+    "controls": [
+        {"title": "Grain",
+         "rows": [
+             ["Rate Mode / Rate ms / Rate Div / Rate Note",
+              "Free · Sync · Scale",
+              "Free = ms between grains (audio rate below ~20 ms); Sync = a "
+              "note division from Live's tempo (straight, triplet, dotted); "
+              "Scale = the frequency of a scale note, degrees up from C1, so "
+              "the engine is a tuned oscillator with the input as waveform."],
+             ["Size / Link", "1–2000 ms · ms/Ratio",
+              "Grain length. Link makes Size a ratio of the rate (120 = 1.2× "
+              "overlap) so density holds while Rate moves."],
+             ["Shape / Skew", "-100…100",
+              "Window: sharp (−) to plateau (+); fast attack (−) to slow swell "
+              "(+)."],
+             ["Jitter", "0–100", "Random grain timing."],
+         ]},
+        {"title": "Playback",
+         "rows": [
+             ["Play Mode", "Stretch / Scrub",
+              "Stretch moves the playhead at 1/Stretch speed from each "
+              "retrigger; Scrub places it inside Loop Len."],
+             ["Trigger / Retrig / Sens", "Grid · Transient · Manual",
+              "What restarts a stretch: the beat grid (song position, or an "
+              "internal clock when stopped), a detected transient, or the "
+              "Activate edge (and Reverse) in Manual."],
+             ["Stretch", "1–100", "1 = live, 100 = frozen."],
+             ["Activate / Reverse / Rev Prob", "buttons · 0–100",
+              "Activate off = live passthrough of the granulator; on-edge = "
+              "new stretch. Reverse flips playhead and grains; Rev Prob "
+              "reverses individual grains."],
+             ["Scrub / Scrub Mode / Loop Len / Hold", "0–100 · Free…1 bar · 1 beat…8 bars",
+              "Position (100 = newest), optional note quantise, the range, "
+              "and a capture freeze so a fixed section can be scrubbed."],
+             ["Spray / Blur / Level", "0–100 · 0–100 · −60…+6 dB",
+              "Random start within ±half of Loop Len; small ±half-grain "
+              "randomisation that de-rings freezes; grain level captured per "
+              "grain."],
+         ]},
+        {"title": "Pitch",
+         "rows": [
+             ["Pitch / Pitch Mode", "−24…24 · Repitch / Free / Scale",
+              "Repitch also scales playhead speed (tape); Free is pitch only; "
+              "Scale tracks the input pitch (zero-crossing tracker, stored "
+              "per block of the capture), retunes each grain to the nearest "
+              "scale note and transposes in degrees. No pitch → degrees from "
+              "the Root, as in Lucid."],
+             ["Detune / Retune", "0–100 · Off / Smooth / Hard",
+              "Random ±1 st per grain; correction strength in Scale mode."],
+             ["Root / Scale", "C…B · 15 scales",
+              "Shared by pitch, Rate Note, F Scale and Shift."],
+             ["Chord / Voices / Int 1–3 / Arp Rand / Chord Spread",
+              "Off · Arp · Chord",
+              "Root + up to three intervals (degrees in Scale mode). Arp "
+              "cycles one voice per grain; Chord stacks them (÷√voices). "
+              "Spread alternates voices L/R."],
+         ]},
+        {"title": "Grain filter — one per grain, reset on every grain",
+         "rows": [
+             ["Filter", "Off · LP · HP · BP · Notch · Morph · Comb · Reducer",
+              "ZDF SVF modes, Morph sweeps LP→BP→HP→Notch, Comb is a "
+              "resonator at Cutoff (tuned with F Scale; Morph = damping), "
+              "Reducer decimates at Cutoff (Morph = bits)."],
+             ["Cutoff / F Scale", "20 Hz–20 kHz · button",
+              "Base cutoff, optionally snapped to the scale."],
+             ["Mod Depth / Mod Rate", "±100 · 0–16",
+              "Cutoff sweep of ±3 octaves per grain, Rate cycles per grain; "
+              "Rate 0 = a random offset per grain instead (the manual's "
+              "Random button)."],
+             ["Reso / Drive / Morph / F Mix", "0–100",
+              "Resonance (comb feedback), per-grain soft clip, morph "
+              "position, filtered/dry per grain."],
+         ]},
+        {"title": "Imager",
+         "rows": [
+             ["Image", "Alternate · Pendulum · Helix · Bloom · Scatter · Drift",
+              "Pan pattern for successive grains."],
+             ["Spread / Pan / Smooth", "0–100 · ±100 · button",
+              "Pattern width, centre (per grain), and glide to the next "
+              "position over the grain's life."],
+             ["Width / Dimension", "0–200 · 0–100",
+              "Mid/side width of the wet signal; modulated short-delay stereo "
+              "expander."],
+         ]},
+        {"title": "Grain delay — every tap is a grain",
+         "rows": [
+             ["Taps / Dly Sync / Dly ms / Dly Div", "0–8 · button · 1–2000 ms · 1/32…1 bar",
+              "Delayed copies of every grain from the same source position, "
+              "so Time can sweep without pitch artefacts. Taps 0 = off."],
+             ["Pattern / Shift", "8 patterns · ±24",
+              "How Shift spreads over the taps (Hold, Alternate, Ramp, Pulse, "
+              "Triangle, Diverge, Random, Chaos); degrees in Scale mode."],
+             ["Feedback / Dly LP / Dly HP", "0–100 · Hz",
+              "The last tap feeds an audio delay line — repeats are not "
+              "re-pitched — with both filters in the loop."],
+             ["Space / Dly Mix / Stereo", "0–100 · 0–100 · Normal / Ping Pong / Swap",
+              "Diffuse tank on the delay; grains vs delay; tap panning and "
+              "cross-fed feedback, or L/R swap on odd taps."],
+         ]},
+        {"title": "Modulation",
+         "rows": [
+             ["LFO 1 / LFO 2", "Target · Rate · Sync · Shape · Depth",
+              "Sixteen targets (Pitch, Cutoff, Scrub, Spray, Size, Rate, Pan, "
+              "Stretch, Morph, Dly Time, Level, Reso, Detune, Spread, Shift). "
+              "Sync locks the phase to the song position (8 bars…1/16); "
+              "shapes Sine, Tri, Ramp, Square, S&H, Drift."],
+             ["Env", "Target · Attack · Release · Depth",
+              "Envelope follower of the input, 0 at −48 dB to 1 at 0 dB."],
+             ["Dry/Wet / Gain / Limiter", "0–100 · ±dB · button",
+              "Equal-power mix, output trim, fast peak limiter."],
+         ]},
+    ],
+    "banks": [
+        {"name": "Grain", "encoders": ["Rate Mode", "Rate ms", "Rate Div", "Rate Note", "Size", "Shape", "Skew", "Jitter"], "buttons": ["Link"]},
+        {"name": "Play 1", "encoders": ["Play Mode", "Trigger", "Retrig", "Stretch", "Sens", "Rev Prob", "Spray", "Blur"], "buttons": ["Activate", "Reverse", "Hold"]},
+        {"name": "Play 2", "encoders": ["Scrub", "Scrub Mode", "Loop Len", "Level", None, None, None, None], "buttons": ["Activate", "Reverse", "Hold"]},
+        {"name": "Pitch", "encoders": ["Pitch", "Pitch Mode", "Detune", "Retune", "Root", "Scale", "Chord", "Voices"]},
+        {"name": "Chord", "encoders": ["Int 1", "Int 2", "Int 3", "Arp Rand", "Chord Spread", None, None, None]},
+        {"name": "Filter", "encoders": ["Filter", "Cutoff", "Mod Depth", "Mod Rate", "Reso", "Drive", "Morph", "F Mix"], "buttons": ["F Scale"]},
+        {"name": "Image+Out", "encoders": ["Image", "Spread", "Pan", "Width", "Dimension", "Dry Wet", "Gain", None], "buttons": ["Smooth", "Limiter"]},
+        {"name": "Delay 1", "encoders": ["Taps", "Dly ms", "Dly Div", "Pattern", "Shift", "Feedback", "Space", "Dly Mix"], "buttons": ["Dly Sync"]},
+        {"name": "Delay 2", "encoders": ["Dly LP", "Dly HP", "Stereo", None, None, None, None, None], "buttons": ["Dly Sync"]},
+        {"name": "LFO 1", "encoders": ["L1 Target", "L1 Rate", "L1 Sync", "L1 Shape", "L1 Depth", "Env Target", "Env Attack", "Env Release"]},
+        {"name": "LFO 2", "encoders": ["L2 Target", "L2 Rate", "L2 Sync", "L2 Shape", "L2 Depth", "Env Depth", None, None],
+         "note": "Static banks baked into the device (right on a fresh add); "
+                 "toggles are the top-row buttons from slot 2."},
+    ],
+    "workflow": [
+        {"title": "Freeze pad",
+         "text": "Trigger Manual, Stretch 100, Size 300, Blur 60, Spray 20, "
+                 "Chord = Chord with Voices 3. Each Activate off/on grabs a "
+                 "new moment; Reverse in Manual also regrabs."},
+        {"title": "Tuned oscillator",
+         "text": "Rate Mode Scale, Rate Note 14, Link on, Size 200, Pitch "
+                 "Mode Scale. A single line in comes out as the scale note, "
+                 "with the input's timbre."},
+        {"title": "Rhythmic gate",
+         "text": "Rate Mode Sync 1/16, Size ms 40, Shape −60, Trigger Grid, "
+                 "Retrig 1 bar, Stretch 4: the bar plays back at quarter "
+                 "speed as a 16th-note gate, restarting every bar."},
+        {"title": "Grain delay only",
+         "text": "Dly Mix 100 and Dry/Wet 50 turns the device into a "
+                 "dedicated in-key grain delay, per the manual's tip."},
+    ],
+    "gotchas": [
+        "Grains are read ~32 ms behind the live input, plus the grain length "
+        "when a grain is longer than that (a forward grain can never read "
+        "the future). Live does not compensate M4L latency; treat it like "
+        "Lucid's own 28 ms.",
+        "Pitch tracking is monophonic. Chords and noise report no pitch, so "
+        "Scale mode then transposes in degrees from the Root — musical, but "
+        "no retune.",
+        "A freeze is protected: if the capture ring is about to overwrite a "
+        "frozen region (≈ 37 s of new input at 48 kHz), recording pauses "
+        "until the playhead returns towards live.",
+        "The voice pool is 40 grains; at audio-rate Rates with long Sizes "
+        "(or many taps) extra spawns are dropped rather than stolen — turn "
+        "Link on to keep density sane.",
+        "Working title, untested in Live when written. Knobs inert but audio "
+        "passes = gen~ failed to compile/allocate; plays briefly then dies = "
+        "a NaN. Report which.",
+    ],
+    "rebuild": [
+        "`python3 build_reverie.py` in the device folder regenerates "
+        "`Reverie.amxd` (+ `.maxpat` / `.genexpr`) with static genexpr checks "
+        "and patcher/bank asserts; `python3 sim_reverie.py` transpiles the "
+        "real engine to Python and runs 13 suites / 151 checks.",
+        "No external files, so no freeze step. gen~ memory ≈ 26 MB (2^21 "
+        "capture ring, 40 voices, 8 tap queues × 256, per-voice comb "
+        "buffers).",
+        "Lessons: a genexpr→Python transpiler in the sim tests the shipped "
+        "code rather than a re-implementation; store positions as ring "
+        "indices so float32 Data keeps them exact; a playhead clamp must sit "
+        "deeper than the recording backstop or the backstop never fires.",
+    ],
+})
