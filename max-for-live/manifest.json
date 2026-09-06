@@ -316,7 +316,7 @@
    "name": "Reverie",
    "tagline": "A Lucid-style granular playground: grains that stay in key (pitch tracking, scale retune, chords and arps, tuned filters, scale-locked grain delays) and in time (grid retriggers, synced rates, timeline-locked scrub and LFOs).",
    "url": "devices/reverie.html",
-   "image": null,
+   "image": "images/reverie.png",
    "facets": {
     "kind": "Audio Effect",
     "author": "Claude"
