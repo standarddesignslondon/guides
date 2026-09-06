@@ -12,35 +12,44 @@
 <header class="chapter">
   <p class="ch-num">26</p>
   <h1>reverie</h1>
-  <p class="ch-sub">A Lucid-style granular playground: grains that stay in key (pitch tracking, scale retune, chords and arps, tuned filters, scale-locked grain delays) and in time (grid retriggers, synced rates, timeline-locked scrub and LFOs).</p>
+  <p class="ch-sub">A Lucid-style granular playground: grains that stay in key (pitch tracking, scale retune, chords and arps, tuned filters, scale-locked grain delays) and in time (grid retriggers, synced rates, timeline-locked scrub and LFOs), with a wireframe face and a pop-out panel.</p>
 </header>
-<figure class="shot"><div class="shot-frame"><img src="../images/reverie.png" alt="Reverie"></div><figcaption>reverie</figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="../images/reverie-00.png" alt="Reverie"></div><figcaption>reverie</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-01.png" alt="Face — Grain tab, with the grain window shape"></div><figcaption>face — grain tab, with the grain window shape</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-02.png" alt="Face — Play tab"></div><figcaption>face — play tab</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-03.png" alt="Face — Pitch tab"></div><figcaption>face — pitch tab</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-04.png" alt="Face — Filter tab, with the per-grain filter response"></div><figcaption>face — filter tab, with the per-grain filter response</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-05.png" alt="Face — Image / Out tab, with the stereo field"></div><figcaption>face — image / out tab, with the stereo field</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-06.png" alt="Face — Delay tab, with the tap ladder"></div><figcaption>face — delay tab, with the tap ladder</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-07.png" alt="Face — Mod tab"></div><figcaption>face — mod tab</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-08.png" alt="Face — Scope / Key tab: live LFOs, envelope, mini waveform, keyboard"></div><figcaption>face — scope / key tab: live lfos, envelope, mini waveform, keyboard</figcaption></figure>
 <section class="block" id="about">
   <div class="block-label"><span class="bl-num">26.0</span><h2>about</h2></div>
   <div class="block-body">
-    <p class="lead">Built overnight from the Minimal Audio Lucid manual. A 43-second capture ring records everything; a playhead moves through it (<b>Stretch</b> — slowed, reversed or frozen from each Grid, Transient or Manual retrigger — or <b>Scrub</b>, placed by hand or by an LFO); a scheduler fires grains at a free, note-synced or scale-note rate. Every grain gets its own pitch (detected, retuned to the scale, transposed in degrees, chorded or arpeggiated), its own filter (SVF, tuned comb or reducer), its own pan position from a pattern, and up to eight delayed copies shifted by a pattern that stays in key. Two LFOs and an envelope follower reach sixteen engine targets. Working title.</p>
-    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v0.1 — awaiting first test</dd></div><div class="fact"><dt>folder</dt><dd>Reverie Device</dd></div></dl>
+    <p class="lead">Built overnight from the Minimal Audio Lucid manual. A 43-second capture ring records everything; a playhead moves through it (<b>Stretch</b> — slowed, reversed or frozen from each Grid, Transient or Manual retrigger — or <b>Scrub</b>, placed by hand or by an LFO); a scheduler fires grains at a free, note-synced or scale-note rate. Every grain gets its own pitch (detected, retuned to the scale, transposed in degrees, chorded or arpeggiated), its own filter (SVF, tuned comb or reducer), its own pan position from a pattern, and up to eight delayed copies shifted by a pattern that stays in key. Two LFOs and an envelope follower reach sixteen engine targets. The <b>face</b> in Live&#x27;s device row is a tabbed window onto one <b>panel</b> of controls; <b>VIEW</b> opens that panel as a floating window with the waveform, the grains, the scopes and the keyboard. Working title.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v0.2 — face + panel</dd></div><div class="fact"><dt>folder</dt><dd>Reverie Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
   <div class="block-label"><span class="bl-num">26.1</span>
   <h2>quick start</h2></div>
   <div class="block-body"><ol class="steps">
-<li><span class="step-n">01</span><span class="step-t">Drop <code>Reverie.amxd</code> on a monophonic source. At defaults it is the input with a granular shimmer, ~30 ms late; the LED is grey and the PLAYHEAD bar sits at the right (live).</span></li>
-<li><span class="step-n">02</span><span class="step-t">Set <b>Trigger</b> Manual and <b>Stretch</b> 100: the last moment freezes. Raise <b>Blur</b> to soften the ring; flick <b>Activate</b> off and on to grab a new moment; <b>Reverse</b> walks it backwards.</span></li>
-<li><span class="step-n">03</span><span class="step-t"><b>Pitch Mode</b> Scale, choose <b>Root</b> and <b>Scale</b>, then turn <b>Pitch</b> — it counts in scale degrees, so +2 is a third and +4 a fifth, always in tune. <b>Chord</b> = Chord stacks Int 1–3; Arp cycles them one grain at a time (use a Sync rate for tempo-locked arps).</span></li>
-<li><span class="step-n">04</span><span class="step-t"><b>Taps</b> 4, <b>Pattern</b> Ramp, <b>Shift</b> 7 in Scale mode, <b>Space</b> 60: an in-key shimmer delay. Feedback repeats the last tap without re-pitching, exactly as the manual describes.</span></li>
-<li><span class="step-n">05</span><span class="step-t"><b>Play Mode</b> Scrub, <b>Loop Len</b> 1 bar, <b>Scrub Mode</b> 1/16, LFO 1 → Scrub with Sync 1 bar and Shape S&amp;H: the last bar resequences itself in time.</span></li>
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Reverie.amxd</code> on a monophonic source. At defaults it is the input with a granular shimmer, ~30 ms late; the panel header reads LIVE and the waveform&#x27;s red playhead sits at the right edge.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Press <b>VIEW</b> for the panel. The waveform strip shows the current Loop Length: red playhead, pale red spray range, and every grain as a bar at its read position — green forward, red reverse, cyan delay taps — fading with its window.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Play tab: <b>Trigger</b> Manual and <b>Stretch</b> 100 freezes the last moment. Raise <b>Blur</b> to soften the ring; flick <b>Activate</b> off and on to grab a new moment; <b>Reverse</b> walks it backwards.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Pitch tab: <b>Pitch Mode</b> Scale, choose <b>Root</b> and <b>Scale</b>, then turn <b>Pitch</b> — it counts in scale degrees, so +2 is a third and +4 a fifth, always in tune. Watch the Scope tab&#x27;s keyboard: red dot = the note being heard, green dot = the note the grains land on. <b>Chord</b> = Chord stacks Int 1–3; Arp cycles them one grain at a time (use a Sync rate for tempo-locked arps).</span></li>
+<li><span class="step-n">05</span><span class="step-t">Delay tab: <b>Taps</b> 4, <b>Pattern</b> Ramp, <b>Shift</b> 7 in Scale mode, <b>Space</b> 60: an in-key shimmer delay; the tap ladder shows the pitch of each tap and the fading feedback repeats. Feedback repeats the last tap without re-pitching, as the Lucid manual describes.</span></li>
+<li><span class="step-n">06</span><span class="step-t">Play tab: <b>Play Mode</b> Scrub, <b>Loop Len</b> 1 bar, <b>Scrub Mode</b> 1/16; Mod tab: LFO 1 → Scrub with Sync 1 bar and Shape S&amp;H: the last bar resequences itself in time.</span></li>
 </ol></div>
 </section>
 <section class="block" id="controls">
   <div class="block-label"><span class="bl-num">26.2</span>
   <h2>controls</h2></div>
-  <div class="block-body"><h3 class="sub">grain</h3>
+  <div class="block-body"><h3 class="sub">face and panel</h3>
+<p class="lead">One set of controls, two views. The face&#x27;s tab row scrolls a 612 px window across the panel; VIEW opens the whole panel as a floating window (it stays floating in full-screen Live). Dials are real Live parameters repainted as wireframe — automation, MIDI mapping, Push and undo are untouched.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Header</dt><dd>Key (Root + Scale), IN = the note the tracker hears, GRAIN = the note the last grain was retuned and transposed to, state (LIVE / STRETCH xN / FROZEN), Loop Length and tempo, HOLD flag, in/out meters.</dd></div>
+<div class="ctl-row"><dt>Waveform strip</dt><dd>The current Loop Length, oldest on the left, live on the right, with a beat/bar grid. Red line = playhead; pale red band = Spray reach; bars = grains at their read positions (green forward, red reverse, cyan delay taps), height and opacity = the grain&#x27;s window at that instant.</dd></div>
+<div class="ctl-row"><dt>Mini displays</dt><dd>Grain: the current window shape (Shape/Skew). Filter: the per-grain filter&#x27;s response (SVF magnitude, comb peaks, reducer brick wall; the tuned note when F Scale is on). Image: the stereo field — every grain at its pan, the Pan/Spread band, Width. Delay: the tap ladder — each tap&#x27;s pitch offset from the pattern, feedback repeats fading.</dd></div>
+<div class="ctl-row"><dt>Scope / Key</dt><dd>LFO 1 (green) and LFO 2 (cyan) live outputs with shape, rate and target; envelope follower bar; mini waveform; a two-octave keyboard with the scale&#x27;s notes shaded, the root dotted, the tracked note (red) and the grain target note (green). The octave shifts to keep the tracked note in view.</dd></div>
+</dl>
+<h3 class="sub">grain</h3>
 <dl class="ctl">
 <div class="ctl-row"><dt>Rate Mode / Rate ms / Rate Div / Rate Note<span class="rng">Free · Sync · Scale</span></dt><dd>Free = ms between grains (audio rate below ~20 ms); Sync = a note division from Live&#x27;s tempo (straight, triplet, dotted); Scale = the frequency of a scale note, degrees up from C1, so the engine is a tuned oscillator with the input as waveform.</dd></div>
 <div class="ctl-row"><dt>Size / Link<span class="rng">1–2000 ms · ms/Ratio</span></dt><dd>Grain length. Link makes Size a ratio of the rate (120 = 1.2× overlap) so density holds while Rate moves.</dd></div>
-<div class="ctl-row"><dt>Shape / Skew<span class="rng">-100…100</span></dt><dd>Window: sharp (−) to plateau (+); fast attack (−) to slow swell (+).</dd></div>
+<div class="ctl-row"><dt>Shape / Skew<span class="rng">-100…100</span></dt><dd>Window: sharp (−) to plateau (+); fast attack (−) to slow swell (+). The Grain tab draws the result.</dd></div>
 <div class="ctl-row"><dt>Jitter<span class="rng">0–100</span></dt><dd>Random grain timing.</dd></div>
 </dl>
 <h3 class="sub">playback</h3>
@@ -66,11 +75,12 @@
 <div class="ctl-row"><dt>Mod Depth / Mod Rate<span class="rng">±100 · 0–16</span></dt><dd>Cutoff sweep of ±3 octaves per grain, Rate cycles per grain; Rate 0 = a random offset per grain instead (the manual&#x27;s Random button).</dd></div>
 <div class="ctl-row"><dt>Reso / Drive / Morph / F Mix<span class="rng">0–100</span></dt><dd>Resonance (comb feedback), per-grain soft clip, morph position, filtered/dry per grain.</dd></div>
 </dl>
-<h3 class="sub">imager</h3>
+<h3 class="sub">imager / out</h3>
 <dl class="ctl">
 <div class="ctl-row"><dt>Image<span class="rng">Alternate · Pendulum · Helix · Bloom · Scatter · Drift</span></dt><dd>Pan pattern for successive grains.</dd></div>
 <div class="ctl-row"><dt>Spread / Pan / Smooth<span class="rng">0–100 · ±100 · button</span></dt><dd>Pattern width, centre (per grain), and glide to the next position over the grain&#x27;s life.</dd></div>
 <div class="ctl-row"><dt>Width / Dimension<span class="rng">0–200 · 0–100</span></dt><dd>Mid/side width of the wet signal; modulated short-delay stereo expander.</dd></div>
+<div class="ctl-row"><dt>Dry/Wet / Gain / Limiter<span class="rng">0–100 · ±dB · button</span></dt><dd>Equal-power mix, output trim, fast peak limiter.</dd></div>
 </dl>
 <h3 class="sub">grain delay — every tap is a grain</h3>
 <dl class="ctl">
@@ -81,9 +91,8 @@
 </dl>
 <h3 class="sub">modulation</h3>
 <dl class="ctl">
-<div class="ctl-row"><dt>LFO 1 / LFO 2<span class="rng">Target · Rate · Sync · Shape · Depth</span></dt><dd>Sixteen targets (Pitch, Cutoff, Scrub, Spray, Size, Rate, Pan, Stretch, Morph, Dly Time, Level, Reso, Detune, Spread, Shift). Sync locks the phase to the song position (8 bars…1/16); shapes Sine, Tri, Ramp, Square, S&amp;H, Drift.</dd></div>
+<div class="ctl-row"><dt>LFO 1 / LFO 2<span class="rng">Target · Rate · Sync · Shape · Depth</span></dt><dd>Sixteen targets (Pitch, Cutoff, Scrub, Spray, Size, Rate, Pan, Stretch, Morph, Dly Time, Level, Reso, Detune, Spread, Shift). Sync locks the phase to the song position (8 bars…1/16); shapes Sine, Tri, Ramp, Square, S&amp;H, Drift. Targets that need a section on (Cutoff/Reso/Morph need a Filter mode, Scrub needs Scrub mode, Dly Time/Shift need Taps) are silent otherwise; bipolar LFOs clamp at a dial&#x27;s floor.</dd></div>
 <div class="ctl-row"><dt>Env<span class="rng">Target · Attack · Release · Depth</span></dt><dd>Envelope follower of the input, 0 at −48 dB to 1 at 0 dB.</dd></div>
-<div class="ctl-row"><dt>Dry/Wet / Gain / Limiter<span class="rng">0–100 · ±dB · button</span></dt><dd>Equal-power mix, output trim, fast peak limiter.</dd></div>
 </dl></div>
 </section>
 <section class="block" id="push-3">
@@ -264,7 +273,7 @@
 <section class="block" id="workflow">
   <div class="block-label"><span class="bl-num">26.4</span>
   <h2>workflow</h2></div>
-  <div class="block-body"><h3 class="sub">freeze pad</h3><p>Trigger Manual, Stretch 100, Size 300, Blur 60, Spray 20, Chord = Chord with Voices 3. Each Activate off/on grabs a new moment; Reverse in Manual also regrabs.</p>
+  <div class="block-body"><h3 class="sub">freeze pad</h3><p>Trigger Manual, Stretch 100, Size 300, Blur 60, Spray 20, Chord = Chord with Voices 3. Each Activate off/on grabs a new moment; Reverse in Manual also regrabs. Watch the waveform: the playhead stops and the grains cluster on it.</p>
 <h3 class="sub">tuned oscillator</h3><p>Rate Mode Scale, Rate Note 14, Link on, Size 200, Pitch Mode Scale. A single line in comes out as the scale note, with the input&#x27;s timbre.</p>
 <h3 class="sub">rhythmic gate</h3><p>Rate Mode Sync 1/16, Size ms 40, Shape −60, Trigger Grid, Retrig 1 bar, Stretch 4: the bar plays back at quarter speed as a 16th-note gate, restarting every bar.</p>
 <h3 class="sub">grain delay only</h3><p>Dly Mix 100 and Dry/Wet 50 turns the device into a dedicated in-key grain delay, per the manual&#x27;s tip.</p></div>
@@ -272,21 +281,22 @@
 <section class="block" id="gotchas">
   <div class="block-label"><span class="bl-num">26.5</span>
   <h2>gotchas</h2></div>
-  <div class="block-body"><ul class="gotchas"><li>Grains are read ~32 ms behind the live input, plus the grain length when a grain is longer than that (a forward grain can never read the future). Live does not compensate M4L latency; treat it like Lucid&#x27;s own 28 ms.</li><li>Pitch tracking is monophonic. Chords and noise report no pitch, so Scale mode then transposes in degrees from the Root — musical, but no retune.</li><li>A freeze is protected: if the capture ring is about to overwrite a frozen region (≈ 37 s of new input at 48 kHz), recording pauses until the playhead returns towards live.</li><li>The voice pool is 40 grains; at audio-rate Rates with long Sizes (or many taps) extra spawns are dropped rather than stolen — turn Link on to keep density sane.</li><li>Working title, untested in Live when written. Knobs inert but audio passes = gen~ failed to compile/allocate; plays briefly then dies = a NaN. Report which.</li></ul></div>
+  <div class="block-body"><ul class="gotchas"><li>Grains are read ~32 ms behind the live input, plus the grain length when a grain is longer than that (a forward grain can never read the future). Treat it like Lucid&#x27;s own 28 ms.</li><li>Pitch tracking is monophonic. Chords and noise report no pitch (no red dot on the keyboard), so Scale mode then transposes in degrees from the Root — musical, but no retune.</li><li>A freeze is protected: if the capture ring is about to overwrite a frozen region (≈ 37 s of new input at 48 kHz), recording pauses until the playhead returns towards live.</li><li>The voice pool is 40 grains; at audio-rate Rates with long Sizes (or many taps) extra spawns are dropped rather than stolen — turn Link on to keep density sane.</li><li>The panel&#x27;s header status line is a diagnostic: it reads &#x27;engine running, display buffer not connected&#x27; or &#x27;no signal from the engine&#x27; if the displays ever go blank — say which.</li><li>Working title.</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
   <div class="block-label"><span class="bl-num">26.6</span>
   <h2>rebuilding</h2></div>
-  <div class="block-body"><p><code>python3 build_reverie.py</code> in the device folder regenerates <code>Reverie.amxd</code> (+ <code>.maxpat</code> / <code>.genexpr</code>) with static genexpr checks and patcher/bank asserts; <code>python3 sim_reverie.py</code> transpiles the real engine to Python and runs 13 suites / 151 checks.</p>
-<p>No external files, so no freeze step. gen~ memory ≈ 26 MB (2^21 capture ring, 40 voices, 8 tap queues × 256, per-voice comb buffers).</p>
-<p>Lessons: a genexpr→Python transpiler in the sim tests the shipped code rather than a re-implementation; store positions as ring indices so float32 Data keeps them exact; a playhead clamp must sit deeper than the recording backstop or the backstop never fires.</p></div>
+  <div class="block-body"><p><code>python3 build_reverie.py</code> in the device folder regenerates <code>Reverie.amxd</code> (+ <code>.maxpat</code> / <code>.genexpr</code>, and the two JavaScript files from <code>js_templates.py</code>) with static genexpr checks and patcher/bank asserts; the device is frozen at build with the painter and canvas scripts embedded — no Max freeze step.</p>
+<p><code>python3 sim_reverie.py</code> transpiles the real engine to Python and runs 13 suites / 151 checks; <code>node test_ui_node.js</code> runs the painter and canvases under mocks; <code>node render_mock.js</code> draws the panel to an SVG for a look before Live does.</p>
+<p>UI architecture: one embedded bpatcher panel holds every control; the face is a viewport (tab → bpatcher offset — the offset is the translation applied to the content, so tile (x, y) needs (−x, −y)); VIEW → <code>thispatcher front</code> with floating window flags. <code>live.dial</code> / <code>live.toggle</code> keep native behaviour and are repainted with <code>jspainterfile</code> (JS Painter). gen~ streams a 1024-slot display frame through <code>poke~</code> into a <code>buffer~</code> whose name the head canvas coins at load; a 33 ms metro drives the v8ui canvases.</p>
+<p>Lessons: a genexpr→Python transpiler tests the shipped code; store positions as ring indices so float32 Data keeps them exact; a playhead clamp must sit deeper than the recording backstop; never read parameter metadata via getattr in a painter — inject a table keyed by scripting name at build time.</p></div>
 </section>
 <nav class="chapnav"><a class="cn prev" href="remainder.html"><span>previous</span>remainder</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
 </main>
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-09-06</span>
+  <div class="sf-col"><span>generated 2026-09-07</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

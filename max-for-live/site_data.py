@@ -3206,12 +3206,24 @@ ITEMS.append({
     "name": "Reverie",
     "kind": "Audio Effect",
     "author": "Claude",
-    "status": "v0.1 — awaiting first test",
+    "status": "v0.2 — face + panel",
     "folder": "Reverie Device",
+    "image_aliases": ["reverie-00"],
+    "extra_images": [
+        {"file": "reverie-01", "caption": "Face — Grain tab, with the grain window shape"},
+        {"file": "reverie-02", "caption": "Face — Play tab"},
+        {"file": "reverie-03", "caption": "Face — Pitch tab"},
+        {"file": "reverie-04", "caption": "Face — Filter tab, with the per-grain filter response"},
+        {"file": "reverie-05", "caption": "Face — Image / Out tab, with the stereo field"},
+        {"file": "reverie-06", "caption": "Face — Delay tab, with the tap ladder"},
+        {"file": "reverie-07", "caption": "Face — Mod tab"},
+        {"file": "reverie-08", "caption": "Face — Scope / Key tab: live LFOs, envelope, mini waveform, keyboard"},
+    ],
     "tagline": "A Lucid-style granular playground: grains that stay in key "
                "(pitch tracking, scale retune, chords and arps, tuned "
                "filters, scale-locked grain delays) and in time (grid "
-               "retriggers, synced rates, timeline-locked scrub and LFOs).",
+               "retriggers, synced rates, timeline-locked scrub and LFOs), "
+               "with a wireframe face and a pop-out panel.",
     "blurb": "Built overnight from the Minimal Audio Lucid manual. A 43-second "
              "capture ring records everything; a playhead moves through it "
              "(**Stretch** — slowed, reversed or frozen from each Grid, "
@@ -3222,26 +3234,70 @@ ITEMS.append({
              "arpeggiated), its own filter (SVF, tuned comb or reducer), its "
              "own pan position from a pattern, and up to eight delayed copies "
              "shifted by a pattern that stays in key. Two LFOs and an "
-             "envelope follower reach sixteen engine targets. Working title.",
+             "envelope follower reach sixteen engine targets. The **face** in "
+             "Live's device row is a tabbed window onto one **panel** of "
+             "controls; **VIEW** opens that panel as a floating window with "
+             "the waveform, the grains, the scopes and the keyboard. Working "
+             "title.",
     "quickstart": [
         "Drop `Reverie.amxd` on a monophonic source. At defaults it is the "
-        "input with a granular shimmer, ~30 ms late; the LED is grey and the "
-        "PLAYHEAD bar sits at the right (live).",
-        "Set **Trigger** Manual and **Stretch** 100: the last moment freezes. "
-        "Raise **Blur** to soften the ring; flick **Activate** off and on to "
-        "grab a new moment; **Reverse** walks it backwards.",
-        "**Pitch Mode** Scale, choose **Root** and **Scale**, then turn "
-        "**Pitch** — it counts in scale degrees, so +2 is a third and +4 a "
-        "fifth, always in tune. **Chord** = Chord stacks Int 1–3; Arp cycles "
-        "them one grain at a time (use a Sync rate for tempo-locked arps).",
-        "**Taps** 4, **Pattern** Ramp, **Shift** 7 in Scale mode, **Space** "
-        "60: an in-key shimmer delay. Feedback repeats the last tap without "
-        "re-pitching, exactly as the manual describes.",
-        "**Play Mode** Scrub, **Loop Len** 1 bar, **Scrub Mode** 1/16, LFO 1 "
-        "→ Scrub with Sync 1 bar and Shape S&H: the last bar resequences "
-        "itself in time.",
+        "input with a granular shimmer, ~30 ms late; the panel header reads "
+        "LIVE and the waveform's red playhead sits at the right edge.",
+        "Press **VIEW** for the panel. The waveform strip shows the current "
+        "Loop Length: red playhead, pale red spray range, and every grain as "
+        "a bar at its read position — green forward, red reverse, cyan delay "
+        "taps — fading with its window.",
+        "Play tab: **Trigger** Manual and **Stretch** 100 freezes the last "
+        "moment. Raise **Blur** to soften the ring; flick **Activate** off and "
+        "on to grab a new moment; **Reverse** walks it backwards.",
+        "Pitch tab: **Pitch Mode** Scale, choose **Root** and **Scale**, then "
+        "turn **Pitch** — it counts in scale degrees, so +2 is a third and +4 "
+        "a fifth, always in tune. Watch the Scope tab's keyboard: red dot = "
+        "the note being heard, green dot = the note the grains land on. "
+        "**Chord** = Chord stacks Int 1–3; Arp cycles them one grain at a "
+        "time (use a Sync rate for tempo-locked arps).",
+        "Delay tab: **Taps** 4, **Pattern** Ramp, **Shift** 7 in Scale mode, "
+        "**Space** 60: an in-key shimmer delay; the tap ladder shows the "
+        "pitch of each tap and the fading feedback repeats. Feedback repeats "
+        "the last tap without re-pitching, as the Lucid manual describes.",
+        "Play tab: **Play Mode** Scrub, **Loop Len** 1 bar, **Scrub Mode** "
+        "1/16; Mod tab: LFO 1 → Scrub with Sync 1 bar and Shape S&H: the "
+        "last bar resequences itself in time.",
     ],
     "controls": [
+        {"title": "Face and panel",
+         "intro": "One set of controls, two views. The face's tab row scrolls a "
+                  "612 px window across the panel; VIEW opens the whole panel "
+                  "as a floating window (it stays floating in full-screen "
+                  "Live). Dials are real Live parameters repainted as "
+                  "wireframe — automation, MIDI mapping, Push and undo are "
+                  "untouched.",
+         "rows": [
+             ["Header", "",
+              "Key (Root + Scale), IN = the note the tracker hears, GRAIN = "
+              "the note the last grain was retuned and transposed to, state "
+              "(LIVE / STRETCH xN / FROZEN), Loop Length and tempo, HOLD "
+              "flag, in/out meters."],
+             ["Waveform strip", "",
+              "The current Loop Length, oldest on the left, live on the "
+              "right, with a beat/bar grid. Red line = playhead; pale red band "
+              "= Spray reach; bars = grains at their read positions (green "
+              "forward, red reverse, cyan delay taps), height and opacity = "
+              "the grain's window at that instant."],
+             ["Mini displays", "",
+              "Grain: the current window shape (Shape/Skew). Filter: the "
+              "per-grain filter's response (SVF magnitude, comb peaks, "
+              "reducer brick wall; the tuned note when F Scale is on). "
+              "Image: the stereo field — every grain at its pan, the "
+              "Pan/Spread band, Width. Delay: the tap ladder — each tap's "
+              "pitch offset from the pattern, feedback repeats fading."],
+             ["Scope / Key", "",
+              "LFO 1 (green) and LFO 2 (cyan) live outputs with shape, rate "
+              "and target; envelope follower bar; mini waveform; a two-octave "
+              "keyboard with the scale's notes shaded, the root dotted, the "
+              "tracked note (red) and the grain target note (green). The "
+              "octave shifts to keep the tracked note in view."],
+         ]},
         {"title": "Grain",
          "rows": [
              ["Rate Mode / Rate ms / Rate Div / Rate Note",
@@ -3255,7 +3311,7 @@ ITEMS.append({
               "overlap) so density holds while Rate moves."],
              ["Shape / Skew", "-100…100",
               "Window: sharp (−) to plateau (+); fast attack (−) to slow swell "
-              "(+)."],
+              "(+). The Grain tab draws the result."],
              ["Jitter", "0–100", "Random grain timing."],
          ]},
         {"title": "Playback",
@@ -3314,7 +3370,7 @@ ITEMS.append({
               "Resonance (comb feedback), per-grain soft clip, morph "
               "position, filtered/dry per grain."],
          ]},
-        {"title": "Imager",
+        {"title": "Imager / Out",
          "rows": [
              ["Image", "Alternate · Pendulum · Helix · Bloom · Scatter · Drift",
               "Pan pattern for successive grains."],
@@ -3324,6 +3380,8 @@ ITEMS.append({
              ["Width / Dimension", "0–200 · 0–100",
               "Mid/side width of the wet signal; modulated short-delay stereo "
               "expander."],
+             ["Dry/Wet / Gain / Limiter", "0–100 · ±dB · button",
+              "Equal-power mix, output trim, fast peak limiter."],
          ]},
         {"title": "Grain delay — every tap is a grain",
          "rows": [
@@ -3346,11 +3404,12 @@ ITEMS.append({
               "Sixteen targets (Pitch, Cutoff, Scrub, Spray, Size, Rate, Pan, "
               "Stretch, Morph, Dly Time, Level, Reso, Detune, Spread, Shift). "
               "Sync locks the phase to the song position (8 bars…1/16); "
-              "shapes Sine, Tri, Ramp, Square, S&H, Drift."],
+              "shapes Sine, Tri, Ramp, Square, S&H, Drift. Targets that need "
+              "a section on (Cutoff/Reso/Morph need a Filter mode, Scrub "
+              "needs Scrub mode, Dly Time/Shift need Taps) are silent "
+              "otherwise; bipolar LFOs clamp at a dial's floor."],
              ["Env", "Target · Attack · Release · Depth",
               "Envelope follower of the input, 0 at −48 dB to 1 at 0 dB."],
-             ["Dry/Wet / Gain / Limiter", "0–100 · ±dB · button",
-              "Equal-power mix, output trim, fast peak limiter."],
          ]},
     ],
     "banks": [
@@ -3372,7 +3431,8 @@ ITEMS.append({
         {"title": "Freeze pad",
          "text": "Trigger Manual, Stretch 100, Size 300, Blur 60, Spray 20, "
                  "Chord = Chord with Voices 3. Each Activate off/on grabs a "
-                 "new moment; Reverse in Manual also regrabs."},
+                 "new moment; Reverse in Manual also regrabs. Watch the "
+                 "waveform: the playhead stops and the grains cluster on it."},
         {"title": "Tuned oscillator",
          "text": "Rate Mode Scale, Rate Note 14, Link on, Size 200, Pitch "
                  "Mode Scale. A single line in comes out as the scale note, "
@@ -3388,32 +3448,43 @@ ITEMS.append({
     "gotchas": [
         "Grains are read ~32 ms behind the live input, plus the grain length "
         "when a grain is longer than that (a forward grain can never read "
-        "the future). Live does not compensate M4L latency; treat it like "
-        "Lucid's own 28 ms.",
-        "Pitch tracking is monophonic. Chords and noise report no pitch, so "
-        "Scale mode then transposes in degrees from the Root — musical, but "
-        "no retune.",
+        "the future). Treat it like Lucid's own 28 ms.",
+        "Pitch tracking is monophonic. Chords and noise report no pitch (no "
+        "red dot on the keyboard), so Scale mode then transposes in degrees "
+        "from the Root — musical, but no retune.",
         "A freeze is protected: if the capture ring is about to overwrite a "
         "frozen region (≈ 37 s of new input at 48 kHz), recording pauses "
         "until the playhead returns towards live.",
         "The voice pool is 40 grains; at audio-rate Rates with long Sizes "
         "(or many taps) extra spawns are dropped rather than stolen — turn "
         "Link on to keep density sane.",
-        "Working title, untested in Live when written. Knobs inert but audio "
-        "passes = gen~ failed to compile/allocate; plays briefly then dies = "
-        "a NaN. Report which.",
+        "The panel's header status line is a diagnostic: it reads 'engine "
+        "running, display buffer not connected' or 'no signal from the "
+        "engine' if the displays ever go blank — say which.",
+        "Working title.",
     ],
     "rebuild": [
         "`python3 build_reverie.py` in the device folder regenerates "
-        "`Reverie.amxd` (+ `.maxpat` / `.genexpr`) with static genexpr checks "
-        "and patcher/bank asserts; `python3 sim_reverie.py` transpiles the "
-        "real engine to Python and runs 13 suites / 151 checks.",
-        "No external files, so no freeze step. gen~ memory ≈ 26 MB (2^21 "
-        "capture ring, 40 voices, 8 tap queues × 256, per-voice comb "
-        "buffers).",
-        "Lessons: a genexpr→Python transpiler in the sim tests the shipped "
-        "code rather than a re-implementation; store positions as ring "
-        "indices so float32 Data keeps them exact; a playhead clamp must sit "
-        "deeper than the recording backstop or the backstop never fires.",
+        "`Reverie.amxd` (+ `.maxpat` / `.genexpr`, and the two JavaScript "
+        "files from `js_templates.py`) with static genexpr checks and "
+        "patcher/bank asserts; the device is frozen at build with the "
+        "painter and canvas scripts embedded — no Max freeze step.",
+        "`python3 sim_reverie.py` transpiles the real engine to Python and "
+        "runs 13 suites / 151 checks; `node test_ui_node.js` runs the "
+        "painter and canvases under mocks; `node render_mock.js` draws the "
+        "panel to an SVG for a look before Live does.",
+        "UI architecture: one embedded bpatcher panel holds every control; "
+        "the face is a viewport (tab → bpatcher offset — the offset is the "
+        "translation applied to the content, so tile (x, y) needs (−x, −y)); "
+        "VIEW → `thispatcher front` with floating window flags. `live.dial` "
+        "/ `live.toggle` keep native behaviour and are repainted with "
+        "`jspainterfile` (JS Painter). gen~ streams a 1024-slot display "
+        "frame through `poke~` into a `buffer~` whose name the head canvas "
+        "coins at load; a 33 ms metro drives the v8ui canvases.",
+        "Lessons: a genexpr→Python transpiler tests the shipped code; store "
+        "positions as ring indices so float32 Data keeps them exact; a "
+        "playhead clamp must sit deeper than the recording backstop; never "
+        "read parameter metadata via getattr in a painter — inject a table "
+        "keyed by scripting name at build time.",
     ],
 })
