@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>remainder — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">25</p>
+  <h1>remainder</h1>
+  <p class="ch-sub">Gives any sound a disintegrating tail: captures the moment before it dies, then plays it back stretched, grainy and rotting — by tape, by bits, by fragmentation, by spectral erosion, by rust — until nothing is left.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/remainder.png" alt="Remainder"></div><figcaption>remainder</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">25.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">A rolling buffer records everything. When the input falls below <b>Thresh</b> (or you press <b>Fire</b>) the last <b>Cap</b> window before the crossing is latched, normalised, and played back as a granular tail for <b>Len</b>. A progress value runs 0 → 1 over the tail and every destruction process reads it, so they all arrive at silence together. Five processes mix by amount — <b>Tape</b>, <b>Bits</b>, <b>Shatter</b>, <b>Erode</b>, <b>Rust</b> — and <b>Chaos</b> rerolls their balance on every trigger. The dry signal passes untouched (optionally ducked); the tail is added on top. Cut on retrigger; <b>Freeze</b> suspends a tail mid-rot.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v1.1</dd></div><div class="fact"><dt>folder</dt><dd>Remainder Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">25.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Remainder.amxd</code> on a track with clear note endings — a plucked synth, piano, a vocal phrase.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Play a note and let it stop. The light goes green while the note plays (armed), then red-orange as the tail runs and the bar fills.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Set <b>Stretch</b> 0 for a looping tape-loop tail or 100 to smear the capture once across the whole tail; <b>Len</b> 8–10 s shows the rot best.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Raise one ROT dial at a time to learn its flavour, then stack them. Add <b>Chaos</b> so no two tails come out alike.</span></li>
+<li><span class="step-n">05</span><span class="step-t"><b>Fire</b> grabs a capture on demand (any mode); <b>Freeze</b> holds the tail where it is — grains keep spawning, so it becomes a frozen texture.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">25.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">trigger</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Mode<span class="rng">Auto / Manual</span></dt><dd>Auto fires from the level; Manual only from Fire (Fire also works in Auto).</dd></div>
+<div class="ctl-row"><dt>Thresh<span class="rng">-70 - 0 dB</span></dt><dd>Level the input must fall below. Re-arms only once the input rises 6 dB above it, so decaying notes and tremolo don&#x27;t re-fire.</dd></div>
+<div class="ctl-row"><dt>Hold<span class="rng">5 - 500 ms</span></dt><dd>How long the level must stay below Thresh before firing. The capture ends at the crossing, not the fire, so Hold never eats the capture.</dd></div>
+<div class="ctl-row"><dt>Fire<span class="rng">button</span></dt><dd>Momentary: capture and start a tail now. Cuts a running tail (7 ms fade).</dd></div>
+</dl>
+<h3 class="sub">capture + tail</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Sync<span class="rng">ms / Beats</span></dt><dd>Which pair of lengths is used: Cap ms + Len ms, or Cap Beats + Len Beats (bar = 4 beats).</dd></div>
+<div class="ctl-row"><dt>Cap ms / Cap Beats<span class="rng">10 ms - 8 s · 1/16 - 4 bars</span></dt><dd>How much audio before the crossing is captured. It is peak-normalised to -3 dB (up to +40 dB makeup), so the quiet tail-end of a note comes back at full level.</dd></div>
+<div class="ctl-row"><dt>Len ms / Len Beats<span class="rng">100 ms - 60 s · 1/4 - 32 bars</span></dt><dd>How long the tail runs. Everything reaches silence exactly here.</dd></div>
+<div class="ctl-row"><dt>Curve<span class="rng">0 - 100</span></dt><dd>Collapse shape: 0 falls away fast, 50 is an S-curve, 100 holds then falls.</dd></div>
+</dl>
+<h3 class="sub">read</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Stretch<span class="rng">0 - 100</span></dt><dd>0 loops the capture at pitch; 100 scans it exactly once over the tail. Pitch never changes with Stretch.</dd></div>
+<div class="ctl-row"><dt>Grain<span class="rng">5 - 500 ms</span></dt><dd>Grain length (50 % overlap, ±half a grain of position jitter).</dd></div>
+<div class="ctl-row"><dt>Width<span class="rng">0 - 100</span></dt><dd>Random per-grain stereo spread.</dd></div>
+</dl>
+<h3 class="sub">rot — each dial is an amount, scaled by progress so it starts subtle and ends total</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Tape<span class="rng">0 - 100</span></dt><dd>Analogue: hiss swells, wow and flutter deepen, a low-pass closes 18 kHz → 250 Hz, saturation drives to 8×, dropouts appear and are printed back into the capture (each loop pass more gutted than the last), and from 35 % of the tail the speed droops towards a tape-stop (a full stop at 100).</dd></div>
+<div class="ctl-row"><dt>Bits<span class="rng">0 - 100</span></dt><dd>Digital: sample rate falls to 1/48 of the session rate, bit depth from 16 bits to about 1.5, random bit-flip spikes, and stutter loops that seize 5–40 ms and repeat it 2–8 times.</dd></div>
+<div class="ctl-row"><dt>Shatter<span class="rng">0 - 100</span></dt><dd>Fragmentation: grains shrink to 2 % of Grain, gaps grow to ~300 ms and go irregular, fragments come from anywhere in the capture at random level and up to half play backwards, until only sparse shards remain.</dd></div>
+<div class="ctl-row"><dt>Erode<span class="rng">0 - 100</span></dt><dd>Spectral: each frequency bin has a fixed threshold; once the erosion passes it the bin is gone for good, so holes open and never heal; a flickering share drops per frame and survivors smear across frames — a thin whistle, then nothing. Adds 85 ms of latency to the tail only.</dd></div>
+<div class="ctl-row"><dt>Rust<span class="rng">0 - 100</span></dt><dd>Resonance: four inharmonic bar-like resonators (base pitch random per trigger) ring the tail, Q rising 2 → 40 and tunings drifting up to ±30 %, while the plain tail recedes.</dd></div>
+<div class="ctl-row"><dt>Chaos<span class="rng">0 - 100</span></dt><dd>Every trigger rolls new random numbers; Chaos sets how far they bend things: each Rot amount ±80 %, processes left at 0 can sneak in (up to 50 %, about half the time), Curve and Stretch ±40, Grain up to 4× either way. Dials stay live; 0 is exactly the dials.</dd></div>
+</dl>
+<h3 class="sub">out</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Tail<span class="rng">-60 - +12 dB</span></dt><dd>Tail level.</dd></div>
+<div class="ctl-row"><dt>Duck<span class="rng">0 - 24 dB</span></dt><dd>Dips the dry by up to this much while a tail plays.</dd></div>
+<div class="ctl-row"><dt>Dry<span class="rng">-60 - 0 dB</span></dt><dd>Dry level outright. -60 dB is a true mute — tails only.</dd></div>
+<div class="ctl-row"><dt>Freeze<span class="rng">button</span></dt><dd>Holds progress and the playhead; grains keep spawning at the frozen position.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">25.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">trigger</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Mode</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Thresh</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Hold</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Sync</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Cap ms</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Cap Beats</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Len ms</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Len Beats</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Fire</span>
+<span class="btn">Freeze</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">tail</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Curve</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Stretch</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Grain</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Width</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Tail</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Duck</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Dry</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Fire</span>
+<span class="btn">Freeze</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">rot</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Tape</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Bits</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Shatter</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Erode</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Rust</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Chaos</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Fire</span>
+<span class="btn">Freeze</span>
+</div>
+<p class="bank-note">Banks are baked into the device, so they are right on a fresh add, a set load and a reconnect alike.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">25.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">learn one process at a time</h3><p>Tape 0 and everything else 0 is the plain granular tail — you should clearly hear the note&#x27;s pitch. Then one Rot dial at 100, Len 8–10 s, Stretch 0, and listen to it fall apart pass by pass.</p>
+<h3 class="sub">chaos on a single process</h3><p>Tape 40, Chaos 100, then play the same note five times: every tail is different, and other processes creep in uninvited. That is the &#x27;interesting, random, unpredictable&#x27; release the device was built for.</p>
+<h3 class="sub">beats mode</h3><p>Sync = Beats with Cap 1 bar and Len 8 bars turns the last bar of a phrase into a tail that dies exactly on the downbeat two phrases later.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">25.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Nothing happens until the input has risen 6 dB <b>above</b> Thresh and then fallen below it — the device arms on loud, fires on quiet. On sustained pads use Fire.</li><li>The capture is normalised: a near-silent tail-end comes back at full level, noise floor and all. Lower Tail or raise Thresh if a quiet room is being amplified.</li><li>Erode adds 85 ms of latency to the tail (not the dry). The tail is a free-running effect, so this is inaudible as latency, but a tail arrives fractionally later than it did before stage 4.</li><li>Bars assume 4 beats. Capture is clamped to ~10.9 s at 48 kHz.</li><li>Retrigger cuts: a new capture always replaces the running tail. There is no layering by design.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">25.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_remainder.py</code> in the device folder regenerates <code>Remainder.amxd</code> (and <code>.maxpat</code> / <code>.genexpr</code> mirrors); <code>python3 sim_remainder.py</code> runs the 13-suite engine model.</p>
+<p>No external files, so no freeze step ever. gen~ Data ≈ 14.7 MB.</p>
+<p>Engine: capture ring → 64-samples/sample copy into a latched segment → 8-voice grain pool (Shatter) → normalise → Bits → Rust → Tape → collapse envelope → out 5/6 → patcher-level fft~/ifft~ WOLA chain (Erode, per-bin gen~) → summed with the dry.</p>
+<p>Lessons: <code>e</code> is Euler&#x27;s constant in genexpr (silent no-op on assignment) — never use single-letter names; anything that captures &#x27;just before it went quiet&#x27; must normalise the capture.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="regatta.html"><span>previous</span>regatta</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-09-06</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

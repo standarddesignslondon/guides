@@ -13,7 +13,7 @@
   <h1>max for live<br>devices</h1>
   <p class="hero-sub">user guide</p>
   <p class="hero-blurb">An aide-mémoire for the devices in the Max for Live folder — what every control does, how the Push 3 encoders are laid out, and the handful of things each one needs you to remember.</p>
-  <p class="hero-count">24 devices</p>
+  <p class="hero-count">25 devices</p>
 </header>
 <div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="Audio Effect">audio effect</button><button class="f" data-f="kind" data-v="Instrument">instrument</button><button class="f" data-f="kind" data-v="MIDI Effect">midi effect</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="ChatGPT">chatgpt</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
 <div class="index-list" id="grid">
@@ -185,6 +185,13 @@
   <span class="r-desc">A drum sequencer where the grid is a seed, not the score — a restless Copeland-style drummer performs your beat in an endless, never-repeating MIDI stream.</span>
   <span class="r-kind">midi effect</span>
   <span class="r-thumb"><img src="images/regatta.png" alt="" loading="lazy"></span>
+</a><a class="row" href="devices/remainder.html"
+   data-kind="Audio Effect" data-author="Claude" data-text="remainder gives any sound a disintegrating tail: captures the moment before it dies, then plays it back stretched, grainy and rotting — by tape, by bits, by fragmentation, by spectral erosion, by rust — until nothing is left. a rolling buffer records everything. when the input falls below **thresh** (or you press **fire**) the last **cap** window before the crossing is latched, normalised, and played back as a granular tail for **len**. a progress value runs 0 → 1 over the tail and every destruction process reads it, so they all arrive at silence together. five processes mix by amount — **tape**, **bits**, **shatter**, **erode**, **rust** — and **chaos** rerolls their balance on every trigger. the dry signal passes untouched (optionally ducked); the tail is added on top. cut on retrigger; **freeze** suspends a tail mid-rot. audio effect claude">
+  <span class="r-num">25</span>
+  <span class="r-name">remainder</span>
+  <span class="r-desc">Gives any sound a disintegrating tail: captures the moment before it dies, then plays it back stretched, grainy and rotting — by tape, by bits, by fragmentation, by spectral erosion, by rust — until nothing is left.</span>
+  <span class="r-kind">audio effect</span>
+  <span class="r-thumb"><img src="images/remainder.png" alt="" loading="lazy"></span>
 </a>
 </div>
 <p class="empty-msg" id="empty" hidden>nothing matches that.</p>
@@ -193,7 +200,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-30</span>
+  <div class="sf-col"><span>generated 2026-09-06</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

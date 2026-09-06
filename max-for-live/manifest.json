@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-08-30",
+ "generated": "2026-09-06",
  "items": [
   {
    "num": "01",
@@ -295,6 +295,18 @@
    "image": "images/regatta.png",
    "facets": {
     "kind": "MIDI Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "25",
+   "slug": "remainder",
+   "name": "Remainder",
+   "tagline": "Gives any sound a disintegrating tail: captures the moment before it dies, then plays it back stretched, grainy and rotting \u2014 by tape, by bits, by fragmentation, by spectral erosion, by rust \u2014 until nothing is left.",
+   "url": "devices/remainder.html",
+   "image": "images/remainder.png",
+   "facets": {
+    "kind": "Audio Effect",
     "author": "Claude"
    }
   }
