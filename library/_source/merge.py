@@ -1,5 +1,6 @@
 import json, glob, re, collections, unicodedata, os
-from collapse import collapse_plugins, own_prefix, guide_name, device_in_scope
+from collapse import (collapse_plugins, own_prefix, guide_name, device_in_scope,
+                      OWN_PREFIXES)
 HERE=os.path.dirname(os.path.abspath(__file__))
 os.chdir(HERE)
 
@@ -77,14 +78,26 @@ def cls(r):
     if '/User Library/' in q: return 'User Library'
     return 'Pack'
 
-# guide-page slug per built-here device (names live in collapse.py)
-OWN={'Cascade':'cascade','Microcosmos':'microcosmos','Pulsograph':'pulsograph',
-     'ORAM':'oram','The1958Machine':'the-1958-machine','Ondes Martenot':'ondes-martenot',
-     'SW Radio':'sw-radio','YT Sampler':'yt-sampler','Preset Scroll':'preset-scroll',
-     'Manual Tape':'manual-tape','Scene Placer':'scene-placer','False Memory':'false-memory',
-     'Tape Error':'tape-error','StripSilence':'strip-silence',
-     'Disintegration':'disintegration','Magnabelt':'magnabelt','Splice 1':'splice-tape-collage'}
-# the guide-page slug for each; the display name comes from collapse.py
+# guide-page slug per built-here device. Derived from the Max for Live guide's
+# own site_data.py rather than hand-listed here: the guide is the single source
+# for these devices, and a parallel list drifts out of step with
+# collapse.OWN_PREFIXES the moment a device is added to one and not the other.
+import importlib.util as _ilu
+_spec=_ilu.spec_from_file_location('m4l_site_data',
+        os.path.join(HERE,'..','..','max-for-live','site_data.py'))
+_sd=_ilu.module_from_spec(_spec); _spec.loader.exec_module(_sd)
+_by_title={i['name']: i['slug'] for i in _sd.ITEMS}
+OWN={}
+for _p in OWN_PREFIXES:
+    _t=guide_name(_p)
+    if _t not in _by_title:
+        raise SystemExit(
+            f"!! '{_p}' is in collapse.OWN_PREFIXES but has no chapter in the "
+            f"Max for Live guide (looked for the title {_t!r} in "
+            f"max-for-live/site_data.py). Add the guide page first, or take the "
+            f"prefix out of collapse.py.")
+    OWN[_p]=_by_title[_t]
+# the display name comes from collapse.py
 
 pack_of={}
 for r in M:

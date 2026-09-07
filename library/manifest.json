@@ -8,11 +8,20 @@
   "noun_plural": "entries",
   "page_dir": "."
  },
- "generated": "2026-08-21",
+ "generated": "2026-09-07",
  "in_all": false,
  "items": [
   {
    "num": "001",
+   "slug": "m-bad-mood",
+   "name": "Bad Mood",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "002",
    "slug": "m-cascade",
    "name": "Cascade",
    "tagline": "",
@@ -21,7 +30,16 @@
    "facets": {}
   },
   {
-   "num": "002",
+   "num": "003",
+   "slug": "m-composite",
+   "name": "Composite",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "004",
    "slug": "m-disintegration",
    "name": "Disintegration",
    "tagline": "",
@@ -30,7 +48,16 @@
    "facets": {}
   },
   {
-   "num": "003",
+   "num": "005",
+   "slug": "m-evening-star",
+   "name": "Evening Star",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "006",
    "slug": "m-false-memory",
    "name": "False Memory",
    "tagline": "",
@@ -39,7 +66,25 @@
    "facets": {}
   },
   {
-   "num": "004",
+   "num": "007",
+   "slug": "m-gen-loss",
+   "name": "Gen Loss",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "008",
+   "slug": "m-kurzwellen",
+   "name": "Kurzwellen",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "009",
    "slug": "m-magnabelt",
    "name": "Magnabelt",
    "tagline": "",
@@ -48,7 +93,7 @@
    "facets": {}
   },
   {
-   "num": "005",
+   "num": "010",
    "slug": "m-manual-tape",
    "name": "Manual Tape",
    "tagline": "",
@@ -57,7 +102,7 @@
    "facets": {}
   },
   {
-   "num": "006",
+   "num": "011",
    "slug": "m-microcosmos",
    "name": "Microcosmos",
    "tagline": "",
@@ -66,7 +111,16 @@
    "facets": {}
   },
   {
-   "num": "007",
+   "num": "012",
+   "slug": "m-mood",
+   "name": "Mood",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "013",
    "slug": "m-ondes-martenot",
    "name": "Ondes Martenot",
    "tagline": "",
@@ -75,7 +129,7 @@
    "facets": {}
   },
   {
-   "num": "008",
+   "num": "014",
    "slug": "m-oram",
    "name": "ORAM",
    "tagline": "",
@@ -84,7 +138,7 @@
    "facets": {}
   },
   {
-   "num": "009",
+   "num": "015",
    "slug": "m-preset-scroll",
    "name": "Preset Scroll",
    "tagline": "",
@@ -93,7 +147,7 @@
    "facets": {}
   },
   {
-   "num": "010",
+   "num": "016",
    "slug": "m-pulsograph",
    "name": "Pulsograph",
    "tagline": "",
@@ -102,7 +156,34 @@
    "facets": {}
   },
   {
-   "num": "011",
+   "num": "017",
+   "slug": "m-regatta",
+   "name": "Regatta",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "018",
+   "slug": "m-remainder",
+   "name": "Remainder",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "019",
+   "slug": "m-reverie",
+   "name": "Reverie",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "020",
    "slug": "m-scene-placer",
    "name": "Scene Placer",
    "tagline": "",
@@ -111,7 +192,7 @@
    "facets": {}
   },
   {
-   "num": "012",
+   "num": "021",
    "slug": "m-splice-1",
    "name": "Splice (Tape Collage)",
    "tagline": "",
@@ -120,7 +201,7 @@
    "facets": {}
   },
   {
-   "num": "013",
+   "num": "022",
    "slug": "m-stripsilence",
    "name": "Strip Silence",
    "tagline": "",
@@ -129,7 +210,7 @@
    "facets": {}
   },
   {
-   "num": "014",
+   "num": "023",
    "slug": "m-sw-radio",
    "name": "SW Radio",
    "tagline": "",
@@ -138,7 +219,7 @@
    "facets": {}
   },
   {
-   "num": "015",
+   "num": "024",
    "slug": "m-tape-error",
    "name": "Tape Error",
    "tagline": "",
@@ -147,7 +228,7 @@
    "facets": {}
   },
   {
-   "num": "016",
+   "num": "025",
    "slug": "m-the1958machine",
    "name": "The 1958 Machine",
    "tagline": "",
@@ -156,7 +237,7 @@
    "facets": {}
   },
   {
-   "num": "017",
+   "num": "026",
    "slug": "m-yt-sampler",
    "name": "YT Sampler",
    "tagline": "",
@@ -165,7 +246,7 @@
    "facets": {}
   },
   {
-   "num": "018",
+   "num": "027",
    "slug": "m-pack-building-max-devices-1",
    "name": "1",
    "tagline": "",
@@ -174,7 +255,7 @@
    "facets": {}
   },
   {
-   "num": "019",
+   "num": "028",
    "slug": "m-pack-building-max-devices-1-another-input",
    "name": "1 Another input",
    "tagline": "",
@@ -183,7 +264,7 @@
    "facets": {}
   },
   {
-   "num": "020",
+   "num": "029",
    "slug": "m-pack-building-max-devices-1-audio-signals",
    "name": "1 Audio signals",
    "tagline": "",
@@ -192,7 +273,7 @@
    "facets": {}
   },
   {
-   "num": "021",
+   "num": "030",
    "slug": "m-pack-building-max-devices-1-listening-to-live",
    "name": "1 Listening to Live",
    "tagline": "",
@@ -201,7 +282,7 @@
    "facets": {}
   },
   {
-   "num": "022",
+   "num": "031",
    "slug": "m-pack-building-max-devices-1-notes-to-audio",
    "name": "1 Notes to audio",
    "tagline": "",
@@ -210,7 +291,7 @@
    "facets": {}
   },
   {
-   "num": "023",
+   "num": "032",
    "slug": "m-pack-building-max-devices-1-splitting-notes",
    "name": "1 Splitting notes",
    "tagline": "",
@@ -219,7 +300,7 @@
    "facets": {}
   },
   {
-   "num": "024",
+   "num": "033",
    "slug": "m-pack-building-max-devices-2",
    "name": "2",
    "tagline": "",
@@ -228,7 +309,7 @@
    "facets": {}
   },
   {
-   "num": "025",
+   "num": "034",
    "slug": "m-pack-building-max-devices-2-mono-fm",
    "name": "2 Mono FM",
    "tagline": "",
@@ -237,7 +318,7 @@
    "facets": {}
   },
   {
-   "num": "026",
+   "num": "035",
    "slug": "m-pack-building-max-devices-2-random-launching",
    "name": "2 Random launching",
    "tagline": "",
@@ -246,7 +327,7 @@
    "facets": {}
   },
   {
-   "num": "027",
+   "num": "036",
    "slug": "m-pack-building-max-devices-2-selecting-parameter",
    "name": "2 Selecting Parameter",
    "tagline": "",
@@ -255,7 +336,7 @@
    "facets": {}
   },
   {
-   "num": "028",
+   "num": "037",
    "slug": "m-pack-building-max-devices-2-signal-generation",
    "name": "2 Signal generation",
    "tagline": "",
@@ -264,7 +345,7 @@
    "facets": {}
   },
   {
-   "num": "029",
+   "num": "038",
    "slug": "m-pack-building-max-devices-2-ui-and-values",
    "name": "2 UI and Values",
    "tagline": "",
@@ -273,7 +354,7 @@
    "facets": {}
   },
   {
-   "num": "030",
+   "num": "039",
    "slug": "p-2rule-2rulesynthv-3-1",
    "name": "2RuleSynthV-3-1",
    "tagline": "",
@@ -282,7 +363,7 @@
    "facets": {}
   },
   {
-   "num": "031",
+   "num": "040",
    "slug": "m-pack-building-max-devices-3",
    "name": "3",
    "tagline": "",
@@ -291,7 +372,7 @@
    "facets": {}
   },
   {
-   "num": "032",
+   "num": "041",
    "slug": "m-pack-building-max-devices-3-event-flow",
    "name": "3 Event flow",
    "tagline": "",
@@ -300,7 +381,7 @@
    "facets": {}
   },
   {
-   "num": "033",
+   "num": "042",
    "slug": "m-pack-building-max-devices-3-polyphony",
    "name": "3 Polyphony",
    "tagline": "",
@@ -309,7 +390,7 @@
    "facets": {}
   },
   {
-   "num": "034",
+   "num": "043",
    "slug": "m-pack-building-max-devices-3-remote-control",
    "name": "3 Remote Control",
    "tagline": "",
@@ -318,7 +399,7 @@
    "facets": {}
   },
   {
-   "num": "035",
+   "num": "044",
    "slug": "m-pack-building-max-devices-3-showing-clip-names",
    "name": "3 Showing clip names",
    "tagline": "",
@@ -327,7 +408,7 @@
    "facets": {}
   },
   {
-   "num": "036",
+   "num": "045",
    "slug": "m-pack-building-max-devices-3-writing-to-a-buffer",
    "name": "3 Writing to a buffer",
    "tagline": "",
@@ -336,7 +417,7 @@
    "facets": {}
   },
   {
-   "num": "037",
+   "num": "046",
    "slug": "m-pack-building-max-devices-4",
    "name": "4",
    "tagline": "",
@@ -345,7 +426,7 @@
    "facets": {}
   },
   {
-   "num": "038",
+   "num": "047",
    "slug": "m-pack-building-max-devices-4-adding-randomness",
    "name": "4 Adding randomness",
    "tagline": "",
@@ -354,7 +435,7 @@
    "facets": {}
   },
   {
-   "num": "039",
+   "num": "048",
    "slug": "m-pack-building-max-devices-4-copy-from-macro-knob",
    "name": "4 Copy from Macro Knob",
    "tagline": "",
@@ -363,7 +444,7 @@
    "facets": {}
   },
   {
-   "num": "040",
+   "num": "049",
    "slug": "m-pack-building-max-devices-4-encapsulation",
    "name": "4 Encapsulation",
    "tagline": "",
@@ -372,7 +453,7 @@
    "facets": {}
   },
   {
-   "num": "041",
+   "num": "050",
    "slug": "m-pack-building-max-devices-4-launching-earlier",
    "name": "4 Launching earlier",
    "tagline": "",
@@ -381,7 +462,7 @@
    "facets": {}
   },
   {
-   "num": "042",
+   "num": "051",
    "slug": "m-pack-building-max-devices-4-polyphony-pt2",
    "name": "4 Polyphony pt2",
    "tagline": "",
@@ -390,7 +471,7 @@
    "facets": {}
   },
   {
-   "num": "043",
+   "num": "052",
    "slug": "m-pack-lost-and-found-4xfade",
    "name": "4Xfade",
    "tagline": "",
@@ -399,7 +480,7 @@
    "facets": {}
   },
   {
-   "num": "044",
+   "num": "053",
    "slug": "m-pack-building-max-devices-5",
    "name": "5",
    "tagline": "",
@@ -408,7 +489,7 @@
    "facets": {}
   },
   {
-   "num": "045",
+   "num": "054",
    "slug": "m-pack-building-max-devices-5-adding-feedback",
    "name": "5 Adding feedback",
    "tagline": "",
@@ -417,7 +498,7 @@
    "facets": {}
   },
   {
-   "num": "046",
+   "num": "055",
    "slug": "m-pack-building-max-devices-5-adding-progress",
    "name": "5 Adding progress",
    "tagline": "",
@@ -426,7 +507,7 @@
    "facets": {}
   },
   {
-   "num": "047",
+   "num": "056",
    "slug": "m-pack-building-max-devices-5-bonus-push",
    "name": "5 Bonus - Push",
    "tagline": "",
@@ -435,7 +516,7 @@
    "facets": {}
   },
   {
-   "num": "048",
+   "num": "057",
    "slug": "m-pack-building-max-devices-5-next",
    "name": "5 Next",
    "tagline": "",
@@ -444,7 +525,7 @@
    "facets": {}
   },
   {
-   "num": "049",
+   "num": "058",
    "slug": "m-pack-building-max-devices-5-polishing",
    "name": "5 Polishing",
    "tagline": "",
@@ -453,7 +534,7 @@
    "facets": {}
   },
   {
-   "num": "050",
+   "num": "059",
    "slug": "m-pack-building-max-devices-6-adding-pitch",
    "name": "6 Adding pitch",
    "tagline": "",
@@ -462,7 +543,7 @@
    "facets": {}
   },
   {
-   "num": "051",
+   "num": "060",
    "slug": "m-pack-building-max-devices-6-bonus-doubling",
    "name": "6 Bonus - Doubling",
    "tagline": "",
@@ -471,7 +552,7 @@
    "facets": {}
   },
   {
-   "num": "052",
+   "num": "061",
    "slug": "m-pack-building-max-devices-6-pitch-lfo",
    "name": "6 Pitch LFO",
    "tagline": "",
@@ -480,7 +561,7 @@
    "facets": {}
   },
   {
-   "num": "053",
+   "num": "062",
    "slug": "m-pack-building-max-devices-6-stay-in-blocks",
    "name": "6 Stay in blocks",
    "tagline": "",
@@ -489,7 +570,7 @@
    "facets": {}
   },
   {
-   "num": "054",
+   "num": "063",
    "slug": "m-pack-building-max-devices-7-cleaning-up",
    "name": "7 Cleaning up",
    "tagline": "",
@@ -498,7 +579,7 @@
    "facets": {}
   },
   {
-   "num": "055",
+   "num": "064",
    "slug": "m-pack-building-max-devices-7-going-stereo",
    "name": "7 Going Stereo",
    "tagline": "",
@@ -507,7 +588,7 @@
    "facets": {}
   },
   {
-   "num": "056",
+   "num": "065",
    "slug": "m-pack-building-max-devices-7-spread",
    "name": "7 Spread",
    "tagline": "",
@@ -516,7 +597,7 @@
    "facets": {}
   },
   {
-   "num": "057",
+   "num": "066",
    "slug": "m-pack-building-max-devices-8-bonus-ui",
    "name": "8 Bonus - UI",
    "tagline": "",
@@ -525,7 +606,7 @@
    "facets": {}
   },
   {
-   "num": "058",
+   "num": "067",
    "slug": "m-pack-building-max-devices-8-multichannel",
    "name": "8 Multichannel",
    "tagline": "",
@@ -534,7 +615,7 @@
    "facets": {}
   },
   {
-   "num": "059",
+   "num": "068",
    "slug": "m-user-ableton-youtube-player-v1-abletondrummer",
    "name": "Ableton Youtube Player V1 AbletonDrummer",
    "tagline": "",
@@ -543,7 +624,7 @@
    "facets": {}
   },
   {
-   "num": "060",
+   "num": "069",
    "slug": "p-native-instruments-absynth-6",
    "name": "Absynth 6",
    "tagline": "",
@@ -552,7 +633,7 @@
    "facets": {}
   },
   {
-   "num": "061",
+   "num": "070",
    "slug": "p-native-instruments-absynth-6-fx",
    "name": "Absynth 6 FX",
    "tagline": "",
@@ -561,7 +642,7 @@
    "facets": {}
   },
   {
-   "num": "062",
+   "num": "071",
    "slug": "p-arturia-acid-v",
    "name": "Acid V",
    "tagline": "",
@@ -570,7 +651,7 @@
    "facets": {}
   },
   {
-   "num": "063",
+   "num": "072",
    "slug": "m-pack-building-max-devices-after-effects-export",
    "name": "After Effects Export",
    "tagline": "",
@@ -579,7 +660,7 @@
    "facets": {}
   },
   {
-   "num": "064",
+   "num": "073",
    "slug": "p-air-music-technology-air-multiband-filterbank",
    "name": "AIR Multiband Filterbank",
    "tagline": "",
@@ -588,7 +669,7 @@
    "facets": {}
   },
   {
-   "num": "065",
+   "num": "074",
    "slug": "p-air-music-technology-air-tape-double-track",
    "name": "AIR Tape Double Track",
    "tagline": "",
@@ -597,7 +678,7 @@
    "facets": {}
   },
   {
-   "num": "066",
+   "num": "075",
    "slug": "p-sound-particles-airmusic",
    "name": "AirMusic",
    "tagline": "",
@@ -606,7 +687,7 @@
    "facets": {}
   },
   {
-   "num": "067",
+   "num": "076",
    "slug": "p-airwindows-airwindows-consolidated",
    "name": "Airwindows Consolidated",
    "tagline": "",
@@ -615,7 +696,7 @@
    "facets": {}
   },
   {
-   "num": "068",
+   "num": "077",
    "slug": "m-builtin-align-delay",
    "name": "Align Delay",
    "tagline": "",
@@ -624,7 +705,7 @@
    "facets": {}
   },
   {
-   "num": "069",
+   "num": "078",
    "slug": "p-ik-multimedia-amplitube-5",
    "name": "AmpliTube 5",
    "tagline": "",
@@ -633,7 +714,7 @@
    "facets": {}
   },
   {
-   "num": "070",
+   "num": "079",
    "slug": "p-arturia-analog-lab-v",
    "name": "Analog Lab V",
    "tagline": "",
@@ -642,7 +723,7 @@
    "facets": {}
   },
   {
-   "num": "071",
+   "num": "080",
    "slug": "p-phase-fiasco-annulus",
    "name": "Annulus",
    "tagline": "",
@@ -651,7 +732,7 @@
    "facets": {}
   },
   {
-   "num": "072",
+   "num": "081",
    "slug": "m-pack-building-max-devices-antialiased",
    "name": "Antialiased",
    "tagline": "",
@@ -660,7 +741,7 @@
    "facets": {}
   },
   {
-   "num": "073",
+   "num": "082",
    "slug": "m-pack-building-max-devices-api-browser",
    "name": "API Browser",
    "tagline": "",
@@ -669,7 +750,7 @@
    "facets": {}
   },
   {
-   "num": "074",
+   "num": "083",
    "slug": "p-ik-multimedia-arc-3",
    "name": "ARC 3",
    "tagline": "",
@@ -678,7 +759,7 @@
    "facets": {}
   },
   {
-   "num": "075",
+   "num": "084",
    "slug": "m-pack-connection-kit-arduino",
    "name": "Arduino",
    "tagline": "",
@@ -687,7 +768,7 @@
    "facets": {}
   },
   {
-   "num": "076",
+   "num": "085",
    "slug": "m-pack-max-for-live-essentials-arp",
    "name": "Arp",
    "tagline": "",
@@ -696,7 +777,7 @@
    "facets": {}
   },
   {
-   "num": "077",
+   "num": "086",
    "slug": "p-arturia-arp-2600-v3",
    "name": "ARP 2600 V3",
    "tagline": "",
@@ -705,7 +786,7 @@
    "facets": {}
   },
   {
-   "num": "078",
+   "num": "087",
    "slug": "m-pack-building-max-devices-arpeggiator",
    "name": "Arpeggiator",
    "tagline": "",
@@ -714,7 +795,7 @@
    "facets": {}
   },
   {
-   "num": "079",
+   "num": "088",
    "slug": "m-pack-building-max-devices-arrangement-clips",
    "name": "Arrangement Clips",
    "tagline": "",
@@ -723,7 +804,7 @@
    "facets": {}
   },
   {
-   "num": "080",
+   "num": "089",
    "slug": "m-pack-performance-pack-by-iftah-arrangement-looper",
    "name": "Arrangement Looper",
    "tagline": "",
@@ -732,7 +813,7 @@
    "facets": {}
   },
   {
-   "num": "081",
+   "num": "090",
    "slug": "p-every-something-artikulation",
    "name": "artikulation",
    "tagline": "",
@@ -741,7 +822,7 @@
    "facets": {}
   },
   {
-   "num": "082",
+   "num": "091",
    "slug": "p-arturia-augmented-brass",
    "name": "Augmented BRASS",
    "tagline": "",
@@ -750,7 +831,7 @@
    "facets": {}
   },
   {
-   "num": "083",
+   "num": "092",
    "slug": "p-arturia-augmented-grand-piano",
    "name": "Augmented GRAND PIANO",
    "tagline": "",
@@ -759,7 +840,7 @@
    "facets": {}
   },
   {
-   "num": "084",
+   "num": "093",
    "slug": "p-arturia-augmented-mallets",
    "name": "Augmented MALLETS",
    "tagline": "",
@@ -768,7 +849,7 @@
    "facets": {}
   },
   {
-   "num": "085",
+   "num": "094",
    "slug": "p-arturia-augmented-persia",
    "name": "Augmented PERSIA",
    "tagline": "",
@@ -777,7 +858,7 @@
    "facets": {}
   },
   {
-   "num": "086",
+   "num": "095",
    "slug": "p-arturia-augmented-strings",
    "name": "Augmented STRINGS",
    "tagline": "",
@@ -786,7 +867,7 @@
    "facets": {}
   },
   {
-   "num": "087",
+   "num": "096",
    "slug": "p-arturia-augmented-voices",
    "name": "Augmented VOICES",
    "tagline": "",
@@ -795,7 +876,7 @@
    "facets": {}
   },
   {
-   "num": "088",
+   "num": "097",
    "slug": "p-arturia-augmented-woodwinds",
    "name": "Augmented WOODWINDS",
    "tagline": "",
@@ -804,7 +885,7 @@
    "facets": {}
   },
   {
-   "num": "089",
+   "num": "098",
    "slug": "p-arturia-augmented-yangtze",
    "name": "Augmented YANGTZE",
    "tagline": "",
@@ -813,7 +894,16 @@
    "facets": {}
   },
   {
-   "num": "090",
+   "num": "099",
+   "slug": "m-user-auren-free-1-5-0",
+   "name": "Auren Free 1.5.0",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "100",
    "slug": "m-user-automate-rack-macro-variations-v1-abletondrummer",
    "name": "Automate Rack Macro Variations V1 AbletonDrummer",
    "tagline": "",
@@ -822,7 +912,7 @@
    "facets": {}
   },
   {
-   "num": "091",
+   "num": "101",
    "slug": "p-arturia-b-3-v2",
    "name": "B-3 V2",
    "tagline": "",
@@ -831,7 +921,7 @@
    "facets": {}
   },
   {
-   "num": "092",
+   "num": "102",
    "slug": "m-user-backspin-v1-0-1",
    "name": "Backspin v1.0.1",
    "tagline": "",
@@ -840,7 +930,7 @@
    "facets": {}
   },
   {
-   "num": "093",
+   "num": "103",
    "slug": "m-user-backspin-v1-0-2",
    "name": "Backspin v1.0.2",
    "tagline": "",
@@ -849,7 +939,7 @@
    "facets": {}
   },
   {
-   "num": "094",
+   "num": "104",
    "slug": "m-pack-building-max-devices-basic-saw",
    "name": "Basic Saw",
    "tagline": "",
@@ -858,7 +948,7 @@
    "facets": {}
   },
   {
-   "num": "095",
+   "num": "105",
    "slug": "m-pack-creative-extensions-bass",
    "name": "Bass",
    "tagline": "",
@@ -867,7 +957,7 @@
    "facets": {}
   },
   {
-   "num": "096",
+   "num": "106",
    "slug": "p-native-instruments-battery-4",
    "name": "Battery 4",
    "tagline": "",
@@ -876,7 +966,7 @@
    "facets": {}
   },
   {
-   "num": "097",
+   "num": "107",
    "slug": "p-unfiltered-audio-battlefx",
    "name": "BattleFX",
    "tagline": "",
@@ -885,7 +975,7 @@
    "facets": {}
   },
   {
-   "num": "098",
+   "num": "108",
    "slug": "p-spitfire-audio-bbc-symphony-orchestra",
    "name": "BBC Symphony Orchestra",
    "tagline": "",
@@ -894,7 +984,7 @@
    "facets": {}
   },
   {
-   "num": "099",
+   "num": "109",
    "slug": "p-lunacy-audio-beam-filter",
    "name": "BEAM Filter",
    "tagline": "",
@@ -903,7 +993,7 @@
    "facets": {}
   },
   {
-   "num": "100",
+   "num": "110",
    "slug": "p-lunacy-audio-beam-haze",
    "name": "BEAM Haze",
    "tagline": "",
@@ -912,7 +1002,7 @@
    "facets": {}
   },
   {
-   "num": "101",
+   "num": "111",
    "slug": "m-user-beast-repeat",
    "name": "BEAST Repeat",
    "tagline": "",
@@ -921,7 +1011,7 @@
    "facets": {}
   },
   {
-   "num": "102",
+   "num": "112",
    "slug": "p-baby-audio-beat-slammer",
    "name": "Beat Slammer",
    "tagline": "",
@@ -930,7 +1020,7 @@
    "facets": {}
   },
   {
-   "num": "103",
+   "num": "113",
    "slug": "m-pack-building-max-devices-bell-tower",
    "name": "Bell Tower",
    "tagline": "",
@@ -939,7 +1029,7 @@
    "facets": {}
   },
   {
-   "num": "104",
+   "num": "114",
    "slug": "p-native-instruments-bite",
    "name": "Bite",
    "tagline": "",
@@ -948,7 +1038,7 @@
    "facets": {}
   },
   {
-   "num": "105",
+   "num": "115",
    "slug": "p-excite-audio-bloom-mura-masa",
    "name": "Bloom Mura Masa",
    "tagline": "",
@@ -957,7 +1047,7 @@
    "facets": {}
   },
   {
-   "num": "106",
+   "num": "116",
    "slug": "m-user-boss-dd-3-digital-delay",
    "name": "Boss DD-3 Digital Delay",
    "tagline": "",
@@ -966,7 +1056,7 @@
    "facets": {}
   },
   {
-   "num": "107",
+   "num": "117",
    "slug": "m-user-boss-ds-1-distortion-v1-1",
    "name": "Boss DS-1 Distortion v1.1",
    "tagline": "",
@@ -975,7 +1065,7 @@
    "facets": {}
   },
   {
-   "num": "108",
+   "num": "118",
    "slug": "m-user-boss-ge-7-equalizer",
    "name": "Boss GE-7 Equalizer",
    "tagline": "",
@@ -984,7 +1074,7 @@
    "facets": {}
   },
   {
-   "num": "109",
+   "num": "119",
    "slug": "m-user-boss-ns-2-noise-suppressor",
    "name": "Boss NS-2 Noise Suppressor",
    "tagline": "",
@@ -993,7 +1083,7 @@
    "facets": {}
   },
   {
-   "num": "110",
+   "num": "120",
    "slug": "m-user-boss-tr-2-tremolo",
    "name": "Boss TR-2 Tremolo",
    "tagline": "",
@@ -1002,7 +1092,7 @@
    "facets": {}
   },
   {
-   "num": "111",
+   "num": "121",
    "slug": "m-pack-inspired-by-nature-by-dillon-bastan-bouncy-notes",
    "name": "Bouncy Notes",
    "tagline": "",
@@ -1011,7 +1101,7 @@
    "facets": {}
   },
   {
-   "num": "112",
+   "num": "122",
    "slug": "p-karanyi-sounds-breeze-black-edition",
    "name": "Breeze Black Edition",
    "tagline": "",
@@ -1020,7 +1110,7 @@
    "facets": {}
   },
   {
-   "num": "113",
+   "num": "123",
    "slug": "p-arturia-buchla-easel-v",
    "name": "Buchla Easel V",
    "tagline": "",
@@ -1029,7 +1119,7 @@
    "facets": {}
   },
   {
-   "num": "114",
+   "num": "124",
    "slug": "p-full-bucket-music-bucket-one",
    "name": "Bucket ONE",
    "tagline": "",
@@ -1038,7 +1128,7 @@
    "facets": {}
   },
   {
-   "num": "115",
+   "num": "125",
    "slug": "m-pack-max-for-live-essentials-buffer-shuffler-2-0",
    "name": "Buffer Shuffler 2.0",
    "tagline": "",
@@ -1047,7 +1137,7 @@
    "facets": {}
   },
   {
-   "num": "116",
+   "num": "126",
    "slug": "p-arturia-bus-exciter-104",
    "name": "Bus EXCITER-104",
    "tagline": "",
@@ -1056,7 +1146,7 @@
    "facets": {}
   },
   {
-   "num": "117",
+   "num": "127",
    "slug": "p-arturia-bus-force",
    "name": "Bus FORCE",
    "tagline": "",
@@ -1065,7 +1155,7 @@
    "facets": {}
   },
   {
-   "num": "118",
+   "num": "128",
    "slug": "p-arturia-bus-peak",
    "name": "Bus PEAK",
    "tagline": "",
@@ -1074,7 +1164,7 @@
    "facets": {}
   },
   {
-   "num": "119",
+   "num": "129",
    "slug": "p-arturia-bus-transient",
    "name": "Bus TRANSIENT",
    "tagline": "",
@@ -1083,7 +1173,7 @@
    "facets": {}
   },
   {
-   "num": "120",
+   "num": "130",
    "slug": "m-user-bve-glitchlooper",
    "name": "bve.glitchlooper",
    "tagline": "",
@@ -1092,7 +1182,7 @@
    "facets": {}
   },
   {
-   "num": "121",
+   "num": "131",
    "slug": "m-pack-connection-kit-camera",
    "name": "Camera",
    "tagline": "",
@@ -1101,7 +1191,7 @@
    "facets": {}
   },
   {
-   "num": "122",
+   "num": "132",
    "slug": "p-mixed-in-key-llc-captain-beat",
    "name": "Captain Beat",
    "tagline": "",
@@ -1110,7 +1200,7 @@
    "facets": {}
   },
   {
-   "num": "123",
+   "num": "133",
    "slug": "p-mixed-in-key-captain-beat-epic",
    "name": "Captain Beat Epic",
    "tagline": "",
@@ -1119,7 +1209,7 @@
    "facets": {}
   },
   {
-   "num": "124",
+   "num": "134",
    "slug": "p-mixed-in-key-llc-captain-chords",
    "name": "Captain Chords",
    "tagline": "",
@@ -1128,7 +1218,7 @@
    "facets": {}
   },
   {
-   "num": "125",
+   "num": "135",
    "slug": "p-mixed-in-key-captain-chords-epic",
    "name": "Captain Chords Epic",
    "tagline": "",
@@ -1137,7 +1227,7 @@
    "facets": {}
   },
   {
-   "num": "126",
+   "num": "136",
    "slug": "p-mixed-in-key-llc-captain-deep",
    "name": "Captain Deep",
    "tagline": "",
@@ -1146,7 +1236,7 @@
    "facets": {}
   },
   {
-   "num": "127",
+   "num": "137",
    "slug": "p-mixed-in-key-captain-deep-epic",
    "name": "Captain Deep Epic",
    "tagline": "",
@@ -1155,7 +1245,7 @@
    "facets": {}
   },
   {
-   "num": "128",
+   "num": "138",
    "slug": "p-mixed-in-key-llc-captain-melody",
    "name": "Captain Melody",
    "tagline": "",
@@ -1164,7 +1254,7 @@
    "facets": {}
   },
   {
-   "num": "129",
+   "num": "139",
    "slug": "p-mixed-in-key-captain-melody-epic",
    "name": "Captain Melody Epic",
    "tagline": "",
@@ -1173,7 +1263,7 @@
    "facets": {}
   },
   {
-   "num": "130",
+   "num": "140",
    "slug": "p-mixed-in-key-llc-captain-play",
    "name": "Captain Play",
    "tagline": "",
@@ -1182,7 +1272,7 @@
    "facets": {}
   },
   {
-   "num": "131",
+   "num": "141",
    "slug": "p-mixed-in-key-captain-play-epic",
    "name": "Captain Play Epic",
    "tagline": "",
@@ -1191,7 +1281,7 @@
    "facets": {}
   },
   {
-   "num": "132",
+   "num": "142",
    "slug": "p-aberrant-dsp-cataclysm",
    "name": "Cataclysm",
    "tagline": "",
@@ -1200,7 +1290,7 @@
    "facets": {}
   },
   {
-   "num": "133",
+   "num": "143",
    "slug": "m-user-cb-rainer-1-6",
    "name": "cb_rainer 1.6",
    "tagline": "",
@@ -1209,7 +1299,7 @@
    "facets": {}
   },
   {
-   "num": "134",
+   "num": "144",
    "slug": "m-pack-building-max-devices-channel-eq",
    "name": "Channel EQ",
    "tagline": "",
@@ -1218,7 +1308,7 @@
    "facets": {}
   },
   {
-   "num": "135",
+   "num": "145",
    "slug": "p-ternar-music-technology-channelstrip",
    "name": "ChannelStrip",
    "tagline": "",
@@ -1227,7 +1317,7 @@
    "facets": {}
   },
   {
-   "num": "136",
+   "num": "146",
    "slug": "m-user-channelstrip",
    "name": "ChannelStrip",
    "tagline": "",
@@ -1236,7 +1326,7 @@
    "facets": {}
   },
   {
-   "num": "137",
+   "num": "147",
    "slug": "m-user-channelstrip-1",
    "name": "ChannelStrip-1",
    "tagline": "",
@@ -1245,7 +1335,7 @@
    "facets": {}
   },
   {
-   "num": "138",
+   "num": "148",
    "slug": "p-analogobsession-chopa",
    "name": "Chopa",
    "tagline": "",
@@ -1254,7 +1344,7 @@
    "facets": {}
   },
   {
-   "num": "139",
+   "num": "149",
    "slug": "m-user-chorb",
    "name": "Chorb",
    "tagline": "",
@@ -1263,7 +1353,7 @@
    "facets": {}
   },
   {
-   "num": "140",
+   "num": "150",
    "slug": "m-user-chord-generator",
    "name": "Chord Generator",
    "tagline": "",
@@ -1272,7 +1362,7 @@
    "facets": {}
   },
   {
-   "num": "141",
+   "num": "151",
    "slug": "m-pack-building-max-devices-chorus",
    "name": "Chorus",
    "tagline": "",
@@ -1281,7 +1371,7 @@
    "facets": {}
   },
   {
-   "num": "142",
+   "num": "152",
    "slug": "p-arturia-chorus-dimension-d",
    "name": "Chorus DIMENSION-D",
    "tagline": "",
@@ -1290,7 +1380,7 @@
    "facets": {}
   },
   {
-   "num": "143",
+   "num": "153",
    "slug": "p-arturia-chorus-jun-6",
    "name": "Chorus JUN-6",
    "tagline": "",
@@ -1299,7 +1389,16 @@
    "facets": {}
   },
   {
-   "num": "144",
+   "num": "154",
+   "slug": "m-user-chromaphase-v1-1-5",
+   "name": "ChromaPhase v1.1.5",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "155",
    "slug": "p-ik-multimedia-classiclimiter",
    "name": "ClassicLimiter",
    "tagline": "",
@@ -1308,7 +1407,7 @@
    "facets": {}
   },
   {
-   "num": "145",
+   "num": "156",
    "slug": "p-arturia-clavinet-v",
    "name": "Clavinet V",
    "tagline": "",
@@ -1317,7 +1416,7 @@
    "facets": {}
   },
   {
-   "num": "146",
+   "num": "157",
    "slug": "p-arturia-cmi-v",
    "name": "CMI V",
    "tagline": "",
@@ -1326,7 +1425,7 @@
    "facets": {}
   },
   {
-   "num": "147",
+   "num": "158",
    "slug": "p-lese-codec",
    "name": "Codec",
    "tagline": "",
@@ -1335,7 +1434,7 @@
    "facets": {}
   },
   {
-   "num": "148",
+   "num": "159",
    "slug": "m-pack-stray-cats-collection-by-max-for-cats-color",
    "name": "Color",
    "tagline": "",
@@ -1344,7 +1443,7 @@
    "facets": {}
   },
   {
-   "num": "149",
+   "num": "160",
    "slug": "m-pack-creative-extensions-color-limiter",
    "name": "Color Limiter",
    "tagline": "",
@@ -1353,7 +1452,7 @@
    "facets": {}
   },
   {
-   "num": "150",
+   "num": "161",
    "slug": "m-user-colour",
    "name": "Colour",
    "tagline": "",
@@ -1362,7 +1461,7 @@
    "facets": {}
   },
   {
-   "num": "151",
+   "num": "162",
    "slug": "p-baby-audio-comeback-kid",
    "name": "Comeback Kid",
    "tagline": "",
@@ -1371,7 +1470,7 @@
    "facets": {}
   },
   {
-   "num": "152",
+   "num": "163",
    "slug": "p-arturia-comp-diode-609",
    "name": "Comp DIODE-609",
    "tagline": "",
@@ -1380,7 +1479,7 @@
    "facets": {}
   },
   {
-   "num": "153",
+   "num": "164",
    "slug": "p-arturia-comp-fet-76",
    "name": "Comp FET-76",
    "tagline": "",
@@ -1389,7 +1488,7 @@
    "facets": {}
   },
   {
-   "num": "154",
+   "num": "165",
    "slug": "p-arturia-comp-tube-sta",
    "name": "Comp TUBE-STA",
    "tagline": "",
@@ -1398,7 +1497,7 @@
    "facets": {}
   },
   {
-   "num": "155",
+   "num": "166",
    "slug": "p-arturia-comp-vca-65",
    "name": "Comp VCA-65",
    "tagline": "",
@@ -1407,7 +1506,7 @@
    "facets": {}
   },
   {
-   "num": "156",
+   "num": "167",
    "slug": "m-pack-stray-cats-collection-by-max-for-cats-conchord",
    "name": "ConChord",
    "tagline": "",
@@ -1416,7 +1515,7 @@
    "facets": {}
   },
   {
-   "num": "157",
+   "num": "168",
    "slug": "m-user-contemporary-texture",
    "name": "Contemporary texture",
    "tagline": "",
@@ -1425,7 +1524,7 @@
    "facets": {}
   },
   {
-   "num": "158",
+   "num": "169",
    "slug": "m-pack-convolution-reverb-convolution-reverb",
    "name": "Convolution Reverb",
    "tagline": "",
@@ -1434,7 +1533,7 @@
    "facets": {}
   },
   {
-   "num": "159",
+   "num": "170",
    "slug": "m-pack-convolution-reverb-convolution-reverb-pro",
    "name": "Convolution Reverb Pro",
    "tagline": "",
@@ -1443,7 +1542,7 @@
    "facets": {}
   },
   {
-   "num": "160",
+   "num": "171",
    "slug": "m-user-copy-machine",
    "name": "Copy Machine",
    "tagline": "",
@@ -1452,7 +1551,7 @@
    "facets": {}
   },
   {
-   "num": "161",
+   "num": "172",
    "slug": "m-user-coral",
    "name": "Coral",
    "tagline": "",
@@ -1461,7 +1560,7 @@
    "facets": {}
   },
   {
-   "num": "162",
+   "num": "173",
    "slug": "p-arturia-cp-70-v",
    "name": "CP-70 V",
    "tagline": "",
@@ -1470,7 +1569,7 @@
    "facets": {}
   },
   {
-   "num": "163",
+   "num": "174",
    "slug": "m-user-crap-cassette-v1-0",
    "name": "Crap Cassette v1.0",
    "tagline": "",
@@ -1479,7 +1578,7 @@
    "facets": {}
   },
   {
-   "num": "164",
+   "num": "175",
    "slug": "p-arturia-cs-80-v4",
    "name": "CS-80 V4",
    "tagline": "",
@@ -1488,7 +1587,7 @@
    "facets": {}
   },
   {
-   "num": "165",
+   "num": "176",
    "slug": "p-waves-curves-resolve",
    "name": "Curves Resolve",
    "tagline": "",
@@ -1497,7 +1596,7 @@
    "facets": {}
   },
   {
-   "num": "166",
+   "num": "177",
    "slug": "p-waves-curves-resolve-live",
    "name": "Curves Resolve Live",
    "tagline": "",
@@ -1506,7 +1605,7 @@
    "facets": {}
   },
   {
-   "num": "167",
+   "num": "178",
    "slug": "m-pack-upright-piano-by-spitfire-audio-custom-note-off",
    "name": "Custom Note Off",
    "tagline": "",
@@ -1515,7 +1614,7 @@
    "facets": {}
   },
   {
-   "num": "168",
+   "num": "179",
    "slug": "m-pack-cv-tools-cv-clock-in",
    "name": "CV Clock In",
    "tagline": "",
@@ -1524,7 +1623,7 @@
    "facets": {}
   },
   {
-   "num": "169",
+   "num": "180",
    "slug": "m-pack-cv-tools-cv-clock-out",
    "name": "CV Clock Out",
    "tagline": "",
@@ -1533,7 +1632,7 @@
    "facets": {}
   },
   {
-   "num": "170",
+   "num": "181",
    "slug": "m-pack-cv-tools-cv-envelope-follower",
    "name": "CV Envelope Follower",
    "tagline": "",
@@ -1542,7 +1641,7 @@
    "facets": {}
   },
   {
-   "num": "171",
+   "num": "182",
    "slug": "m-pack-cv-tools-cv-in",
    "name": "CV In",
    "tagline": "",
@@ -1551,7 +1650,7 @@
    "facets": {}
   },
   {
-   "num": "172",
+   "num": "183",
    "slug": "m-pack-cv-tools-cv-instrument",
    "name": "CV Instrument",
    "tagline": "",
@@ -1560,7 +1659,7 @@
    "facets": {}
   },
   {
-   "num": "173",
+   "num": "184",
    "slug": "m-pack-cv-tools-cv-lfo",
    "name": "CV LFO",
    "tagline": "",
@@ -1569,7 +1668,7 @@
    "facets": {}
   },
   {
-   "num": "174",
+   "num": "185",
    "slug": "m-pack-cv-tools-cv-shaper",
    "name": "CV Shaper",
    "tagline": "",
@@ -1578,7 +1677,7 @@
    "facets": {}
   },
   {
-   "num": "175",
+   "num": "186",
    "slug": "m-pack-cv-tools-cv-triggers",
    "name": "CV Triggers",
    "tagline": "",
@@ -1587,7 +1686,7 @@
    "facets": {}
   },
   {
-   "num": "176",
+   "num": "187",
    "slug": "m-pack-cv-tools-cv-utility",
    "name": "CV Utility",
    "tagline": "",
@@ -1596,7 +1695,7 @@
    "facets": {}
   },
   {
-   "num": "177",
+   "num": "188",
    "slug": "m-user-cycle-variations-up-down-v1-abletondrummer",
    "name": "Cycle Variations Up + Down V1 AbletonDrummer",
    "tagline": "",
@@ -1605,7 +1704,7 @@
    "facets": {}
   },
   {
-   "num": "178",
+   "num": "189",
    "slug": "p-cymatics-cymatics-deja-vu",
    "name": "Cymatics Deja Vu",
    "tagline": "",
@@ -1614,7 +1713,7 @@
    "facets": {}
   },
   {
-   "num": "179",
+   "num": "190",
    "slug": "p-cymatics-cymatics-memory",
    "name": "Cymatics Memory",
    "tagline": "",
@@ -1623,7 +1722,7 @@
    "facets": {}
   },
   {
-   "num": "180",
+   "num": "191",
    "slug": "p-cymatics-cymatics-origin",
    "name": "Cymatics Origin",
    "tagline": "",
@@ -1632,7 +1731,7 @@
    "facets": {}
   },
   {
-   "num": "181",
+   "num": "192",
    "slug": "p-arturia-cz-v",
    "name": "CZ V",
    "tagline": "",
@@ -1641,7 +1740,7 @@
    "facets": {}
   },
   {
-   "num": "182",
+   "num": "193",
    "slug": "p-klanghelm-dc1a3",
    "name": "DC1A3",
    "tagline": "",
@@ -1650,7 +1749,7 @@
    "facets": {}
   },
   {
-   "num": "183",
+   "num": "194",
    "slug": "p-justin-sheriff-de-space",
    "name": "De-Space",
    "tagline": "",
@@ -1659,7 +1758,7 @@
    "facets": {}
   },
   {
-   "num": "184",
+   "num": "195",
    "slug": "p-decidedly-decentsampler",
    "name": "DecentSampler",
    "tagline": "",
@@ -1668,7 +1767,7 @@
    "facets": {}
   },
   {
-   "num": "185",
+   "num": "196",
    "slug": "p-klevgrand-degrader",
    "name": "Degrader",
    "tagline": "",
@@ -1677,7 +1776,7 @@
    "facets": {}
   },
   {
-   "num": "186",
+   "num": "197",
    "slug": "m-pack-building-max-devices-delay",
    "name": "Delay",
    "tagline": "",
@@ -1686,7 +1785,7 @@
    "facets": {}
   },
   {
-   "num": "187",
+   "num": "198",
    "slug": "p-arturia-delay-brigade",
    "name": "Delay BRIGADE",
    "tagline": "",
@@ -1695,7 +1794,7 @@
    "facets": {}
   },
   {
-   "num": "188",
+   "num": "199",
    "slug": "p-arturia-delay-eternity",
    "name": "Delay ETERNITY",
    "tagline": "",
@@ -1704,7 +1803,7 @@
    "facets": {}
   },
   {
-   "num": "189",
+   "num": "200",
    "slug": "p-arturia-delay-tape-201",
    "name": "Delay TAPE-201",
    "tagline": "",
@@ -1713,7 +1812,7 @@
    "facets": {}
   },
   {
-   "num": "190",
+   "num": "201",
    "slug": "m-pack-max-for-live-essentials-device-randomizer",
    "name": "Device Randomizer",
    "tagline": "",
@@ -1722,7 +1821,7 @@
    "facets": {}
   },
   {
-   "num": "191",
+   "num": "202",
    "slug": "p-soundtoys-devil-loc",
    "name": "Devil-Loc",
    "tagline": "",
@@ -1731,7 +1830,7 @@
    "facets": {}
   },
   {
-   "num": "192",
+   "num": "203",
    "slug": "p-native-instruments-dirt",
    "name": "Dirt",
    "tagline": "",
@@ -1740,7 +1839,7 @@
    "facets": {}
   },
   {
-   "num": "193",
+   "num": "204",
    "slug": "p-arturia-dist-coldfire",
    "name": "Dist COLDFIRE",
    "tagline": "",
@@ -1749,7 +1848,7 @@
    "facets": {}
   },
   {
-   "num": "194",
+   "num": "205",
    "slug": "p-arturia-dist-opamp-21",
    "name": "Dist OPAMP-21",
    "tagline": "",
@@ -1758,7 +1857,7 @@
    "facets": {}
   },
   {
-   "num": "195",
+   "num": "206",
    "slug": "p-arturia-dist-tube-culture",
    "name": "Dist TUBE-CULTURE",
    "tagline": "",
@@ -1767,7 +1866,7 @@
    "facets": {}
   },
   {
-   "num": "196",
+   "num": "207",
    "slug": "m-pack-probability-pack-by-sonic-faction-dr-chaos",
    "name": "Dr Chaos",
    "tagline": "",
@@ -1776,7 +1875,7 @@
    "facets": {}
   },
   {
-   "num": "197",
+   "num": "208",
    "slug": "m-user-dr01d",
    "name": "DR01D",
    "tagline": "",
@@ -1785,7 +1884,7 @@
    "facets": {}
   },
   {
-   "num": "198",
+   "num": "209",
    "slug": "p-analogobsession-drgate",
    "name": "DrGate",
    "tagline": "",
@@ -1794,7 +1893,7 @@
    "facets": {}
   },
   {
-   "num": "199",
+   "num": "210",
    "slug": "p-puremagnetik-driftmaker",
    "name": "Driftmaker",
    "tagline": "",
@@ -1803,7 +1902,7 @@
    "facets": {}
   },
   {
-   "num": "200",
+   "num": "211",
    "slug": "m-user-drox-ii-free",
    "name": "Drox II Free",
    "tagline": "",
@@ -1812,7 +1911,7 @@
    "facets": {}
   },
   {
-   "num": "201",
+   "num": "212",
    "slug": "m-user-drox-ii-pro",
    "name": "Drox II Pro",
    "tagline": "",
@@ -1821,7 +1920,7 @@
    "facets": {}
   },
   {
-   "num": "202",
+   "num": "213",
    "slug": "m-user-drumbrain",
    "name": "DrumBrain",
    "tagline": "",
@@ -1830,7 +1929,7 @@
    "facets": {}
   },
   {
-   "num": "203",
+   "num": "214",
    "slug": "m-pack-max-for-live-essentials-drumsynth-clap",
    "name": "DrumSynth Clap",
    "tagline": "",
@@ -1839,7 +1938,7 @@
    "facets": {}
   },
   {
-   "num": "204",
+   "num": "215",
    "slug": "m-pack-max-for-live-essentials-drumsynth-clave",
    "name": "DrumSynth Clave",
    "tagline": "",
@@ -1848,7 +1947,7 @@
    "facets": {}
   },
   {
-   "num": "205",
+   "num": "216",
    "slug": "m-pack-max-for-live-essentials-drumsynth-cymbal",
    "name": "DrumSynth Cymbal",
    "tagline": "",
@@ -1857,7 +1956,7 @@
    "facets": {}
   },
   {
-   "num": "206",
+   "num": "217",
    "slug": "m-pack-max-for-live-essentials-drumsynth-fm2",
    "name": "DrumSynth FM2",
    "tagline": "",
@@ -1866,7 +1965,7 @@
    "facets": {}
   },
   {
-   "num": "207",
+   "num": "218",
    "slug": "m-pack-max-for-live-essentials-drumsynth-fmperc",
    "name": "DrumSynth FMPerc",
    "tagline": "",
@@ -1875,7 +1974,7 @@
    "facets": {}
   },
   {
-   "num": "208",
+   "num": "219",
    "slug": "m-pack-max-for-live-essentials-drumsynth-glass",
    "name": "DrumSynth Glass",
    "tagline": "",
@@ -1884,7 +1983,7 @@
    "facets": {}
   },
   {
-   "num": "209",
+   "num": "220",
    "slug": "m-pack-max-for-live-essentials-drumsynth-hh",
    "name": "DrumSynth HH",
    "tagline": "",
@@ -1893,7 +1992,7 @@
    "facets": {}
   },
   {
-   "num": "210",
+   "num": "221",
    "slug": "m-pack-max-for-live-essentials-drumsynth-kick",
    "name": "DrumSynth Kick",
    "tagline": "",
@@ -1902,7 +2001,7 @@
    "facets": {}
   },
   {
-   "num": "211",
+   "num": "222",
    "slug": "m-pack-max-for-live-essentials-drumsynth-kplus",
    "name": "DrumSynth Kplus",
    "tagline": "",
@@ -1911,7 +2010,7 @@
    "facets": {}
   },
   {
-   "num": "212",
+   "num": "223",
    "slug": "m-pack-max-for-live-essentials-drumsynth-shaker",
    "name": "DrumSynth Shaker",
    "tagline": "",
@@ -1920,7 +2019,7 @@
    "facets": {}
   },
   {
-   "num": "213",
+   "num": "224",
    "slug": "m-pack-max-for-live-essentials-drumsynth-snare",
    "name": "DrumSynth Snare",
    "tagline": "",
@@ -1929,7 +2028,7 @@
    "facets": {}
   },
   {
-   "num": "214",
+   "num": "225",
    "slug": "m-pack-max-for-live-essentials-drumsynth-snare2",
    "name": "DrumSynth Snare2",
    "tagline": "",
@@ -1938,7 +2037,7 @@
    "facets": {}
   },
   {
-   "num": "215",
+   "num": "226",
    "slug": "m-pack-max-for-live-essentials-drumsynth-tom",
    "name": "DrumSynth Tom",
    "tagline": "",
@@ -1947,7 +2046,7 @@
    "facets": {}
   },
   {
-   "num": "216",
+   "num": "227",
    "slug": "m-builtin-ds-clang",
    "name": "DS Clang",
    "tagline": "",
@@ -1956,7 +2055,7 @@
    "facets": {}
   },
   {
-   "num": "217",
+   "num": "228",
    "slug": "m-builtin-ds-clap",
    "name": "DS Clap",
    "tagline": "",
@@ -1965,7 +2064,7 @@
    "facets": {}
   },
   {
-   "num": "218",
+   "num": "229",
    "slug": "m-builtin-ds-cymbal",
    "name": "DS Cymbal",
    "tagline": "",
@@ -1974,7 +2073,7 @@
    "facets": {}
   },
   {
-   "num": "219",
+   "num": "230",
    "slug": "m-builtin-ds-fm",
    "name": "DS FM",
    "tagline": "",
@@ -1983,7 +2082,7 @@
    "facets": {}
   },
   {
-   "num": "220",
+   "num": "231",
    "slug": "m-builtin-ds-hh",
    "name": "DS HH",
    "tagline": "",
@@ -1992,7 +2091,7 @@
    "facets": {}
   },
   {
-   "num": "221",
+   "num": "232",
    "slug": "m-builtin-ds-kick",
    "name": "DS Kick",
    "tagline": "",
@@ -2001,7 +2100,7 @@
    "facets": {}
   },
   {
-   "num": "222",
+   "num": "233",
    "slug": "m-builtin-ds-sampler",
    "name": "DS Sampler",
    "tagline": "",
@@ -2010,7 +2109,7 @@
    "facets": {}
   },
   {
-   "num": "223",
+   "num": "234",
    "slug": "m-builtin-ds-snare",
    "name": "DS Snare",
    "tagline": "",
@@ -2019,7 +2118,7 @@
    "facets": {}
   },
   {
-   "num": "224",
+   "num": "235",
    "slug": "m-builtin-ds-tom",
    "name": "DS Tom",
    "tagline": "",
@@ -2028,7 +2127,7 @@
    "facets": {}
   },
   {
-   "num": "225",
+   "num": "236",
    "slug": "p-soundmorph-dust",
    "name": "Dust",
    "tagline": "",
@@ -2037,7 +2136,7 @@
    "facets": {}
   },
   {
-   "num": "226",
+   "num": "237",
    "slug": "p-soundmorph-dust-fx",
    "name": "Dust (fx)",
    "tagline": "",
@@ -2046,7 +2145,7 @@
    "facets": {}
   },
   {
-   "num": "227",
+   "num": "238",
    "slug": "p-arturia-dx7-v",
    "name": "DX7 V",
    "tagline": "",
@@ -2055,7 +2154,16 @@
    "facets": {}
   },
   {
-   "num": "228",
+   "num": "239",
+   "slug": "m-user-dystopian-waves-wah-1-5-0",
+   "name": "Dystopian Waves Wah 1.5.0",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "240",
    "slug": "p-soundtoys-echoboy-jr",
    "name": "EchoBoy Jr",
    "tagline": "",
@@ -2064,7 +2172,7 @@
    "facets": {}
   },
   {
-   "num": "229",
+   "num": "241",
    "slug": "p-arturia-efx-ambient",
    "name": "Efx AMBIENT",
    "tagline": "",
@@ -2073,7 +2181,7 @@
    "facets": {}
   },
   {
-   "num": "230",
+   "num": "242",
    "slug": "p-arturia-efx-fragments",
    "name": "Efx FRAGMENTS",
    "tagline": "",
@@ -2082,7 +2190,7 @@
    "facets": {}
   },
   {
-   "num": "231",
+   "num": "243",
    "slug": "p-arturia-efx-motions",
    "name": "Efx MOTIONS",
    "tagline": "",
@@ -2091,7 +2199,7 @@
    "facets": {}
   },
   {
-   "num": "232",
+   "num": "244",
    "slug": "p-arturia-efx-refract",
    "name": "Efx REFRACT",
    "tagline": "",
@@ -2100,7 +2208,7 @@
    "facets": {}
   },
   {
-   "num": "233",
+   "num": "245",
    "slug": "p-soundghost-ekko-demo",
    "name": "Ekko Demo",
    "tagline": "",
@@ -2109,7 +2217,7 @@
    "facets": {}
   },
   {
-   "num": "234",
+   "num": "246",
    "slug": "m-pack-inspired-by-nature-by-dillon-bastan-emit",
    "name": "Emit",
    "tagline": "",
@@ -2118,7 +2226,7 @@
    "facets": {}
   },
   {
-   "num": "235",
+   "num": "247",
    "slug": "p-arturia-emulator-ii-v",
    "name": "Emulator II V",
    "tagline": "",
@@ -2127,7 +2235,7 @@
    "facets": {}
   },
   {
-   "num": "236",
+   "num": "248",
    "slug": "m-pack-max-for-live-essentials-envelope",
    "name": "Envelope",
    "tagline": "",
@@ -2136,7 +2244,7 @@
    "facets": {}
   },
   {
-   "num": "237",
+   "num": "249",
    "slug": "m-builtin-envelope-follower",
    "name": "Envelope Follower",
    "tagline": "",
@@ -2145,7 +2253,7 @@
    "facets": {}
   },
   {
-   "num": "238",
+   "num": "250",
    "slug": "m-pack-max-for-live-essentials-envelope-follower",
    "name": "Envelope Follower",
    "tagline": "",
@@ -2154,7 +2262,7 @@
    "facets": {}
   },
   {
-   "num": "239",
+   "num": "251",
    "slug": "m-builtin-envelope-midi",
    "name": "Envelope MIDI",
    "tagline": "",
@@ -2163,7 +2271,7 @@
    "facets": {}
   },
   {
-   "num": "240",
+   "num": "252",
    "slug": "p-arturia-eq-sitral-295",
    "name": "EQ SITRAL-295",
    "tagline": "",
@@ -2172,7 +2280,7 @@
    "facets": {}
   },
   {
-   "num": "241",
+   "num": "253",
    "slug": "p-ik-multimedia-eq432",
    "name": "EQ432",
    "tagline": "",
@@ -2181,7 +2289,7 @@
    "facets": {}
   },
   {
-   "num": "242",
+   "num": "254",
    "slug": "m-builtin-euclidean",
    "name": "Euclidean",
    "tagline": "",
@@ -2190,7 +2298,7 @@
    "facets": {}
   },
   {
-   "num": "243",
+   "num": "255",
    "slug": "m-user-excite",
    "name": "Excite",
    "tagline": "",
@@ -2199,7 +2307,7 @@
    "facets": {}
   },
   {
-   "num": "244",
+   "num": "256",
    "slug": "p-puremagnetik-expanse",
    "name": "Expanse",
    "tagline": "",
@@ -2208,7 +2316,7 @@
    "facets": {}
   },
   {
-   "num": "245",
+   "num": "257",
    "slug": "m-builtin-expression-control",
    "name": "Expression Control",
    "tagline": "",
@@ -2217,7 +2325,7 @@
    "facets": {}
   },
   {
-   "num": "246",
+   "num": "258",
    "slug": "m-pack-max-for-live-essentials-expression-control",
    "name": "Expression Control",
    "tagline": "",
@@ -2226,7 +2334,7 @@
    "facets": {}
   },
   {
-   "num": "247",
+   "num": "259",
    "slug": "m-builtin-expression-control-legacy",
    "name": "Expression Control Legacy",
    "tagline": "",
@@ -2235,7 +2343,7 @@
    "facets": {}
   },
   {
-   "num": "248",
+   "num": "260",
    "slug": "m-pack-expressive-chords-expressive-chords",
    "name": "Expressive Chords",
    "tagline": "",
@@ -2244,7 +2352,7 @@
    "facets": {}
   },
   {
-   "num": "249",
+   "num": "261",
    "slug": "m-user-expressive-chords-1-1",
    "name": "Expressive Chords 1.1",
    "tagline": "",
@@ -2253,7 +2361,7 @@
    "facets": {}
   },
   {
-   "num": "250",
+   "num": "262",
    "slug": "p-ik-multimedia-fame",
    "name": "Fame",
    "tagline": "",
@@ -2262,7 +2370,7 @@
    "facets": {}
   },
   {
-   "num": "251",
+   "num": "263",
    "slug": "p-arturia-farfisa-v",
    "name": "Farfisa V",
    "tagline": "",
@@ -2271,7 +2379,7 @@
    "facets": {}
   },
   {
-   "num": "252",
+   "num": "264",
    "slug": "p-ik-multimedia-farmstoneroom",
    "name": "FarmStoneRoom",
    "tagline": "",
@@ -2280,7 +2388,7 @@
    "facets": {}
   },
   {
-   "num": "253",
+   "num": "265",
    "slug": "m-pack-building-max-devices-filler",
    "name": "Filler",
    "tagline": "",
@@ -2289,7 +2397,7 @@
    "facets": {}
   },
   {
-   "num": "254",
+   "num": "266",
    "slug": "m-user-filter",
    "name": "Filter",
    "tagline": "",
@@ -2298,7 +2406,7 @@
    "facets": {}
   },
   {
-   "num": "255",
+   "num": "267",
    "slug": "m-user-filter-glass",
    "name": "Filter Glass",
    "tagline": "",
@@ -2307,7 +2415,7 @@
    "facets": {}
   },
   {
-   "num": "256",
+   "num": "268",
    "slug": "p-arturia-filter-m12",
    "name": "Filter M12",
    "tagline": "",
@@ -2316,7 +2424,7 @@
    "facets": {}
   },
   {
-   "num": "257",
+   "num": "269",
    "slug": "p-arturia-filter-mini",
    "name": "Filter MINI",
    "tagline": "",
@@ -2325,7 +2433,7 @@
    "facets": {}
   },
   {
-   "num": "258",
+   "num": "270",
    "slug": "p-arturia-filter-ms-20",
    "name": "Filter MS-20",
    "tagline": "",
@@ -2334,7 +2442,7 @@
    "facets": {}
   },
   {
-   "num": "259",
+   "num": "271",
    "slug": "p-arturia-filter-sem",
    "name": "Filter SEM",
    "tagline": "",
@@ -2343,7 +2451,7 @@
    "facets": {}
   },
   {
-   "num": "260",
+   "num": "272",
    "slug": "p-audiomodern-filterstep",
    "name": "Filterstep",
    "tagline": "",
@@ -2352,7 +2460,7 @@
    "facets": {}
   },
   {
-   "num": "261",
+   "num": "273",
    "slug": "p-ujam-fin-retro",
    "name": "FIN-RETRO",
    "tagline": "",
@@ -2361,7 +2469,7 @@
    "facets": {}
   },
   {
-   "num": "262",
+   "num": "274",
    "slug": "p-fkfx-audio-fkfx-nanomix",
    "name": "FKFX Nanomix",
    "tagline": "",
@@ -2370,7 +2478,7 @@
    "facets": {}
   },
   {
-   "num": "263",
+   "num": "275",
    "slug": "m-pack-building-max-devices-flanger",
    "name": "Flanger",
    "tagline": "",
@@ -2379,7 +2487,7 @@
    "facets": {}
   },
   {
-   "num": "264",
+   "num": "276",
    "slug": "p-arturia-flanger-bl-20",
    "name": "Flanger BL-20",
    "tagline": "",
@@ -2388,7 +2496,7 @@
    "facets": {}
   },
   {
-   "num": "265",
+   "num": "277",
    "slug": "p-ternar-music-technology-flechtwerk",
    "name": "Flechtwerk",
    "tagline": "",
@@ -2397,7 +2505,7 @@
    "facets": {}
   },
   {
-   "num": "266",
+   "num": "278",
    "slug": "m-user-flow-demo",
    "name": "Flow Demo",
    "tagline": "",
@@ -2406,7 +2514,7 @@
    "facets": {}
   },
   {
-   "num": "267",
+   "num": "279",
    "slug": "p-msxii-sound-design-fly-tape-ii",
    "name": "Fly Tape II",
    "tagline": "",
@@ -2415,7 +2523,7 @@
    "facets": {}
   },
   {
-   "num": "268",
+   "num": "280",
    "slug": "p-audiothing-fog-convolver-2",
    "name": "Fog Convolver 2",
    "tagline": "",
@@ -2424,7 +2532,7 @@
    "facets": {}
   },
   {
-   "num": "269",
+   "num": "281",
    "slug": "p-native-instruments-freak",
    "name": "Freak",
    "tagline": "",
@@ -2433,7 +2541,7 @@
    "facets": {}
   },
   {
-   "num": "270",
+   "num": "282",
    "slug": "m-user-friend",
    "name": "Friend",
    "tagline": "",
@@ -2442,7 +2550,7 @@
    "facets": {}
   },
   {
-   "num": "271",
+   "num": "283",
    "slug": "m-pack-building-max-devices-game-of-live",
    "name": "Game of Live",
    "tagline": "",
@@ -2451,7 +2559,7 @@
    "facets": {}
   },
   {
-   "num": "272",
+   "num": "284",
    "slug": "m-pack-creative-extensions-gated-delay",
    "name": "Gated Delay",
    "tagline": "",
@@ -2460,7 +2568,7 @@
    "facets": {}
   },
   {
-   "num": "273",
+   "num": "285",
    "slug": "p-audiomodern-gatelab",
    "name": "Gatelab",
    "tagline": "",
@@ -2469,7 +2577,7 @@
    "facets": {}
   },
   {
-   "num": "274",
+   "num": "286",
    "slug": "m-user-geiger-lfo",
    "name": "Geiger LFO",
    "tagline": "",
@@ -2478,7 +2586,7 @@
    "facets": {}
   },
   {
-   "num": "275",
+   "num": "287",
    "slug": "p-overloud-gem-echoson",
    "name": "Gem ECHOSON",
    "tagline": "",
@@ -2487,7 +2595,7 @@
    "facets": {}
   },
   {
-   "num": "276",
+   "num": "288",
    "slug": "m-user-glitch-loop",
    "name": "GLITCH LOOP",
    "tagline": "",
@@ -2496,7 +2604,7 @@
    "facets": {}
   },
   {
-   "num": "277",
+   "num": "289",
    "slug": "m-user-glitchera",
    "name": "Glitchera",
    "tagline": "",
@@ -2505,7 +2613,7 @@
    "facets": {}
   },
   {
-   "num": "278",
+   "num": "290",
    "slug": "p-every-something-glosso",
    "name": "glosso",
    "tagline": "",
@@ -2514,7 +2622,7 @@
    "facets": {}
   },
   {
-   "num": "279",
+   "num": "291",
    "slug": "m-pack-building-max-devices-grain-cloud-simpler",
    "name": "Grain Cloud Simpler",
    "tagline": "",
@@ -2523,7 +2631,7 @@
    "facets": {}
   },
   {
-   "num": "280",
+   "num": "292",
    "slug": "p-full-bucket-music-grain-strain",
    "name": "Grain Strain",
    "tagline": "",
@@ -2532,7 +2640,7 @@
    "facets": {}
   },
   {
-   "num": "281",
+   "num": "293",
    "slug": "m-user-grainfreeze",
    "name": "GrainFreeze",
    "tagline": "",
@@ -2541,7 +2649,7 @@
    "facets": {}
   },
   {
-   "num": "282",
+   "num": "294",
    "slug": "m-pack-m4l-granulator-ii-granulator-ii",
    "name": "Granulator II",
    "tagline": "",
@@ -2550,7 +2658,7 @@
    "facets": {}
   },
   {
-   "num": "283",
+   "num": "295",
    "slug": "m-pack-granulator-iii-granulator-iii",
    "name": "Granulator III",
    "tagline": "",
@@ -2559,7 +2667,7 @@
    "facets": {}
   },
   {
-   "num": "284",
+   "num": "296",
    "slug": "m-pack-m4l-granulator-ii-granulatorfollow-ii",
    "name": "GranulatorFollow II",
    "tagline": "",
@@ -2568,7 +2676,7 @@
    "facets": {}
   },
   {
-   "num": "285",
+   "num": "297",
    "slug": "m-pack-m4l-granulator-ii-granulatorinput-ii",
    "name": "GranulatorInput II",
    "tagline": "",
@@ -2577,7 +2685,7 @@
    "facets": {}
   },
   {
-   "num": "286",
+   "num": "298",
    "slug": "m-pack-string-quartet-by-spitfire-audio-group-start",
    "name": "Group Start",
    "tagline": "",
@@ -2586,7 +2694,7 @@
    "facets": {}
   },
   {
-   "num": "287",
+   "num": "299",
    "slug": "p-native-instruments-guitar-rig-7",
    "name": "Guitar Rig 7",
    "tagline": "",
@@ -2595,7 +2703,7 @@
    "facets": {}
   },
   {
-   "num": "288",
+   "num": "300",
    "slug": "p-superlunar-gx-8600",
    "name": "GX-8600",
    "tagline": "",
@@ -2604,7 +2712,7 @@
    "facets": {}
   },
   {
-   "num": "289",
+   "num": "301",
    "slug": "m-user-harmoadaptfilter-j74",
    "name": "HarmoAdaptFilter J74",
    "tagline": "",
@@ -2613,7 +2721,7 @@
    "facets": {}
   },
   {
-   "num": "290",
+   "num": "302",
    "slug": "m-user-harmochord-j74",
    "name": "HarmoChord J74",
    "tagline": "",
@@ -2622,7 +2730,7 @@
    "facets": {}
   },
   {
-   "num": "291",
+   "num": "303",
    "slug": "m-user-harmochordbass-j74",
    "name": "HarmoChordBass J74",
    "tagline": "",
@@ -2631,7 +2739,7 @@
    "facets": {}
   },
   {
-   "num": "292",
+   "num": "304",
    "slug": "m-user-harmochordfilter-j74",
    "name": "HarmoChordFilter J74",
    "tagline": "",
@@ -2640,7 +2748,7 @@
    "facets": {}
   },
   {
-   "num": "293",
+   "num": "305",
    "slug": "m-user-harmochordfilterapi-j74",
    "name": "HarmoChordFilterAPI J74",
    "tagline": "",
@@ -2649,7 +2757,7 @@
    "facets": {}
   },
   {
-   "num": "294",
+   "num": "306",
    "slug": "m-user-harmochordnotesout-j74",
    "name": "HarmoChordNotesOut J74",
    "tagline": "",
@@ -2658,7 +2766,7 @@
    "facets": {}
   },
   {
-   "num": "295",
+   "num": "307",
    "slug": "m-user-harmochordrecv-j74",
    "name": "HarmoChordRecv J74",
    "tagline": "",
@@ -2667,7 +2775,7 @@
    "facets": {}
   },
   {
-   "num": "296",
+   "num": "308",
    "slug": "m-user-harmochordsend-j74",
    "name": "HarmoChordSend J74",
    "tagline": "",
@@ -2676,7 +2784,7 @@
    "facets": {}
   },
   {
-   "num": "297",
+   "num": "309",
    "slug": "m-user-harmodisplay-j74",
    "name": "HarmoDisplay J74",
    "tagline": "",
@@ -2685,7 +2793,7 @@
    "facets": {}
   },
   {
-   "num": "298",
+   "num": "310",
    "slug": "m-user-harmodisplayguitar-j74",
    "name": "HarmoDisplayGuitar J74",
    "tagline": "",
@@ -2694,7 +2802,7 @@
    "facets": {}
   },
   {
-   "num": "299",
+   "num": "311",
    "slug": "m-user-harmoguessscale-j74",
    "name": "HarmoGuessScale J74",
    "tagline": "",
@@ -2703,7 +2811,7 @@
    "facets": {}
   },
   {
-   "num": "300",
+   "num": "312",
    "slug": "m-pack-drone-lab-harmonic-drone-generator",
    "name": "Harmonic Drone Generator",
    "tagline": "",
@@ -2712,7 +2820,7 @@
    "facets": {}
   },
   {
-   "num": "301",
+   "num": "313",
    "slug": "m-user-harmopadfilter-j74",
    "name": "HarmoPadFilter J74",
    "tagline": "",
@@ -2721,7 +2829,7 @@
    "facets": {}
   },
   {
-   "num": "302",
+   "num": "314",
    "slug": "m-user-harmoscale-j74",
    "name": "HarmoScale J74",
    "tagline": "",
@@ -2730,7 +2838,7 @@
    "facets": {}
   },
   {
-   "num": "303",
+   "num": "315",
    "slug": "m-user-harmoscale2chords-j74",
    "name": "HarmoScale2Chords J74",
    "tagline": "",
@@ -2739,7 +2847,7 @@
    "facets": {}
   },
   {
-   "num": "304",
+   "num": "316",
    "slug": "m-user-harmoscalefilter-j74",
    "name": "HarmoScaleFilter J74",
    "tagline": "",
@@ -2748,7 +2856,7 @@
    "facets": {}
   },
   {
-   "num": "305",
+   "num": "317",
    "slug": "m-user-harmoscalefilterapi-j74",
    "name": "HarmoScaleFilterAPI J74",
    "tagline": "",
@@ -2757,7 +2865,7 @@
    "facets": {}
   },
   {
-   "num": "306",
+   "num": "318",
    "slug": "m-user-harmoscalerecv-j74",
    "name": "HarmoScaleRecv J74",
    "tagline": "",
@@ -2766,7 +2874,7 @@
    "facets": {}
   },
   {
-   "num": "307",
+   "num": "319",
    "slug": "m-user-harmoscalesend-j74",
    "name": "HarmoScaleSend J74",
    "tagline": "",
@@ -2775,7 +2883,7 @@
    "facets": {}
   },
   {
-   "num": "308",
+   "num": "320",
    "slug": "m-user-harmotonicfilter-j74",
    "name": "HarmoTonicFilter J74",
    "tagline": "",
@@ -2784,7 +2892,7 @@
    "facets": {}
   },
   {
-   "num": "309",
+   "num": "321",
    "slug": "m-user-hocket-2",
    "name": "Hocket 2",
    "tagline": "",
@@ -2793,7 +2901,7 @@
    "facets": {}
   },
   {
-   "num": "310",
+   "num": "322",
    "slug": "m-user-html-instruments",
    "name": "html instruments",
    "tagline": "",
@@ -2802,7 +2910,7 @@
    "facets": {}
   },
   {
-   "num": "311",
+   "num": "323",
    "slug": "m-pack-building-max-devices-human-lfo",
    "name": "Human LFO",
    "tagline": "",
@@ -2811,7 +2919,7 @@
    "facets": {}
   },
   {
-   "num": "312",
+   "num": "324",
    "slug": "m-pack-building-max-devices-humanizer",
    "name": "Humanizer",
    "tagline": "",
@@ -2820,7 +2928,7 @@
    "facets": {}
   },
   {
-   "num": "313",
+   "num": "325",
    "slug": "p-glitchmachines-hysteresis",
    "name": "Hysteresis",
    "tagline": "",
@@ -2829,7 +2937,7 @@
    "facets": {}
   },
   {
-   "num": "314",
+   "num": "326",
    "slug": "p-waves-idx-intelligent-dynamics",
    "name": "IDX Intelligent Dynamics",
    "tagline": "",
@@ -2838,7 +2946,7 @@
    "facets": {}
   },
   {
-   "num": "315",
+   "num": "327",
    "slug": "p-waves-idx-live-intelligent-dynamics",
    "name": "IDX LIVE Intelligent Dynamics",
    "tagline": "",
@@ -2847,7 +2955,7 @@
    "facets": {}
   },
   {
-   "num": "316",
+   "num": "328",
    "slug": "m-user-image2wavetable",
    "name": "Image2Wavetable",
    "tagline": "",
@@ -2856,7 +2964,7 @@
    "facets": {}
   },
   {
-   "num": "317",
+   "num": "329",
    "slug": "m-user-image2wavetable-1",
    "name": "Image2Wavetable-1",
    "tagline": "",
@@ -2865,7 +2973,7 @@
    "facets": {}
   },
   {
-   "num": "318",
+   "num": "330",
    "slug": "m-user-inflation",
    "name": "Inflation",
    "tagline": "",
@@ -2874,7 +2982,7 @@
    "facets": {}
   },
   {
-   "num": "319",
+   "num": "331",
    "slug": "m-user-inflation-os",
    "name": "Inflation(OS)",
    "tagline": "",
@@ -2883,7 +2991,7 @@
    "facets": {}
   },
   {
-   "num": "320",
+   "num": "332",
    "slug": "p-izotope-insight-2",
    "name": "Insight 2",
    "tagline": "",
@@ -2892,7 +3000,7 @@
    "facets": {}
   },
   {
-   "num": "321",
+   "num": "333",
    "slug": "m-pack-max-for-live-essentials-instant-haus",
    "name": "Instant Haus",
    "tagline": "",
@@ -2901,7 +3009,7 @@
    "facets": {}
   },
   {
-   "num": "322",
+   "num": "334",
    "slug": "m-pack-building-max-devices-introduction",
    "name": "Introduction",
    "tagline": "",
@@ -2910,7 +3018,7 @@
    "facets": {}
   },
   {
-   "num": "323",
+   "num": "335",
    "slug": "m-pack-convolution-reverb-ir-measurement-device",
    "name": "IR Measurement Device",
    "tagline": "",
@@ -2919,7 +3027,7 @@
    "facets": {}
   },
   {
-   "num": "324",
+   "num": "336",
    "slug": "m-user-irrational-delay",
    "name": "Irrational Delay",
    "tagline": "",
@@ -2928,7 +3036,7 @@
    "facets": {}
   },
   {
-   "num": "325",
+   "num": "337",
    "slug": "m-user-j11-tone-resonator-v1",
    "name": "j11-tone-Resonator v1",
    "tagline": "",
@@ -2937,7 +3045,7 @@
    "facets": {}
   },
   {
-   "num": "326",
+   "num": "338",
    "slug": "m-user-j90-1-5",
    "name": "j90 1.5",
    "tagline": "",
@@ -2946,7 +3054,7 @@
    "facets": {}
   },
   {
-   "num": "327",
+   "num": "339",
    "slug": "m-user-j90-1-7",
    "name": "j90 1.7",
    "tagline": "",
@@ -2955,7 +3063,7 @@
    "facets": {}
   },
   {
-   "num": "328",
+   "num": "340",
    "slug": "m-user-jbbl-v3-3",
    "name": "jBBL v3.3",
    "tagline": "",
@@ -2964,7 +3072,7 @@
    "facets": {}
   },
   {
-   "num": "329",
+   "num": "341",
    "slug": "m-user-jbi-phase-v2-7",
    "name": "jBi-Phase v2.7",
    "tagline": "",
@@ -2973,7 +3081,7 @@
    "facets": {}
   },
   {
-   "num": "330",
+   "num": "342",
    "slug": "m-user-jchorus-6-v1-3",
    "name": "jChorus-6 v1.3",
    "tagline": "",
@@ -2982,7 +3090,7 @@
    "facets": {}
   },
   {
-   "num": "331",
+   "num": "343",
    "slug": "m-user-jchorus-6-v1-4",
    "name": "jChorus-6 v1.4",
    "tagline": "",
@@ -2991,7 +3099,7 @@
    "facets": {}
   },
   {
-   "num": "332",
+   "num": "344",
    "slug": "p-ik-multimedia-jcvocalstrip",
    "name": "JCVocalStrip",
    "tagline": "",
@@ -3000,7 +3108,7 @@
    "facets": {}
   },
   {
-   "num": "333",
+   "num": "345",
    "slug": "m-user-jdisperser3-v1-1",
    "name": "jDisperser3 v1.1",
    "tagline": "",
@@ -3009,7 +3117,7 @@
    "facets": {}
   },
   {
-   "num": "334",
+   "num": "346",
    "slug": "m-user-jg-multibanddelay",
    "name": "JG.MultibandDelay",
    "tagline": "",
@@ -3018,7 +3126,7 @@
    "facets": {}
   },
   {
-   "num": "335",
+   "num": "347",
    "slug": "m-user-jg-spectraldelay",
    "name": "JG.SpectralDelay",
    "tagline": "",
@@ -3027,7 +3135,7 @@
    "facets": {}
   },
   {
-   "num": "336",
+   "num": "348",
    "slug": "m-user-jknob-v1-6",
    "name": "jKnob v1.6",
    "tagline": "",
@@ -3036,7 +3144,7 @@
    "facets": {}
   },
   {
-   "num": "337",
+   "num": "349",
    "slug": "m-user-jl3v3ll3r-v1-4",
    "name": "jL3v3ll3r v1.4",
    "tagline": "",
@@ -3045,7 +3153,7 @@
    "facets": {}
   },
   {
-   "num": "338",
+   "num": "350",
    "slug": "m-user-jleslie-v2-8",
    "name": "jLeslie v2.8",
    "tagline": "",
@@ -3054,7 +3162,7 @@
    "facets": {}
   },
   {
-   "num": "339",
+   "num": "351",
    "slug": "m-user-jmackie-feedback-v4-0",
    "name": "jMackie-Feedback v4.0",
    "tagline": "",
@@ -3063,7 +3171,7 @@
    "facets": {}
   },
   {
-   "num": "340",
+   "num": "352",
    "slug": "m-user-jodyssey-v5-2",
    "name": "jOdyssey v5.2",
    "tagline": "",
@@ -3072,7 +3180,7 @@
    "facets": {}
   },
   {
-   "num": "341",
+   "num": "353",
    "slug": "m-user-jodyssey-v6-0",
    "name": "jOdyssey v6.0",
    "tagline": "",
@@ -3081,7 +3189,7 @@
    "facets": {}
   },
   {
-   "num": "342",
+   "num": "354",
    "slug": "m-user-jpalme-v1-2",
    "name": "jPalme v1.2",
    "tagline": "",
@@ -3090,7 +3198,7 @@
    "facets": {}
   },
   {
-   "num": "343",
+   "num": "355",
    "slug": "m-user-jpalme3-v1-2",
    "name": "jPalme3 v1.2",
    "tagline": "",
@@ -3099,7 +3207,7 @@
    "facets": {}
   },
   {
-   "num": "344",
+   "num": "356",
    "slug": "m-user-jpro-v1-2",
    "name": "jPro v1.2",
    "tagline": "",
@@ -3108,7 +3216,7 @@
    "facets": {}
   },
   {
-   "num": "345",
+   "num": "357",
    "slug": "m-user-jrat-v2-0",
    "name": "jRat v2.0",
    "tagline": "",
@@ -3117,7 +3225,7 @@
    "facets": {}
   },
   {
-   "num": "346",
+   "num": "358",
    "slug": "m-user-jrat-v3-1",
    "name": "jRat v3.1",
    "tagline": "",
@@ -3126,7 +3234,7 @@
    "facets": {}
   },
   {
-   "num": "347",
+   "num": "359",
    "slug": "m-pack-connection-kit-json-video",
    "name": "JSON Video",
    "tagline": "",
@@ -3135,7 +3243,7 @@
    "facets": {}
   },
   {
-   "num": "348",
+   "num": "360",
    "slug": "m-pack-connection-kit-json-weather",
    "name": "JSON Weather",
    "tagline": "",
@@ -3144,7 +3252,7 @@
    "facets": {}
   },
   {
-   "num": "349",
+   "num": "361",
    "slug": "m-user-jspring-tank-v1-3",
    "name": "jSpring-Tank v1.3",
    "tagline": "",
@@ -3153,7 +3261,7 @@
    "facets": {}
   },
   {
-   "num": "350",
+   "num": "362",
    "slug": "m-user-jtap-3-1",
    "name": "jTap 3.1",
    "tagline": "",
@@ -3162,7 +3270,7 @@
    "facets": {}
   },
   {
-   "num": "351",
+   "num": "363",
    "slug": "p-arturia-jun-6-v",
    "name": "Jun-6 V",
    "tagline": "",
@@ -3171,7 +3279,7 @@
    "facets": {}
   },
   {
-   "num": "352",
+   "num": "364",
    "slug": "p-fors-junior-lite",
    "name": "Junior-Lite",
    "tagline": "",
@@ -3180,7 +3288,7 @@
    "facets": {}
   },
   {
-   "num": "353",
+   "num": "365",
    "slug": "p-arturia-jup-8-v4",
    "name": "Jup-8 V4",
    "tagline": "",
@@ -3189,7 +3297,7 @@
    "facets": {}
   },
   {
-   "num": "354",
+   "num": "366",
    "slug": "p-arturia-jup-8000-v",
    "name": "Jup-8000 V",
    "tagline": "",
@@ -3198,7 +3306,7 @@
    "facets": {}
   },
   {
-   "num": "355",
+   "num": "367",
    "slug": "m-user-key-detector",
    "name": "Key-Detector",
    "tagline": "",
@@ -3207,7 +3315,7 @@
    "facets": {}
   },
   {
-   "num": "356",
+   "num": "368",
    "slug": "m-user-kglitch",
    "name": "KGlitch",
    "tagline": "",
@@ -3216,7 +3324,7 @@
    "facets": {}
   },
   {
-   "num": "357",
+   "num": "369",
    "slug": "p-puremagnetik-klamur",
    "name": "Klamur",
    "tagline": "",
@@ -3225,7 +3333,7 @@
    "facets": {}
   },
   {
-   "num": "358",
+   "num": "370",
    "slug": "p-native-instruments-kontakt",
    "name": "Kontakt",
    "tagline": "",
@@ -3234,7 +3342,7 @@
    "facets": {}
   },
   {
-   "num": "359",
+   "num": "371",
    "slug": "p-native-instruments-kontakt-7",
    "name": "Kontakt 7",
    "tagline": "",
@@ -3243,7 +3351,7 @@
    "facets": {}
   },
   {
-   "num": "360",
+   "num": "372",
    "slug": "p-native-instruments-kontakt-8",
    "name": "Kontakt 8",
    "tagline": "",
@@ -3252,7 +3360,7 @@
    "facets": {}
   },
   {
-   "num": "361",
+   "num": "373",
    "slug": "p-arturia-korg-ms-20-v",
    "name": "KORG MS-20 V",
    "tagline": "",
@@ -3261,7 +3369,7 @@
    "facets": {}
   },
   {
-   "num": "362",
+   "num": "374",
    "slug": "m-user-l-obliquestrategies-v1-2",
    "name": "L.ObliqueStrategies.v1.2",
    "tagline": "",
@@ -3270,7 +3378,7 @@
    "facets": {}
   },
   {
-   "num": "363",
+   "num": "375",
    "slug": "p-spitfire-audio-labs",
    "name": "LABS",
    "tagline": "",
@@ -3279,7 +3387,7 @@
    "facets": {}
   },
   {
-   "num": "364",
+   "num": "376",
    "slug": "m-user-labyrinth-seq-1-0-0",
    "name": "Labyrinth Seq 1.0.0",
    "tagline": "",
@@ -3288,7 +3396,7 @@
    "facets": {}
   },
   {
-   "num": "365",
+   "num": "377",
    "slug": "p-landr-landr-fx-bass",
    "name": "LANDR FX Bass",
    "tagline": "",
@@ -3297,7 +3405,7 @@
    "facets": {}
   },
   {
-   "num": "366",
+   "num": "378",
    "slug": "p-landr-landr-fx-beats",
    "name": "LANDR FX Beats",
    "tagline": "",
@@ -3306,7 +3414,7 @@
    "facets": {}
   },
   {
-   "num": "367",
+   "num": "379",
    "slug": "p-landr-landr-fx-electric",
    "name": "LANDR FX Electric",
    "tagline": "",
@@ -3315,7 +3423,7 @@
    "facets": {}
   },
   {
-   "num": "368",
+   "num": "380",
    "slug": "p-landr-landr-fx-voice",
    "name": "LANDR FX Voice",
    "tagline": "",
@@ -3324,7 +3432,7 @@
    "facets": {}
   },
   {
-   "num": "369",
+   "num": "381",
    "slug": "m-pack-building-max-devices-launcher",
    "name": "Launcher",
    "tagline": "",
@@ -3333,7 +3441,7 @@
    "facets": {}
   },
   {
-   "num": "370",
+   "num": "382",
    "slug": "m-user-learn-chords",
    "name": "Learn Chords",
    "tagline": "",
@@ -3342,7 +3450,7 @@
    "facets": {}
   },
   {
-   "num": "371",
+   "num": "383",
    "slug": "m-user-learn-scales",
    "name": "Learn Scales",
    "tagline": "",
@@ -3351,7 +3459,7 @@
    "facets": {}
   },
   {
-   "num": "372",
+   "num": "384",
    "slug": "m-pack-connection-kit-lego-mindstorms-ev3",
    "name": "LEGO MINDSTORMS EV3",
    "tagline": "",
@@ -3360,7 +3468,7 @@
    "facets": {}
   },
   {
-   "num": "373",
+   "num": "385",
    "slug": "p-xynth-audio-lephonk",
    "name": "LePhonk",
    "tagline": "",
@@ -3369,7 +3477,7 @@
    "facets": {}
   },
   {
-   "num": "374",
+   "num": "386",
    "slug": "m-builtin-lfo",
    "name": "LFO",
    "tagline": "",
@@ -3378,7 +3486,7 @@
    "facets": {}
   },
   {
-   "num": "375",
+   "num": "387",
    "slug": "m-pack-max-for-live-essentials-lfo",
    "name": "LFO",
    "tagline": "",
@@ -3387,7 +3495,7 @@
    "facets": {}
   },
   {
-   "num": "376",
+   "num": "388",
    "slug": "m-pack-max-for-live-essentials-lfo-midi",
    "name": "LFO MIDI",
    "tagline": "",
@@ -3396,7 +3504,7 @@
    "facets": {}
   },
   {
-   "num": "377",
+   "num": "389",
    "slug": "m-user-lfo-random",
    "name": "LFO Random",
    "tagline": "",
@@ -3405,7 +3513,7 @@
    "facets": {}
   },
   {
-   "num": "378",
+   "num": "390",
    "slug": "m-user-lfo-random-1",
    "name": "LFO Random-1",
    "tagline": "",
@@ -3414,7 +3522,7 @@
    "facets": {}
   },
   {
-   "num": "379",
+   "num": "391",
    "slug": "m-pack-building-max-devices-limiter",
    "name": "Limiter",
    "tagline": "",
@@ -3423,7 +3531,7 @@
    "facets": {}
   },
   {
-   "num": "380",
+   "num": "392",
    "slug": "p-soundtoys-little-microshift",
    "name": "Little MicroShift",
    "tagline": "",
@@ -3432,7 +3540,7 @@
    "facets": {}
   },
   {
-   "num": "381",
+   "num": "393",
    "slug": "p-soundtoys-little-plate",
    "name": "Little Plate",
    "tagline": "",
@@ -3441,7 +3549,7 @@
    "facets": {}
   },
   {
-   "num": "382",
+   "num": "394",
    "slug": "p-soundtoys-little-primaltap",
    "name": "Little PrimalTap",
    "tagline": "",
@@ -3450,7 +3558,7 @@
    "facets": {}
   },
   {
-   "num": "383",
+   "num": "395",
    "slug": "p-soundtoys-little-radiator",
    "name": "Little Radiator",
    "tagline": "",
@@ -3459,7 +3567,7 @@
    "facets": {}
   },
   {
-   "num": "384",
+   "num": "396",
    "slug": "m-pack-connection-kit-littlebits",
    "name": "littleBits",
    "tagline": "",
@@ -3468,7 +3576,7 @@
    "facets": {}
   },
   {
-   "num": "385",
+   "num": "397",
    "slug": "m-user-lode",
    "name": "Lode",
    "tagline": "",
@@ -3477,7 +3585,7 @@
    "facets": {}
   },
   {
-   "num": "386",
+   "num": "398",
    "slug": "p-aberrant-dsp-lofi-oddity",
    "name": "Lofi Oddity",
    "tagline": "",
@@ -3486,7 +3594,7 @@
    "facets": {}
   },
   {
-   "num": "387",
+   "num": "399",
    "slug": "p-jmgsound-lofinity",
    "name": "Lofinity",
    "tagline": "",
@@ -3495,7 +3603,7 @@
    "facets": {}
   },
   {
-   "num": "388",
+   "num": "400",
    "slug": "m-user-lood",
    "name": "Lood",
    "tagline": "",
@@ -3504,7 +3612,7 @@
    "facets": {}
   },
   {
-   "num": "389",
+   "num": "401",
    "slug": "m-pack-building-max-devices-looper",
    "name": "Looper",
    "tagline": "",
@@ -3513,7 +3621,7 @@
    "facets": {}
   },
   {
-   "num": "390",
+   "num": "402",
    "slug": "p-applied-acoustics-systems-lounge-lizard-session-4",
    "name": "Lounge Lizard Session 4",
    "tagline": "",
@@ -3522,7 +3630,7 @@
    "facets": {}
   },
   {
-   "num": "391",
+   "num": "403",
    "slug": "p-gforce-m-tron-pro-iv",
    "name": "M-Tron Pro IV",
    "tagline": "",
@@ -3531,7 +3639,7 @@
    "facets": {}
   },
   {
-   "num": "392",
+   "num": "404",
    "slug": "m-user-m2tm-chords",
    "name": "M2TM Chords",
    "tagline": "",
@@ -3540,7 +3648,7 @@
    "facets": {}
   },
   {
-   "num": "393",
+   "num": "405",
    "slug": "m-user-m2tm-chords-dv",
    "name": "M2TM Chords DV",
    "tagline": "",
@@ -3549,7 +3657,7 @@
    "facets": {}
   },
   {
-   "num": "394",
+   "num": "406",
    "slug": "m-user-m2tm-notes",
    "name": "M2TM Notes",
    "tagline": "",
@@ -3558,7 +3666,7 @@
    "facets": {}
   },
   {
-   "num": "395",
+   "num": "407",
    "slug": "m-user-m2tm-progressions",
    "name": "M2TM Progressions",
    "tagline": "",
@@ -3567,7 +3675,7 @@
    "facets": {}
   },
   {
-   "num": "396",
+   "num": "408",
    "slug": "m-pack-building-max-devices-macro-knob",
    "name": "Macro Knob",
    "tagline": "",
@@ -3576,7 +3684,7 @@
    "facets": {}
   },
   {
-   "num": "397",
+   "num": "409",
    "slug": "p-baby-audio-magic-dice",
    "name": "Magic Dice",
    "tagline": "",
@@ -3585,7 +3693,7 @@
    "facets": {}
   },
   {
-   "num": "398",
+   "num": "410",
    "slug": "p-baby-audio-magic-switch",
    "name": "Magic Switch",
    "tagline": "",
@@ -3594,7 +3702,7 @@
    "facets": {}
   },
   {
-   "num": "399",
+   "num": "411",
    "slug": "p-waves-magma-stressbox",
    "name": "Magma StressBox",
    "tagline": "",
@@ -3603,7 +3711,7 @@
    "facets": {}
   },
   {
-   "num": "400",
+   "num": "412",
    "slug": "p-wildergarden-maim",
    "name": "Maim",
    "tagline": "",
@@ -3612,7 +3720,7 @@
    "facets": {}
   },
   {
-   "num": "401",
+   "num": "413",
    "slug": "m-pack-max-for-live-essentials-map8",
    "name": "Map8",
    "tagline": "",
@@ -3621,7 +3729,7 @@
    "facets": {}
   },
   {
-   "num": "402",
+   "num": "414",
    "slug": "m-pack-building-max-devices-mapping",
    "name": "Mapping",
    "tagline": "",
@@ -3630,7 +3738,7 @@
    "facets": {}
   },
   {
-   "num": "403",
+   "num": "415",
    "slug": "m-user-mapr16x2",
    "name": "Mapr16x2",
    "tagline": "",
@@ -3639,7 +3747,7 @@
    "facets": {}
   },
   {
-   "num": "404",
+   "num": "416",
    "slug": "p-moog-mariana",
    "name": "Mariana",
    "tagline": "",
@@ -3648,7 +3756,7 @@
    "facets": {}
   },
   {
-   "num": "405",
+   "num": "417",
    "slug": "p-native-instruments-massive-x",
    "name": "Massive X",
    "tagline": "",
@@ -3657,7 +3765,7 @@
    "facets": {}
   },
   {
-   "num": "406",
+   "num": "418",
    "slug": "p-karanyi-sounds-matra",
    "name": "Matra",
    "tagline": "",
@@ -3666,7 +3774,7 @@
    "facets": {}
   },
   {
-   "num": "407",
+   "num": "419",
    "slug": "p-arturia-matrix-12-v2",
    "name": "Matrix-12 V2",
    "tagline": "",
@@ -3675,7 +3783,7 @@
    "facets": {}
   },
   {
-   "num": "408",
+   "num": "420",
    "slug": "m-pack-the-forge-by-hecq-max-autopanner",
    "name": "Max AutoPanner",
    "tagline": "",
@@ -3684,7 +3792,7 @@
    "facets": {}
   },
   {
-   "num": "409",
+   "num": "421",
    "slug": "m-pack-the-forge-by-hecq-max-combfilter",
    "name": "Max CombFilter",
    "tagline": "",
@@ -3693,7 +3801,7 @@
    "facets": {}
   },
   {
-   "num": "410",
+   "num": "422",
    "slug": "m-pack-the-forge-by-hecq-max-compressor",
    "name": "Max Compressor",
    "tagline": "",
@@ -3702,7 +3810,7 @@
    "facets": {}
   },
   {
-   "num": "411",
+   "num": "423",
    "slug": "m-pack-the-forge-by-hecq-max-delaytaps",
    "name": "Max DelayTaps",
    "tagline": "",
@@ -3711,7 +3819,7 @@
    "facets": {}
   },
   {
-   "num": "412",
+   "num": "424",
    "slug": "m-pack-the-forge-by-hecq-max-spectralharm",
    "name": "Max SpectralHarm",
    "tagline": "",
@@ -3720,7 +3828,7 @@
    "facets": {}
   },
   {
-   "num": "413",
+   "num": "425",
    "slug": "p-ik-multimedia-mbandcomp",
    "name": "MBandComp",
    "tagline": "",
@@ -3729,7 +3837,7 @@
    "facets": {}
   },
   {
-   "num": "414",
+   "num": "426",
    "slug": "p-ik-multimedia-mbandimage",
    "name": "MBandImage",
    "tagline": "",
@@ -3738,7 +3846,7 @@
    "facets": {}
   },
   {
-   "num": "415",
+   "num": "427",
    "slug": "p-ik-multimedia-mbandlim",
    "name": "MBandLim",
    "tagline": "",
@@ -3747,7 +3855,7 @@
    "facets": {}
   },
   {
-   "num": "416",
+   "num": "428",
    "slug": "m-user-mdd-arpooo-v2",
    "name": "MDD___ARPOoO_V2",
    "tagline": "",
@@ -3756,7 +3864,7 @@
    "facets": {}
   },
   {
-   "num": "417",
+   "num": "429",
    "slug": "m-user-mdd-snake-v3-2-3",
    "name": "MDD___SNAKE_V3.2.3",
    "tagline": "",
@@ -3765,7 +3873,7 @@
    "facets": {}
   },
   {
-   "num": "418",
+   "num": "430",
    "slug": "m-user-mdd-marionnette-1-3",
    "name": "MDD_MARIONNETTE_1.3",
    "tagline": "",
@@ -3774,7 +3882,7 @@
    "facets": {}
   },
   {
-   "num": "419",
+   "num": "431",
    "slug": "p-arturia-mellotron-v",
    "name": "Mellotron V",
    "tagline": "",
@@ -3783,7 +3891,7 @@
    "facets": {}
   },
   {
-   "num": "420",
+   "num": "432",
    "slug": "m-pack-probability-pack-by-sonic-faction-melodic-probability",
    "name": "Melodic Probability",
    "tagline": "",
@@ -3792,7 +3900,7 @@
    "facets": {}
   },
   {
-   "num": "421",
+   "num": "433",
    "slug": "m-pack-creative-extensions-melodic-steps",
    "name": "Melodic Steps",
    "tagline": "",
@@ -3801,7 +3909,7 @@
    "facets": {}
   },
   {
-   "num": "422",
+   "num": "434",
    "slug": "p-arturia-memory-v",
    "name": "Memory V",
    "tagline": "",
@@ -3810,7 +3918,7 @@
    "facets": {}
   },
   {
-   "num": "423",
+   "num": "435",
    "slug": "m-user-mfa-audio-cycler",
    "name": "MFA Audio Cycler",
    "tagline": "",
@@ -3819,7 +3927,7 @@
    "facets": {}
   },
   {
-   "num": "424",
+   "num": "436",
    "slug": "m-user-mfa-audio-s-h",
    "name": "MFA Audio S&H",
    "tagline": "",
@@ -3828,7 +3936,7 @@
    "facets": {}
   },
   {
-   "num": "425",
+   "num": "437",
    "slug": "m-user-mfa-audiodubber",
    "name": "MFA Audiodubber",
    "tagline": "",
@@ -3837,7 +3945,7 @@
    "facets": {}
   },
   {
-   "num": "426",
+   "num": "438",
    "slug": "m-user-mfa-autodubber",
    "name": "MFA Autodubber",
    "tagline": "",
@@ -3846,7 +3954,7 @@
    "facets": {}
   },
   {
-   "num": "427",
+   "num": "439",
    "slug": "m-user-mfa-cheat-code",
    "name": "MFA Cheat Code",
    "tagline": "",
@@ -3855,7 +3963,7 @@
    "facets": {}
   },
   {
-   "num": "428",
+   "num": "440",
    "slug": "m-user-mfa-cosmus",
    "name": "MFA Cosmus",
    "tagline": "",
@@ -3864,7 +3972,7 @@
    "facets": {}
   },
   {
-   "num": "429",
+   "num": "441",
    "slug": "m-user-mfa-errata",
    "name": "MFA Errata",
    "tagline": "",
@@ -3873,7 +3981,7 @@
    "facets": {}
   },
   {
-   "num": "430",
+   "num": "442",
    "slug": "m-user-mfa-follower",
    "name": "MFA Follower",
    "tagline": "",
@@ -3882,7 +3990,7 @@
    "facets": {}
   },
   {
-   "num": "431",
+   "num": "443",
    "slug": "m-user-mfa-gain-tracker",
    "name": "MFA Gain Tracker",
    "tagline": "",
@@ -3891,7 +3999,7 @@
    "facets": {}
   },
   {
-   "num": "432",
+   "num": "444",
    "slug": "m-user-mfa-lfox",
    "name": "MFA LFOx",
    "tagline": "",
@@ -3900,7 +4008,7 @@
    "facets": {}
   },
   {
-   "num": "433",
+   "num": "445",
    "slug": "m-user-mfa-manual-s-h",
    "name": "MFA Manual S&H",
    "tagline": "",
@@ -3909,7 +4017,7 @@
    "facets": {}
   },
   {
-   "num": "434",
+   "num": "446",
    "slug": "m-user-mfa-midi-adsrx",
    "name": "MFA MIDI ADSRx",
    "tagline": "",
@@ -3918,7 +4026,7 @@
    "facets": {}
   },
   {
-   "num": "435",
+   "num": "447",
    "slug": "m-user-mfa-midi-cycler",
    "name": "MFA MIDI Cycler",
    "tagline": "",
@@ -3927,7 +4035,7 @@
    "facets": {}
   },
   {
-   "num": "436",
+   "num": "448",
    "slug": "m-user-mfa-midi-dubber",
    "name": "MFA MIDI Dubber",
    "tagline": "",
@@ -3936,7 +4044,7 @@
    "facets": {}
   },
   {
-   "num": "437",
+   "num": "449",
    "slug": "m-user-mfa-midi-key-tracker",
    "name": "MFA MIDI Key Tracker",
    "tagline": "",
@@ -3945,7 +4053,7 @@
    "facets": {}
   },
   {
-   "num": "438",
+   "num": "450",
    "slug": "m-user-mfa-midi-lfox",
    "name": "MFA MIDI LFOx",
    "tagline": "",
@@ -3954,7 +4062,7 @@
    "facets": {}
   },
   {
-   "num": "439",
+   "num": "451",
    "slug": "m-user-mfa-midi-x-control",
    "name": "MFA MIDI X-Control",
    "tagline": "",
@@ -3963,7 +4071,7 @@
    "facets": {}
   },
   {
-   "num": "440",
+   "num": "452",
    "slug": "m-user-mfa-mutator-free",
    "name": "MFA Mutator Free",
    "tagline": "",
@@ -3972,7 +4080,7 @@
    "facets": {}
   },
   {
-   "num": "441",
+   "num": "453",
    "slug": "m-user-mfa-note-raum",
    "name": "MFA Note Raum",
    "tagline": "",
@@ -3981,7 +4089,7 @@
    "facets": {}
   },
   {
-   "num": "442",
+   "num": "454",
    "slug": "m-user-mfa-solarus",
    "name": "MFA Solarus",
    "tagline": "",
@@ -3990,7 +4098,7 @@
    "facets": {}
   },
   {
-   "num": "443",
+   "num": "455",
    "slug": "m-user-mfa-tactum",
    "name": "MFA Tactum",
    "tagline": "",
@@ -3999,7 +4107,7 @@
    "facets": {}
   },
   {
-   "num": "444",
+   "num": "456",
    "slug": "m-user-mfa-x-control",
    "name": "MFA X-Control",
    "tagline": "",
@@ -4008,7 +4116,7 @@
    "facets": {}
   },
   {
-   "num": "445",
+   "num": "457",
    "slug": "p-ik-multimedia-micr",
    "name": "MicR",
    "tagline": "",
@@ -4017,7 +4125,7 @@
    "facets": {}
   },
   {
-   "num": "446",
+   "num": "458",
    "slug": "m-pack-microtuner-microtuner",
    "name": "Microtuner",
    "tagline": "",
@@ -4026,7 +4134,7 @@
    "facets": {}
   },
   {
-   "num": "447",
+   "num": "459",
    "slug": "m-pack-building-max-devices-midi-echo",
    "name": "MIDI Echo",
    "tagline": "",
@@ -4035,7 +4143,7 @@
    "facets": {}
   },
   {
-   "num": "448",
+   "num": "460",
    "slug": "m-builtin-midi-monitor",
    "name": "MIDI Monitor",
    "tagline": "",
@@ -4044,7 +4152,7 @@
    "facets": {}
   },
   {
-   "num": "449",
+   "num": "461",
    "slug": "m-pack-building-max-devices-midi-routing-input",
    "name": "MIDI Routing Input",
    "tagline": "",
@@ -4053,7 +4161,7 @@
    "facets": {}
   },
   {
-   "num": "450",
+   "num": "462",
    "slug": "m-pack-building-max-devices-midi-routing-output",
    "name": "MIDI Routing Output",
    "tagline": "",
@@ -4062,7 +4170,7 @@
    "facets": {}
   },
   {
-   "num": "451",
+   "num": "463",
    "slug": "m-pack-max-for-live-essentials-midimonitor",
    "name": "MIDIMonitor",
    "tagline": "",
@@ -4071,7 +4179,7 @@
    "facets": {}
   },
   {
-   "num": "452",
+   "num": "464",
    "slug": "p-puremagnetik-mimikod",
    "name": "MimikOD",
    "tagline": "",
@@ -4080,7 +4188,7 @@
    "facets": {}
   },
   {
-   "num": "453",
+   "num": "465",
    "slug": "p-arturia-mini-v3",
    "name": "Mini V3",
    "tagline": "",
@@ -4089,7 +4197,7 @@
    "facets": {}
   },
   {
-   "num": "454",
+   "num": "466",
    "slug": "p-arturia-mini-v4",
    "name": "Mini V4",
    "tagline": "",
@@ -4098,7 +4206,7 @@
    "facets": {}
   },
   {
-   "num": "455",
+   "num": "467",
    "slug": "p-arturia-minibrute-v",
    "name": "MiniBrute V",
    "tagline": "",
@@ -4107,7 +4215,7 @@
    "facets": {}
   },
   {
-   "num": "456",
+   "num": "468",
    "slug": "p-arturia-minifreak-v",
    "name": "MiniFreak V",
    "tagline": "",
@@ -4116,7 +4224,7 @@
    "facets": {}
   },
   {
-   "num": "457",
+   "num": "469",
    "slug": "p-arturia-mix-drums",
    "name": "Mix DRUMS",
    "tagline": "",
@@ -4125,7 +4233,7 @@
    "facets": {}
   },
   {
-   "num": "458",
+   "num": "470",
    "slug": "m-user-mix-matcher",
    "name": "Mix Matcher",
    "tagline": "",
@@ -4134,7 +4242,7 @@
    "facets": {}
   },
   {
-   "num": "459",
+   "num": "471",
    "slug": "m-user-ml-distance",
    "name": "ml.distance",
    "tagline": "",
@@ -4143,7 +4251,7 @@
    "facets": {}
   },
   {
-   "num": "460",
+   "num": "472",
    "slug": "m-pack-string-quartet-by-spitfire-audio-mod-table",
    "name": "Mod Table",
    "tagline": "",
@@ -4152,7 +4260,7 @@
    "facets": {}
   },
   {
-   "num": "461",
+   "num": "473",
    "slug": "p-ik-multimedia-modo-bass-2",
    "name": "MODO BASS 2",
    "tagline": "",
@@ -4161,7 +4269,7 @@
    "facets": {}
   },
   {
-   "num": "462",
+   "num": "474",
    "slug": "p-ik-multimedia-modo-drum",
    "name": "MODO DRUM",
    "tagline": "",
@@ -4170,7 +4278,7 @@
    "facets": {}
   },
   {
-   "num": "463",
+   "num": "475",
    "slug": "p-arturia-modular-v3",
    "name": "Modular V3",
    "tagline": "",
@@ -4179,7 +4287,7 @@
    "facets": {}
   },
   {
-   "num": "464",
+   "num": "476",
    "slug": "m-pack-max-for-live-essentials-mono-sequencer",
    "name": "Mono Sequencer",
    "tagline": "",
@@ -4188,7 +4296,7 @@
    "facets": {}
   },
   {
-   "num": "465",
+   "num": "477",
    "slug": "m-pack-building-max-devices-mono-synth",
    "name": "Mono Synth",
    "tagline": "",
@@ -4197,7 +4305,7 @@
    "facets": {}
   },
   {
-   "num": "466",
+   "num": "478",
    "slug": "p-audiothing-moon-echo",
    "name": "Moon Echo",
    "tagline": "",
@@ -4206,7 +4314,7 @@
    "facets": {}
   },
   {
-   "num": "467",
+   "num": "479",
    "slug": "m-pack-building-max-devices-mpe",
    "name": "MPE",
    "tagline": "",
@@ -4215,7 +4323,7 @@
    "facets": {}
   },
   {
-   "num": "468",
+   "num": "480",
    "slug": "m-builtin-mpe-control",
    "name": "MPE Control",
    "tagline": "",
@@ -4224,7 +4332,7 @@
    "facets": {}
   },
   {
-   "num": "469",
+   "num": "481",
    "slug": "m-pack-string-quartet-by-spitfire-audio-mpe-note-off",
    "name": "MPE Note Off",
    "tagline": "",
@@ -4233,7 +4341,7 @@
    "facets": {}
   },
   {
-   "num": "470",
+   "num": "482",
    "slug": "m-pack-stray-cats-collection-by-max-for-cats-mse",
    "name": "MSE",
    "tagline": "",
@@ -4242,7 +4350,7 @@
    "facets": {}
   },
   {
-   "num": "471",
+   "num": "483",
    "slug": "m-pack-max-for-live-essentials-multi",
    "name": "Multi",
    "tagline": "",
@@ -4251,7 +4359,7 @@
    "facets": {}
   },
   {
-   "num": "472",
+   "num": "484",
    "slug": "m-pack-max-for-live-essentials-multimap",
    "name": "MultiMap",
    "tagline": "",
@@ -4260,7 +4368,7 @@
    "facets": {}
   },
   {
-   "num": "473",
+   "num": "485",
    "slug": "m-user-multimapper32audio-v2-7",
    "name": "MultiMapper32Audio V2.7",
    "tagline": "",
@@ -4269,7 +4377,7 @@
    "facets": {}
   },
   {
-   "num": "474",
+   "num": "486",
    "slug": "m-user-multisquisher",
    "name": "MultiSquisher",
    "tagline": "",
@@ -4278,7 +4386,7 @@
    "facets": {}
   },
   {
-   "num": "475",
+   "num": "487",
    "slug": "m-pack-building-max-devices-naive",
    "name": "Naive",
    "tagline": "",
@@ -4287,7 +4395,7 @@
    "facets": {}
   },
   {
-   "num": "476",
+   "num": "488",
    "slug": "p-neutone-neutone-fx",
    "name": "Neutone FX",
    "tagline": "",
@@ -4296,7 +4404,7 @@
    "facets": {}
   },
   {
-   "num": "477",
+   "num": "489",
    "slug": "p-neutone-neutone-morpho",
    "name": "Neutone Morpho",
    "tagline": "",
@@ -4305,7 +4413,7 @@
    "facets": {}
   },
   {
-   "num": "478",
+   "num": "490",
    "slug": "p-izotope-neutron-4-elements",
    "name": "Neutron 4 Elements",
    "tagline": "",
@@ -4314,7 +4422,7 @@
    "facets": {}
   },
   {
-   "num": "479",
+   "num": "491",
    "slug": "m-user-nirvana",
    "name": "Nirvana",
    "tagline": "",
@@ -4323,7 +4431,7 @@
    "facets": {}
   },
   {
-   "num": "480",
+   "num": "492",
    "slug": "m-user-nirvana-c",
    "name": "Nirvana C",
    "tagline": "",
@@ -4332,7 +4440,7 @@
    "facets": {}
   },
   {
-   "num": "481",
+   "num": "493",
    "slug": "m-user-nirvana-sm",
    "name": "Nirvana SM",
    "tagline": "",
@@ -4341,7 +4449,7 @@
    "facets": {}
   },
   {
-   "num": "482",
+   "num": "494",
    "slug": "m-user-nirvanafx",
    "name": "NirvanaFX",
    "tagline": "",
@@ -4350,7 +4458,7 @@
    "facets": {}
   },
   {
-   "num": "483",
+   "num": "495",
    "slug": "m-user-nirvanafx-c",
    "name": "NirvanaFX C",
    "tagline": "",
@@ -4359,7 +4467,7 @@
    "facets": {}
   },
   {
-   "num": "484",
+   "num": "496",
    "slug": "m-user-nirvanafx-sm",
    "name": "NirvanaFX SM",
    "tagline": "",
@@ -4368,7 +4476,7 @@
    "facets": {}
   },
   {
-   "num": "485",
+   "num": "497",
    "slug": "m-user-no-input-synth",
    "name": "No_Input Synth",
    "tagline": "",
@@ -4377,7 +4485,7 @@
    "facets": {}
   },
   {
-   "num": "486",
+   "num": "498",
    "slug": "m-pack-building-max-devices-noise-adder",
    "name": "Noise Adder",
    "tagline": "",
@@ -4386,7 +4494,7 @@
    "facets": {}
   },
   {
-   "num": "487",
+   "num": "499",
    "slug": "m-pack-building-max-devices-note-change-colors",
    "name": "Note Change Colors",
    "tagline": "",
@@ -4395,7 +4503,7 @@
    "facets": {}
   },
   {
-   "num": "488",
+   "num": "500",
    "slug": "m-pack-building-max-devices-note-doubler",
    "name": "Note Doubler",
    "tagline": "",
@@ -4404,7 +4512,7 @@
    "facets": {}
   },
   {
-   "num": "489",
+   "num": "501",
    "slug": "m-builtin-note-echo",
    "name": "Note Echo",
    "tagline": "",
@@ -4413,7 +4521,7 @@
    "facets": {}
   },
   {
-   "num": "490",
+   "num": "502",
    "slug": "m-pack-max-for-live-essentials-note-echo",
    "name": "Note Echo",
    "tagline": "",
@@ -4422,7 +4530,7 @@
    "facets": {}
   },
   {
-   "num": "491",
+   "num": "503",
    "slug": "m-pack-building-max-devices-note-monitor",
    "name": "Note Monitor",
    "tagline": "",
@@ -4431,7 +4539,7 @@
    "facets": {}
   },
   {
-   "num": "492",
+   "num": "504",
    "slug": "m-pack-building-max-devices-note-player",
    "name": "Note Player",
    "tagline": "",
@@ -4440,7 +4548,7 @@
    "facets": {}
   },
   {
-   "num": "493",
+   "num": "505",
    "slug": "m-user-note-triggered-modulator",
    "name": "Note Triggered Modulator",
    "tagline": "",
@@ -4449,7 +4557,7 @@
    "facets": {}
   },
   {
-   "num": "494",
+   "num": "506",
    "slug": "m-pack-building-max-devices-notes-api",
    "name": "Notes API",
    "tagline": "",
@@ -4458,7 +4566,7 @@
    "facets": {}
   },
   {
-   "num": "495",
+   "num": "507",
    "slug": "m-user-nts-streamer",
    "name": "NTS Streamer",
    "tagline": "",
@@ -4467,7 +4575,7 @@
    "facets": {}
   },
   {
-   "num": "496",
+   "num": "508",
    "slug": "m-pack-building-max-devices-octave",
    "name": "Octave",
    "tagline": "",
@@ -4476,7 +4584,7 @@
    "facets": {}
   },
   {
-   "num": "497",
+   "num": "509",
    "slug": "m-pack-building-max-devices-octave-adder",
    "name": "Octave Adder",
    "tagline": "",
@@ -4485,7 +4593,7 @@
    "facets": {}
   },
   {
-   "num": "498",
+   "num": "510",
    "slug": "p-audiothing-octaves",
    "name": "Octaves",
    "tagline": "",
@@ -4494,7 +4602,7 @@
    "facets": {}
   },
   {
-   "num": "499",
+   "num": "511",
    "slug": "p-arturia-op-xa-v",
    "name": "OP-Xa V",
    "tagline": "",
@@ -4503,7 +4611,7 @@
    "facets": {}
   },
   {
-   "num": "500",
+   "num": "512",
    "slug": "m-pack-connection-kit-osc-leap-motion",
    "name": "OSC Leap Motion",
    "tagline": "",
@@ -4512,7 +4620,7 @@
    "facets": {}
   },
   {
-   "num": "501",
+   "num": "513",
    "slug": "m-pack-connection-kit-osc-midi-send",
    "name": "OSC MIDI Send",
    "tagline": "",
@@ -4521,7 +4629,7 @@
    "facets": {}
   },
   {
-   "num": "502",
+   "num": "514",
    "slug": "m-pack-connection-kit-osc-monitor",
    "name": "OSC Monitor",
    "tagline": "",
@@ -4530,7 +4638,7 @@
    "facets": {}
   },
   {
-   "num": "503",
+   "num": "515",
    "slug": "m-pack-connection-kit-osc-send",
    "name": "OSC Send",
    "tagline": "",
@@ -4539,7 +4647,7 @@
    "facets": {}
   },
   {
-   "num": "504",
+   "num": "516",
    "slug": "m-pack-connection-kit-osc-touchosc",
    "name": "OSC TouchOSC",
    "tagline": "",
@@ -4548,7 +4656,7 @@
    "facets": {}
   },
   {
-   "num": "505",
+   "num": "517",
    "slug": "m-user-oscillosope-v1-4",
    "name": "Oscillosope V1.4",
    "tagline": "",
@@ -4557,7 +4665,7 @@
    "facets": {}
   },
   {
-   "num": "506",
+   "num": "518",
    "slug": "m-pack-building-max-devices-overdrive",
    "name": "Overdrive",
    "tagline": "",
@@ -4566,7 +4674,7 @@
    "facets": {}
   },
   {
-   "num": "507",
+   "num": "519",
    "slug": "m-user-oxide-v1-02",
    "name": "Oxide v1.02",
    "tagline": "",
@@ -4575,7 +4683,7 @@
    "facets": {}
   },
   {
-   "num": "508",
+   "num": "520",
    "slug": "p-izotope-ozone-11-elements",
    "name": "Ozone 11 Elements",
    "tagline": "",
@@ -4584,7 +4692,7 @@
    "facets": {}
   },
   {
-   "num": "509",
+   "num": "521",
    "slug": "p-izotope-ozone-11-equalizer",
    "name": "Ozone 11 Equalizer",
    "tagline": "",
@@ -4593,7 +4701,7 @@
    "facets": {}
   },
   {
-   "num": "510",
+   "num": "522",
    "slug": "p-izotope-ozone-imager-2",
    "name": "Ozone Imager 2",
    "tagline": "",
@@ -4602,7 +4710,7 @@
    "facets": {}
   },
   {
-   "num": "511",
+   "num": "523",
    "slug": "p-audiomodern-panflow",
    "name": "Panflow",
    "tagline": "",
@@ -4611,7 +4719,7 @@
    "facets": {}
   },
   {
-   "num": "512",
+   "num": "524",
    "slug": "m-pack-building-max-devices-panner",
    "name": "Panner",
    "tagline": "",
@@ -4620,7 +4728,7 @@
    "facets": {}
   },
   {
-   "num": "513",
+   "num": "525",
    "slug": "p-moonwave-parallax",
    "name": "Parallax",
    "tagline": "",
@@ -4629,7 +4737,7 @@
    "facets": {}
   },
   {
-   "num": "514",
+   "num": "526",
    "slug": "p-puremagnetik-partikl",
    "name": "Partikl",
    "tagline": "",
@@ -4638,7 +4746,7 @@
    "facets": {}
   },
   {
-   "num": "515",
+   "num": "527",
    "slug": "p-puremagnetik-pastfabric2",
    "name": "Pastfabric2",
    "tagline": "",
@@ -4647,7 +4755,7 @@
    "facets": {}
   },
   {
-   "num": "516",
+   "num": "528",
    "slug": "m-pack-generators-by-iftah-patterns-by-iftah",
    "name": "Patterns by Iftah",
    "tagline": "",
@@ -4656,7 +4764,7 @@
    "facets": {}
   },
   {
-   "num": "517",
+   "num": "529",
    "slug": "p-full-bucket-music-pecs",
    "name": "PECS",
    "tagline": "",
@@ -4665,7 +4773,7 @@
    "facets": {}
   },
   {
-   "num": "518",
+   "num": "530",
    "slug": "m-pack-upright-piano-by-spitfire-audio-pedal-noise",
    "name": "Pedal Noise",
    "tagline": "",
@@ -4674,7 +4782,7 @@
    "facets": {}
   },
   {
-   "num": "519",
+   "num": "531",
    "slug": "m-pack-performance-pack-by-iftah-performer",
    "name": "Performer",
    "tagline": "",
@@ -4683,7 +4791,7 @@
    "facets": {}
   },
   {
-   "num": "520",
+   "num": "532",
    "slug": "p-puremagnetik-permute",
    "name": "Permute",
    "tagline": "",
@@ -4692,7 +4800,7 @@
    "facets": {}
   },
   {
-   "num": "521",
+   "num": "533",
    "slug": "m-pack-midi-tools-by-philip-meyer-phase-pattern",
    "name": "Phase Pattern",
    "tagline": "",
@@ -4701,7 +4809,7 @@
    "facets": {}
   },
   {
-   "num": "522",
+   "num": "534",
    "slug": "p-soundtoys-phasemistress",
    "name": "PhaseMistress",
    "tagline": "",
@@ -4710,7 +4818,7 @@
    "facets": {}
   },
   {
-   "num": "523",
+   "num": "535",
    "slug": "p-arturia-phaser-bi-tron",
    "name": "Phaser BI-TRON",
    "tagline": "",
@@ -4719,7 +4827,7 @@
    "facets": {}
   },
   {
-   "num": "524",
+   "num": "536",
    "slug": "m-pack-upright-piano-by-spitfire-audio-piano-pedal-trigger",
    "name": "Piano Pedal Trigger",
    "tagline": "",
@@ -4728,7 +4836,7 @@
    "facets": {}
   },
   {
-   "num": "525",
+   "num": "537",
    "slug": "p-arturia-piano-v3",
    "name": "Piano V3",
    "tagline": "",
@@ -4737,7 +4845,7 @@
    "facets": {}
   },
   {
-   "num": "526",
+   "num": "538",
    "slug": "p-arturia-pigments",
    "name": "Pigments",
    "tagline": "",
@@ -4746,7 +4854,7 @@
    "facets": {}
   },
   {
-   "num": "527",
+   "num": "539",
    "slug": "p-baby-audio-pitch-drift",
    "name": "Pitch Drift",
    "tagline": "",
@@ -4755,7 +4863,7 @@
    "facets": {}
   },
   {
-   "num": "528",
+   "num": "540",
    "slug": "m-pack-creative-extensions-pitch-hack",
    "name": "Pitch Hack",
    "tagline": "",
@@ -4764,7 +4872,7 @@
    "facets": {}
   },
   {
-   "num": "529",
+   "num": "541",
    "slug": "m-pack-building-max-devices-pitch-shifter",
    "name": "Pitch Shifter",
    "tagline": "",
@@ -4773,7 +4881,7 @@
    "facets": {}
   },
   {
-   "num": "530",
+   "num": "542",
    "slug": "p-arturia-pitch-shifter-910",
    "name": "Pitch SHIFTER-910",
    "tagline": "",
@@ -4782,7 +4890,7 @@
    "facets": {}
   },
   {
-   "num": "531",
+   "num": "543",
    "slug": "m-pack-max-for-live-essentials-pitchdrop",
    "name": "PitchDrop",
    "tagline": "",
@@ -4791,7 +4899,7 @@
    "facets": {}
   },
   {
-   "num": "532",
+   "num": "544",
    "slug": "m-pack-pitchloop89-pitchloop89",
    "name": "PitchLoop89",
    "tagline": "",
@@ -4800,7 +4908,7 @@
    "facets": {}
   },
   {
-   "num": "533",
+   "num": "545",
    "slug": "p-session-loops-pitchnet",
    "name": "PitchNet",
    "tagline": "",
@@ -4809,7 +4917,7 @@
    "facets": {}
   },
   {
-   "num": "534",
+   "num": "546",
    "slug": "p-fors-pivot-lite",
    "name": "Pivot-Lite",
    "tagline": "",
@@ -4818,7 +4926,7 @@
    "facets": {}
   },
   {
-   "num": "535",
+   "num": "547",
    "slug": "m-pack-building-max-devices-plate-reverb",
    "name": "Plate Reverb",
    "tagline": "",
@@ -4827,7 +4935,7 @@
    "facets": {}
   },
   {
-   "num": "536",
+   "num": "548",
    "slug": "m-user-pluck",
    "name": "Pluck",
    "tagline": "",
@@ -4836,7 +4944,7 @@
    "facets": {}
   },
   {
-   "num": "537",
+   "num": "549",
    "slug": "m-pack-the-forge-by-hecq-pluggofuzz",
    "name": "PluggoFuzz",
    "tagline": "",
@@ -4845,7 +4953,7 @@
    "facets": {}
   },
   {
-   "num": "538",
+   "num": "550",
    "slug": "m-pack-creative-extensions-poli",
    "name": "Poli",
    "tagline": "",
@@ -4854,7 +4962,7 @@
    "facets": {}
   },
   {
-   "num": "539",
+   "num": "551",
    "slug": "m-pack-building-max-devices-poly-synth",
    "name": "Poly Synth",
    "tagline": "",
@@ -4863,7 +4971,7 @@
    "facets": {}
   },
   {
-   "num": "540",
+   "num": "552",
    "slug": "m-pack-midi-tools-by-philip-meyer-polyrhythm",
    "name": "Polyrhythm",
    "tagline": "",
@@ -4872,7 +4980,7 @@
    "facets": {}
   },
   {
-   "num": "541",
+   "num": "553",
    "slug": "m-user-polyrhythmus-v1-01",
    "name": "polyrhythmus v1.01",
    "tagline": "",
@@ -4881,7 +4989,7 @@
    "facets": {}
   },
   {
-   "num": "542",
+   "num": "554",
    "slug": "m-user-potee",
    "name": "Potee",
    "tagline": "",
@@ -4890,7 +4998,7 @@
    "facets": {}
   },
   {
-   "num": "543",
+   "num": "555",
    "slug": "p-arturia-pre-1973",
    "name": "Pre 1973",
    "tagline": "",
@@ -4899,7 +5007,7 @@
    "facets": {}
   },
   {
-   "num": "544",
+   "num": "556",
    "slug": "p-arturia-pre-trida",
    "name": "Pre TridA",
    "tagline": "",
@@ -4908,7 +5016,7 @@
    "facets": {}
   },
   {
-   "num": "545",
+   "num": "557",
    "slug": "p-arturia-pre-v76",
    "name": "Pre V76",
    "tagline": "",
@@ -4917,7 +5025,7 @@
    "facets": {}
   },
   {
-   "num": "546",
+   "num": "558",
    "slug": "m-pack-performance-pack-by-iftah-prearranger",
    "name": "Prearranger",
    "tagline": "",
@@ -4926,7 +5034,7 @@
    "facets": {}
   },
   {
-   "num": "547",
+   "num": "559",
    "slug": "p-ik-multimedia-precl",
    "name": "PreCL",
    "tagline": "",
@@ -4935,7 +5043,7 @@
    "facets": {}
   },
   {
-   "num": "548",
+   "num": "560",
    "slug": "m-user-premo",
    "name": "Premo",
    "tagline": "",
@@ -4944,7 +5052,7 @@
    "facets": {}
   },
   {
-   "num": "549",
+   "num": "561",
    "slug": "m-pack-probability-pack-by-sonic-faction-probability-arp",
    "name": "Probability Arp",
    "tagline": "",
@@ -4953,7 +5061,7 @@
    "facets": {}
   },
   {
-   "num": "550",
+   "num": "562",
    "slug": "m-user-probee",
    "name": "Probee",
    "tagline": "",
@@ -4962,7 +5070,7 @@
    "facets": {}
   },
   {
-   "num": "551",
+   "num": "563",
    "slug": "m-user-probee-1",
    "name": "Probee-1",
    "tagline": "",
@@ -4971,7 +5079,7 @@
    "facets": {}
   },
   {
-   "num": "552",
+   "num": "564",
    "slug": "m-user-program-change",
    "name": "Program Change",
    "tagline": "",
@@ -4980,7 +5088,7 @@
    "facets": {}
   },
   {
-   "num": "553",
+   "num": "565",
    "slug": "p-arturia-prophet-5-v",
    "name": "Prophet-5 V",
    "tagline": "",
@@ -4989,7 +5097,7 @@
    "facets": {}
   },
   {
-   "num": "554",
+   "num": "566",
    "slug": "p-arturia-prophet-vs-v",
    "name": "Prophet-VS V",
    "tagline": "",
@@ -4998,7 +5106,7 @@
    "facets": {}
   },
   {
-   "num": "555",
+   "num": "567",
    "slug": "p-arturia-pure-lofi",
    "name": "Pure LoFi",
    "tagline": "",
@@ -5007,7 +5115,16 @@
    "facets": {}
   },
   {
-   "num": "556",
+   "num": "568",
+   "slug": "p-arturia-pure-sub",
+   "name": "Pure SUB",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "569",
    "slug": "m-user-pyr-by-iftah-1-2",
    "name": "Pyr by Iftah 1.2",
    "tagline": "",
@@ -5016,7 +5133,7 @@
    "facets": {}
   },
   {
-   "num": "557",
+   "num": "570",
    "slug": "m-pack-stray-cats-collection-by-max-for-cats-quad",
    "name": "Quad",
    "tagline": "",
@@ -5025,7 +5142,7 @@
    "facets": {}
   },
   {
-   "num": "558",
+   "num": "571",
    "slug": "p-klevgrand-r0verb",
    "name": "R0Verb",
    "tagline": "",
@@ -5034,7 +5151,7 @@
    "facets": {}
   },
   {
-   "num": "559",
+   "num": "572",
    "slug": "m-user-radio-garden",
    "name": "Radio Garden",
    "tagline": "",
@@ -5043,7 +5160,7 @@
    "facets": {}
   },
   {
-   "num": "560",
+   "num": "573",
    "slug": "p-soundevicedigital-randomachine",
    "name": "Randomachine",
    "tagline": "",
@@ -5052,7 +5169,7 @@
    "facets": {}
   },
   {
-   "num": "561",
+   "num": "574",
    "slug": "m-user-randomise-session-colours",
    "name": "Randomise Session Colours",
    "tagline": "",
@@ -5061,7 +5178,7 @@
    "facets": {}
   },
   {
-   "num": "562",
+   "num": "575",
    "slug": "p-native-instruments-raum",
    "name": "Raum",
    "tagline": "",
@@ -5070,7 +5187,7 @@
    "facets": {}
   },
   {
-   "num": "563",
+   "num": "576",
    "slug": "m-user-ravel-1-1",
    "name": "Ravel 1.1",
    "tagline": "",
@@ -5079,7 +5196,7 @@
    "facets": {}
   },
   {
-   "num": "564",
+   "num": "577",
    "slug": "p-analogobsession-razorclip",
    "name": "RazorClip",
    "tagline": "",
@@ -5088,7 +5205,7 @@
    "facets": {}
   },
   {
-   "num": "565",
+   "num": "578",
    "slug": "m-pack-creative-extensions-re-enveloper",
    "name": "Re-Enveloper",
    "tagline": "",
@@ -5097,7 +5214,7 @@
    "facets": {}
   },
   {
-   "num": "566",
+   "num": "579",
    "slug": "p-native-instruments-reaktor-6",
    "name": "Reaktor 6",
    "tagline": "",
@@ -5106,7 +5223,7 @@
    "facets": {}
   },
   {
-   "num": "567",
+   "num": "580",
    "slug": "p-native-instruments-reaktor-6-fx",
    "name": "Reaktor 6 FX",
    "tagline": "",
@@ -5115,7 +5232,25 @@
    "facets": {}
   },
   {
-   "num": "568",
+   "num": "581",
+   "slug": "p-reason-studios-reason-rack-plugin",
+   "name": "Reason Rack Plugin",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "582",
+   "slug": "p-reason-studios-reason-rack-plugin-effect",
+   "name": "Reason Rack Plugin Effect",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "583",
    "slug": "p-audiothing-reels",
    "name": "Reels",
    "tagline": "",
@@ -5124,7 +5259,7 @@
    "facets": {}
   },
   {
-   "num": "569",
+   "num": "584",
    "slug": "p-izotope-relay",
    "name": "Relay",
    "tagline": "",
@@ -5133,7 +5268,7 @@
    "facets": {}
   },
   {
-   "num": "570",
+   "num": "585",
    "slug": "p-analogobsession-relife",
    "name": "ReLife",
    "tagline": "",
@@ -5142,7 +5277,7 @@
    "facets": {}
   },
   {
-   "num": "571",
+   "num": "586",
    "slug": "p-puremagnetik-replicas",
    "name": "Replicas",
    "tagline": "",
@@ -5151,7 +5286,7 @@
    "facets": {}
   },
   {
-   "num": "572",
+   "num": "587",
    "slug": "p-native-instruments-replika",
    "name": "Replika",
    "tagline": "",
@@ -5160,7 +5295,7 @@
    "facets": {}
   },
   {
-   "num": "573",
+   "num": "588",
    "slug": "m-user-resampler-pro",
    "name": "Resampler Pro",
    "tagline": "",
@@ -5169,7 +5304,7 @@
    "facets": {}
   },
   {
-   "num": "574",
+   "num": "589",
    "slug": "p-ik-multimedia-resing",
    "name": "ReSing",
    "tagline": "",
@@ -5178,7 +5313,7 @@
    "facets": {}
   },
   {
-   "num": "575",
+   "num": "590",
    "slug": "m-pack-midi-tools-by-philip-meyer-retrigger",
    "name": "Retrigger",
    "tagline": "",
@@ -5187,7 +5322,7 @@
    "facets": {}
   },
   {
-   "num": "576",
+   "num": "591",
    "slug": "p-arturia-rev-intensity",
    "name": "Rev INTENSITY",
    "tagline": "",
@@ -5196,7 +5331,7 @@
    "facets": {}
   },
   {
-   "num": "577",
+   "num": "592",
    "slug": "p-arturia-rev-lx-24",
    "name": "Rev LX-24",
    "tagline": "",
@@ -5205,7 +5340,7 @@
    "facets": {}
   },
   {
-   "num": "578",
+   "num": "593",
    "slug": "p-arturia-rev-ocean",
    "name": "Rev OCEAN",
    "tagline": "",
@@ -5214,7 +5349,7 @@
    "facets": {}
   },
   {
-   "num": "579",
+   "num": "594",
    "slug": "p-arturia-rev-plate-140",
    "name": "Rev PLATE-140",
    "tagline": "",
@@ -5223,7 +5358,7 @@
    "facets": {}
   },
   {
-   "num": "580",
+   "num": "595",
    "slug": "p-arturia-rev-spring-636",
    "name": "Rev SPRING-636",
    "tagline": "",
@@ -5232,7 +5367,7 @@
    "facets": {}
   },
   {
-   "num": "581",
+   "num": "596",
    "slug": "m-user-rhythmic-crazy-slicer",
    "name": "Rhythmic Crazy Slicer",
    "tagline": "",
@@ -5241,7 +5376,7 @@
    "facets": {}
   },
   {
-   "num": "582",
+   "num": "597",
    "slug": "m-pack-probability-pack-by-sonic-faction-rhythmic-probability",
    "name": "Rhythmic Probability",
    "tagline": "",
@@ -5250,7 +5385,7 @@
    "facets": {}
   },
   {
-   "num": "583",
+   "num": "598",
    "slug": "m-pack-sequencers-rhythmic-steps",
    "name": "Rhythmic Steps",
    "tagline": "",
@@ -5259,7 +5394,7 @@
    "facets": {}
   },
   {
-   "num": "584",
+   "num": "599",
    "slug": "p-arturia-rotary-cls-222",
    "name": "Rotary CLS-222",
    "tagline": "",
@@ -5268,7 +5403,7 @@
    "facets": {}
   },
   {
-   "num": "585",
+   "num": "600",
    "slug": "m-pack-cv-tools-rotating-rhythm-generator",
    "name": "Rotating Rhythm Generator",
    "tagline": "",
@@ -5277,7 +5412,7 @@
    "facets": {}
   },
   {
-   "num": "586",
+   "num": "601",
    "slug": "p-ik-multimedia-sampletank-4",
    "name": "SampleTank 4",
    "tagline": "",
@@ -5286,7 +5421,7 @@
    "facets": {}
   },
   {
-   "num": "587",
+   "num": "602",
    "slug": "p-ik-multimedia-satx",
    "name": "SatX",
    "tagline": "",
@@ -5295,7 +5430,7 @@
    "facets": {}
   },
   {
-   "num": "588",
+   "num": "603",
    "slug": "m-user-schaeffer-s-nightmare",
    "name": "Schaeffer's Nightmare",
    "tagline": "",
@@ -5304,7 +5439,7 @@
    "facets": {}
   },
   {
-   "num": "589",
+   "num": "604",
    "slug": "m-user-scratchbacker-v3",
    "name": "ScratchBacker-v3",
    "tagline": "",
@@ -5313,7 +5448,7 @@
    "facets": {}
   },
   {
-   "num": "590",
+   "num": "605",
    "slug": "m-user-sektor",
    "name": "Sektor",
    "tagline": "",
@@ -5322,7 +5457,7 @@
    "facets": {}
   },
   {
-   "num": "591",
+   "num": "606",
    "slug": "m-user-select-map-single-variation-audio-v1-abletondrummer",
    "name": "Select + MAP Single Variation AUDIO V1 AbletonDrummer",
    "tagline": "",
@@ -5331,7 +5466,7 @@
    "facets": {}
   },
   {
-   "num": "592",
+   "num": "607",
    "slug": "m-user-select-map-single-variation-midi-v1-abletondrummer",
    "name": "Select + MAP Single Variation MIDI V1 AbletonDrummer ",
    "tagline": "",
@@ -5340,7 +5475,7 @@
    "facets": {}
   },
   {
-   "num": "593",
+   "num": "608",
    "slug": "p-arturia-sem-v2",
    "name": "SEM V2",
    "tagline": "",
@@ -5349,7 +5484,7 @@
    "facets": {}
   },
   {
-   "num": "594",
+   "num": "609",
    "slug": "p-arturia-sem-v3",
    "name": "SEM V3",
    "tagline": "",
@@ -5358,7 +5493,7 @@
    "facets": {}
   },
   {
-   "num": "595",
+   "num": "610",
    "slug": "m-pack-stray-cats-collection-by-max-for-cats-seq8",
    "name": "Seq8",
    "tagline": "",
@@ -5367,7 +5502,7 @@
    "facets": {}
   },
   {
-   "num": "596",
+   "num": "611",
    "slug": "m-builtin-shaper",
    "name": "Shaper",
    "tagline": "",
@@ -5376,7 +5511,7 @@
    "facets": {}
   },
   {
-   "num": "597",
+   "num": "612",
    "slug": "m-builtin-shaper-midi",
    "name": "Shaper MIDI",
    "tagline": "",
@@ -5385,7 +5520,7 @@
    "facets": {}
   },
   {
-   "num": "598",
+   "num": "613",
    "slug": "m-user-shift",
    "name": "Shift",
    "tagline": "",
@@ -5394,7 +5529,7 @@
    "facets": {}
   },
   {
-   "num": "599",
+   "num": "614",
    "slug": "p-audio-damage-inc-shinronin",
    "name": "ShinRonin",
    "tagline": "",
@@ -5403,7 +5538,7 @@
    "facets": {}
   },
   {
-   "num": "600",
+   "num": "615",
    "slug": "m-pack-building-max-devices-side-drive",
    "name": "Side Drive",
    "tagline": "",
@@ -5412,7 +5547,7 @@
    "facets": {}
   },
   {
-   "num": "601",
+   "num": "616",
    "slug": "m-pack-building-max-devices-sidechain-modulator",
    "name": "Sidechain Modulator",
    "tagline": "",
@@ -5421,7 +5556,7 @@
    "facets": {}
   },
   {
-   "num": "602",
+   "num": "617",
    "slug": "m-pack-building-max-devices-simpler-slices",
    "name": "Simpler Slices",
    "tagline": "",
@@ -5430,7 +5565,7 @@
    "facets": {}
   },
   {
-   "num": "603",
+   "num": "618",
    "slug": "m-user-simulscrub-v6",
    "name": "SimulScrub-v6",
    "tagline": "",
@@ -5439,7 +5574,7 @@
    "facets": {}
   },
   {
-   "num": "604",
+   "num": "619",
    "slug": "p-sinevibes-skew-v2",
    "name": "Skew v2",
    "tagline": "",
@@ -5448,7 +5583,7 @@
    "facets": {}
   },
   {
-   "num": "605",
+   "num": "620",
    "slug": "m-pack-stray-cats-collection-by-max-for-cats-skramdelay",
    "name": "SkramDelay",
    "tagline": "",
@@ -5457,7 +5592,7 @@
    "facets": {}
   },
   {
-   "num": "606",
+   "num": "621",
    "slug": "m-pack-midi-tools-by-philip-meyer-slice-shuffler",
    "name": "Slice Shuffler",
    "tagline": "",
@@ -5466,7 +5601,7 @@
    "facets": {}
   },
   {
-   "num": "607",
+   "num": "622",
    "slug": "m-user-smooth-automator-audio",
    "name": "Smooth Automator Audio",
    "tagline": "",
@@ -5475,7 +5610,7 @@
    "facets": {}
   },
   {
-   "num": "608",
+   "num": "623",
    "slug": "m-user-smooth-automator-midi",
    "name": "Smooth Automator MIDI",
    "tagline": "",
@@ -5484,7 +5619,7 @@
    "facets": {}
   },
   {
-   "num": "609",
+   "num": "624",
    "slug": "m-pack-building-max-devices-snipper",
    "name": "Snipper",
    "tagline": "",
@@ -5493,7 +5628,7 @@
    "facets": {}
   },
   {
-   "num": "610",
+   "num": "625",
    "slug": "p-sonnox-soften",
    "name": "Soften",
    "tagline": "",
@@ -5502,7 +5637,7 @@
    "facets": {}
   },
   {
-   "num": "611",
+   "num": "626",
    "slug": "p-dawesome-sol",
    "name": "Sol",
    "tagline": "",
@@ -5511,7 +5646,7 @@
    "facets": {}
   },
   {
-   "num": "612",
+   "num": "627",
    "slug": "p-spitfire-audio-solar",
    "name": "Solar",
    "tagline": "",
@@ -5520,7 +5655,7 @@
    "facets": {}
   },
   {
-   "num": "613",
+   "num": "628",
    "slug": "p-arturia-solina-v2",
    "name": "Solina V2",
    "tagline": "",
@@ -5529,7 +5664,7 @@
    "facets": {}
   },
   {
-   "num": "614",
+   "num": "629",
    "slug": "p-minuit-solstice",
    "name": "Solstice",
    "tagline": "",
@@ -5538,7 +5673,7 @@
    "facets": {}
   },
   {
-   "num": "615",
+   "num": "630",
    "slug": "p-audiomodern-soundbox",
    "name": "Soundbox",
    "tagline": "",
@@ -5547,7 +5682,7 @@
    "facets": {}
   },
   {
-   "num": "616",
+   "num": "631",
    "slug": "p-soundtoys-spaceblender",
    "name": "SpaceBlender",
    "tagline": "",
@@ -5556,7 +5691,7 @@
    "facets": {}
   },
   {
-   "num": "617",
+   "num": "632",
    "slug": "p-higher-plane-software-spacewalk",
    "name": "SpaceWalk",
    "tagline": "",
@@ -5565,7 +5700,7 @@
    "facets": {}
   },
   {
-   "num": "618",
+   "num": "633",
    "slug": "p-audiothing-speakers",
    "name": "Speakers",
    "tagline": "",
@@ -5574,7 +5709,7 @@
    "facets": {}
   },
   {
-   "num": "619",
+   "num": "634",
    "slug": "m-user-spect-1-3",
    "name": "Spect 1.3",
    "tagline": "",
@@ -5583,7 +5718,7 @@
    "facets": {}
   },
   {
-   "num": "620",
+   "num": "635",
    "slug": "m-pack-creative-extensions-spectral-blur",
    "name": "Spectral Blur",
    "tagline": "",
@@ -5592,7 +5727,16 @@
    "facets": {}
   },
   {
-   "num": "621",
+   "num": "636",
+   "slug": "m-user-spectral-wobbler-1-2-0",
+   "name": "Spectral Wobbler 1.2.0",
+   "tagline": "",
+   "url": "index.html",
+   "image": null,
+   "facets": {}
+  },
+  {
+   "num": "637",
    "slug": "m-pack-the-forge-by-hecq-speed-shifter",
    "name": "Speed Shifter",
    "tagline": "",
@@ -5601,7 +5745,7 @@
    "facets": {}
   },
   {
-   "num": "622",
+   "num": "638",
    "slug": "p-splice-splice-bridge",
    "name": "Splice Bridge",
    "tagline": "",
@@ -5610,7 +5754,7 @@
    "facets": {}
   },
   {
-   "num": "623",
+   "num": "639",
    "slug": "p-splice-splice-instrument",
    "name": "Splice INSTRUMENT",
    "tagline": "",
@@ -5619,7 +5763,7 @@
    "facets": {}
   },
   {
-   "num": "624",
+   "num": "640",
    "slug": "p-splice-splice-sounds",
    "name": "Splice Sounds",
    "tagline": "",
@@ -5628,7 +5772,7 @@
    "facets": {}
   },
   {
-   "num": "625",
+   "num": "641",
    "slug": "p-splice-splice-sounds-listener",
    "name": "Splice Sounds Listener",
    "tagline": "",
@@ -5637,7 +5781,7 @@
    "facets": {}
   },
   {
-   "num": "626",
+   "num": "642",
    "slug": "p-audiothing-springs",
    "name": "Springs",
    "tagline": "",
@@ -5646,7 +5790,7 @@
    "facets": {}
   },
   {
-   "num": "627",
+   "num": "643",
    "slug": "m-pack-sequencers-sq-sequencer",
    "name": "SQ Sequencer",
    "tagline": "",
@@ -5655,7 +5799,7 @@
    "facets": {}
   },
   {
-   "num": "628",
+   "num": "644",
    "slug": "p-arturia-sq80-v",
    "name": "SQ80 V",
    "tagline": "",
@@ -5664,7 +5808,7 @@
    "facets": {}
   },
   {
-   "num": "629",
+   "num": "645",
    "slug": "p-arturia-stage-73-v2",
    "name": "Stage-73 V2",
    "tagline": "",
@@ -5673,7 +5817,7 @@
    "facets": {}
   },
   {
-   "num": "630",
+   "num": "646",
    "slug": "m-pack-midi-tools-by-philip-meyer-stages",
    "name": "Stages",
    "tagline": "",
@@ -5682,7 +5826,7 @@
    "facets": {}
   },
   {
-   "num": "631",
+   "num": "647",
    "slug": "m-pack-sequencers-step-arp",
    "name": "Step Arp",
    "tagline": "",
@@ -5691,7 +5835,7 @@
    "facets": {}
   },
   {
-   "num": "632",
+   "num": "648",
    "slug": "m-user-step-copy",
    "name": "Step Copy",
    "tagline": "",
@@ -5700,7 +5844,7 @@
    "facets": {}
   },
   {
-   "num": "633",
+   "num": "649",
    "slug": "m-pack-probability-pack-by-sonic-faction-step-divider",
    "name": "Step Divider",
    "tagline": "",
@@ -5709,7 +5853,7 @@
    "facets": {}
   },
   {
-   "num": "634",
+   "num": "650",
    "slug": "m-user-sting-2",
    "name": "Sting 2",
    "tagline": "",
@@ -5718,7 +5862,7 @@
    "facets": {}
   },
   {
-   "num": "635",
+   "num": "651",
    "slug": "m-pack-generators-by-iftah-sting-by-iftah",
    "name": "Sting by Iftah",
    "tagline": "",
@@ -5727,7 +5871,7 @@
    "facets": {}
   },
   {
-   "num": "636",
+   "num": "652",
    "slug": "m-user-sting-64-by-skinnerbox",
    "name": "STING!64 by SKINNERBOX",
    "tagline": "",
@@ -5736,7 +5880,7 @@
    "facets": {}
   },
   {
-   "num": "637",
+   "num": "653",
    "slug": "m-pack-stray-cats-collection-by-max-for-cats-stochastic-delay",
    "name": "Stochastic Delay",
    "tagline": "",
@@ -5745,7 +5889,7 @@
    "facets": {}
   },
   {
-   "num": "638",
+   "num": "654",
    "slug": "m-pack-building-max-devices-stretch-simpler",
    "name": "Stretch Simpler",
    "tagline": "",
@@ -5754,7 +5898,7 @@
    "facets": {}
   },
   {
-   "num": "639",
+   "num": "655",
    "slug": "m-user-strike-midi",
    "name": "STRIKE_MIDI",
    "tagline": "",
@@ -5763,7 +5907,7 @@
    "facets": {}
   },
   {
-   "num": "640",
+   "num": "656",
    "slug": "m-user-strike-resonator",
    "name": "STRIKE_Resonator",
    "tagline": "",
@@ -5772,7 +5916,7 @@
    "facets": {}
   },
   {
-   "num": "641",
+   "num": "657",
    "slug": "p-applied-acoustics-systems-strum-session-2",
    "name": "Strum Session 2",
    "tagline": "",
@@ -5781,7 +5925,7 @@
    "facets": {}
   },
   {
-   "num": "642",
+   "num": "658",
    "slug": "p-ik-multimedia-sunsetsound",
    "name": "SunsetSound",
    "tagline": "",
@@ -5790,7 +5934,7 @@
    "facets": {}
   },
   {
-   "num": "643",
+   "num": "659",
    "slug": "p-baby-audio-super-vhs",
    "name": "Super VHS",
    "tagline": "",
@@ -5799,7 +5943,7 @@
    "facets": {}
   },
   {
-   "num": "644",
+   "num": "660",
    "slug": "p-native-instruments-supercharger",
    "name": "Supercharger",
    "tagline": "",
@@ -5808,7 +5952,7 @@
    "facets": {}
   },
   {
-   "num": "645",
+   "num": "661",
    "slug": "p-native-instruments-supercharger-gt",
    "name": "Supercharger GT",
    "tagline": "",
@@ -5817,7 +5961,7 @@
    "facets": {}
   },
   {
-   "num": "646",
+   "num": "662",
    "slug": "m-pack-surround-panner-surround-panner",
    "name": "Surround Panner",
    "tagline": "",
@@ -5826,7 +5970,7 @@
    "facets": {}
   },
   {
-   "num": "647",
+   "num": "663",
    "slug": "p-puremagnetik-swarm",
    "name": "Swarm",
    "tagline": "",
@@ -5835,7 +5979,7 @@
    "facets": {}
   },
   {
-   "num": "648",
+   "num": "664",
    "slug": "p-lese-sweep",
    "name": "Sweep",
    "tagline": "",
@@ -5844,7 +5988,7 @@
    "facets": {}
   },
   {
-   "num": "649",
+   "num": "665",
    "slug": "p-arturia-synclavier-v",
    "name": "Synclavier V",
    "tagline": "",
@@ -5853,7 +5997,7 @@
    "facets": {}
   },
   {
-   "num": "650",
+   "num": "666",
    "slug": "p-synful-synfulorchestra",
    "name": "SynfulOrchestra",
    "tagline": "",
@@ -5862,7 +6006,7 @@
    "facets": {}
   },
   {
-   "num": "651",
+   "num": "667",
    "slug": "p-arturia-synthi-v",
    "name": "Synthi V",
    "tagline": "",
@@ -5871,7 +6015,7 @@
    "facets": {}
   },
   {
-   "num": "652",
+   "num": "668",
    "slug": "p-arturia-synthx-v",
    "name": "Synthx V",
    "tagline": "",
@@ -5880,7 +6024,7 @@
    "facets": {}
   },
   {
-   "num": "653",
+   "num": "669",
    "slug": "p-ik-multimedia-syntronik-2",
    "name": "Syntronik 2",
    "tagline": "",
@@ -5889,7 +6033,7 @@
    "facets": {}
   },
   {
-   "num": "654",
+   "num": "670",
    "slug": "p-ik-multimedia-t-racks-5",
    "name": "T-RackS 5",
    "tagline": "",
@@ -5898,7 +6042,7 @@
    "facets": {}
   },
   {
-   "num": "655",
+   "num": "671",
    "slug": "p-ik-multimedia-t-racks-5-metering",
    "name": "T-RackS 5 Metering",
    "tagline": "",
@@ -5907,7 +6051,7 @@
    "facets": {}
   },
   {
-   "num": "656",
+   "num": "672",
    "slug": "p-phase-fiasco-tape-fiasco",
    "name": "Tape Fiasco",
    "tagline": "",
@@ -5916,7 +6060,7 @@
    "facets": {}
   },
   {
-   "num": "657",
+   "num": "673",
    "slug": "p-arturia-tape-j-37",
    "name": "Tape J-37",
    "tagline": "",
@@ -5925,7 +6069,7 @@
    "facets": {}
   },
   {
-   "num": "658",
+   "num": "674",
    "slug": "p-arturia-tape-mello-fi",
    "name": "Tape MELLO-FI",
    "tagline": "",
@@ -5934,7 +6078,7 @@
    "facets": {}
   },
   {
-   "num": "659",
+   "num": "675",
    "slug": "m-user-tapestop-2-0",
    "name": "TapeStop 2.0",
    "tagline": "",
@@ -5943,7 +6087,7 @@
    "facets": {}
   },
   {
-   "num": "660",
+   "num": "676",
    "slug": "m-user-tappanzeit-v12",
    "name": "TapPanZeit-v12",
    "tagline": "",
@@ -5952,7 +6096,7 @@
    "facets": {}
   },
   {
-   "num": "661",
+   "num": "677",
    "slug": "m-pack-the-forge-by-hecq-tapped-delay",
    "name": "Tapped Delay",
    "tagline": "",
@@ -5961,7 +6105,7 @@
    "facets": {}
   },
   {
-   "num": "662",
+   "num": "678",
    "slug": "p-baby-audio-tekno",
    "name": "Tekno",
    "tagline": "",
@@ -5970,7 +6114,7 @@
    "facets": {}
   },
   {
-   "num": "663",
+   "num": "679",
    "slug": "p-eventide-temperance-lite",
    "name": "Temperance Lite",
    "tagline": "",
@@ -5979,7 +6123,7 @@
    "facets": {}
   },
   {
-   "num": "664",
+   "num": "680",
    "slug": "p-soundghost-texturize",
    "name": "Texturize",
    "tagline": "",
@@ -5988,7 +6132,7 @@
    "facets": {}
   },
   {
-   "num": "665",
+   "num": "681",
    "slug": "m-user-the-lot-radio",
    "name": "The Lot Radio",
    "tagline": "",
@@ -5997,7 +6141,7 @@
    "facets": {}
   },
   {
-   "num": "666",
+   "num": "682",
    "slug": "m-user-tombola",
    "name": "Tombola",
    "tagline": "",
@@ -6006,7 +6150,7 @@
    "facets": {}
   },
   {
-   "num": "667",
+   "num": "683",
    "slug": "p-izotope-tonal-balance-control-2",
    "name": "Tonal Balance Control 2",
    "tagline": "",
@@ -6015,7 +6159,7 @@
    "facets": {}
   },
   {
-   "num": "668",
+   "num": "684",
    "slug": "p-ik-multimedia-tonex",
    "name": "TONEX",
    "tagline": "",
@@ -6024,7 +6168,7 @@
    "facets": {}
   },
   {
-   "num": "669",
+   "num": "685",
    "slug": "p-ik-multimedia-tr5-black-76",
    "name": "TR5 Black 76",
    "tagline": "",
@@ -6033,7 +6177,7 @@
    "facets": {}
   },
   {
-   "num": "670",
+   "num": "686",
    "slug": "p-ik-multimedia-tr5-brickwall-limiter",
    "name": "TR5 Brickwall Limiter",
    "tagline": "",
@@ -6042,7 +6186,7 @@
    "facets": {}
   },
   {
-   "num": "671",
+   "num": "687",
    "slug": "p-ik-multimedia-tr5-british-channel",
    "name": "TR5 British Channel",
    "tagline": "",
@@ -6051,7 +6195,7 @@
    "facets": {}
   },
   {
-   "num": "672",
+   "num": "688",
    "slug": "p-ik-multimedia-tr5-bus-compressor",
    "name": "TR5 Bus Compressor",
    "tagline": "",
@@ -6060,7 +6204,7 @@
    "facets": {}
   },
   {
-   "num": "673",
+   "num": "689",
    "slug": "p-ik-multimedia-tr5-classic-clipper",
    "name": "TR5 Classic Clipper",
    "tagline": "",
@@ -6069,7 +6213,7 @@
    "facets": {}
   },
   {
-   "num": "674",
+   "num": "690",
    "slug": "p-ik-multimedia-tr5-classic-comp",
    "name": "TR5 Classic Comp",
    "tagline": "",
@@ -6078,7 +6222,7 @@
    "facets": {}
   },
   {
-   "num": "675",
+   "num": "691",
    "slug": "p-ik-multimedia-tr5-classic-eq",
    "name": "TR5 Classic EQ",
    "tagline": "",
@@ -6087,7 +6231,7 @@
    "facets": {}
   },
   {
-   "num": "676",
+   "num": "692",
    "slug": "p-ik-multimedia-tr5-classic-multi-band-limiter",
    "name": "TR5 Classic Multi Band Limiter",
    "tagline": "",
@@ -6096,7 +6240,7 @@
    "facets": {}
   },
   {
-   "num": "677",
+   "num": "693",
    "slug": "p-ik-multimedia-tr5-comprexxor",
    "name": "TR5 Comprexxor",
    "tagline": "",
@@ -6105,7 +6249,7 @@
    "facets": {}
   },
   {
-   "num": "678",
+   "num": "694",
    "slug": "p-ik-multimedia-tr5-csr-hall",
    "name": "TR5 CSR Hall",
    "tagline": "",
@@ -6114,7 +6258,7 @@
    "facets": {}
   },
   {
-   "num": "679",
+   "num": "695",
    "slug": "p-ik-multimedia-tr5-csr-inverse",
    "name": "TR5 CSR Inverse",
    "tagline": "",
@@ -6123,7 +6267,7 @@
    "facets": {}
   },
   {
-   "num": "680",
+   "num": "696",
    "slug": "p-ik-multimedia-tr5-csr-plate",
    "name": "TR5 CSR Plate",
    "tagline": "",
@@ -6132,7 +6276,7 @@
    "facets": {}
   },
   {
-   "num": "681",
+   "num": "697",
    "slug": "p-ik-multimedia-tr5-csr-room",
    "name": "TR5 CSR Room",
    "tagline": "",
@@ -6141,7 +6285,7 @@
    "facets": {}
   },
   {
-   "num": "682",
+   "num": "698",
    "slug": "p-ik-multimedia-tr5-de-esser",
    "name": "TR5 De Esser",
    "tagline": "",
@@ -6150,7 +6294,7 @@
    "facets": {}
   },
   {
-   "num": "683",
+   "num": "699",
    "slug": "p-ik-multimedia-tr5-dyna-mu",
    "name": "TR5 Dyna-Mu",
    "tagline": "",
@@ -6159,7 +6303,7 @@
    "facets": {}
   },
   {
-   "num": "684",
+   "num": "700",
    "slug": "p-ik-multimedia-tr5-eq-73",
    "name": "TR5 EQ-73",
    "tagline": "",
@@ -6168,7 +6312,7 @@
    "facets": {}
   },
   {
-   "num": "685",
+   "num": "701",
    "slug": "p-ik-multimedia-tr5-eq-81",
    "name": "TR5 EQ-81",
    "tagline": "",
@@ -6177,7 +6321,7 @@
    "facets": {}
   },
   {
-   "num": "686",
+   "num": "702",
    "slug": "p-ik-multimedia-tr5-eq-pa",
    "name": "TR5 EQ-PA",
    "tagline": "",
@@ -6186,7 +6330,7 @@
    "facets": {}
   },
   {
-   "num": "687",
+   "num": "703",
    "slug": "p-ik-multimedia-tr5-eq-pb",
    "name": "TR5 EQ-PB",
    "tagline": "",
@@ -6195,7 +6339,7 @@
    "facets": {}
   },
   {
-   "num": "688",
+   "num": "704",
    "slug": "p-ik-multimedia-tr5-eq-pg",
    "name": "TR5 EQ-PG",
    "tagline": "",
@@ -6204,7 +6348,7 @@
    "facets": {}
   },
   {
-   "num": "689",
+   "num": "705",
    "slug": "p-ik-multimedia-tr5-eqp-1a",
    "name": "TR5 EQP-1A",
    "tagline": "",
@@ -6213,7 +6357,7 @@
    "facets": {}
   },
   {
-   "num": "690",
+   "num": "706",
    "slug": "p-ik-multimedia-tr5-equal",
    "name": "TR5 EQual",
    "tagline": "",
@@ -6222,7 +6366,7 @@
    "facets": {}
   },
   {
-   "num": "691",
+   "num": "707",
    "slug": "p-ik-multimedia-tr5-fame-studio-reverb",
    "name": "TR5 Fame Studio Reverb",
    "tagline": "",
@@ -6231,7 +6375,7 @@
    "facets": {}
   },
   {
-   "num": "692",
+   "num": "708",
    "slug": "p-ik-multimedia-tr5-joe-chiccarelli-vocal-strip",
    "name": "TR5 Joe Chiccarelli Vocal Strip",
    "tagline": "",
@@ -6240,7 +6384,7 @@
    "facets": {}
   },
   {
-   "num": "693",
+   "num": "709",
    "slug": "p-ik-multimedia-tr5-leslie",
    "name": "TR5 Leslie",
    "tagline": "",
@@ -6249,7 +6393,7 @@
    "facets": {}
   },
   {
-   "num": "694",
+   "num": "710",
    "slug": "p-ik-multimedia-tr5-linear-phase-eq",
    "name": "TR5 Linear Phase EQ",
    "tagline": "",
@@ -6258,7 +6402,7 @@
    "facets": {}
   },
   {
-   "num": "695",
+   "num": "711",
    "slug": "p-ik-multimedia-tr5-master-eq-432",
    "name": "TR5 Master EQ-432",
    "tagline": "",
@@ -6267,7 +6411,7 @@
    "facets": {}
   },
   {
-   "num": "696",
+   "num": "712",
    "slug": "p-ik-multimedia-tr5-master-match",
    "name": "TR5 Master Match",
    "tagline": "",
@@ -6276,7 +6420,7 @@
    "facets": {}
   },
   {
-   "num": "697",
+   "num": "713",
    "slug": "p-ik-multimedia-tr5-metering",
    "name": "TR5 Metering",
    "tagline": "",
@@ -6285,7 +6429,7 @@
    "facets": {}
   },
   {
-   "num": "698",
+   "num": "714",
    "slug": "p-ik-multimedia-tr5-mic-room",
    "name": "TR5 Mic Room",
    "tagline": "",
@@ -6294,7 +6438,7 @@
    "facets": {}
   },
   {
-   "num": "699",
+   "num": "715",
    "slug": "p-ik-multimedia-tr5-one",
    "name": "TR5 One",
    "tagline": "",
@@ -6303,7 +6447,7 @@
    "facets": {}
   },
   {
-   "num": "700",
+   "num": "716",
    "slug": "p-ik-multimedia-tr5-opto-comp",
    "name": "TR5 Opto Comp",
    "tagline": "",
@@ -6312,7 +6456,7 @@
    "facets": {}
   },
   {
-   "num": "701",
+   "num": "717",
    "slug": "p-ik-multimedia-tr5-precision-comp-limiter",
    "name": "TR5 Precision Comp-Limiter",
    "tagline": "",
@@ -6321,7 +6465,7 @@
    "facets": {}
   },
   {
-   "num": "702",
+   "num": "718",
    "slug": "p-ik-multimedia-tr5-quad-compressor",
    "name": "TR5 Quad Compressor",
    "tagline": "",
@@ -6330,7 +6474,7 @@
    "facets": {}
   },
   {
-   "num": "703",
+   "num": "719",
    "slug": "p-ik-multimedia-tr5-quad-image",
    "name": "TR5 Quad Image",
    "tagline": "",
@@ -6339,7 +6483,7 @@
    "facets": {}
   },
   {
-   "num": "704",
+   "num": "720",
    "slug": "p-ik-multimedia-tr5-quad-limiter",
    "name": "TR5 Quad Limiter",
    "tagline": "",
@@ -6348,7 +6492,7 @@
    "facets": {}
   },
   {
-   "num": "705",
+   "num": "721",
    "slug": "p-ik-multimedia-tr5-saturator-x",
    "name": "TR5 Saturator X",
    "tagline": "",
@@ -6357,7 +6501,7 @@
    "facets": {}
   },
   {
-   "num": "706",
+   "num": "722",
    "slug": "p-ik-multimedia-tr5-space-delay",
    "name": "TR5 Space Delay",
    "tagline": "",
@@ -6366,7 +6510,7 @@
    "facets": {}
   },
   {
-   "num": "707",
+   "num": "723",
    "slug": "p-ik-multimedia-tr5-stealth-limiter",
    "name": "TR5 Stealth Limiter",
    "tagline": "",
@@ -6375,7 +6519,7 @@
    "facets": {}
   },
   {
-   "num": "708",
+   "num": "724",
    "slug": "p-ik-multimedia-tr5-suite",
    "name": "TR5 Suite",
    "tagline": "",
@@ -6384,7 +6528,7 @@
    "facets": {}
   },
   {
-   "num": "709",
+   "num": "725",
    "slug": "p-ik-multimedia-tr5-sunset-sound-studio-reverb",
    "name": "TR5 Sunset Sound Studio Reverb",
    "tagline": "",
@@ -6393,7 +6537,7 @@
    "facets": {}
   },
   {
-   "num": "710",
+   "num": "726",
    "slug": "p-ik-multimedia-tr5-tape-echo",
    "name": "TR5 Tape Echo",
    "tagline": "",
@@ -6402,7 +6546,7 @@
    "facets": {}
   },
   {
-   "num": "711",
+   "num": "727",
    "slug": "p-ik-multimedia-tr5-tape-machine-24",
    "name": "TR5 Tape Machine 24",
    "tagline": "",
@@ -6411,7 +6555,7 @@
    "facets": {}
   },
   {
-   "num": "712",
+   "num": "728",
    "slug": "p-ik-multimedia-tr5-tape-machine-440",
    "name": "TR5 Tape Machine 440",
    "tagline": "",
@@ -6420,7 +6564,7 @@
    "facets": {}
   },
   {
-   "num": "713",
+   "num": "729",
    "slug": "p-ik-multimedia-tr5-tape-machine-80",
    "name": "TR5 Tape Machine 80",
    "tagline": "",
@@ -6429,7 +6573,7 @@
    "facets": {}
   },
   {
-   "num": "714",
+   "num": "730",
    "slug": "p-ik-multimedia-tr5-tape-machine-99",
    "name": "TR5 Tape Machine 99",
    "tagline": "",
@@ -6438,7 +6582,7 @@
    "facets": {}
   },
   {
-   "num": "715",
+   "num": "731",
    "slug": "p-ik-multimedia-tr5-tascam-388",
    "name": "TR5 TASCAM 388",
    "tagline": "",
@@ -6447,7 +6591,7 @@
    "facets": {}
   },
   {
-   "num": "716",
+   "num": "732",
    "slug": "p-ik-multimedia-tr5-tascam-porta-one",
    "name": "TR5 TASCAM PORTA ONE",
    "tagline": "",
@@ -6456,7 +6600,7 @@
    "facets": {}
   },
   {
-   "num": "717",
+   "num": "733",
    "slug": "p-ik-multimedia-tr5-teac-a-3340s",
    "name": "TR5 TEAC A-3340S",
    "tagline": "",
@@ -6465,7 +6609,7 @@
    "facets": {}
   },
   {
-   "num": "718",
+   "num": "734",
    "slug": "p-ik-multimedia-tr5-teac-a-6100-mkii",
    "name": "TR5 TEAC A-6100 MKII",
    "tagline": "",
@@ -6474,7 +6618,7 @@
    "facets": {}
   },
   {
-   "num": "719",
+   "num": "735",
    "slug": "p-ik-multimedia-tr5-the-farm-stone-room",
    "name": "TR5 The Farm Stone Room",
    "tagline": "",
@@ -6483,7 +6627,7 @@
    "facets": {}
   },
   {
-   "num": "720",
+   "num": "736",
    "slug": "p-ik-multimedia-tr5-vc-670",
    "name": "TR5 VC-670",
    "tagline": "",
@@ -6492,7 +6636,7 @@
    "facets": {}
   },
   {
-   "num": "721",
+   "num": "737",
    "slug": "p-ik-multimedia-tr5-white-2a",
    "name": "TR5 White 2A",
    "tagline": "",
@@ -6501,7 +6645,7 @@
    "facets": {}
   },
   {
-   "num": "722",
+   "num": "738",
    "slug": "p-ik-multimedia-tr5-white-channel",
    "name": "TR5 White Channel",
    "tagline": "",
@@ -6510,7 +6654,7 @@
    "facets": {}
   },
   {
-   "num": "723",
+   "num": "739",
    "slug": "p-native-instruments-transient-master",
    "name": "Transient Master",
    "tagline": "",
@@ -6519,7 +6663,7 @@
    "facets": {}
   },
   {
-   "num": "724",
+   "num": "740",
    "slug": "m-user-transientdesigner",
    "name": "TransientDesigner",
    "tagline": "",
@@ -6528,7 +6672,7 @@
    "facets": {}
   },
   {
-   "num": "725",
+   "num": "741",
    "slug": "p-izotope-trash",
    "name": "Trash",
    "tagline": "",
@@ -6537,7 +6681,7 @@
    "facets": {}
   },
   {
-   "num": "726",
+   "num": "742",
    "slug": "m-pack-inspired-by-nature-by-dillon-bastan-tree-tone",
    "name": "Tree Tone",
    "tagline": "",
@@ -6546,7 +6690,7 @@
    "facets": {}
   },
   {
-   "num": "727",
+   "num": "743",
    "slug": "p-wave-alchemy-triaz-player",
    "name": "Triaz Player",
    "tagline": "",
@@ -6555,7 +6699,7 @@
    "facets": {}
   },
   {
-   "num": "728",
+   "num": "744",
    "slug": "m-user-trnr-bitecho",
    "name": "trnr.BitEcho",
    "tagline": "",
@@ -6564,7 +6708,7 @@
    "facets": {}
   },
   {
-   "num": "729",
+   "num": "745",
    "slug": "m-user-trnr-dmmg",
    "name": "trnr.DmmG",
    "tagline": "",
@@ -6573,7 +6717,7 @@
    "facets": {}
   },
   {
-   "num": "730",
+   "num": "746",
    "slug": "m-user-trnr-duckling",
    "name": "trnr.Duckling",
    "tagline": "",
@@ -6582,7 +6726,7 @@
    "facets": {}
   },
   {
-   "num": "731",
+   "num": "747",
    "slug": "m-user-trnr-flechtwerk",
    "name": "trnr.Flechtwerk",
    "tagline": "",
@@ -6591,7 +6735,7 @@
    "facets": {}
   },
   {
-   "num": "732",
+   "num": "748",
    "slug": "m-user-trnr-hatster",
    "name": "trnr.Hatster",
    "tagline": "",
@@ -6600,7 +6744,7 @@
    "facets": {}
   },
   {
-   "num": "733",
+   "num": "749",
    "slug": "m-user-trnr-retrosampler",
    "name": "trnr.RetroSampler",
    "tagline": "",
@@ -6609,7 +6753,7 @@
    "facets": {}
   },
   {
-   "num": "734",
+   "num": "750",
    "slug": "m-user-trnr-triplexclassic",
    "name": "trnr.TriplexClassic",
    "tagline": "",
@@ -6618,7 +6762,7 @@
    "facets": {}
   },
   {
-   "num": "735",
+   "num": "751",
    "slug": "p-2rule-tugglicento",
    "name": "TugGlicento",
    "tagline": "",
@@ -6627,7 +6771,7 @@
    "facets": {}
   },
   {
-   "num": "736",
+   "num": "752",
    "slug": "p-2rule-tugimgsynth",
    "name": "TugImgSynth",
    "tagline": "",
@@ -6636,7 +6780,7 @@
    "facets": {}
   },
   {
-   "num": "737",
+   "num": "753",
    "slug": "p-2rule-tugmidiseq",
    "name": "TugMidiSeq",
    "tagline": "",
@@ -6645,7 +6789,7 @@
    "facets": {}
   },
   {
-   "num": "738",
+   "num": "754",
    "slug": "p-2rule-tugmultieffect",
    "name": "TugMultiEffect",
    "tagline": "",
@@ -6654,7 +6798,7 @@
    "facets": {}
   },
   {
-   "num": "739",
+   "num": "755",
    "slug": "p-2rule-tugphonon",
    "name": "TugPhonon",
    "tagline": "",
@@ -6663,7 +6807,7 @@
    "facets": {}
   },
   {
-   "num": "740",
+   "num": "756",
    "slug": "p-2rule-tugspect",
    "name": "TugSpect",
    "tagline": "",
@@ -6672,7 +6816,7 @@
    "facets": {}
   },
   {
-   "num": "741",
+   "num": "757",
    "slug": "m-user-turing-machine-3-1",
    "name": "Turing Machine 3.1",
    "tagline": "",
@@ -6681,7 +6825,7 @@
    "facets": {}
   },
   {
-   "num": "742",
+   "num": "758",
    "slug": "p-universal-audio-uadx-uadx-1176-fet-compressor",
    "name": "UADx 1176 FET Compressor",
    "tagline": "",
@@ -6690,7 +6834,7 @@
    "facets": {}
   },
   {
-   "num": "743",
+   "num": "759",
    "slug": "p-universal-audio-uadx-uadx-610-a-preamp-and-eq",
    "name": "UADx 610-A Preamp and EQ",
    "tagline": "",
@@ -6699,7 +6843,7 @@
    "facets": {}
   },
   {
-   "num": "744",
+   "num": "760",
    "slug": "p-universal-audio-uadx-uadx-610-b-preamp-and-eq",
    "name": "UADx 610-B Preamp and EQ",
    "tagline": "",
@@ -6708,7 +6852,7 @@
    "facets": {}
   },
   {
-   "num": "745",
+   "num": "761",
    "slug": "p-universal-audio-uadx-uadx-century-tube-channel-strip",
    "name": "UADx Century Tube Channel Strip",
    "tagline": "",
@@ -6717,7 +6861,7 @@
    "facets": {}
   },
   {
-   "num": "746",
+   "num": "762",
    "slug": "p-universal-audio-uadx-uadx-galaxy-tape-echo",
    "name": "UADx Galaxy Tape Echo",
    "tagline": "",
@@ -6726,7 +6870,7 @@
    "facets": {}
   },
   {
-   "num": "747",
+   "num": "763",
    "slug": "p-universal-audio-uadx-uadx-oxide-tape-recorder",
    "name": "UADx Oxide Tape Recorder",
    "tagline": "",
@@ -6735,7 +6879,7 @@
    "facets": {}
   },
   {
-   "num": "748",
+   "num": "764",
    "slug": "p-universal-audio-uadx-uadx-polymax-synth",
    "name": "UADx PolyMAX Synth",
    "tagline": "",
@@ -6744,7 +6888,7 @@
    "facets": {}
   },
   {
-   "num": "749",
+   "num": "765",
    "slug": "p-universal-audio-uadx-uadx-pure-plate-reverb",
    "name": "UADx Pure Plate Reverb",
    "tagline": "",
@@ -6753,7 +6897,7 @@
    "facets": {}
   },
   {
-   "num": "750",
+   "num": "766",
    "slug": "p-universal-audio-uadx-uadx-showtime-64-tube-amp",
    "name": "UADx Showtime 64 Tube Amp",
    "tagline": "",
@@ -6762,7 +6906,7 @@
    "facets": {}
   },
   {
-   "num": "751",
+   "num": "767",
    "slug": "p-universal-audio-uadx-uadx-verve-analog-machines",
    "name": "UADx Verve Analog Machines",
    "tagline": "",
@@ -6771,7 +6915,7 @@
    "facets": {}
   },
   {
-   "num": "752",
+   "num": "768",
    "slug": "p-universal-audio-uadx-uadx-vibe-analog-machines-essentials",
    "name": "UADx Vibe Analog Machines Essentials",
    "tagline": "",
@@ -6780,7 +6924,7 @@
    "facets": {}
   },
   {
-   "num": "753",
+   "num": "769",
    "slug": "p-applied-acoustics-systems-ultra-analog-session-2",
    "name": "Ultra Analog Session 2",
    "tagline": "",
@@ -6789,7 +6933,7 @@
    "facets": {}
   },
   {
-   "num": "754",
+   "num": "770",
    "slug": "p-uvi-uvi-tape-chorus",
    "name": "UVI Tape Chorus",
    "tagline": "",
@@ -6798,7 +6942,7 @@
    "facets": {}
   },
   {
-   "num": "755",
+   "num": "771",
    "slug": "p-uvi-uvi-tape-color",
    "name": "UVI Tape Color",
    "tagline": "",
@@ -6807,7 +6951,7 @@
    "facets": {}
   },
   {
-   "num": "756",
+   "num": "772",
    "slug": "p-uvi-uvi-tape-delay",
    "name": "UVI Tape Delay",
    "tagline": "",
@@ -6816,7 +6960,7 @@
    "facets": {}
   },
   {
-   "num": "757",
+   "num": "773",
    "slug": "p-uvi-uvi-tape-flanger",
    "name": "UVI Tape Flanger",
    "tagline": "",
@@ -6825,7 +6969,7 @@
    "facets": {}
   },
   {
-   "num": "758",
+   "num": "774",
    "slug": "p-uvi-uviworkstationvst",
    "name": "UVIWorkstationVST",
    "tagline": "",
@@ -6834,7 +6978,7 @@
    "facets": {}
   },
   {
-   "num": "759",
+   "num": "775",
    "slug": "p-valhalla-dsp-llc-valhallafreqecho",
    "name": "ValhallaFreqEcho",
    "tagline": "",
@@ -6843,7 +6987,7 @@
    "facets": {}
   },
   {
-   "num": "760",
+   "num": "776",
    "slug": "p-valhalla-dsp-llc-valhallaspacemodulator",
    "name": "ValhallaSpaceModulator",
    "tagline": "",
@@ -6852,7 +6996,7 @@
    "facets": {}
   },
   {
-   "num": "761",
+   "num": "777",
    "slug": "p-valhalla-dsp-llc-valhallasupermassive",
    "name": "ValhallaSupermassive",
    "tagline": "",
@@ -6861,7 +7005,7 @@
    "facets": {}
   },
   {
-   "num": "762",
+   "num": "778",
    "slug": "m-pack-performance-pack-by-iftah-variations",
    "name": "Variations",
    "tagline": "",
@@ -6870,7 +7014,7 @@
    "facets": {}
   },
   {
-   "num": "763",
+   "num": "779",
    "slug": "p-crow-hill-vaults",
    "name": "Vaults",
    "tagline": "",
@@ -6879,7 +7023,7 @@
    "facets": {}
   },
   {
-   "num": "764",
+   "num": "780",
    "slug": "m-user-vc3-5",
    "name": "VC3.5",
    "tagline": "",
@@ -6888,7 +7032,7 @@
    "facets": {}
   },
   {
-   "num": "765",
+   "num": "781",
    "slug": "m-pack-inspired-by-nature-by-dillon-bastan-vector-delay",
    "name": "Vector Delay",
    "tagline": "",
@@ -6897,7 +7041,7 @@
    "facets": {}
   },
   {
-   "num": "766",
+   "num": "782",
    "slug": "m-pack-inspired-by-nature-by-dillon-bastan-vector-fm",
    "name": "Vector FM",
    "tagline": "",
@@ -6906,7 +7050,7 @@
    "facets": {}
   },
   {
-   "num": "767",
+   "num": "783",
    "slug": "m-pack-inspired-by-nature-by-dillon-bastan-vector-grain",
    "name": "Vector Grain",
    "tagline": "",
@@ -6915,7 +7059,7 @@
    "facets": {}
   },
   {
-   "num": "768",
+   "num": "784",
    "slug": "m-pack-inspired-by-nature-by-dillon-bastan-vector-map",
    "name": "Vector Map",
    "tagline": "",
@@ -6924,7 +7068,7 @@
    "facets": {}
   },
   {
-   "num": "769",
+   "num": "785",
    "slug": "m-pack-building-max-devices-velocity-randomizer",
    "name": "Velocity Randomizer",
    "tagline": "",
@@ -6933,7 +7077,7 @@
    "facets": {}
   },
   {
-   "num": "770",
+   "num": "786",
    "slug": "m-builtin-velocity-shaper",
    "name": "Velocity Shaper",
    "tagline": "",
@@ -6942,7 +7086,7 @@
    "facets": {}
   },
   {
-   "num": "771",
+   "num": "787",
    "slug": "m-pack-stray-cats-collection-by-max-for-cats-verbotron",
    "name": "Verbotron",
    "tagline": "",
@@ -6951,7 +7095,7 @@
    "facets": {}
   },
   {
-   "num": "772",
+   "num": "788",
    "slug": "p-puremagnetik-verv",
    "name": "Verv",
    "tagline": "",
@@ -6960,7 +7104,7 @@
    "facets": {}
   },
   {
-   "num": "773",
+   "num": "789",
    "slug": "m-pack-building-max-devices-video-slicer",
    "name": "Video Slicer",
    "tagline": "",
@@ -6969,7 +7113,7 @@
    "facets": {}
   },
   {
-   "num": "774",
+   "num": "790",
    "slug": "p-ik-multimedia-vintageprogrameq1a",
    "name": "VintageProgramEQ1A",
    "tagline": "",
@@ -6978,7 +7122,7 @@
    "facets": {}
   },
   {
-   "num": "775",
+   "num": "791",
    "slug": "p-izotope-vinyl",
    "name": "Vinyl",
    "tagline": "",
@@ -6987,7 +7131,7 @@
    "facets": {}
   },
   {
-   "num": "776",
+   "num": "792",
    "slug": "m-user-visage-1-0",
    "name": "visage_1.0",
    "tagline": "",
@@ -6996,7 +7140,7 @@
    "facets": {}
   },
   {
-   "num": "777",
+   "num": "793",
    "slug": "m-pack-building-max-devices-visuals-builder",
    "name": "Visuals Builder",
    "tagline": "",
@@ -7005,7 +7149,7 @@
    "facets": {}
   },
   {
-   "num": "778",
+   "num": "794",
    "slug": "m-pack-building-max-devices-visuals-exporter",
    "name": "Visuals Exporter",
    "tagline": "",
@@ -7014,7 +7158,7 @@
    "facets": {}
   },
   {
-   "num": "779",
+   "num": "795",
    "slug": "p-izotope-vocal-doubler",
    "name": "Vocal Doubler",
    "tagline": "",
@@ -7023,7 +7167,7 @@
    "facets": {}
   },
   {
-   "num": "780",
+   "num": "796",
    "slug": "p-arturia-vocoder-v",
    "name": "Vocoder V",
    "tagline": "",
@@ -7032,7 +7176,7 @@
    "facets": {}
   },
   {
-   "num": "781",
+   "num": "797",
    "slug": "p-arturia-vox-continental-v2",
    "name": "VOX Continental V2",
    "tagline": "",
@@ -7041,7 +7185,7 @@
    "facets": {}
   },
   {
-   "num": "782",
+   "num": "798",
    "slug": "p-baby-audio-warp",
    "name": "Warp",
    "tagline": "",
@@ -7050,7 +7194,7 @@
    "facets": {}
   },
   {
-   "num": "783",
+   "num": "799",
    "slug": "m-pack-building-max-devices-warp-markers",
    "name": "Warp Markers",
    "tagline": "",
@@ -7059,7 +7203,7 @@
    "facets": {}
   },
   {
-   "num": "784",
+   "num": "800",
    "slug": "p-waves-waves-harmony",
    "name": "Waves Harmony",
    "tagline": "",
@@ -7068,7 +7212,7 @@
    "facets": {}
   },
   {
-   "num": "785",
+   "num": "801",
    "slug": "p-soundmorph-wavewarper-2",
    "name": "WaveWarper 2",
    "tagline": "",
@@ -7077,7 +7221,7 @@
    "facets": {}
   },
   {
-   "num": "786",
+   "num": "802",
    "slug": "m-user-widen",
    "name": "Widen",
    "tagline": "",
@@ -7086,7 +7230,7 @@
    "facets": {}
   },
   {
-   "num": "787",
+   "num": "803",
    "slug": "p-arturia-wurli-v2",
    "name": "Wurli V2",
    "tagline": "",
@@ -7095,7 +7239,7 @@
    "facets": {}
   },
   {
-   "num": "788",
+   "num": "804",
    "slug": "p-arturia-wurli-v3",
    "name": "Wurli V3",
    "tagline": "",
@@ -7104,7 +7248,7 @@
    "facets": {}
   },
   {
-   "num": "789",
+   "num": "805",
    "slug": "m-pack-building-max-devices-xy",
    "name": "XY",
    "tagline": "",
@@ -7113,7 +7257,7 @@
    "facets": {}
   },
   {
-   "num": "790",
+   "num": "806",
    "slug": "m-pack-building-max-devices-xy-controller",
    "name": "XY Controller",
    "tagline": "",
@@ -7122,7 +7266,7 @@
    "facets": {}
   },
   {
-   "num": "791",
+   "num": "807",
    "slug": "m-pack-max-for-live-essentials-xy-pad",
    "name": "XY Pad",
    "tagline": "",
@@ -7131,7 +7275,7 @@
    "facets": {}
   },
   {
-   "num": "792",
+   "num": "808",
    "slug": "p-puremagnetik-zerone",
    "name": "Zerone",
    "tagline": "",
@@ -7140,7 +7284,7 @@
    "facets": {}
   },
   {
-   "num": "793",
+   "num": "809",
    "slug": "p-zl-zl-equalizer-2",
    "name": "ZL Equalizer 2",
    "tagline": "",

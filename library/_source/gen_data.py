@@ -15,6 +15,11 @@ OWN_TYPE={
  'Preset Scroll':'utility','Manual Tape':'sampler','Scene Placer':'spatial',
  'False Memory':'distortion','Tape Error':'tape','Strip Silence':'utility',
  'Disintegration':'tape','Magnabelt':'sampler',
+ # added 7 Sep 2026 — chapters had been in the guide since 30 Aug but the
+ # library was never rebuilt, so these nine had no catalogue entry at all
+ 'Evening Star':'tape','Mood':'delay','Bad Mood':'delay','Gen Loss':'tape',
+ 'Kurzwellen':'other','Composite':'other','Regatta':'sequencer',
+ 'Remainder':'other','Reverie':'granular',
 }
 sys.path.insert(0, os.path.join(GUIDES,'max-for-live'))
 import site_data as SD
@@ -23,6 +28,11 @@ kindof={i['name']:i['kind'] for i in SD.ITEMS}
 authorof={i['name']:i['author'] for i in SD.ITEMS}
 missing=[n for n in OWN_TYPE if n not in tagline]
 assert not missing, 'not in the guide: %s' % missing
+# ...and the other way round, so a device added to collapse.OWN_PREFIXES and to
+# the guide but not given a type here fails loudly here instead of with a bare
+# KeyError further down.
+untyped=[i['name'] for i in SD.ITEMS if i['name'] not in OWN_TYPE]
+assert not untyped, 'in the guide but with no OWN_TYPE entry: %s' % untyped
 
 INSTRUMENT_TYPES={'synth','sampler','drums'}
 def role(e):

@@ -721,6 +721,14 @@
  },
  {
   "vendor": "Arturia",
+  "name": "Pure SUB",
+  "version": "1.0.0.6835",
+  "formats": "VST2/VST3",
+  "category": "Instrument, Synth",
+  "url": ""
+ },
+ {
+  "vendor": "Arturia",
   "name": "Rev INTENSITY",
   "version": "1.6.1.6566",
   "formats": "VST2/VST3",
@@ -2708,6 +2716,22 @@
   "name": "Zerone",
   "version": "133248",
   "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": ""
+ },
+ {
+  "vendor": "Reason Studios",
+  "name": "Reason Rack Plugin",
+  "version": "14.1.0",
+  "formats": "VST3",
+  "category": "Instrument",
+  "url": ""
+ },
+ {
+  "vendor": "Reason Studios",
+  "name": "Reason Rack Plugin Effect",
+  "version": "14.1.0",
+  "formats": "VST3",
   "category": "Fx",
   "url": ""
  },

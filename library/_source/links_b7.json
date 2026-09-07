@@ -257,5 +257,22 @@
     "note": "Finisher RETRO multi-effect delivering vintage 60s to 90s production vibes."
    }
   }
+ },
+ "Reason Studios": {
+  "vendor_url": "https://www.reasonstudios.com/",
+  "products": {
+   "Reason Rack Plugin": {
+    "product_url": "https://www.reasonstudios.com/reason-rack",
+    "manual_url": "https://docs.reasonstudios.com/rackplugin14/introduction",
+    "category": "synth",
+    "note": "Reason's modular rack of instruments and effects, hosted as a plugin."
+   },
+   "Reason Rack Plugin Effect": {
+    "product_url": "https://www.reasonstudios.com/reason-rack",
+    "manual_url": "https://docs.reasonstudios.com/rackplugin14/introduction",
+    "category": "other",
+    "note": "Effect-slot version of the Reason Rack for processing audio in the host."
+   }
+  }
  }
 }

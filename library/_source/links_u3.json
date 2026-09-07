@@ -1,4 +1,10 @@
 {
+ "Auren Free 1.5.0": {
+  "url": "https://maxforlive.com/library/device/13452/auren-spectral-delay",
+  "maker": "Dystopian Waves (DysWaves)",
+  "category": "delay",
+  "note": "Multi-band spectral delay, two taps, per-band sequencers and built-in reverb."
+ },
  "Backspin v1.0.1": {
   "url": "https://maxforlive.com/library/device/14124/backspin",
   "maker": "Andrew Norris",
@@ -17,6 +23,12 @@
   "category": "eq",
   "note": "Modelled tube preamp with three-band EQ and oversampling."
  },
+ "ChromaPhase v1.1.5": {
+  "url": "https://maxforlive.com/library/device/12706/chromaphase",
+  "maker": "Dystopian Waves (DysWaves)",
+  "category": "modulation",
+  "note": "Multi-voice chorus with visual feedback, frequency shifting, saturation and wow/flutter."
+ },
  "Contemporary texture": {
   "url": "https://maxforlive.com/library/device/11823/contemporary-texture",
   "maker": "Remo De Vico",
@@ -34,6 +46,12 @@
   "maker": "mganss",
   "category": "sequencer",
   "note": "808/909-style drum pattern generator and sequencer."
+ },
+ "Dystopian Waves Wah 1.5.0": {
+  "url": "https://dystopianwaves.gumroad.com/l/mwahpedal",
+  "maker": "Dystopian Waves (DysWaves)",
+  "category": "filter",
+  "note": "Wah filter with ten types, four modulation modes and four distortions."
  },
  "Filter Glass": {
   "url": "https://maxforlive.com/library/device/11486/filter-glass",
@@ -208,6 +226,12 @@
   "maker": null,
   "category": "other",
   "note": null
+ },
+ "Spectral Wobbler 1.2.0": {
+  "url": "https://maxforlive.com/library/device/13241/spectral-wobbler",
+  "maker": "Dystopian Waves (DysWaves)",
+  "category": "modulation",
+  "note": "LFO offsets frequency bins; at zero rate becomes a static spectral shifter."
  },
  "TapeStop 2.0": {
   "url": "https://maxforlive.com/library/device/217/tapestop",

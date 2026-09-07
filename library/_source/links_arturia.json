@@ -428,6 +428,12 @@
         "category": "synth",
         "note": "Lo-fi sample-based instrument built from degraded tape and vintage sources."
       },
+      "Pure SUB": {
+        "product_url": "https://www.arturia.com/products/software-instruments/pure-sub/overview",
+        "manual_url": "https://dl.arturia.net/products/pure-sub/manual/pure-sub_Manual_1_0_0_EN.pdf",
+        "category": "synth",
+        "note": "Bass design synthesizer with separate Sub, Harmonics and Texture elements."
+      },
       "Rev INTENSITY": {
         "product_url": "https://www.arturia.com/products/software-effects/rev-intensity/overview",
         "manual_url": "https://dl.arturia.net/products/rev-intensity/manual/ReverbIntensity_Manual_1_0_1_EN.pdf",
