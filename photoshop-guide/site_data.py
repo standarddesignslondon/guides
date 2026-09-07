@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
-"""Content for the photoshop tools guide.
+"""Content for the adobe tools guide.
 
 Add a tool by appending a dict to ITEMS, dropping a picture in images/ named
 after its slug, and re-running build_site.py. Nothing else needs touching.
 """
 
 SUBJECT = {
-    "short": "photoshop",
-    "title": "photoshop\ntools",
+    "short": "adobe",
+    "title": "adobe\ntools",
     "subtitle": "process guide",
-    "blurb": "Panels, scripts and actions built for Photoshop. What every "
-             "control does, how a file travels from the canvas out to "
-             "whatever does the work and back again, and the things each one "
-             "needs you to remember.",
+    "blurb": "Panels, scripts and automations built for the Adobe "
+             "applications. What every control does, how a file travels from "
+             "the canvas out to whatever does the work and back again, and "
+             "the things each one needs you to remember.",
     "noun": "tool",
     "noun_plural": "tools",
     "page_dir": "tools",
@@ -21,6 +21,8 @@ SUBJECT = {
     "hub_label": "guides",
     "accent": "#ff4f00",
     "facets": [
+        {"field": "app", "label": "apps", "all": "all apps",
+         "fact_label": "app"},
         {"field": "kind", "label": "types", "all": "all types",
          "fact_label": "type"},
         {"field": "author", "label": "makers", "all": "everyone",
@@ -35,6 +37,7 @@ ITEMS.append({
     "slug": "nano-banana-bridge",
     "name": "Nano Banana Bridge",
     "kind": "UXP panel",
+    "app": "Photoshop",
     "author": "Claude",
     "status": "Working",
     "folder": "NanoBanana-Photoshop-Plugin",
@@ -355,6 +358,7 @@ ITEMS.append({
     "slug": "glitchslice",
     "name": "GlitchSlice",
     "kind": "UXP panel",
+    "app": "Photoshop",
     "author": "Claude",
     "status": "Working",
     "folder": "GlitchSlice-Photoshop-Plugin",
@@ -478,6 +482,7 @@ ITEMS.append({
     "slug": "signal-degrade",
     "name": "Signal Degrade",
     "kind": "UXP panel",
+    "app": "Photoshop",
     "author": "Claude",
     "status": "Working",
     "folder": "SignalDegrade-Photoshop-Plugin",
@@ -559,6 +564,7 @@ ITEMS.append({
     "slug": "static",
     "name": "Static",
     "kind": "UXP panel",
+    "app": "Photoshop",
     "author": "Claude",
     "status": "Working",
     "folder": "Static-Photoshop-Plugin",
@@ -644,6 +650,7 @@ ITEMS.append({
     "slug": "row-jitter",
     "name": "Row Jitter",
     "kind": "UXP panel",
+    "app": "Photoshop",
     "author": "Claude",
     "status": "Working",
     "folder": "RowJitter-Photoshop-Plugin",
@@ -720,6 +727,7 @@ ITEMS.append({
     "slug": "misregistered-print",
     "name": "Misregistered Print",
     "kind": "UXP panel",
+    "app": "Photoshop",
     "author": "Claude",
     "status": "Working",
     "folder": "MisregisteredPrint-Photoshop-Plugin",
@@ -781,4 +789,137 @@ ITEMS.append({
         {"label": "installing", "type": "steps", "data": INSTALL_STEPS},
     ],
     "rebuild": REBUILD_NOTE,
+})
+
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "poster-pdf-export",
+    "name": "Poster PDF Export",
+    "kind": "Watch folder",
+    "app": "InDesign",
+    "author": "Claude",
+    "status": "Working",
+    "folder": "Dropbox/A3/_APA-Automation/PosterExport",
+    "tagline": "Drop a finished Illustrator poster into a folder and five "
+               "print-ready GRACoL PDFs appear on the Desktop.",
+    "blurb":
+        "The last five minutes of every poster used to be manual: overwrite "
+        "`ARTWORK.ai` on the Crucial X9, open the InDesign template that links "
+        "to it, wait for the link to refresh, export six pages through the "
+        "Gelato preset, then rename the results. This does the lot from a "
+        "single drag. A launchd agent watches two folders, one per template, "
+        "asks for the poster's name, and hands the job to InDesign, which "
+        "copies the artwork into place and exports pages 2 – 6 one at a time. "
+        "Verified byte-identical to a hand export: of the six data streams in "
+        "each PDF, five match exactly and the sixth is the XMP packet holding "
+        "the timestamp.",
+    "facts": {
+        "requires": "InDesign 21.5+, Crucial X9 mounted",
+        "preset": "GELATO 4MM GR AUTO",
+        "runtime": "~/.apa-poster-export/",
+    },
+    "quickstart": [
+        "Finish the poster in Illustrator with all three artboards correct.",
+        "Drag the `.ai` file into **~/Poster Drop/White Edge** if the poster "
+        "has a white border, or **~/Poster Drop/Stretched** if the artwork "
+        "runs to the bleed. There is a link to the folder on the Desktop.",
+        "A dialog asks for the name, prefilled from the filename. Type "
+        "everything up to the size — `APA-AD-AUTEUIL Auteuil et Passy` — and "
+        "press Return.",
+        "Wait. A notification appears when the five PDFs are in a folder on "
+        "the Desktop named after the canonical code.",
+    ],
+    "controls": [
+        {"title": "What comes out",
+         "intro": "Page 1 of the template, A3 at 0 mm, is deliberately "
+                  "skipped. Use the trim tool on the A3 4 mm file instead.",
+         "rows": [
+             ["`… A3-4mm-gr.pdf`", "page 2", "297 × 420 mm trim"],
+             ["`… A2-4mm-gr.pdf`", "page 3", "420 × 594 mm trim"],
+             ["`… A1-4mm-gr.pdf`", "page 4", "594 × 841 mm trim"],
+             ["`… 1824-4mm-gr.pdf`", "page 5", "457.2 × 609.6 mm trim"],
+             ["`… 2436-4mm-gr.pdf`", "page 6", "609.6 × 914.4 mm trim"],
+         ]},
+        {"title": "The two drop folders",
+         "rows": [
+             ["White Edge", "`Indesign Files/ALL CORRECT.indd`",
+              "Frames leave the poster's own white border showing. For "
+              "artwork that already has a margin."],
+             ["Stretched", "`Indesign Files (Stretched)/ALL.indd`",
+              "Frames run the artwork out to the full bleed."],
+         ]},
+        {"title": "Where things live",
+         "rows": [
+             ["Master scripts", "Dropbox",
+              "`/A3/_APA-Automation/PosterExport/` — edit here."],
+             ["Runtime copies", "`~/.apa-poster-export/`",
+              "What launchd actually runs. Re-run `install.sh` after any "
+              "edit or they drift."],
+             ["Artwork slot", "Crucial X9",
+              "`NEW FACTORY/PLACE ARTWORK HERE/ARTWORK.ai`, overwritten "
+              "each run. Your dropped file is copied, never moved."],
+             ["Log", "`~/Library/Logs/`",
+              "`apa-poster-export.log` — every trigger, file size and "
+              "outcome."],
+         ]},
+    ],
+    "workflow": [
+        {"title": "Why InDesign does the file handling",
+         "text": "macOS refuses a launchd agent access to anything under "
+                 "`~/Library/CloudStorage`, `~/Desktop`, `~/Documents` or "
+                 "`~/Downloads`, and to external volumes. It fails with "
+                 "*Operation not permitted* and never prompts, so the "
+                 "symptom is silence rather than an error. The shell script "
+                 "therefore only notices the file and asks for a name; "
+                 "InDesign copies the artwork onto the X9 and writes the "
+                 "PDFs to the Desktop, because it is a real application with "
+                 "its own permissions."},
+        {"title": "Why the preset is untouchable",
+         "text": "The script sets exactly one export property, which page to "
+                 "export. Colour conversion, the GRACoL destination, PDF/X-4, "
+                 "the output intent, compression and the 4 mm bleed all come "
+                 "from the named preset, so a scripted export is the same "
+                 "operation as choosing that preset by hand. An InDesign PDF "
+                 "preset does not store a page range, which is what makes "
+                 "this possible."},
+        {"title": "Why it updates rather than relinks",
+         "text": "The artwork link is refreshed with `update()`, never "
+                 "`relink()`. Relinking risks resetting which artboard of the "
+                 "`.ai` each frame shows, and the whole point of the template "
+                 "is that those choices are already correct."},
+    ],
+    "gotchas": [
+        "**Create Separate PDF Files must stay off** in `GELATO 4MM GR AUTO`. "
+        "A preset does store that flag, and with it on InDesign appends "
+        "`_1`, `_2` to every filename and the naming falls apart.",
+        "Never move the scripts or the drop folders into Dropbox, Desktop, "
+        "Documents or Downloads. It will stop working silently.",
+        "The Crucial X9 must be mounted. If it isn't, the file is left in the "
+        "drop folder and an alert says so.",
+        "The name you type sets both the filenames and the output folder — "
+        "the folder takes the first word, so `APA-AD-AUTEUIL Auteuil et "
+        "Passy` lands in `~/Desktop/APA-AD-AUTEUIL/`.",
+        "It refuses to export rather than produce something wrong if a link "
+        "is missing, a font is not installed, the preset name is not found, "
+        "or a template has fewer than six pages.",
+        "Cancelling the name dialog moves the file to `_Cancelled`, not back "
+        "to the drop folder.",
+    ],
+    "rebuild": [
+        {"title": "Installing",
+         "text": "`bash ~/Library/CloudStorage/Dropbox/A3/_APA-Automation/"
+                 "PosterExport/install.sh`. It creates the drop folders, "
+                 "copies the scripts to the runtime folder, and loads the two "
+                 "launchd agents. Safe to re-run, and re-running is how you "
+                 "deploy an edit."},
+        {"title": "Removing it",
+         "text": "The same command with `uninstall` on the end. Drop folders "
+                 "and finished PDFs are left alone."},
+        {"title": "When nothing happens",
+         "text": "Check `~/Library/Logs/apa-poster-export.log` for a "
+                 "`triggered` line. Present means the watcher fired and the "
+                 "problem is downstream; absent means the agent never "
+                 "started, and `~/Library/Logs/apa-poster-export.err.log` "
+                 "will say why."},
+    ],
 })

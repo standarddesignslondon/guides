@@ -1,8 +1,13 @@
-# photoshop-guide
+# adobe tools guide
 
-A reference guide for the Photoshop tools — panels, scripts and actions — in
-the same teenage-engineering styling as the Max for Live guide. One numbered
-chapter per tool, plus a filterable index.
+A reference guide for the Adobe tools — Photoshop panels, scripts, actions and
+cross-application automations — in the same teenage-engineering styling as the
+Max for Live guide. One numbered chapter per tool, plus a filterable index.
+
+The subject was called *photoshop* until September 2026, when the first
+InDesign entry arrived. The folder is still `photoshop-guide` so existing URLs
+keep working; only the displayed name changed. Every item carries an `app`
+field, which drives the first filter on the index.
 
 Open `index.html` in a browser and it works on its own. It is also a *subject*
 folder, so it can be dropped into the combined `guides` site alongside the

@@ -1,14 +1,14 @@
 {
  "subject": {
-  "short": "photoshop",
-  "title": "photoshop tools",
+  "short": "adobe",
+  "title": "adobe tools",
   "subtitle": "process guide",
-  "blurb": "Panels, scripts and actions built for Photoshop. What every control does, how a file travels from the canvas out to whatever does the work and back again, and the things each one needs you to remember.",
+  "blurb": "Panels, scripts and automations built for the Adobe applications. What every control does, how a file travels from the canvas out to whatever does the work and back again, and the things each one needs you to remember.",
   "noun": "tool",
   "noun_plural": "tools",
   "page_dir": "tools"
  },
- "generated": "2026-08-23",
+ "generated": "2026-09-07",
  "items": [
   {
    "num": "01",
@@ -18,6 +18,7 @@
    "url": "tools/nano-banana-bridge.html",
    "image": "images/nano-banana-bridge.png",
    "facets": {
+    "app": "Photoshop",
     "kind": "UXP panel",
     "author": "Claude"
    }
@@ -30,6 +31,7 @@
    "url": "tools/glitchslice.html",
    "image": "images/glitchslice.png",
    "facets": {
+    "app": "Photoshop",
     "kind": "UXP panel",
     "author": "Claude"
    }
@@ -42,6 +44,7 @@
    "url": "tools/signal-degrade.html",
    "image": "images/signal-degrade.png",
    "facets": {
+    "app": "Photoshop",
     "kind": "UXP panel",
     "author": "Claude"
    }
@@ -54,6 +57,7 @@
    "url": "tools/static.html",
    "image": "images/static.png",
    "facets": {
+    "app": "Photoshop",
     "kind": "UXP panel",
     "author": "Claude"
    }
@@ -66,6 +70,7 @@
    "url": "tools/row-jitter.html",
    "image": "images/row-jitter.png",
    "facets": {
+    "app": "Photoshop",
     "kind": "UXP panel",
     "author": "Claude"
    }
@@ -78,7 +83,21 @@
    "url": "tools/misregistered-print.html",
    "image": "images/misregistered-print.png",
    "facets": {
+    "app": "Photoshop",
     "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "07",
+   "slug": "poster-pdf-export",
+   "name": "Poster PDF Export",
+   "tagline": "Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.",
+   "url": "tools/poster-pdf-export.html",
+   "image": null,
+   "facets": {
+    "app": "InDesign",
+    "kind": "Watch folder",
     "author": "Claude"
    }
   }

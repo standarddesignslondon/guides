@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>poster pdf export — adobe</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">adobe</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">07</p>
+  <h1>poster pdf export</h1>
+  <p class="ch-sub">Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.</p>
+</header>
+<figure class="shot"><div class="shot-frame empty"><span>images/poster-pdf-export.png</span></div><figcaption>picture pending</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">07.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">The last five minutes of every poster used to be manual: overwrite <code>ARTWORK.ai</code> on the Crucial X9, open the InDesign template that links to it, wait for the link to refresh, export six pages through the Gelato preset, then rename the results. This does the lot from a single drag. A launchd agent watches two folders, one per template, asks for the poster&#x27;s name, and hands the job to InDesign, which copies the artwork into place and exports pages 2 – 6 one at a time. Verified byte-identical to a hand export: of the six data streams in each PDF, five match exactly and the sixth is the XMP packet holding the timestamp.</p>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>indesign</dd></div><div class="fact"><dt>type</dt><dd>watch folder</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>requires</dt><dd>InDesign 21.5+, Crucial X9 mounted</dd></div><div class="fact"><dt>preset</dt><dd>GELATO 4MM GR AUTO</dd></div><div class="fact"><dt>runtime</dt><dd>~/.apa-poster-export/</dd></div><div class="fact"><dt>folder</dt><dd>Dropbox/A3/_APA-Automation/PosterExport</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">07.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Finish the poster in Illustrator with all three artboards correct.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Drag the <code>.ai</code> file into <b>~/Poster Drop/White Edge</b> if the poster has a white border, or <b>~/Poster Drop/Stretched</b> if the artwork runs to the bleed. There is a link to the folder on the Desktop.</span></li>
+<li><span class="step-n">03</span><span class="step-t">A dialog asks for the name, prefilled from the filename. Type everything up to the size — <code>APA-AD-AUTEUIL Auteuil et Passy</code> — and press Return.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Wait. A notification appears when the five PDFs are in a folder on the Desktop named after the canonical code.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">07.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">what comes out</h3>
+<p class="lead">Page 1 of the template, A3 at 0 mm, is deliberately skipped. Use the trim tool on the A3 4 mm file instead.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt><code>… A3-4mm-gr.pdf</code><span class="rng">page 2</span></dt><dd>297 × 420 mm trim</dd></div>
+<div class="ctl-row"><dt><code>… A2-4mm-gr.pdf</code><span class="rng">page 3</span></dt><dd>420 × 594 mm trim</dd></div>
+<div class="ctl-row"><dt><code>… A1-4mm-gr.pdf</code><span class="rng">page 4</span></dt><dd>594 × 841 mm trim</dd></div>
+<div class="ctl-row"><dt><code>… 1824-4mm-gr.pdf</code><span class="rng">page 5</span></dt><dd>457.2 × 609.6 mm trim</dd></div>
+<div class="ctl-row"><dt><code>… 2436-4mm-gr.pdf</code><span class="rng">page 6</span></dt><dd>609.6 × 914.4 mm trim</dd></div>
+</dl>
+<h3 class="sub">the two drop folders</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>White Edge<span class="rng"><code>Indesign Files/ALL CORRECT.indd</code></span></dt><dd>Frames leave the poster&#x27;s own white border showing. For artwork that already has a margin.</dd></div>
+<div class="ctl-row"><dt>Stretched<span class="rng"><code>Indesign Files (Stretched)/ALL.indd</code></span></dt><dd>Frames run the artwork out to the full bleed.</dd></div>
+</dl>
+<h3 class="sub">where things live</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Master scripts<span class="rng">Dropbox</span></dt><dd><code>/A3/_APA-Automation/PosterExport/</code> — edit here.</dd></div>
+<div class="ctl-row"><dt>Runtime copies<span class="rng"><code>~/.apa-poster-export/</code></span></dt><dd>What launchd actually runs. Re-run <code>install.sh</code> after any edit or they drift.</dd></div>
+<div class="ctl-row"><dt>Artwork slot<span class="rng">Crucial X9</span></dt><dd><code>NEW FACTORY/PLACE ARTWORK HERE/ARTWORK.ai</code>, overwritten each run. Your dropped file is copied, never moved.</dd></div>
+<div class="ctl-row"><dt>Log<span class="rng"><code>~/Library/Logs/</code></span></dt><dd><code>apa-poster-export.log</code> — every trigger, file size and outcome.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">07.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">why indesign does the file handling</h3><p>macOS refuses a launchd agent access to anything under <code>~/Library/CloudStorage</code>, <code>~/Desktop</code>, <code>~/Documents</code> or <code>~/Downloads</code>, and to external volumes. It fails with <i>Operation not permitted</i> and never prompts, so the symptom is silence rather than an error. The shell script therefore only notices the file and asks for a name; InDesign copies the artwork onto the X9 and writes the PDFs to the Desktop, because it is a real application with its own permissions.</p>
+<h3 class="sub">why the preset is untouchable</h3><p>The script sets exactly one export property, which page to export. Colour conversion, the GRACoL destination, PDF/X-4, the output intent, compression and the 4 mm bleed all come from the named preset, so a scripted export is the same operation as choosing that preset by hand. An InDesign PDF preset does not store a page range, which is what makes this possible.</p>
+<h3 class="sub">why it updates rather than relinks</h3><p>The artwork link is refreshed with <code>update()</code>, never <code>relink()</code>. Relinking risks resetting which artboard of the <code>.ai</code> each frame shows, and the whole point of the template is that those choices are already correct.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">07.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li><b>Create Separate PDF Files must stay off</b> in <code>GELATO 4MM GR AUTO</code>. A preset does store that flag, and with it on InDesign appends <code>_1</code>, <code>_2</code> to every filename and the naming falls apart.</li><li>Never move the scripts or the drop folders into Dropbox, Desktop, Documents or Downloads. It will stop working silently.</li><li>The Crucial X9 must be mounted. If it isn&#x27;t, the file is left in the drop folder and an alert says so.</li><li>The name you type sets both the filenames and the output folder — the folder takes the first word, so <code>APA-AD-AUTEUIL Auteuil et Passy</code> lands in <code>~/Desktop/APA-AD-AUTEUIL/</code>.</li><li>It refuses to export rather than produce something wrong if a link is missing, a font is not installed, the preset name is not found, or a template has fewer than six pages.</li><li>Cancelling the name dialog moves the file to <code>_Cancelled</code>, not back to the drop folder.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">07.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><h3 class="sub">installing</h3><p><code>bash ~/Library/CloudStorage/Dropbox/A3/_APA-Automation/PosterExport/install.sh</code>. It creates the drop folders, copies the scripts to the runtime folder, and loads the two launchd agents. Safe to re-run, and re-running is how you deploy an edit.</p>
+<h3 class="sub">removing it</h3><p>The same command with <code>uninstall</code> on the end. Drop folders and finished PDFs are left alone.</p>
+<h3 class="sub">when nothing happens</h3><p>Check <code>~/Library/Logs/apa-poster-export.log</code> for a <code>triggered</code> line. Present means the watcher fired and the problem is downstream; absent means the agent never started, and <code>~/Library/Logs/apa-poster-export.err.log</code> will say why.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="misregistered-print.html"><span>previous</span>misregistered print</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>adobe</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-09-07</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

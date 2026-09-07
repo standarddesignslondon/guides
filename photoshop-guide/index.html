@@ -3,71 +3,78 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>photoshop — process guide</title>
+<title>adobe — process guide</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="index">
-<header class="topbar"><a class="wordmark" href="../index.html">guides</a><a class="topbar-mid" href="index.html">photoshop</a><a class="topbar-right" href="../all.html">everything</a></header>
+<header class="topbar"><a class="wordmark" href="../index.html">guides</a><a class="topbar-mid" href="index.html">adobe</a><a class="topbar-right" href="../all.html">everything</a></header>
 <main>
 <header class="hero">
-  <h1>photoshop<br>tools</h1>
+  <h1>adobe<br>tools</h1>
   <p class="hero-sub">process guide</p>
-  <p class="hero-blurb">Panels, scripts and actions built for Photoshop. What every control does, how a file travels from the canvas out to whatever does the work and back again, and the things each one needs you to remember.</p>
-  <p class="hero-count">6 tools</p>
+  <p class="hero-blurb">Panels, scripts and automations built for the Adobe applications. What every control does, how a file travels from the canvas out to whatever does the work and back again, and the things each one needs you to remember.</p>
+  <p class="hero-count">7 tools</p>
 </header>
-<div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="UXP panel">uxp panel</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
+<div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="app"><button class="f on" data-f="app" data-v="">all apps</button><button class="f" data-f="app" data-v="InDesign">indesign</button><button class="f" data-f="app" data-v="Photoshop">photoshop</button></div><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="UXP panel">uxp panel</button><button class="f" data-f="kind" data-v="Watch folder">watch folder</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
 <div class="index-list" id="grid">
 <a class="row" href="tools/nano-banana-bridge.html"
-   data-kind="UXP panel" data-author="Claude" data-text="nano banana bridge sends the canvas and a marked-up selection to nano banana, then brings the result back as a masked layer. a photoshop panel that closes the loop between a selection and nano banana. it exports a flattened copy of the document with your selection stroked on as an annotation outline, wraps your instruction in a template telling the model to edit only inside that outline and then erase it, and sends the lot by one of three routes: the gemini app, the ai studio playground, or the gemini api. what comes back is imported as a layer masked to the original selection, so every pixel outside the edit stays exactly as it was. uxp panel claude">
+   data-app="Photoshop" data-kind="UXP panel" data-author="Claude" data-text="nano banana bridge sends the canvas and a marked-up selection to nano banana, then brings the result back as a masked layer. a photoshop panel that closes the loop between a selection and nano banana. it exports a flattened copy of the document with your selection stroked on as an annotation outline, wraps your instruction in a template telling the model to edit only inside that outline and then erase it, and sends the lot by one of three routes: the gemini app, the ai studio playground, or the gemini api. what comes back is imported as a layer masked to the original selection, so every pixel outside the edit stays exactly as it was. photoshop uxp panel claude">
   <span class="r-num">01</span>
   <span class="r-name">nano banana bridge</span>
   <span class="r-desc">Sends the canvas and a marked-up selection to Nano Banana, then brings the result back as a masked layer.</span>
-  <span class="r-kind">uxp panel</span>
+  <span class="r-kind">photoshop</span>
   <span class="r-thumb"><img src="images/nano-banana-bridge.png" alt="" loading="lazy"></span>
 </a><a class="row" href="tools/glitchslice.html"
-   data-kind="UXP panel" data-author="Claude" data-text="glitchslice slices a layer into strips and scatters them — the criss-cross glitch pass, one direction at a time. cuts the active layer into vertical or horizontal strips of randomised width, then offsets a chosen proportion of them. each press of run pass is one pass and one undo step, so the intended workflow is iterative: run a vertical pass, run a horizontal pass on the result, repeat until it looks right, undo anything that doesn&#x27;t. gaps left behind are transparent, so lower layers show through — stack two source images and the scatter reveals one inside the other. uxp panel claude">
+   data-app="Photoshop" data-kind="UXP panel" data-author="Claude" data-text="glitchslice slices a layer into strips and scatters them — the criss-cross glitch pass, one direction at a time. cuts the active layer into vertical or horizontal strips of randomised width, then offsets a chosen proportion of them. each press of run pass is one pass and one undo step, so the intended workflow is iterative: run a vertical pass, run a horizontal pass on the result, repeat until it looks right, undo anything that doesn&#x27;t. gaps left behind are transparent, so lower layers show through — stack two source images and the scatter reveals one inside the other. photoshop uxp panel claude">
   <span class="r-num">02</span>
   <span class="r-name">glitchslice</span>
   <span class="r-desc">Slices a layer into strips and scatters them — the criss-cross glitch pass, one direction at a time.</span>
-  <span class="r-kind">uxp panel</span>
+  <span class="r-kind">photoshop</span>
   <span class="r-thumb"><img src="images/glitchslice.png" alt="" loading="lazy"></span>
 </a><a class="row" href="tools/signal-degrade.html"
-   data-kind="UXP panel" data-author="Claude" data-text="signal degrade one pass of lo-fi abuse: misregistration, halo, crush, grain, vignette — any stage at 0 is skipped. runs a fixed chain of degradations over the active layer: colour plate misregistration, softening, oversharpened halos, tonal crush with optional dither, grain, desaturation, contrast and a vignette. every stage is switched off by setting it to 0, so the panel is equally a one-trick tool (just a vignette, just misregistration) and a full worn-transmission treatment. four presets cover the obvious destinations; the status line lists which stages actually ran. uxp panel claude">
+   data-app="Photoshop" data-kind="UXP panel" data-author="Claude" data-text="signal degrade one pass of lo-fi abuse: misregistration, halo, crush, grain, vignette — any stage at 0 is skipped. runs a fixed chain of degradations over the active layer: colour plate misregistration, softening, oversharpened halos, tonal crush with optional dither, grain, desaturation, contrast and a vignette. every stage is switched off by setting it to 0, so the panel is equally a one-trick tool (just a vignette, just misregistration) and a full worn-transmission treatment. four presets cover the obvious destinations; the status line lists which stages actually ran. photoshop uxp panel claude">
   <span class="r-num">03</span>
   <span class="r-name">signal degrade</span>
   <span class="r-desc">One pass of lo-fi abuse: misregistration, halo, crush, grain, vignette — any stage at 0 is skipped.</span>
-  <span class="r-kind">uxp panel</span>
+  <span class="r-kind">photoshop</span>
   <span class="r-thumb"><img src="images/signal-degrade.png" alt="" loading="lazy"></span>
 </a><a class="row" href="tools/static.html"
-   data-kind="UXP panel" data-author="Claude" data-text="static generates a canvas-sized noise layer from mixable ingredients — radio static, hum bars, scanlines, dropout. synthesises texture from scratch rather than working on existing pixels: each press of generate computes a canvas-sized noise field in the panel and writes it into a fresh layer through photoshop&#x27;s imaging api. the field is mixed from ingredients — fine static, horizontal streaking, drifting hum bars, scanlines and tape-dropout flecks — any of which is left out at 0. the layer arrives with a chosen blend mode and opacity already set, ready to sit over artwork as texture, or on its own as raw static. uxp panel claude">
+   data-app="Photoshop" data-kind="UXP panel" data-author="Claude" data-text="static generates a canvas-sized noise layer from mixable ingredients — radio static, hum bars, scanlines, dropout. synthesises texture from scratch rather than working on existing pixels: each press of generate computes a canvas-sized noise field in the panel and writes it into a fresh layer through photoshop&#x27;s imaging api. the field is mixed from ingredients — fine static, horizontal streaking, drifting hum bars, scanlines and tape-dropout flecks — any of which is left out at 0. the layer arrives with a chosen blend mode and opacity already set, ready to sit over artwork as texture, or on its own as raw static. photoshop uxp panel claude">
   <span class="r-num">04</span>
   <span class="r-name">static</span>
   <span class="r-desc">Generates a canvas-sized noise layer from mixable ingredients — radio static, hum bars, scanlines, dropout.</span>
-  <span class="r-kind">uxp panel</span>
+  <span class="r-kind">photoshop</span>
   <span class="r-thumb"><img src="images/static.png" alt="" loading="lazy"></span>
 </a><a class="row" href="tools/row-jitter.html"
-   data-kind="UXP panel" data-author="Claude" data-text="row jitter shifts every horizontal band of a layer sideways — vhs tracking, worn tape, a scan gone wrong. where glitchslice is bold and structural, row jitter is a fine-grained shimmer: it reads the active layer&#x27;s pixels, offsets every horizontal band by a wobbly waveform plus smoothed noise, with occasional larger tears, and writes them back through the imaging api. band height sets the character — 1 – 2 px is a video-ish shimmer, 8 – 16 px chunky tracking error. pixels pushed off one edge wrap around to the other by default. uxp panel claude">
+   data-app="Photoshop" data-kind="UXP panel" data-author="Claude" data-text="row jitter shifts every horizontal band of a layer sideways — vhs tracking, worn tape, a scan gone wrong. where glitchslice is bold and structural, row jitter is a fine-grained shimmer: it reads the active layer&#x27;s pixels, offsets every horizontal band by a wobbly waveform plus smoothed noise, with occasional larger tears, and writes them back through the imaging api. band height sets the character — 1 – 2 px is a video-ish shimmer, 8 – 16 px chunky tracking error. pixels pushed off one edge wrap around to the other by default. photoshop uxp panel claude">
   <span class="r-num">05</span>
   <span class="r-name">row jitter</span>
   <span class="r-desc">Shifts every horizontal band of a layer sideways — VHS tracking, worn tape, a scan gone wrong.</span>
-  <span class="r-kind">uxp panel</span>
+  <span class="r-kind">photoshop</span>
   <span class="r-thumb"><img src="images/row-jitter.png" alt="" loading="lazy"></span>
 </a><a class="row" href="tools/misregistered-print.html"
-   data-kind="UXP panel" data-author="Claude" data-text="misregistered print the cheap-print look: halftone dots, colour plates out of register, paper grain and warmth. treats the active layer as a badly printed reproduction of itself. optionally halftones the image first, then splits it into colour plates and drifts each by its own random distance and direction — the blue plate anchors, red and green wander — before finishing with paper grain and a warm photo-filter wash like aged stock. anything at 0 is skipped, so it also serves as a plain halftone or plain warmth pass. uxp panel claude">
+   data-app="Photoshop" data-kind="UXP panel" data-author="Claude" data-text="misregistered print the cheap-print look: halftone dots, colour plates out of register, paper grain and warmth. treats the active layer as a badly printed reproduction of itself. optionally halftones the image first, then splits it into colour plates and drifts each by its own random distance and direction — the blue plate anchors, red and green wander — before finishing with paper grain and a warm photo-filter wash like aged stock. anything at 0 is skipped, so it also serves as a plain halftone or plain warmth pass. photoshop uxp panel claude">
   <span class="r-num">06</span>
   <span class="r-name">misregistered print</span>
   <span class="r-desc">The cheap-print look: halftone dots, colour plates out of register, paper grain and warmth.</span>
-  <span class="r-kind">uxp panel</span>
+  <span class="r-kind">photoshop</span>
   <span class="r-thumb"><img src="images/misregistered-print.png" alt="" loading="lazy"></span>
+</a><a class="row" href="tools/poster-pdf-export.html"
+   data-app="InDesign" data-kind="Watch folder" data-author="Claude" data-text="poster pdf export drop a finished illustrator poster into a folder and five print-ready gracol pdfs appear on the desktop. the last five minutes of every poster used to be manual: overwrite `artwork.ai` on the crucial x9, open the indesign template that links to it, wait for the link to refresh, export six pages through the gelato preset, then rename the results. this does the lot from a single drag. a launchd agent watches two folders, one per template, asks for the poster&#x27;s name, and hands the job to indesign, which copies the artwork into place and exports pages 2 – 6 one at a time. verified byte-identical to a hand export: of the six data streams in each pdf, five match exactly and the sixth is the xmp packet holding the timestamp. indesign watch folder claude">
+  <span class="r-num">07</span>
+  <span class="r-name">poster pdf export</span>
+  <span class="r-desc">Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.</span>
+  <span class="r-kind">indesign</span>
+  <span class="r-thumb"><span class="no-thumb"></span></span>
 </a>
 </div>
 <p class="empty-msg" id="empty" hidden>nothing matches that.</p>
 <script src="app.js"></script>
 </main>
 <footer class="siteftr">
-  <div class="sf-col"><span>photoshop</span>
+  <div class="sf-col"><span>adobe</span>
   <span>process guide</span></div>
-  <div class="sf-col"><span>generated 2026-08-23</span>
+  <div class="sf-col"><span>generated 2026-09-07</span>
   <span>build_site.py</span></div>
 </footer>
 </body>
