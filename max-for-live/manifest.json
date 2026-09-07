@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-09-07",
+ "generated": "2026-09-08",
  "items": [
   {
    "num": "01",
@@ -317,6 +317,18 @@
    "tagline": "A Lucid-style granular playground: grains that stay in key (pitch tracking, scale retune, chords and arps, tuned filters, scale-locked grain delays) and in time (grid retriggers, synced rates, timeline-locked scrub and LFOs), with a wireframe face and a pop-out panel.",
    "url": "devices/reverie.html",
    "image": "images/reverie-00.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "27",
+   "slug": "divisor",
+   "name": "Divisor",
+   "tagline": "Remainder's rot as a free-running processor for ongoing audio: nothing dies \u2014 Rot sets how ruined the sound is, and Chaos rerolls the balance on the bar, the clock, or every hit.",
+   "url": "devices/divisor.html",
+   "image": "images/divisor.png",
    "facets": {
     "kind": "Audio Effect",
     "author": "Claude"

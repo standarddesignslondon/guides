@@ -291,12 +291,12 @@
 <p>UI architecture: one embedded bpatcher panel holds every control; the face is a viewport (tab → bpatcher offset — the offset is the translation applied to the content, so tile (x, y) needs (−x, −y)); VIEW → <code>thispatcher front</code> with floating window flags. <code>live.dial</code> / <code>live.toggle</code> keep native behaviour and are repainted with <code>jspainterfile</code> (JS Painter). gen~ streams a 1024-slot display frame through <code>poke~</code> into a <code>buffer~</code> whose name the head canvas coins at load; a 33 ms metro drives the v8ui canvases.</p>
 <p>Lessons: a genexpr→Python transpiler tests the shipped code; store positions as ring indices so float32 Data keeps them exact; a playhead clamp must sit deeper than the recording backstop; never read parameter metadata via getattr in a painter — inject a table keyed by scripting name at build time.</p></div>
 </section>
-<nav class="chapnav"><a class="cn prev" href="remainder.html"><span>previous</span>remainder</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+<nav class="chapnav"><a class="cn prev" href="remainder.html"><span>previous</span>remainder</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="divisor.html"><span>next</span>divisor</a></nav>
 </main>
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-09-07</span>
+  <div class="sf-col"><span>generated 2026-09-08</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>divisor — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">27</p>
+  <h1>divisor</h1>
+  <p class="ch-sub">Remainder&#x27;s rot as a free-running processor for ongoing audio: nothing dies — Rot sets how ruined the sound is, and Chaos rerolls the balance on the bar, the clock, or every hit.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/divisor.png" alt="Divisor"></div><figcaption>divisor</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">27.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">The same five destruction processes as Remainder — <b>Tape</b>, <b>Bits</b>, <b>Shatter</b>, <b>Erode</b>, <b>Rust</b> — but working on the live signal instead of a dying tail. A master <b>Rot</b> scales them all; each has its own amount. <b>Chaos</b> rerolls the balance on a clock you choose (bars, seconds, transients, or the Roll button), <b>Glide</b> slides each new balance into place, <b>Drift</b> keeps everything slowly wandering. Latency-free until you use Erode. Two rows, one small box.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v1.0</dd></div><div class="fact"><dt>folder</dt><dd>Divisor Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">27.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Divisor.amxd</code> on a track with something continuous. Tape starts at 30 so there is mild wear straight away; Rot 0 is clean.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Raise one process at a time to learn it: Bits crunches and stutters, Rust rings it through drifting inharmonic resonators, Shatter breaks it into grains, Erode hollows the spectrum.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Set Chaos ~80, Reroll = Bar, Glide ~300 ms on a playing loop and listen to it reorganise itself every bar. Reroll = Transient on drums rerolls on every hit.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Mix 0 is bit-exact dry; Output trims the result.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">27.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">rot</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Rot<span class="rng">0 - 100</span></dt><dd>Master: scales every process. 100 = the dials as set, 0 = clean whatever else is up.</dd></div>
+<div class="ctl-row"><dt>Tape<span class="rng">0 - 100</span></dt><dd>Hiss, wow and flutter, a low-pass closing from 18 kHz to 250 Hz, saturation to 8×, random dropouts. No tape-stop and no printing — there is nothing to print into on live audio.</dd></div>
+<div class="ctl-row"><dt>Bits<span class="rng">0 - 100</span></dt><dd>Sample rate down to 1/48 of the session rate by sample-and-hold, bit depth from 16 to about 1.5 bits, bit-flip spikes, stutter loops seizing 5–40 ms for 2–8 repeats.</dd></div>
+<div class="ctl-row"><dt>Shatter<span class="rng">0 - 100</span></dt><dd>Grains read from a rolling buffer of the input. At 0 it is bypassed exactly; above ~5 % the granular layer takes over the wet path, sitting about 1.5 grains behind the dry. Density falls evenly across the dial (roughly 100/65/16/3 % at 25/50/75/100) as grains shrink, gaps widen, fragments come from up to a second back and some play backwards.</dd></div>
+<div class="ctl-row"><dt>Erode<span class="rng">0 - 100</span></dt><dd>1024-point spectral chain: each bin has a fixed threshold, so holes open as the level rises and close as it falls; a flickering share drops per frame; survivors smear across frames. Squared dial curve with level make-up so it hollows out rather than just getting quieter. Switched out entirely while the dial is at 0.</dd></div>
+<div class="ctl-row"><dt>Rust<span class="rng">0 - 100</span></dt><dd>Four inharmonic resonators (base pitch re-picked on every roll), Q rising 2 → 40, tunings random-walking up to ±30 %. The ringing layer is level-matched to the input so it never just gets quieter; the dry recedes underneath.</dd></div>
+<div class="ctl-row"><dt>Grain<span class="rng">5 ms - 2 s</span></dt><dd>Shatter&#x27;s base grain length. Long grains push the wet path further behind the dry (about 1.5 grains).</dd></div>
+</dl>
+<h3 class="sub">chaos</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Chaos<span class="rng">0 - 100</span></dt><dd>How far each roll bends the amounts: each process ±80 %, processes left at 0 can sneak in (up to 50 %, about half the time), Grain up to 4× either way. 0 = exactly the dials.</dd></div>
+<div class="ctl-row"><dt>Reroll<span class="rng">Bar / 2 / 4 / 8 Bars / Seconds / Transient / Manual</span></dt><dd>The clock. Bar modes follow the host beat count and land on the barline (Live must be playing); Seconds runs free; Transient fires on an onset in the input with a 120 ms refractory; Manual waits for Roll.</dd></div>
+<div class="ctl-row"><dt>Seconds<span class="rng">0.1 - 30 s</span></dt><dd>Interval for the Seconds clock.</dd></div>
+<div class="ctl-row"><dt>Glide<span class="rng">0 - 5 s</span></dt><dd>Slides bent amounts into place after a roll instead of jumping.</dd></div>
+<div class="ctl-row"><dt>Drift<span class="rng">0 - 100</span></dt><dd>Slow random wander on every amount (±50 at full) at any Chaos setting.</dd></div>
+<div class="ctl-row"><dt>Roll<span class="rng">button</span></dt><dd>Rolls now, in every mode; flashes the light.</dd></div>
+</dl>
+<h3 class="sub">out</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Mix<span class="rng">0 - 100</span></dt><dd>Dry/wet, equal power. 0 is bit-exact dry.</dd></div>
+<div class="ctl-row"><dt>Output<span class="rng">-24 - +12 dB</span></dt><dd>Output trim.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">27.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">rot</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Rot</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Tape</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Bits</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Shatter</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Erode</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Rust</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Grain</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Roll</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">chaos</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Chaos</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Reroll</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Seconds</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Glide</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Drift</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Mix</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Output</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Roll</span>
+</div>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">27.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">bar-locked decay</h3><p>Tape 30, Bits 20, Rust 20, Chaos 80, Reroll = Bar, Glide 300 ms: a loop that is never quite the same twice but always changes on the one.</p>
+<h3 class="sub">hit-driven</h3><p>Reroll = Transient with Glide 0 on drums: every hit lands in a fresh flavour of ruin. Raise Glide to make the changes bloom after each hit instead.</p>
+<h3 class="sub">rot as a performance knob</h3><p>Set the process balance you like, then map Rot to a macro or a Push encoder: one knob from clean to ruin.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">27.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Erode adds 43 ms of latency to the whole device while its dial is above 0 (the dry is delayed to match the FFT chain). Leaving it at 0 keeps the device latency-free; turning it up from 0 causes a one-off time jump.</li><li>Shatter&#x27;s wet path sits about 1.5 grains behind the dry — with Grain at 2 s that is ~3 s. Fine for textures, odd on rhythm.</li><li>Bar clocks only roll while Live is playing; use Seconds or Roll when it isn&#x27;t.</li><li>Erode and Shatter never sneak in under Chaos while their dials are at 0 — those circuits are switched by the dial.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">27.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_divisor.py</code> in the device folder regenerates <code>Divisor.amxd</code>; <code>python3 sim_divisor.py</code> runs the engine model (37 checks incl. the clock logic).</p>
+<p>Engine: one main gen~ (Shatter ring → Bits → Rust → Tape, Chaos clocks, Glide, Drift) → patcher-level 1024-point fft~/ifft~ WOLA chain (Erode) → mixer gen~ (dry delay when Erode is on, equal-power Mix, Output). No external files.</p>
+<p>Lessons: a unity-peak narrow resonator passes almost no broadband energy — level-match resonator layers; curves tuned for a dying tail collapse early on a free-running dial.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="reverie.html"><span>previous</span>reverie</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-09-08</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>
