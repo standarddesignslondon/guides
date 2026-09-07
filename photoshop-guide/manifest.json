@@ -94,7 +94,7 @@
    "name": "Poster PDF Export",
    "tagline": "Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.",
    "url": "tools/poster-pdf-export.html",
-   "image": null,
+   "image": "images/poster-pdf-export.png",
    "facets": {
     "app": "InDesign",
     "kind": "Watch folder",
