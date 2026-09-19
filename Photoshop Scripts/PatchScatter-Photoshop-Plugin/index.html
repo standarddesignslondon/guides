@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        margin: 0;
+        padding: 10px 12px 14px;
+        font-family: "SF Pro Text", "Helvetica Neue", sans-serif;
+        font-size: 12px;
+        color: #d6d6d6;
+    }
+    h2 {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #9a9a9a;
+        margin: 14px 0 6px;
+        border-bottom: 1px solid #3a3a3a;
+        padding-bottom: 3px;
+    }
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 5px 0;
+        gap: 8px;
+    }
+    .row label { flex: 1 1 auto; }
+    input[type="number"] {
+        width: 62px;
+        background: #262626;
+        color: #e6e6e6;
+        border: 1px solid #444;
+        border-radius: 3px;
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+    .hint { font-size: 10px; color: #7a7a7a; margin: 2px 0 6px; line-height: 1.35; }
+    .radio { display: flex; align-items: center; gap: 6px; margin: 4px 0; }
+    .radio label { flex: 1 1 auto; }
+    .buttons { display: flex; gap: 8px; margin-top: 14px; }
+    button {
+        flex: 1;
+        padding: 7px 0;
+        border-radius: 4px;
+        border: 1px solid #555;
+        background: #333;
+        color: #e6e6e6;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    button:hover { background: #3e3e3e; }
+    #runBtn { background: #2d5b9e; border-color: #3a6cb5; font-weight: 600; }
+    #runBtn:hover { background: #366bb8; }
+    #status {
+        margin-top: 10px;
+        font-size: 11px;
+        color: #8fae8f;
+        min-height: 14px;
+        white-space: pre-line;
+    }
+    #status.err { color: #c98080; }
+</style>
+</head>
+<body>
+
+    <h2>Patches</h2>
+    <div class="row"><label>Number of patches</label><input type="number" id="count" min="1" value="40"></div>
+    <div class="row"><label>Min size (w + h, px)</label><input type="number" id="minSum" min="2" value="30"></div>
+    <div class="row"><label>Max size (w + h, px)</label><input type="number" id="maxSum" min="2" value="100"></div>
+    <div class="hint">Size is width plus height. With 30 and 100, a 50×40 patch (90) or a 10×25 patch (35) is allowed; 60×70 (130) or 5×24 (29) is not.</div>
+    <div class="row"><label>Max aspect ratio</label><input type="number" id="maxAspect" min="1" step="0.1" value="3"></div>
+    <div class="hint">Caps how elongated a patch can be. 1 = always square, 3 = up to 3:1 either way.</div>
+    <div class="row"><label>Feather (px)</label><input type="number" id="feather" min="0" step="0.5" value="1"></div>
+
+    <h2>Placement</h2>
+    <div class="radio"><input type="radio" name="edges" id="edgesInside" value="0" checked><label for="edgesInside">Keep patches inside the canvas</label></div>
+    <div class="radio"><input type="radio" name="edges" id="edgesOver" value="1"><label for="edgesOver">Patches may overhang the edges</label></div>
+    <div class="hint">Overhanging patches always keep at least one pixel on the canvas.</div>
+
+    <h2>Sample from</h2>
+    <div class="radio"><input type="radio" name="source" id="srcBase" value="0" checked><label for="srcBase">Base layer only</label></div>
+    <div class="radio"><input type="radio" name="source" id="srcMerged" value="1"><label for="srcMerged">Base + Scatter layer (iterative)</label></div>
+    <div class="hint">Iterative mode samples the visible composite, so earlier patches in the same pass can be re-copied. Hide any other layers you don't want sampled.</div>
+
+    <div class="buttons">
+        <button id="clearBtn">Clear Scatter layer</button>
+        <button id="runBtn">Run pass</button>
+    </div>
+    <div class="hint">Select the base layer, then Run. Patches go on a layer named "Scatter" directly above it; later passes add to the same layer.</div>
+
+    <div id="status"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

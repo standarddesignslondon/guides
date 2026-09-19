@@ -8,7 +8,7 @@
   "noun_plural": "tools",
   "page_dir": "tools"
  },
- "generated": "2026-09-07",
+ "generated": "2026-09-19",
  "items": [
   {
    "num": "01",
@@ -90,6 +90,19 @@
   },
   {
    "num": "07",
+   "slug": "patchscatter",
+   "name": "PatchScatter",
+   "tagline": "Copies random patches of a layer and drops them at random positions on a Scatter layer above it \u2014 optionally feeding on its own output.",
+   "url": "tools/patchscatter.html",
+   "image": "images/patchscatter.png",
+   "facets": {
+    "app": "Photoshop",
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "08",
    "slug": "poster-pdf-export",
    "name": "Poster PDF Export",
    "tagline": "Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.",

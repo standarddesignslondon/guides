@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>patchscatter — adobe</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">adobe</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">07</p>
+  <h1>patchscatter</h1>
+  <p class="ch-sub">Copies random patches of a layer and drops them at random positions on a Scatter layer above it — optionally feeding on its own output.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/patchscatter.png" alt="PatchScatter"></div><figcaption>patchscatter</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">07.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Takes the selected layer as the base, then for each patch picks a random rectangle, feathers the selection, copies it and pastes it at a random position on a layer named <b>Scatter</b> directly above the base. The first pass creates that layer; later passes add to it, so the picture builds up over repeated runs. Each press of <b>Run pass</b> is one undo step. In iterative mode the copy is taken from the visible composite rather than the base alone, so patches placed earlier in the same pass can be re-copied and the process turns generative.</p>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.0.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.patchscatter</dd></div><div class="fact"><dt>folder</dt><dd>PatchScatter-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">07.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Select the base pixel layer (not a group, and not the Scatter layer itself) and open the panel from <b>Plugins</b>.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Set the number of patches, the size range and the feather, choose whether patches may overhang the edges and what to sample from, then press <b>Run pass</b>.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Run again to add more patches to the same Scatter layer. Switch to <i>Base + Scatter layer</i> to let each pass sample the previous ones.</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>Clear Scatter layer</b> empties the layer without deleting it; undo removes a whole pass in one step.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">07.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">patches</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Number of patches<span class="rng">1 – 5000</span></dt><dd>How many rectangles are copied and placed in one pass.</dd></div>
+<div class="ctl-row"><dt>Min / Max size<span class="rng">px, width + height</span></dt><dd>One number for both dimensions: a patch&#x27;s width plus its height is drawn uniformly from this range. With 30 and 100, a 50×40 patch (90) or a 10×25 patch (35) is allowed; 60×70 (130) or 5×24 (29) is not.</dd></div>
+<div class="ctl-row"><dt>Max aspect ratio<span class="rng">1 – 1000, default 3</span></dt><dd>Caps how elongated a patch can be, in either orientation. 1 forces squares; 3 allows anything up to 3:1.</dd></div>
+<div class="ctl-row"><dt>Feather<span class="rng">px, default 1</span></dt><dd>Feathers each source selection before the copy, so patch edges soften and blend. 0 gives hard-edged rectangles.</dd></div>
+</dl>
+<h3 class="sub">placement</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Keep patches inside the canvas<span class="rng">default</span></dt><dd>Every patch lands wholly within the document bounds.</dd></div>
+<div class="ctl-row"><dt>Patches may overhang the edges</dt><dd>Destinations run past the edges, but every patch keeps at least one pixel on the canvas so nothing is placed out of sight.</dd></div>
+</dl>
+<h3 class="sub">sample from</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Base layer only<span class="rng">default</span></dt><dd>Each patch is copied from the base layer alone, whatever already sits on the Scatter layer.</dd></div>
+<div class="ctl-row"><dt>Base + Scatter layer (iterative)</dt><dd>Copies from the visible composite, so patches already placed — including earlier ones in the same pass — can be copied again. Repeated passes compound.</dd></div>
+</dl>
+<h3 class="sub">buttons</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Run pass</dt><dd>Places one batch of patches; the status line reports how many were placed and how many were skipped because the source area was empty.</dd></div>
+<div class="ctl-row"><dt>Clear Scatter layer</dt><dd>Deletes every pixel on the Scatter layer, leaving the layer in place for the next pass.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">07.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">building up</h3><p>Start with a modest count and a wide size range, run a few passes and look between each. Because every pass is one undo step, it is cheap to back out the last one and try different settings.</p>
+<h3 class="sub">going generative</h3><p>Switch to <i>Base + Scatter layer</i> once there is something on the Scatter layer. Small counts per pass keep it legible; large counts with overhang on quickly tile the whole image with fragments of fragments.</p>
+<h3 class="sub">soft edges</h3><p>Raise the feather to a few pixels with larger patches and the result reads as a collage of smudges rather than cut-outs. Keep the feather well under half the minimum patch dimension or small patches fade to nothing.</p>
+<h3 class="sub">with the other plugins</h3><p>Scatter first and slice after with <i>GlitchSlice</i> for criss-cross cuts through the patchwork; degrade after with <i>Signal Degrade</i> to unify the mixed edges.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">07.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Pixel layers only — select the base layer, not a group. Patches whose source area is fully transparent are skipped and counted in the status line.</li><li>Iterative mode uses Copy Merged, which samples <i>everything</i> visible, not just the base and Scatter layers. Hide any other layers you don&#x27;t want sampled before running.</li><li>The Scatter layer is found by name. Renaming it makes the next pass create a fresh one; a layer you named Scatter yourself will be adopted.</li><li>Settings persist between sessions in the panel&#x27;s local storage; what you see is what the last run used.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">07.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>For quick iteration, load the folder&#x27;s <code>manifest.json</code> in <b>UXP Developer Tools</b> instead — dev-loads are live-reloadable but vanish when Photoshop restarts.</p>
+<p>To update the installed copy: bump <code>version</code> in <code>manifest.json</code>, zip <code>manifest.json</code> + <code>index.html</code> + <code>main.js</code> (at the archive root) with a <code>.ccx</code> extension, and run the installer agent again.</p></div>
+</section>
+<section class="block" id="installing">
+  <div class="block-label"><span class="bl-num">07.6</span>
+  <h2>installing</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">In Terminal, run Adobe&#x27;s installer agent on the plugin&#x27;s <code>.ccx</code> from <code>Photoshop Scripts/CCX Installers</code>: <code>&quot;/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent&quot; --install &lt;plugin&gt;.ccx</code></span></li>
+<li><span class="step-n">02</span><span class="step-t">Restart Photoshop. The panel appears under <b>Plugins</b> and survives restarts — UXP Developer Tools is not needed.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Do not double-click the <code>.ccx</code>: Creative Cloud wrongly reports <i>Compatible app required</i> for unsigned plugins.</span></li>
+</ol></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="misregistered-print.html"><span>previous</span>misregistered print</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="poster-pdf-export.html"><span>next</span>poster pdf export</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>adobe</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-09-19</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>
