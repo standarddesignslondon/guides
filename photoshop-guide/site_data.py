@@ -1181,6 +1181,16 @@ ITEMS.append({
         "**Create Separate PDF Files must stay off** in `GELATO 4MM GR AUTO`. "
         "A preset does store that flag, and with it on InDesign appends "
         "`_1`, `_2` to every filename and the naming falls apart.",
+        "**Keep the Illustrator file under 2 GB.** Past that, the PDF "
+        "cross-reference table inside the `.ai` sits beyond the 32-bit offset "
+        "limit, InDesign cannot parse the file at all, and the only "
+        "explanation you get is a bare *Import failed*. The script now warns "
+        "before the copy and offers to try anyway. The cure is resolution: "
+        "the export downsamples everything above 300 ppi, so anything finer "
+        "than about 7,300 × 10,900 px — 300 ppi at 24 × 36 plus bleed — is "
+        "thrown away on export and costs you nothing to remove. Seen "
+        "September 2026 at 2.53 GB; a 10% quality reduction brought the same "
+        "poster down to 630 MB with no visible change.",
         "Never move the scripts or the drop folders into Dropbox, Desktop, "
         "Documents or Downloads. It will stop working silently.",
         "The Crucial X9 must be mounted. If it isn't, the file is left in the "
