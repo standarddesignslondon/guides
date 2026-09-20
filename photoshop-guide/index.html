@@ -13,7 +13,7 @@
   <h1>adobe<br>tools</h1>
   <p class="hero-sub">process guide</p>
   <p class="hero-blurb">Panels, scripts and automations built for the Adobe applications. What every control does, how a file travels from the canvas out to whatever does the work and back again, and the things each one needs you to remember.</p>
-  <p class="hero-count">8 tools</p>
+  <p class="hero-count">9 tools</p>
 </header>
 <div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="app"><button class="f on" data-f="app" data-v="">all apps</button><button class="f" data-f="app" data-v="InDesign">indesign</button><button class="f" data-f="app" data-v="Photoshop">photoshop</button></div><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="UXP panel">uxp panel</button><button class="f" data-f="kind" data-v="Watch folder">watch folder</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
 <div class="index-list" id="grid">
@@ -66,9 +66,16 @@
   <span class="r-desc">Copies random patches of a layer and drops them at random positions on a Scatter layer above it — optionally feeding on its own output.</span>
   <span class="r-kind">photoshop</span>
   <span class="r-thumb"><img src="images/patchscatter.png" alt="" loading="lazy"></span>
+</a><a class="row" href="tools/ditherpress.html"
+   data-app="Photoshop" data-kind="UXP panel" data-author="Claude" data-text="ditherpress twenty-two dither algorithms, a dot-scale control and four colour modes, rendered to a new layer. reads the selected layer&#x27;s pixels, reduces the image by the cell size, dithers it with the chosen algorithm and writes the result to a new layer named *&lt;source&gt; dither* directly above the source, which is left untouched. error-diffusion, ordered, pattern and noise families give very different textures from the same image; the colour mode then decides whether the result is ink on paper, a three-colour tonal ramp, eight-colour rgb, or a reduced palette. built along the lines of doron supply&#x27;s dithertone pro, using photoshop&#x27;s uxp imaging api — the first of these panels to do its own pixel maths rather than drive photoshop&#x27;s tools. each render is one undo step and the settings persist between sessions. photoshop uxp panel claude">
+  <span class="r-num">08</span>
+  <span class="r-name">ditherpress</span>
+  <span class="r-desc">Twenty-two dither algorithms, a dot-scale control and four colour modes, rendered to a new layer.</span>
+  <span class="r-kind">photoshop</span>
+  <span class="r-thumb"><img src="images/DitherPress.png" alt="" loading="lazy"></span>
 </a><a class="row" href="tools/poster-pdf-export.html"
    data-app="InDesign" data-kind="Watch folder" data-author="Claude" data-text="poster pdf export drop a finished illustrator poster into a folder and five print-ready gracol pdfs appear on the desktop. the last five minutes of every poster used to be manual: overwrite `artwork.ai` on the crucial x9, open the indesign template that links to it, wait for the link to refresh, export six pages through the gelato preset, then rename the results. this does the lot from a single drag. a launchd agent watches two folders, one per template, asks for the poster&#x27;s name, and hands the job to indesign, which copies the artwork into place and exports pages 2 – 6 one at a time. verified byte-identical to a hand export: of the six data streams in each pdf, five match exactly and the sixth is the xmp packet holding the timestamp. indesign watch folder claude">
-  <span class="r-num">08</span>
+  <span class="r-num">09</span>
   <span class="r-name">poster pdf export</span>
   <span class="r-desc">Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.</span>
   <span class="r-kind">indesign</span>
@@ -81,7 +88,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>adobe</span>
   <span>process guide</span></div>
-  <div class="sf-col"><span>generated 2026-09-19</span>
+  <div class="sf-col"><span>generated 2026-09-20</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

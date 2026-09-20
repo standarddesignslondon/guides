@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>telegraph — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">28</p>
+  <h1>telegraph</h1>
+  <p class="ch-sub">Morse-code MIDI sequencer — type words, and their dits and dahs become notes; slashes stack words as parallel voices.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/telegraph.png" alt="Telegraph"></div><figcaption>telegraph</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">28.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Type a phrase and press Return: it is translated to Morse and every dit (1 unit) and dah (3 units) becomes a MIDI note, locked to Live&#x27;s transport. <code>/</code> ends one voice and starts the next, so <code>dresden/mitosis/formert</code> is three lanes playing at once, each on its own random note drawn between <b>Low</b> and <b>High</b>. <code><i></code> is one unit of rest, and the <b>Rest</b> menu respaces every hit. The idea comes from Audio Spices&#x27; </i>Ginger* (an audio gate); this is a MIDI reworking, so the audio-only controls are gone and the pitch scheme is its own.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>midi effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v0.3</dd></div><div class="fact"><dt>folder</dt><dd>Telegraph Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">28.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Telegraph.amxd</code> on a MIDI track in front of an instrument.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Click the text field, type a word, press <b>Return</b>. Marks appear on the canvas, one lane per voice, with each lane&#x27;s note name at the left.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Start Live&#x27;s transport — it only runs while Live is playing.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Add voices with slashes: <code>STELLAR/**EARTH</code> plays both words from the start, EARTH two units late.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Don&#x27;t like the notes? <b>Reroll</b>. Want it as a clip? Select a Session slot and press <b>Write Clip</b>.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">28.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">message</h3>
+<p class="lead">Up to 64 characters and 8 voices. Case doesn&#x27;t matter.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Text field<span class="rng">A-Z 0-9 . ? = - + @ ! &#x27; :</span></dt><dd>The phrase. Press Return to compile it. Anything without a Morse code is skipped. Retyping a phrase resets its per-hit edits and loop region.</dd></div>
+<div class="ctl-row"><dt>/</dt><dd>Ends the text for this voice and moves to the next. Every voice starts at the beginning; they play in parallel. The pattern loops at the length of the longest voice and shorter voices rest until it comes round.</dd></div>
+<div class="ctl-row"><dt>*</dt><dd>One unit of rest (one 1/16 if Rate is 1/16). At the start of a section it delays that voice; it also works mid-section.</dd></div>
+</dl>
+<h3 class="sub">pitch</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Low / High<span class="rng">MIDI note</span></dt><dd>The range the random notes are drawn from. Defaults C2 and C4.</dd></div>
+<div class="ctl-row"><dt>Voices<span class="rng">1 - 16</span></dt><dd>How many different notes are drawn. Voice k plays note k; with more <code>/</code> sections than Voices the notes wrap round.</dd></div>
+<div class="ctl-row"><dt>Reroll<span class="rng">button</span></dt><dd>New random notes, and new gaps when Rest is Random. The seed is saved with the Set, so a Set recalls the same pattern.</dd></div>
+</dl>
+<h3 class="sub">time</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Rate<span class="rng">1/4 / 1/8 / 1/16 / 1/32</span></dt><dd>The length of one unit.</dd></div>
+<div class="ctl-row"><dt>Feel<span class="rng">Note / Trip / Dot</span></dt><dd>Straight, triplet or dotted units.</dd></div>
+<div class="ctl-row"><dt>Rest<span class="rng">Morse / 0 - 16 / Random</span></dt><dd><b>Morse</b> = standard gaps: 1 unit inside a letter, 3 between letters, 7 between words. A number puts that many units between <i>every</i> hit, inside letters and between them alike — AM at 2 plays dit, 2 rests, dah, 2 rests, dah, 2 rests, dah. A space adds one more rest. <b>Random</b> gives each gap its own length from 0 to 16; the gaps are fixed per roll, not re-drawn on every pass.</dd></div>
+<div class="ctl-row"><dt>Length<span class="rng">5 - 100 %</span></dt><dd>Note length as a fraction of the dit or dah.</dd></div>
+<div class="ctl-row"><dt>Velocity<span class="rng">1 - 127</span></dt><dd>Base velocity; each hit&#x27;s level scales it.</dd></div>
+<div class="ctl-row"><dt>PLAY / PAUSED<span class="rng">toggle</span></dt><dd>Automatable. Pausing stops the notes; position comes from the song position, so resuming is already on the grid.</dd></div>
+</dl>
+<h3 class="sub">canvas</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>LOOP<span class="rng">toggle</span></dt><dd>On: drag across the canvas to set the region that repeats (all voices at once). Double-click = whole phrase.</dd></div>
+<div class="ctl-row"><dt>MOTION<span class="rng">toggle</span></dt><dd>On: drag a mark up or down to set its level (relative drag, about two levels per pixel); shift-click mutes it. Muted marks draw as outlines.</dd></div>
+<div class="ctl-row"><dt>CHARS<span class="rng">toggle</span></dt><dd>Shows each letter under its group of marks.</dd></div>
+<div class="ctl-row"><dt>Write Clip<span class="rng">button</span></dt><dd>Writes the phrase — or the loop region when LOOP is on — into the highlighted Session slot, with levels and mutes. The status line reports the note count and length.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">28.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">hocketed words</h3><p>Give each voice a word of a different length and set Rest to Random: long, sparse, interlocking lines. Turn LOOP on and drag out a bar or two that works, then Write Clip.</p>
+<h3 class="sub">keep it in key</h3><p>The random notes are chromatic. Put Live&#x27;s Scale device after Telegraph, or narrow Low/High and Reroll until it lands.</p>
+<h3 class="sub">drums</h3><p>Set Low/High across a Drum Rack&#x27;s pads and use one short word per voice; Rest 0 - 2 gives tight patterns, Morse gives the classic lopsided ones.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">28.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Nothing plays unless Live&#x27;s transport is running.</li><li>Press Return after typing — clicking away does not compile the phrase.</li><li>Reroll changes the notes <i>and</i> the Random gaps together.</li><li>Rest = Random with a long phrase gets very long (up to 16 units between every hit); use LOOP to pick out a usable stretch.</li><li><code>/</code> and <code>*</code> are control characters here, so the Morse slash is not available. Commas and semicolons can&#x27;t be typed into a Max text field.</li><li>After replacing the .amxd, delete the device from the track and drag it on again.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">28.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_telegraph.py</code> in the device folder regenerates <code>Telegraph.maxpat</code> and a frozen <code>Telegraph.amxd</code> (the script is embedded at build time — no Max freeze step). <code>node test_telegraph_node.js</code> tests the compiler, voices, Rest modes, seeding and save/restore.</p>
+<p><code>telegraph.js</code> is one v8ui: canvas plus pattern compiler, never in the timing path. It writes <code>unit -&gt; pitch level length</code> triples into a coll; the clock is plain Max — plugsync~ beats → floor(beats × units per beat) → change → start + (g % length) → coll → zl iter 3 → makenote.</p>
+<p>State (text, seed, loop region, per-hit level and mute) is saved in the v8ui&#x27;s blob parameter and restored into the text field.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="divisor.html"><span>previous</span>divisor</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="lens.html"><span>next</span>lens</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-09-20</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* Always-scrollable: UXP text inputs can lose keyboard focus when a
+       panel's scrollbar appears or disappears (e.g. after docking it under
+       other panels). Keeping the scrollbar permanent avoids that transition. */
+    html, body { height: 100%; }
+    body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 10px 12px 14px;
+        font-family: "SF Pro Text", "Helvetica Neue", sans-serif;
+        font-size: 12px;
+        color: #d6d6d6;
+    }
+    h2 {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #9a9a9a;
+        margin: 14px 0 6px;
+        border-bottom: 1px solid #3a3a3a;
+        padding-bottom: 3px;
+    }
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 5px 0;
+        gap: 8px;
+    }
+    .row label { flex: 1 1 auto; }
+    input[type="number"], input[type="text"] {
+        width: 62px;
+        background: #262626;
+        color: #e6e6e6;
+        border: 1px solid #444;
+        border-radius: 3px;
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+    select {
+        width: 160px;
+        background: #262626;
+        color: #e6e6e6;
+        border: 1px solid #444;
+        border-radius: 3px;
+        padding: 3px;
+        font-size: 12px;
+    }
+    input[type="range"] { width: 110px; }
+    .val { width: 32px; text-align: right; color: #9a9a9a; }
+    .hint { font-size: 10px; color: #7a7a7a; margin: 2px 0 6px; line-height: 1.35; }
+    .check { display: flex; align-items: center; gap: 6px; margin: 5px 0; }
+    .buttons { display: flex; gap: 8px; margin-top: 14px; }
+    button {
+        flex: 1;
+        padding: 7px 0;
+        border-radius: 4px;
+        border: 1px solid #555;
+        background: #333;
+        color: #e6e6e6;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    button:hover { background: #3e3e3e; }
+    #runBtn { background: #2d5b9e; border-color: #3a6cb5; font-weight: 600; }
+    #runBtn:hover { background: #366bb8; }
+    #status {
+        margin-top: 10px;
+        font-size: 11px;
+        color: #8fae8f;
+        min-height: 14px;
+        white-space: pre-line;
+    }
+    #status.err { color: #c98080; }
+</style>
+</head>
+<body>
+
+    <h2>Dither</h2>
+    <div class="row">
+        <label for="algo">Algorithm</label>
+        <select id="algo">
+            <option value="fs">Floyd-Steinberg</option>
+            <option value="ffs">False Floyd-Steinberg</option>
+            <option value="jjn">Jarvis-Judice-Ninke</option>
+            <option value="stucki">Stucki</option>
+            <option value="burkes">Burkes</option>
+            <option value="sierra">Sierra</option>
+            <option value="sierra2">Sierra Two-Row</option>
+            <option value="sierralite">Sierra Lite</option>
+            <option value="atkinson">Atkinson</option>
+            <option value="bayer2">Bayer 2×2</option>
+            <option value="bayer4">Bayer 4×4</option>
+            <option value="bayer8">Bayer 8×8</option>
+            <option value="bayer16">Bayer 16×16</option>
+            <option value="cluster">Cluster dot 8×8</option>
+            <option value="dots">Halftone dots</option>
+            <option value="lines">Halftone lines</option>
+            <option value="cross">Cross-hatch</option>
+            <option value="wave">Modulation (waves)</option>
+            <option value="contour">Modulation (contours)</option>
+            <option value="thresh">Plain threshold</option>
+            <option value="random">Random noise</option>
+            <option value="ign">Interleaved gradient noise</option>
+        </select>
+    </div>
+    <div class="row"><label>Cell size (px)</label><input type="number" id="cell" min="1" max="64" value="2"></div>
+    <div class="hint">The image is reduced by this factor before dithering and each result pixel becomes a cell×cell block. 1 = full resolution; larger = coarser, more visible dither.</div>
+    <div class="row"><label>Pattern size (cells)</label><input type="number" id="patSize" min="2" max="128" step="0.5" value="6"></div>
+    <div class="row"><label>Pattern angle (°)</label><input type="number" id="patAngle" min="0" max="180" value="45"></div>
+    <div class="row">
+        <label>Modulation depth</label>
+        <input type="range" id="modDepth" min="0" max="100" value="50">
+        <span class="val" id="modDepthVal">50</span>
+    </div>
+    <div class="hint">Pattern size, angle and depth apply to the halftone, cross-hatch and modulation algorithms only.</div>
+    <div class="row">
+        <label>Diffusion strength</label>
+        <input type="range" id="diffusion" min="0" max="100" value="100">
+        <span class="val" id="diffusionVal">100</span>
+    </div>
+    <div class="check"><input type="checkbox" id="serpentine" checked><label for="serpentine">Serpentine scan</label></div>
+    <div class="hint">Diffusion strength and serpentine apply to the error-diffusion algorithms only. Lower strength behaves more like a plain threshold.</div>
+
+    <h2>Tone</h2>
+    <div class="row">
+        <label>Brightness</label>
+        <input type="range" id="brightness" min="-100" max="100" value="0">
+        <span class="val" id="brightnessVal">0</span>
+    </div>
+    <div class="row">
+        <label>Contrast</label>
+        <input type="range" id="contrast" min="-100" max="100" value="0">
+        <span class="val" id="contrastVal">0</span>
+    </div>
+    <div class="row">
+        <label>Grain</label>
+        <input type="range" id="grain" min="0" max="100" value="0">
+        <span class="val" id="grainVal">0</span>
+    </div>
+    <div class="check"><input type="checkbox" id="invert"><label for="invert">Invert</label></div>
+
+    <h2>Colours</h2>
+    <div class="row">
+        <label for="colorMode">Colour mode</label>
+        <select id="colorMode">
+            <option value="mono">Ink &amp; paper</option>
+            <option value="tonal">Tonal (3 colours)</option>
+            <option value="rgb">RGB channels</option>
+            <option value="palette">Palette</option>
+        </select>
+    </div>
+    <div id="monoBox">
+        <div class="row"><label>Ink (hex)</label><input type="text" id="ink" value="#000000"></div>
+    </div>
+    <div id="tonalBox">
+        <div class="row"><label>Shadows (hex)</label><input type="text" id="shadows" value="#2b2d8c"></div>
+        <div class="row"><label>Midtones (hex)</label><input type="text" id="midtones" value="#b04a8f"></div>
+        <div class="row"><label>Highlights (hex)</label><input type="text" id="highlights" value="#ff8c42"></div>
+        <div class="hint">Ink pixels take a colour from the shadows → midtones → highlights ramp according to the tone underneath; paper stays paper.</div>
+    </div>
+    <div id="paperBox">
+        <div class="row"><label>Paper (hex)</label><input type="text" id="paper" value="#ffffff"></div>
+        <div class="check"><input type="checkbox" id="transparentPaper"><label for="transparentPaper">Transparent paper (ink only)</label></div>
+    </div>
+    <div id="rgbBox">
+        <div class="hint">Red, green and blue are each dithered on their own, so every pixel is one of eight colours. Diffusion, tone and grain apply per channel.</div>
+    </div>
+    <div id="paletteBox">
+        <div class="row">
+            <label for="palette">Palette</label>
+            <select id="palette">
+                <option value="image">From image</option>
+                <option value="gameboy">Game Boy</option>
+                <option value="c64">Commodore 64</option>
+                <option value="cga">CGA</option>
+                <option value="spectrum">ZX Spectrum</option>
+                <option value="pico8">Pico-8</option>
+                <option value="grey4">Greys (4)</option>
+                <option value="rgbcmyk">Process (RGB+CMY+K+W)</option>
+            </select>
+        </div>
+        <div class="row"><label>Colours (from image)</label><input type="number" id="palCount" min="2" max="64" value="8"></div>
+        <div class="row">
+            <label>Spread</label>
+            <input type="range" id="spread" min="0" max="100" value="50">
+            <span class="val" id="spreadVal">50</span>
+        </div>
+        <div class="hint">Nearest palette colour per pixel with the chosen algorithm blending between them. Spread is how far ordered and pattern algorithms push a pixel towards neighbouring colours.</div>
+    </div>
+
+    <div class="buttons">
+        <button id="randomBtn">Randomise</button>
+        <button id="runBtn">Render</button>
+    </div>
+    <div class="hint">Select a pixel layer and press Render. The result goes on a new layer above it; the source is left untouched.</div>
+
+    <div id="status"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

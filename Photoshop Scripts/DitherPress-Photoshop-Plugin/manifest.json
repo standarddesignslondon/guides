@@ -1,7 +1,7 @@
 {
-    "id": "com.simonmorse.patchscatter",
-    "name": "PatchScatter",
-    "version": "1.0.1",
+    "id": "com.simonmorse.ditherpress",
+    "name": "DitherPress",
+    "version": "1.1.0",
     "main": "index.html",
     "manifestVersion": 5,
     "host": {
@@ -11,12 +11,12 @@
     "entrypoints": [
         {
             "type": "panel",
-            "id": "patchscatter.panel",
-            "label": { "default": "PatchScatter" },
+            "id": "ditherpress.panel",
+            "label": { "default": "DitherPress" },
             "minimumSize": { "width": 240, "height": 300 },
             "maximumSize": { "width": 600, "height": 2400 },
-            "preferredDockedSize": { "width": 300, "height": 640 },
-            "preferredFloatingSize": { "width": 300, "height": 640 }
+            "preferredDockedSize": { "width": 300, "height": 800 },
+            "preferredFloatingSize": { "width": 300, "height": 800 }
         }
     ]
 }

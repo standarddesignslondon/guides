@@ -8,7 +8,7 @@
   "noun_plural": "tools",
   "page_dir": "tools"
  },
- "generated": "2026-09-19",
+ "generated": "2026-09-20",
  "items": [
   {
    "num": "01",
@@ -103,6 +103,19 @@
   },
   {
    "num": "08",
+   "slug": "ditherpress",
+   "name": "DitherPress",
+   "tagline": "Twenty-two dither algorithms, a dot-scale control and four colour modes, rendered to a new layer.",
+   "url": "tools/ditherpress.html",
+   "image": "images/DitherPress.png",
+   "facets": {
+    "app": "Photoshop",
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "09",
    "slug": "poster-pdf-export",
    "name": "Poster PDF Export",
    "tagline": "Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.",

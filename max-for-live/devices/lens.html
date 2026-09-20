@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lens — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">29</p>
+  <h1>lens</h1>
+  <p class="ch-sub">Spectral-selection sampler after iZotope Iris — paint the part of a sample you want, in time and frequency, and play only that. Four layers.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/lens01.png" alt="Lens"></div><figcaption>lens</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/lens02.png" alt="The pop-out spectral editor (EDIT)"></div><figcaption>the pop-out spectral editor (edit)</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">29.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Drop up to four samples. Each appears as a spectrogram in a pop-out editor, where you select regions of time <i>and</i> frequency; only what is selected is heard. The selection is rendered offline into a second buffer (an STFT with the unselected cells zeroed), so the 16-note engine just plays audio: no real-time FFT, edges as sharp as you like, cheap polyphony. One note plays every layer at once, so a sound can be the attack of one sample over the body of another. Two engines: <b>Classic</b> (pitch and speed tied, like any sampler) and <b>Stretch</b> (granular: the key sets pitch, SPEED sets time, 0 freezes). Borrowed from Dillon Bastan&#x27;s <i>Iota II</i>: drawn playback paths, a band filter that follows the path&#x27;s height, self-triggering Emit, and a drifting playhead.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>instrument</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v0.7.1 - working in live</dd></div><div class="fact"><dt>folder</dt><dd>Lens Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">29.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Put <code>Lens.amxd</code> on a MIDI track. Drop a WAV/AIFF on <b>DROP SAMPLE 1</b>. Play: C3 is the original pitch.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Press <b>EDIT</b> (or click the overview). Drag a box with <b>RECT</b> over something bright: it turns orange, the rest dims, and notes now play only that.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Shift-drag adds, Alt-drag removes — for RECT, LASSO, TIME and FREQ alike. <b>WAND</b> with <b>HARM</b> on pulls one pitched note, with its harmonics, out of a texture.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Drop another sample on slot 2, pick <b>L2</b> in the editor, select something from it, and balance the two in the layer table.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Set <b>ENGINE</b> to Stretch to make every key the same length; <b>SPEED</b> 0 freezes, <b>SPRAY</b> brings the freeze alive.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">29.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">main</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Root<span class="rng">C-2 - G8</span></dt><dd>The key that plays original pitch (C3).</dd></div>
+<div class="ctl-row"><dt>Transpose / Fine<span class="rng">±24 st / ±50 ct</span></dt><dd>Tuning of the whole instrument.</dd></div>
+<div class="ctl-row"><dt>Gain<span class="rng">-36 - +12 dB</span></dt><dd>Output level.</dd></div>
+<div class="ctl-row"><dt>Vel Sens<span class="rng">0 - 100 %</span></dt><dd>How much velocity affects level.</dd></div>
+<div class="ctl-row"><dt>Attack Decay Sustain Release</dt><dd>Amplitude envelope, shared by a note&#x27;s layers.</dd></div>
+<div class="ctl-row"><dt>Mode<span class="rng">One-shot / Loop / Ping-pong / Reverse</span></dt><dd>What happens at the end of the selection (or of the path).</dd></div>
+<div class="ctl-row"><dt>Trim<span class="rng">toggle</span></dt><dd>On: each layer starts at its own first selected moment and ends at its last. Off: the whole sample length plays, silent where nothing is selected.</dd></div>
+</dl>
+<h3 class="sub">layers</h3>
+<p class="lead">Four slots, each a sample plus a selection. The table on the device mixes them.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>ON<span class="rng">toggle</span></dt><dd>Layer sounds or not. Takes effect from the next note.</dd></div>
+<div class="ctl-row"><dt>LEVEL / PAN<span class="rng">-36 - +12 dB / ±50</span></dt><dd>Mix. Pan is a balance control.</dd></div>
+<div class="ctl-row"><dt>TUNE / FINE<span class="rng">±24 st / ±50 ct</span></dt><dd>Detune a layer against the others.</dd></div>
+</dl>
+<h3 class="sub">engine</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>ENGINE<span class="rng">Classic / Stretch</span></dt><dd>Classic: pitch and speed tied. Stretch: granular; the key sets pitch, SPEED sets time.</dd></div>
+<div class="ctl-row"><dt>SPEED<span class="rng">-400 - 400 %</span></dt><dd>Stretch only. 0 = frozen, negative = backwards.</dd></div>
+<div class="ctl-row"><dt>GRAIN<span class="rng">10 - 500 ms</span></dt><dd>Small = grainy, large = smooth but smeary; 60-120 is neutral.</dd></div>
+<div class="ctl-row"><dt>SPRAY<span class="rng">0 - 500 ms</span></dt><dd>Random scatter of where each grain reads.</dd></div>
+<div class="ctl-row"><dt>SCRUB / POSITION / GLIDE</dt><dd>Scrub on: the playhead parks at Position (% of the selection), moving there at the Glide rate.</dd></div>
+<div class="ctl-row"><dt>WANDER / FRICTION<span class="rng">0 - 100 %</span></dt><dd>Stretch only. A tethered random drift of the read point; Friction high = jittery, low = long lazy swings.</dd></div>
+</dl>
+<h3 class="sub">filter and path</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>FILTER<span class="rng">toggle</span></dt><dd>A band-pass per note per layer.</dd></div>
+<div class="ctl-row"><dt>FREQ / WIDTH<span class="rng">30 Hz - 18 kHz / 0.1 - 6 oct</span></dt><dd>Centre and width. With a path, the path&#x27;s height replaces FREQ.</dd></div>
+<div class="ctl-row"><dt>PATH<span class="rng">toggle</span></dt><dd>Playheads follow the line drawn with the editor&#x27;s PATH tool: left-right = where in the sample, up-down = filter centre.</dd></div>
+<div class="ctl-row"><dt>PATH TIME<span class="rng">20 ms - 60 s</span></dt><dd>One trip along the path.</dd></div>
+</dl>
+<h3 class="sub">lfo</h3>
+<p class="lead">One per note, restarting with the note.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>LFO TO<span class="rng">Off / Pitch / Position / Filter / Level / Pan / Speed</span></dt><dd>Target.</dd></div>
+<div class="ctl-row"><dt>RATE / DEPTH / SHAPE</dt><dd>Depth 100 = ±1 octave, ±half the selection, ±4 octaves, full tremolo, hard left-right, 0-200 % speed.</dd></div>
+</dl>
+<h3 class="sub">emit</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>EMIT<span class="rng">toggle</span></dt><dd>Lens plays itself, no MIDI needed.</dd></div>
+<div class="ctl-row"><dt>INTERVAL / VARY<span class="rng">20 ms - 20 s / 0 - 100 %</span></dt><dd>Time between notes and its scatter.</dd></div>
+<div class="ctl-row"><dt>GATE / PITCH<span class="rng">1 - 400 % / note</span></dt><dd>Note length as % of the interval; the note played.</dd></div>
+</dl>
+<h3 class="sub">editor</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>L1 - L4<span class="rng">tabs</span></dt><dd>Which layer you see and edit. Greyed = empty slot.</dd></div>
+<div class="ctl-row"><dt>RECT LASSO TIME FREQ<span class="rng">tools</span></dt><dd>Drag = only this, Shift = add, Alt = remove.</dd></div>
+<div class="ctl-row"><dt>BRUSH ERASE<span class="rng">SIZE -/+</span></dt><dd>Paint and rub out.</dd></div>
+<div class="ctl-row"><dt>WAND<span class="rng">TOL -/+, HARM</span></dt><dd>Select a streak and what joins it; HARM adds its harmonics.</dd></div>
+<div class="ctl-row"><dt>ALL NONE INVERT</dt><dd>Whole-layer actions.</dd></div>
+<div class="ctl-row"><dt>EDGE<span class="rng">hard / soft / softer</span></dt><dd>Feathers the selection edges in the render.</dd></div>
+<div class="ctl-row"><dt>UNDO REDO<span class="rng">24 steps</span></dt><dd>Selections only (not paths).</dd></div>
+<div class="ctl-row"><dt>ZOOM -/+ FIT</dt><dd>Time zoom; drag the grey bar under the ruler to scroll.</dd></div>
+<div class="ctl-row"><dt>PATH / NO PATH</dt><dd>Draw a playback path (Shift-drag extends it); clear it.</dd></div>
+<div class="ctl-row"><dt>LISTEN<span class="rng">hold</span></dt><dd>This layer alone, original pitch.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">29.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">lens</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Root</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Transpose</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Fine</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Gain</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Vel Sens</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Mode</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Trim</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">envelope</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Attack</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Decay</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Sustain</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Release</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Trim</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">stretch</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Engine</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Speed</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Grain</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Spray</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Position</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Glide</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Wander</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Friction</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Scrub</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">filter+path</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Filter Freq</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Filter Width</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Path Time</span></div>
+<div class="enc empty"><span class="enc-n">4</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Filter</span>
+<span class="btn">Path</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">lfo</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">LFO Target</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">LFO Rate</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">LFO Depth</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">LFO Shape</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">emit</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Emit Interval</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Emit Vary</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Emit Gate</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Emit Pitch</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Emit</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">layer 1 - 4 (one bank each)</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Level</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Pan</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Tune</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Fine</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">On</span>
+</div>
+<p class="bank-note">Selecting is a mouse job by nature; Push covers the playing controls.</p>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">29.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">one note out of a chord</h3><p>WAND with HARM on, click the lowest streak of the note you want. Raise TOL until the whole note lights up, lower it if neighbours join in. EDGE soft takes the &#x27;cut-out&#x27; ring off.</p>
+<h3 class="sub">hybrid sounds</h3><p>Layer 1: TIME-select just the attack of a percussive sample. Layer 2: FREQ-select the sustained body of something pitched. Trim on, so both start together.</p>
+<h3 class="sub">frozen pads</h3><p>Stretch, SPEED 0, SPRAY 30-60 ms, WANDER 40 %. Or SCRUB on and automate POSITION.</p>
+<h3 class="sub">iota-style gestures</h3><p>Stretch, FILTER on, draw a PATH that wanders up and down through the bright parts, Mode = Ping-pong, PATH TIME a bar or two. EMIT on with some VARY makes it play itself.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">29.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Only the first 60 s of each sample is used.</li><li>In the Classic engine a PATH is a tape-scrub: the key no longer sets the pitch. Use Stretch for pitched paths.</li><li>WANDER and LFO -&gt; Position only act in the Stretch engine.</li><li>Frozen (SPEED 0), scrubbed and path-less looping notes last until the key is released; a one-shot note lasts as long as its longest layer.</li><li>Layer ON applies from the next note, not to notes already held.</li><li>Paths are not in the undo history.</li><li>Stretch is granular, not a phase vocoder: it sounds like a good granular stretch, not a transparent studio one.</li><li>After replacing the .amxd, delete the device from the track and drag it on again.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">29.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_lens.py</code> in the device folder regenerates the engine (<code>make_engine.py</code> unrolls the per-layer gen~ code from one template — edit that, never <code>lens_engine.genexpr</code>), then <code>Lens.maxpat</code> and a frozen <code>Lens.amxd</code> with <code>lens_ui.js</code> embedded.</p>
+<p><code>python3 sim_lens.py</code> transpiles the shipped genexpr to Python (88 checks); <code>node test_lens_node.js</code> runs the shipped editor script under a mocked Max (8734 checks).</p>
+<p>Architecture: live.drop -&gt; two buffers per layer (pristine + rendered); the editor v8ui renders selections offline in ~18 ms Task slices; notes reach gen~ through a ring in a buffer written by peek~ (nothing lost inside a signal vector); paths travel in <code>buffer~ ---lnpath</code>; the face overview is a second v8ui fed a thumbnail through a buffer. Lessons: never <code>bang</code> a live.text (it toggles — use <code>outputvalue</code>); keep gen~ literals small.</p></div>
+</section>
+<section class="block" id="how-to-1-first-sound">
+  <div class="block-label"><span class="bl-num">29.7</span>
+  <h2>how-to 1: first sound</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop a sample on <b>DROP SAMPLE 1</b>. The status line under the overview reads <i>reading... analysing...</i> and then the length, sample rate and what is selected. Until you edit, everything is selected and Lens is an ordinary sampler.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Play <b>C3</b>: original pitch. <b>Root</b> moves that reference key; <b>Transp</b> and <b>Fine</b> tune the whole instrument on top.</span></li>
+<li><span class="step-n">03</span><span class="step-t"><b>Mode</b>: <i>One-shot</i> plays to the end of the selection even if you let go late; <i>Loop</i> and <i>Ping-pong</i> repeat while the key is held; <i>Reverse</i> plays once backwards. Release always goes through the <b>Release</b> time.</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>Attack / Decay / Sustain / Release</b> shape every note. For one-shots of percussive material leave Sustain at 100 %; for pads in Loop mode, lengthen Attack and Release.</span></li>
+<li><span class="step-n">05</span><span class="step-t"><b>VelSens</b> 0 % = every note full level; 100 % = level follows velocity completely. <b>Gain</b> is the output trim — turn it down when several layers stack up.</span></li>
+</ol></div>
+</section>
+<section class="block" id="how-to-2-selecting">
+  <div class="block-label"><span class="bl-num">29.8</span>
+  <h2>how-to 2: selecting</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Press <b>EDIT</b>. Time runs left to right, frequency bottom (30 Hz) to top on a log scale. Bright orange = selected = audible; dim blue-grey = removed. The read-out bottom right shows the time, frequency and note name under the mouse.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Every shape tool obeys the same three gestures: <b>drag</b> = keep <i>only</i> this, <b>Shift-drag</b> = add this, <b>Alt-drag</b> = remove this. The commonest slip is forgetting Shift and losing the previous selection — <b>UNDO</b> brings it back.</span></li>
+<li><span class="step-n">03</span><span class="step-t"><b>RECT</b> a box; <b>LASSO</b> a freehand outline (it closes itself); <b>TIME</b> a full-height slice (pick a moment); <b>FREQ</b> a band across the whole sample (pick a register, e.g. everything under 200 Hz).</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>BRUSH</b> paints selection, <b>ERASE</b> rubs it out; <b>SIZE -/+</b> sets the width (shown under the tools).</span></li>
+<li><span class="step-n">05</span><span class="step-t"><b>WAND</b>: click a bright streak. It takes that streak and all that is joined to it and no more than <b>TOL</b> dB quieter than the spot you clicked. Too little selected: <b>TOL +</b>. It spreads into the neighbours: <b>TOL -</b>, or click a brighter part. <b>HARM</b> on: click the <i>lowest</i> streak of a pitched note and its harmonics are taken too.</span></li>
+<li><span class="step-n">06</span><span class="step-t"><b>ALL / NONE / INVERT</b> act on the whole layer. A quick way to remove something: select it, then INVERT.</span></li>
+<li><span class="step-n">07</span><span class="step-t"><b>EDGE</b> cycles hard / soft / softer. The picture does not change; the sound is re-rendered with feathered edges. Hard edges can ring or sound &#x27;cut out&#x27;; soft is usually the more natural.</span></li>
+<li><span class="step-n">08</span><span class="step-t"><b>ZOOM +/-</b> zooms in time about the middle of the view; drag the grey bar under the ruler to scroll; <b>FIT</b> shows everything. Zoom in before fine brush work — the grid really is finer, not just bigger.</span></li>
+<li><span class="step-n">09</span><span class="step-t">Hold <b>LISTEN</b> to hear this layer&#x27;s selection alone at original pitch without touching the keyboard. While a red bar shows bottom right, the change is still being rendered.</span></li>
+<li><span class="step-n">10</span><span class="step-t">On the device, <b>TRIM</b> on makes a note start at the first selected moment (no silence before it) and end at the last. Turn it off if the timing inside the original sample matters.</span></li>
+</ol></div>
+</section>
+<section class="block" id="how-to-3-layers">
+  <div class="block-label"><span class="bl-num">29.9</span>
+  <h2>how-to 3: layers</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop further samples on slots 2-4. In the editor the <b>L1-L4</b> tabs choose which layer you see and edit; a greyed tab is an empty slot. The overview on the device follows the tab.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Each layer has its own selection, EDGE setting, zoom, undo history and path. Nothing you do on L2 touches L1.</span></li>
+<li><span class="step-n">03</span><span class="step-t">One key plays every layer whose <b>ON</b> is lit. <b>LEVEL</b> and <b>PAN</b> mix them; <b>TUNE</b> (semitones) and <b>FINE</b> (cents) detune one against the others — +12 or +7 for a built-in interval, a few cents of FINE for width.</span></li>
+<li><span class="step-n">04</span><span class="step-t">ON takes effect from the <i>next</i> note; LEVEL, PAN, TUNE and FINE act at once, on held notes too.</span></li>
+<li><span class="step-n">05</span><span class="step-t">With TRIM on, each layer starts at <i>its own</i> first selected moment, so an attack taken from one sample and a body taken from another line up. In Loop mode each layer loops its own selection, so different lengths drift against each other.</span></li>
+<li><span class="step-n">06</span><span class="step-t">A one-shot note lasts as long as its longest layer.</span></li>
+</ol></div>
+</section>
+<section class="block" id="how-to-4-stretch-freeze-scrub">
+  <div class="block-label"><span class="bl-num">29.10</span>
+  <h2>how-to 4: stretch, freeze, scrub</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t"><b>ENGINE = Classic</b>: a normal sampler — higher keys are shorter. SPEED, GRAIN, SPRAY, SCRUB, POSITION, GLIDE, WANDER and FRICTION do nothing in Classic.</span></li>
+<li><span class="step-n">02</span><span class="step-t"><b>ENGINE = Stretch</b>: the key sets pitch only; <b>SPEED</b> sets how fast time passes. 100 % = original length on every key, 50 % = twice as long, 200 % = half, negative = backwards, <b>0 % = frozen</b> on the spot.</span></li>
+<li><span class="step-n">03</span><span class="step-t"><b>GRAIN</b> is the size of the overlapping slices: 60-120 ms is neutral; below ~30 ms it turns grainy and pitched; above ~250 ms it smears and echoes. Long grains suit slow pads, short ones suit rhythmic material.</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>SPRAY</b> scatters where each grain reads. 0 = faithful; 20-60 ms removes the static buzz of a frozen or very slow sound; hundreds of ms = a cloud.</span></li>
+<li><span class="step-n">05</span><span class="step-t"><b>SCRUB</b> on: the playhead stops running and sits at <b>POSITION</b> (0-100 % of the selection), travelling there at the <b>GLIDE</b> time. Hold a note and move POSITION, automate it, or map it to a Push encoder. SCRUB overrides SPEED.</span></li>
+<li><span class="step-n">06</span><span class="step-t">Frozen (SPEED 0) and scrubbed notes never reach the end, so they last until you release the key — in every Mode.</span></li>
+<li><span class="step-n">07</span><span class="step-t"><b>WANDER</b> adds a slow random drift around the playhead (Stretch only); <b>FRICTION</b> high = small nervous movements, low = long lazy swings. Lovely on a frozen note.</span></li>
+</ol></div>
+</section>
+<section class="block" id="how-to-5-paths-and-the-filter">
+  <div class="block-label"><span class="bl-num">29.11</span>
+  <h2>how-to 5: paths and the filter</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t"><b>FILTER</b> on puts a band-pass on every note of every layer. <b>FREQ</b> is its centre, <b>WIDTH</b> its size in octaves (0.3 = a narrow whistle, 2-3 = gentle focus, 6 = nearly open). It works in both engines.</span></li>
+<li><span class="step-n">02</span><span class="step-t">In the editor choose <b>PATH</b> and draw a line across the spectrogram (green, with a dot at its start). Shift-drag carries on from the end; <b>NO PATH</b> clears it. Under the tools it says <i>path drawn</i>. Each layer has its own path.</span></li>
+<li><span class="step-n">03</span><span class="step-t">On the device switch <b>PATH</b> on and use <b>ENGINE = Stretch</b>. Hold a note: the playhead travels along your line, once per <b>PATH TIME</b>. Left-right on the line = where in the sample; it may double back, stand still (a vertical stroke) or jump.</span></li>
+<li><span class="step-n">04</span><span class="step-t">With FILTER also on, the line&#x27;s <i>height</i> becomes the filter centre and FREQ is ignored — so drawing upwards opens the sound towards the top. Without FILTER the height does nothing.</span></li>
+<li><span class="step-n">05</span><span class="step-t"><b>Mode</b> decides the end of the trip: One-shot = the note ends; Loop = start again; Ping-pong = back along the line; Reverse = travelled from its end to its start.</span></li>
+<li><span class="step-n">06</span><span class="step-t"><b>GLIDE</b> also smooths path movement: 0 ms follows the line exactly, a few hundred ms rounds off jumps.</span></li>
+<li><span class="step-n">07</span><span class="step-t">In <b>Classic</b> a path is a tape-scrub: pitch comes from how fast the line moves through the sample and the key is ignored. Useful as an effect, wrong if you wanted tuned notes.</span></li>
+<li><span class="step-n">08</span><span class="step-t">A layer with no path drawn ignores the PATH switch and plays normally.</span></li>
+</ol></div>
+</section>
+<section class="block" id="how-to-6-lfo-emit">
+  <div class="block-label"><span class="bl-num">29.12</span>
+  <h2>how-to 6: lfo, emit</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t"><b>LFO TO</b> picks one target; <i>Off</i> disables it. There is one LFO per note and it restarts with each note. <b>RATE</b> in Hz, <b>DEPTH</b> in %, <b>SHAPE</b> Sine / Triangle / Saw (falling) / Square / S&amp;H (a new random value each cycle).</span></li>
+<li><span class="step-n">02</span><span class="step-t">Depth 100 % means: <b>Pitch</b> ±1 octave (2-5 % is vibrato); <b>Position</b> ±half the selection (Stretch only); <b>Filter</b> ±4 octaves around the centre (FILTER must be on); <b>Level</b> full tremolo; <b>Pan</b> hard left-right; <b>Speed</b> 0-200 % of SPEED (Stretch only) and of the path&#x27;s travel.</span></li>
+<li><span class="step-n">03</span><span class="step-t"><b>EMIT</b> on: Lens plays <b>PITCH</b> by itself every <b>INTERVAL</b> ms — no MIDI clip needed, and it runs whether or not Live is playing. <b>VARY</b> scatters the timing (0 = metronomic). <b>GATE</b> is how long each note is held, as % of the interval: under 100 = gaps, over 100 = overlaps (up to 16 notes).</span></li>
+<li><span class="step-n">04</span><span class="step-t">Emitted notes use all the normal settings (Mode, envelope, engine, path, LFO). Keys you play sound alongside them. Remember to switch EMIT off — it is saved with the Set.</span></li>
+</ol></div>
+</section>
+<section class="block" id="what-needs-what">
+  <div class="block-label"><span class="bl-num">29.13</span>
+  <h2>what needs what</h2></div>
+  <div class="block-body"><h3 class="sub">if a control seems to do nothing</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>SPEED GRAIN SPRAY<span class="rng">need</span></dt><dd>ENGINE = Stretch.</dd></div>
+<div class="ctl-row"><dt>POSITION GLIDE<span class="rng">need</span></dt><dd>ENGINE = Stretch and SCRUB on (GLIDE also smooths paths).</dd></div>
+<div class="ctl-row"><dt>WANDER FRICTION<span class="rng">need</span></dt><dd>ENGINE = Stretch, WANDER above 0.</dd></div>
+<div class="ctl-row"><dt>FREQ WIDTH<span class="rng">need</span></dt><dd>FILTER on. FREQ is ignored while a path is active.</dd></div>
+<div class="ctl-row"><dt>PATH TIME<span class="rng">needs</span></dt><dd>PATH on, a path drawn on that layer, its sample loaded.</dd></div>
+<div class="ctl-row"><dt>Path height<span class="rng">needs</span></dt><dd>FILTER on.</dd></div>
+<div class="ctl-row"><dt>RATE DEPTH SHAPE<span class="rng">need</span></dt><dd>LFO TO not Off. Position/Speed targets need Stretch; Filter target needs FILTER on.</dd></div>
+<div class="ctl-row"><dt>INTERVAL VARY GATE PITCH<span class="rng">need</span></dt><dd>EMIT on.</dd></div>
+<div class="ctl-row"><dt>Layer LEVEL PAN TUNE FINE<span class="rng">need</span></dt><dd>a sample in that slot and its ON lit.</dd></div>
+<div class="ctl-row"><dt>TOL / HARM<span class="rng">affect</span></dt><dd>the WAND only. SIZE affects BRUSH and ERASE only.</dd></div>
+<div class="ctl-row"><dt>Release<span class="rng">note</span></dt><dd>is also what ends a frozen, scrubbed or looping note after key-up.</dd></div>
+</dl></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="telegraph.html"><span>previous</span>telegraph</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-09-20</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

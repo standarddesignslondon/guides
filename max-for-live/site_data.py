@@ -3632,3 +3632,496 @@ ITEMS.append({
         "for a dying tail collapse early on a free-running dial.",
     ],
 })
+
+# --------------------------------------------------------------------------
+# TELEGRAPH
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "telegraph",
+    "name": "Telegraph",
+    "kind": "MIDI Effect",
+    "author": "Claude",
+    "status": "v0.3",
+    "folder": "Telegraph Device",
+    "tagline": "Morse-code MIDI sequencer — type words, and their dits and "
+               "dahs become notes; slashes stack words as parallel voices.",
+    "blurb": "Type a phrase and press Return: it is translated to Morse and "
+             "every dit (1 unit) and dah (3 units) becomes a MIDI note, "
+             "locked to Live's transport. `/` ends one voice and starts the "
+             "next, so `dresden/mitosis/formert` is three lanes playing at "
+             "once, each on its own random note drawn between **Low** and "
+             "**High**. `*` is one unit of rest, and the **Rest** menu "
+             "respaces every hit. The idea comes from Audio Spices' "
+             "*Ginger* (an audio gate); this is a MIDI reworking, so the "
+             "audio-only controls are gone and the pitch scheme is its own.",
+    "quickstart": [
+        "Drop `Telegraph.amxd` on a MIDI track in front of an instrument.",
+        "Click the text field, type a word, press **Return**. Marks appear "
+        "on the canvas, one lane per voice, with each lane's note name at "
+        "the left.",
+        "Start Live's transport — it only runs while Live is playing.",
+        "Add voices with slashes: `STELLAR/**EARTH` plays both words from "
+        "the start, EARTH two units late.",
+        "Don't like the notes? **Reroll**. Want it as a clip? Select a "
+        "Session slot and press **Write Clip**.",
+    ],
+    "controls": [
+        {"title": "Message",
+         "intro": "Up to 64 characters and 8 voices. Case doesn't matter.",
+         "rows": [
+             ["Text field", "A-Z 0-9 . ? = - + @ ! ' :",
+              "The phrase. Press Return to compile it. Anything without a "
+              "Morse code is skipped. Retyping a phrase resets its per-hit "
+              "edits and loop region."],
+             ["/", "",
+              "Ends the text for this voice and moves to the next. Every "
+              "voice starts at the beginning; they play in parallel. The "
+              "pattern loops at the length of the longest voice and "
+              "shorter voices rest until it comes round."],
+             ["*", "",
+              "One unit of rest (one 1/16 if Rate is 1/16). At the start "
+              "of a section it delays that voice; it also works "
+              "mid-section."],
+         ]},
+        {"title": "Pitch",
+         "rows": [
+             ["Low / High", "MIDI note",
+              "The range the random notes are drawn from. Defaults C2 and "
+              "C4."],
+             ["Voices", "1 - 16",
+              "How many different notes are drawn. Voice k plays note k; "
+              "with more `/` sections than Voices the notes wrap round."],
+             ["Reroll", "button",
+              "New random notes, and new gaps when Rest is Random. The "
+              "seed is saved with the Set, so a Set recalls the same "
+              "pattern."],
+         ]},
+        {"title": "Time",
+         "rows": [
+             ["Rate", "1/4 / 1/8 / 1/16 / 1/32", "The length of one unit."],
+             ["Feel", "Note / Trip / Dot",
+              "Straight, triplet or dotted units."],
+             ["Rest", "Morse / 0 - 16 / Random",
+              "**Morse** = standard gaps: 1 unit inside a letter, 3 "
+              "between letters, 7 between words. A number puts that many "
+              "units between *every* hit, inside letters and between them "
+              "alike — AM at 2 plays dit, 2 rests, dah, 2 rests, dah, 2 "
+              "rests, dah. A space adds one more rest. **Random** gives "
+              "each gap its own length from 0 to 16; the gaps are fixed "
+              "per roll, not re-drawn on every pass."],
+             ["Length", "5 - 100 %",
+              "Note length as a fraction of the dit or dah."],
+             ["Velocity", "1 - 127",
+              "Base velocity; each hit's level scales it."],
+             ["PLAY / PAUSED", "toggle",
+              "Automatable. Pausing stops the notes; position comes from "
+              "the song position, so resuming is already on the grid."],
+         ]},
+        {"title": "Canvas",
+         "rows": [
+             ["LOOP", "toggle",
+              "On: drag across the canvas to set the region that repeats "
+              "(all voices at once). Double-click = whole phrase."],
+             ["MOTION", "toggle",
+              "On: drag a mark up or down to set its level (relative drag, "
+              "about two levels per pixel); shift-click mutes it. Muted "
+              "marks draw as outlines."],
+             ["CHARS", "toggle",
+              "Shows each letter under its group of marks."],
+             ["Write Clip", "button",
+              "Writes the phrase — or the loop region when LOOP is on — "
+              "into the highlighted Session slot, with levels and mutes. "
+              "The status line reports the note count and length."],
+         ]},
+    ],
+    "workflow": [
+        {"title": "Hocketed words",
+         "text": "Give each voice a word of a different length and set Rest "
+                 "to Random: long, sparse, interlocking lines. Turn LOOP on "
+                 "and drag out a bar or two that works, then Write Clip."},
+        {"title": "Keep it in key",
+         "text": "The random notes are chromatic. Put Live's Scale device "
+                 "after Telegraph, or narrow Low/High and Reroll until it "
+                 "lands."},
+        {"title": "Drums",
+         "text": "Set Low/High across a Drum Rack's pads and use one short "
+                 "word per voice; Rest 0 - 2 gives tight patterns, Morse "
+                 "gives the classic lopsided ones."},
+    ],
+    "gotchas": [
+        "Nothing plays unless Live's transport is running.",
+        "Press Return after typing — clicking away does not compile the "
+        "phrase.",
+        "Reroll changes the notes *and* the Random gaps together.",
+        "Rest = Random with a long phrase gets very long (up to 16 units "
+        "between every hit); use LOOP to pick out a usable stretch.",
+        "`/` and `*` are control characters here, so the Morse slash is "
+        "not available. Commas and semicolons can't be typed into a Max "
+        "text field.",
+        "After replacing the .amxd, delete the device from the track and "
+        "drag it on again.",
+    ],
+    "rebuild": [
+        "`python3 build_telegraph.py` in the device folder regenerates "
+        "`Telegraph.maxpat` and a frozen `Telegraph.amxd` (the script is "
+        "embedded at build time — no Max freeze step). `node "
+        "test_telegraph_node.js` tests the compiler, voices, Rest modes, "
+        "seeding and save/restore.",
+        "`telegraph.js` is one v8ui: canvas plus pattern compiler, never "
+        "in the timing path. It writes `unit -> pitch level length` "
+        "triples into a coll; the clock is plain Max — plugsync~ beats → "
+        "floor(beats × units per beat) → change → start + (g % length) → "
+        "coll → zl iter 3 → makenote.",
+        "State (text, seed, loop region, per-hit level and mute) is saved "
+        "in the v8ui's blob parameter and restored into the text field.",
+    ],
+})
+
+
+# --------------------------------------------------------------------------
+# LENS  (appended to Guides/max-for-live/site_data.py by the Lens session,
+#        21 Sep 2026; this file is the source copy kept with the device)
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "lens",
+    "name": "Lens",
+    "kind": "Instrument",
+    "author": "Claude",
+    "status": "v0.7.1 - working in Live",
+    "folder": "Lens Device",
+    "tagline": "Spectral-selection sampler after iZotope Iris — paint the "
+               "part of a sample you want, in time and frequency, and play "
+               "only that. Four layers.",
+    "blurb": "Drop up to four samples. Each appears as a spectrogram in a "
+             "pop-out editor, where you select regions of time *and* "
+             "frequency; only what is selected is heard. The selection is "
+             "rendered offline into a second buffer (an STFT with the "
+             "unselected cells zeroed), so the 16-note engine just plays "
+             "audio: no real-time FFT, edges as sharp as you like, cheap "
+             "polyphony. One note plays every layer at once, so a sound can "
+             "be the attack of one sample over the body of another. Two "
+             "engines: **Classic** (pitch and speed tied, like any sampler) "
+             "and **Stretch** (granular: the key sets pitch, SPEED sets "
+             "time, 0 freezes). Borrowed from Dillon Bastan's *Iota II*: "
+             "drawn playback paths, a band filter that follows the path's "
+             "height, self-triggering Emit, and a drifting playhead.",
+    "image_aliases": ["lens01"],
+    "extra_images": [{"file": "lens02",
+                      "caption": "The pop-out spectral editor (EDIT)"}],
+    "quickstart": [
+        "Put `Lens.amxd` on a MIDI track. Drop a WAV/AIFF on **DROP SAMPLE "
+        "1**. Play: C3 is the original pitch.",
+        "Press **EDIT** (or click the overview). Drag a box with **RECT** "
+        "over something bright: it turns orange, the rest dims, and notes "
+        "now play only that.",
+        "Shift-drag adds, Alt-drag removes — for RECT, LASSO, TIME and FREQ "
+        "alike. **WAND** with **HARM** on pulls one pitched note, with its "
+        "harmonics, out of a texture.",
+        "Drop another sample on slot 2, pick **L2** in the editor, select "
+        "something from it, and balance the two in the layer table.",
+        "Set **ENGINE** to Stretch to make every key the same length; "
+        "**SPEED** 0 freezes, **SPRAY** brings the freeze alive.",
+    ],
+    "controls": [
+        {"title": "Main",
+         "rows": [
+             ["Root", "C-2 - G8", "The key that plays original pitch (C3)."],
+             ["Transpose / Fine", "±24 st / ±50 ct", "Tuning of the whole instrument."],
+             ["Gain", "-36 - +12 dB", "Output level."],
+             ["Vel Sens", "0 - 100 %", "How much velocity affects level."],
+             ["Attack Decay Sustain Release", "", "Amplitude envelope, shared by a note's layers."],
+             ["Mode", "One-shot / Loop / Ping-pong / Reverse",
+              "What happens at the end of the selection (or of the path)."],
+             ["Trim", "toggle",
+              "On: each layer starts at its own first selected moment and "
+              "ends at its last. Off: the whole sample length plays, silent "
+              "where nothing is selected."],
+         ]},
+        {"title": "Layers",
+         "intro": "Four slots, each a sample plus a selection. The table on "
+                  "the device mixes them.",
+         "rows": [
+             ["ON", "toggle", "Layer sounds or not. Takes effect from the next note."],
+             ["LEVEL / PAN", "-36 - +12 dB / ±50", "Mix. Pan is a balance control."],
+             ["TUNE / FINE", "±24 st / ±50 ct", "Detune a layer against the others."],
+         ]},
+        {"title": "Engine",
+         "rows": [
+             ["ENGINE", "Classic / Stretch",
+              "Classic: pitch and speed tied. Stretch: granular; the key "
+              "sets pitch, SPEED sets time."],
+             ["SPEED", "-400 - 400 %", "Stretch only. 0 = frozen, negative = backwards."],
+             ["GRAIN", "10 - 500 ms", "Small = grainy, large = smooth but smeary; 60-120 is neutral."],
+             ["SPRAY", "0 - 500 ms", "Random scatter of where each grain reads."],
+             ["SCRUB / POSITION / GLIDE", "",
+              "Scrub on: the playhead parks at Position (% of the "
+              "selection), moving there at the Glide rate."],
+             ["WANDER / FRICTION", "0 - 100 %",
+              "Stretch only. A tethered random drift of the read point; "
+              "Friction high = jittery, low = long lazy swings."],
+         ]},
+        {"title": "Filter and path",
+         "rows": [
+             ["FILTER", "toggle", "A band-pass per note per layer."],
+             ["FREQ / WIDTH", "30 Hz - 18 kHz / 0.1 - 6 oct",
+              "Centre and width. With a path, the path's height replaces FREQ."],
+             ["PATH", "toggle",
+              "Playheads follow the line drawn with the editor's PATH tool: "
+              "left-right = where in the sample, up-down = filter centre."],
+             ["PATH TIME", "20 ms - 60 s", "One trip along the path."],
+         ]},
+        {"title": "LFO",
+         "intro": "One per note, restarting with the note.",
+         "rows": [
+             ["LFO TO", "Off / Pitch / Position / Filter / Level / Pan / Speed", "Target."],
+             ["RATE / DEPTH / SHAPE", "", "Depth 100 = ±1 octave, ±half the selection, "
+              "±4 octaves, full tremolo, hard left-right, 0-200 % speed."],
+         ]},
+        {"title": "Emit",
+         "rows": [
+             ["EMIT", "toggle", "Lens plays itself, no MIDI needed."],
+             ["INTERVAL / VARY", "20 ms - 20 s / 0 - 100 %", "Time between notes and its scatter."],
+             ["GATE / PITCH", "1 - 400 % / note", "Note length as % of the interval; the note played."],
+         ]},
+        {"title": "Editor",
+         "rows": [
+             ["L1 - L4", "tabs", "Which layer you see and edit. Greyed = empty slot."],
+             ["RECT LASSO TIME FREQ", "tools", "Drag = only this, Shift = add, Alt = remove."],
+             ["BRUSH ERASE", "SIZE -/+", "Paint and rub out."],
+             ["WAND", "TOL -/+, HARM", "Select a streak and what joins it; HARM adds its harmonics."],
+             ["ALL NONE INVERT", "", "Whole-layer actions."],
+             ["EDGE", "hard / soft / softer", "Feathers the selection edges in the render."],
+             ["UNDO REDO", "24 steps", "Selections only (not paths)."],
+             ["ZOOM -/+ FIT", "", "Time zoom; drag the grey bar under the ruler to scroll."],
+             ["PATH / NO PATH", "", "Draw a playback path (Shift-drag extends it); clear it."],
+             ["LISTEN", "hold", "This layer alone, original pitch."],
+         ]},
+    ],
+    "sections": [
+        {"label": "how-to 1: first sound", "type": "steps", "data": [
+            "Drop a sample on **DROP SAMPLE 1**. The status line under the "
+            "overview reads *reading... analysing...* and then the length, "
+            "sample rate and what is selected. Until you edit, everything "
+            "is selected and Lens is an ordinary sampler.",
+            "Play **C3**: original pitch. **Root** moves that reference key; "
+            "**Transp** and **Fine** tune the whole instrument on top.",
+            "**Mode**: *One-shot* plays to the end of the selection even if "
+            "you let go late; *Loop* and *Ping-pong* repeat while the key is "
+            "held; *Reverse* plays once backwards. Release always goes "
+            "through the **Release** time.",
+            "**Attack / Decay / Sustain / Release** shape every note. For "
+            "one-shots of percussive material leave Sustain at 100 %; for "
+            "pads in Loop mode, lengthen Attack and Release.",
+            "**VelSens** 0 % = every note full level; 100 % = level follows "
+            "velocity completely. **Gain** is the output trim — turn it "
+            "down when several layers stack up.",
+        ]},
+        {"label": "how-to 2: selecting", "type": "steps", "data": [
+            "Press **EDIT**. Time runs left to right, frequency bottom "
+            "(30 Hz) to top on a log scale. Bright orange = selected = "
+            "audible; dim blue-grey = removed. The read-out bottom right "
+            "shows the time, frequency and note name under the mouse.",
+            "Every shape tool obeys the same three gestures: **drag** = "
+            "keep *only* this, **Shift-drag** = add this, **Alt-drag** = "
+            "remove this. The commonest slip is forgetting Shift and "
+            "losing the previous selection — **UNDO** brings it back.",
+            "**RECT** a box; **LASSO** a freehand outline (it closes "
+            "itself); **TIME** a full-height slice (pick a moment); "
+            "**FREQ** a band across the whole sample (pick a register, e.g. "
+            "everything under 200 Hz).",
+            "**BRUSH** paints selection, **ERASE** rubs it out; **SIZE -/+** "
+            "sets the width (shown under the tools).",
+            "**WAND**: click a bright streak. It takes that streak and all "
+            "that is joined to it and no more than **TOL** dB quieter than "
+            "the spot you clicked. Too little selected: **TOL +**. It "
+            "spreads into the neighbours: **TOL -**, or click a brighter "
+            "part. **HARM** on: click the *lowest* streak of a pitched note "
+            "and its harmonics are taken too.",
+            "**ALL / NONE / INVERT** act on the whole layer. A quick way to "
+            "remove something: select it, then INVERT.",
+            "**EDGE** cycles hard / soft / softer. The picture does not "
+            "change; the sound is re-rendered with feathered edges. Hard "
+            "edges can ring or sound 'cut out'; soft is usually the more "
+            "natural.",
+            "**ZOOM +/-** zooms in time about the middle of the view; drag the grey bar "
+            "under the ruler to scroll; **FIT** shows everything. Zoom in "
+            "before fine brush work — the grid really is finer, not just "
+            "bigger.",
+            "Hold **LISTEN** to hear this layer's selection alone at "
+            "original pitch without touching the keyboard. While a red bar "
+            "shows bottom right, the change is still being rendered.",
+            "On the device, **TRIM** on makes a note start at the first "
+            "selected moment (no silence before it) and end at the last. "
+            "Turn it off if the timing inside the original sample matters.",
+        ]},
+        {"label": "how-to 3: layers", "type": "steps", "data": [
+            "Drop further samples on slots 2-4. In the editor the **L1-L4** "
+            "tabs choose which layer you see and edit; a greyed tab is an "
+            "empty slot. The overview on the device follows the tab.",
+            "Each layer has its own selection, EDGE setting, zoom, undo "
+            "history and path. Nothing you do on L2 touches L1.",
+            "One key plays every layer whose **ON** is lit. **LEVEL** and "
+            "**PAN** mix them; **TUNE** (semitones) and **FINE** (cents) "
+            "detune one against the others — +12 or +7 for a built-in "
+            "interval, a few cents of FINE for width.",
+            "ON takes effect from the *next* note; LEVEL, PAN, TUNE and "
+            "FINE act at once, on held notes too.",
+            "With TRIM on, each layer starts at *its own* first selected "
+            "moment, so an attack taken from one sample and a body taken "
+            "from another line up. In Loop mode each layer loops its own "
+            "selection, so different lengths drift against each other.",
+            "A one-shot note lasts as long as its longest layer.",
+        ]},
+        {"label": "how-to 4: stretch, freeze, scrub", "type": "steps", "data": [
+            "**ENGINE = Classic**: a normal sampler — higher keys are "
+            "shorter. SPEED, GRAIN, SPRAY, SCRUB, POSITION, GLIDE, WANDER "
+            "and FRICTION do nothing in Classic.",
+            "**ENGINE = Stretch**: the key sets pitch only; **SPEED** sets "
+            "how fast time passes. 100 % = original length on every key, "
+            "50 % = twice as long, 200 % = half, negative = backwards, "
+            "**0 % = frozen** on the spot.",
+            "**GRAIN** is the size of the overlapping slices: 60-120 ms is "
+            "neutral; below ~30 ms it turns grainy and pitched; above "
+            "~250 ms it smears and echoes. Long grains suit slow pads, short "
+            "ones suit rhythmic material.",
+            "**SPRAY** scatters where each grain reads. 0 = faithful; "
+            "20-60 ms removes the static buzz of a frozen or very slow "
+            "sound; hundreds of ms = a cloud.",
+            "**SCRUB** on: the playhead stops running and sits at "
+            "**POSITION** (0-100 % of the selection), travelling there at "
+            "the **GLIDE** time. Hold a note and move POSITION, automate "
+            "it, or map it to a Push encoder. SCRUB overrides SPEED.",
+            "Frozen (SPEED 0) and scrubbed notes never reach the end, so "
+            "they last until you release the key — in every Mode.",
+            "**WANDER** adds a slow random drift around the playhead "
+            "(Stretch only); **FRICTION** high = small nervous movements, "
+            "low = long lazy swings. Lovely on a frozen note.",
+        ]},
+        {"label": "how-to 5: paths and the filter", "type": "steps", "data": [
+            "**FILTER** on puts a band-pass on every note of every layer. "
+            "**FREQ** is its centre, **WIDTH** its size in octaves (0.3 = "
+            "a narrow whistle, 2-3 = gentle focus, 6 = nearly open). It "
+            "works in both engines.",
+            "In the editor choose **PATH** and draw a line across the "
+            "spectrogram (green, with a dot at its start). Shift-drag "
+            "carries on from the end; **NO PATH** clears it. Under the "
+            "tools it says *path drawn*. Each layer has its own path.",
+            "On the device switch **PATH** on and use **ENGINE = Stretch**. "
+            "Hold a note: the playhead travels along your line, once per "
+            "**PATH TIME**. Left-right on the line = where in the sample; "
+            "it may double back, stand still (a vertical stroke) or jump.",
+            "With FILTER also on, the line's *height* becomes the filter "
+            "centre and FREQ is ignored — so drawing upwards opens the "
+            "sound towards the top. Without FILTER the height does nothing.",
+            "**Mode** decides the end of the trip: One-shot = the note "
+            "ends; Loop = start again; Ping-pong = back along the line; "
+            "Reverse = travelled from its end to its start.",
+            "**GLIDE** also smooths path movement: 0 ms follows the line "
+            "exactly, a few hundred ms rounds off jumps.",
+            "In **Classic** a path is a tape-scrub: pitch comes from how "
+            "fast the line moves through the sample and the key is "
+            "ignored. Useful as an effect, wrong if you wanted tuned notes.",
+            "A layer with no path drawn ignores the PATH switch and plays "
+            "normally.",
+        ]},
+        {"label": "how-to 6: lfo, emit", "type": "steps", "data": [
+            "**LFO TO** picks one target; *Off* disables it. There is one "
+            "LFO per note and it restarts with each note. **RATE** in Hz, "
+            "**DEPTH** in %, **SHAPE** Sine / Triangle / Saw (falling) / "
+            "Square / S&H (a new random value each cycle).",
+            "Depth 100 % means: **Pitch** ±1 octave (2-5 % is vibrato); "
+            "**Position** ±half the selection (Stretch only); **Filter** "
+            "±4 octaves around the centre (FILTER must be on); **Level** "
+            "full tremolo; **Pan** hard left-right; **Speed** 0-200 % of "
+            "SPEED (Stretch only) and of the path's travel.",
+            "**EMIT** on: Lens plays **PITCH** by itself every **INTERVAL** "
+            "ms — no MIDI clip needed, and it runs whether or not Live is "
+            "playing. **VARY** scatters the timing (0 = metronomic). "
+            "**GATE** is how long each note is held, as % of the interval: "
+            "under 100 = gaps, over 100 = overlaps (up to 16 notes).",
+            "Emitted notes use all the normal settings (Mode, envelope, "
+            "engine, path, LFO). Keys you play sound alongside them. "
+            "Remember to switch EMIT off — it is saved with the Set.",
+        ]},
+        {"label": "what needs what", "type": "reference", "data": [
+            {"title": "If a control seems to do nothing",
+             "rows": [
+                 ["SPEED GRAIN SPRAY", "need", "ENGINE = Stretch."],
+                 ["POSITION GLIDE", "need", "ENGINE = Stretch and SCRUB on (GLIDE also smooths paths)."],
+                 ["WANDER FRICTION", "need", "ENGINE = Stretch, WANDER above 0."],
+                 ["FREQ WIDTH", "need", "FILTER on. FREQ is ignored while a path is active."],
+                 ["PATH TIME", "needs", "PATH on, a path drawn on that layer, its sample loaded."],
+                 ["Path height", "needs", "FILTER on."],
+                 ["RATE DEPTH SHAPE", "need", "LFO TO not Off. Position/Speed targets need Stretch; Filter target needs FILTER on."],
+                 ["INTERVAL VARY GATE PITCH", "need", "EMIT on."],
+                 ["Layer LEVEL PAN TUNE FINE", "need", "a sample in that slot and its ON lit."],
+                 ["TOL / HARM", "affect", "the WAND only. SIZE affects BRUSH and ERASE only."],
+                 ["Release", "note", "is also what ends a frozen, scrubbed or looping note after key-up."],
+             ]},
+        ]},
+    ],
+    "banks": [
+        {"name": "Lens", "encoders": ["Root", "Transpose", "Fine", "Gain", "Vel Sens", "Mode"],
+         "buttons": ["Trim"]},
+        {"name": "Envelope", "encoders": ["Attack", "Decay", "Sustain", "Release"],
+         "buttons": ["Trim"]},
+        {"name": "Stretch", "encoders": ["Engine", "Speed", "Grain", "Spray", "Position",
+                                         "Glide", "Wander", "Friction"], "buttons": ["Scrub"]},
+        {"name": "Filter+Path", "encoders": ["Filter Freq", "Filter Width", "Path Time"],
+         "buttons": ["Filter", "Path"]},
+        {"name": "LFO", "encoders": ["LFO Target", "LFO Rate", "LFO Depth", "LFO Shape"]},
+        {"name": "Emit", "encoders": ["Emit Interval", "Emit Vary", "Emit Gate", "Emit Pitch"],
+         "buttons": ["Emit"]},
+        {"name": "Layer 1 - 4 (one bank each)",
+         "encoders": ["Level", "Pan", "Tune", "Fine"], "buttons": ["On"],
+         "note": "Selecting is a mouse job by nature; Push covers the playing controls."},
+    ],
+    "workflow": [
+        {"title": "One note out of a chord",
+         "text": "WAND with HARM on, click the lowest streak of the note you "
+                 "want. Raise TOL until the whole note lights up, lower it if "
+                 "neighbours join in. EDGE soft takes the 'cut-out' ring off."},
+        {"title": "Hybrid sounds",
+         "text": "Layer 1: TIME-select just the attack of a percussive "
+                 "sample. Layer 2: FREQ-select the sustained body of "
+                 "something pitched. Trim on, so both start together."},
+        {"title": "Frozen pads",
+         "text": "Stretch, SPEED 0, SPRAY 30-60 ms, WANDER 40 %. Or SCRUB on "
+                 "and automate POSITION."},
+        {"title": "Iota-style gestures",
+         "text": "Stretch, FILTER on, draw a PATH that wanders up and down "
+                 "through the bright parts, Mode = Ping-pong, PATH TIME a "
+                 "bar or two. EMIT on with some VARY makes it play itself."},
+    ],
+    "gotchas": [
+        "Only the first 60 s of each sample is used.",
+        "In the Classic engine a PATH is a tape-scrub: the key no longer "
+        "sets the pitch. Use Stretch for pitched paths.",
+        "WANDER and LFO -> Position only act in the Stretch engine.",
+        "Frozen (SPEED 0), scrubbed and path-less looping notes last until "
+        "the key is released; a one-shot note lasts as long as its longest "
+        "layer.",
+        "Layer ON applies from the next note, not to notes already held.",
+        "Paths are not in the undo history.",
+        "Stretch is granular, not a phase vocoder: it sounds like a good "
+        "granular stretch, not a transparent studio one.",
+        "After replacing the .amxd, delete the device from the track and "
+        "drag it on again.",
+    ],
+    "rebuild": [
+        "`python3 build_lens.py` in the device folder regenerates the "
+        "engine (`make_engine.py` unrolls the per-layer gen~ code from one "
+        "template — edit that, never `lens_engine.genexpr`), then "
+        "`Lens.maxpat` and a frozen `Lens.amxd` with `lens_ui.js` embedded.",
+        "`python3 sim_lens.py` transpiles the shipped genexpr to Python "
+        "(88 checks); `node test_lens_node.js` runs the shipped editor "
+        "script under a mocked Max (8734 checks).",
+        "Architecture: live.drop -> two buffers per layer (pristine + "
+        "rendered); the editor v8ui renders selections offline in ~18 ms "
+        "Task slices; notes reach gen~ through a ring in a buffer written "
+        "by peek~ (nothing lost inside a signal vector); paths travel in "
+        "`buffer~ ---lnpath`; the face overview is a second v8ui fed a "
+        "thumbnail through a buffer. Lessons: never `bang` a live.text "
+        "(it toggles — use `outputvalue`); keep gen~ literals small.",
+    ],
+})

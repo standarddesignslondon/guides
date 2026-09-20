@@ -13,7 +13,7 @@
   <h1>max for live<br>devices</h1>
   <p class="hero-sub">user guide</p>
   <p class="hero-blurb">An aide-mémoire for the devices in the Max for Live folder — what every control does, how the Push 3 encoders are laid out, and the handful of things each one needs you to remember.</p>
-  <p class="hero-count">27 devices</p>
+  <p class="hero-count">29 devices</p>
 </header>
 <div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="Audio Effect">audio effect</button><button class="f" data-f="kind" data-v="Instrument">instrument</button><button class="f" data-f="kind" data-v="MIDI Effect">midi effect</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="ChatGPT">chatgpt</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
 <div class="index-list" id="grid">
@@ -206,6 +206,20 @@
   <span class="r-desc">Remainder&#x27;s rot as a free-running processor for ongoing audio: nothing dies — Rot sets how ruined the sound is, and Chaos rerolls the balance on the bar, the clock, or every hit.</span>
   <span class="r-kind">audio effect</span>
   <span class="r-thumb"><img src="images/divisor.png" alt="" loading="lazy"></span>
+</a><a class="row" href="devices/telegraph.html"
+   data-kind="MIDI Effect" data-author="Claude" data-text="telegraph morse-code midi sequencer — type words, and their dits and dahs become notes; slashes stack words as parallel voices. type a phrase and press return: it is translated to morse and every dit (1 unit) and dah (3 units) becomes a midi note, locked to live&#x27;s transport. `/` ends one voice and starts the next, so `dresden/mitosis/formert` is three lanes playing at once, each on its own random note drawn between **low** and **high**. `*` is one unit of rest, and the **rest** menu respaces every hit. the idea comes from audio spices&#x27; *ginger* (an audio gate); this is a midi reworking, so the audio-only controls are gone and the pitch scheme is its own. midi effect claude">
+  <span class="r-num">28</span>
+  <span class="r-name">telegraph</span>
+  <span class="r-desc">Morse-code MIDI sequencer — type words, and their dits and dahs become notes; slashes stack words as parallel voices.</span>
+  <span class="r-kind">midi effect</span>
+  <span class="r-thumb"><img src="images/telegraph.png" alt="" loading="lazy"></span>
+</a><a class="row" href="devices/lens.html"
+   data-kind="Instrument" data-author="Claude" data-text="lens spectral-selection sampler after izotope iris — paint the part of a sample you want, in time and frequency, and play only that. four layers. drop up to four samples. each appears as a spectrogram in a pop-out editor, where you select regions of time *and* frequency; only what is selected is heard. the selection is rendered offline into a second buffer (an stft with the unselected cells zeroed), so the 16-note engine just plays audio: no real-time fft, edges as sharp as you like, cheap polyphony. one note plays every layer at once, so a sound can be the attack of one sample over the body of another. two engines: **classic** (pitch and speed tied, like any sampler) and **stretch** (granular: the key sets pitch, speed sets time, 0 freezes). borrowed from dillon bastan&#x27;s *iota ii*: drawn playback paths, a band filter that follows the path&#x27;s height, self-triggering emit, and a drifting playhead. instrument claude">
+  <span class="r-num">29</span>
+  <span class="r-name">lens</span>
+  <span class="r-desc">Spectral-selection sampler after iZotope Iris — paint the part of a sample you want, in time and frequency, and play only that. Four layers.</span>
+  <span class="r-kind">instrument</span>
+  <span class="r-thumb"><img src="images/lens01.png" alt="" loading="lazy"></span>
 </a>
 </div>
 <p class="empty-msg" id="empty" hidden>nothing matches that.</p>
@@ -214,7 +228,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-09-08</span>
+  <div class="sf-col"><span>generated 2026-09-20</span>
   <span>build_site.py</span></div>
 </footer>
 </body>
