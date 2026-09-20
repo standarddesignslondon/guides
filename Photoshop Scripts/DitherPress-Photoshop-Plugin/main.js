@@ -552,7 +552,93 @@ async function render(o) {
     return info + ", " + ((Date.now() - t0) / 1000).toFixed(1) + "s";
 }
 
+// -------------------------------------------------------------- presets
+// Stored as JSON in the plugin's data folder (survives plugin updates),
+// with localStorage as a fallback if the file system is unavailable.
+
+const PRESET_FILE = "presets.json";
+let presets = {};
+
+async function presetFolder() {
+    const fs = require("uxp").storage.localFileSystem;
+    return await fs.getDataFolder();
+}
+
+async function loadPresets() {
+    try {
+        const folder = await presetFolder();
+        const entry = await folder.getEntry(PRESET_FILE);
+        presets = JSON.parse(await entry.read()) || {};
+    } catch (e) {
+        try { presets = JSON.parse(localStorage.getItem("ditherpress.presets") || "{}"); } catch (e2) { presets = {}; }
+    }
+    refreshPresetList();
+}
+
+async function storePresets() {
+    try { localStorage.setItem("ditherpress.presets", JSON.stringify(presets)); } catch (e) {}
+    const folder = await presetFolder();
+    const file = await folder.createFile(PRESET_FILE, { overwrite: true });
+    await file.write(JSON.stringify(presets, null, 1));
+}
+
+function refreshPresetList(selectName) {
+    const sel = $("presetSel");
+    while (sel.firstChild) sel.removeChild(sel.firstChild);
+    const none = document.createElement("option");
+    none.value = ""; none.textContent = "(none)";
+    sel.appendChild(none);
+    for (const name of Object.keys(presets).sort((a, b) => a.localeCompare(b))) {
+        const op = document.createElement("option");
+        op.value = name; op.textContent = name;
+        sel.appendChild(op);
+    }
+    sel.value = selectName && presets[selectName] ? selectName : "";
+}
+
+async function savePreset() {
+    let name = $("presetName").value.trim();
+    if (!name) name = $("presetSel").value;
+    if (!name) { setStatus("Type a name for the preset first.", true); return; }
+    presets[name] = readOpts();
+    try {
+        await storePresets();
+        refreshPresetList(name);
+        $("presetName").value = "";
+        setStatus("Saved preset “" + name + "”.");
+    } catch (e) {
+        setStatus("Could not save preset: " + (e.message || e), true);
+    }
+}
+
+async function deletePreset() {
+    const name = $("presetSel").value;
+    if (!name) { setStatus("Choose a saved preset to delete.", true); return; }
+    delete presets[name];
+    try {
+        await storePresets();
+        refreshPresetList();
+        setStatus("Deleted preset “" + name + "”.");
+    } catch (e) {
+        setStatus("Could not delete preset: " + (e.message || e), true);
+    }
+}
+
+function applyPreset() {
+    const name = $("presetSel").value;
+    if (!name || !presets[name]) return;
+    writeOpts(presets[name]);
+    saveOpts();
+    $("presetName").value = name;
+    setStatus("Loaded preset “" + name + "”.");
+}
+
 // --------------------------------------------------------------- wiring
+
+$("presetSel").addEventListener("change", applyPreset);
+$("presetSaveBtn").addEventListener("click", savePreset);
+$("presetDeleteBtn").addEventListener("click", deletePreset);
+
 
 for (const k of SLIDERS) {
     $(k).addEventListener("input", () => { $(k + "Val").textContent = $(k).value; });
@@ -584,4 +670,5 @@ $("runBtn").addEventListener("click", async () => {
 
 loadOpts();
 showModeBoxes();
+loadPresets();
 setStatus("Ready.");

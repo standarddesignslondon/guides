@@ -107,7 +107,7 @@
    "name": "DitherPress",
    "tagline": "Twenty-two dither algorithms, a dot-scale control and four colour modes, rendered to a new layer.",
    "url": "tools/ditherpress.html",
-   "image": "images/DitherPress.png",
+   "image": "images/ditherpress.png",
    "facets": {
     "app": "Photoshop",
     "kind": "UXP panel",

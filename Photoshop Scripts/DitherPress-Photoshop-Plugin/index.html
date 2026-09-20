@@ -194,6 +194,18 @@
         <div class="hint">Nearest palette colour per pixel with the chosen algorithm blending between them. Spread is how far ordered and pattern algorithms push a pixel towards neighbouring colours.</div>
     </div>
 
+    <h2>Presets</h2>
+    <div class="row">
+        <label for="presetSel">Saved</label>
+        <select id="presetSel"><option value="">(none)</option></select>
+    </div>
+    <div class="row"><label for="presetName">Name</label><input type="text" id="presetName" placeholder="new preset name" style="width:160px"></div>
+    <div class="buttons" style="margin-top:6px">
+        <button id="presetSaveBtn">Save preset</button>
+        <button id="presetDeleteBtn">Delete</button>
+    </div>
+    <div class="hint">Choosing a saved preset loads it immediately. Save with a new name to add one, or with the name of the selected preset to overwrite it. Presets are kept in the plugin's data folder and survive updates.</div>
+
     <div class="buttons">
         <button id="randomBtn">Randomise</button>
         <button id="runBtn">Render</button>

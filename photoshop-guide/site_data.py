@@ -941,7 +941,7 @@ ITEMS.append({
         "own pixel maths rather than drive Photoshop's tools. Each render is "
         "one undo step and the settings persist between sessions.",
     "facts": {
-        "version": "1.1.0",
+        "version": "1.2.0",
         "requires": "Photoshop 24.2+",
         "plugin id": "com.simonmorse.ditherpress",
     },
@@ -1030,12 +1030,26 @@ ITEMS.append({
               "palette colours. Error diffusion ignores it and diffuses the "
               "colour error instead."],
          ]},
+        {"title": "Presets",
+         "rows": [
+             ["Saved", "dropdown",
+              "Choosing a preset loads every setting immediately, colours "
+              "included, and puts its name in the Name field."],
+             ["Name", "text",
+              "Type a name and press **Save preset** to store the current "
+              "settings. Saving with the name of the selected preset "
+              "overwrites it."],
+             ["Save preset / Delete", "",
+              "Save writes `presets.json` to the plugin's data folder, which "
+              "survives plugin updates; Delete removes the selected preset."],
+         ]},
     ],
     "workflow": [
         {"title": "Finding a texture",
          "text": "Randomise is the quickest way in: every press gives a "
                  "different algorithm, scale and colour treatment. When one "
-                 "is close, stop randomising and adjust by hand."},
+                 "is close, stop randomising, adjust by hand, and save it as "
+                 "a preset before moving on."},
         {"title": "Print-like screens",
          "text": "Halftone dots at 45° with a pattern size of 6 – 10 cells "
                  "reads as a newspaper screen; lines at 0° or 90° as a "

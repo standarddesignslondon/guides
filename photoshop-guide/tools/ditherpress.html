@@ -14,12 +14,12 @@
   <h1>ditherpress</h1>
   <p class="ch-sub">Twenty-two dither algorithms, a dot-scale control and four colour modes, rendered to a new layer.</p>
 </header>
-<figure class="shot"><div class="shot-frame"><img src="../images/DitherPress.png" alt="DitherPress"></div><figcaption>ditherpress</figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="../images/ditherpress.png" alt="DitherPress"></div><figcaption>ditherpress</figcaption></figure>
 <section class="block" id="about">
   <div class="block-label"><span class="bl-num">08.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Reads the selected layer&#x27;s pixels, reduces the image by the cell size, dithers it with the chosen algorithm and writes the result to a new layer named <i>&lt;source&gt; dither</i> directly above the source, which is left untouched. Error-diffusion, ordered, pattern and noise families give very different textures from the same image; the colour mode then decides whether the result is ink on paper, a three-colour tonal ramp, eight-colour RGB, or a reduced palette. Built along the lines of Doron Supply&#x27;s DitherTone Pro, using Photoshop&#x27;s UXP imaging API — the first of these panels to do its own pixel maths rather than drive Photoshop&#x27;s tools. Each render is one undo step and the settings persist between sessions.</p>
-    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.1.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.ditherpress</dd></div><div class="fact"><dt>folder</dt><dd>DitherPress-Photoshop-Plugin</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.2.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.ditherpress</dd></div><div class="fact"><dt>folder</dt><dd>DitherPress-Photoshop-Plugin</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -61,12 +61,18 @@
 <div class="ctl-row"><dt>Palette<span class="rng">From image, or a preset</span></dt><dd><i>From image</i> builds a palette by median cut with the colour count below. Presets: Game Boy, Commodore 64, CGA, ZX Spectrum, Pico-8, four greys, and a process set of RGB + CMY + black + white.</dd></div>
 <div class="ctl-row"><dt>Colours (from image)<span class="rng">2 – 64</span></dt><dd>Palette size when building from the image.</dd></div>
 <div class="ctl-row"><dt>Spread<span class="rng">0 – 100</span></dt><dd>For ordered and pattern algorithms in Palette mode: how hard the threshold pattern pushes a pixel towards its neighbouring palette colours. Error diffusion ignores it and diffuses the colour error instead.</dd></div>
+</dl>
+<h3 class="sub">presets</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Saved<span class="rng">dropdown</span></dt><dd>Choosing a preset loads every setting immediately, colours included, and puts its name in the Name field.</dd></div>
+<div class="ctl-row"><dt>Name<span class="rng">text</span></dt><dd>Type a name and press <b>Save preset</b> to store the current settings. Saving with the name of the selected preset overwrites it.</dd></div>
+<div class="ctl-row"><dt>Save preset / Delete</dt><dd>Save writes <code>presets.json</code> to the plugin&#x27;s data folder, which survives plugin updates; Delete removes the selected preset.</dd></div>
 </dl></div>
 </section>
 <section class="block" id="workflow">
   <div class="block-label"><span class="bl-num">08.3</span>
   <h2>workflow</h2></div>
-  <div class="block-body"><h3 class="sub">finding a texture</h3><p>Randomise is the quickest way in: every press gives a different algorithm, scale and colour treatment. When one is close, stop randomising and adjust by hand.</p>
+  <div class="block-body"><h3 class="sub">finding a texture</h3><p>Randomise is the quickest way in: every press gives a different algorithm, scale and colour treatment. When one is close, stop randomising, adjust by hand, and save it as a preset before moving on.</p>
 <h3 class="sub">print-like screens</h3><p>Halftone dots at 45° with a pattern size of 6 – 10 cells reads as a newspaper screen; lines at 0° or 90° as a line screen. The dot uses a proper Euclidean spot function, so ink dots in the lights become paper dots in the darks the way a real screen does.</p>
 <h3 class="sub">the dithertone modulation look</h3><p><i>Modulation (contours)</i> with a modest pattern size and a high depth bends the line screen around the image&#x27;s tones. <i>Modulation (waves)</i> is the gentler version.</p>
 <h3 class="sub">retro palettes</h3><p>Palette mode with a preset and cell size 2 – 4 is the 8-bit route. Error diffusion gives the smoothest blends; Bayer with a high Spread gives the crunchier ordered look of the original hardware.</p>
