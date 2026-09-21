@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tracking lines — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">30</p>
+  <h1>tracking lines</h1>
+  <p class="ch-sub">Worn tape transport, VHS head switching and CRT whine, finished through a library of 288 lo-fi impulse responses.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/trackinglines.png" alt="Tracking Lines"></div><figcaption>tracking lines</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">30.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">A stereo lo-fi colour box modelled on the signal flow of a commercial VHS-style plug-in, without its code, artwork or presets. Nine processing blocks (wow and flutter, tape drive, compander breathing, bandwidth loss, hiss, dropouts, head switching, CRT flyback and stereo width) feed a full-length stereo convolution stage that can put the result inside a radio, telephone, speaker, toy or resonator. Every block has its own orange on/off square, so you can hear what each one is adding without moving the dial. Use it gently for movement and softened top end, or push the upper ranges for unstable tracking and damaged-transmission effects.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>chatgpt</dd></div><div class="fact"><dt>state</dt><dd>v1.0</dd></div><div class="fact"><dt>needs</dt><dd>HISSTools (HIRT)</dd></div><div class="fact"><dt>folder</dt><dd>TrackingLines</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">30.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drag <code>Tracking Lines.amxd</code> onto an audio track.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Start playback and leave <b>Mix</b> at 100 % while learning the controls.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Choose an <b>IR Folder</b>, then an <b>Impulse Response</b> from the second menu.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Set <b>Wobble</b>, <b>Saturate</b>, <b>Breathe</b> and <b>Tone</b> first, then add <b>Noise</b>, <b>Dropout</b>, <b>Headswitch</b> and <b>Flyback</b> to taste.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Blend with <b>Mix</b>, then level-match with <b>Output</b>.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">30.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">tape</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Wobble<span class="rng">0 - 100 %</span></dt><dd>Randomly clocked wow and flutter. Low values drift gently; the upper half is deliberately unstable, into bad-tracking and sound-design territory.</dd></div>
+<div class="ctl-row"><dt>Saturate<span class="rng">0 - 24 dB</span></dt><dd>Pre-emphasised tape-style drive. Adds density and edge ahead of the later colour stages.</dd></div>
+<div class="ctl-row"><dt>Breathe<span class="rng">0 - 100 %</span></dt><dd>Transient-sensitive compander mismatch: levels pump and move the way a noise-reduced tape does.</dd></div>
+<div class="ctl-row"><dt>Tone<span class="rng">0 - 100 %</span></dt><dd>Linked bandwidth loss and low-frequency head bump, from wide hi-fi to severely limited linear-track colour.</dd></div>
+<div class="ctl-row"><dt>Noise<span class="rng">0 - 100 %</span></dt><dd>Programme-gated hiss. The menu beside it picks <b>A - bright</b> or <b>B - dark</b>.</dd></div>
+<div class="ctl-row"><dt>Dropout<span class="rng">0 - 100 %</span></dt><dd>Irregular, clustered level losses rather than evenly clocked gaps. High values give frequent, deep interruptions.</dd></div>
+<div class="ctl-row"><dt>Width<span class="rng">0 - 100 %</span></dt><dd>Stereo crosstalk. 100 % keeps full width; 0 % collapses the processed signal to mono.</dd></div>
+</dl>
+<h3 class="sub">video</h3>
+<p class="lead">Headswitch and Flyback each have their own <b>Rate</b> menu. NTSC: 59.94 Hz field rate, 15.734 kHz line, 60 Hz hum. PAL: 50 Hz field rate, 15.625 kHz line, 50 Hz hum.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Headswitch<span class="rng">0 - 100 %</span></dt><dd>Alternates between a brighter and a duller virtual head at the field rate, with a short switching burst at each change.</dd></div>
+<div class="ctl-row"><dt>Rate (Headswitch)<span class="rng">NTSC / PAL</span></dt><dd>Field rate for Headswitch.</dd></div>
+<div class="ctl-row"><dt>Flyback<span class="rng">0 - 100 %</span></dt><dd>Programme-gated CRT line-transformer whine, audible lower subharmonics and mains hum.</dd></div>
+<div class="ctl-row"><dt>Rate (Flyback)<span class="rng">NTSC / PAL</span></dt><dd>Line and hum frequencies for Flyback.</dd></div>
+</dl>
+<h3 class="sub">impulse response</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>IR Folder<span class="rng">21 folders</span></dt><dd>The source collection: stereo systems, radios, telephones, megaphones, two-way radios, televisions, vehicles, boombox, record player, resonators, toys and more, plus Noisecollector IRs.</dd></div>
+<div class="ctl-row"><dt>Impulse Response<span class="rng">288 files</span></dt><dd>Lists only the files in the chosen folder (up to 41, in Noisecollector) and loads one as a full-length stereo filter. Its orange square bypasses the convolution.</dd></div>
+</dl>
+<h3 class="sub">output</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Mix<span class="rng">0 - 100 %</span></dt><dd>Blends the whole processed chain with the dry input. Its orange square bypasses the wet signal.</dd></div>
+<div class="ctl-row"><dt>Output<span class="rng">-24 to +12 dB</span></dt><dd>Final trim after the blend.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">30.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">tape</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Wobble</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Saturate</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Breathe</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Tone</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Noise</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Noise Type</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Dropout</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Width</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">video / ir</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Headswitch</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Head Rate</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Flyback</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Flyback Rate</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">IR Folder</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">IR</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Mix</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Output</span></div>
+</div>
+<p class="bank-note">Slot 6 follows <b>IR Folder</b>: changing the folder swaps in that folder&#x27;s complete list, named by file, so every response is reachable from Push, including all 41 Noisecollector IRs.</p>
+</div>
+<div class="bank">
+<div class="bank-head">tape switches</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Wobble On</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Saturate On</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Breathe On</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Tone On</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Noise On</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Dropout On</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Width On</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Mix On</span></div>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">video switches</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Headswitch On</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Flyback On</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">IR On</span></div>
+<div class="enc empty"><span class="enc-n">4</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">30.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">gentle worn tape</h3><p>Wobble 8-15, Saturate 3-6 dB, Breathe 8-18, Tone 10-25, Noise 2-8, Dropout 0-4, Mix 50-80 %.</p>
+<h3 class="sub">damaged vhs</h3><p>Wobble 35-65, Saturate 8-14 dB, Breathe 25-50, Tone 45-75, Noise 15-35, Dropout 25-60, Headswitch 20-50, Mix 100 %.</p>
+<h3 class="sub">narrow transmission</h3><p>A Radios, Telephones or Two-Way Radios IR, Tone 50-85, Width 0-40, Saturate 6-12 dB, then Noise to taste.</p>
+<h3 class="sub">crt atmosphere</h3><p>Keep the tape controls modest. Raise Flyback slowly, compare NTSC and PAL, then add a little Headswitch and dark Noise.</p>
+<h3 class="sub">gain</h3><p>Each IR is compensated by its measured convolution energy (not its peak), a 20 Hz high-pass clears subsonic build-up, and a safety ceiling holds peaks at about -0.17 dBFS. Saturate and Breathe change level as well as tone, so judge them with their orange squares. For parallel colour, lower Mix rather than pulling Output right down.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">30.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Needs the free <b>HISSTools Impulse Response Toolbox</b> installed: its <code>multiconvolve~</code> does the convolution. If Max reports it missing, install it and restart Max and Live.</li><li>The IR paths point at the <code>IRs</code> folder inside <code>TrackingLines</code>. Keep the project folder where it is; if it moves, rebuild the device so the paths update. A copy in the User Library still reads the IRs from the project folder.</li><li>If Push still shows an older layout after updating, delete the device from the track, drag v1.0 on again and reselect it on Push.</li><li>Behind the Push IR slot sit 21 folder-specific list parameters (IR_01 to IR_21), so they also appear in Live&#x27;s automation chooser.</li><li>No factory presets. Save your own with Live&#x27;s device presets.</li><li>Flyback sits near or above the top of hearing (15.6-15.7 kHz) and some speakers won&#x27;t reproduce it. Raise it carefully.</li><li>Long resonator IRs cost noticeably more CPU than short speaker or telephone ones.</li><li>The LoFi IR pack came with no licence file. Check its redistribution terms before sharing or selling the device with the IRs.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">30.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>source/Tracking Lines.maxpat</code> is the readable patch. <code>node scripts/build_device.mjs</code> rebuilds the <code>.amxd</code>; <code>scripts/analyze_ir_gains.py</code> regenerates the per-IR compensation table (<code>source/ir-gains.json</code>); <code>scripts/build_manual.py</code> builds the Word manual.</p>
+<p>Built with ChatGPT over ten revisions: v0.5 swapped ten algorithmic machine colours for the IR library, v0.6 split the IR picker into Folder and Impulse Response menus, v0.7 added the energy compensation and safety ceiling, v0.8 to v1.0 added the Push 3 banks. v1.0 saves the four banks in the device, which stops Live adding extra automatic ones. Older manuals are kept in <code>Manual/</code>.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="lens.html"><span>previous</span>lens</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-09-21</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

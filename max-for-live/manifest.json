@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "items": [
   {
    "num": "01",
@@ -356,6 +356,18 @@
    "facets": {
     "kind": "Instrument",
     "author": "Claude"
+   }
+  },
+  {
+   "num": "30",
+   "slug": "tracking-lines",
+   "name": "Tracking Lines",
+   "tagline": "Worn tape transport, VHS head switching and CRT whine, finished through a library of 288 lo-fi impulse responses.",
+   "url": "devices/tracking-lines.html",
+   "image": "images/trackinglines.png",
+   "facets": {
+    "kind": "Audio Effect",
+    "author": "ChatGPT"
    }
   }
  ]
