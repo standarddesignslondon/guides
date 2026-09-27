@@ -1,7 +1,7 @@
 {
     "id": "com.simonmorse.filmlook",
     "name": "FilmLook",
-    "version": "1.2.0",
+    "version": "1.4.0",
     "main": "index.html",
     "manifestVersion": 5,
     "host": {

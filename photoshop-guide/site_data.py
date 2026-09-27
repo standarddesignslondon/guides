@@ -1250,7 +1250,7 @@ ITEMS.append({
         "zone, saturation and grain). Each preset carries a note saying what "
         "it rests on and whether it is calibrated. The result goes on a new layer; the photo is untouched.",
     "facts": {
-        "version": "1.2.0",
+        "version": "1.4.0",
         "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
         "plugin id": "com.simonmorse.filmlook",
         "film presets": "71 (45 films), 49 calibrated to frames",
@@ -1269,6 +1269,13 @@ ITEMS.append({
     "controls": [
         {"title": "Top of panel",
          "rows": [
+             ["Section switches", "tick box on each header",
+              "Switch a whole stage on or off: Stock & process, Format & gate, "
+              "Lens & light, Grain, Print condition, Transfer grade, Fringing. "
+              "With Stock & process off the colours pass through unchanged, so "
+              "the panel works as a multi-effect (just grain, just a matte, "
+              "just fringing). Choosing a film switches everything back on; "
+              "switch states are saved with My presets."],
              ["Film", "71 presets",
               "Year, title and variant. Films that change look between "
               "sections have variants: Nosferatu's tints, Kansas and Oz, "
@@ -1285,6 +1292,10 @@ ITEMS.append({
               "Matte blacks out the image outside the format's aspect ratio "
               "and draws the gate corners and edge. Crop trims the canvas to "
               "the aspect ratio after rendering."],
+             ["Shift image X / Y", "pixels",
+              "Moves the photo under the matte before the look is applied: + X "
+              "right, − X left, + Y down, − Y up. Works with Render, Preview and "
+              "Re-render last. Uncovered edges come in black."],
              ["Preview selection", "",
               "Renders only the marquee area, at full resolution and with "
               "the same physical scales, onto a *FilmLook preview* layer."],
@@ -1293,6 +1304,9 @@ ITEMS.append({
               "the current settings (same area if it was a preview)."],
              ["New grain & dust", "",
               "Rolls a new random seed for grain, dust and scratches."],
+             ["Fringe selected layer", "",
+              "Applies only the Fringing settings to the selected layer (for "
+              "example an existing FilmLook render) on a new layer above it."],
          ]},
         {"title": "Stock & process",
          "rows": [
@@ -1350,6 +1364,25 @@ ITEMS.append({
              ["Low-con / smoke", "", "Veiling glare lifting the shadows."],
              ["Anamorphic streaks", "", "Horizontal blue flares from bright points."],
              ["Vignette / Edge softness / Colour fringing", "", "Lens fall-off."],
+         ]},
+        {"title": "Fringing (after the look)",
+         "intro": "Colour errors added after the film look. Characteristic "
+                  "approximations, not measurements of particular lenses. "
+                  "Changing film keeps your fringing settings.",
+         "rows": [
+             ["Fringing preset", "10 presets",
+              "None, early achromat, studio prime, 1960s-70s zoom, "
+              "anamorphic, fast lens wide open, home-movie lens, dye-transfer "
+              "misregistration, two-colour misregistration, everything wrong."],
+             ["Lateral fringing", "0 – 1.5",
+              "Each colour is magnified slightly differently, so fringes grow "
+              "toward the corners."],
+             ["Lateral colours", "Red/cyan or purple/green", "Which colours separate."],
+             ["Horizontal only", "0 – 1", "Anamorphic-style: fringing mainly left and right."],
+             ["Purple halo / width", "", "Axial fringing around bright edges, as from fast lenses wide open."],
+             ["Red / blue record shift X, Y", "±5 thousandths of width",
+              "Moves a whole colour record off register, as on a misregistered "
+              "print. Scales with image size."],
          ]},
         {"title": "Grain, print condition, transfer grade",
          "rows": [

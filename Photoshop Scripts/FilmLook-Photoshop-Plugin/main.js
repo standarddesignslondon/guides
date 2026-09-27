@@ -16,8 +16,10 @@ function deep(o) { return JSON.parse(JSON.stringify(o)); }
 // ------------------------------------------------------------------ state
 
 let opts = E.merge({});
-let current = { film: "", process: "", format: "", lens: "", condition: "", tint: "none", tone: "none" };
+let current = { film: "", process: "", format: "", lens: "", condition: "", tint: "none", tone: "none", fringe: "none" };
 let modified = false;
+const ALL_ON = { process: true, format: true, lens: true, grain: true, condition: true, grade: true, fringe: true };
+let enabled = Object.assign({}, ALL_ON);   // section on/off switches (multi-effect use)
 let lastResult = null;   // { docID, layerID, region }
 
 // ------------------------------------------------------------------ controls
@@ -33,7 +35,7 @@ function gainSet(w, g) { opts.gradeGain = [1 + w * 0.08, 1 + g * 0.06, 1 - w * 0
 const optList = (obj) => Object.keys(obj).map((k) => [k, obj[k].label]);
 
 const SECTIONS = [
-    { title: "Stock & process", open: true, items: [
+    { key: "process", title: "Stock & process", open: true, items: [
         { kind: "select", id: "process", label: "Stock", options: () => [["", "(custom)"]].concat(optList(P.PROCESSES)), block: "process" },
         { kind: "select", id: "bwFilter", label: "B&W filter", key: "bwFilter", options: () => [["none", "None"], ["yellow", "Yellow (K2 / Aero 1)"], ["deepyellow", "Deep yellow (G)"], ["orange", "Orange (21 / 23A)"], ["red", "Red (25)"], ["green", "Green (X1)"], ["blue", "Blue"]] },
         { kind: "select", id: "tone", label: "Toning (darks)", options: () => optList(P.TONES), block: "tone" },
@@ -54,7 +56,7 @@ const SECTIONS = [
         { kind: "slider", id: "bleach", label: "Silver retention", key: "bleach", min: 0, max: 1, step: 0.01 },
         { kind: "slider", id: "fadeAmt", label: "Dye fade", get: fadeGet, set: fadeSet, min: 0, max: 1, step: 0.01 }
     ], hint: "Printer lights are in printer points (about 1/12 stop each); + gives more of that colour. Colour separation 1 = the stock as made. Flashing lifts shadows and mutes colour, as on The Long Goodbye. Silver retention = bleach bypass." },
-    { title: "Format & gate", open: true, items: [
+    { key: "format", title: "Format & gate", open: true, items: [
         { kind: "select", id: "format", label: "Gauge / format", options: () => [["", "(custom)"]].concat(optList(P.FORMATS)), block: "format" },
         { kind: "slider", id: "aspect", label: "Aspect ratio", key: "aspect", min: 1.0, max: 2.8, step: 0.01 },
         { kind: "slider", id: "gateMm", label: "Frame width (mm)", key: "gateMm", min: 3, max: 60, step: 0.1 },
@@ -65,7 +67,7 @@ const SECTIONS = [
         { kind: "slider", id: "irisSize", label: "Iris size", key: "irisSize", min: 0.4, max: 1.8, step: 0.01 },
         { kind: "slider", id: "irisSoft", label: "Iris softness", key: "irisSoft", min: 0.02, max: 1, step: 0.01 }
     ], hint: "Grain, halation and softness scale with the frame width in mm, so Super 8 is coarse and 70mm is fine at any image size. Gate corners and matte show when Frame is set to matte or crop. The iris is the silent-era oval or circular vignette." },
-    { title: "Lens & light", open: false, items: [
+    { key: "lens", title: "Lens & light", open: false, items: [
         { kind: "select", id: "lens", label: "Lens", options: () => [["", "(custom)"]].concat(optList(P.LENSES)), block: "lens" },
         { kind: "slider", id: "halation", label: "Halation", key: "halation", min: 0, max: 1, step: 0.01 },
         { kind: "slider", id: "diffusion", label: "Diffusion / glow", key: "diffusion", min: 0, max: 1, step: 0.01 },
@@ -75,12 +77,12 @@ const SECTIONS = [
         { kind: "slider", id: "edgeSoft", label: "Edge softness", key: "edgeSoft", min: 0, max: 1, step: 0.01 },
         { kind: "slider", id: "ca", label: "Colour fringing", key: "ca", min: 0, max: 1, step: 0.01 }
     ] },
-    { title: "Grain", open: false, items: [
+    { key: "grain", title: "Grain", open: false, items: [
         { kind: "slider", id: "grain", label: "Grain amount", key: "grain", min: 0, max: 2.5, step: 0.01 },
         { kind: "slider", id: "grainClumpMm", label: "Grain size (µm)", key: "grainClumpMm", min: 0.003, max: 0.035, step: 0.0005, scale: 1000 },
         { kind: "slider", id: "grainColor", label: "Colour grain", key: "grainColor", min: 0, max: 1, step: 0.01 }
     ], hint: "Grain is added to the negative's exposure, so the curve shapes it: strongest in mid-tones, quiet in deep shadows and bright highlights." },
-    { title: "Print condition", open: false, items: [
+    { key: "condition", title: "Print condition", open: false, items: [
         { kind: "select", id: "condition", label: "Condition", options: () => [["", "(custom)"]].concat(optList(P.CONDITIONS)), block: "condition" },
         { kind: "slider", id: "generations", label: "Duplicate generations", key: "generations", min: 0, max: 4, step: 0.25 },
         { kind: "slider", id: "dustWhite", label: "Dust (white)", key: "dustWhite", min: 0, max: 1, step: 0.01 },
@@ -89,13 +91,25 @@ const SECTIONS = [
         { kind: "slider", id: "flicker", label: "Uneven density", key: "flicker", min: 0, max: 1, step: 0.01 },
         { kind: "slider", id: "stains", label: "Stains / mould", key: "stains", min: 0, max: 1, step: 0.01 }
     ] },
-    { title: "Transfer grade", open: false, items: [
+    { key: "grade", title: "Transfer grade", open: false, items: [
         { kind: "slider", id: "gradeSat", label: "Saturation", key: "gradeSat", min: 0, max: 1.8, step: 0.01 },
         { kind: "slider", id: "gradeBlack", label: "Black lift / crush", key: "gradeBlack", min: -0.1, max: 0.2, step: 0.002 },
         { kind: "slider", id: "gradeWhite", label: "White level", key: "gradeWhite", min: 0.5, max: 1.1, step: 0.005 },
         { kind: "slider", id: "warmth", label: "Warm / cool", get: warmGet, set: (v) => gainSet(v, greenGet()), min: -2, max: 2, step: 0.05 },
         { kind: "slider", id: "green", label: "Green / magenta", get: greenGet, set: (v) => gainSet(warmGet(), v), min: -2, max: 2, step: 0.05 }
-    ], hint: "A final video-style grade, for matching how a modern restoration looks (Blade Runner's cooler Final Cut, the 2014 yellow Good, Bad and Ugly)." }
+    ], hint: "A final video-style grade, for matching how a modern restoration looks (Blade Runner's cooler Final Cut, the 2014 yellow Good, Bad and Ugly)." },
+    { key: "fringe", title: "Fringing (after the look)", open: false, items: [
+        { kind: "select", id: "fringe", label: "Fringing preset", options: () => optList(P.FRINGES), block: "fringe" },
+        { kind: "slider", id: "fringeLat", label: "Lateral fringing", key: "fringeLat", min: 0, max: 1.5, step: 0.01 },
+        { kind: "select", id: "fringeMode", label: "Lateral colours", key: "fringeMode", options: () => [["rc", "Red/cyan + blue/yellow"], ["pg", "Purple/green"]] },
+        { kind: "slider", id: "fringeAniso", label: "Horizontal only", key: "fringeAniso", min: 0, max: 1, step: 0.01 },
+        { kind: "slider", id: "fringeAxial", label: "Purple halo (axial)", key: "fringeAxial", min: 0, max: 1, step: 0.01 },
+        { kind: "slider", id: "fringeAxialR", label: "Halo width", key: "fringeAxialR", min: 0.0005, max: 0.012, step: 0.0005, scale: 1000 },
+        { kind: "slider", id: "fringeRx", label: "Red record shift X", key: "fringeRx", min: -5, max: 5, step: 0.05 },
+        { kind: "slider", id: "fringeRy", label: "Red record shift Y", key: "fringeRy", min: -5, max: 5, step: 0.05 },
+        { kind: "slider", id: "fringeBx", label: "Blue record shift X", key: "fringeBx", min: -5, max: 5, step: 0.05 },
+        { kind: "slider", id: "fringeBy", label: "Blue record shift Y", key: "fringeBy", min: -5, max: 5, step: 0.05 }
+    ], hint: "Colour errors added after the look: lateral fringing grows toward the corners (lens), the purple halo sits around bright edges (fast lenses wide open), record shifts move a whole colour layer off register (print misregistration; units are thousandths of the image width). Included in Render when set; use Fringe selected layer to add it to an existing layer instead. Presets are characteristic approximations, not measurements of particular lenses." }
 ];
 
 const ITEMS = {};
@@ -124,7 +138,14 @@ function buildUI() {
     for (const sec of SECTIONS) {
         const h = document.createElement("h2");
         const tw = document.createElement("span"); tw.className = "tw"; tw.textContent = sec.open ? "▾" : "▸";
-        h.appendChild(tw); h.appendChild(document.createTextNode(sec.title));
+        const cb = document.createElement("input"); cb.type = "checkbox"; cb.id = "en_" + sec.key; cb.checked = true;
+        cb.title = "Switch this stage on or off";
+        cb.style.marginRight = "6px";
+        cb.addEventListener("click", (e) => e.stopPropagation());
+        cb.addEventListener("change", () => { enabled[sec.key] = cb.checked; markModified(); showOff(); saveState(); });
+        h.appendChild(cb); h.appendChild(tw); h.appendChild(document.createTextNode(sec.title));
+        const off = document.createElement("span"); off.id = "off_" + sec.key; off.className = "offtag"; off.textContent = "  off";
+        h.appendChild(off);
         const body = document.createElement("div");
         body.style.display = sec.open ? "block" : "none";
         h.addEventListener("click", () => {
@@ -188,7 +209,16 @@ function syncUI() {
         }
     }
     $("film").value = current.film || "";
+    showOff();
     showNote();
+}
+
+function showOff() {
+    for (const k in ALL_ON) {
+        const cb = $("en_" + k), t = $("off_" + k);
+        if (cb) cb.checked = enabled[k] !== false;
+        if (t) t.style.display = enabled[k] === false ? "inline" : "none";
+    }
 }
 
 function showNote() {
@@ -209,10 +239,15 @@ function applyFilm(id) {
     const f = P.FILMS.find((x) => x.id === id);
     if (!f) { current.film = ""; modified = true; syncUI(); saveState(); return; }
     const keepFrame = opts.frame;
+    const keepFringe = {};
+    for (const k in P.FRINGES.none.p) keepFringe[k] = opts[k];
+    keepFringe.fringeAxialR = opts.fringeAxialR;
     opts = E.merge(P.assemble(f));
     opts.frame = keepFrame;
+    Object.assign(opts, keepFringe);
+    enabled = Object.assign({}, ALL_ON);
     current = { film: f.id, process: f.process, format: f.format, lens: f.lens, condition: f.condition,
-                tint: f.tint || "none", tone: f.tone || "none" };
+                tint: f.tint || "none", tone: f.tone || "none", fringe: current.fringe || "none" };
     modified = false;
     syncUI(); saveState();
 }
@@ -223,6 +258,7 @@ function onSelect(it, value) {
         if (value) {
             if (it.block === "tint") { opts.tint = P.TINTS[value].d.slice(); opts.tintAmount = value === "none" ? 0 : 1; }
             else if (it.block === "tone") { opts.tone = P.TONES[value].v.slice(); opts.toneAmount = value === "none" ? 0 : 1; }
+            else if (it.block === "fringe") { Object.assign(opts, deep(P.FRINGES[value].p)); }
             else {
                 const table = { process: P.PROCESSES, format: P.FORMATS, lens: P.LENSES, condition: P.CONDITIONS }[it.block];
                 const p = deep(table[value].p);
@@ -246,15 +282,19 @@ function onSelect(it, value) {
 
 function saveState() {
     try { localStorage.setItem("filmlook.state", JSON.stringify({ opts, current, modified,
-        strength: $("strength").value, source: $("source").value, frame: $("frame").value })); } catch (e) {}
+        strength: $("strength").value, source: $("source").value, frame: $("frame").value,
+        shiftX: $("shiftX").value, shiftY: $("shiftY").value, enabled })); } catch (e) {}
 }
 function loadState() {
     try {
         const s = JSON.parse(localStorage.getItem("filmlook.state") || "null");
         if (!s) return false;
         opts = E.merge(s.opts); current = s.current; modified = s.modified;
+        if (!current.fringe) current.fringe = "none";
+        enabled = Object.assign({}, ALL_ON, s.enabled || {});
         $("strength").value = s.strength || "100"; $("strengthVal").textContent = $("strength").value;
         $("source").value = s.source || "merged"; $("frame").value = s.frame || "none";
+        $("shiftX").value = s.shiftX || "0"; $("shiftY").value = s.shiftY || "0";
         return true;
     } catch (e) { return false; }
 }
@@ -300,7 +340,9 @@ async function render(mode) {
     const frame = $("frame").value;
     const source = $("source").value;
     const strength = parseInt($("strength").value, 10);
-    o.frame = frame === "none" ? "none" : "matte";   // crop = matte, then trim the canvas
+    const shift = { x: parseFloat($("shiftX").value) || 0, y: parseFloat($("shiftY").value) || 0 };
+    applySwitches(o);
+    o.frame = (frame === "none" || !enabled.format) ? "none" : "matte";   // crop = matte, then trim the canvas
     o.amount = 1;
 
     await core.executeAsModal(async (ctx) => {
@@ -335,17 +377,45 @@ async function render(mode) {
                 for (const l of allLayers(doc.layers)) if (l.name.indexOf("FilmLook") === 0 && l.visible) { l.visible = false; hidden.push(l); }
             }
 
+            // image shift: read the area that will land inside the target after moving
+            const dx = Math.round(shift.x), dy = Math.round(shift.y);
+            const shifting = dx !== 0 || dy !== 0;
             const req = { documentID: doc.id, componentSize: bits, colorSpace: "RGB" };
             if (src) req.layerID = src.id;
-            if (region) req.sourceBounds = region;
+            let target = region;
+            if (shifting) {
+                if (!target) target = { left: 0, top: 0, right: docW, bottom: docH };
+                const s = { left: Math.max(0, target.left - dx), top: Math.max(0, target.top - dy),
+                            right: Math.min(docW, target.right - dx), bottom: Math.min(docH, target.bottom - dy) };
+                if (s.right - s.left < 1 || s.bottom - s.top < 1) throw new Error("The shift moves the image completely out of the frame.");
+                req.sourceBounds = s;
+            } else if (region) req.sourceBounds = region;
             const got = await imaging.getPixels(req);
             const img = got.imageData;
-            const W = img.width, H = img.height, comps = img.components;
-            const sb = got.sourceBounds;
-            const data = await img.getData({ chunky: true });
+            const gW = img.width, gH = img.height, comps = img.components;
+            const gb = got.sourceBounds;
+            let data = await img.getData({ chunky: true });
             img.dispose();
             for (const l of hidden) l.visible = true;
             hidden.length = 0;
+
+            let W = gW, H = gH, sb = gb;
+            if (shifting) {
+                // place the read pixels, moved by (dx, dy), into a black target-sized buffer
+                W = target.right - target.left; H = target.bottom - target.top;
+                sb = { left: target.left, top: target.top };
+                const MAXV = bits === 16 ? 32768 : 255;
+                const buf = bits === 16 ? new Uint16Array(W * H * comps) : new Uint8Array(W * H * comps);
+                if (comps === 4) for (let i = 3; i < buf.length; i += 4) buf[i] = MAXV;
+                const ox = gb.left + dx - target.left, oy = gb.top + dy - target.top;
+                for (let y = 0; y < gH; y++) {
+                    const ty = y + oy; if (ty < 0 || ty >= H) continue;
+                    const x0 = Math.max(0, -ox), x1 = Math.min(gW, W - ox);
+                    if (x1 <= x0) continue;
+                    buf.set(data.subarray((y * gW + x0) * comps, (y * gW + x1) * comps), (ty * W + x0 + ox) * comps);
+                }
+                data = buf;
+            }
 
             const out = E.render(data, W, H, comps, o, { docW, docH, offX: sb.left, offY: sb.top });
 
@@ -369,7 +439,7 @@ async function render(mode) {
             outImg.dispose();
             if (strength < 100) await setOpacity(doc.id, dst.id, strength);
 
-            if (frame === "crop" && !region) {
+            if (frame === "crop" && !region && enabled.format) {
                 const ar = o.aspect, dar = docW / docH;
                 let nw = docW, nh = docH;
                 if (ar > dar) nh = Math.round(docW / ar); else nw = Math.round(docH * ar);
@@ -388,17 +458,74 @@ async function render(mode) {
     return info + ", " + ((Date.now() - t0) / 1000).toFixed(1) + "s";
 }
 
+// Section switches: a switched-off stage is neutralised before the engine runs.
+function applySwitches(o) {
+    const zero = (keys) => { for (const k of keys) o[k] = 0; };
+    if (!enabled.process) o.bypassProcess = true;
+    if (!enabled.format) { o.lpmm = 1e6; o.iris = 0; }
+    if (!enabled.lens) zero(["halation", "diffusion", "lowcon", "streak", "vignette", "edgeSoft", "ca"]);
+    if (!enabled.grain) o.grain = 0;
+    if (!enabled.condition) zero(["generations", "dustWhite", "dustBlack", "scratches", "flicker", "stains"]);
+    if (!enabled.grade) { o.gradeSat = 1; o.gradeBlack = 0; o.gradeWhite = 1; o.gradeGain = [1, 1, 1]; o.gradeLift = [0, 0, 0]; }
+    if (!enabled.fringe) zero(["fringeLat", "fringeAxial", "fringeRx", "fringeRy", "fringeBx", "fringeBy"]);
+    return o;
+}
+
+async function fringeLayer() {
+    const t0 = Date.now();
+    const o = deep(opts);
+    if (!E.hasFringe(o)) throw new Error("Set some fringing first (choose a fringing preset or move a slider).");
+    let info = "";
+    await core.executeAsModal(async (ctx) => {
+        const doc = app.activeDocument;
+        const suspensionID = await ctx.hostControl.suspendHistory({ documentID: doc.id, name: "FilmLook fringing" });
+        try {
+            if (doc.mode !== constants.DocumentMode.RGB) throw new Error("FilmLook works on RGB documents.");
+            const bits = doc.bitsPerChannel === constants.BitsPerChannelType.SIXTEEN ? 16 :
+                         (doc.bitsPerChannel === constants.BitsPerChannelType.THIRTYTWO ? 32 : 8);
+            if (bits === 32) throw new Error("32-bit documents aren't supported; convert to 16-bit first.");
+            const src = doc.activeLayers[0];
+            if (!src || src.kind === constants.LayerKind.GROUP) throw new Error("Select a pixel layer (for example a FilmLook render).");
+            const got = await imaging.getPixels({ documentID: doc.id, layerID: src.id, componentSize: bits, colorSpace: "RGB" });
+            const img = got.imageData;
+            const W = img.width, H = img.height, comps = img.components;
+            const sb = got.sourceBounds;
+            const data = await img.getData({ chunky: true });
+            img.dispose();
+            const MAXV = bits === 16 ? 32768 : 255;
+            let buf = data;
+            if (comps !== 4) {
+                buf = bits === 16 ? new Uint16Array(W * H * 4) : new Uint8Array(W * H * 4);
+                for (let i = 0, j = 0; i < W * H; i++, j += comps) { buf[i * 4] = data[j]; buf[i * 4 + 1] = data[j + 1]; buf[i * 4 + 2] = data[j + 2]; buf[i * 4 + 3] = MAXV; }
+            }
+            E.fringe(buf, W, H, o, { docW: Math.round(doc.width), docH: Math.round(doc.height), offX: sb.left, offY: sb.top });
+            await batchPlay([
+                { _obj: "select", _target: [{ _ref: "layer", _id: src.id }], makeVisible: false },
+                { _obj: "make", _target: [{ _ref: "layer" }], using: { _obj: "layer", name: "FilmLook fringing · " + src.name } }
+            ], {});
+            const dst = doc.activeLayers[0];
+            const outImg = await imaging.createImageDataFromBuffer(buf, { width: W, height: H, components: 4, colorSpace: "RGB", chunky: true });
+            await imaging.putPixels({ documentID: doc.id, layerID: dst.id, imageData: outImg, targetBounds: { left: sb.left, top: sb.top }, replace: true });
+            outImg.dispose();
+            info = W + "×" + H;
+        } finally {
+            await ctx.hostControl.resumeHistory(suspensionID);
+        }
+    }, { commandName: "FilmLook fringing" });
+    return info + ", " + ((Date.now() - t0) / 1000).toFixed(1) + "s";
+}
+
 async function run(mode) {
     if (app.documents.length === 0) { setStatus("Open a document first.", true); return; }
-    for (const b of ["renderBtn", "previewBtn", "updateBtn"]) $(b).disabled = true;
-    setStatus(mode === "preview" ? "Rendering preview…" : "Rendering…");
+    for (const b of ["renderBtn", "previewBtn", "updateBtn", "fringeBtn"]) $(b).disabled = true;
+    setStatus(mode === "preview" ? "Rendering preview…" : (mode === "fringe" ? "Adding fringing…" : "Rendering…"));
     try {
-        const r = await render(mode);
+        const r = mode === "fringe" ? await fringeLayer() : await render(mode);
         setStatus("Done: " + r);
     } catch (e) {
         setStatus("Error: " + (e.message || e), true);
     } finally {
-        for (const b of ["renderBtn", "previewBtn", "updateBtn"]) $(b).disabled = false;
+        for (const b of ["renderBtn", "previewBtn", "updateBtn", "fringeBtn"]) $(b).disabled = false;
     }
 }
 
@@ -432,6 +559,7 @@ $("presetSel").addEventListener("change", () => {
     if (!name || !presets[name]) return;
     const s = presets[name];
     opts = E.merge(s.opts); current = s.current; modified = true;
+    enabled = Object.assign({}, ALL_ON, s.enabled || {});
     syncUI(); saveState();
     $("presetName").value = name;
     setStatus("Loaded preset “" + name + "”.");
@@ -439,7 +567,7 @@ $("presetSel").addEventListener("change", () => {
 $("presetSaveBtn").addEventListener("click", async () => {
     let name = $("presetName").value.trim() || $("presetSel").value;
     if (!name) { setStatus("Type a name for the preset first.", true); return; }
-    presets[name] = { opts: deep(opts), current: deep(current) };
+    presets[name] = { opts: deep(opts), current: deep(current), enabled: deep(enabled) };
     try { await storePresets(); refreshPresetList(name); setStatus("Saved preset “" + name + "”."); }
     catch (e) { setStatus("Could not save preset: " + (e.message || e), true); }
 });
@@ -458,6 +586,9 @@ $("film").addEventListener("change", () => applyFilm($("film").value));
 $("renderBtn").addEventListener("click", () => run("full"));
 $("previewBtn").addEventListener("click", () => run("preview"));
 $("updateBtn").addEventListener("click", () => run("update"));
+$("fringeBtn").addEventListener("click", () => run("fringe"));
+$("shiftX").addEventListener("change", saveState);
+$("shiftY").addEventListener("change", saveState);
 $("seedBtn").addEventListener("click", () => { opts.seed = (Math.random() * 1e6) | 0; saveState(); setStatus("New grain and dust pattern. Press Render or Re-render last."); });
 $("source").addEventListener("change", saveState);
 $("frame").addEventListener("change", saveState);

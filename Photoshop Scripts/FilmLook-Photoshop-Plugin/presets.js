@@ -201,6 +201,22 @@ const TONES = {
     green:    { label: "Green (vanadium)", v: [1.25, 0.82, 1.0] }
 };
 
+// ---------------------------------------------------------------- colour fringing
+// Characteristic approximations of lens and print colour errors, applied after
+// the look. Not measurements of specific lenses.
+const FRINGES = {
+    none:       { label: "None", p: { fringeLat: 0, fringeMode: "rc", fringeAniso: 0, fringeAxial: 0, fringeRx: 0, fringeRy: 0, fringeBx: 0, fringeBy: 0 } },
+    early:      { label: "Early achromat (1910s-20s)", p: { fringeLat: 0.35, fringeMode: "rc", fringeAniso: 0, fringeAxial: 0.25, fringeAxialR: 0.004, fringeRx: 0, fringeRy: 0, fringeBx: 0, fringeBy: 0 } },
+    studio:     { label: "Studio prime (1930s-60s), slight", p: { fringeLat: 0.12, fringeMode: "rc", fringeAniso: 0, fringeAxial: 0.08, fringeAxialR: 0.002, fringeRx: 0, fringeRy: 0, fringeBx: 0, fringeBy: 0 } },
+    zoom:       { label: "1960s-70s zoom lens", p: { fringeLat: 0.55, fringeMode: "rc", fringeAniso: 0, fringeAxial: 0.15, fringeAxialR: 0.003, fringeRx: 0, fringeRy: 0, fringeBx: 0, fringeBy: 0 } },
+    anamorphic: { label: "Anamorphic (horizontal fringing)", p: { fringeLat: 0.5, fringeMode: "rc", fringeAniso: 0.8, fringeAxial: 0.15, fringeAxialR: 0.003, fringeRx: 0, fringeRy: 0, fringeBx: 0, fringeBy: 0 } },
+    wideopen:   { label: "Fast lens wide open (purple fringing)", p: { fringeLat: 0.1, fringeMode: "pg", fringeAniso: 0, fringeAxial: 0.6, fringeAxialR: 0.0035, fringeRx: 0, fringeRy: 0, fringeBx: 0, fringeBy: 0 } },
+    home:       { label: "Home-movie lens (8mm / Super 8)", p: { fringeLat: 0.75, fringeMode: "rc", fringeAniso: 0, fringeAxial: 0.3, fringeAxialR: 0.005, fringeRx: 0, fringeRy: 0, fringeBx: 0, fringeBy: 0 } },
+    misreg3:    { label: "Dye-transfer print misregistration", p: { fringeLat: 0, fringeMode: "rc", fringeAniso: 0, fringeAxial: 0, fringeRx: 1.2, fringeRy: 0.3, fringeBx: -0.8, fringeBy: 0.6 } },
+    misreg2:    { label: "Two-colour print misregistration", p: { fringeLat: 0, fringeMode: "rc", fringeAniso: 0, fringeAxial: 0, fringeRx: 2.2, fringeRy: 0.9, fringeBx: 0, fringeBy: 0 } },
+    broken:     { label: "Everything wrong (extreme)", p: { fringeLat: 1.2, fringeMode: "rc", fringeAniso: 0.2, fringeAxial: 0.7, fringeAxialR: 0.006, fringeRx: 2.5, fringeRy: -1.2, fringeBx: -1.8, fringeBy: 1.5 } }
+};
+
 // ---------------------------------------------------------------- film presets
 // Each: year, title, variant, process/format/lens/condition keys, tint/tone keys,
 // p = overrides, note = what the preset is based on (sourced research).
@@ -228,7 +244,7 @@ function assemble(sel) {
     return out;
 }
 
-const api = { PROCESSES, FORMATS, LENSES, CONDITIONS, TINTS, TONES, FILMS, film, assemble };
+const api = { PROCESSES, FORMATS, LENSES, CONDITIONS, TINTS, TONES, FRINGES, FILMS, film, assemble };
 if (typeof module !== "undefined" && module.exports) module.exports = api;
 else root.FilmPresets = api;
 

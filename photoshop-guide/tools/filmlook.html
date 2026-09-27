@@ -19,7 +19,7 @@
   <div class="block-label"><span class="bl-num">09.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">A small physical model of photochemical film rather than a stack of grading tricks. Light goes through the lens (halation, diffusion, smoke, anamorphic streaks, vignette, fringing), exposes the negative records of the chosen stock (spectral sensitivity, so orthochromatic stock turns red lips black), is printed through a characteristic curve with grain added in exposure, and lands on print dyes with their real impurities, printer lights, flashing, push processing, silver retention, dye fade, tinting and toning. Grain, softness and halation are sized in millimetres on the film frame, so Super 8 is coarse and 70mm is fine at any image size. Film presets combine those building blocks with settings from sourced research (American Cinematographer, restoration notes, the DPs&#x27; own accounts), then calibrated against about 770 Shotdeck frames of the current transfers (contrast, black and white levels, colour casts by tonal zone, saturation and grain). Each preset carries a note saying what it rests on and whether it is calibrated. The result goes on a new layer; the photo is untouched.</p>
-    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.2.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+, RGB, 8 or 16-bit</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.filmlook</dd></div><div class="fact"><dt>film presets</dt><dd>71 (45 films), 49 calibrated to frames</dd></div><div class="fact"><dt>folder</dt><dd>FilmLook-Photoshop-Plugin</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.4.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+, RGB, 8 or 16-bit</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.filmlook</dd></div><div class="fact"><dt>film presets</dt><dd>71 (45 films), 49 calibrated to frames</dd></div><div class="fact"><dt>folder</dt><dd>FilmLook-Photoshop-Plugin</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -37,13 +37,16 @@
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">top of panel</h3>
 <dl class="ctl">
+<div class="ctl-row"><dt>Section switches<span class="rng">tick box on each header</span></dt><dd>Switch a whole stage on or off: Stock &amp; process, Format &amp; gate, Lens &amp; light, Grain, Print condition, Transfer grade, Fringing. With Stock &amp; process off the colours pass through unchanged, so the panel works as a multi-effect (just grain, just a matte, just fringing). Choosing a film switches everything back on; switch states are saved with My presets.</dd></div>
 <div class="ctl-row"><dt>Film<span class="rng">71 presets</span></dt><dd>Year, title and variant. Films that change look between sections have variants: Nosferatu&#x27;s tints, Kansas and Oz, Tarkovsky&#x27;s monochrome and colour, the Long Goodbye flash levels.</dd></div>
 <div class="ctl-row"><dt>Strength<span class="rng">0 – 100</span></dt><dd>Opacity of the result layer. Also updates the last render live.</dd></div>
 <div class="ctl-row"><dt>Source<span class="rng">Whole image / Selected layer</span></dt><dd>Whole image uses the merged picture (previous FilmLook layers are hidden while it reads). Selected layer puts the result directly above that layer.</dd></div>
 <div class="ctl-row"><dt>Frame<span class="rng">No change / Black matte / Crop canvas</span></dt><dd>Matte blacks out the image outside the format&#x27;s aspect ratio and draws the gate corners and edge. Crop trims the canvas to the aspect ratio after rendering.</dd></div>
+<div class="ctl-row"><dt>Shift image X / Y<span class="rng">pixels</span></dt><dd>Moves the photo under the matte before the look is applied: + X right, − X left, + Y down, − Y up. Works with Render, Preview and Re-render last. Uncovered edges come in black.</dd></div>
 <div class="ctl-row"><dt>Preview selection</dt><dd>Renders only the marquee area, at full resolution and with the same physical scales, onto a <i>FilmLook preview</i> layer.</dd></div>
 <div class="ctl-row"><dt>Re-render last</dt><dd>Deletes the previous FilmLook layer and renders again with the current settings (same area if it was a preview).</dd></div>
 <div class="ctl-row"><dt>New grain &amp; dust</dt><dd>Rolls a new random seed for grain, dust and scratches.</dd></div>
+<div class="ctl-row"><dt>Fringe selected layer</dt><dd>Applies only the Fringing settings to the selected layer (for example an existing FilmLook render) on a new layer above it.</dd></div>
 </dl>
 <h3 class="sub">stock &amp; process</h3>
 <dl class="ctl">
@@ -77,6 +80,16 @@
 <div class="ctl-row"><dt>Low-con / smoke</dt><dd>Veiling glare lifting the shadows.</dd></div>
 <div class="ctl-row"><dt>Anamorphic streaks</dt><dd>Horizontal blue flares from bright points.</dd></div>
 <div class="ctl-row"><dt>Vignette / Edge softness / Colour fringing</dt><dd>Lens fall-off.</dd></div>
+</dl>
+<h3 class="sub">fringing (after the look)</h3>
+<p class="lead">Colour errors added after the film look. Characteristic approximations, not measurements of particular lenses. Changing film keeps your fringing settings.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Fringing preset<span class="rng">10 presets</span></dt><dd>None, early achromat, studio prime, 1960s-70s zoom, anamorphic, fast lens wide open, home-movie lens, dye-transfer misregistration, two-colour misregistration, everything wrong.</dd></div>
+<div class="ctl-row"><dt>Lateral fringing<span class="rng">0 – 1.5</span></dt><dd>Each colour is magnified slightly differently, so fringes grow toward the corners.</dd></div>
+<div class="ctl-row"><dt>Lateral colours<span class="rng">Red/cyan or purple/green</span></dt><dd>Which colours separate.</dd></div>
+<div class="ctl-row"><dt>Horizontal only<span class="rng">0 – 1</span></dt><dd>Anamorphic-style: fringing mainly left and right.</dd></div>
+<div class="ctl-row"><dt>Purple halo / width</dt><dd>Axial fringing around bright edges, as from fast lenses wide open.</dd></div>
+<div class="ctl-row"><dt>Red / blue record shift X, Y<span class="rng">±5 thousandths of width</span></dt><dd>Moves a whole colour record off register, as on a misregistered print. Scales with image size.</dd></div>
 </dl>
 <h3 class="sub">grain, print condition, transfer grade</h3>
 <dl class="ctl">

@@ -18,6 +18,7 @@
 const DEFAULTS = {
     // exposure & process
     exposure: 0,            // stops
+    bypassProcess: false,   // true = no stock/print model (other stages still apply)
     mode: "color",          // "color" | "bw"
     bwWeights: [0.29, 0.51, 0.20],
     bwFilter: "none",
@@ -86,6 +87,15 @@ const DEFAULTS = {
     iris: 0,                // 0..1 oval iris / soft matte darkening toward the edges
     irisSize: 1.0,          // 0.5..1.6 size of the iris opening (1 = touches frame edges)
     irisSoft: 0.35,         // 0.02..1 softness of the iris edge
+
+    // fringing: colour errors applied after the look (display space)
+    fringeLat: 0,           // 0..1 lateral CA (magnification differs per colour, grows to the corners)
+    fringeMode: "rc",       // "rc" red/cyan + blue/yellow, "pg" purple/green
+    fringeAniso: 0,         // 0 = round, 1 = horizontal only (anamorphic)
+    fringeAxial: 0,         // 0..1 axial / purple fringing around bright edges
+    fringeAxialR: 0.003,    // halo radius, fraction of image width
+    fringeRx: 0, fringeRy: 0,   // red record misregistration, per mille of width (+ = right / down)
+    fringeBx: 0, fringeBy: 0,   // blue record misregistration
 
     amount: 1,              // mix with the original
     seed: 1
@@ -329,7 +339,8 @@ function render(src, W, H, comps, opts, ctx) {
 
     // ---- decode to linear (B&W: collapse to the stock's spectral response now,
     //      and let G and B alias R so every later stage runs once)
-    const isBW = o.mode === "bw";
+    const byP = !!o.bypassProcess;          // Stock & process switched off: linear pass-through
+    const isBW = o.mode === "bw" && !byP;
     const expo = Math.pow(2, o.exposure);
     let R, G, B, bwW = null;
     if (isBW) {
@@ -444,7 +455,8 @@ function render(src, W, H, comps, opts, ctx) {
 
     // ---- process parameters
     let sens = o.sens, dye = o.dye;
-    if (o.mode === "bw") {
+    if (byP) { sens = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]; dye = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]; }
+    else if (o.mode === "bw") {
         const t3 = [1 / 3, 1 / 3, 1 / 3];
         sens = [t3, t3, t3];
         const tA = o.toneAmount;
@@ -453,7 +465,7 @@ function render(src, W, H, comps, opts, ctx) {
     }
     // apply dye fade, then grey-balance columns so equal records print neutral
     // (before toning / fade effects are reintroduced)
-    const dyeF = dye.map((row, k) => row.map((v) => v * o.fade[k]));
+    const dyeF = byP ? dye : dye.map((row, k) => row.map((v) => v * o.fade[k]));
     const colN = [0, 1, 2].map((c) => dye[0][c] + dye[1][c] + dye[2][c]);
     let tonemean = 1;
     if (o.mode === "bw") tonemean = (colN[0] + colN[1] + colN[2]) / 3;
@@ -461,6 +473,7 @@ function render(src, W, H, comps, opts, ctx) {
 
     const push = o.push;
     const gamma = o.contrast * (1 + 0.14 * push) * (1 + 0.06 * gens);
+    // (unused when byP; the pass-through keeps exposure unchanged)
     const dmin = o.dmin + Math.max(0, push) * 0.05;
     const dmax = o.dmax;
     const range = dmax - dmin;
@@ -470,9 +483,9 @@ function render(src, W, H, comps, opts, ctx) {
     // anchor: scene 0.18 prints at D - dmin = 0.745 (display ~0.18)
     const p = clamp(0.745 / range, 0.02, 0.98);
     const x0 = Math.log10(0.18) + Math.log(p / (1 - p)) / k;
-    const sat = o.saturation;
-    const flashAmt = o.flash * 0.18;
-    const timingX = o.timing.map((t) => t * 0.025);   // + = more of that colour (less of its dye)
+    const sat = byP ? 1 : o.saturation;
+    const flashAmt = byP ? 0 : o.flash * 0.18;
+    const timingX = byP ? [0, 0, 0] : o.timing.map((t) => t * 0.025);   // + = more of that colour (less of its dye)
 
     // ---- to log exposure records (in place: R,G,B become x0,x1,x2)
     const sgl = small ? small.glow : null;
@@ -562,10 +575,10 @@ function render(src, W, H, comps, opts, ctx) {
     }
 
     // ---- curve + dyes -> display
-    const tintD = [o.tint[0] * o.tintAmount, o.tint[1] * o.tintAmount, o.tint[2] * o.tintAmount];
-    const bleach = o.bleach;
+    const tintD = byP ? [0, 0, 0] : [o.tint[0] * o.tintAmount, o.tint[1] * o.tintAmount, o.tint[2] * o.tintAmount];
+    const bleach = byP ? 0 : o.bleach;
     // reference density of print white (records at dmin), for normalisation
-    const wD = [0, 1, 2].map((c) => dmin * (dyeN[0][c] + dyeN[1][c] + dyeN[2][c]) + bleach * dmin * 0.8);
+    const wD = byP ? [0, 0, 0] : [0, 1, 2].map((c) => dmin * (dyeN[0][c] + dyeN[1][c] + dyeN[2][c]) + bleach * dmin * 0.8);
     const lift = o.gradeLift, gain = o.gradeGain, gsat = o.gradeSat, gblack = o.gradeBlack, gwhite = o.gradeWhite;
     const iris = clamp(o.iris, 0, 1), isz = Math.max(0.2, o.irisSize), isoft = clamp(o.irisSoft, 0.02, 1);
     const out = is16 ? new Uint16Array(N * 4) : new Uint8Array(N * 4);
@@ -573,12 +586,13 @@ function render(src, W, H, comps, opts, ctx) {
     const CN = 8192, cLo = x0 - 9 / k, cHi = x0 + 9 / k, cStep = (cHi - cLo) / CN;
     const cLut = new Float32Array(CN + 2);
     for (let i = 0; i <= CN + 1; i++) cLut[i] = dmax - range / (1 + Math.exp(-k * (cLo + i * cStep - x0)));
-    const curve = (x) => {
+    const curveFilm = (x) => {
         let f = (x - cLo) / cStep;
         if (f <= 0) return cLut[0];
         if (f >= CN) return cLut[CN];
         const i = f | 0; return cLut[i] + (cLut[i + 1] - cLut[i]) * (f - i);
     };
+    const curve = byP ? (x) => -x : curveFilm;   // pass-through: density = -log exposure
     const PN = 8000, PS = 1000; // 10^-t for t in [0, 8]
     const pLut = new Float32Array(PN + 2);
     for (let i = 0; i <= PN + 1; i++) pLut[i] = Math.pow(10, -i / PS);
@@ -657,6 +671,9 @@ function render(src, W, H, comps, opts, ctx) {
         }
     }
 
+    // ---- colour fringing (after the look, before print damage)
+    if (hasFringe(o)) fringe(out, W, H, o, { docW, docH, offX, offY });
+
     // ---- dust & scratches (drawn on the output, in document space)
     if (o.dustWhite > 0 || o.dustBlack > 0 || o.scratches > 0) {
         drawDamage(out, W, H, docW, docH, offX, offY, o, rnd, pxPerMm, MAXV);
@@ -728,7 +745,68 @@ function drawDamage(out, W, H, docW, docH, offX, offY, o, rnd, pxPerMm, MAXV) {
     }
 }
 
-const api = { DEFAULTS, BW_FILTERS, render, merge };
+function hasFringe(o) {
+    return o.fringeLat > 0 || o.fringeAxial > 0 || o.fringeRx || o.fringeRy || o.fringeBx || o.fringeBy;
+}
+
+// Colour fringing on an RGBA buffer (Uint8 or Uint16 with 32768 max) in place.
+// ctx: { docW, docH, offX, offY } so the lens centre and scales follow the whole frame.
+function fringe(buf, W, H, opts, ctx) {
+    const o = merge(opts);
+    ctx = ctx || {};
+    const docW = ctx.docW || W, docH = ctx.docH || H, offX = ctx.offX || 0, offY = ctx.offY || 0;
+    const is16 = buf instanceof Uint16Array;
+    const MAXV = is16 ? 32768 : 255;
+    const N = W * H;
+    const R = new Float32Array(N), G = new Float32Array(N), B = new Float32Array(N);
+    for (let i = 0, j = 0; i < N; i++, j += 4) { R[i] = buf[j]; G[i] = buf[j + 1]; B[i] = buf[j + 2]; }
+    const cx = docW / 2 - offX, cy = docH / 2 - offY;
+    const k = clamp(o.fringeLat, 0, 1.5) * 0.006;
+    const ky = k * (1 - clamp(o.fringeAniso, 0, 1));
+    const pm = docW / 1000;
+    const rdx = (o.fringeRx || 0) * pm, rdy = (o.fringeRy || 0) * pm, bdx = (o.fringeBx || 0) * pm, bdy = (o.fringeBy || 0) * pm;
+    // magnification per channel: rc = red larger, blue smaller; pg = red & blue larger, green smaller
+    const mR = o.fringeMode === "pg" ? [k * 0.5, ky * 0.5] : [k, ky];
+    const mG = o.fringeMode === "pg" ? [-k * 0.5, -ky * 0.5] : [0, 0];
+    const mB = o.fringeMode === "pg" ? [k * 0.5, ky * 0.5] : [-k, -ky];
+    const resample = (src, m, dx, dy) => {
+        if (!m[0] && !m[1] && !dx && !dy) return src;
+        const dst = new Float32Array(N);
+        const sx = 1 / (1 + m[0]), sy = 1 / (1 + m[1]);
+        for (let y = 0; y < H; y++) {
+            const fy = cy + (y - dy - cy) * sy;
+            for (let x = 0; x < W; x++) {
+                dst[y * W + x] = sampleBilinear(src, W, H, cx + (x - dx - cx) * sx, fy);
+            }
+        }
+        return dst;
+    };
+    const R2 = resample(R, mR, rdx, rdy), G2 = resample(G, mG, 0, 0), B2 = resample(B, mB, bdx, bdy);
+    // axial / purple fringing: halo just outside bright areas
+    let halo = null;
+    if (o.fringeAxial > 0) {
+        const h = new Float32Array(N), t = new Float32Array(N);
+        for (let i = 0; i < N; i++) {
+            const l = (0.2126 * G2[i] * 0 + 0.2126 * R2[i] + 0.7152 * G2[i] + 0.0722 * B2[i]) / MAXV;
+            h[i] = clamp((l - 0.72) / 0.25, 0, 1);
+        }
+        const core = Float32Array.from(h);
+        const rad = Math.max(0.8, o.fringeAxialR * docW);
+        blur(h, t, W, H, rad, rad, 0);
+        halo = h;
+        for (let i = 0; i < N; i++) { const v = h[i] - core[i] * 0.85; halo[i] = v > 0 ? v * o.fringeAxial * 2.4 : 0; }
+    }
+    for (let i = 0, j = 0; i < N; i++, j += 4) {
+        let r = R2[i], g = G2[i], b = B2[i];
+        if (halo) { const f = halo[i] * MAXV; r += f * 0.55; g -= f * 0.18; b += f * 0.95; }
+        buf[j] = clamp(Math.round(r), 0, MAXV);
+        buf[j + 1] = clamp(Math.round(g), 0, MAXV);
+        buf[j + 2] = clamp(Math.round(b), 0, MAXV);
+    }
+    return buf;
+}
+
+const api = { DEFAULTS, BW_FILTERS, render, merge, fringe, hasFringe };
 if (typeof module !== "undefined" && module.exports) module.exports = api;
 else root.FilmEngine = api;
 
