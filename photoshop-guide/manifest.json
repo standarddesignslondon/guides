@@ -8,7 +8,7 @@
   "noun_plural": "tools",
   "page_dir": "tools"
  },
- "generated": "2026-09-20",
+ "generated": "2026-09-27",
  "items": [
   {
    "num": "01",
@@ -116,6 +116,19 @@
   },
   {
    "num": "09",
+   "slug": "filmlook",
+   "name": "FilmLook",
+   "tagline": "Film emulation from 1920s tinted nitrate to 1980s anamorphic: stocks, gauges, lenses, print wear and 70 film presets.",
+   "url": "tools/filmlook.html",
+   "image": "images/filmlook.png",
+   "facets": {
+    "app": "Photoshop",
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "10",
    "slug": "poster-pdf-export",
    "name": "Poster PDF Export",
    "tagline": "Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.",

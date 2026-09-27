@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>filmlook — adobe</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">adobe</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">09</p>
+  <h1>filmlook</h1>
+  <p class="ch-sub">Film emulation from 1920s tinted nitrate to 1980s anamorphic: stocks, gauges, lenses, print wear and 70 film presets.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/filmlook.png" alt="FilmLook"></div><figcaption>filmlook</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">09.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">A small physical model of photochemical film rather than a stack of grading tricks. Light goes through the lens (halation, diffusion, smoke, anamorphic streaks, vignette, fringing), exposes the negative records of the chosen stock (spectral sensitivity, so orthochromatic stock turns red lips black), is printed through a characteristic curve with grain added in exposure, and lands on print dyes with their real impurities, printer lights, flashing, push processing, silver retention, dye fade, tinting and toning. Grain, softness and halation are sized in millimetres on the film frame, so Super 8 is coarse and 70mm is fine at any image size. Film presets combine those building blocks with settings from sourced research (American Cinematographer, restoration notes, the DPs&#x27; own accounts), then calibrated against about 770 Shotdeck frames of the current transfers (contrast, black and white levels, colour casts by tonal zone, saturation and grain). Each preset carries a note saying what it rests on and whether it is calibrated. The result goes on a new layer; the photo is untouched.</p>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.2.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+, RGB, 8 or 16-bit</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.filmlook</dd></div><div class="fact"><dt>film presets</dt><dd>71 (45 films), 49 calibrated to frames</dd></div><div class="fact"><dt>folder</dt><dd>FilmLook-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">09.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Open <b>Plugins › FilmLook</b> and choose a film. The note under the list says what the preset is based on.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Draw a marquee over part of the photo and press <b>Preview selection</b> to see the look quickly on just that area.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Press <b>Render</b>. The look goes on a new <i>FilmLook ·</i> layer at the top; <b>Strength</b> is that layer&#x27;s opacity and can be changed afterwards.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Adjust anything in the sections below, then <b>Re-render last</b> to replace the previous result. Save combinations under <b>My presets</b>.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">09.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">top of panel</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Film<span class="rng">71 presets</span></dt><dd>Year, title and variant. Films that change look between sections have variants: Nosferatu&#x27;s tints, Kansas and Oz, Tarkovsky&#x27;s monochrome and colour, the Long Goodbye flash levels.</dd></div>
+<div class="ctl-row"><dt>Strength<span class="rng">0 – 100</span></dt><dd>Opacity of the result layer. Also updates the last render live.</dd></div>
+<div class="ctl-row"><dt>Source<span class="rng">Whole image / Selected layer</span></dt><dd>Whole image uses the merged picture (previous FilmLook layers are hidden while it reads). Selected layer puts the result directly above that layer.</dd></div>
+<div class="ctl-row"><dt>Frame<span class="rng">No change / Black matte / Crop canvas</span></dt><dd>Matte blacks out the image outside the format&#x27;s aspect ratio and draws the gate corners and edge. Crop trims the canvas to the aspect ratio after rendering.</dd></div>
+<div class="ctl-row"><dt>Preview selection</dt><dd>Renders only the marquee area, at full resolution and with the same physical scales, onto a <i>FilmLook preview</i> layer.</dd></div>
+<div class="ctl-row"><dt>Re-render last</dt><dd>Deletes the previous FilmLook layer and renders again with the current settings (same area if it was a preview).</dd></div>
+<div class="ctl-row"><dt>New grain &amp; dust</dt><dd>Rolls a new random seed for grain, dust and scratches.</dd></div>
+</dl>
+<h3 class="sub">stock &amp; process</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Stock<span class="rng">18 stocks</span></dt><dd>Sets spectral response, dye set, curve, grain and colour separation. See the stock list below.</dd></div>
+<div class="ctl-row"><dt>B&amp;W filter<span class="rng">Yellow, deep yellow, orange, red, green, blue</span></dt><dd>Camera filter on black-and-white stock: yellow darkens skies a little, red a lot, green lightens foliage.</dd></div>
+<div class="ctl-row"><dt>Toning / Tinting<span class="rng">7 tones, 9 tints</span></dt><dd>Toning colours the darks (sepia, selenium, iron blue, copper). Tinting dyes the base and colours the lights (silent-era amber, green, blue, rose).</dd></div>
+<div class="ctl-row"><dt>Exposure<span class="rng">-3 – +3 stops</span></dt><dd>Exposure onto the negative.</dd></div>
+<div class="ctl-row"><dt>Contrast / Latitude<span class="rng">gamma 0.5 – 2.2</span></dt><dd>Slope of the print-through curve; latitude softens the toe and shoulder.</dd></div>
+<div class="ctl-row"><dt>Colour separation<span class="rng">0 – 1.8</span></dt><dd>How distinct the colour records are; 1 is the stock as made.</dd></div>
+<div class="ctl-row"><dt>Black density / Base fog</dt><dd>Maximum print density (depth of black) and minimum density.</dd></div>
+<div class="ctl-row"><dt>Printer lights R / G / B<span class="rng">±16 points</span></dt><dd>Lab timing, about 1/12 stop per point. + gives more of that colour.</dd></div>
+<div class="ctl-row"><dt>Flashing<span class="rng">0 – 1</span></dt><dd>Pre/post-flash of the negative: lifts shadows, mutes colour (The Long Goodbye, Rosemary&#x27;s Baby dreams).</dd></div>
+<div class="ctl-row"><dt>Push / pull<span class="rng">-1 – +3 stops</span></dt><dd>Forced development: more contrast, grain and fog.</dd></div>
+<div class="ctl-row"><dt>Silver retention<span class="rng">0 – 1</span></dt><dd>Bleach bypass.</dd></div>
+<div class="ctl-row"><dt>Dye fade<span class="rng">0 – 1</span></dt><dd>Cyan and yellow dyes fading, leaving the pink-magenta of old release prints.</dd></div>
+</dl>
+<h3 class="sub">format &amp; gate</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Gauge / format<span class="rng">14 formats</span></dt><dd>Frame width, squeeze, resolving power, aspect and gate shape.</dd></div>
+<div class="ctl-row"><dt>Aspect ratio<span class="rng">1.0 – 2.8</span></dt><dd>Used by the matte and crop.</dd></div>
+<div class="ctl-row"><dt>Frame width<span class="rng">mm</span></dt><dd>Sets the physical scale of grain, halation and softness.</dd></div>
+<div class="ctl-row"><dt>Resolving power<span class="rng">0.2 – 3</span></dt><dd>Multiplies the format&#x27;s MTF.</dd></div>
+<div class="ctl-row"><dt>Gate corners / edge</dt><dd>Rounded gate corners, e.g. Super 8.</dd></div>
+<div class="ctl-row"><dt>Iris / size / softness</dt><dd>Silent-era oval or circular iris vignette (Nosferatu, Joan of Arc).</dd></div>
+</dl>
+<h3 class="sub">lens &amp; light</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Lens<span class="rng">8 presets</span></dt><dd>Clean prime, silent-era, studio glamour, wide, anamorphic, 70s zoom, smoke + low-con, home movie.</dd></div>
+<div class="ctl-row"><dt>Halation</dt><dd>Red-orange glow around highlights.</dd></div>
+<div class="ctl-row"><dt>Diffusion / glow</dt><dd>Pro-mist, gauze or fog filter bloom.</dd></div>
+<div class="ctl-row"><dt>Low-con / smoke</dt><dd>Veiling glare lifting the shadows.</dd></div>
+<div class="ctl-row"><dt>Anamorphic streaks</dt><dd>Horizontal blue flares from bright points.</dd></div>
+<div class="ctl-row"><dt>Vignette / Edge softness / Colour fringing</dt><dd>Lens fall-off.</dd></div>
+</dl>
+<h3 class="sub">grain, print condition, transfer grade</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Grain amount / size / colour</dt><dd>Two-scale grain in exposure; size in microns on the negative; anamorphic grain is stretched horizontally.</dd></div>
+<div class="ctl-row"><dt>Condition<span class="rng">6 presets</span></dt><dd>Pristine restoration to archive dupe.</dd></div>
+<div class="ctl-row"><dt>Duplicate generations<span class="rng">0 – 4</span></dt><dd>Each generation adds contrast, grain and softness.</dd></div>
+<div class="ctl-row"><dt>Dust / dirt / scratches / uneven density / stains</dt><dd>Print damage, drawn at image scale.</dd></div>
+<div class="ctl-row"><dt>Saturation / Black lift / White level / Warm-cool / Green-magenta</dt><dd>A final video-style grade, for matching how a restoration looks today (most B&amp;W transfers keep whites well below pure white).</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">09.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">preview on a selection</h3><p>A 24MP render takes roughly 10 – 20 seconds. Preview a marquee area while dialling in, then Render once.</p>
+<h3 class="sub">pick photos that suit the film</h3><p>Some looks are mostly production design: Red Desert&#x27;s painted sets, Playtime&#x27;s grey world, Blade Runner&#x27;s smoke and neon. The preset supplies stock, format and palette tendency; the subject has to supply the rest.</p>
+<h3 class="sub">restorations differ</h3><p>Presets calibrated to Shotdeck frames match today&#x27;s transfers, which can differ from the original release prints (Vertigo, The Good, the Bad and the Ugly, Playtime, Solaris, Stalker). Where this matters there is a second variant or a note.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">09.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>RGB documents only, 8 or 16-bit; 32-bit is refused.</li><li>Whole-image source reads the merged picture, so hide adjustment layers you don&#x27;t want baked in.</li><li>Crop canvas is a real canvas change (one undo step).</li><li>Don&#x27;t double-click the .ccx; use the installer agent (see installing).</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">09.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>Source is in <code>FilmLook-Photoshop-Plugin</code>: <code>engine.js</code> (pixel model), <code>presets.js</code> (stocks, formats, lenses, conditions, tints), <code>films.js</code> (film presets with research notes), <code>calibration.js</code> (per-film values fitted to reference frames), <code>main.js</code> and <code>index.html</code> (panel).</p>
+<p>To update: bump <code>version</code> in <code>manifest.json</code>, zip all seven files at the archive root as <code>FilmLook.ccx</code> and run the installer agent again.</p>
+<p>Reference frames and the research notes live in <i>APA Content &amp; Marketing (1)/FilmLook-References</i> (outside Guides, so they are not published).</p></div>
+</section>
+<section class="block" id="film-presets">
+  <div class="block-label"><span class="bl-num">09.6</span>
+  <h2>film presets</h2></div>
+  <div class="block-body"><h3 class="sub">1920s</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>1922  Nosferatu<span class="rng">day / interiors (amber tint)</span></dt><dd>Tinted B&amp;W release prints. The circulating 2006 Murnau Foundation restoration matches its tints to a 1922 French nitrate print, so they are muted: amber/yellow for day and interiors, green for night, pink for dawn and dusk (sources describe the scheme differently). Ortho stock is inferred, not documented. Multi-generation source: soft, grainy, uneven density.</dd></div>
+<div class="ctl-row"><dt>1922  Nosferatu<span class="rng">night (green tint)</span></dt><dd>Night scenes were shot in daylight and read as night through the tint. See the day variant for sources. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1922  Nosferatu<span class="rng">dawn / dusk (pink tint)</span></dt><dd>Only a few minutes of the restoration are pink (dawn and dusk).</dd></div>
+<div class="ctl-row"><dt>1927  Metropolis</dt><dd>B&amp;W, 1.33, untinted in current restorations. The 2010 restoration mostly comes from the camera negative: clean, sharp, silvery mid-tones, deep blacks in the machine halls. Stock (ortho or pan) is undocumented; early-pan model used. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1927  Metropolis<span class="rng">2008 Argentine 16mm footage</span></dt><dd>About 25 minutes of the 2010 restoration come from a worn 16mm dupe negative reduced from an Argentine 35mm print: soft, washed out, heavily scratched, left visibly damaged on purpose.</dd></div>
+<div class="ctl-row"><dt>1928  The Passion of Joan of Arc</dt><dd>Panchromatic (Wikipedia only). No make-up; faces with full skin texture, flat near-white skies behind (the set was painted pink to read grey). Gaumont 2K from a dupe negative of the 1981 Oslo print: clean, spotless, well-resolved grain, no crushed blacks. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1929  Un Chien Andalou</dt><dd>B&amp;W silent. The 2021 4K restoration comes from the original negative: plain, fairly high-contrast studio photography. No technical description of the cinematography was found; stock undocumented. Low confidence. <b>Calibrated to reference frames.</b></dd></div>
+</dl>
+<h3 class="sub">1930s</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>1933  King Kong</dt><dd>Academy 1.37. The 2005 restoration comes from a multi-generation duplicate (sources disagree which one): rich intense blacks, bold crisp whites, moderate-to-heavy grain, softer composites. Stock undocumented. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1936  Modern Times</dt><dd>Criterion 2K from a fine-grain master off the camera negative: strong contrast, rich uncrushed blacks, texture everywhere, minimal grain. Bright, even, high-key comedy lighting. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1938  Bringing Up Baby</dt><dd>Criterion 4K from a mouldy nitrate duplicate negative: fairly heavy grain, clean grey scale, strong shadow detail, whites without blooming. Glossy studio lighting (my observation). <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1939  The Wizard of Oz<span class="rng">Kansas (sepia)</span></dt><dd>Kansas was shot in B&amp;W and printed with a sepia-tone process. The restoration matched the sepia to a period film sample.</dd></div>
+<div class="ctl-row"><dt>1939  The Wizard of Oz<span class="rng">Oz (three-strip Technicolor)</span></dt><dd>Three-strip Technicolor, IB prints. 8K scan of the original separation negatives, graded to a 1939 Academy answer print: saturated primaries, bright even high-key light (effective speed about ASA 5), dense clean blacks. The 2019 4K is more restrained than earlier Blu-rays. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1939  Gone with the Wind</dt><dd>Three-strip Technicolor, IB prints. Hard directional key light, saturated primaries with pointed use of red, restrained blue moonlight. The HD master (2004/2009 work) has terrific saturation and inky blacks. A new 4K is due 3 Nov 2026. <b>Calibrated to reference frames.</b></dd></div>
+</dl>
+<h3 class="sub">1940s</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>1940  Rebecca</dt><dd>Criterion 4K from the nitrate camera negative. Soft, graded low-key light, deep shadows, lush blacks, crisp whites, wide grey scale, fine grain. Diffusion on close-ups is not documented. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1947  Out of the Past</dt><dd>Musuraca used minimal filtration: Aero 1 for light correction, G or 23-A for heavier exterior work. Full tonal range in depth, deep shadows but gentler than harder noir. Warner Archive 4K from the nitrate camera negative (1 Sept 2026). <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1947  Out of the Past<span class="rng">exteriors (G / 23-A filter)</span></dt><dd>Heavier exterior correction: skies darker, foliage lighter.</dd></div>
+<div class="ctl-row"><dt>1949  The Third Man</dt><dd>High contrast, &#x27;pitch black, brilliant white&#x27;, hard single-source night light on hosed-down cobbles, wide-angle distortion and canted frames. 4K from a fine-grain master off the negative, graded to release prints. Tilting the camera is up to you. <b>Calibrated to reference frames.</b></dd></div>
+</dl>
+<h3 class="sub">1950s</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>1950  Rashomon</dt><dd>Extreme contrast, dappled sun through leaves, direct sun flare, bright flat courtyard. The 2008 restoration was probably scanned from a 1962 print (sources conflict), so contrast is higher and grain coarser than a negative scan. The Fuji stock claim is unverified. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1951  Strangers on a Train</dt><dd>Bold, muscular high contrast with luscious blacks and brilliant whites; harder and darker than Rebecca. Provenance of the current restoration is undocumented. Low-medium confidence. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1954  Rear Window</dt><dd>Early Eastman Color negative, 1.66. The Universal 4K has vivid primaries (especially greens), dense red brick, warm flesh with a slight brown cast, thin fine grain. Accounts conflict over whether the 4K derives from the 1999 photochemical restoration. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1954  Seven Samurai</dt><dd>Toho 4K from a master positive (the negative is lost): strong contrast, natural grain, mild scratches remain. Overcast skies clip; telephoto compression in action scenes. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1958  Vertigo</dt><dd>VistaVision, Eastmancolor negative, Technicolor IB prints: very fine grain, saturated reds and emerald greens. Burks used fog filters on San Francisco locations. The negative is badly faded and the restoration needed heavy colour correction, so modern frames only approximate the IB prints. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1958  Vertigo<span class="rng">green glow (Judy&#x27;s transformation)</span></dt><dd>Burks&#x27; special diffusion filters with green light produced the greenish glow of the transformation scenes (ASC).</dd></div>
+<div class="ctl-row"><dt>1959  North by Northwest</dt><dd>VistaVision. The 2024 restoration (13K scan of the negative) was graded to an IB Technicolor print: warm palette, natural skin, compact fine grain, bright clean daylight. Should be close to the original look. <b>Calibrated to reference frames.</b></dd></div>
+</dl>
+<h3 class="sub">1960s</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>1960  À bout de souffle</dt><dd>Fast Ilford still-camera film (HPS; Wikipedia&#x27;s &#x27;HP5&#x27; is anachronistic) pushed a stop, handheld Cameflex, next to no lighting. Visible lively grain, harder contrast in Paris sun. The 2023 4K is cleaner and darker than 1960 prints; add grain rather than subtract it. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1960  À bout de souffle<span class="rng">available-light interiors</span></dt><dd>Interiors lit by what was there: lower contrast, greyish blacks.</dd></div>
+<div class="ctl-row"><dt>1962  Lawrence of Arabia</dt><dd>Super Panavision 70 (spherical 65mm), 2.20. 2012 8K scan of the negative: very high sharpness, fine grain, strong contrast, warm ochre sand under pale sky, smooth sun highlights. The 5250 stock claim is unsourced. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1962  Ivan&#x27;s Childhood</dt><dd>High-contrast, luminous B&amp;W: glistening wet surfaces, backlit birches, dugout interiors with hard slivers of light, silvery highlights that bloom slightly. HD from a fine-grain master positive. Stock undocumented. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1962  Ivan&#x27;s Childhood<span class="rng">dream sequences</span></dt><dd>The dreams are brighter, sunnier and softer.</dd></div>
+<div class="ctl-row"><dt>1964  Red Desert</dt><dd>Technicolor IB prints. Much of the look is on set: trees, grass and rooms painted, industrial fog and steam, a muted grey-pastel world with isolated saturated accents, long telephoto lenses. A filter can&#x27;t paint your subject; choose images with a strong accent colour. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1965  The Sound of Music<span class="rng">2025 restoration</span></dt><dd>Todd-AO 65mm, 2.20. The 2025 restoration (8K from the negative) has lush greens, bright blue skies, fine tight grain and deep blacks. Home-video grades differ a lot; see the 70mm variant. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1965  The Sound of Music<span class="rng">original 70mm impression</span></dt><dd>in70mm.com describes the original 70mm prints as sharp but soft and almost pastel, unlike the oversaturated Blu-ray.</dd></div>
+<div class="ctl-row"><dt>1966  The Good, the Bad and the Ugly</dt><dd>Techniscope (2-perf, enlarged to scope), Technicolor IB prints: medium-strong organic grain, warm dusty ochres, pale blue skies, hard midday sun, some crushed shadows. Grades vary widely by release; see the 2014 variant. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1966  The Good, the Bad and the Ugly<span class="rng">2014 &#x27;yellow&#x27; master</span></dt><dd>The 2014 Blu-ray grade had a notorious mustard-yellow cast.</dd></div>
+<div class="ctl-row"><dt>1966  Andrei Rublev<span class="rng">B&amp;W</span></dt><dd>Sovscope 2.35. Neutral, silvery B&amp;W with a long mid-tone scale, deep but not crushed blacks, soft highlights. HD from a 35mm internegative; the two cuts differ in contrast. Stock undocumented. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1966  Andrei Rublev<span class="rng">colour epilogue (icons)</span></dt><dd>The epilogue is Sovcolor (screening notes): warm, low-saturation ochres, golds and faded reds and blues of the icons, slightly soft.</dd></div>
+<div class="ctl-row"><dt>1967  Playtime</dt><dd>65mm negative. Tati wanted colour that looked like black and white: greys, steel blues, black, with small red and green accents. Very fine grain, bright even low-contrast light. Aspect ratio sources conflict (about 1.70-1.85). <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1967  Playtime<span class="rng">2014 master (yellow-green)</span></dt><dd>The 2014 Criterion master had a yellow-green tint; the 2026 4K is more neutral.</dd></div>
+<div class="ctl-row"><dt>1967  Weekend</dt><dd>Coutard used the fastest Eastmancolor and overdeveloped it to double its speed (Criterion booklet): heavy grain, lifted milky blacks, flat muddy daylight, with bold red, white and blue accents. Someone who saw 1960s prints recalls them as dark and muddy too. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1968  Rosemary&#x27;s Baby</dt><dd>50-speed colour negative, 18mm and 25mm lenses for nearly everything, Technicolor IB prints. Soft, bright, natural daylight interiors in pale yellows, creams and pastel greens. Criterion 4K from the camera negative. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1968  Rosemary&#x27;s Baby<span class="rng">flashed dream sequences</span></dt><dd>The film was flashed for the dream sequences &#x27;to soften colors and reduce contrast&#x27; (ASC).</dd></div>
+<div class="ctl-row"><dt>1968  Planet of the Apes</dt><dd>Panavision anamorphic, Color by DeLuxe, no special filters. Hard high sun, deep blue skies over tan and rust rock, slightly lifted blacks, noticeable grain (weakly sourced). Who made the current 4K master, and from what, is undocumented. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1968  2001: A Space Odyssey</dt><dd>Super Panavision 70, spherical, 2.20. Extremely fine grain, clean bright near-white sets under soft practical light, true black space, sparing saturated accents. The 2018 4K (8K scan of the negative) removed the old yellow push. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1968  2001: A Space Odyssey<span class="rng">Dawn of Man</span></dt><dd>Front-projected: warm ochre, slightly lower contrast.</dd></div>
+</dl>
+<h3 class="sub">1970s</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>1971  Trafic</dt><dd>Low confidence: colour process, stock and gauge are undocumented and aspect-ratio sources conflict (1.37 vs 1.85; the restoration is 1.37). The 2K restoration shows moderately saturated primaries, neutral-warm balance, flat overcast daylight, good blacks. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1971  A Clockwork Orange</dt><dd>1.66, lit mostly by practicals (bare photofloods in fixtures, fluorescent tubes): &#x27;a really cold, stark style&#x27; (Alcott). Hard bright white sets, saturated accents, wide-angle distortion (a 9.8mm lens). Stock undocumented. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1972  Solaris<span class="rng">Earth (colour)</span></dt><dd>Kodak colour negative, Sovscope 2.35: lush, green-dominant Earth scenes. The circulating HD is from a low-contrast print, so it is soft and grainy. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1972  Solaris<span class="rng">station (restrained colour)</span></dt><dd>Cool steel-and-white station interiors with restrained colour. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1972  Solaris<span class="rng">monochrome (blue cast)</span></dt><dd>The Kodak ran out partway through filming, so some scenes are B&amp;W. DP Yusov told Criterion no blue tint was added, but the 2011 Blu-ray shows a blue cast. Disputed; set the tone amount to 0 for Yusov&#x27;s version.</dd></div>
+<div class="ctl-row"><dt>1973  The Long Goodbye<span class="rng">day (35% flash)</span></dt><dd>Eastman 5254, post-flashed at Technicolor by scene: 10-15% night, 35% beach party, 50% Mexico (American Cinematographer). Pastel, muted, slightly blue: &#x27;Pastels are for memory&#x27; (Zsigmond). The Kino 4K crushes some blacks, so its shadows are denser than a 1973 print; this preset is calibrated to that transfer and uses a lighter flash than the documented 35%. Raise Flashing for the 1973 print look. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1973  The Long Goodbye<span class="rng">night (15% flash + push)</span></dt><dd>For night exteriors a 10% flash plus a one-stop push replaced a two-stop push (AC).</dd></div>
+<div class="ctl-row"><dt>1973  The Long Goodbye<span class="rng">Mexico (50% flash)</span></dt><dd>The heaviest flash, 50%, for the final Mexico forest scenes.</dd></div>
+<div class="ctl-row"><dt>1974  The Conversation<span class="rng">2024 restoration</span></dt><dd>Muted, drab palette of greys, browns and off-greens, soft daylight, moderate contrast. The 2024 4K from the negative (graded to a director-approved print) runs noticeably cooler and tealer than 1974 prints likely did. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1975  Jaws<span class="rng">Amity summer</span></dt><dd>Panavision anamorphic, Technicolor prints. Butler planned an &#x27;Andrew Wyeth look&#x27; early, a sunny Fourth of July middle and a &#x27;dreary&#x27; final hunt. Bright, slightly warm daylight, saturated sea and sky. Spielberg says the 4K looks better than 1975 projection. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1975  Jaws<span class="rng">final hunt (dreary)</span></dt><dd>The last act is darker, flatter and greyer (Butler: &#x27;ominous&#x27;).</dd></div>
+<div class="ctl-row"><dt>1975  The Mirror<span class="rng">colour</span></dt><dd>Imported Kodak colour, used sparingly: muted greens, greys, blues and browns, soft window light, near-clipping skies. Criterion 2K from the camera negative. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1975  The Mirror<span class="rng">monochrome (warm)</span></dt><dd>About a third of the film is B&amp;W. Current Criterion and RusCiCo-derived masters have a light sepia tinge; some older ones are neutral. Whether 1975 prints were toned is undocumented. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1976  Taxi Driver</dt><dd>Gritty grain, strong night blacks, sodium-orange and neon practicals, haloed wet streets; &#x27;I let New York light itself&#x27; (Chapman). Sony 4K from the negative, matched to Scorsese-approved prints. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1976  Taxi Driver<span class="rng">climax (desaturated)</span></dt><dd>For an R rating, the shootout&#x27;s colour was muted in release prints, turning blood from bright red to reddish-brown (AFI). Chapman says the restoration partly brought the colour back.</dd></div>
+<div class="ctl-row"><dt>1977  Eraserhead</dt><dd>Very high contrast: subjects lit in pools, everything else &#x27;falling off steeply to black&#x27;. Neutral grey, crushed black floor, no bloom, grain heavier in some scenes. Exteriors only on overcast days. Criterion 4K from the negative. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1979  Alien</dt><dd>Kodak 5247 at 100 ASA, Panavision C-series anamorphics wide open at T2.3-2.8 (Vanlint). Heavy smoke, wet sets, practicals at very low levels: low-key, backlit, cool blue-green with warm pools. The 2019 4K is cooler and more neutral than older Blu-rays. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1979  Stalker<span class="rng">outside the Zone (sepia)</span></dt><dd>Dense brown-amber, high-contrast monochrome. The 2017 Mosfilm 2K has a much heavier sepia than older DVDs. How the sepia was made is undocumented. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1979  Stalker<span class="rng">the Zone (colour)</span></dt><dd>Muted, earthy colour dominated by moss greens and grey-browns, soft overcast light. The BFI&#x27;s print is Orwocolor; whether the final negative was Kodak is disputed (Misek). <b>Calibrated to reference frames.</b></dd></div>
+</dl>
+<h3 class="sub">1980s</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>1980  The Long Good Friday</dt><dd>Naturalistic overcast London locations, muted colour, blacks &#x27;not the deepest&#x27;. The 2024 4K from the negative (Méheux-approved) skews slightly green and fixes the old pink skin. Stock undocumented. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1980  The Shining<span class="rng">Overlook interiors</span></dt><dd>Normal development throughout and &#x27;I didn&#x27;t use any filters&#x27; (Alcott): bright, even, glossy, sharp. Warm amber interiors from practicals (dimmed 1000W chandeliers) with saturated reds. 2019 4K from the negative. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1980  The Shining<span class="rng">snow exteriors</span></dt><dd>Cool blue snow scenes (full blue gel on the windows) against the warm interiors.</dd></div>
+<div class="ctl-row"><dt>1982  Blade Runner<span class="rng">night streets</span></dt><dd>Panavision anamorphic, low-contrast filters varied with light angle and smoke density, xenon shafts through smoke, heavy backlight, rain (AC). Lifted soft shadows around lights, bloomed highlights, streak flares. The Final Cut grade may be cooler than theatrical prints (unverified). <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1982  Blade Runner<span class="rng">Tyrell interiors (amber)</span></dt><dd>Warm amber-orange interiors.</dd></div>
+<div class="ctl-row"><dt>1983  Nostalghia<span class="rng">colour (desaturated)</span></dt><dd>A special print treatment at Technicolor Rome raised contrast and removed colour (Lanci): grey-dominant colour, underlit grey shadows, mist and steam. The 2022 4K recreated this digitally, and the &#x27;60% less colour&#x27; figure is indirect. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1983  Nostalghia<span class="rng">memory (monochrome, 2022 restoration)</span></dt><dd>In the 2022 CSC 4K restoration the memory and Russia sections measure as neutral grey monochrome, not sepia (checked against reference frames). Lanci recalls the 1983 print as sepia; for that, use the sepia variant. <b>Calibrated to reference frames.</b></dd></div>
+<div class="ctl-row"><dt>1983  Nostalghia<span class="rng">memory (sepia, as the 1983 print)</span></dt><dd>Lanci: &#x27;when we saw the print in sepia, we found it so interesting that we decided to keep it&#x27;. Higher contrast than the colour scenes.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="stocks">
+  <div class="block-label"><span class="bl-num">09.7</span>
+  <h2>stocks</h2></div>
+  <div class="block-body"><h3 class="sub">processes</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>B&amp;W orthochromatic (1910s-20s)</dt><dd>Blind to red: reds and lips print near-black, blue skies go white. Silent-era release prints, usually several generations from the negative.</dd></div>
+<div class="ctl-row"><dt>B&amp;W early panchromatic (1925-35)</dt><dd>Red-sensitive but still blue-heavy: skies pale, skin a little dark and luminous.</dd></div>
+<div class="ctl-row"><dt>B&amp;W studio panchromatic (1935-55)</dt><dd>Classic Hollywood / Plus-X-type rendering: full grey scale, fine grain, deep but open blacks.</dd></div>
+<div class="ctl-row"><dt>B&amp;W fast panchromatic (1955-80)</dt><dd>Double-X / Tri-X-type fast stock: livelier grain, slightly harder contrast.</dd></div>
+<div class="ctl-row"><dt>B&amp;W fast stills film, pushed (Nouvelle Vague)</dt><dd>Fast still-camera film pushed a stop: coarse lively grain, greyish blacks in available light, abrupt highlight clipping.</dd></div>
+<div class="ctl-row"><dt>B&amp;W newsreel / duplicate</dt><dd>Contrasty multi-generation duplicate: harsh, grainy, blocked blacks.</dd></div>
+<div class="ctl-row"><dt>B&amp;W home movie reversal (9.5mm / 16mm, 1920s-50s)</dt><dd>Reversal home-movie stock: bright, contrasty, slightly warm-black base.</dd></div>
+<div class="ctl-row"><dt>Technicolor two-colour (1922-35)</dt><dd>Only two records: red-orange and blue-green. Skin goes peach-orange, skies and foliage turn teal, no true yellow or violet.</dd></div>
+<div class="ctl-row"><dt>Technicolor three-strip dye transfer (1935-55)</dt><dd>Three B&amp;W separation negatives printed by dye imbibition: pure, dense, saturated primaries with no colour grain.</dd></div>
+<div class="ctl-row"><dt>Early Eastmancolor negative (1950s)</dt><dd>Single-strip chromogenic negative: softer, warmer, a little less saturated than three-strip.</dd></div>
+<div class="ctl-row"><dt>Eastmancolor neg + Technicolor IB print (1955-75)</dt><dd>The classic &#x27;Color by Technicolor&#x27; of the 50s-70s: chromogenic negative, dye-transfer print. Rich, dense, clean blacks.</dd></div>
+<div class="ctl-row"><dt>Eastman 50-speed negative, Eastman print (1962-68)</dt><dd>Slow, fine-grained colour negative of the 60s (DeLuxe, Metrocolor prints): clean and natural.</dd></div>
+<div class="ctl-row"><dt>Eastman 100-speed negative (1968-74)</dt><dd>The first faster colour negative: grainier and a touch muted, the look of early-70s New Hollywood.</dd></div>
+<div class="ctl-row"><dt>Eastman improved 100-speed negative (1974-83)</dt><dd>Late-70s colour negative: fuller colour and finer grain than the early 100-speed stock.</dd></div>
+<div class="ctl-row"><dt>Sovcolor / ORWO-type (Agfa lineage)</dt><dd>Eastern-bloc chromogenic stock: muted, earthy, less clean dye separation. Approximation.</dd></div>
+<div class="ctl-row"><dt>Kodachrome reversal (8mm / 16mm / slides)</dt><dd>Deep blacks, rich reds and blues, narrow latitude, very fine grain.</dd></div>
+<div class="ctl-row"><dt>Ektachrome reversal (Super 8 / 16mm, 1970s)</dt><dd>Cooler, bluer reversal with lighter blacks and busier grain.</dd></div>
+<div class="ctl-row"><dt>Faded Eastmancolor print (magenta shift)</dt><dd>A 1970s release print decades later: cyan and yellow dyes gone, leaving pink-magenta and weak blacks.</dd></div>
+<div class="ctl-row"><dt>Colour negative, silver retained (bleach bypass)</dt><dd>Silver left in the print: desaturated, harder contrast, dense blacks, metallic sheen.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="formats">
+  <div class="block-label"><span class="bl-num">09.8</span>
+  <h2>formats</h2></div>
+  <div class="block-body"><h3 class="sub">gauges</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>35mm silent, full aperture 1.33<span class="rng">24.9 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>35mm Academy 1.37<span class="rng">22 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>35mm flat 1.66 (European)<span class="rng">22 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>35mm flat 1.85<span class="rng">22 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>VistaVision (8-perf) 1.85<span class="rng">37.7 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>35mm anamorphic (CinemaScope / Panavision) 2.35<span class="rng">21.95 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>Sovscope anamorphic 2.35<span class="rng">21.95 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>Techniscope 2-perf 2.35<span class="rng">22 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>65mm / 70mm (Todd-AO, Super Panavision 70) 2.20<span class="rng">52.5 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>65mm framed ~1.70-1.85 (Playtime)<span class="rng">52.5 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>16mm 1.37<span class="rng">10.26 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>9.5mm Pathé Baby 1.33<span class="rng">8.2 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>Regular 8mm 1.33<span class="rng">4.8 mm frame</span></dt><dd></dd></div>
+<div class="ctl-row"><dt>Super 8 1.36<span class="rng">5.79 mm frame</span></dt><dd></dd></div>
+</dl></div>
+</section>
+<section class="block" id="installing">
+  <div class="block-label"><span class="bl-num">09.9</span>
+  <h2>installing</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">In Terminal, run Adobe&#x27;s installer agent on the plugin&#x27;s <code>.ccx</code> from <code>Photoshop Scripts/CCX Installers</code>: <code>&quot;/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent&quot; --install &lt;plugin&gt;.ccx</code></span></li>
+<li><span class="step-n">02</span><span class="step-t">Restart Photoshop. The panel appears under <b>Plugins</b> and survives restarts — UXP Developer Tools is not needed.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Do not double-click the <code>.ccx</code>: Creative Cloud wrongly reports <i>Compatible app required</i> for unsigned plugins.</span></li>
+</ol></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="ditherpress.html"><span>previous</span>ditherpress</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="poster-pdf-export.html"><span>next</span>poster pdf export</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>adobe</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-09-27</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

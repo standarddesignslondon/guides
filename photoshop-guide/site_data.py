@@ -1095,6 +1095,326 @@ ITEMS.append({
 })
 
 # --------------------------------------------------------------------------
+# --------------------------------------------------------------------------
+# FilmLook: lists generated from the plugin's presets.js / films.js
+FILM_GROUPS = [
+    {"title": "1920s", "rows": [
+        ["1922  Nosferatu", "day / interiors (amber tint)", "Tinted B&W release prints. The circulating 2006 Murnau Foundation restoration matches its tints to a 1922 French nitrate print, so they are muted: amber/yellow for day and interiors, green for night, pink for dawn and dusk (sources describe the scheme differently). Ortho stock is inferred, not documented. Multi-generation source: soft, grainy, uneven density."],
+        ["1922  Nosferatu", "night (green tint)", "Night scenes were shot in daylight and read as night through the tint. See the day variant for sources. **Calibrated to reference frames.**"],
+        ["1922  Nosferatu", "dawn / dusk (pink tint)", "Only a few minutes of the restoration are pink (dawn and dusk)."],
+        ["1927  Metropolis", "", "B&W, 1.33, untinted in current restorations. The 2010 restoration mostly comes from the camera negative: clean, sharp, silvery mid-tones, deep blacks in the machine halls. Stock (ortho or pan) is undocumented; early-pan model used. **Calibrated to reference frames.**"],
+        ["1927  Metropolis", "2008 Argentine 16mm footage", "About 25 minutes of the 2010 restoration come from a worn 16mm dupe negative reduced from an Argentine 35mm print: soft, washed out, heavily scratched, left visibly damaged on purpose."],
+        ["1928  The Passion of Joan of Arc", "", "Panchromatic (Wikipedia only). No make-up; faces with full skin texture, flat near-white skies behind (the set was painted pink to read grey). Gaumont 2K from a dupe negative of the 1981 Oslo print: clean, spotless, well-resolved grain, no crushed blacks. **Calibrated to reference frames.**"],
+        ["1929  Un Chien Andalou", "", "B&W silent. The 2021 4K restoration comes from the original negative: plain, fairly high-contrast studio photography. No technical description of the cinematography was found; stock undocumented. Low confidence. **Calibrated to reference frames.**"],
+    ]},
+    {"title": "1930s", "rows": [
+        ["1933  King Kong", "", "Academy 1.37. The 2005 restoration comes from a multi-generation duplicate (sources disagree which one): rich intense blacks, bold crisp whites, moderate-to-heavy grain, softer composites. Stock undocumented. **Calibrated to reference frames.**"],
+        ["1936  Modern Times", "", "Criterion 2K from a fine-grain master off the camera negative: strong contrast, rich uncrushed blacks, texture everywhere, minimal grain. Bright, even, high-key comedy lighting. **Calibrated to reference frames.**"],
+        ["1938  Bringing Up Baby", "", "Criterion 4K from a mouldy nitrate duplicate negative: fairly heavy grain, clean grey scale, strong shadow detail, whites without blooming. Glossy studio lighting (my observation). **Calibrated to reference frames.**"],
+        ["1939  The Wizard of Oz", "Kansas (sepia)", "Kansas was shot in B&W and printed with a sepia-tone process. The restoration matched the sepia to a period film sample."],
+        ["1939  The Wizard of Oz", "Oz (three-strip Technicolor)", "Three-strip Technicolor, IB prints. 8K scan of the original separation negatives, graded to a 1939 Academy answer print: saturated primaries, bright even high-key light (effective speed about ASA 5), dense clean blacks. The 2019 4K is more restrained than earlier Blu-rays. **Calibrated to reference frames.**"],
+        ["1939  Gone with the Wind", "", "Three-strip Technicolor, IB prints. Hard directional key light, saturated primaries with pointed use of red, restrained blue moonlight. The HD master (2004/2009 work) has terrific saturation and inky blacks. A new 4K is due 3 Nov 2026. **Calibrated to reference frames.**"],
+    ]},
+    {"title": "1940s", "rows": [
+        ["1940  Rebecca", "", "Criterion 4K from the nitrate camera negative. Soft, graded low-key light, deep shadows, lush blacks, crisp whites, wide grey scale, fine grain. Diffusion on close-ups is not documented. **Calibrated to reference frames.**"],
+        ["1947  Out of the Past", "", "Musuraca used minimal filtration: Aero 1 for light correction, G or 23-A for heavier exterior work. Full tonal range in depth, deep shadows but gentler than harder noir. Warner Archive 4K from the nitrate camera negative (1 Sept 2026). **Calibrated to reference frames.**"],
+        ["1947  Out of the Past", "exteriors (G / 23-A filter)", "Heavier exterior correction: skies darker, foliage lighter."],
+        ["1949  The Third Man", "", "High contrast, 'pitch black, brilliant white', hard single-source night light on hosed-down cobbles, wide-angle distortion and canted frames. 4K from a fine-grain master off the negative, graded to release prints. Tilting the camera is up to you. **Calibrated to reference frames.**"],
+    ]},
+    {"title": "1950s", "rows": [
+        ["1950  Rashomon", "", "Extreme contrast, dappled sun through leaves, direct sun flare, bright flat courtyard. The 2008 restoration was probably scanned from a 1962 print (sources conflict), so contrast is higher and grain coarser than a negative scan. The Fuji stock claim is unverified. **Calibrated to reference frames.**"],
+        ["1951  Strangers on a Train", "", "Bold, muscular high contrast with luscious blacks and brilliant whites; harder and darker than Rebecca. Provenance of the current restoration is undocumented. Low-medium confidence. **Calibrated to reference frames.**"],
+        ["1954  Rear Window", "", "Early Eastman Color negative, 1.66. The Universal 4K has vivid primaries (especially greens), dense red brick, warm flesh with a slight brown cast, thin fine grain. Accounts conflict over whether the 4K derives from the 1999 photochemical restoration. **Calibrated to reference frames.**"],
+        ["1954  Seven Samurai", "", "Toho 4K from a master positive (the negative is lost): strong contrast, natural grain, mild scratches remain. Overcast skies clip; telephoto compression in action scenes. **Calibrated to reference frames.**"],
+        ["1958  Vertigo", "", "VistaVision, Eastmancolor negative, Technicolor IB prints: very fine grain, saturated reds and emerald greens. Burks used fog filters on San Francisco locations. The negative is badly faded and the restoration needed heavy colour correction, so modern frames only approximate the IB prints. **Calibrated to reference frames.**"],
+        ["1958  Vertigo", "green glow (Judy's transformation)", "Burks' special diffusion filters with green light produced the greenish glow of the transformation scenes (ASC)."],
+        ["1959  North by Northwest", "", "VistaVision. The 2024 restoration (13K scan of the negative) was graded to an IB Technicolor print: warm palette, natural skin, compact fine grain, bright clean daylight. Should be close to the original look. **Calibrated to reference frames.**"],
+    ]},
+    {"title": "1960s", "rows": [
+        ["1960  À bout de souffle", "", "Fast Ilford still-camera film (HPS; Wikipedia's 'HP5' is anachronistic) pushed a stop, handheld Cameflex, next to no lighting. Visible lively grain, harder contrast in Paris sun. The 2023 4K is cleaner and darker than 1960 prints; add grain rather than subtract it. **Calibrated to reference frames.**"],
+        ["1960  À bout de souffle", "available-light interiors", "Interiors lit by what was there: lower contrast, greyish blacks."],
+        ["1962  Lawrence of Arabia", "", "Super Panavision 70 (spherical 65mm), 2.20. 2012 8K scan of the negative: very high sharpness, fine grain, strong contrast, warm ochre sand under pale sky, smooth sun highlights. The 5250 stock claim is unsourced. **Calibrated to reference frames.**"],
+        ["1962  Ivan's Childhood", "", "High-contrast, luminous B&W: glistening wet surfaces, backlit birches, dugout interiors with hard slivers of light, silvery highlights that bloom slightly. HD from a fine-grain master positive. Stock undocumented. **Calibrated to reference frames.**"],
+        ["1962  Ivan's Childhood", "dream sequences", "The dreams are brighter, sunnier and softer."],
+        ["1964  Red Desert", "", "Technicolor IB prints. Much of the look is on set: trees, grass and rooms painted, industrial fog and steam, a muted grey-pastel world with isolated saturated accents, long telephoto lenses. A filter can't paint your subject; choose images with a strong accent colour. **Calibrated to reference frames.**"],
+        ["1965  The Sound of Music", "2025 restoration", "Todd-AO 65mm, 2.20. The 2025 restoration (8K from the negative) has lush greens, bright blue skies, fine tight grain and deep blacks. Home-video grades differ a lot; see the 70mm variant. **Calibrated to reference frames.**"],
+        ["1965  The Sound of Music", "original 70mm impression", "in70mm.com describes the original 70mm prints as sharp but soft and almost pastel, unlike the oversaturated Blu-ray."],
+        ["1966  The Good, the Bad and the Ugly", "", "Techniscope (2-perf, enlarged to scope), Technicolor IB prints: medium-strong organic grain, warm dusty ochres, pale blue skies, hard midday sun, some crushed shadows. Grades vary widely by release; see the 2014 variant. **Calibrated to reference frames.**"],
+        ["1966  The Good, the Bad and the Ugly", "2014 'yellow' master", "The 2014 Blu-ray grade had a notorious mustard-yellow cast."],
+        ["1966  Andrei Rublev", "B&W", "Sovscope 2.35. Neutral, silvery B&W with a long mid-tone scale, deep but not crushed blacks, soft highlights. HD from a 35mm internegative; the two cuts differ in contrast. Stock undocumented. **Calibrated to reference frames.**"],
+        ["1966  Andrei Rublev", "colour epilogue (icons)", "The epilogue is Sovcolor (screening notes): warm, low-saturation ochres, golds and faded reds and blues of the icons, slightly soft."],
+        ["1967  Playtime", "", "65mm negative. Tati wanted colour that looked like black and white: greys, steel blues, black, with small red and green accents. Very fine grain, bright even low-contrast light. Aspect ratio sources conflict (about 1.70-1.85). **Calibrated to reference frames.**"],
+        ["1967  Playtime", "2014 master (yellow-green)", "The 2014 Criterion master had a yellow-green tint; the 2026 4K is more neutral."],
+        ["1967  Weekend", "", "Coutard used the fastest Eastmancolor and overdeveloped it to double its speed (Criterion booklet): heavy grain, lifted milky blacks, flat muddy daylight, with bold red, white and blue accents. Someone who saw 1960s prints recalls them as dark and muddy too. **Calibrated to reference frames.**"],
+        ["1968  Rosemary's Baby", "", "50-speed colour negative, 18mm and 25mm lenses for nearly everything, Technicolor IB prints. Soft, bright, natural daylight interiors in pale yellows, creams and pastel greens. Criterion 4K from the camera negative. **Calibrated to reference frames.**"],
+        ["1968  Rosemary's Baby", "flashed dream sequences", "The film was flashed for the dream sequences 'to soften colors and reduce contrast' (ASC)."],
+        ["1968  Planet of the Apes", "", "Panavision anamorphic, Color by DeLuxe, no special filters. Hard high sun, deep blue skies over tan and rust rock, slightly lifted blacks, noticeable grain (weakly sourced). Who made the current 4K master, and from what, is undocumented. **Calibrated to reference frames.**"],
+        ["1968  2001: A Space Odyssey", "", "Super Panavision 70, spherical, 2.20. Extremely fine grain, clean bright near-white sets under soft practical light, true black space, sparing saturated accents. The 2018 4K (8K scan of the negative) removed the old yellow push. **Calibrated to reference frames.**"],
+        ["1968  2001: A Space Odyssey", "Dawn of Man", "Front-projected: warm ochre, slightly lower contrast."],
+    ]},
+    {"title": "1970s", "rows": [
+        ["1971  Trafic", "", "Low confidence: colour process, stock and gauge are undocumented and aspect-ratio sources conflict (1.37 vs 1.85; the restoration is 1.37). The 2K restoration shows moderately saturated primaries, neutral-warm balance, flat overcast daylight, good blacks. **Calibrated to reference frames.**"],
+        ["1971  A Clockwork Orange", "", "1.66, lit mostly by practicals (bare photofloods in fixtures, fluorescent tubes): 'a really cold, stark style' (Alcott). Hard bright white sets, saturated accents, wide-angle distortion (a 9.8mm lens). Stock undocumented. **Calibrated to reference frames.**"],
+        ["1972  Solaris", "Earth (colour)", "Kodak colour negative, Sovscope 2.35: lush, green-dominant Earth scenes. The circulating HD is from a low-contrast print, so it is soft and grainy. **Calibrated to reference frames.**"],
+        ["1972  Solaris", "station (restrained colour)", "Cool steel-and-white station interiors with restrained colour. **Calibrated to reference frames.**"],
+        ["1972  Solaris", "monochrome (blue cast)", "The Kodak ran out partway through filming, so some scenes are B&W. DP Yusov told Criterion no blue tint was added, but the 2011 Blu-ray shows a blue cast. Disputed; set the tone amount to 0 for Yusov's version."],
+        ["1973  The Long Goodbye", "day (35% flash)", "Eastman 5254, post-flashed at Technicolor by scene: 10-15% night, 35% beach party, 50% Mexico (American Cinematographer). Pastel, muted, slightly blue: 'Pastels are for memory' (Zsigmond). The Kino 4K crushes some blacks, so its shadows are denser than a 1973 print; this preset is calibrated to that transfer and uses a lighter flash than the documented 35%. Raise Flashing for the 1973 print look. **Calibrated to reference frames.**"],
+        ["1973  The Long Goodbye", "night (15% flash + push)", "For night exteriors a 10% flash plus a one-stop push replaced a two-stop push (AC)."],
+        ["1973  The Long Goodbye", "Mexico (50% flash)", "The heaviest flash, 50%, for the final Mexico forest scenes."],
+        ["1974  The Conversation", "2024 restoration", "Muted, drab palette of greys, browns and off-greens, soft daylight, moderate contrast. The 2024 4K from the negative (graded to a director-approved print) runs noticeably cooler and tealer than 1974 prints likely did. **Calibrated to reference frames.**"],
+        ["1975  Jaws", "Amity summer", "Panavision anamorphic, Technicolor prints. Butler planned an 'Andrew Wyeth look' early, a sunny Fourth of July middle and a 'dreary' final hunt. Bright, slightly warm daylight, saturated sea and sky. Spielberg says the 4K looks better than 1975 projection. **Calibrated to reference frames.**"],
+        ["1975  Jaws", "final hunt (dreary)", "The last act is darker, flatter and greyer (Butler: 'ominous')."],
+        ["1975  The Mirror", "colour", "Imported Kodak colour, used sparingly: muted greens, greys, blues and browns, soft window light, near-clipping skies. Criterion 2K from the camera negative. **Calibrated to reference frames.**"],
+        ["1975  The Mirror", "monochrome (warm)", "About a third of the film is B&W. Current Criterion and RusCiCo-derived masters have a light sepia tinge; some older ones are neutral. Whether 1975 prints were toned is undocumented. **Calibrated to reference frames.**"],
+        ["1976  Taxi Driver", "", "Gritty grain, strong night blacks, sodium-orange and neon practicals, haloed wet streets; 'I let New York light itself' (Chapman). Sony 4K from the negative, matched to Scorsese-approved prints. **Calibrated to reference frames.**"],
+        ["1976  Taxi Driver", "climax (desaturated)", "For an R rating, the shootout's colour was muted in release prints, turning blood from bright red to reddish-brown (AFI). Chapman says the restoration partly brought the colour back."],
+        ["1977  Eraserhead", "", "Very high contrast: subjects lit in pools, everything else 'falling off steeply to black'. Neutral grey, crushed black floor, no bloom, grain heavier in some scenes. Exteriors only on overcast days. Criterion 4K from the negative. **Calibrated to reference frames.**"],
+        ["1979  Alien", "", "Kodak 5247 at 100 ASA, Panavision C-series anamorphics wide open at T2.3-2.8 (Vanlint). Heavy smoke, wet sets, practicals at very low levels: low-key, backlit, cool blue-green with warm pools. The 2019 4K is cooler and more neutral than older Blu-rays. **Calibrated to reference frames.**"],
+        ["1979  Stalker", "outside the Zone (sepia)", "Dense brown-amber, high-contrast monochrome. The 2017 Mosfilm 2K has a much heavier sepia than older DVDs. How the sepia was made is undocumented. **Calibrated to reference frames.**"],
+        ["1979  Stalker", "the Zone (colour)", "Muted, earthy colour dominated by moss greens and grey-browns, soft overcast light. The BFI's print is Orwocolor; whether the final negative was Kodak is disputed (Misek). **Calibrated to reference frames.**"],
+    ]},
+    {"title": "1980s", "rows": [
+        ["1980  The Long Good Friday", "", "Naturalistic overcast London locations, muted colour, blacks 'not the deepest'. The 2024 4K from the negative (Méheux-approved) skews slightly green and fixes the old pink skin. Stock undocumented. **Calibrated to reference frames.**"],
+        ["1980  The Shining", "Overlook interiors", "Normal development throughout and 'I didn't use any filters' (Alcott): bright, even, glossy, sharp. Warm amber interiors from practicals (dimmed 1000W chandeliers) with saturated reds. 2019 4K from the negative. **Calibrated to reference frames.**"],
+        ["1980  The Shining", "snow exteriors", "Cool blue snow scenes (full blue gel on the windows) against the warm interiors."],
+        ["1982  Blade Runner", "night streets", "Panavision anamorphic, low-contrast filters varied with light angle and smoke density, xenon shafts through smoke, heavy backlight, rain (AC). Lifted soft shadows around lights, bloomed highlights, streak flares. The Final Cut grade may be cooler than theatrical prints (unverified). **Calibrated to reference frames.**"],
+        ["1982  Blade Runner", "Tyrell interiors (amber)", "Warm amber-orange interiors."],
+        ["1983  Nostalghia", "colour (desaturated)", "A special print treatment at Technicolor Rome raised contrast and removed colour (Lanci): grey-dominant colour, underlit grey shadows, mist and steam. The 2022 4K recreated this digitally, and the '60% less colour' figure is indirect. **Calibrated to reference frames.**"],
+        ["1983  Nostalghia", "memory (monochrome, 2022 restoration)", "In the 2022 CSC 4K restoration the memory and Russia sections measure as neutral grey monochrome, not sepia (checked against reference frames). Lanci recalls the 1983 print as sepia; for that, use the sepia variant. **Calibrated to reference frames.**"],
+        ["1983  Nostalghia", "memory (sepia, as the 1983 print)", "Lanci: 'when we saw the print in sepia, we found it so interesting that we decided to keep it'. Higher contrast than the colour scenes."],
+    ]},
+]
+STOCK_ROWS = [
+        ["B&W orthochromatic (1910s-20s)", "", "Blind to red: reds and lips print near-black, blue skies go white. Silent-era release prints, usually several generations from the negative."],
+        ["B&W early panchromatic (1925-35)", "", "Red-sensitive but still blue-heavy: skies pale, skin a little dark and luminous."],
+        ["B&W studio panchromatic (1935-55)", "", "Classic Hollywood / Plus-X-type rendering: full grey scale, fine grain, deep but open blacks."],
+        ["B&W fast panchromatic (1955-80)", "", "Double-X / Tri-X-type fast stock: livelier grain, slightly harder contrast."],
+        ["B&W fast stills film, pushed (Nouvelle Vague)", "", "Fast still-camera film pushed a stop: coarse lively grain, greyish blacks in available light, abrupt highlight clipping."],
+        ["B&W newsreel / duplicate", "", "Contrasty multi-generation duplicate: harsh, grainy, blocked blacks."],
+        ["B&W home movie reversal (9.5mm / 16mm, 1920s-50s)", "", "Reversal home-movie stock: bright, contrasty, slightly warm-black base."],
+        ["Technicolor two-colour (1922-35)", "", "Only two records: red-orange and blue-green. Skin goes peach-orange, skies and foliage turn teal, no true yellow or violet."],
+        ["Technicolor three-strip dye transfer (1935-55)", "", "Three B&W separation negatives printed by dye imbibition: pure, dense, saturated primaries with no colour grain."],
+        ["Early Eastmancolor negative (1950s)", "", "Single-strip chromogenic negative: softer, warmer, a little less saturated than three-strip."],
+        ["Eastmancolor neg + Technicolor IB print (1955-75)", "", "The classic 'Color by Technicolor' of the 50s-70s: chromogenic negative, dye-transfer print. Rich, dense, clean blacks."],
+        ["Eastman 50-speed negative, Eastman print (1962-68)", "", "Slow, fine-grained colour negative of the 60s (DeLuxe, Metrocolor prints): clean and natural."],
+        ["Eastman 100-speed negative (1968-74)", "", "The first faster colour negative: grainier and a touch muted, the look of early-70s New Hollywood."],
+        ["Eastman improved 100-speed negative (1974-83)", "", "Late-70s colour negative: fuller colour and finer grain than the early 100-speed stock."],
+        ["Sovcolor / ORWO-type (Agfa lineage)", "", "Eastern-bloc chromogenic stock: muted, earthy, less clean dye separation. Approximation."],
+        ["Kodachrome reversal (8mm / 16mm / slides)", "", "Deep blacks, rich reds and blues, narrow latitude, very fine grain."],
+        ["Ektachrome reversal (Super 8 / 16mm, 1970s)", "", "Cooler, bluer reversal with lighter blacks and busier grain."],
+        ["Faded Eastmancolor print (magenta shift)", "", "A 1970s release print decades later: cyan and yellow dyes gone, leaving pink-magenta and weak blacks."],
+        ["Colour negative, silver retained (bleach bypass)", "", "Silver left in the print: desaturated, harder contrast, dense blacks, metallic sheen."],
+]
+FORMAT_ROWS = [
+        ["35mm silent, full aperture 1.33", "24.9 mm frame", ""],
+        ["35mm Academy 1.37", "22 mm frame", ""],
+        ["35mm flat 1.66 (European)", "22 mm frame", ""],
+        ["35mm flat 1.85", "22 mm frame", ""],
+        ["VistaVision (8-perf) 1.85", "37.7 mm frame", ""],
+        ["35mm anamorphic (CinemaScope / Panavision) 2.35", "21.95 mm frame", ""],
+        ["Sovscope anamorphic 2.35", "21.95 mm frame", ""],
+        ["Techniscope 2-perf 2.35", "22 mm frame", ""],
+        ["65mm / 70mm (Todd-AO, Super Panavision 70) 2.20", "52.5 mm frame", ""],
+        ["65mm framed ~1.70-1.85 (Playtime)", "52.5 mm frame", ""],
+        ["16mm 1.37", "10.26 mm frame", ""],
+        ["9.5mm Pathé Baby 1.33", "8.2 mm frame", ""],
+        ["Regular 8mm 1.33", "4.8 mm frame", ""],
+        ["Super 8 1.36", "5.79 mm frame", ""],
+]
+
+ITEMS.append({
+    "slug": "filmlook",
+    "name": "FilmLook",
+    "kind": "UXP panel",
+    "app": "Photoshop",
+    "author": "Claude",
+    "status": "Working",
+    "folder": "FilmLook-Photoshop-Plugin",
+    "tagline": "Film emulation from 1920s tinted nitrate to 1980s anamorphic: "
+               "stocks, gauges, lenses, print wear and 70 film presets.",
+    "blurb":
+        "A small physical model of photochemical film rather than a stack of "
+        "grading tricks. Light goes through the lens (halation, diffusion, "
+        "smoke, anamorphic streaks, vignette, fringing), exposes the negative "
+        "records of the chosen stock (spectral sensitivity, so orthochromatic "
+        "stock turns red lips black), is printed through a characteristic "
+        "curve with grain added in exposure, and lands on print dyes with "
+        "their real impurities, printer lights, flashing, push processing, "
+        "silver retention, dye fade, tinting and toning. Grain, softness and "
+        "halation are sized in millimetres on the film frame, so Super 8 is "
+        "coarse and 70mm is fine at any image size. Film presets combine "
+        "those building blocks with settings from sourced research (American "
+        "Cinematographer, restoration notes, the DPs' own accounts), then "
+        "calibrated against about 770 Shotdeck frames of the current "
+        "transfers (contrast, black and white levels, colour casts by tonal "
+        "zone, saturation and grain). Each preset carries a note saying what "
+        "it rests on and whether it is calibrated. The result goes on a new layer; the photo is untouched.",
+    "facts": {
+        "version": "1.2.0",
+        "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
+        "plugin id": "com.simonmorse.filmlook",
+        "film presets": "71 (45 films), 49 calibrated to frames",
+    },
+    "quickstart": [
+        "Open **Plugins › FilmLook** and choose a film. The note under the "
+        "list says what the preset is based on.",
+        "Draw a marquee over part of the photo and press **Preview "
+        "selection** to see the look quickly on just that area.",
+        "Press **Render**. The look goes on a new *FilmLook ·* layer at the "
+        "top; **Strength** is that layer's opacity and can be changed "
+        "afterwards.",
+        "Adjust anything in the sections below, then **Re-render last** to "
+        "replace the previous result. Save combinations under **My presets**.",
+    ],
+    "controls": [
+        {"title": "Top of panel",
+         "rows": [
+             ["Film", "71 presets",
+              "Year, title and variant. Films that change look between "
+              "sections have variants: Nosferatu's tints, Kansas and Oz, "
+              "Tarkovsky's monochrome and colour, the Long Goodbye flash "
+              "levels."],
+             ["Strength", "0 – 100",
+              "Opacity of the result layer. Also updates the last render "
+              "live."],
+             ["Source", "Whole image / Selected layer",
+              "Whole image uses the merged picture (previous FilmLook layers "
+              "are hidden while it reads). Selected layer puts the result "
+              "directly above that layer."],
+             ["Frame", "No change / Black matte / Crop canvas",
+              "Matte blacks out the image outside the format's aspect ratio "
+              "and draws the gate corners and edge. Crop trims the canvas to "
+              "the aspect ratio after rendering."],
+             ["Preview selection", "",
+              "Renders only the marquee area, at full resolution and with "
+              "the same physical scales, onto a *FilmLook preview* layer."],
+             ["Re-render last", "",
+              "Deletes the previous FilmLook layer and renders again with "
+              "the current settings (same area if it was a preview)."],
+             ["New grain & dust", "",
+              "Rolls a new random seed for grain, dust and scratches."],
+         ]},
+        {"title": "Stock & process",
+         "rows": [
+             ["Stock", "18 stocks",
+              "Sets spectral response, dye set, curve, grain and colour "
+              "separation. See the stock list below."],
+             ["B&W filter", "Yellow, deep yellow, orange, red, green, blue",
+              "Camera filter on black-and-white stock: yellow darkens "
+              "skies a little, red a lot, green lightens foliage."],
+             ["Toning / Tinting", "7 tones, 9 tints",
+              "Toning colours the darks (sepia, selenium, iron blue, "
+              "copper). Tinting dyes the base and colours the lights "
+              "(silent-era amber, green, blue, rose)."],
+             ["Exposure", "-3 – +3 stops", "Exposure onto the negative."],
+             ["Contrast / Latitude", "gamma 0.5 – 2.2",
+              "Slope of the print-through curve; latitude softens the toe "
+              "and shoulder."],
+             ["Colour separation", "0 – 1.8",
+              "How distinct the colour records are; 1 is the stock as made."],
+             ["Black density / Base fog", "",
+              "Maximum print density (depth of black) and minimum density."],
+             ["Printer lights R / G / B", "±16 points",
+              "Lab timing, about 1/12 stop per point. + gives more of that "
+              "colour."],
+             ["Flashing", "0 – 1",
+              "Pre/post-flash of the negative: lifts shadows, mutes colour "
+              "(The Long Goodbye, Rosemary's Baby dreams)."],
+             ["Push / pull", "-1 – +3 stops",
+              "Forced development: more contrast, grain and fog."],
+             ["Silver retention", "0 – 1", "Bleach bypass."],
+             ["Dye fade", "0 – 1",
+              "Cyan and yellow dyes fading, leaving the pink-magenta of old "
+              "release prints."],
+         ]},
+        {"title": "Format & gate",
+         "rows": [
+             ["Gauge / format", "14 formats",
+              "Frame width, squeeze, resolving power, aspect and gate shape."],
+             ["Aspect ratio", "1.0 – 2.8", "Used by the matte and crop."],
+             ["Frame width", "mm",
+              "Sets the physical scale of grain, halation and softness."],
+             ["Resolving power", "0.2 – 3", "Multiplies the format's MTF."],
+             ["Gate corners / edge", "", "Rounded gate corners, e.g. Super 8."],
+             ["Iris / size / softness", "",
+              "Silent-era oval or circular iris vignette (Nosferatu, Joan "
+              "of Arc)."],
+         ]},
+        {"title": "Lens & light",
+         "rows": [
+             ["Lens", "8 presets",
+              "Clean prime, silent-era, studio glamour, wide, anamorphic, "
+              "70s zoom, smoke + low-con, home movie."],
+             ["Halation", "", "Red-orange glow around highlights."],
+             ["Diffusion / glow", "", "Pro-mist, gauze or fog filter bloom."],
+             ["Low-con / smoke", "", "Veiling glare lifting the shadows."],
+             ["Anamorphic streaks", "", "Horizontal blue flares from bright points."],
+             ["Vignette / Edge softness / Colour fringing", "", "Lens fall-off."],
+         ]},
+        {"title": "Grain, print condition, transfer grade",
+         "rows": [
+             ["Grain amount / size / colour", "",
+              "Two-scale grain in exposure; size in microns on the negative; "
+              "anamorphic grain is stretched horizontally."],
+             ["Condition", "6 presets", "Pristine restoration to archive dupe."],
+             ["Duplicate generations", "0 – 4",
+              "Each generation adds contrast, grain and softness."],
+             ["Dust / dirt / scratches / uneven density / stains", "",
+              "Print damage, drawn at image scale."],
+             ["Saturation / Black lift / White level / Warm-cool / "
+              "Green-magenta", "",
+              "A final video-style grade, for matching how a restoration "
+              "looks today (most B&W transfers keep whites well below pure "
+              "white)."],
+         ]},
+    ],
+    "sections": [
+        {"label": "film presets", "type": "reference", "data": FILM_GROUPS},
+        {"label": "stocks", "type": "reference",
+         "data": [{"title": "Processes", "rows": STOCK_ROWS}]},
+        {"label": "formats", "type": "reference",
+         "data": [{"title": "Gauges", "rows": FORMAT_ROWS}]},
+        {"label": "installing", "type": "steps", "data": INSTALL_STEPS},
+    ],
+    "workflow": [
+        {"title": "Preview on a selection",
+         "text": "A 24MP render takes roughly 10 – 20 seconds. Preview a "
+                 "marquee area while dialling in, then Render once."},
+        {"title": "Pick photos that suit the film",
+         "text": "Some looks are mostly production design: Red Desert's "
+                 "painted sets, Playtime's grey world, Blade Runner's smoke "
+                 "and neon. The preset supplies stock, format and palette "
+                 "tendency; the subject has to supply the rest."},
+        {"title": "Restorations differ",
+         "text": "Presets calibrated to Shotdeck frames match today's "
+                 "transfers, which can differ from the original release "
+                 "prints (Vertigo, The Good, the Bad and the Ugly, Playtime, "
+                 "Solaris, Stalker). Where this matters there is a second "
+                 "variant or a note."},
+    ],
+    "gotchas": [
+        "RGB documents only, 8 or 16-bit; 32-bit is refused.",
+        "Whole-image source reads the merged picture, so hide adjustment "
+        "layers you don't want baked in.",
+        "Crop canvas is a real canvas change (one undo step).",
+        "Don't double-click the .ccx; use the installer agent (see "
+        "installing).",
+    ],
+    "rebuild": [
+        "Source is in `FilmLook-Photoshop-Plugin`: `engine.js` (pixel "
+        "model), `presets.js` (stocks, formats, lenses, conditions, tints), "
+        "`films.js` (film presets with research notes), `calibration.js` "
+        "(per-film values fitted to reference frames), `main.js` and "
+        "`index.html` (panel).",
+        "To update: bump `version` in `manifest.json`, zip all seven files "
+        "at the archive root as `FilmLook.ccx` and run the installer agent "
+        "again.",
+        "Reference frames and the research notes live in *APA Content & "
+        "Marketing (1)/FilmLook-References* (outside Guides, so they are "
+        "not published).",
+    ],
+})
+
 ITEMS.append({
     "slug": "poster-pdf-export",
     "name": "Poster PDF Export",

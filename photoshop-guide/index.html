@@ -13,7 +13,7 @@
   <h1>adobe<br>tools</h1>
   <p class="hero-sub">process guide</p>
   <p class="hero-blurb">Panels, scripts and automations built for the Adobe applications. What every control does, how a file travels from the canvas out to whatever does the work and back again, and the things each one needs you to remember.</p>
-  <p class="hero-count">9 tools</p>
+  <p class="hero-count">10 tools</p>
 </header>
 <div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="app"><button class="f on" data-f="app" data-v="">all apps</button><button class="f" data-f="app" data-v="InDesign">indesign</button><button class="f" data-f="app" data-v="Photoshop">photoshop</button></div><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="UXP panel">uxp panel</button><button class="f" data-f="kind" data-v="Watch folder">watch folder</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
 <div class="index-list" id="grid">
@@ -73,9 +73,16 @@
   <span class="r-desc">Twenty-two dither algorithms, a dot-scale control and four colour modes, rendered to a new layer.</span>
   <span class="r-kind">photoshop</span>
   <span class="r-thumb"><img src="images/ditherpress.png" alt="" loading="lazy"></span>
+</a><a class="row" href="tools/filmlook.html"
+   data-app="Photoshop" data-kind="UXP panel" data-author="Claude" data-text="filmlook film emulation from 1920s tinted nitrate to 1980s anamorphic: stocks, gauges, lenses, print wear and 70 film presets. a small physical model of photochemical film rather than a stack of grading tricks. light goes through the lens (halation, diffusion, smoke, anamorphic streaks, vignette, fringing), exposes the negative records of the chosen stock (spectral sensitivity, so orthochromatic stock turns red lips black), is printed through a characteristic curve with grain added in exposure, and lands on print dyes with their real impurities, printer lights, flashing, push processing, silver retention, dye fade, tinting and toning. grain, softness and halation are sized in millimetres on the film frame, so super 8 is coarse and 70mm is fine at any image size. film presets combine those building blocks with settings from sourced research (american cinematographer, restoration notes, the dps&#x27; own accounts), then calibrated against about 770 shotdeck frames of the current transfers (contrast, black and white levels, colour casts by tonal zone, saturation and grain). each preset carries a note saying what it rests on and whether it is calibrated. the result goes on a new layer; the photo is untouched. photoshop uxp panel claude">
+  <span class="r-num">09</span>
+  <span class="r-name">filmlook</span>
+  <span class="r-desc">Film emulation from 1920s tinted nitrate to 1980s anamorphic: stocks, gauges, lenses, print wear and 70 film presets.</span>
+  <span class="r-kind">photoshop</span>
+  <span class="r-thumb"><img src="images/filmlook.png" alt="" loading="lazy"></span>
 </a><a class="row" href="tools/poster-pdf-export.html"
    data-app="InDesign" data-kind="Watch folder" data-author="Claude" data-text="poster pdf export drop a finished illustrator poster into a folder and five print-ready gracol pdfs appear on the desktop. the last five minutes of every poster used to be manual: overwrite `artwork.ai` on the crucial x9, open the indesign template that links to it, wait for the link to refresh, export six pages through the gelato preset, then rename the results. this does the lot from a single drag. a launchd agent watches two folders, one per template, asks for the poster&#x27;s name, and hands the job to indesign, which copies the artwork into place and exports pages 2 – 6 one at a time. verified byte-identical to a hand export: of the six data streams in each pdf, five match exactly and the sixth is the xmp packet holding the timestamp. indesign watch folder claude">
-  <span class="r-num">09</span>
+  <span class="r-num">10</span>
   <span class="r-name">poster pdf export</span>
   <span class="r-desc">Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.</span>
   <span class="r-kind">indesign</span>
@@ -88,7 +95,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>adobe</span>
   <span>process guide</span></div>
-  <div class="sf-col"><span>generated 2026-09-20</span>
+  <div class="sf-col"><span>generated 2026-09-27</span>
   <span>build_site.py</span></div>
 </footer>
 </body>
