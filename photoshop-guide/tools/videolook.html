@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>videolook — adobe</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">adobe</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">10</p>
+  <h1>videolook</h1>
+  <p class="ch-sub">Television and video looks from Baird&#x27;s 30 lines to DV: 405-line to PAL, NTSC and SECAM, Soviet, Japanese and pre-war systems, long-distance reception, tube cameras, Quad to VHS, discs, teletext and CRT sets.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/videolook.png" alt="VideoLook"></div><figcaption>videolook</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">10.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">The companion to FilmLook for television. It does not paint a look on: it turns the photo into a real video signal at the standard&#x27;s own resolution (575 lines of about 922 samples for PAL, sampled at four times the colour subcarrier), passes it through a camera, a transmission channel, a tape machine and any transfer, then decodes it with the chosen receiver, so cross-colour, dot crawl, NTSC hue errors, PAL desaturation, Hanover bars and SECAM streaks come out of the maths as they did in reality. A display stage then rebuilds the picture at document size with scan lines, shadow mask or aperture grille, glow and tube geometry, or as a clean frame-grab, or as a photograph of the screen. The numbers come from the standards themselves (ITU-R BT.470, the UK System I specification, FCC and SMPTE documents) and from BBC engineering sources: the 1964 BBC camera comparisons, the 1967 registration report, BBC training sheets on camera processing, tape and colour-under recording, receivers and the 1967 standards converter. Settings whose defaults are estimates are marked est. on the panel. Version 1.1 adds the receiving set as a stage of its own: a set built for another country&#x27;s system (French System L comes out as a rolling negative on a UK set), co-channel interference from a second picture, overload, and the set&#x27;s sync, so pictures tear and roll for real reasons. It also adds Soviet, East German, Japanese, Brazilian and Argentine systems, Hi-Vision, the pre-war systems (Baird 30 and 240 lines, Berlin and NBC 441, Moscow 343), CBS colour-wheel TV, Apollo 11, slow-scan TV, Pixelvision, CCTV, LaserDisc, CED, Canal+ scrambling and teletext. The result goes on a new layer; the photo is untouched.</p>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.1.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+, RGB, 8 or 16-bit</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.videolook</dd></div><div class="fact"><dt>looks</dt><dd>69 (10 built from specifications alone)</dd></div><div class="fact"><dt>folder</dt><dd>VideoLook-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">10.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Open <b>Plugins › VideoLook</b> and choose a look. The note under the list says what the chain is and what it rests on.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Draw a marquee and press <b>Preview selection</b> to see just that area. The whole frame still goes through the signal chain, so the preview is exact.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Press <b>Render</b>. The look goes on a new <i>VideoLook ·</i> layer at the top; <b>Strength</b> is that layer&#x27;s opacity.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Adjust any stage below and press <b>Re-render last</b>. Tick boxes on the section headers switch whole stages on and off. Save combinations under <b>My presets</b>.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">10.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">top of panel</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Look<span class="rng">69 looks in 11 groups</span></dt><dd>UK broadcast, US broadcast, France, Home video, Archive and transfers, Long-distance reception, USSR and Eastern Europe, Japan, Early television, Space, surveillance and toys, South America. Choosing a look sets every stage and ticks the ones it uses.</dd></div>
+<div class="ctl-row"><dt>Strength<span class="rng">0 – 100</span></dt><dd>Opacity of the result layer; updates the last render live.</dd></div>
+<div class="ctl-row"><dt>Source<span class="rng">Whole image / Selected layer</span></dt><dd>Whole image hides earlier VideoLook layers while it reads.</dd></div>
+<div class="ctl-row"><dt>Output<span class="rng">New layer / New document</span></dt><dd>A layer at document size, or a new document at the standard&#x27;s own size in square pixels (767×575 for PAL, 647×485 for NTSC).</dd></div>
+<div class="ctl-row"><dt>Frame<span class="rng">Matte / Crop canvas</span></dt><dd>The picture is 4:3 (5:4 for early 405-line, 16:9 for Hi-Vision, 1.15:1 for Berlin 441, 1:1 for slow-scan, 3:7 tall for Baird 30-line); the rest of the document is black, or the canvas is cropped to it.</dd></div>
+<div class="ctl-row"><dt>Shift image X / Y<span class="rng">pixels</span></dt><dd>Moves the photo inside the picture: + X right, + Y down.</dd></div>
+<div class="ctl-row"><dt>Implied motion<span class="rng">pixels per field, degrees</span></dt><dd>A still has no movement; this supplies it. It brings out interlace combing, tube lag and comet tails, 3:2 pulldown and converter double images. <b>Only the selection moves</b> makes the selection the moving subject.</dd></div>
+<div class="ctl-row"><dt>New noise</dt><dd>New random seed for noise, dropouts and grain.</dd></div>
+</dl>
+<h3 class="sub">camera</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Camera / pickup<span class="rng">11 types</span></dt><dd>Emitron, CPS Emitron, image orthicon (B&amp;W and 3-tube colour), vidicon, 3-tube Plumbicon, 1964 four-tube, EMI 2001, Saticon camcorder, broadcast 3-CCD, consumer 1-CCD, DV 3-CCD, intermediate film (Baird / Fernseh), Apollo lunar camera, PXL-2000, CCTV and Portapak. Each sets the controls below.</dd></div>
+<div class="ctl-row"><dt>Exposure<span class="rng">−2 – +2.5 stops</span></dt><dd>Pushes highlights into the tube&#x27;s knee or the CCD&#x27;s clip.</dd></div>
+<div class="ctl-row"><dt>Edge sharpening<span class="rng">0 – 1.5</span></dt><dd>BBC-style contour correction: 3-tap, from green, added equally to R, G and B so the halos are neutral; off in the darks. The amount is an estimate.</dd></div>
+<div class="ctl-row"><dt>Signal-to-noise<span class="rng">20 – 60 dB</span></dt><dd>Camera noise, rising with frequency on photoconductive tubes.</dd></div>
+<div class="ctl-row"><dt>Lag / Comet tails</dt><dd>Trails behind moving bright objects (needs implied motion).</dd></div>
+<div class="ctl-row"><dt>Image-orthicon halo</dt><dd>Dark ring round bright objects. Its size is an estimate.</dd></div>
+<div class="ctl-row"><dt>Red / Blue registration<span class="rng">−150 – +150 ns</span></dt><dd>Colour tubes out of register. The BBC&#x27;s 1967 tolerance was 25 ns for 3-tube cameras (0.05% of the width) and 50 ns for a 4-tube camera&#x27;s colour tubes.</dd></div>
+</dl>
+<h3 class="sub">standard &amp; colour</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Television standard<span class="rng">26 systems</span></dt><dd>625 PAL (UK I, Europe B/G/H), 525 NTSC (US, Japan), SECAM (France L, USSR D/K, East Germany B/G), PAL-M, PAL-N, 405-line, 819-line (France E, Belgium F), 625 and 525 black and white, Soviet 625 and 343, Berlin and NBC 441, Baird 240 and 30, CBS field-sequential colour, Apollo 320, slow-scan 120, Hi-Vision MUSE, component 625/525.</dd></div>
+<div class="ctl-row"><dt>Picture shape<span class="rng">4:3 / 5:4 / 16:9</span></dt><dd>5:4 was 405-line&#x27;s shape until April 1950.</dd></div>
+<div class="ctl-row"><dt>NTSC colour coding<span class="rng">I/Q or equal-band</span></dt><dd>FCC I/Q, or SMPTE 170M equal-band.</dd></div>
+</dl>
+<h3 class="sub">channel</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Route<span class="rng">Studio / Aerial / Satellite FM / D-MAC</span></dt><dd>Satellite FM is Sky on Astra (PAL over FM, sparklies on a weak dish); D-MAC is BSB (no subcarrier, so no cross-colour).</dd></div>
+<div class="ctl-row"><dt>Signal-to-noise<span class="rng">10 – 60 dB</span></dt><dd>Snow. The US TASO grades: 44 excellent, 34 fine, 27 passable, 23 marginal, 17 inferior.</dd></div>
+<div class="ctl-row"><dt>Ghost<span class="rng">delay, strength, type</span></dt><dd>Multipath echo: 1 µs is about 2% of the picture width; positive, inverted or edge-like depending on its RF phase.</dd></div>
+<div class="ctl-row"><dt>Interference spots</dt><dd>Impulse noise: white spots on 405, 819 and French L, dark on the others.</dd></div>
+<div class="ctl-row"><dt>Co-channel station<span class="rng">strength, offset, position</span></dt><dd>A second station on the same channel (long-distance reception): it shows through with its own sync bars, striped by the few-kHz carrier offset. The second picture is the photo mirrored, or a layer named <i>second picture</i>.</dd></div>
+<div class="ctl-row"><dt>Scrambling<span class="rng">None / Discret 11</span></dt><dd>Canal+ from 1984: each line delayed by 0, 0.9 or 1.8 µs at random.</dd></div>
+</dl>
+<h3 class="sub">recording</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Format<span class="rng">24 formats</span></dt><dd>2-inch Quad (high and low band), 1-inch B and C, U-matic (LB, HB, SP), Betacam, Betacam SP, MII, VHS (SP, LP, EP), S-VHS, Betamax, Video8, Hi8, V2000, Philips VCR, D1, Digital Betacam, D2/D3, DV, DVCPRO.</dd></div>
+<div class="ctl-row"><dt>Recorded<span class="rng">At the studio / At home</span></dt><dd>Studio tape goes before transmission; a home recording is made of the received, noisy signal.</dd></div>
+<div class="ctl-row"><dt>Copy generations<span class="rng">1 – 5</span></dt><dd>Each copy adds tape noise and smear again.</dd></div>
+<div class="ctl-row"><dt>Timebase wobble, Dropouts, Head-switch lines, Tracking error</dt><dd>Domestic machine faults. The amounts are estimates.</dd></div>
+<div class="ctl-row"><dt>Quad head banding</dt><dd>Per-head bands every 16 lines, with colour errors growing across the picture.</dd></div>
+</dl>
+<h3 class="sub">transfer</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Standards conversion<span class="rng">Optical / BBC 1967 / Digital / Motion-compensated</span></dt><dd>Re-codes to the target standard. The BBC 1967 field store blends one field in five and insets the picture in a black border.</dd></div>
+<div class="ctl-row"><dt>Telerecording<span class="rng">Suppressed field / Stored field / US kinescope</span></dt><dd>Video filmed off a monitor: fewer lines, film grain, ~40:1 range. The result is the film.</dd></div>
+<div class="ctl-row"><dt>Telecine<span class="rng">Clean / 3:2 mixed frame</span></dt><dd>Flying-spot film scanner in place of the camera. Run FilmLook first for the film stock.</dd></div>
+<div class="ctl-row"><dt>Tape played on another system<span class="rng">PAL-60 / NTSC 4.43 / SECAM on PAL</span></dt><dd>American tapes on UK machines, and SECAM on a PAL-only set (black and white with dots).</dd></div>
+</dl>
+<h3 class="sub">decoder &amp; set</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Luma/colour separation<span class="rng">Notch, low-pass, comb, none</span></dt><dd>A notch gives cross-colour on fine detail; a comb removes it on still pictures; none is a black-and-white set, which shows the subcarrier as dots.</dd></div>
+<div class="ctl-row"><dt>PAL decoder<span class="rng">Delay line / Simple</span></dt><dd>All British sets had the delay line by 1970, so phase errors only reduce saturation; simple PAL shows Hanover bars.</dd></div>
+<div class="ctl-row"><dt>Phase error / Differential phase<span class="rng">degrees</span></dt><dd>NTSC hue errors (&quot;Never The Same Colour&quot;); the PAL equivalent is lost saturation.</dd></div>
+<div class="ctl-row"><dt>Set controls</dt><dd>Sharpness, contrast, brightness, colour, overscan.</dd></div>
+<div class="ctl-row"><dt>Set built for<span class="rng">same / UK / Dutch-German / French / Soviet</span></dt><dd>A set for another system gets that system&#x27;s carrier levels wrong: French System L shows as a negative on a UK set, with no colour, and loses sync; other sound carriers leave patterning.</dd></div>
+<div class="ctl-row"><dt>Vertical hold, Roll position, Horizontal hold, Line lock</dt><dd>The set&#x27;s own timebases: a sync separator, a flywheel line oscillator and a field oscillator. A clean signal locks and is unchanged; a wrong or weak one tears and rolls. The loop figures are estimates.</dd></div>
+<div class="ctl-row"><dt>Overload (lockout)<span class="rng">0 – 1</span></dt><dd>Too strong a signal: sync crushed, picture partly negative.</dd></div>
+</dl>
+<h3 class="sub">display &amp; view</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Tube<span class="rng">B&amp;W / Delta-gun / Slot mask / Trinitron / colour wheel / P7</span></dt><dd>The phosphor pattern, sized from the screen size. P7 is the radar tube used for slow-scan TV: a blue flash, then a yellow-green afterglow.</dd></div>
+<div class="ctl-row"><dt>Phosphors, White point, Tube gamma<span class="rng">EBU / SMPTE C / 1953 / Japanese; D65 / 9300 K / 9300 K + 27 MPCD</span></dt><dd>US sets often ran at 9300 K and Japanese sets at 9300 K + 27 MPCD; no UK figure was found, so D65 is the default.</dd></div>
+<div class="ctl-row"><dt>Round tube face</dt><dd>For round tubes: the KVN-49 and radar tubes.</dd></div>
+<div class="ctl-row"><dt>Mask, Scan lines, Blooming, Glow, Curvature, Corners</dt><dd>Mask and scan lines draw only where the image has enough pixels, and fade out rather than making moiré on small images.</dd></div>
+<div class="ctl-row"><dt>View<span class="rng">Frame-grab / Screen close-up / Photo of the screen / Magnifying lens / Televisor</span></dt><dd>Photo exposure below one field records only part of the scan, so a band is brighter. The lens is the KVN-49&#x27;s water-filled magnifier; the Televisor is Baird&#x27;s neon lamp and spinning disc.</dd></div>
+</dl>
+<h3 class="sub">overlay</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Overlay<span class="rng">Teletext / Date-time stamp</span></dt><dd>Teletext is drawn by the set after the decoder: mixed over the picture, as a full page, or as boxed subtitles. The stamp is burned in before recording, so the tape softens it.</dd></div>
+<div class="ctl-row"><dt>Text</dt><dd>Colours with {red} {green} {yellow} {blue} {magenta} {cyan} {white}, double height with {dh}, boxes with {box}...{/box}; 40 characters a line. The font is VideoLook&#x27;s own.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">10.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">film on television</h3><p>For 1970s drama exteriors or any film shown on TV, render the FilmLook stock first, then apply VideoLook&#x27;s telecine look to the result.</p>
+<h3 class="sub">long-distance reception</h3><p>Summer lift, French TV on a UK set, Sporadic-E: pick the look, then move Co-channel strength, Roll position and Horizontal hold, and press New noise for another moment. For a real second station, add a layer named <i>second picture</i>.</p>
+<h3 class="sub">evidence</h3><p>Ten looks (Alexandra Palace 1937, 405-line at home, US live 1950, French 819-line, Moscow 343, Baird 240, Berlin and NBC 441, CBS colour, Belgian 819) are built from the specifications alone, because no authentic pictures survive. The rest are research-based and can be calibrated against reference frames.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">10.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Large documents take a while: a 24-megapixel render with a CRT view is roughly 10–20 seconds. Preview selection is quicker.</li><li>The photo is treated as sRGB; convert documents in other profiles first.</li><li>A still cannot show movement: the 60-field &#x27;video look&#x27; of US sitcoms, dot crawl moving and interlace flicker are not there. Implied motion shows what a single frame of movement would look like.</li><li>32-bit documents are not supported.</li><li>Hi-Vision has no camera stage (HD cameras aren&#x27;t modelled) and needs Implied motion with &#x27;Only the selection moves&#x27; to show its motion blur.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">10.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>Source and research: the plugin folder, plus VideoLook-References/_research in the APA project (standards reports, BBC documents and notes).</p>
+<p>The engine is the vl_*.js files; test harness and standards tests are kept with the build notes.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="filmlook.html"><span>previous</span>filmlook</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="poster-pdf-export.html"><span>next</span>poster pdf export</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>adobe</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-09-28</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

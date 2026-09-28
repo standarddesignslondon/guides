@@ -8,7 +8,7 @@
   "noun_plural": "tools",
   "page_dir": "tools"
  },
- "generated": "2026-09-27",
+ "generated": "2026-09-28",
  "items": [
   {
    "num": "01",
@@ -129,6 +129,19 @@
   },
   {
    "num": "10",
+   "slug": "videolook",
+   "name": "VideoLook",
+   "tagline": "Television and video looks from Baird's 30 lines to DV: 405-line to PAL, NTSC and SECAM, Soviet, Japanese and pre-war systems, long-distance reception, tube cameras, Quad to VHS, discs, teletext and CRT sets.",
+   "url": "tools/videolook.html",
+   "image": "images/videolook.png",
+   "facets": {
+    "app": "Photoshop",
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "11",
    "slug": "poster-pdf-export",
    "name": "Poster PDF Export",
    "tagline": "Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.",

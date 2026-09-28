@@ -13,7 +13,7 @@
   <h1>adobe<br>tools</h1>
   <p class="hero-sub">process guide</p>
   <p class="hero-blurb">Panels, scripts and automations built for the Adobe applications. What every control does, how a file travels from the canvas out to whatever does the work and back again, and the things each one needs you to remember.</p>
-  <p class="hero-count">10 tools</p>
+  <p class="hero-count">11 tools</p>
 </header>
 <div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="app"><button class="f on" data-f="app" data-v="">all apps</button><button class="f" data-f="app" data-v="InDesign">indesign</button><button class="f" data-f="app" data-v="Photoshop">photoshop</button></div><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="UXP panel">uxp panel</button><button class="f" data-f="kind" data-v="Watch folder">watch folder</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
 <div class="index-list" id="grid">
@@ -80,9 +80,16 @@
   <span class="r-desc">Film emulation from 1920s tinted nitrate to 1980s anamorphic: stocks, gauges, lenses, print wear and 70 film presets.</span>
   <span class="r-kind">photoshop</span>
   <span class="r-thumb"><img src="images/filmlook.png" alt="" loading="lazy"></span>
+</a><a class="row" href="tools/videolook.html"
+   data-app="Photoshop" data-kind="UXP panel" data-author="Claude" data-text="videolook television and video looks from baird&#x27;s 30 lines to dv: 405-line to pal, ntsc and secam, soviet, japanese and pre-war systems, long-distance reception, tube cameras, quad to vhs, discs, teletext and crt sets. the companion to filmlook for television. it does not paint a look on: it turns the photo into a real video signal at the standard&#x27;s own resolution (575 lines of about 922 samples for pal, sampled at four times the colour subcarrier), passes it through a camera, a transmission channel, a tape machine and any transfer, then decodes it with the chosen receiver, so cross-colour, dot crawl, ntsc hue errors, pal desaturation, hanover bars and secam streaks come out of the maths as they did in reality. a display stage then rebuilds the picture at document size with scan lines, shadow mask or aperture grille, glow and tube geometry, or as a clean frame-grab, or as a photograph of the screen. the numbers come from the standards themselves (itu-r bt.470, the uk system i specification, fcc and smpte documents) and from bbc engineering sources: the 1964 bbc camera comparisons, the 1967 registration report, bbc training sheets on camera processing, tape and colour-under recording, receivers and the 1967 standards converter. settings whose defaults are estimates are marked est. on the panel. version 1.1 adds the receiving set as a stage of its own: a set built for another country&#x27;s system (french system l comes out as a rolling negative on a uk set), co-channel interference from a second picture, overload, and the set&#x27;s sync, so pictures tear and roll for real reasons. it also adds soviet, east german, japanese, brazilian and argentine systems, hi-vision, the pre-war systems (baird 30 and 240 lines, berlin and nbc 441, moscow 343), cbs colour-wheel tv, apollo 11, slow-scan tv, pixelvision, cctv, laserdisc, ced, canal+ scrambling and teletext. the result goes on a new layer; the photo is untouched. photoshop uxp panel claude">
+  <span class="r-num">10</span>
+  <span class="r-name">videolook</span>
+  <span class="r-desc">Television and video looks from Baird&#x27;s 30 lines to DV: 405-line to PAL, NTSC and SECAM, Soviet, Japanese and pre-war systems, long-distance reception, tube cameras, Quad to VHS, discs, teletext and CRT sets.</span>
+  <span class="r-kind">photoshop</span>
+  <span class="r-thumb"><img src="images/videolook.png" alt="" loading="lazy"></span>
 </a><a class="row" href="tools/poster-pdf-export.html"
    data-app="InDesign" data-kind="Watch folder" data-author="Claude" data-text="poster pdf export drop a finished illustrator poster into a folder and five print-ready gracol pdfs appear on the desktop. the last five minutes of every poster used to be manual: overwrite `artwork.ai` on the crucial x9, open the indesign template that links to it, wait for the link to refresh, export six pages through the gelato preset, then rename the results. this does the lot from a single drag. a launchd agent watches two folders, one per template, asks for the poster&#x27;s name, and hands the job to indesign, which copies the artwork into place and exports pages 2 – 6 one at a time. verified byte-identical to a hand export: of the six data streams in each pdf, five match exactly and the sixth is the xmp packet holding the timestamp. indesign watch folder claude">
-  <span class="r-num">10</span>
+  <span class="r-num">11</span>
   <span class="r-name">poster pdf export</span>
   <span class="r-desc">Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.</span>
   <span class="r-kind">indesign</span>
@@ -95,7 +102,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>adobe</span>
   <span>process guide</span></div>
-  <div class="sf-col"><span>generated 2026-09-27</span>
+  <div class="sf-col"><span>generated 2026-09-28</span>
   <span>build_site.py</span></div>
 </footer>
 </body>
