@@ -1485,7 +1485,7 @@ ITEMS.append({
         "LaserDisc, CED, Canal+ scrambling and teletext. The result goes on a new "
         "layer; the photo is untouched.",
     "facts": {
-        "version": "1.1.2",
+        "version": "1.1.3",
         "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
         "plugin id": "com.simonmorse.videolook",
         "looks": "74 (10 built from specifications alone)",
@@ -1647,7 +1647,7 @@ ITEMS.append({
               "shadow, VHS release, Dutch TV, Channel 4, DVD 4-colour bitmap, early black "
               "box), or by the set (US Line 21 closed captions). The BBC's own face, TKST, "
               "isn't available: Rockwell stands in. Font, italic, size, colour, edge, "
-              "position and case can all be changed."],
+              "position (bottom, middle for titles, or top) and case can all be changed."],
              ["Overlay", "Teletext / Date-time stamp",
               "Teletext is drawn by the set after the decoder: mixed over the picture, as "
               "a full page, or as boxed subtitles. The stamp is burned in before "

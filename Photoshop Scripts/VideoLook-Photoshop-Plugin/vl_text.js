@@ -198,7 +198,8 @@ function rasterFallback(lines, sizePx, italic) {
 // Stack the lines centred at the bottom (or top) of the picture: returns a document-size coverage map and line rectangles
 function placeSubtitle(bitmaps, W, H, rect, sizePx, st) {
   const cov = new Float32Array(W * H), rects = [], pitch = sizePx * (st.lineSpacing || 1.3), n = bitmaps.length, margin = 0.075 * rect.h; // safe-area margin [EST]
-  const firstBase = st.position === "top" ? rect.y + margin + sizePx : rect.y + rect.h - margin - sizePx * 0.3 - (n - 1) * pitch;
+  // middle: the block of lines centred on the picture, cap height centred on each line (~0.35 x size above the baseline)
+  const firstBase = st.position === "top" ? rect.y + margin + sizePx : st.position === "middle" ? rect.y + rect.h / 2 - (n - 1) * pitch / 2 + sizePx * 0.35 : rect.y + rect.h - margin - sizePx * 0.3 - (n - 1) * pitch;
   bitmaps.forEach((b, k) => {
     if (!b) return;
     const baseY = firstBase + k * pitch, top = Math.round(baseY - b.base), left = Math.round(rect.x + (rect.w - b.w) / 2);
@@ -250,7 +251,7 @@ function closedCaptions(grid, g, o) {
   const areaW = ns * 0.8, areaH = nl * 0.8, x0 = (ns - areaW) / 2, y0 = (nl - areaH) / 2, cw = areaW / 32, rh = areaH / 15, [R, G, B] = grid;
   const italic = o.italic === "on";
   lines.forEach((line, k) => {
-    const row = 14 - (lines.length - 1 - k), col0 = Math.floor((32 - line.length) / 2);
+    const pos = o.position || "bottom", row = pos === "top" ? 1 + k : pos === "middle" ? 7 - Math.floor((lines.length - 1) / 2) + k : 14 - (lines.length - 1 - k), col0 = Math.floor((32 - line.length) / 2);
     const text = " " + line + " "; // a leading and trailing space cell, as caption encoders sent
     [...text].forEach((ch, j) => {
       const cx0 = x0 + (col0 - 1 + j) * cw, cy0 = y0 + row * rh, gl = glyph(ch);

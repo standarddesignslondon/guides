@@ -168,7 +168,7 @@ const SECTIONS = [
         { kind: "select", id: "subEdge", label: "Edge", path: "overlay.edge", options: () => [["style", "As the style"], ["none", "None"], ["outline", "Black edge"], ["shadow", "Drop shadow"], ["softshadow", "Soft shadow"], ["box", "Black box"], ["ghostbox", "See-through box"], ["greylabel", "Grey label (BBC)"], ["halo", "Laser halo (cinema)"], ["ragged", "Ragged etching (cinema)"], ["bitmap4", "DVD 4-colour bitmap"]] },
         { kind: "slider", id: "subStr", label: "Edge strength", path: "overlay.strength", min: 0, max: 1.5, step: 0.01, est: true },
         { kind: "select", id: "subStage", label: "Added", path: "overlay.stage", options: () => [["style", "As the style"], ["film", "On the film print"], ["studio", "At the studio / on the master"], ["set", "By the set / player"]] },
-        { kind: "select", id: "subPos", label: "Position", path: "overlay.position", options: () => [["bottom", "Bottom"], ["top", "Top"]] },
+        { kind: "select", id: "subPos", label: "Position", path: "overlay.position", options: () => [["bottom", "Bottom"], ["middle", "Middle"], ["top", "Top"]] },
         { kind: "select", id: "subCaps", label: "Case", path: "overlay.caps", options: () => [["style", "As the style"], ["typed", "As typed"], ["caps", "ALL CAPITALS"]] },
         { kind: "select", id: "ovMode", label: "Teletext display", path: "overlay.mode", options: () => [["mix", "Mixed over the picture"], ["page", "Full page (black)"], ["subtitle", "Boxed subtitles"]] },
         { kind: "select", id: "ovCol", label: "Subtitle colour", path: "overlay.colour", options: () => [["white", "White"], ["yellow", "Yellow"], ["cyan", "Cyan"], ["green", "Green"]] },
