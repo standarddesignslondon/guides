@@ -31,7 +31,7 @@ const BASE = {
         cochannel: { ratio: 0, offsetHz: 10400, dx: 0.31, dy: 0.37, source: "mirror" } },
     receiver: { standard: "same", hold: "auto", vRoll: 0.4, hGain: 0.05, hFree: 0, overload: 0 },
     overlay: { kind: "none", mode: "mix", text: "", header: "", colour: "white", pos: "bl",
-        style: "arial_shadow", font: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", position: "bottom", caps: "style", strength: 1 },
+        style: "arial_shadow", font: "", fontFamily: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", position: "bottom", caps: "style", strength: 1 },
     recording: { format: "none", position: "studio", generations: 1, tracking: 0, trackingPos: 0.6 },
     transfer: { type: "none", method: "bbc1967", target: "PAL-I", gauge: 16, shutterBar: 0, mode: "pal60", pulldown: "clean", lag: 0, contrast: 1 },
     decoder: { separation: "notch", palMode: "delay", ntscDemod: "equiband", phaseErr: 0, diffPhase: 0 },
@@ -156,9 +156,12 @@ const SECTIONS = [
         { kind: "slider", id: "pgrain", label: "Photo grain", path: "view.grain", min: 0, max: 1.5, step: 0.01 }
     ], hint: "Photo exposure below 1 means the shutter was open for less than one field (1/50 s in the UK), so only part of the picture is bright." },
     { key: "overlay", title: "Overlay", open: false, items: [
-        { kind: "select", id: "ovKind", label: "Overlay", path: "overlay.kind", options: () => [["none", "(none)"], ["subtitle", "Subtitles"], ["teletext", "Teletext (set's decoder)"], ["timestamp", "Date/time stamp (recorded)"]] },
-        { kind: "select", id: "subStyle", label: "Subtitle style", path: "overlay.style", options: () => Object.keys(TXT.SUB_STYLES).map(k => [k, TXT.SUB_STYLES[k].label]), onChange: () => { Object.assign(st.overlay, { font: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", caps: "style" }); syncUI(); } },
-        { kind: "text", id: "subFont", label: "Font (PostScript name)", path: "overlay.font" },
+        { kind: "select", id: "ovKind", label: "Overlay", path: "overlay.kind", options: () => [["none", "(none)"], ["subtitle", "Subtitles"], ["teletext", "Teletext (set's decoder)"], ["timestamp", "Date/time stamp (recorded)"]], onChange: () => { rebuildOptions("subFam"); rebuildOptions("subFace"); } },
+        { kind: "select", id: "subStyle", label: "Subtitle style", path: "overlay.style", options: () => Object.keys(TXT.SUB_STYLES).map(k => [k, TXT.SUB_STYLES[k].label]), onChange: () => { Object.assign(st.overlay, { font: "", fontFamily: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", caps: "style" }); rebuildOptions("subFam"); rebuildOptions("subFace"); syncUI(); } },
+        { kind: "select", id: "subFam", label: "Font family", path: "overlay.fontFamily", options: () => [["", "(the style's own font)"]].concat(Object.keys(loadFonts()).sort((a, b) => a.localeCompare(b)).map(f => [f, f])),
+          onChange: () => { const faces = loadFonts()[st.overlay.fontFamily] || []; const pick = faces.find(f => /^(regular|roman|book|medium)$/i.test(f[1])) || faces[0]; st.overlay.font = pick ? pick[0] : ""; rebuildOptions("subFace"); } },
+        { kind: "select", id: "subFace", label: "Font style", path: "overlay.font", options: () => { const faces = loadFonts()[st.overlay.fontFamily] || []; return faces.length ? faces.map(([ps, sty]) => [ps, sty]) : [["", "(the style's own font)"]]; } },
+        { kind: "text", id: "subFont", label: "or PostScript name", path: "overlay.font" },
         { kind: "select", id: "subItal", label: "Italic", path: "overlay.italic", options: () => [["style", "As the style"], ["on", "Faux italic on"], ["off", "Off"]] },
         { kind: "slider", id: "subSize", label: "Size (% of picture height)", get: () => 100 * (st.overlay.size || TXT.subStyle(st.overlay).size), set: (v) => { st.overlay.size = v / 100; }, min: 2, max: 10, step: 0.1 },
         { kind: "select", id: "subCol", label: "Subtitle colour", path: "overlay.subColour", options: () => [["style", "As the style"], ["white", "White"], ["white87", "87% white (Dutch)"], ["yellow", "Yellow"], ["cyan", "Cyan"]] },
@@ -295,7 +298,7 @@ function applyLook(id) {
     if (!(l.s.aspect)) st.aspect = 4 / 3;
     if (l.s.motion) { $("motionPx").value = "" + (l.s.motion.px || 0); $("motionAngle").value = "" + (l.s.motion.angle || 0); }
     currentLook = l.id; modified = false;
-    rebuildOptions("trMethod"); syncUI(); saveState();
+    rebuildOptions("trMethod"); rebuildOptions("subFace"); syncUI(); saveState();
 }
 
 // ------------------------------------------------------------------ persistence
@@ -345,6 +348,15 @@ async function getSelectionMask(doc, W, H) {
         for (let y = Math.max(0, b.top); y < Math.min(H, b.bottom); y++) for (let x = Math.max(0, b.left); x < Math.min(W, b.right); x++) m[y * W + x] = 1;
     }
     return m;
+}
+// Installed fonts from Photoshop, grouped by family: { family: [[postScriptName, style], ...] } (TextFont API, PS 23+)
+let FONTS = null;
+function loadFonts() {
+    if (FONTS) return FONTS;
+    const out = {};
+    try { const n = app.fonts.length; for (let i = 0; i < n; i++) { const f = app.fonts[i]; (out[f.family] = out[f.family] || []).push([f.postScriptName, f.style]); } FONTS = out; }
+    catch (e) { return {}; }
+    return FONTS;
 }
 /* Subtitles: typeset each line as a temporary Photoshop text layer (createTextLayer, PS 24.2+), rasterise it, read its
    pixels as coverage, delete it. The first installed font of the style's list is used; none found = VideoLook's dot font. */
@@ -559,7 +571,7 @@ $("presetSel").addEventListener("change", () => {
     const p = presets[name];
     st = mergeDeep(deep(BASE), p.st); enabled = Object.assign({}, p.enabled || {}); currentLook = p.look || ""; modified = true;
     if (p.motion) { $("motionPx").value = p.motion.px; $("motionAngle").value = p.motion.angle; $("motionSel").checked = !!p.motion.sel; }
-    rebuildOptions("trMethod"); syncUI(); saveState();
+    rebuildOptions("trMethod"); rebuildOptions("subFace"); syncUI(); saveState();
     $("presetName").value = name; setStatus("Loaded preset “" + name + "”.");
 });
 $("presetSaveBtn").addEventListener("click", async () => {
@@ -595,6 +607,7 @@ $("strength").addEventListener("change", async () => {
 
 if (!loadState()) applyLook(LOOKS.find(l => l.id === "uk-colour-studio-1975").id);
 rebuildOptions("trMethod");
+rebuildOptions("subFace");
 syncUI();
 loadPresets();
 setStatus("Ready. " + LOOKS.length + " looks; " + LOOKS.filter(l => l.evidence === "spec").length + " built from specifications alone.");

@@ -1485,7 +1485,7 @@ ITEMS.append({
         "LaserDisc, CED, Canal+ scrambling and teletext. The result goes on a new "
         "layer; the photo is untouched.",
     "facts": {
-        "version": "1.1.1",
+        "version": "1.1.2",
         "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
         "plugin id": "com.simonmorse.videolook",
         "looks": "74 (10 built from specifications alone)",
@@ -1652,6 +1652,10 @@ ITEMS.append({
               "Teletext is drawn by the set after the decoder: mixed over the picture, as "
               "a full page, or as boxed subtitles. The stamp is burned in before "
               "recording, so the tape softens it."],
+             ["Font family, Font style, or PostScript name", "",
+              "Pick any installed font from the two lists (they come from Photoshop's own font "
+              "list), or type a PostScript name, or several separated by commas, used in order "
+              "of preference. Leave the family on *the style's own font* to use the style's list."],
              ["Text", "",
               "Colours with {red} {green} {yellow} {blue} {magenta} {cyan} {white}, double "
               "height with {dh}, boxes with {box}...{/box}; 40 characters a line. The font "
@@ -1685,9 +1689,524 @@ ITEMS.append({
         "Hi-Vision has no camera stage (HD cameras aren't modelled) and needs Implied "
         "motion with 'Only the selection moves' to show its motion blur.",
     ],
-    "rebuild": [
-        "Source and research: the plugin folder, plus VideoLook-References/_research in the APA project (standards reports, BBC documents and notes).",
-        "The engine is the vl_*.js files; test harness and standards tests are kept with the build notes.",
+    "sections": [
+     {
+      "label": "looks",
+      "type": "reference",
+      "data": [
+       {
+        "title": "UK broadcast",
+        "rows": [
+         [
+          "BBC Alexandra Palace, 1937",
+          "from the specifications · Emitron / iconoscope → 405-line (UK, B&W) → 12in black-and-white tube",
+          "405 lines, 5:4 picture, Emitron camera, seen on a pre-war set. No live pictures survive, so this is built from the standards; the set's size and phosphor colour are estimates."
+         ],
+         [
+          "405-line live studio at home, 1953",
+          "from the specifications · CPS Emitron → 405-line (UK, B&W) → 14in black-and-white tube",
+          "BBC 405-line picture on a 14in set: 3 MHz, 377 lines, visible scan lines. Live pictures only survive on film, so the as-broadcast look is built from the standards."
+         ],
+         [
+          "405-line telerecording, 1953",
+          "research-based · Emitron / iconoscope → 405-line (UK, B&W) → suppressed-field telerecording → frame-grab",
+          "How surviving 1950s BBC television looks (e.g. The Quatermass Experiment): suppressed-field film recording keeps 188.5 lines, with spot wobble, film grain and a ~40:1 range."
+         ],
+         [
+          "BBC2 625-line monochrome, 1964",
+          "research-based · Image orthicon (B&W) → 625-line B&W → 19in black-and-white tube",
+          "625 lines, 5.5 MHz, on a 19in set. The BBC2 camera fleet was not found; an image orthicon is assumed."
+         ],
+         [
+          "UK colour studio, mid-1970s",
+          "research-based · EMI 2001 four-tube Plumbicon → 2-inch Quad, high band → 625 PAL (UK System I) → 22in delta-gun set",
+          "EMI 2001 four-tube Plumbicon camera, 2-inch Quad, PAL System I, on a 22in delta-gun set with the PAL delay line all British sets had."
+         ],
+         [
+          "UK colour outside broadcast, early 1970s",
+          "research-based · 3-tube Plumbicon → 2-inch Quad, high band → 625 PAL (UK System I) → 22in delta-gun set",
+          "3-tube Plumbicon OB camera on Quad. OB picture traits are not documented; the camera settings are the studio ones."
+         ],
+         [
+          "1970s drama: 16 mm film exteriors",
+          "research-based · flying-spot telecine → 625 PAL (UK System I) → 22in delta-gun set",
+          "Film shot on location, through a Rank Cintel flying-spot telecine. Run FilmLook first for the 16 mm stock, then this."
+         ],
+         [
+          "1970s drama: studio video interiors",
+          "research-based · EMI 2001 four-tube Plumbicon → 2-inch Quad, high band → 625 PAL (UK System I) → 22in delta-gun set",
+          "The other half of the film-and-video mix: EMI 2001 cameras on Quad, as Doctor Who's studio scenes were made."
+         ],
+         [
+          "Colour show on B&W film (with PAL dots)",
+          "research-based · EMI 2001 four-tube Plumbicon → 625 PAL (UK System I) → stored-field telerecording → frame-grab",
+          "A colour programme kept only as a 16 mm black-and-white telerecording for overseas sales; the unfiltered PAL subcarrier leaves fine dots in coloured areas (the basis of BBC colour recovery). Dots show best on large documents."
+         ],
+         [
+          "News on U-matic, 1983",
+          "research-based · 3-tube Plumbicon → U-matic high band → 625 PAL (UK System I) → 20in slot-mask set",
+          "Tube ENG camera on high-band U-matic, edited and broadcast; the BBC's colour-under figures set the U-matic colour."
+         ],
+         [
+          "News on Betacam SP, 1989",
+          "research-based · 3-CCD broadcast → Betacam SP → 625 PAL (UK System I) → 21in slot-mask set",
+          "CCD camera on Betacam SP (component, ~4.5 MHz luma, 1.5 MHz colour)."
+         ],
+         [
+          "Sky on Astra, 1990",
+          "research-based · 3-CCD broadcast → 625 PAL (UK System I) → 21in slot-mask set",
+          "Analogue PAL over an FM satellite link, so all PAL artefacts remain; sparklies appear on a weak dish. Satellite noise amounts are estimates."
+         ],
+         [
+          "BSB D-MAC, 1990",
+          "research-based · 3-CCD broadcast → 625 PAL (UK System I) → 21in slot-mask set",
+          "BSB's D-MAC: no subcarrier, so no cross-colour or dot crawl; sharper colour across, half the colour detail down. Bandwidths estimated from the compression ratios."
+         ],
+         [
+          "Teletext page mixed over the picture, 1983",
+          "research-based · EMI 2001 four-tube Plumbicon → teletext mix → 625 PAL (UK System I) → 22in slot-mask set",
+          "The set's teletext decoder writing a page over the programme ('mix'): 24 rows of 40 characters on the 6 MHz dot clock, rounded characters, eight colours. The font is VideoLook's own; the page text is invented and editable under Overlay."
+         ],
+         [
+          "Teletext subtitles, 1985",
+          "research-based · EMI 2001 four-tube Plumbicon → teletext subtitle → 625 PAL (UK System I) → 22in slot-mask set",
+          "Page 888-style subtitles: double-height text in black boxes, white first then yellow, cyan and green for other speakers. Text invented and editable under Overlay."
+         ]
+        ],
+        "intro": "Every look in the panel, in the panel's order. Under each name: how solid it is and the chain it builds. On the right: the note the panel shows under the Look menu. *From the specifications* means no authentic pictures survive to check it against."
+       },
+       {
+        "title": "US broadcast",
+        "rows": [
+         [
+          "US live TV, 1950",
+          "from the specifications · Image orthicon (B&W) → 525-line B&W → 17in black-and-white tube",
+          "525-line monochrome from an image orthicon (dark halo round highlights), 4.2 MHz, on a 17in set. Live pictures survive mainly as kinescopes."
+         ],
+         [
+          "US kinescope, 1952",
+          "research-based · Image orthicon (B&W) → 525-line B&W → kinescope → frame-grab",
+          "525/60 filmed at 24 fps; a drifting shutter leaves a brighter band. 16 mm grain and ~40:1 range."
+         ],
+         [
+          "Early RCA colour, 1958",
+          "research-based · 3-tube image orthicon colour (Marconi/RCA) → 2-inch Quad, high band → 525 NTSC (US) → 21in delta-gun set",
+          "3-tube image orthicon colour camera, NTSC with the 1953 primaries on a delta-gun set; equal-band colour decoding."
+         ],
+         [
+          "US network sitcom, 1975",
+          "research-based · 3-tube Plumbicon → 2-inch Quad, high band → 525 NTSC (US) → 19in slot-mask set",
+          "Multi-camera Plumbicon studio on Quad, NTSC, on a slot-mask set at 9300 K. Its famous 'video look' is mostly 60-field motion, which a still cannot show."
+         ],
+         [
+          "US local news, 1985",
+          "research-based · 3-tube Plumbicon → U-matic high band → 525 NTSC (US) → 19in slot-mask set",
+          "Tube ENG camera on U-matic, NTSC over the air."
+         ]
+        ]
+       },
+       {
+        "title": "France",
+        "rows": [
+         [
+          "French 819-line TV, 1960",
+          "from the specifications · Image orthicon (B&W) → 819-line (France, B&W) → 17in black-and-white tube",
+          "RTF 819 lines, 10 MHz: the sharpest broadcast standard before HD. Camera type not found; an image orthicon is assumed."
+         ],
+         [
+          "ORTF SECAM colour, 1975",
+          "research-based · 3-tube Plumbicon → 625 SECAM (France L) → 22in delta-gun set",
+          "SECAM L: FM colour on alternate lines (half the colour detail down, streaks on colour edges). Studios often worked in PAL or component and coded SECAM for transmission."
+         ]
+        ]
+       },
+       {
+        "title": "Home video",
+        "rows": [
+         [
+          "VHS off-air recording, 1986 (UK)",
+          "research-based · 3-tube Plumbicon → VHS (SP) off-air → 625 PAL (UK System I) → frame-grab",
+          "A broadcast recorded on a home VHS at SP from an aerial with a faint ghost, as a frame-grab."
+         ],
+         [
+          "VHS third-generation copy",
+          "research-based · 3-tube Plumbicon → VHS (LP) off-air → 625 PAL (UK System I) → frame-grab",
+          "An off-air LP recording copied twice more: noise, smear and wobble build up with each generation."
+         ],
+         [
+          "VHS off-air recording, 1988 (US)",
+          "research-based · 3-tube Plumbicon → VHS (SP) off-air → 525 NTSC (US) → frame-grab",
+          "NTSC VHS SP off-air, frame-grab."
+         ],
+         [
+          "Betamax off-air, 1981",
+          "research-based · 3-tube Plumbicon → Betamax off-air → 625 PAL (UK System I) → frame-grab",
+          "Betamax recording of a broadcast. Betamax figures are estimates."
+         ],
+         [
+          "Tube camcorder, 1984",
+          "research-based · Saticon tube camcorder → VHS (SP) → 625 PAL (UK System I) → frame-grab",
+          "Single Saticon tube (lag, orange-red flare, soft colour) recording to VHS-C."
+         ],
+         [
+          "Video8 camcorder, 1988",
+          "research-based · Single-CCD consumer camcorder → Video8 → 625 PAL (UK System I) → frame-grab",
+          "Single-CCD consumer camcorder on Video8 (vertical smear on highlights)."
+         ],
+         [
+          "Hi8 camcorder, 1994",
+          "research-based · Single-CCD consumer camcorder → Hi8 → 625 PAL (UK System I) → frame-grab",
+          "Sharper Hi8 luma, same narrow colour."
+         ],
+         [
+          "S-VHS camcorder, 1992",
+          "research-based · Single-CCD consumer camcorder → S-VHS → 625 PAL (UK System I) → frame-grab",
+          "S-VHS: sharp luma, VHS colour."
+         ],
+         [
+          "MiniDV, 2002 (PAL)",
+          "research-based · DV 3-CCD → DV / DVCAM (PAL 4:2:0) → Component 625 (studio/digital) → frame-grab",
+          "3-CCD DV camcorder: 4:2:0 colour, 8×8 DCT blocks and mosquito noise at 25 Mbit/s, hard highlight clip."
+         ],
+         [
+          "MiniDV, 2002 (NTSC)",
+          "research-based · DV 3-CCD → DV (NTSC 4:1:1) → Component 525 (studio/digital) → frame-grab",
+          "NTSC DV: 4:1:1 colour (only 180 colour samples across)."
+         ],
+         [
+          "LaserDisc (PAL, CLV crosstalk), 1990",
+          "research-based · flying-spot telecine → LaserDisc (CLV) → 625 PAL (UK System I) → 25in Trinitron",
+          "A film on a long-play (CLV) LaserDisc: full broadcast detail on an optical disc, but crosstalk from the neighbouring track drifts through as bands of fine noise ('barber poles'). Crosstalk form and amount [EST]."
+         ],
+         [
+          "LaserDisc with laser rot",
+          "research-based · flying-spot telecine → LaserDisc with laser rot → 625 PAL (UK System I) → frame-grab",
+          "An oxidised disc: sparkling specks, some coloured, some dark, scattered over the picture. Density [EST]."
+         ],
+         [
+          "RCA CED videodisc, worn (1983)",
+          "research-based · flying-spot telecine → RCA CED videodisc (worn) → 525 NTSC (US) → 19in slot-mask set",
+          "RCA's grooved capacitance disc: 3 MHz of detail, narrow colour, and dust and wear ('video virus') giving dropouts and snow. How the colour was carried isn't confirmed; modelled as a narrow colour band."
+         ]
+        ]
+       },
+       {
+        "title": "Archive and transfers",
+        "rows": [
+         [
+          "US show on the BBC, 1970",
+          "research-based · 3-tube Plumbicon → 2-inch Quad, high band → 525 NTSC (US) → BBC 1967 converter to 625 PAL → 22in delta-gun set",
+          "NTSC converted to PAL by the BBC's 1967 field-store converter: picture inset with black borders; with implied motion, one field in five is a double image."
+         ],
+         [
+          "UK show on US TV, 1985",
+          "research-based · EMI 2001 four-tube Plumbicon → 625 PAL (UK System I) → digital converter to 525 NTSC → 19in slot-mask set",
+          "PAL converted to NTSC by a digital four-field converter."
+         ],
+         [
+          "Optical standards conversion, 1962",
+          "research-based · 3-tube image orthicon colour (Marconi/RCA) → 525 NTSC (US) → optical conversion to 625 PAL → frame-grab",
+          "A camera pointed at a monitor: the source scan lines beat against the new ones."
+         ],
+         [
+          "NTSC tape on a UK VCR (PAL-60)",
+          "research-based · 3-tube Plumbicon → VHS (SP) → 525 NTSC (US) → played as PAL-60 → 21in slot-mask set",
+          "An American VHS played on a UK machine that outputs PAL-60: correct colour, but only 480 lines, so the line structure is coarser."
+         ],
+         [
+          "NTSC 4.43 on a PAL-only set",
+          "research-based · 3-tube Plumbicon → VHS (SP) → 525 NTSC (US) → played as NTSC 4.43 → frame-grab",
+          "NTSC colour on the PAL subcarrier has no V switch, so a PAL set's delay line cancels half the colour: reds turn dark."
+         ],
+         [
+          "SECAM tape on a PAL-only set",
+          "research-based · 3-tube Plumbicon → 625 SECAM (France L) → SECAM on a PAL-only set → 21in slot-mask set",
+          "No SECAM decoder: black and white, with the FM subcarrier showing as a dot pattern even on greys."
+         ],
+         [
+          "US film telecine with 3:2 pulldown",
+          "research-based · flying-spot telecine → 525 NTSC (US) → frame-grab",
+          "Film on NTSC: two frames in five mix two film frames. Set Implied motion to see the combing."
+         ],
+         [
+          "Photo of the TV screen, 1978",
+          "research-based · EMI 2001 four-tube Plumbicon → 2-inch Quad, high band → 625 PAL (UK System I) → 22in slot-mask set, photographed",
+          "A UK colour broadcast photographed off a slot-mask set at 1/125 s: the exposure catches only part of the scan, so a band is brighter."
+         ]
+        ]
+       },
+       {
+        "title": "Long-distance reception",
+        "rows": [
+         [
+          "Summer lift: Dutch TV on a UK set, 1983",
+          "research-based · 3-tube Plumbicon → 625 PAL (Europe B/G/H) → co-channel interference → received on a UK set (System I PAL) → 22in slot-mask set",
+          "Nederland 1 or 2 (Goes, Lopik) across the North Sea under a summer high. Dutch System G PAL: full colour, no sound on a UK set, and the 5.5 MHz Dutch sound carrier leaves fine patterning. A weak co-channel station floats underneath, striped by the carrier offset. The mechanisms are documented; the amounts (signal level, interference) are yours to set. For a real second picture, name a layer 'second picture'."
+         ],
+         [
+          "Belgian RTBF on a UK set, 1984",
+          "research-based · 3-tube Plumbicon → 625 PAL (Europe B/G/H) → received on a UK set (System I PAL) → 22in slot-mask set",
+          "RTBF 1 or Télé 2 on a good lift: Belgian PAL (System H on UHF, 5.5 MHz sound), so colour but silence on a UK set, with faint sound-carrier patterning. Signal level [EST]."
+         ],
+         [
+          "French TV (TF1, Antenne 2) on a UK set, 1983",
+          "research-based · 3-tube Plumbicon → 625 SECAM (France L) → received on a UK set (System I PAL) → 22in slot-mask set",
+          "France's System L puts the picture on the carrier the other way up (positive modulation), so a UK set shows a negative; its SECAM colour is lost; and the set can't find the French sync, so the picture tears sideways and rolls, with the blanking showing as white bars. Built from the ITU levels and receiver behaviour; no off-screen photos checked. New noise gives another moment; Vertical hold 'rolling' and Roll position move the bar."
+         ],
+         [
+          "Canal+ without a decoder, 1984",
+          "research-based · 3-CCD broadcast → 625 SECAM (France L) → Discret 11 scrambling → 22in slot-mask set",
+          "Canal+ (from 4 Nov 1984) scrambled with Discret 11: every line delayed by 0, 0.9 or 1.8 µs at random, black filling the gap. Shown on a French SECAM set. The delays are documented; the pseudo-random sequence here is VideoLook's own."
+         ],
+         [
+          "Sporadic-E on Band I, DXer's portable, 1978",
+          "research-based · 3-tube Plumbicon → 625 PAL (Europe B/G/H) → co-channel interference → 12in black-and-white tube",
+          "A distant continental Band I station by Sporadic-E (May to September, 500-1,400 miles) on a black-and-white portable: snow, a long echo, and a second station on the same channel sliding across. Mechanisms from Bunney (1981); all amounts [EST]."
+         ],
+         [
+          "Overloaded set near a transmitter (lockout)",
+          "research-based · EMI 2001 four-tube Plumbicon → 625 PAL (UK System I) → overloaded set → 22in slot-mask set",
+          "Too much signal: the set's IF stage overloads and the sync tips are crushed below the picture: 'lockout, i.e. negative picture and buzz' (Television, July 1976). One source; the overload curve is [EST]."
+         ]
+        ]
+       },
+       {
+        "title": "USSR and Eastern Europe",
+        "rows": [
+         [
+          "Moscow 343-line, 1938",
+          "from the specifications · Emitron / iconoscope → 343-line (Moscow 1938) → 12in black-and-white tube",
+          "343 lines at 25 frames on RCA equipment (from 1938; dates conflict). Bandwidth 3.29 MHz and negative modulation are RCA's figures from a single source; an iconoscope camera is assumed."
+         ],
+         [
+          "Soviet 625-line on a KVN-49 with its water lens, 1950",
+          "research-based · Emitron / iconoscope → 625-line B&W (USSR, 6 MHz) → 7in black-and-white tube through its lens",
+          "The Soviet Union's own 625-line standard (the one Europe adopted), 6 MHz, on the KVN-49: a 140 x 105 mm picture on an 18 cm round tube, seen through the add-on lens filled with water or glycerine (about 4x). The lens's distortion, fringing and reflection are [EST]; the studio camera is not researched (an iconoscope is assumed)."
+         ],
+         [
+          "Soviet colour on a Rubin set, late 1970s",
+          "research-based · 3-tube Plumbicon → 625 SECAM (USSR/East D/K) → 24in delta-gun set",
+          "SECAM on System D/K from 1 Oct 1967: the same colour coding as France but the ordinary negative modulation, so interference makes dark spots. Soviet tube phosphors per GOST 26799-85 are the EBU set. Camera assumed."
+         ],
+         [
+          "East German SECAM colour, 1975",
+          "research-based · 3-tube Plumbicon → 625 SECAM (East Germany B/G) → 22in delta-gun set",
+          "DFF colour from 1969: SECAM on System B/G (5 MHz), until the switch to PAL at the end of 1991. East German set phosphors not found; EBU assumed."
+         ]
+        ]
+       },
+       {
+        "title": "Japan",
+        "rows": [
+         [
+          "Japanese NTSC on a 9300 K set, 1985",
+          "research-based · 3-tube Plumbicon → 525 NTSC (Japan, no set-up) → 21in Trinitron",
+          "NTSC-J: black sits at blanking (no 7.5% set-up), and receivers were set to 9300 K + 27 MPCD, a cool, slightly green white (x 0.281, y 0.311). Receiver phosphors from a 1979 Matsushita patent. Many real sets measured nearer 8500-8800 K."
+         ],
+         [
+          "Hi-Vision (MUSE) analogue HD, 1991",
+          "research-based · 1125-line Hi-Vision MUSE → 36in Trinitron",
+          "NHK's 1125-line analogue HD by satellite (1989-2007). Still pictures keep ~598 lines of detail, but anything moving drops to about a quarter: set Implied motion and tick 'Only the selection moves' to see it (camera pans stay sharp). No camera stage: HD cameras aren't modelled."
+         ],
+         [
+          "Sony CV-2000 home video, 1966",
+          "research-based · Vidicon → Sony CV-2000 home VTR (B&W, skip-field) → 525-line B&W → 11in black-and-white tube",
+          "One of the first home video recorders: half-inch tape, black and white, recording only one field and showing it twice (skip-field), about 220 lines. With a vidicon camera."
+         ],
+         [
+          "Sony Portapak video art, 1970",
+          "research-based · Portapak vidicon → EIAJ-1 Portapak (1/2 in reel, B&W) → 625-line B&W → 12in black-and-white tube",
+          "EIAJ-1 half-inch reel recorder and vidicon camera (needed about 50 foot-candles): black and white, laggy, noisy, with 'flagging' at the top on replay. European (625) version."
+         ]
+        ]
+       },
+       {
+        "title": "Early television",
+        "rows": [
+         [
+          "Baird 30-line on a Televisor, 1933",
+          "research-based · 30-line Baird (1929-35) → Televisor",
+          "The BBC's 30-line service (to 1935): 30 vertical lines, 12.5 pictures a second, a tall 3:7 picture sent on a medium-wave channel (~10 kHz), seen as an orange neon glow through a spinning disc, 'about the size of a postage stamp'. Off-air recordings survive at tvdawn.com for comparison."
+         ],
+         [
+          "Baird 240-line intermediate film, 1936",
+          "from the specifications · Intermediate film → 240-line Baird (1936-37) → 12in black-and-white tube",
+          "Alexandra Palace, Nov 1936-Feb 1937, alternating with EMI's 405 lines: shot on film, developed in about a minute and scanned wet. 240 lines at 25 frames; bandwidth and picture shape not found (4:3 and equal detail assumed). No pictures survive."
+         ],
+         [
+          "Berlin 441-line, 1938",
+          "from the specifications · Emitron / iconoscope → 441-line (Germany 1937-44) → 12in black-and-white tube",
+          "Fernsehsender Paul Nipkow: 441 lines interlaced (383 active), 2 MHz, positive modulation, a nearly square 1.15:1 picture (single source). Iconoscope camera."
+         ],
+         [
+          "NBC 441-line, 1940",
+          "from the specifications · Emitron / iconoscope → 441-line (US 1939-41) → 12in black-and-white tube",
+          "The pre-war American standard (1939-41): 441 lines, 60 fields, 2.8 MHz, negative modulation (single source). RCA iconoscope camera."
+         ],
+         [
+          "CBS field-sequential colour, 1951",
+          "from the specifications · 3-tube image orthicon colour (Marconi/RCA) → 405-line CBS field-sequential colour (1951) → 12in colour-wheel set",
+          "Broadcast June-October 1951: 405 lines, 144 fields a second, each field one colour, put back together by a spinning colour wheel in front of a black-and-white tube. About half the horizontal detail of ordinary 525-line. Set Implied motion to see colours split apart on movement. Filter colours [EST]."
+         ],
+         [
+          "Belgian 819-line, 1955",
+          "from the specifications · Image orthicon (B&W) → 819-line (Belgium F, B&W) → 17in black-and-white tube",
+          "Belgium's 819-line System F (1953-68) squeezed the French line count into 7 MHz channels: ~5 MHz of video (sources say 5 or 5.5), so far less horizontal detail than French 819."
+         ]
+        ]
+       },
+       {
+        "title": "Space, surveillance and toys",
+        "rows": [
+         [
+          "Apollo 11 moonwalk as broadcast, 1969",
+          "research-based · Apollo lunar camera → 320-line Apollo lunar camera → optical conversion to 525-line B&W → 19in black-and-white tube",
+          "The lunar camera sent 320 lines at 10 frames a second; on Earth an RCA TK-22 camera re-shot a 10-inch monitor to make NTSC, losing contrast and detail, and the monitor's persistence left moving figures trailing ghosts (needs Implied motion). Honeysuckle Creek settings; set Converter contrast up for Goldstone's over-contrasty picture."
+         ],
+         [
+          "Fisher-Price Pixelvision, 1988",
+          "research-based · Fisher-Price PXL-2000 → PXL-2000 audio cassette (8 grey levels) → 525-line B&W → 13in slot-mask set",
+          "The PXL-2000 toy camcorder: a 120 x 90 CCD recorded on audio cassette at 9x speed, black and white with only a few grey levels (one source says about 8), shown small in the middle of the TV. Inset size and noise [EST]."
+         ],
+         [
+          "Time-lapse CCTV, 1994",
+          "research-based · Black-and-white CCTV camera → date stamp → Time-lapse CCTV VHS (24 h mode, B&W) → 625-line B&W → frame-grab",
+          "A black-and-white CCTV camera on a time-lapse VHS in 24-hour mode (5 fields a second, 300 lines), date and time burned in, replayed as a single field. Recorder figures from a period manual; the rest [EST]. Edit the stamp under Overlay."
+         ],
+         [
+          "Amateur slow-scan TV on a radar tube, 1958",
+          "research-based · 120-line slow-scan (1958) → 7in P7 radar tube",
+          "Copthorne Macdonald's 1958 slow-scan TV: 120 lines, 8 seconds a picture, sent as audio over short-wave, shown on a P7 radar tube whose blue flash fades to a yellow-green afterglow lasting about 10 s, so the top of the picture has already faded as the bottom is written. Afterglow colours [EST]."
+         ]
+        ]
+       },
+       {
+        "title": "South America",
+        "rows": [
+         [
+          "Brazilian PAL-M, 1985",
+          "research-based · 3-tube Plumbicon → 525 PAL-M (Brazil) → 20in slot-mask set",
+          "Brazil's PAL-M (colour from 1972): American 525/60 scanning with PAL colour on its own 3.576 MHz subcarrier, so no NTSC hue errors but 4.2 MHz of detail and the 7.5% set-up. Set phosphors assumed."
+         ],
+         [
+          "Argentine PAL-N, 1985",
+          "research-based · 3-tube Plumbicon → 625 PAL-N (Argentina) → 20in slot-mask set",
+          "Argentina's N/PAL: European 625/50 in American 6 MHz channels, 4.2 MHz of video and a 3.58 MHz PAL subcarrier nearer the luma, so softer and with more cross-colour than European PAL. Black at blanking (no set-up)."
+         ]
+        ]
+       },
+       {
+        "title": "Subtitles",
+        "rows": [
+         [
+          "Foreign film on BBC2, late 1980s",
+          "research-based · flying-spot telecine → subtitles: BBC slab serif (TKST-style), black edge → 625 PAL (UK System I) → 22in slot-mask set",
+          "A subtitled film through a flying-spot telecine, with the BBC's slab-serif subtitles (TKST, 'based at many removes on Rockwell Light', 1975-77) added at the studio with a black edge. TKST isn't available, so Rockwell stands in. Run FilmLook first for the film stock. Edit the text under Overlay."
+         ],
+         [
+          "BBC subtitles on a grey label",
+          "research-based · flying-spot telecine → subtitles: BBC slab serif on a grey label → 625 PAL (UK System I) → 22in slot-mask set",
+          "The BBC's later fix for edging problems: the picture darkened and its colour killed in a rectangle behind the text (the designer's own account; single source)."
+         ],
+         [
+          "Arthouse print with laser subtitles, 1990s",
+          "research-based · flying-spot telecine → subtitles: Cinema print, laser-etched (1988 on) → 625 PAL (UK System I) → frame-grab",
+          "Subtitles burned into the release print by laser (from 1988): clear white letters with a thin dark halo, then the print on a telecine. Use 'Cinema print, chemically etched' for older prints with ragged letters."
+         ],
+         [
+          "Subtitled VHS release, 1990",
+          "research-based · flying-spot telecine → subtitles: VHS / LaserDisc release (Univers-style) → VHS (SP) → 625 PAL (UK System I) → frame-grab",
+          "A subtitled film on a rental VHS: Univers-style subtitles with a black edge on the master, softened by the tape. The edge treatment is [EST]."
+         ],
+         [
+          "US closed captions, 1990",
+          "research-based · 3-tube Plumbicon → subtitles: US closed captions (Line 21) → 525 NTSC (US) → 19in slot-mask set",
+          "Line 21 captions drawn by the set's decoder: white capitals on black cells, 32 columns. The decoder's own font isn't documented, so VideoLook's dot font stands in."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "label": "subtitle styles",
+      "type": "reference",
+      "data": [
+       {
+        "title": "styles",
+        "intro": "Chosen under Overlay › Subtitles. Each is burned in where it historically happened; font, italic, size, colour, edge and stage can all be changed.",
+        "rows": [
+         [
+          "Arial italic, soft shadow",
+          "at the studio / on the master · Arial-ItalicMT, ArialMT",
+          "Soft shadow."
+         ],
+         [
+          "BBC slab serif (TKST-style), black edge",
+          "at the studio / on the master · Rockwell-Light, Rockwell-Regular, Rockwell",
+          "Black edge."
+         ],
+         [
+          "BBC slab serif on a grey label",
+          "at the studio / on the master · Rockwell-Light, Rockwell-Regular, Rockwell",
+          "Grey label: picture darkened and colour removed behind the text."
+         ],
+         [
+          "Early TV: white on a black box",
+          "at the studio / on the master · Helvetica, ArialMT",
+          "Black box."
+         ],
+         [
+          "Cinema print, chemically etched",
+          "on the film print · Helvetica, ArialMT",
+          "Ragged etched letters."
+         ],
+         [
+          "Cinema print, laser-etched (1988 on)",
+          "on the film print · Helvetica, ArialMT",
+          "Thin dark laser halo."
+         ],
+         [
+          "VHS / LaserDisc release (Univers-style)",
+          "at the studio / on the master · UniversLTStd-Light, Univers-Light, Univers",
+          "Black edge."
+         ],
+         [
+          "Dutch TV (Helvetica Neue condensed)",
+          "at the studio / on the master · HelveticaNeueLTStd-MdCn, HelveticaNeue-CondensedBold, HelveticaNeue-Medium",
+          "Black edge."
+         ],
+         [
+          "Channel 4 (Gill Sans, drop shadow)",
+          "at the studio / on the master · GillSans, GillSans-Light, Helvetica",
+          "Drop shadow."
+         ],
+         [
+          "DVD subpicture (Tahoma-like)",
+          "at the studio / on the master · Tahoma, Verdana, ArialMT",
+          "Hard four-colour bitmap edge."
+         ],
+         [
+          "US closed captions (Line 21)",
+          "by the set · VideoLook dot font",
+          "Black character cells."
+         ],
+         [
+          "Custom",
+          "at the studio / on the master · ArialMT",
+          "Black edge."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "label": "rebuilding",
+      "type": "notes",
+      "data": [
+       "Source and research: the plugin folder, plus VideoLook-References/_research in the APA project (standards reports, BBC documents and notes).",
+       "The engine is the vl_*.js files; test harness and standards tests are kept with the build notes."
+      ]
+     }
     ],
 })
 
