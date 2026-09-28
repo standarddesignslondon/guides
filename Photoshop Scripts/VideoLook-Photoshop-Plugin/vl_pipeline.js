@@ -57,6 +57,24 @@ function run(doc, s, winDoc) {
     if (mo.selection && doc.mask) mask = toGrid(cutRegion([doc.mask], W, H, rect, s.shiftX || 0, s.shiftY || 0))[0];
   }
   const tr = en.transfer && s.transfer && s.transfer.type && s.transfer.type !== "none" ? s.transfer : null;
+  const ov = en.overlay && s.overlay && s.overlay.kind && s.overlay.kind !== "none" ? s.overlay : null;
+  // subtitles: typeset lines (from Photoshop, or VideoLook's own dot font as a fallback), placed on the document, then
+  // burned in on the film print, at the studio, or drawn by the set, depending on the style [see vl_text.js]
+  const sub = ov && ov.kind === "subtitle" && !gs.vertical ? (() => {
+    const st = TXT.subStyle(ov), sizePx = st.size * rect.h;
+    if (st.edge === "cc") return { st };
+    const italic = st.fauxItalic === "on" || (st.fauxItalic === "ifRoman" && !doc.subBitmaps);
+    const bm = doc.subBitmaps || TXT.rasterFallback(TXT.subLines(ov), sizePx, italic);
+    const pl = TXT.placeSubtitle(bm, W, H, rect, sizePx, st);
+    return { st, pl, font: doc.subFont || "VideoLook dot font" };
+  })() : null;
+  const burnSub = (gridIn, gg) => {
+    if (sub.st.edge === "cc") return TXT.closedCaptions(gridIn, gg, ov);
+    const covG = V.resize(cutRegion([sub.pl.cov], W, H, rect, 0, 0)[0], rect.w, rect.h, gg.ns, gg.lines);
+    const rG = sub.pl.rects.map(r => ({ x0: (r.x0 - rect.x) / rect.w * gg.ns, x1: (r.x1 - rect.x) / rect.w * gg.ns, y0: (r.y0 - rect.y) / rect.h * gg.lines, y1: (r.y1 - rect.y) / rect.h * gg.lines }));
+    return TXT.subtitleComposite(gridIn, gg, sub.st, covG, rG, sub.st.size * gg.lines, gg.ns / (aspect * gg.lines), seed);
+  };
+  if (sub && sub.st.stage === "film" && sub.st.edge !== "cc") { grid = burnSub(grid, gs); stages.push("subtitles etched on the print (" + sub.font + ")"); }
   // 1. source: telecine (film) or camera
   if (tr && tr.type === "telecine") {
     if (v && gs.lineRate > 15700 && tr.pulldown === "mixed") grid = TR.interlace(grid, gs.ns, gs.lines, v, mask, 2.5); // 3:2 pulldown: 2 frames in 5 mix film frames [SEC]
@@ -68,7 +86,7 @@ function run(doc, s, winDoc) {
     if (v && !gs.progressive && !gs.fieldSeq) grid = TR.interlace(grid, gs.ns, gs.lines, v, mask, 1);
     if (cam) { grid = CAM.camera(grid, gs, cam, Object.assign({ seed }, s.camera)); stages.push("camera"); }
   }
-  const ov = en.overlay && s.overlay && s.overlay.kind && s.overlay.kind !== "none" ? s.overlay : null;
+  if (sub && sub.st.stage === "studio" && sub.st.edge !== "cc") { grid = burnSub(grid, gs); stages.push("subtitles (" + sub.font + ")"); }
   if (ov && ov.kind === "timestamp") { grid = TXT.timestamp(grid, gs, ov); stages.push("date/time stamp"); }
   // 2. recording on the component grid (Betacam, D1, DV...)
   const rec = en.recording && s.recording && s.recording.format && REC.FORMATS[s.recording.format] ? s.recording : null;
@@ -157,6 +175,7 @@ function run(doc, s, winDoc) {
   let useCRT = mode !== "grab" && mode !== "televisor" && en.display;
   if (en.decoder && s.set && !gs.vertical) grid = DSP.set(grid, g, Object.assign({}, s.set, useCRT ? {} : { overscan: 0 }));
   if (ov && ov.kind === "teletext") { grid = TXT.teletext(grid, g, ov); stages.push("teletext " + (ov.mode || "mix")); }
+  if (sub && (sub.st.stage === "set" || sub.st.edge === "cc")) { grid = burnSub(grid, g); stages.push(sub.st.edge === "cc" ? "closed captions" : "subtitles by the set (" + sub.font + ")"); }
   if (gs.vertical) { // back to picture orientation: columns are the scan lines
     grid = grid.map(p => transpose(p, g.ns, g.lines)); g = Object.assign({}, g, { ns: g.lines, lines: g.ns, verticalShown: true });
     if (mode === "televisor") {

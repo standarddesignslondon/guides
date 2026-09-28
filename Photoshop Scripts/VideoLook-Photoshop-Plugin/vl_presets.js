@@ -231,6 +231,22 @@ const LOOKS = [
     note: "Page 888-style subtitles: double-height text in black boxes, white first then yellow, cyan and green for other speakers. Text invented and editable under Overlay.",
     s: { standard: "PAL-I", camera: { type: "emi2001" }, channel: { snrDb: 42 }, overlay: { kind: "teletext", mode: "subtitle", colour: "white", text: "{yellow}Did you see it again last night?\n{white}Only when the weather was right." },
       set: { overscan: 0.04 }, view: { mode: "closeup" }, display: { tube: "slot", screenIn: 22 } } },
+  // ---------------- Subtitles (v1.1.1; sources in vl_text.js and research I)
+  { id: "sub-bbc2-1988", group: "Subtitles", title: "Foreign film on BBC2, late 1980s", evidence: "research",
+    note: "A subtitled film through a flying-spot telecine, with the BBC's slab-serif subtitles (TKST, 'based at many removes on Rockwell Light', 1975-77) added at the studio with a black edge. TKST isn't available, so Rockwell stands in. Run FilmLook first for the film stock. Edit the text under Overlay.",
+    s: { standard: "PAL-I", transfer: { type: "telecine" }, overlay: { kind: "subtitle", style: "bbc_edge", text: "Where were you on the night of the storm?\nAt the lighthouse, as always." }, channel: { snrDb: 42 }, set: { overscan: 0.04 }, view: { mode: "closeup" }, display: { tube: "slot", screenIn: 22 } } },
+  { id: "sub-bbc-label", group: "Subtitles", title: "BBC subtitles on a grey label", evidence: "research",
+    note: "The BBC's later fix for edging problems: the picture darkened and its colour killed in a rectangle behind the text (the designer's own account; single source).",
+    s: { standard: "PAL-I", transfer: { type: "telecine" }, overlay: { kind: "subtitle", style: "bbc_label", text: "Where were you on the night of the storm?\nAt the lighthouse, as always." }, channel: { snrDb: 42 }, set: { overscan: 0.04 }, view: { mode: "closeup" }, display: { tube: "slot", screenIn: 22 } } },
+  { id: "sub-arthouse-print", group: "Subtitles", title: "Arthouse print with laser subtitles, 1990s", evidence: "research",
+    note: "Subtitles burned into the release print by laser (from 1988): clear white letters with a thin dark halo, then the print on a telecine. Use 'Cinema print, chemically etched' for older prints with ragged letters.",
+    s: { standard: "PAL-I", transfer: { type: "telecine" }, overlay: { kind: "subtitle", style: "cinema_laser", text: "Where were you on the night of the storm?\nAt the lighthouse, as always." }, enabled: { channel: false }, view: { mode: "grab" } } },
+  { id: "sub-vhs-release", group: "Subtitles", title: "Subtitled VHS release, 1990", evidence: "research",
+    note: "A subtitled film on a rental VHS: Univers-style subtitles with a black edge on the master, softened by the tape. The edge treatment is [EST].",
+    s: { standard: "PAL-I", transfer: { type: "telecine" }, overlay: { kind: "subtitle", style: "video_release", text: "Where were you on the night of the storm?\nAt the lighthouse, as always." }, recording: { format: "vhs_sp" }, enabled: { channel: false }, view: { mode: "grab" } } },
+  { id: "sub-closed-captions", group: "Subtitles", title: "US closed captions, 1990", evidence: "research",
+    note: "Line 21 captions drawn by the set's decoder: white capitals on black cells, 32 columns. The decoder's own font isn't documented, so VideoLook's dot font stands in.",
+    s: { standard: "NTSC-M", camera: { type: "plumbicon3", overrides: { gamma: "bt709" } }, overlay: { kind: "subtitle", style: "cc608", text: "Where were you on the night of the storm?\nAt the lighthouse, as always." }, channel: { snrDb: 40 }, decoder: { ntscDemod: "equiband" }, set: { overscan: 0.05 }, view: { mode: "closeup" }, display: { tube: "slot", screenIn: 19, primaries: "SMPTEC", white: "K9300" } } },
 ];
 const api = { LOOKS };
 if (typeof module !== "undefined" && module.exports) module.exports = api;

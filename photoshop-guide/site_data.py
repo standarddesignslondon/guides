@@ -1485,10 +1485,10 @@ ITEMS.append({
         "LaserDisc, CED, Canal+ scrambling and teletext. The result goes on a new "
         "layer; the photo is untouched.",
     "facts": {
-        "version": "1.1.0",
+        "version": "1.1.1",
         "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
         "plugin id": "com.simonmorse.videolook",
-        "looks": "69 (10 built from specifications alone)",
+        "looks": "74 (10 built from specifications alone)",
     },
     "quickstart": [
         "Open **Plugins › VideoLook** and choose a look. The note under the list "
@@ -1504,10 +1504,10 @@ ITEMS.append({
     "controls": [
         {"title": "Top of panel",
          "rows": [
-             ["Look", "69 looks in 11 groups",
+             ["Look", "74 looks in 12 groups",
               "UK broadcast, US broadcast, France, Home video, Archive and transfers, "
               "Long-distance reception, USSR and Eastern Europe, Japan, Early television, "
-              "Space, surveillance and toys, South America. "
+              "Space, surveillance and toys, South America, Subtitles. "
               "Choosing a look sets every stage and ticks the ones it uses."],
              ["Strength", "0 – 100", "Opacity of the result layer; updates the last render live."],
              ["Source", "Whole image / Selected layer",
@@ -1639,6 +1639,15 @@ ITEMS.append({
          ]},
         {"title": "Overlay",
          "rows": [
+             ["Subtitles", "12 styles",
+              "Typeset with your installed fonts (a temporary text layer, read and deleted), "
+              "then burned in where they belonged: on the film print (chemically etched with "
+              "ragged letters, or laser-etched with a thin dark halo), at the studio (BBC "
+              "slab serif with a black edge or on a grey label, Arial italic with a soft "
+              "shadow, VHS release, Dutch TV, Channel 4, DVD 4-colour bitmap, early black "
+              "box), or by the set (US Line 21 closed captions). The BBC's own face, TKST, "
+              "isn't available: Rockwell stands in. Font, italic, size, colour, edge, "
+              "position and case can all be changed."],
              ["Overlay", "Teletext / Date-time stamp",
               "Teletext is drawn by the set after the decoder: mixed over the picture, as "
               "a full page, or as boxed subtitles. The stamp is burned in before "

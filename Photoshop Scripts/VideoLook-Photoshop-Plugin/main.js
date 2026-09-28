@@ -9,7 +9,7 @@ const CAM = require("./vl_camera.js");
 const DSP = require("./vl_display.js");
 const REC = require("./vl_record.js");
 require("./vl_transfer.js");
-require("./vl_text.js");
+const TXT = require("./vl_text.js");
 const PIPE = require("./vl_pipeline.js");
 const LOOKS = require("./vl_presets.js").LOOKS;
 
@@ -30,7 +30,8 @@ const BASE = {
     channel: { route: "aerial", snrDb: 44, ghosts: [{ delayUs: 2, amp: 0, phaseDeg: 0 }], impulses: 0, cnrDb: 14, scramble: "none",
         cochannel: { ratio: 0, offsetHz: 10400, dx: 0.31, dy: 0.37, source: "mirror" } },
     receiver: { standard: "same", hold: "auto", vRoll: 0.4, hGain: 0.05, hFree: 0, overload: 0 },
-    overlay: { kind: "none", mode: "mix", text: "", header: "", colour: "white", pos: "bl" },
+    overlay: { kind: "none", mode: "mix", text: "", header: "", colour: "white", pos: "bl",
+        style: "arial_shadow", font: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", position: "bottom", caps: "style", strength: 1 },
     recording: { format: "none", position: "studio", generations: 1, tracking: 0, trackingPos: 0.6 },
     transfer: { type: "none", method: "bbc1967", target: "PAL-I", gauge: 16, shutterBar: 0, mode: "pal60", pulldown: "clean", lag: 0, contrast: 1 },
     decoder: { separation: "notch", palMode: "delay", ntscDemod: "equiband", phaseErr: 0, diffPhase: 0 },
@@ -155,13 +156,23 @@ const SECTIONS = [
         { kind: "slider", id: "pgrain", label: "Photo grain", path: "view.grain", min: 0, max: 1.5, step: 0.01 }
     ], hint: "Photo exposure below 1 means the shutter was open for less than one field (1/50 s in the UK), so only part of the picture is bright." },
     { key: "overlay", title: "Overlay", open: false, items: [
-        { kind: "select", id: "ovKind", label: "Overlay", path: "overlay.kind", options: () => [["none", "(none)"], ["teletext", "Teletext (set's decoder)"], ["timestamp", "Date/time stamp (recorded)"]] },
+        { kind: "select", id: "ovKind", label: "Overlay", path: "overlay.kind", options: () => [["none", "(none)"], ["subtitle", "Subtitles"], ["teletext", "Teletext (set's decoder)"], ["timestamp", "Date/time stamp (recorded)"]] },
+        { kind: "select", id: "subStyle", label: "Subtitle style", path: "overlay.style", options: () => Object.keys(TXT.SUB_STYLES).map(k => [k, TXT.SUB_STYLES[k].label]), onChange: () => { Object.assign(st.overlay, { font: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", caps: "style" }); syncUI(); } },
+        { kind: "text", id: "subFont", label: "Font (PostScript name)", path: "overlay.font" },
+        { kind: "select", id: "subItal", label: "Italic", path: "overlay.italic", options: () => [["style", "As the style"], ["on", "Faux italic on"], ["off", "Off"]] },
+        { kind: "slider", id: "subSize", label: "Size (% of picture height)", get: () => 100 * (st.overlay.size || TXT.subStyle(st.overlay).size), set: (v) => { st.overlay.size = v / 100; }, min: 2, max: 10, step: 0.1 },
+        { kind: "select", id: "subCol", label: "Subtitle colour", path: "overlay.subColour", options: () => [["style", "As the style"], ["white", "White"], ["white87", "87% white (Dutch)"], ["yellow", "Yellow"], ["cyan", "Cyan"]] },
+        { kind: "select", id: "subEdge", label: "Edge", path: "overlay.edge", options: () => [["style", "As the style"], ["none", "None"], ["outline", "Black edge"], ["shadow", "Drop shadow"], ["softshadow", "Soft shadow"], ["box", "Black box"], ["ghostbox", "See-through box"], ["greylabel", "Grey label (BBC)"], ["halo", "Laser halo (cinema)"], ["ragged", "Ragged etching (cinema)"], ["bitmap4", "DVD 4-colour bitmap"]] },
+        { kind: "slider", id: "subStr", label: "Edge strength", path: "overlay.strength", min: 0, max: 1.5, step: 0.01, est: true },
+        { kind: "select", id: "subStage", label: "Added", path: "overlay.stage", options: () => [["style", "As the style"], ["film", "On the film print"], ["studio", "At the studio / on the master"], ["set", "By the set / player"]] },
+        { kind: "select", id: "subPos", label: "Position", path: "overlay.position", options: () => [["bottom", "Bottom"], ["top", "Top"]] },
+        { kind: "select", id: "subCaps", label: "Case", path: "overlay.caps", options: () => [["style", "As the style"], ["typed", "As typed"], ["caps", "ALL CAPITALS"]] },
         { kind: "select", id: "ovMode", label: "Teletext display", path: "overlay.mode", options: () => [["mix", "Mixed over the picture"], ["page", "Full page (black)"], ["subtitle", "Boxed subtitles"]] },
         { kind: "select", id: "ovCol", label: "Subtitle colour", path: "overlay.colour", options: () => [["white", "White"], ["yellow", "Yellow"], ["cyan", "Cyan"], ["green", "Green"]] },
         { kind: "text", id: "ovHead", label: "Teletext header", path: "overlay.header" },
         { kind: "textarea", id: "ovText", label: "Text", path: "overlay.text" },
         { kind: "select", id: "ovPos", label: "Stamp position", path: "overlay.pos", options: () => [["bl", "Bottom left"], ["br", "Bottom right"], ["tl", "Top left"], ["tr", "Top right"]] }
-    ], hint: "Teletext is drawn by the set, after the decoder. Mark colours with {red} {green} {yellow} {blue} {magenta} {cyan} {white}, double height with {dh}, black boxes with {box}...{/box}. 40 characters a line. The stamp is burned in before recording, so the tape softens it. The font is VideoLook's own." }
+    ], hint: "Subtitles are typeset with your installed fonts (the style's font, or the first one of a comma-separated list that you have), then burned in where they belonged: on the film print, at the studio, or by the set, so the chain softens them accordingly. TKST, the BBC's own slab serif, isn't available, so the BBC styles use Rockwell. Teletext is drawn by the set, after the decoder. Mark colours with {red} {green} {yellow} {blue} {magenta} {cyan} {white}, double height with {dh}, black boxes with {box}...{/box}. 40 characters a line. The stamp is burned in before recording, so the tape softens it. The font is VideoLook's own." }
 ];
 
 const ITEMS = {};
@@ -335,6 +346,39 @@ async function getSelectionMask(doc, W, H) {
     }
     return m;
 }
+/* Subtitles: typeset each line as a temporary Photoshop text layer (createTextLayer, PS 24.2+), rasterise it, read its
+   pixels as coverage, delete it. The first installed font of the style's list is used; none found = VideoLook's dot font. */
+async function typesetSubtitle(doc, s, W, H, bits) {
+    const stl = TXT.subStyle(s.overlay); if (stl.edge === "cc") return null;
+    const rect = PIPE.pictureRect(W, H, s.aspect || 4 / 3), size = Math.max(6, Math.round(stl.size * rect.h));
+    let font = null;
+    for (const f of stl.fonts) { try { const tf = app.fonts.getByName(f); if (tf) { font = f; break; } } catch (e) { /* not installed */ } }
+    if (!font || typeof doc.createTextLayer !== "function") return null;
+    const faux = stl.fauxItalic === "on" || (stl.fauxItalic === "ifRoman" && !/italic|oblique/i.test(font));
+    const MAXV = bits === 16 ? 32768 : 255, out = [];
+    let white = null; try { white = new app.SolidColor(); white.rgb.red = 255; white.rgb.green = 255; white.rgb.blue = 255; } catch (e) { white = null; }
+    for (const line of TXT.subLines(s.overlay)) {
+        if (!line.trim()) { out.push(null); continue; }
+        const baseY = Math.round(size * 1.2), x0 = Math.round(size * 0.5);
+        const opts = { name: "VideoLook subtitle (temporary)", contents: line, fontName: font, fontSize: size, position: { x: x0, y: baseY } };
+        if (white) opts.textColor = white;
+        const lay = await doc.createTextLayer(opts);
+        try {
+            if (faux) { try { lay.textItem.characterStyle.fauxItalic = true; } catch (e) { /* older Photoshop: no faux italic */ } }
+            await lay.rasterize(constants.RasterizeType.ENTIRELAYER);
+            const b = lay.bounds, left = Math.max(0, Math.floor(b.left) - 2), right = Math.min(W, Math.ceil(b.right) + 2);
+            const top = Math.max(0, baseY - size), bottom = Math.min(H, baseY + Math.round(size * 0.35));
+            if (right <= left || bottom <= top) { out.push(null); continue; }
+            const got = await imaging.getPixels({ documentID: doc.id, layerID: lay.id, componentSize: bits, colorSpace: "RGB", sourceBounds: { left, top, right, bottom } });
+            const img = got.imageData, d = await img.getData({ chunky: true }), w = img.width, h = img.height, c = img.components, sb = got.sourceBounds;
+            const a = new Float32Array(w * h);
+            for (let i = 0; i < w * h; i++) a[i] = c === 4 ? d[i * 4 + 3] / MAXV : (d[i * c] + d[i * c + 1] + d[i * c + 2]) / (3 * MAXV);
+            img.dispose();
+            out.push({ w, h, a, base: baseY - sb.top });
+        } finally { try { await lay.delete(); } catch (e) { /* already gone */ } }
+    }
+    return { bitmaps: out, font: font + (faux ? ", faux italic" : "") };
+}
 function lookLabel() { const l = LOOKS.find(x => x.id === currentLook); return l ? l.title + (modified ? " *" : "") : "custom"; }
 function allLayers(layers, out) { out = out || []; for (const l of layers) { out.push(l); if (l.layers && l.layers.length) allLayers(l.layers, out); } return out; }
 async function setOpacity(docID, layerID, pct) {
@@ -356,6 +400,7 @@ function engineSettings() {
     }
     if (!enabled.decoder) { delete s.set; delete s.receiver; }
     if (!enabled.overlay || !s.overlay || s.overlay.kind === "none") delete s.overlay;
+    else if (s.overlay.kind === "subtitle") s.overlay.colour = s.overlay.subColour;
     if (s.channel) {
         if (s.channel.scramble === "none") delete s.channel.scramble;
         if (!s.channel.cochannel || !(s.channel.cochannel.ratio > 0)) delete s.channel.cochannel;
@@ -419,6 +464,7 @@ async function render(mode) {
             const n = W * H, planes = [new Float32Array(n), new Float32Array(n), new Float32Array(n)];
             for (let y = 0; y < gh; y++) { const Y = gb.top + y; if (Y < 0 || Y >= H) continue; for (let x = 0; x < gw; x++) { const X = gb.left + x; if (X < 0 || X >= W) continue; const o = (y * gw + x) * comps, i = Y * W + X; planes[0][i] = data[o] / MAXV; planes[1][i] = data[o + 1] / MAXV; planes[2][i] = data[o + 2] / MAXV; } }
             const docIn = { w: W, h: H, planes };
+            if (s.overlay && s.overlay.kind === "subtitle") { const ts = await typesetSubtitle(doc, s, W, H, bits); if (ts) { docIn.subBitmaps = ts.bitmaps; docIn.subFont = ts.font; } }
             // co-channel second picture from a layer named "second picture", if asked for
             if (s.channel && s.channel.cochannel && s.channel.cochannel.source === "layer" && enabled.channel !== false) {
                 const lay = allLayers(doc.layers).find(l => /second picture/i.test(l.name));

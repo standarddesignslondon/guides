@@ -147,6 +147,123 @@ function timestamp(grid, g, o) {
   return grid;
 }
 
-const api = { teletext, timestamp, glyph };
+/* ================= Subtitles ================= */
+/* Styles and what rests on what (research, 28 Sept 2026; see _research/I_subtitles.md):
+ *  BBC: TKST, a slab serif "based at many removes on Rockwell Light", designed 1975-77 at Reading University for the BBC's
+ *    subtitle generator; first black edging, later a "grey label" (picture darkened and colour killed in a rectangle behind
+ *    the text) [SEC designer's account, screenfont.ca]. TKST itself isn't available: Rockwell is the nearest installed face.
+ *  Cinema, chemically etched (to the 1990s): white letters (clear film) with slightly ragged edges [SEC 3 sources];
+ *    laser (from 1988): sharp, with a thin dark halo from the heat, sometimes dark specks [SEC 2+]; monoline Helvetica-like faces.
+ *  Home video releases: off-the-shelf faces such as Univers 45 or Antique Olive [SEC single]; edge treatment [EST].
+ *  DVD: 2-bit subpictures, four values (background, fill, two emphasis) [SPEC]: hard stepped edges; Tahoma/Verdana-like [SEC forum].
+ *  Dutch TV: Helvetica Neue 67 Medium Condensed, 87% white, black border, standard since the 1980s [SEC single].
+ *  Channel 4 guideline (era uncertain): Gill Sans with drop shadow [SEC single].
+ *  Early optical TV subtitling: white letters on a black "letter box" [SEC single].
+ *  US closed captions (EIA-608, 1980+): white monospaced capitals on black, 32 columns x 15 rows [SPEC/SEC]; decoder font [EST].
+ * Sizes, offsets and edge widths are [EST] unless stated. */
+const SUB_STYLES = {
+  arial_shadow: { label: "Arial italic, soft shadow", fonts: ["Arial-ItalicMT", "ArialMT"], fauxItalic: "ifRoman", colour: "white", edge: "softshadow", size: 0.04, stage: "studio" },
+  bbc_edge:     { label: "BBC slab serif (TKST-style), black edge", fonts: ["Rockwell-Light", "Rockwell-Regular", "Rockwell"], colour: "white", edge: "outline", size: 0.042, stage: "studio" },
+  bbc_label:    { label: "BBC slab serif on a grey label", fonts: ["Rockwell-Light", "Rockwell-Regular", "Rockwell"], colour: "white", edge: "greylabel", size: 0.042, stage: "studio" },
+  letterbox:    { label: "Early TV: white on a black box", fonts: ["Helvetica", "ArialMT"], colour: "white", edge: "box", size: 0.04, stage: "studio" },
+  cinema_chem:  { label: "Cinema print, chemically etched", fonts: ["Helvetica", "ArialMT"], colour: "white", edge: "ragged", size: 0.045, stage: "film" },
+  cinema_laser: { label: "Cinema print, laser-etched (1988 on)", fonts: ["Helvetica", "ArialMT"], colour: "white", edge: "halo", size: 0.045, stage: "film" },
+  video_release:{ label: "VHS / LaserDisc release (Univers-style)", fonts: ["UniversLTStd-Light", "Univers-Light", "Univers", "HelveticaNeue-Light", "Helvetica"], colour: "white", edge: "outline", size: 0.042, stage: "studio" },
+  dutch:        { label: "Dutch TV (Helvetica Neue condensed)", fonts: ["HelveticaNeueLTStd-MdCn", "HelveticaNeue-CondensedBold", "HelveticaNeue-Medium", "ArialNarrow", "Helvetica"], colour: "white87", edge: "outline", size: 0.045, stage: "studio" },
+  channel4:     { label: "Channel 4 (Gill Sans, drop shadow)", fonts: ["GillSans", "GillSans-Light", "Helvetica"], colour: "white", edge: "shadow", size: 0.042, stage: "studio" },
+  dvd:          { label: "DVD subpicture (Tahoma-like)", fonts: ["Tahoma", "Verdana", "ArialMT"], colour: "white", edge: "bitmap4", size: 0.045, stage: "studio" },
+  cc608:        { label: "US closed captions (Line 21)", fonts: [], colour: "white", edge: "cc", size: 0.05, stage: "set", caps: true },
+  custom:       { label: "Custom", fonts: ["ArialMT"], colour: "white", edge: "outline", size: 0.042, stage: "studio" },
+};
+const SUB_COL = { white: [1, 1, 1], white87: [0.87, 0.87, 0.87], yellow: [1, 1, 0.1], cyan: [0.2, 1, 1] };
+// Settings with the style's defaults filled in
+function subStyle(o) { const st = SUB_STYLES[o.style] || SUB_STYLES.arial_shadow; const r = Object.assign({}, st); for (const k of ["colour", "edge", "size", "stage", "lineSpacing", "position", "strength"]) if (o[k] !== undefined && o[k] !== "" && o[k] !== "style") r[k] = o[k]; if (o.caps === "caps") r.caps = true; if (o.caps === "typed") r.caps = false; if (o.italic === "on") r.fauxItalic = "on"; if (o.italic === "off") r.fauxItalic = "off"; r.fonts = o.font && o.font.trim() ? o.font.split(",").map(x => x.trim()).filter(Boolean).concat(st.fonts) : st.fonts; return r; }
+function subLines(o) { const st = subStyle(o); return (o.text || "").split("\n").map(l => st.caps ? l.toUpperCase() : l); }
+
+// Fallback typesetting with VideoLook's own dot font (used when Photoshop hasn't typeset the lines, e.g. outside Photoshop)
+// Each line: { w, h, a (coverage), base (baseline from top) } in document pixels; band height 1.35 x size, baseline at 1.0 x size.
+function rasterFallback(lines, sizePx, italic) {
+  const s = sizePx * 0.72 / 7, out = [];
+  for (const line of lines) {
+    if (!line.trim()) { out.push(null); continue; }
+    const pad = Math.round(sizePx * 0.15) + 1, h = Math.round(sizePx * 1.35), base = Math.round(sizePx), adv = 6 * s, w = Math.ceil((line.length * 6 - 1) * s) + 2 * pad, a = new Float32Array(w * h), sh = italic ? 0.2 : 0;
+    [...line].forEach((ch, k) => { const gl = glyph(ch), x0 = k * adv;
+      for (let y = 0; y < h; y++) { const gy = Math.floor((y - (base - 7 * s)) / s); if (gy < 0 || gy > 8) continue;
+        const off = sh * (base - y);
+        for (let x = 0; x < adv; x++) { const gx = Math.floor(x / s); if (gx > 4) continue; if (gl[gy][gx] === "1") { const X = Math.round(x0 + x + off - sh * base * 0.5 + pad); if (X >= 0 && X < w) a[y * w + X] = 1; } } } });
+    out.push({ w, h, a, base });
+  }
+  return out;
+}
+// Stack the lines centred at the bottom (or top) of the picture: returns a document-size coverage map and line rectangles
+function placeSubtitle(bitmaps, W, H, rect, sizePx, st) {
+  const cov = new Float32Array(W * H), rects = [], pitch = sizePx * (st.lineSpacing || 1.3), n = bitmaps.length, margin = 0.075 * rect.h; // safe-area margin [EST]
+  const firstBase = st.position === "top" ? rect.y + margin + sizePx : rect.y + rect.h - margin - sizePx * 0.3 - (n - 1) * pitch;
+  bitmaps.forEach((b, k) => {
+    if (!b) return;
+    const baseY = firstBase + k * pitch, top = Math.round(baseY - b.base), left = Math.round(rect.x + (rect.w - b.w) / 2);
+    let x0 = W, x1 = 0, y0 = H, y1 = 0;
+    for (let y = 0; y < b.h; y++) { const Y = top + y; if (Y < 0 || Y >= H) continue; for (let x = 0; x < b.w; x++) { const X = left + x, v = b.a[y * b.w + x]; if (X < 0 || X >= W || v <= 0) continue; cov[Y * W + X] = Math.max(cov[Y * W + X], v); if (v > 0.2) { if (X < x0) x0 = X; if (X > x1) x1 = X; if (Y < y0) y0 = Y; if (Y > y1) y1 = Y; } } }
+    if (x1 > x0) rects.push({ x0: x0 - sizePx * 0.3, x1: x1 + sizePx * 0.3, y0: baseY - sizePx * 0.95, y1: baseY + sizePx * 0.32 });
+  });
+  return { cov, rects };
+}
+function boxBlur(src, w, h, rx, ry) { // separable box blur, radii in samples (fractional ok via two passes)
+  const out = Float32Array.from(src), tmp = new Float32Array(src.length);
+  const pass = (a, b, n, stride, count, r) => { r = Math.max(0, Math.round(r)); if (!r) { b.set(a); return; } for (let c = 0; c < count; c++) { const o = c * (stride === 1 ? n : 1), st = stride === 1 ? 1 : stride; let acc = 0; for (let i = -r; i <= r; i++) acc += a[o + Math.min(n - 1, Math.max(0, i)) * st]; for (let i = 0; i < n; i++) { b[o + i * st] = acc / (2 * r + 1); acc += a[o + Math.min(n - 1, i + r + 1) * st] - a[o + Math.max(0, i - r) * st]; } } };
+  pass(out, tmp, w, 1, h, rx); pass(tmp, out, h, w, w, ry); return out;
+}
+/* Burn the subtitle into an R'G'B' grid. cov: coverage on the grid; rects: line rectangles in grid samples/rows;
+ * sizeRows: font size in grid rows; hScale: grid samples per row-height unit (anisotropy). */
+function subtitleComposite(grid, g, st, cov, rects, sizeRows, hScale, seed) {
+  const ns = g.ns, nl = g.lines, n = ns * nl, [R, G, B] = grid, fill = SUB_COL[st.colour] || SUB_COL.white, k = st.strength === undefined ? 1 : st.strength;
+  const rnd = VT.mulberry32(((seed || 1) * 4957) >>> 0), rx = r => r * sizeRows * hScale, ry = r => r * sizeRows;
+  const inRect = (x, y) => rects.some(r => x >= r.x0 && x <= r.x1 && y >= r.y0 && y <= r.y1);
+  let c = cov, dark = null, mul = 1;
+  if (st.edge === "outline") { const e = boxBlur(cov, ns, nl, rx(0.07), ry(0.07)); dark = Float32Array.from(e, v => Math.min(1, v * 3.5)); }
+  else if (st.edge === "shadow") { const sh = shiftCov(cov, ns, nl, rx(0.07), ry(0.07)); dark = boxBlur(sh, ns, nl, rx(0.015), ry(0.015)); mul = 0.85; }
+  else if (st.edge === "softshadow") { const sh = shiftCov(cov, ns, nl, rx(0.06), ry(0.07)); dark = Float32Array.from(boxBlur(boxBlur(sh, ns, nl, rx(0.05), ry(0.05)), ns, nl, rx(0.04), ry(0.04)), v => Math.min(1, v * 2.6)); mul = 0.88; }
+  else if (st.edge === "halo") { const e = boxBlur(cov, ns, nl, rx(0.03), ry(0.03)); dark = Float32Array.from(e, (v, i) => Math.max(0, Math.min(1, v * 3) - cov[i])); mul = 0.6; }
+  else if (st.edge === "ragged") { const nz = new Float32Array(n); for (let i = 0; i < n; i++) nz[i] = VT.gaussRand(rnd); const nb = boxBlur(nz, ns, nl, 1, 1); c = Float32Array.from(cov, (v, i) => v <= 0 ? 0 : Math.max(0, Math.min(1, (v - 0.5 + 0.45 * nb[i]) * 3 + 0.5))); }
+  else if (st.edge === "bitmap4") { const e = boxBlur(cov, ns, nl, rx(0.05), ry(0.05)); dark = Float32Array.from(e, v => v > 0.06 ? 1 : 0); c = Float32Array.from(cov, v => v > 0.62 ? 1 : v > 0.22 ? 0.55 : 0); }
+  for (let y = 0; y < nl; y++) for (let x = 0; x < ns; x++) {
+    const i = y * ns + x;
+    if ((st.edge === "box" || st.edge === "greylabel" || st.edge === "ghostbox") && rects.length && inRect(x, y)) {
+      if (st.edge === "box") { R[i] = G[i] = B[i] = 0; }
+      else { const yv = 0.299 * R[i] + 0.587 * G[i] + 0.114 * B[i], f = st.edge === "greylabel" ? 0.4 : 0.5; if (st.edge === "greylabel") { R[i] = G[i] = B[i] = yv * f; } else { R[i] *= f; G[i] *= f; B[i] *= f; } }
+    }
+    if (dark && dark[i] > 0) { const d = 1 - Math.min(1, dark[i] * mul * k); R[i] *= d; G[i] *= d; B[i] *= d; }
+    const cv = c[i];
+    if (cv > 0) { const f = st.edge === "bitmap4" && cv < 1 ? [0.55, 0.55, 0.55] : fill; R[i] = R[i] * (1 - cv) + f[0] * cv; G[i] = G[i] * (1 - cv) + f[1] * cv; B[i] = B[i] * (1 - cv) + f[2] * cv; }
+  }
+  if (st.edge === "halo") { const m = Math.round(n * 2e-5 + 3); for (let k2 = 0; k2 < m * 20; k2++) { const i = Math.floor(rnd() * n); if (cov[i] > 0.8 && rnd() < 0.05) { R[i] *= 0.3; G[i] *= 0.3; B[i] *= 0.35; } } } // laser residue specks [SEC patent; density EST]
+  return grid;
+}
+function shiftCov(cov, w, h, dx, dy) { const out = new Float32Array(cov.length), ix = Math.round(dx), iy = Math.round(dy); for (let y = 0; y < h; y++) { const sy = y - iy; if (sy < 0 || sy >= h) continue; for (let x = 0; x < w; x++) { const sx = x - ix; if (sx >= 0 && sx < w) out[y * w + x] = cov[sy * w + sx]; } } return out; }
+
+/* US closed captions (EIA-608): drawn by the decoder in the set: white capitals in a monospaced cell grid, each character on
+ * an opaque black cell; 32 columns x 15 rows [SPEC]; the rows sit in the safe area (grid 80% x 80% of the picture, EST);
+ * the decoder's own low-resolution font is not documented: VideoLook's dot font stands in [EST]. */
+function closedCaptions(grid, g, o) {
+  const ns = g.ns, nl = g.lines, wrap = l => { const out = []; let cur = ""; for (const w of l.split(/\s+/).filter(Boolean)) { if ((cur + " " + w).trim().length > 32) { if (cur) out.push(cur); cur = w.slice(0, 32); } else cur = (cur + " " + w).trim(); } if (cur) out.push(cur); return out; },
+    lines = [].concat(...subLines(Object.assign({}, o, { caps: o.caps && o.caps !== "style" ? o.caps : "caps" })).filter(l => l.trim().length).map(wrap)).slice(-4); // 32 columns, up to 4 rows [SPEC]
+  const areaW = ns * 0.8, areaH = nl * 0.8, x0 = (ns - areaW) / 2, y0 = (nl - areaH) / 2, cw = areaW / 32, rh = areaH / 15, [R, G, B] = grid;
+  const italic = o.italic === "on";
+  lines.forEach((line, k) => {
+    const row = 14 - (lines.length - 1 - k), col0 = Math.floor((32 - line.length) / 2);
+    const text = " " + line + " "; // a leading and trailing space cell, as caption encoders sent
+    [...text].forEach((ch, j) => {
+      const cx0 = x0 + (col0 - 1 + j) * cw, cy0 = y0 + row * rh, gl = glyph(ch);
+      for (let y = Math.floor(cy0); y < Math.min(nl, Math.ceil(cy0 + rh)); y++) { const gy = Math.floor((y - cy0) / rh * 10) - 1;
+        for (let x = Math.floor(cx0); x < Math.min(ns, Math.ceil(cx0 + cw)); x++) { if (x < 0) continue; const sh = italic ? (7 - gy) * 0.15 : 0, gx = Math.floor((x - cx0) / cw * 6 - 0.5 - sh);
+          const on = gy >= 0 && gy < 9 && gx >= 0 && gx < 5 && gl[gy][gx] === "1", i = y * ns + x;
+          if (on) { R[i] = G[i] = B[i] = 1; } else { R[i] = G[i] = B[i] = 0; } } }
+    });
+  });
+  const bw = Math.min(4.2e6, g.bw || 4.2e6); for (const p of grid) VT.filterRows(p, ns, nl, VT.lp3dB(bw, g.fs, VT.tw(bw, 1.5e6)));
+  return grid;
+}
+
+const api = { teletext, timestamp, glyph, SUB_STYLES, subStyle, subLines, rasterFallback, placeSubtitle, subtitleComposite, closedCaptions };
 if (typeof module !== "undefined" && module.exports) module.exports = api;
 if (typeof globalThis !== "undefined") globalThis.VLText = api;
