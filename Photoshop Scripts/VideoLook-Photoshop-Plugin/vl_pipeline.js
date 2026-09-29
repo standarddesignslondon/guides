@@ -121,8 +121,12 @@ function run(doc, s, winDoc) {
       const src = V.decode(enc, { separation: gs.colour === "PAL" ? "comb2H" : gs.colour === "NTSC" ? "comb1H" : "notch" });
       const gt = V.geometry(tr.target || (gs.lines === 485 ? "PAL-I" : "NTSC-M"));
       const mt = mask ? V.resize(mask, gs.ns, gs.lines, gt.ns, gt.lines) : null;
-      const conv = TR.convert(src, gs, gt, Object.assign({ seed, v, mask: mt }, tr));
-      enc = V.encode(conv, gt.name, {}); g = gt; stages.push("converted to " + gt.name);
+      // repeated generations: each copy made from the previous one (e.g. re-shot off a monitor again and again, as in
+      // David Hall's "This Is A Television Receiver", BBC 1976) [SEC LUX catalogue]
+      const gens = Math.max(1, Math.min(12, Math.round(tr.generations || 1)));
+      let cur = src, gcur = gs, mcur = mask;
+      for (let k = 0; k < gens; k++) { cur = TR.convert(cur, gcur, gt, Object.assign({ v, mask: k === 0 ? mt : mcur && gcur === gt ? mcur : mt }, tr, { seed: seed + 17 * k })); gcur = gt; }
+      enc = V.encode(cur, gt.name, {}); g = gt; stages.push("converted to " + gt.name + (gens > 1 ? " (" + gens + " generations)" : ""));
     } else if (tr && tr.type === "crossplay" && (tr.mode === "pal60" || tr.mode === "ntsc443")) {
       const tg = V.geometry(tr.mode === "pal60" ? "PAL-60" : "NTSC-443");
       const src = V.decode(enc, { separation: "notch" }).map(p => V.resize(p, gs.ns, gs.lines, tg.ns, tg.lines));

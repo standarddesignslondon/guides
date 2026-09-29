@@ -13,9 +13,9 @@
   <h1>adobe<br>tools</h1>
   <p class="hero-sub">process guide</p>
   <p class="hero-blurb">Panels, scripts and automations built for the Adobe applications. What every control does, how a file travels from the canvas out to whatever does the work and back again, and the things each one needs you to remember.</p>
-  <p class="hero-count">11 tools</p>
+  <p class="hero-count">12 tools</p>
 </header>
-<div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="app"><button class="f on" data-f="app" data-v="">all apps</button><button class="f" data-f="app" data-v="InDesign">indesign</button><button class="f" data-f="app" data-v="Photoshop">photoshop</button></div><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="UXP panel">uxp panel</button><button class="f" data-f="kind" data-v="Watch folder">watch folder</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
+<div class="filters"><input type="search" id="q" placeholder="search" autocomplete="off"><div class="fgroup" data-field="app"><button class="f on" data-f="app" data-v="">all apps</button><button class="f" data-f="app" data-v="InDesign">indesign</button><button class="f" data-f="app" data-v="Photoshop">photoshop</button></div><div class="fgroup" data-field="kind"><button class="f on" data-f="kind" data-v="">all types</button><button class="f" data-f="kind" data-v="Recipe book">recipe book</button><button class="f" data-f="kind" data-v="UXP panel">uxp panel</button><button class="f" data-f="kind" data-v="Watch folder">watch folder</button></div><div class="fgroup" data-field="author"><button class="f on" data-f="author" data-v="">everyone</button><button class="f" data-f="author" data-v="Claude">claude</button></div></div>
 <div class="index-list" id="grid">
 <a class="row" href="tools/nano-banana-bridge.html"
    data-app="Photoshop" data-kind="UXP panel" data-author="Claude" data-text="nano banana bridge sends the canvas and a marked-up selection to nano banana, then brings the result back as a masked layer. a photoshop panel that closes the loop between a selection and nano banana. it exports a flattened copy of the document with your selection stroked on as an annotation outline, wraps your instruction in a template telling the model to edit only inside that outline and then erase it, and sends the lot by one of three routes: the gemini app, the ai studio playground, or the gemini api. what comes back is imported as a layer masked to the original selection, so every pixel outside the edit stays exactly as it was. photoshop uxp panel claude">
@@ -87,9 +87,16 @@
   <span class="r-desc">Television and video looks from Baird&#x27;s 30 lines to DV: 405-line to PAL, NTSC and SECAM, Soviet, Japanese and pre-war systems, long-distance reception, tube cameras, Quad to VHS, discs, teletext and CRT sets.</span>
   <span class="r-kind">photoshop</span>
   <span class="r-thumb"><img src="images/videolook.png" alt="" loading="lazy"></span>
+</a><a class="row" href="tools/look-cookbook.html"
+   data-app="Photoshop" data-kind="Recipe book" data-author="Claude" data-text="look cookbook recipes for filmlook and videolook, alone and chained: kitchen-sink titles, community cable, video art, artists&#x27; film and video-to-film oddities. starting points rather than reconstructions. each recipe names the plugin (or the order of the two), the look or settings to start from, and what rests on what: where a source is single or a setting is a judgement, it says so. control names are as printed on the panels. some things these plugins can&#x27;t do yet (magnet-bent pictures, scan processors, step-printed motion) are listed at the end. photoshop recipe book claude">
+  <span class="r-num">11</span>
+  <span class="r-name">look cookbook</span>
+  <span class="r-desc">Recipes for FilmLook and VideoLook, alone and chained: kitchen-sink titles, community cable, video art, artists&#x27; film and video-to-film oddities.</span>
+  <span class="r-kind">photoshop</span>
+  <span class="r-thumb"><img src="images/look-cookbook.png" alt="" loading="lazy"></span>
 </a><a class="row" href="tools/poster-pdf-export.html"
    data-app="InDesign" data-kind="Watch folder" data-author="Claude" data-text="poster pdf export drop a finished illustrator poster into a folder and five print-ready gracol pdfs appear on the desktop. the last five minutes of every poster used to be manual: overwrite `artwork.ai` on the crucial x9, open the indesign template that links to it, wait for the link to refresh, export six pages through the gelato preset, then rename the results. this does the lot from a single drag. a launchd agent watches two folders, one per template, asks for the poster&#x27;s name, and hands the job to indesign, which copies the artwork into place and exports pages 2 – 6 one at a time. verified byte-identical to a hand export: of the six data streams in each pdf, five match exactly and the sixth is the xmp packet holding the timestamp. indesign watch folder claude">
-  <span class="r-num">11</span>
+  <span class="r-num">12</span>
   <span class="r-name">poster pdf export</span>
   <span class="r-desc">Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.</span>
   <span class="r-kind">indesign</span>
@@ -102,7 +109,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>adobe</span>
   <span>process guide</span></div>
-  <div class="sf-col"><span>generated 2026-09-28</span>
+  <div class="sf-col"><span>generated 2026-09-29</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

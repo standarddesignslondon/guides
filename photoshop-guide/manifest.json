@@ -8,7 +8,7 @@
   "noun_plural": "tools",
   "page_dir": "tools"
  },
- "generated": "2026-09-28",
+ "generated": "2026-09-29",
  "items": [
   {
    "num": "01",
@@ -142,6 +142,19 @@
   },
   {
    "num": "11",
+   "slug": "look-cookbook",
+   "name": "Look Cookbook",
+   "tagline": "Recipes for FilmLook and VideoLook, alone and chained: kitchen-sink titles, community cable, video art, artists' film and video-to-film oddities.",
+   "url": "tools/look-cookbook.html",
+   "image": "images/look-cookbook.png",
+   "facets": {
+    "app": "Photoshop",
+    "kind": "Recipe book",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "12",
    "slug": "poster-pdf-export",
    "name": "Poster PDF Export",
    "tagline": "Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.",

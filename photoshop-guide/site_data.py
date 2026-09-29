@@ -1485,10 +1485,10 @@ ITEMS.append({
         "LaserDisc, CED, Canal+ scrambling and teletext. The result goes on a new "
         "layer; the photo is untouched.",
     "facts": {
-        "version": "1.1.5",
+        "version": "1.1.6",
         "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
         "plugin id": "com.simonmorse.videolook",
-        "looks": "74 (10 built from specifications alone)",
+        "looks": "78 (10 built from specifications alone)",
     },
     "quickstart": [
         "Open **Plugins › VideoLook** and choose a look. The note under the list "
@@ -1504,10 +1504,10 @@ ITEMS.append({
     "controls": [
         {"title": "Top of panel",
          "rows": [
-             ["Look", "74 looks in 12 groups",
+             ["Look", "78 looks in 13 groups",
               "UK broadcast, US broadcast, France, Home video, Archive and transfers, "
               "Long-distance reception, USSR and Eastern Europe, Japan, Early television, "
-              "Space, surveillance and toys, South America, Subtitles. "
+              "Space, surveillance and toys, South America, Community TV and video art, Subtitles. "
               "Choosing a look sets every stage and ticks the ones it uses."],
              ["Strength", "0 – 100", "Opacity of the result layer; updates the last render live."],
              ["Source", "Whole image / Selected layer",
@@ -1589,6 +1589,7 @@ ITEMS.append({
          ]},
         {"title": "Transfer",
          "rows": [
+             ["Conversion generations", "1 - 12", "Repeat the conversion, each copy made from the last: with Optical and the same target standard, a picture re-shot off a monitor again and again."],
              ["Standards conversion", "Optical / BBC 1967 / Digital / Motion-compensated",
               "Re-codes to the target standard. The BBC 1967 field store blends one field "
               "in five and insets the picture in a black border."],
@@ -2100,6 +2101,31 @@ ITEMS.append({
         ]
        },
        {
+        "title": "Community TV and video art",
+        "rows": [
+         [
+          "Swindon Viewpoint, 1974 (black-and-white cable)",
+          "research-based · Portapak vidicon → EIAJ-1 Portapak (1/2 in reel, B&W) → 625-line B&W → 22in black-and-white tube",
+          "Britain's community cable station (from Sept 1973, EMI-funded, on the Radio Rentals relay network). Until 1977 it was black and white: Sony Portapaks and 1-inch Sony recorders, low light on location, copy-edited with a glitch at each edit, then carried cleanly by cable. The half-inch Portapak format stands in for both machines; the haloes come from the set's sharpness control here, which is [EST]."
+         ],
+         [
+          "Swindon Viewpoint, 1978 (colour U-matic)",
+          "research-based · Saticon tube camcorder → U-matic low band → 625 PAL (UK System I) → 22in slot-mask set",
+          "From 1977 the station moved to colour: U-matic recorders and single-tube Sony cameras, and by its own account 'picture quality, or at least resolution, went down somewhat with the move to colour'. Single-tube camera model stands in [EST]."
+         ],
+         [
+          "Re-shot off a monitor, again and again",
+          "research-based · 3-tube Plumbicon → 625 PAL (UK System I) → optical conversion to 625 PAL → 22in slot-mask set",
+          "After David Hall's 'This Is A Television Receiver' (BBC, 1976), where a newsreader was re-shot off a monitor, each copy from the last, 'until there is a complete degeneration of both sound and image'. Set Conversion generations under Transfer (1-12). The monitor-and-camera model is the optical converter's [EST]."
+         ],
+         [
+          "Videotape to cinema film, 1964 (Electronovision-style)",
+          "research-based · Image orthicon (B&W) → 2-inch Quad, high band → 525-line B&W → kinescope → frame-grab",
+          "Before 200 Motels, Electronovision shot plays and concerts on videotape and moved them to film by kinescope for cinemas (Hamlet, The T.A.M.I. Show, 1964). A US colour-era camera on Quad, filmed off a monitor at 24 frames."
+         ]
+        ]
+       },
+       {
         "title": "Subtitles",
         "rows": [
          [
@@ -2211,6 +2237,199 @@ ITEMS.append({
        "The engine is the vl_*.js files; test harness and standards tests are kept with the build notes."
       ]
      }
+    ],
+})
+
+ITEMS.append({
+    "slug": "look-cookbook",
+    "name": "Look Cookbook",
+    "kind": "Recipe book",
+    "app": "Photoshop",
+    "author": "Claude",
+    "status": "Working",
+    "tagline": "Recipes for FilmLook and VideoLook, alone and chained: kitchen-sink titles, "
+               "community cable, video art, artists' film and video-to-film oddities.",
+    "blurb":
+        "Starting points rather than reconstructions. Each recipe names the plugin (or the "
+        "order of the two), the look or settings to start from, and what rests on what: "
+        "where a source is single or a setting is a judgement, it says so. Control names "
+        "are as printed on the panels. Some things these plugins can't do yet (magnet-bent "
+        "pictures, scan processors, step-printed motion) are listed at the end.",
+    "facts": {"covers": "FilmLook 1.x, VideoLook 1.1.6"},
+    "quickstart": [
+        "**Chaining the two panels.** Render the first plugin with Source set to *Whole image*. "
+        "Then run the second, also on *Whole image*: VideoLook reads the FilmLook layer "
+        "underneath (it only hides its own earlier layers), and FilmLook reads a VideoLook "
+        "layer the same way. Keep Strength at 100 on the first pass.",
+        "**Order follows history.** Whatever happened to the pictures first goes first: "
+        "film shot, then shown on TV = FilmLook, then VideoLook. Video transferred to cinema "
+        "film = VideoLook, then FilmLook.",
+        "**Mind the noise.** Each plugin adds its own grain or noise, and chained they stack: "
+        "turn the first plugin's grain down a little.",
+        "**Titles and subtitles.** Put the lettering on before the plugin that would have "
+        "carried it: optical titles before FilmLook; open subtitles in VideoLook's Overlay "
+        "section at the right stage.",
+    ],
+    "sections": [
+        {"label": "recipes", "type": "reference", "data": [
+            {"title": "british new wave and kitchen sink",
+             "intro": "The one that started this page: soft black and white, slightly diffused titles.",
+             "rows": [
+                ["Kitchen-sink title card, as projected",
+                 "FilmLook only",
+                 "Set the title on the photo and merge. Stock *B&W fast panchromatic (1955-80)*. "
+                 "Duplicate generations 1-2 (superimposed titles were usually a printing generation "
+                 "further on: more grain and contrast). Halation up and a little Diffusion / glow, so "
+                 "the white letters bleed slightly. Resolving power down a touch if the letters look "
+                 "too crisp. Grain moderate; a little dust and Uneven density. The printing-generation "
+                 "point is general practice, not checked film by film."],
+                ["Kitchen-sink film, seen on TV",
+                 "FilmLook → VideoLook",
+                 "The above, then VideoLook *1970s drama: 16 mm film exteriors* with Standard changed to "
+                 "*625-line B&W*. View *Frame-grab* for a clean off-air grab, *Screen close-up* for the set. "
+                 "Lower FilmLook's grain first: the telecine adds its own."],
+                ["Early Coronation Street-style card",
+                 "VideoLook",
+                 "*405-line telerecording, 1953*: early episodes survive mainly as 405-line film "
+                 "recordings, which gives that heavier, softer glow."],
+             ]},
+            {"title": "british tv drama and documentary",
+             "rows": [
+                ["Cathy Come Home (1966)",
+                 "FilmLook → VideoLook",
+                 "Location scenes were 16 mm, hand-held (Tony Imi); about ten minutes were shot on studio "
+                 "video and telerecorded into the film because of union rules (two sources). FilmLook: "
+                 "*B&W fast panchromatic*, Gauge *16mm 1.37*, Lens *1970s zoom* (the nearest), grain up. "
+                 "Then VideoLook *405-line live studio at home, 1953* with Camera switched off and Transfer "
+                 "*Telecine*: BBC1 was 405 lines for most viewers then. For the studio inserts, use "
+                 "VideoLook *405-line telerecording* on its own."],
+                ["Culloden (1964) / The War Game (1965)",
+                 "FilmLook (→ VideoLook)",
+                 "Peter Watkins's newsreel style: 16 mm black and white, mostly hand-held (Culloden about "
+                 "85%, two sources). FilmLook *B&W newsreel / duplicate*, Gauge *16mm 1.37*, grain up, "
+                 "Condition *Release print*. Add VideoLook's 405-line telecine chain (as above) for a "
+                 "broadcast feel."],
+                ["Play for Today (1970s)",
+                 "VideoLook",
+                 "Studio scenes on 2-inch tape and location scenes on 16 mm film, telecined in: "
+                 "*1970s drama: studio video interiors* and *1970s drama: 16 mm film exteriors* (run "
+                 "FilmLook's *Eastman 100-speed negative (1968-74)*, *16mm 1.37*, first for the film "
+                 "half). Some colour plays survive only as black-and-white film recordings: "
+                 "*Colour show on B&W film (with PAL dots)*."],
+                ["Threads (1984)",
+                 "FilmLook (→ VideoLook)",
+                 "16 mm colour, 1.33, hand-held, semi-documentary (two sources). FilmLook *Eastman improved "
+                 "100-speed negative (1974-83)*, Gauge *16mm 1.37*, Lens *1970s zoom*, grain up, Saturation "
+                 "down a little. For the version most people saw again, add VideoLook *VHS off-air "
+                 "recording, 1986 (UK)*."],
+                ["Kes (1969)",
+                 "FilmLook",
+                 "Chris Menges: natural light, grainy, high contrast, colour (two sources). Gauge not found: "
+                 "try *35mm flat 1.66 (European)*. Stock *Eastman 100-speed negative (1968-74)*, Exposure "
+                 "a little under, Contrast up, grain up, Saturation slightly down."],
+             ]},
+            {"title": "community tv and video art",
+             "rows": [
+                ["Swindon Viewpoint, 1973-77",
+                 "VideoLook preset",
+                 "*Swindon Viewpoint, 1974 (black-and-white cable)*. From the station's own history: "
+                 "EMI-funded from September 1973 on the Radio Rentals relay network; Sony Portapaks and "
+                 "1-inch Sony recorders; little light on location; copy-editing with a glitch at each "
+                 "edit. The 'blurry but sharp' haloes are modelled with the set's Sharpness (my reading "
+                 "of the effect, not documented): raise it for more halo, and push Tracking error up to "
+                 "fake an edit glitch."],
+                ["Swindon Viewpoint in colour, from 1977",
+                 "VideoLook preset",
+                 "*Swindon Viewpoint, 1978 (colour U-matic)*: single-tube Sony cameras on U-matic; the "
+                 "station says resolution went down with colour."],
+                ["Portapak video art, around 1970",
+                 "VideoLook preset",
+                 "*Sony Portapak video art, 1970* (625) or switch Standard to *525-line B&W* for the "
+                 "American scene. For Lanesville TV-style pirate broadcasting (Videofreex, from 1972), "
+                 "switch the Channel on: Signal-to-noise about 30, a Ghost of 2-4 µs."],
+                ["This Is A Television Receiver (David Hall, 1976)",
+                 "VideoLook preset",
+                 "*Re-shot off a monitor, again and again*: each copy is re-shot from the last. Set "
+                 "Transfer › Conversion generations from 1 to 12."],
+                ["Videotape to cinema, 1964",
+                 "VideoLook preset",
+                 "*Videotape to cinema film, 1964 (Electronovision-style)*: shot on tape, kinescoped to "
+                 "film for cinemas, years before 200 Motels."],
+             ]},
+            {"title": "artists' film and indie",
+             "rows": [
+                ["Warhol Screen Tests (1964-66)",
+                 "FilmLook",
+                 "16 mm black and white, one 100-ft roll on a static Bolex, a single light, varied from "
+                 "sitting to sitting (two sources). Stock *B&W fast panchromatic*, Gauge *16mm 1.37*, one "
+                 "hard light in the photo, Exposure to taste, grain moderate, Condition *Release print*. "
+                 "The slow projection speed can't show in a still."],
+                ["La Jetée (Chris Marker, 1962)",
+                 "FilmLook",
+                 "Almost entirely optically printed still photographs, 35 mm black and white (single "
+                 "source). Stock *B&W fast stills film, pushed (Nouvelle Vague)*, Gauge *35mm Academy 1.37*, "
+                 "Duplicate generations 1."],
+                ["The Last of England (Derek Jarman, 1987)",
+                 "FilmLook → VideoLook → FilmLook",
+                 "Super 8, transferred to PAL U-matic, edited, then to 35 mm: 'two levels of grain' and "
+                 "night blues, mauves and burning orange (one blog; Super 8 itself is well sourced). "
+                 "1: FilmLook *Ektachrome reversal (Super 8 / 16mm, 1970s)*, Gauge *Super 8 1.36*. "
+                 "2: VideoLook, Camera off, Transfer *Telecine*, Recording *U-matic high band*, View "
+                 "*Frame-grab*. 3: FilmLook again on 35 mm with Duplicate generations 1, grain, and the "
+                 "Printer light and Toning controls pushed towards blue, mauve or orange."],
+                ["Sadie Benning's Pixelvision diaries (from 1988)",
+                 "VideoLook preset",
+                 "*Fisher-Price Pixelvision, 1988*: the PXL-2000 records 120 x 90 black and white on "
+                 "audio cassette, inside black borders."],
+                ["The Blair Witch Project (1999)",
+                 "VideoLook → FilmLook",
+                 "Colour Hi8 plus 16 mm black and white (CP-16), finished on video and filmed out to 35 mm "
+                 "(two sources); home video releases came back off the 35 mm print, with grain and a brown "
+                 "cast. Hi8 half: VideoLook *Hi8 camcorder, 1994* with Standard *525 NTSC (US)*, then "
+                 "FilmLook 35 mm, Duplicate generations 1, grain, Warm / cool warmer. 16 mm half: FilmLook "
+                 "*B&W fast panchromatic*, *16mm 1.37*."],
+                ["Festen (1998) / Julien Donkey-Boy (1999)",
+                 "VideoLook → FilmLook",
+                 "Mini-DV transferred to film. Festen: a small single-chip camera, hand-held (the model "
+                 "is disputed). Julien Donkey-Boy: Canon XL-1 Mini-DV to 16 mm, then blown up to 35 mm. "
+                 "VideoLook *MiniDV, 2002 (PAL)* with Camera set to *Single-CCD consumer camcorder*, then "
+                 "FilmLook on 35 mm with Duplicate generations 1 (Festen) or 2 (Julien), grain up."],
+                ["200 Motels (Frank Zappa, 1971)",
+                 "VideoLook → FilmLook",
+                 "Shot on colour videotape at Pinewood and transferred to 35 mm; one source says via "
+                 "Technicolor separations. VideoLook *UK colour studio, mid-1970s* with View *Frame-grab*, "
+                 "then FilmLook *Eastmancolor neg + Technicolor IB print (1955-75)*, Duplicate generations "
+                 "1. Its video false-colour and solarisation effects aren't in either plugin."],
+                ["Brakhage, Mothlight (1963)",
+                 "FilmLook",
+                 "Moth wings and leaves pressed between strips of 16 mm splicing tape and contact-printed "
+                 "(single source). Photograph real specimens on a lightbox, then FilmLook Gauge *16mm "
+                 "1.37*, Condition *Worn print*."],
+             ]},
+        ]},
+        {"label": "not yet possible", "type": "flags", "data": [
+            "Nam June Paik's magnet-bent pictures (1963-65) and the Paik-Abe synthesizer: neither "
+            "plugin bends the raster or makes feedback.",
+            "The Vasulkas' Rutt/Etra scan processor, which deflects the beam into 3D line landscapes.",
+            "Chungking Express's step-printed smear, and any real motion effect: these are stills. "
+            "VideoLook's Implied motion only shows what a single frame of movement would look like.",
+            "200 Motels' false colour and solarisation.",
+        ]},
+        {"label": "sources", "type": "plain", "data": [
+            "Swindon Viewpoint history and equipment: swindonviewpoint.com/history, "
+            "swindonviewpoint.com/how-it-works (single source for the equipment); Wikipedia.",
+            "David Hall: LUX catalogue (This Is A Television Receiver; TV Interruptions).",
+            "Cathy Come Home: Wikipedia; the-medium-is-not-enough.com. Culloden and The War Game: "
+            "Harvard Film Archive; pwatkins.mnsi.net; Wikipedia.",
+            "Play for Today: BFI; cineoutsider.com. Threads: Severin Films; Trailers from Hell.",
+            "Warhol Screen Tests: Wikipedia; warholscreentest.com. La Jetée: Wikipedia.",
+            "The Last of England: Wikipedia; plethoralondon.wordpress.com (single source for the U-matic "
+            "chain). PXL-2000 and Sadie Benning: Wikipedia; IndieWire.",
+            "Blair Witch: Wikipedia; AV Club; Fangoria. Festen and Julien Donkey-Boy: Wikipedia; "
+            "Filmmaker Magazine. 200 Motels: Wikipedia; Den of Geek. Electronovision: Wikipedia.",
+            "Mothlight: Wikipedia. Paik: Langlois Foundation; Wikipedia.",
+            "Full notes: VideoLook-References/_research/J_cookbook.md.",
+        ]},
     ],
 })
 

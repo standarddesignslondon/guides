@@ -19,7 +19,7 @@
   <div class="block-label"><span class="bl-num">10.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">The companion to FilmLook for television. It does not paint a look on: it turns the photo into a real video signal at the standard&#x27;s own resolution (575 lines of about 922 samples for PAL, sampled at four times the colour subcarrier), passes it through a camera, a transmission channel, a tape machine and any transfer, then decodes it with the chosen receiver, so cross-colour, dot crawl, NTSC hue errors, PAL desaturation, Hanover bars and SECAM streaks come out of the maths as they did in reality. A display stage then rebuilds the picture at document size with scan lines, shadow mask or aperture grille, glow and tube geometry, or as a clean frame-grab, or as a photograph of the screen. The numbers come from the standards themselves (ITU-R BT.470, the UK System I specification, FCC and SMPTE documents) and from BBC engineering sources: the 1964 BBC camera comparisons, the 1967 registration report, BBC training sheets on camera processing, tape and colour-under recording, receivers and the 1967 standards converter. Settings whose defaults are estimates are marked est. on the panel. Version 1.1 adds the receiving set as a stage of its own: a set built for another country&#x27;s system (French System L comes out as a rolling negative on a UK set), co-channel interference from a second picture, overload, and the set&#x27;s sync, so pictures tear and roll for real reasons. It also adds Soviet, East German, Japanese, Brazilian and Argentine systems, Hi-Vision, the pre-war systems (Baird 30 and 240 lines, Berlin and NBC 441, Moscow 343), CBS colour-wheel TV, Apollo 11, slow-scan TV, Pixelvision, CCTV, LaserDisc, CED, Canal+ scrambling and teletext. The result goes on a new layer; the photo is untouched.</p>
-    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.1.5</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+, RGB, 8 or 16-bit</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.videolook</dd></div><div class="fact"><dt>looks</dt><dd>74 (10 built from specifications alone)</dd></div><div class="fact"><dt>folder</dt><dd>VideoLook-Photoshop-Plugin</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.1.6</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+, RGB, 8 or 16-bit</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.videolook</dd></div><div class="fact"><dt>looks</dt><dd>78 (10 built from specifications alone)</dd></div><div class="fact"><dt>folder</dt><dd>VideoLook-Photoshop-Plugin</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -37,7 +37,7 @@
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">top of panel</h3>
 <dl class="ctl">
-<div class="ctl-row"><dt>Look<span class="rng">74 looks in 12 groups</span></dt><dd>UK broadcast, US broadcast, France, Home video, Archive and transfers, Long-distance reception, USSR and Eastern Europe, Japan, Early television, Space, surveillance and toys, South America, Subtitles. Choosing a look sets every stage and ticks the ones it uses.</dd></div>
+<div class="ctl-row"><dt>Look<span class="rng">78 looks in 13 groups</span></dt><dd>UK broadcast, US broadcast, France, Home video, Archive and transfers, Long-distance reception, USSR and Eastern Europe, Japan, Early television, Space, surveillance and toys, South America, Community TV and video art, Subtitles. Choosing a look sets every stage and ticks the ones it uses.</dd></div>
 <div class="ctl-row"><dt>Strength<span class="rng">0 – 100</span></dt><dd>Opacity of the result layer; updates the last render live.</dd></div>
 <div class="ctl-row"><dt>Source<span class="rng">Whole image / Selected layer</span></dt><dd>Whole image hides earlier VideoLook layers while it reads.</dd></div>
 <div class="ctl-row"><dt>Output<span class="rng">New layer / New document</span></dt><dd>A layer at document size, or a new document at the standard&#x27;s own size in square pixels (767×575 for PAL, 647×485 for NTSC).</dd></div>
@@ -81,6 +81,7 @@
 </dl>
 <h3 class="sub">transfer</h3>
 <dl class="ctl">
+<div class="ctl-row"><dt>Conversion generations<span class="rng">1 - 12</span></dt><dd>Repeat the conversion, each copy made from the last: with Optical and the same target standard, a picture re-shot off a monitor again and again.</dd></div>
 <div class="ctl-row"><dt>Standards conversion<span class="rng">Optical / BBC 1967 / Digital / Motion-compensated</span></dt><dd>Re-codes to the target standard. The BBC 1967 field store blends one field in five and insets the picture in a black border.</dd></div>
 <div class="ctl-row"><dt>Telerecording<span class="rng">Suppressed field / Stored field / US kinescope</span></dt><dd>Video filmed off a monitor: fewer lines, film grain, ~40:1 range. The result is the film.</dd></div>
 <div class="ctl-row"><dt>Telecine<span class="rng">Clean / 3:2 mixed frame</span></dt><dd>Flying-spot film scanner in place of the camera. Run FilmLook first for the film stock.</dd></div>
@@ -231,6 +232,13 @@
 <div class="ctl-row"><dt>Brazilian PAL-M, 1985<span class="rng">research-based · 3-tube Plumbicon → 525 PAL-M (Brazil) → 20in slot-mask set</span></dt><dd>Brazil&#x27;s PAL-M (colour from 1972): American 525/60 scanning with PAL colour on its own 3.576 MHz subcarrier, so no NTSC hue errors but 4.2 MHz of detail and the 7.5% set-up. Set phosphors assumed.</dd></div>
 <div class="ctl-row"><dt>Argentine PAL-N, 1985<span class="rng">research-based · 3-tube Plumbicon → 625 PAL-N (Argentina) → 20in slot-mask set</span></dt><dd>Argentina&#x27;s N/PAL: European 625/50 in American 6 MHz channels, 4.2 MHz of video and a 3.58 MHz PAL subcarrier nearer the luma, so softer and with more cross-colour than European PAL. Black at blanking (no set-up).</dd></div>
 </dl>
+<h3 class="sub">community tv and video art</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Swindon Viewpoint, 1974 (black-and-white cable)<span class="rng">research-based · Portapak vidicon → EIAJ-1 Portapak (1/2 in reel, B&amp;W) → 625-line B&amp;W → 22in black-and-white tube</span></dt><dd>Britain&#x27;s community cable station (from Sept 1973, EMI-funded, on the Radio Rentals relay network). Until 1977 it was black and white: Sony Portapaks and 1-inch Sony recorders, low light on location, copy-edited with a glitch at each edit, then carried cleanly by cable. The half-inch Portapak format stands in for both machines; the haloes come from the set&#x27;s sharpness control here, which is [EST].</dd></div>
+<div class="ctl-row"><dt>Swindon Viewpoint, 1978 (colour U-matic)<span class="rng">research-based · Saticon tube camcorder → U-matic low band → 625 PAL (UK System I) → 22in slot-mask set</span></dt><dd>From 1977 the station moved to colour: U-matic recorders and single-tube Sony cameras, and by its own account &#x27;picture quality, or at least resolution, went down somewhat with the move to colour&#x27;. Single-tube camera model stands in [EST].</dd></div>
+<div class="ctl-row"><dt>Re-shot off a monitor, again and again<span class="rng">research-based · 3-tube Plumbicon → 625 PAL (UK System I) → optical conversion to 625 PAL → 22in slot-mask set</span></dt><dd>After David Hall&#x27;s &#x27;This Is A Television Receiver&#x27; (BBC, 1976), where a newsreader was re-shot off a monitor, each copy from the last, &#x27;until there is a complete degeneration of both sound and image&#x27;. Set Conversion generations under Transfer (1-12). The monitor-and-camera model is the optical converter&#x27;s [EST].</dd></div>
+<div class="ctl-row"><dt>Videotape to cinema film, 1964 (Electronovision-style)<span class="rng">research-based · Image orthicon (B&amp;W) → 2-inch Quad, high band → 525-line B&amp;W → kinescope → frame-grab</span></dt><dd>Before 200 Motels, Electronovision shot plays and concerts on videotape and moved them to film by kinescope for cinemas (Hamlet, The T.A.M.I. Show, 1964). A US colour-era camera on Quad, filmed off a monitor at 24 frames.</dd></div>
+</dl>
 <h3 class="sub">subtitles</h3>
 <dl class="ctl">
 <div class="ctl-row"><dt>Foreign film on BBC2, late 1980s<span class="rng">research-based · flying-spot telecine → subtitles: BBC slab serif (TKST-style), black edge → 625 PAL (UK System I) → 22in slot-mask set</span></dt><dd>A subtitled film through a flying-spot telecine, with the BBC&#x27;s slab-serif subtitles (TKST, &#x27;based at many removes on Rockwell Light&#x27;, 1975-77) added at the studio with a black edge. TKST isn&#x27;t available, so Rockwell stands in. Run FilmLook first for the film stock. Edit the text under Overlay.</dd></div>
@@ -266,12 +274,12 @@
   <div class="block-body"><p>Source and research: the plugin folder, plus VideoLook-References/_research in the APA project (standards reports, BBC documents and notes).</p>
 <p>The engine is the vl_*.js files; test harness and standards tests are kept with the build notes.</p></div>
 </section>
-<nav class="chapnav"><a class="cn prev" href="filmlook.html"><span>previous</span>filmlook</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="poster-pdf-export.html"><span>next</span>poster pdf export</a></nav>
+<nav class="chapnav"><a class="cn prev" href="filmlook.html"><span>previous</span>filmlook</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="look-cookbook.html"><span>next</span>look cookbook</a></nav>
 </main>
 <footer class="siteftr">
   <div class="sf-col"><span>adobe</span>
   <span>process guide</span></div>
-  <div class="sf-col"><span>generated 2026-09-28</span>
+  <div class="sf-col"><span>generated 2026-09-29</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

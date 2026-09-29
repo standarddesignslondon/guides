@@ -33,7 +33,7 @@ const BASE = {
     overlay: { kind: "none", fontFilter: "", mode: "mix", text: "", header: "", colour: "white", pos: "bl",
         style: "arial_shadow", font: "", fontFamily: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", position: "bottom", caps: "style", strength: 1 },
     recording: { format: "none", position: "studio", generations: 1, tracking: 0, trackingPos: 0.6 },
-    transfer: { type: "none", method: "bbc1967", target: "PAL-I", gauge: 16, shutterBar: 0, mode: "pal60", pulldown: "clean", lag: 0, contrast: 1 },
+    transfer: { type: "none", method: "bbc1967", target: "PAL-I", gauge: 16, shutterBar: 0, mode: "pal60", pulldown: "clean", lag: 0, contrast: 1, generations: 1 },
     decoder: { separation: "notch", palMode: "delay", ntscDemod: "equiband", phaseErr: 0, diffPhase: 0 },
     set: { sharpness: 0, contrast: 1, brightness: 0, colour: 1, overscan: 0.04 },
     display: { tube: "slot", screenIn: 22, primaries: "EBU", white: "D65", gamma: 2.4, maskStrength: 0.5, spot: 0.3, bloom: 0.7, glow: 0.04, barrel: 0.025, cornerDark: 0.25, roundScreen: 0 },
@@ -111,6 +111,7 @@ const SECTIONS = [
         { kind: "slider", id: "trBar", label: "Kinescope shutter bar", path: "transfer.shutterBar", min: 0, max: 1, step: 0.01 },
         { kind: "select", id: "trMode", label: "Played as", path: "transfer.mode", options: () => [["pal60", "NTSC tape as PAL-60"], ["ntsc443", "NTSC tape as NTSC 4.43 (PAL-only set)"], ["secam_mono", "SECAM on a PAL-only set"]] },
         { kind: "select", id: "trPull", label: "Telecine frame", path: "transfer.pulldown", options: () => [["clean", "Clean frame"], ["mixed", "3:2 mixed frame (NTSC)"]] },
+        { kind: "slider", id: "trGens", label: "Conversion generations", path: "transfer.generations", min: 1, max: 12, step: 1 },
         { kind: "slider", id: "trLag", label: "Converter ghosting (needs motion)", path: "transfer.lag", min: 0, max: 0.9, step: 0.01, est: true },
         { kind: "slider", id: "trCon", label: "Converter contrast", path: "transfer.contrast", min: 0.5, max: 2.5, step: 0.01, est: true }
     ], hint: "Standards conversion re-codes into the target system, so the target's decoder and set apply. Telecine replaces the camera: the photo stands in for the film frame (run FilmLook first for the stock). Telerecording ends in film: the result is the film, not a TV." },

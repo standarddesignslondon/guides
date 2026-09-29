@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>look cookbook — adobe</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">adobe</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">11</p>
+  <h1>look cookbook</h1>
+  <p class="ch-sub">Recipes for FilmLook and VideoLook, alone and chained: kitchen-sink titles, community cable, video art, artists&#x27; film and video-to-film oddities.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/look-cookbook.png" alt="Look Cookbook"></div><figcaption>look cookbook</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">11.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Starting points rather than reconstructions. Each recipe names the plugin (or the order of the two), the look or settings to start from, and what rests on what: where a source is single or a setting is a judgement, it says so. Control names are as printed on the panels. Some things these plugins can&#x27;t do yet (magnet-bent pictures, scan processors, step-printed motion) are listed at the end.</p>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>recipe book</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>covers</dt><dd>FilmLook 1.x, VideoLook 1.1.6</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">11.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t"><b>Chaining the two panels.</b> Render the first plugin with Source set to <i>Whole image</i>. Then run the second, also on <i>Whole image</i>: VideoLook reads the FilmLook layer underneath (it only hides its own earlier layers), and FilmLook reads a VideoLook layer the same way. Keep Strength at 100 on the first pass.</span></li>
+<li><span class="step-n">02</span><span class="step-t"><b>Order follows history.</b> Whatever happened to the pictures first goes first: film shot, then shown on TV = FilmLook, then VideoLook. Video transferred to cinema film = VideoLook, then FilmLook.</span></li>
+<li><span class="step-n">03</span><span class="step-t"><b>Mind the noise.</b> Each plugin adds its own grain or noise, and chained they stack: turn the first plugin&#x27;s grain down a little.</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>Titles and subtitles.</b> Put the lettering on before the plugin that would have carried it: optical titles before FilmLook; open subtitles in VideoLook&#x27;s Overlay section at the right stage.</span></li>
+</ol></div>
+</section>
+<section class="block" id="recipes">
+  <div class="block-label"><span class="bl-num">11.2</span>
+  <h2>recipes</h2></div>
+  <div class="block-body"><h3 class="sub">british new wave and kitchen sink</h3>
+<p class="lead">The one that started this page: soft black and white, slightly diffused titles.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Kitchen-sink title card, as projected<span class="rng">FilmLook only</span></dt><dd>Set the title on the photo and merge. Stock <i>B&amp;W fast panchromatic (1955-80)</i>. Duplicate generations 1-2 (superimposed titles were usually a printing generation further on: more grain and contrast). Halation up and a little Diffusion / glow, so the white letters bleed slightly. Resolving power down a touch if the letters look too crisp. Grain moderate; a little dust and Uneven density. The printing-generation point is general practice, not checked film by film.</dd></div>
+<div class="ctl-row"><dt>Kitchen-sink film, seen on TV<span class="rng">FilmLook → VideoLook</span></dt><dd>The above, then VideoLook <i>1970s drama: 16 mm film exteriors</i> with Standard changed to <i>625-line B&amp;W</i>. View <i>Frame-grab</i> for a clean off-air grab, <i>Screen close-up</i> for the set. Lower FilmLook&#x27;s grain first: the telecine adds its own.</dd></div>
+<div class="ctl-row"><dt>Early Coronation Street-style card<span class="rng">VideoLook</span></dt><dd><i>405-line telerecording, 1953</i>: early episodes survive mainly as 405-line film recordings, which gives that heavier, softer glow.</dd></div>
+</dl>
+<h3 class="sub">british tv drama and documentary</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Cathy Come Home (1966)<span class="rng">FilmLook → VideoLook</span></dt><dd>Location scenes were 16 mm, hand-held (Tony Imi); about ten minutes were shot on studio video and telerecorded into the film because of union rules (two sources). FilmLook: <i>B&amp;W fast panchromatic</i>, Gauge <i>16mm 1.37</i>, Lens <i>1970s zoom</i> (the nearest), grain up. Then VideoLook <i>405-line live studio at home, 1953</i> with Camera switched off and Transfer <i>Telecine</i>: BBC1 was 405 lines for most viewers then. For the studio inserts, use VideoLook <i>405-line telerecording</i> on its own.</dd></div>
+<div class="ctl-row"><dt>Culloden (1964) / The War Game (1965)<span class="rng">FilmLook (→ VideoLook)</span></dt><dd>Peter Watkins&#x27;s newsreel style: 16 mm black and white, mostly hand-held (Culloden about 85%, two sources). FilmLook <i>B&amp;W newsreel / duplicate</i>, Gauge <i>16mm 1.37</i>, grain up, Condition <i>Release print</i>. Add VideoLook&#x27;s 405-line telecine chain (as above) for a broadcast feel.</dd></div>
+<div class="ctl-row"><dt>Play for Today (1970s)<span class="rng">VideoLook</span></dt><dd>Studio scenes on 2-inch tape and location scenes on 16 mm film, telecined in: <i>1970s drama: studio video interiors</i> and <i>1970s drama: 16 mm film exteriors</i> (run FilmLook&#x27;s <i>Eastman 100-speed negative (1968-74)</i>, <i>16mm 1.37</i>, first for the film half). Some colour plays survive only as black-and-white film recordings: <i>Colour show on B&amp;W film (with PAL dots)</i>.</dd></div>
+<div class="ctl-row"><dt>Threads (1984)<span class="rng">FilmLook (→ VideoLook)</span></dt><dd>16 mm colour, 1.33, hand-held, semi-documentary (two sources). FilmLook <i>Eastman improved 100-speed negative (1974-83)</i>, Gauge <i>16mm 1.37</i>, Lens <i>1970s zoom</i>, grain up, Saturation down a little. For the version most people saw again, add VideoLook <i>VHS off-air recording, 1986 (UK)</i>.</dd></div>
+<div class="ctl-row"><dt>Kes (1969)<span class="rng">FilmLook</span></dt><dd>Chris Menges: natural light, grainy, high contrast, colour (two sources). Gauge not found: try <i>35mm flat 1.66 (European)</i>. Stock <i>Eastman 100-speed negative (1968-74)</i>, Exposure a little under, Contrast up, grain up, Saturation slightly down.</dd></div>
+</dl>
+<h3 class="sub">community tv and video art</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Swindon Viewpoint, 1973-77<span class="rng">VideoLook preset</span></dt><dd><i>Swindon Viewpoint, 1974 (black-and-white cable)</i>. From the station&#x27;s own history: EMI-funded from September 1973 on the Radio Rentals relay network; Sony Portapaks and 1-inch Sony recorders; little light on location; copy-editing with a glitch at each edit. The &#x27;blurry but sharp&#x27; haloes are modelled with the set&#x27;s Sharpness (my reading of the effect, not documented): raise it for more halo, and push Tracking error up to fake an edit glitch.</dd></div>
+<div class="ctl-row"><dt>Swindon Viewpoint in colour, from 1977<span class="rng">VideoLook preset</span></dt><dd><i>Swindon Viewpoint, 1978 (colour U-matic)</i>: single-tube Sony cameras on U-matic; the station says resolution went down with colour.</dd></div>
+<div class="ctl-row"><dt>Portapak video art, around 1970<span class="rng">VideoLook preset</span></dt><dd><i>Sony Portapak video art, 1970</i> (625) or switch Standard to <i>525-line B&amp;W</i> for the American scene. For Lanesville TV-style pirate broadcasting (Videofreex, from 1972), switch the Channel on: Signal-to-noise about 30, a Ghost of 2-4 µs.</dd></div>
+<div class="ctl-row"><dt>This Is A Television Receiver (David Hall, 1976)<span class="rng">VideoLook preset</span></dt><dd><i>Re-shot off a monitor, again and again</i>: each copy is re-shot from the last. Set Transfer › Conversion generations from 1 to 12.</dd></div>
+<div class="ctl-row"><dt>Videotape to cinema, 1964<span class="rng">VideoLook preset</span></dt><dd><i>Videotape to cinema film, 1964 (Electronovision-style)</i>: shot on tape, kinescoped to film for cinemas, years before 200 Motels.</dd></div>
+</dl>
+<h3 class="sub">artists&#x27; film and indie</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Warhol Screen Tests (1964-66)<span class="rng">FilmLook</span></dt><dd>16 mm black and white, one 100-ft roll on a static Bolex, a single light, varied from sitting to sitting (two sources). Stock <i>B&amp;W fast panchromatic</i>, Gauge <i>16mm 1.37</i>, one hard light in the photo, Exposure to taste, grain moderate, Condition <i>Release print</i>. The slow projection speed can&#x27;t show in a still.</dd></div>
+<div class="ctl-row"><dt>La Jetée (Chris Marker, 1962)<span class="rng">FilmLook</span></dt><dd>Almost entirely optically printed still photographs, 35 mm black and white (single source). Stock <i>B&amp;W fast stills film, pushed (Nouvelle Vague)</i>, Gauge <i>35mm Academy 1.37</i>, Duplicate generations 1.</dd></div>
+<div class="ctl-row"><dt>The Last of England (Derek Jarman, 1987)<span class="rng">FilmLook → VideoLook → FilmLook</span></dt><dd>Super 8, transferred to PAL U-matic, edited, then to 35 mm: &#x27;two levels of grain&#x27; and night blues, mauves and burning orange (one blog; Super 8 itself is well sourced). 1: FilmLook <i>Ektachrome reversal (Super 8 / 16mm, 1970s)</i>, Gauge <i>Super 8 1.36</i>. 2: VideoLook, Camera off, Transfer <i>Telecine</i>, Recording <i>U-matic high band</i>, View <i>Frame-grab</i>. 3: FilmLook again on 35 mm with Duplicate generations 1, grain, and the Printer light and Toning controls pushed towards blue, mauve or orange.</dd></div>
+<div class="ctl-row"><dt>Sadie Benning&#x27;s Pixelvision diaries (from 1988)<span class="rng">VideoLook preset</span></dt><dd><i>Fisher-Price Pixelvision, 1988</i>: the PXL-2000 records 120 x 90 black and white on audio cassette, inside black borders.</dd></div>
+<div class="ctl-row"><dt>The Blair Witch Project (1999)<span class="rng">VideoLook → FilmLook</span></dt><dd>Colour Hi8 plus 16 mm black and white (CP-16), finished on video and filmed out to 35 mm (two sources); home video releases came back off the 35 mm print, with grain and a brown cast. Hi8 half: VideoLook <i>Hi8 camcorder, 1994</i> with Standard <i>525 NTSC (US)</i>, then FilmLook 35 mm, Duplicate generations 1, grain, Warm / cool warmer. 16 mm half: FilmLook <i>B&amp;W fast panchromatic</i>, <i>16mm 1.37</i>.</dd></div>
+<div class="ctl-row"><dt>Festen (1998) / Julien Donkey-Boy (1999)<span class="rng">VideoLook → FilmLook</span></dt><dd>Mini-DV transferred to film. Festen: a small single-chip camera, hand-held (the model is disputed). Julien Donkey-Boy: Canon XL-1 Mini-DV to 16 mm, then blown up to 35 mm. VideoLook <i>MiniDV, 2002 (PAL)</i> with Camera set to <i>Single-CCD consumer camcorder</i>, then FilmLook on 35 mm with Duplicate generations 1 (Festen) or 2 (Julien), grain up.</dd></div>
+<div class="ctl-row"><dt>200 Motels (Frank Zappa, 1971)<span class="rng">VideoLook → FilmLook</span></dt><dd>Shot on colour videotape at Pinewood and transferred to 35 mm; one source says via Technicolor separations. VideoLook <i>UK colour studio, mid-1970s</i> with View <i>Frame-grab</i>, then FilmLook <i>Eastmancolor neg + Technicolor IB print (1955-75)</i>, Duplicate generations 1. Its video false-colour and solarisation effects aren&#x27;t in either plugin.</dd></div>
+<div class="ctl-row"><dt>Brakhage, Mothlight (1963)<span class="rng">FilmLook</span></dt><dd>Moth wings and leaves pressed between strips of 16 mm splicing tape and contact-printed (single source). Photograph real specimens on a lightbox, then FilmLook Gauge <i>16mm 1.37</i>, Condition <i>Worn print</i>.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="not-yet-possible">
+  <div class="block-label"><span class="bl-num">11.3</span>
+  <h2>not yet possible</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Nam June Paik&#x27;s magnet-bent pictures (1963-65) and the Paik-Abe synthesizer: neither plugin bends the raster or makes feedback.</li><li>The Vasulkas&#x27; Rutt/Etra scan processor, which deflects the beam into 3D line landscapes.</li><li>Chungking Express&#x27;s step-printed smear, and any real motion effect: these are stills. VideoLook&#x27;s Implied motion only shows what a single frame of movement would look like.</li><li>200 Motels&#x27; false colour and solarisation.</li></ul></div>
+</section>
+<section class="block" id="sources">
+  <div class="block-label"><span class="bl-num">11.4</span>
+  <h2>sources</h2></div>
+  <div class="block-body"><ul class="plain"><li>Swindon Viewpoint history and equipment: swindonviewpoint.com/history, swindonviewpoint.com/how-it-works (single source for the equipment); Wikipedia.</li><li>David Hall: LUX catalogue (This Is A Television Receiver; TV Interruptions).</li><li>Cathy Come Home: Wikipedia; the-medium-is-not-enough.com. Culloden and The War Game: Harvard Film Archive; pwatkins.mnsi.net; Wikipedia.</li><li>Play for Today: BFI; cineoutsider.com. Threads: Severin Films; Trailers from Hell.</li><li>Warhol Screen Tests: Wikipedia; warholscreentest.com. La Jetée: Wikipedia.</li><li>The Last of England: Wikipedia; plethoralondon.wordpress.com (single source for the U-matic chain). PXL-2000 and Sadie Benning: Wikipedia; IndieWire.</li><li>Blair Witch: Wikipedia; AV Club; Fangoria. Festen and Julien Donkey-Boy: Wikipedia; Filmmaker Magazine. 200 Motels: Wikipedia; Den of Geek. Electronovision: Wikipedia.</li><li>Mothlight: Wikipedia. Paik: Langlois Foundation; Wikipedia.</li><li>Full notes: VideoLook-References/_research/J_cookbook.md.</li></ul></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="videolook.html"><span>previous</span>videolook</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="poster-pdf-export.html"><span>next</span>poster pdf export</a></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>adobe</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-09-29</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>
