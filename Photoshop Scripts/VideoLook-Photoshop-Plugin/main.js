@@ -30,7 +30,7 @@ const BASE = {
     channel: { route: "aerial", snrDb: 44, ghosts: [{ delayUs: 2, amp: 0, phaseDeg: 0 }], impulses: 0, cnrDb: 14, scramble: "none",
         cochannel: { ratio: 0, offsetHz: 10400, dx: 0.31, dy: 0.37, source: "mirror" } },
     receiver: { standard: "same", hold: "auto", vRoll: 0.4, hGain: 0.05, hFree: 0, overload: 0 },
-    overlay: { kind: "none", mode: "mix", text: "", header: "", colour: "white", pos: "bl",
+    overlay: { kind: "none", fontFilter: "", mode: "mix", text: "", header: "", colour: "white", pos: "bl",
         style: "arial_shadow", font: "", fontFamily: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", position: "bottom", caps: "style", strength: 1 },
     recording: { format: "none", position: "studio", generations: 1, tracking: 0, trackingPos: 0.6 },
     transfer: { type: "none", method: "bbc1967", target: "PAL-I", gauge: 16, shutterBar: 0, mode: "pal60", pulldown: "clean", lag: 0, contrast: 1 },
@@ -158,9 +158,11 @@ const SECTIONS = [
     { key: "overlay", title: "Overlay", open: false, items: [
         { kind: "select", id: "ovKind", label: "Overlay", path: "overlay.kind", options: () => [["none", "(none)"], ["subtitle", "Subtitles"], ["teletext", "Teletext (set's decoder)"], ["timestamp", "Date/time stamp (recorded)"]], onChange: () => { rebuildOptions("subFam"); rebuildOptions("subFace"); } },
         { kind: "select", id: "subStyle", label: "Subtitle style", path: "overlay.style", options: () => Object.keys(TXT.SUB_STYLES).map(k => [k, TXT.SUB_STYLES[k].label]), onChange: () => { Object.assign(st.overlay, { font: "", fontFamily: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", caps: "style" }); rebuildOptions("subFam"); rebuildOptions("subFace"); syncUI(); } },
-        { kind: "select", id: "subFam", label: "Font family", path: "overlay.fontFamily", options: () => [["", "(the style's own font)"]].concat(Object.keys(loadFonts()).sort((a, b) => a.localeCompare(b)).map(f => [f, f])),
+        { kind: "button", id: "fontLoad", label: "Your fonts", text: "Load font list", onClick: () => loadFontList() },
+        { kind: "text", id: "fontFilter", label: "Filter families", path: "overlay.fontFilter", onChange: () => rebuildOptions("subFam") },
+        { kind: "select", id: "subFam", label: "Font family", path: "overlay.fontFamily", options: () => { const flt = (st.overlay.fontFilter || "").trim().toLowerCase(); const fams = Object.keys(loadFonts()).filter(f => !flt || f.toLowerCase().indexOf(flt) >= 0); if (st.overlay.fontFamily && fams.indexOf(st.overlay.fontFamily) < 0) fams.push(st.overlay.fontFamily); return [["", "(the style's own font)"]].concat(fams.sort((a, b) => a.localeCompare(b)).map(f => [f, f])); },
           onChange: () => { const faces = loadFonts()[st.overlay.fontFamily] || []; const pick = faces.find(f => /^(regular|roman|book|medium)$/i.test(f[1])) || faces[0]; st.overlay.font = pick ? pick[0] : ""; rebuildOptions("subFace"); } },
-        { kind: "select", id: "subFace", label: "Font style", path: "overlay.font", options: () => { const faces = loadFonts()[st.overlay.fontFamily] || []; return faces.length ? faces.map(([ps, sty]) => [ps, sty]) : [["", "(the style's own font)"]]; } },
+        { kind: "select", id: "subFace", label: "Font style", path: "overlay.font", options: () => { const faces = loadFonts()[st.overlay.fontFamily] || []; return faces.length ? faces.map(([ps, sty]) => [ps, sty]) : (st.overlay.font ? [[st.overlay.font, st.overlay.font]] : [["", "(the style's own font)"]]); } },
         { kind: "text", id: "subFont", label: "or PostScript name", path: "overlay.font" },
         { kind: "select", id: "subItal", label: "Italic", path: "overlay.italic", options: () => [["style", "As the style"], ["on", "Faux italic on"], ["off", "Off"]] },
         { kind: "slider", id: "subSize", label: "Size (% of picture height)", get: () => 100 * (st.overlay.size || TXT.subStyle(st.overlay).size), set: (v) => { st.overlay.size = v / 100; }, min: 2, max: 10, step: 0.1 },
@@ -211,10 +213,14 @@ function buildUI() {
             if (it.est) { const e = document.createElement("span"); e.className = "est"; e.textContent = "est."; lab.appendChild(e); }
             if (it.hint) lab.title = it.hint;
             row.appendChild(lab);
-            if (it.kind === "text" || it.kind === "textarea") {
+            if (it.kind === "button") {
+                const bt = document.createElement("button"); bt.id = it.id; bt.textContent = it.text; bt.style.flex = "0 0 auto"; bt.style.padding = "4px 10px";
+                bt.addEventListener("click", () => it.onClick()); row.appendChild(bt);
+            } else if (it.kind === "text" || it.kind === "textarea") {
                 const tx = document.createElement(it.kind === "textarea" ? "textarea" : "input"); tx.id = it.id;
                 if (it.kind === "text") tx.type = "text"; else { tx.rows = 6; tx.style.width = "100%"; row.style.flexWrap = "wrap"; }
-                tx.addEventListener("change", () => { setVal(it, tx.value); switchOn(sec.key); markModified(); saveState(); });
+                tx.addEventListener("change", () => { setVal(it, tx.value); if (it.onChange) it.onChange(); switchOn(sec.key); markModified(); saveState(); });
+                if (it.onChange) tx.addEventListener("input", () => { setVal(it, tx.value); it.onChange(); });
                 row.appendChild(tx);
             } else if (it.kind === "select") {
                 const sel = document.createElement("select"); sel.id = it.id; fillSelect(sel, it);
@@ -249,6 +255,7 @@ function buildUI() {
 function syncUI() {
     for (const id in ITEMS) {
         const it = ITEMS[id], el = $(id); if (!el) continue;
+        if (it.kind === "button") continue;
         if (it.kind === "text" || it.kind === "textarea") { const v = getPath(st, it.path); el.value = v === undefined ? "" : "" + v; continue; }
         if (it.kind === "select") {
             let v = getPath(st, it.path);
@@ -349,14 +356,43 @@ async function getSelectionMask(doc, W, H) {
     }
     return m;
 }
-// Installed fonts from Photoshop, grouped by family: { family: [[postScriptName, style], ...] } (TextFont API, PS 23+)
-let FONTS = null;
-function loadFonts() {
-    if (FONTS) return FONTS;
-    const out = {};
-    try { const n = app.fonts.length; for (let i = 0; i < n; i++) { const f = app.fonts[i]; (out[f.family] = out[f.family] || []).push([f.postScriptName, f.style]); } FONTS = out; }
-    catch (e) { return {}; }
-    return FONTS;
+// Installed fonts from Photoshop, grouped by family: { family: [[postScriptName, style], ...] } (TextFont API, PS 23+).
+// Read ONLY when the font picker is used, and a few at a time with pauses: reading thousands of fonts in one go at panel
+// start-up held up Photoshop's plugin system (v1.1.2-1.1.3 made every panel appear blank).
+let FONTS = null, fontsLoading = null;
+function loadFonts() { return FONTS || {}; }
+function addFont(out, fam, ps, sty) { if (!fam || !ps) return; (out[fam] = out[fam] || []).push([ps, sty || ps]); }
+// Pressed by the user ("Load font list"). First asks Photoshop for its whole font list in one request (the application's
+// fontList property); if that isn't available, reads app.fonts a few at a time with pauses so nothing else is held up.
+async function loadFontList() {
+    if (fontsLoading) return fontsLoading;
+    setStatus("Loading your font list…");
+    fontsLoading = (async () => {
+        const out = {}; let how = "";
+        try {
+            const r = await batchPlay([{ _obj: "get", _target: [{ _property: "fontList" }, { _ref: "application", _enum: "ordinal", _value: "targetEnum" }] }], {});
+            const fl = r && r[0] && r[0].fontList;
+            if (fl) {
+                const keys = Object.keys(fl), find = (re) => { const k = keys.find(x => re.test(x) && Array.isArray(fl[x])); return k ? fl[k] : null; };
+                const ps = find(/postscript/i), fam = find(/family/i), sty = find(/style/i);
+                if (ps && fam) { for (let i = 0; i < ps.length; i++) addFont(out, fam[i], ps[i], sty ? sty[i] : ""); how = "one request"; }
+            }
+        } catch (e) { /* fall back below */ }
+        if (!Object.keys(out).length) {
+            let n = 0; try { n = app.fonts.length; } catch (e) { n = 0; }
+            for (let i = 0; i < n; i++) {
+                try { const f = app.fonts[i]; addFont(out, f.family, f.postScriptName, f.style); } catch (e) { /* skip */ }
+                if (i % 50 === 49) { await new Promise(r => setTimeout(r, 0)); if (i % 500 === 499) setStatus("Loading your font list… " + (i + 1) + " of " + n); }
+            }
+            how = "one at a time";
+        }
+        const nf = Object.keys(out).length;
+        if (!nf) { fontsLoading = null; setStatus("Couldn't read the font list from Photoshop. Type a PostScript name in the box instead.", true); return; }
+        for (const f in out) out[f].sort((x, y) => x[1].localeCompare(y[1]));
+        FONTS = out; rebuildOptions("subFam"); rebuildOptions("subFace");
+        setStatus(nf + " font families loaded (" + how + "). Choose one under Font family; type in Filter families to narrow the list.");
+    })();
+    return fontsLoading;
 }
 /* Subtitles: typeset each line as a temporary Photoshop text layer (createTextLayer, PS 24.2+), rasterise it, read its
    pixels as coverage, delete it. The first installed font of the style's list is used; none found = VideoLook's dot font. */

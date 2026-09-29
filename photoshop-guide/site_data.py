@@ -1485,7 +1485,7 @@ ITEMS.append({
         "LaserDisc, CED, Canal+ scrambling and teletext. The result goes on a new "
         "layer; the photo is untouched.",
     "facts": {
-        "version": "1.1.3",
+        "version": "1.1.5",
         "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
         "plugin id": "com.simonmorse.videolook",
         "looks": "74 (10 built from specifications alone)",
@@ -1652,10 +1652,14 @@ ITEMS.append({
               "Teletext is drawn by the set after the decoder: mixed over the picture, as "
               "a full page, or as boxed subtitles. The stamp is burned in before "
               "recording, so the tape softens it."],
-             ["Font family, Font style, or PostScript name", "",
-              "Pick any installed font from the two lists (they come from Photoshop's own font "
-              "list), or type a PostScript name, or several separated by commas, used in order "
-              "of preference. Leave the family on *the style's own font* to use the style's list."],
+             ["Load font list, Filter families, Font family, Font style", "",
+              "Press **Load font list** once per session to fetch your installed fonts from "
+              "Photoshop (it isn't read at start-up, so it can't hold up other panels). Type part "
+              "of a name in Filter families to narrow the list, then pick the family and style. "
+              "Leave the family on *the style's own font* to use the style's list."],
+             ["or PostScript name", "",
+              "Type a PostScript name instead (e.g. `Arial-ItalicMT`), or several separated by "
+              "commas, used in order of preference. Font Book shows it in each font's info panel."],
              ["Text", "",
               "Colours with {red} {green} {yellow} {blue} {magenta} {cyan} {white}, double "
               "height with {dh}, boxes with {box}...{/box}; 40 characters a line. The font "
