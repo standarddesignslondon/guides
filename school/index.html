@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<title>school</title>
+<style>
+@font-face{
+  font-family:"Archivo"; src:url("archivo.woff2") format("woff2");
+  font-weight:100 900; font-stretch:62% 125%; font-display:swap;
+}
+:root{
+  --paper:#ffffff; --ink:#000000; --soft:#676767; --rule:#dcdcdc; --wash:#f3f3f3;
+  --hi:#ffec3d; --hi-ink:#000000;
+  --kid:#2340ff; --kid-ink:#ffffff;
+  --gut:20px;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --paper:#000000; --ink:#ffffff; --soft:#a3a3a3; --rule:#303030; --wash:#161616; }
+}
+body[data-kid="sidney"]{ --kid:#ff4a1c; --kid-ink:#000000; }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font:400 16px/1.45 "Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-variation-settings:"wdth" 100;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+button{font:inherit; color:inherit; background:none; border:0; padding:0; cursor:pointer}
+:focus-visible{outline:3px solid var(--hi); outline-offset:2px}
+[hidden]{display:none !important}
+
+/* ---------- lock ---------- */
+.lock{min-height:100vh; min-height:100dvh; display:flex; flex-direction:column; justify-content:center;
+  padding:var(--gut); max-width:440px; margin:0 auto}
+.lock h1{font-size:76px; line-height:.86; margin:0 0 26px; font-weight:900;
+  font-variation-settings:"wdth" 125; letter-spacing:-0.03em}
+.lock label{display:block; font-size:14px; color:var(--soft); margin-bottom:8px}
+.lock input{width:100%; font:inherit; font-size:18px; padding:14px 12px; color:var(--ink);
+  background:var(--paper); border:2px solid var(--ink); border-radius:0}
+.lock .go{display:block; width:100%; margin-top:10px; padding:14px 12px; font-weight:700; font-size:18px;
+  background:var(--ink); color:var(--paper)}
+.lock .err{color:#d21f1f; font-size:14px; min-height:1.5em; margin:10px 0 0}
+@media (prefers-color-scheme:dark){ .lock .err{color:#ff7b6b} }
+
+/* ---------- masthead ---------- */
+.mast{background:var(--kid); color:var(--kid-ink); padding:calc(14px + env(safe-area-inset-top)) var(--gut) 22px}
+.page{max-width:1080px; margin:0 auto}
+.mast-in{max-width:1040px; margin:0 auto}
+.names{display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; margin:0}
+.name{
+  font-size:34px; line-height:.9; font-weight:500; letter-spacing:0; text-align:left;
+  font-variation-settings:"wdth" 62; opacity:.6; padding:6px 0;
+  transition:font-variation-settings .28s ease, font-size .28s ease, opacity .2s ease, letter-spacing .28s ease;
+}
+.name[aria-pressed="true"]{
+  font-size:clamp(60px,20vw,132px); font-weight:900; opacity:1; letter-spacing:-0.035em;
+  font-variation-settings:"wdth" 125; order:-1; flex-basis:100%;
+}
+.name:hover{opacity:1}
+.name:focus-visible{outline-color:var(--kid-ink)}
+.status{font-size:19px; line-height:1.3; font-weight:500; margin:14px 0 0; max-width:30em}
+.status b{font-weight:800}
+@media (prefers-reduced-motion:reduce){ .name{transition:none} }
+
+/* ---------- layout ---------- */
+.page{padding:0 var(--gut) 40px; display:grid; grid-template-columns:1fr; gap:0 56px}
+@media (min-width:900px){
+  .page{grid-template-columns:minmax(0,5fr) minmax(0,6fr); align-items:start}
+  .mast{padding-bottom:30px}
+}
+h2{font-size:15px; font-weight:500; color:var(--soft); margin:30px 0 0; padding-bottom:10px;
+  border-bottom:2px solid var(--ink)}
+h2 span{float:right}
+
+/* ---------- timetable ---------- */
+.day{margin:0 0 6px}
+.day-h{display:flex; align-items:baseline; justify-content:space-between; gap:12px; padding:18px 0 8px}
+.day-h h3{font-size:30px; line-height:1; margin:0; font-weight:800; letter-spacing:-0.02em;
+  font-variation-settings:"wdth" 80}
+.day-h p{margin:0; font-size:14px; color:var(--soft); text-align:right}
+.lessons{list-style:none; margin:0; padding:0; border-top:1px solid var(--rule)}
+.lesson{display:grid; grid-template-columns:64px 1fr; gap:0 12px; padding:9px 0; border-bottom:1px solid var(--rule)}
+.l-time{font-size:15px; font-weight:700; font-variant-numeric:tabular-nums; padding-top:1px}
+.l-time small{display:block; font-size:12px; font-weight:400; color:var(--soft)}
+.l-subj{font-size:18px; font-weight:700; line-height:1.2}
+.l-meta{font-size:14px; color:var(--soft)}
+.lesson.minor{padding:6px 0}
+.lesson.minor .l-time,.lesson.minor .l-subj{font-size:14px; font-weight:400; color:var(--soft)}
+.lesson.minor .l-time small,.lesson.minor .l-meta{display:none}
+.gap{padding:5px 0 5px 76px; font-size:13px; color:var(--soft); border-bottom:1px solid var(--rule); background:var(--wash)}
+.lesson.past .l-subj,.lesson.past .l-time{color:var(--soft); font-weight:500}
+.lesson.now .l-subj span,.hi{background:var(--hi); color:var(--hi-ink); padding:1px 6px 2px; margin-left:-6px;
+  box-decoration-break:clone; -webkit-box-decoration-break:clone}
+.none{padding:14px 0; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); color:var(--soft); margin:0}
+.dot{display:inline-block; width:10px; height:10px; margin-right:8px; background:var(--c,#888); vertical-align:1px}
+
+/* ---------- homework ---------- */
+.due-h{display:flex; align-items:baseline; gap:10px; padding:20px 0 8px; margin:0; font-size:22px; font-weight:800;
+  letter-spacing:-0.015em; font-variation-settings:"wdth" 80; border-bottom:1px solid var(--rule)}
+.due-h small{font-size:14px; font-weight:400; color:var(--soft); font-variation-settings:"wdth" 100; letter-spacing:0}
+.due-h.late{color:#d21f1f}
+@media (prefers-color-scheme:dark){ .due-h.late{color:#ff7b6b} }
+.task{border-bottom:1px solid var(--rule)}
+.task-b{display:grid; grid-template-columns:1fr auto; gap:2px 12px; width:100%; text-align:left; padding:12px 0}
+.t-title{font-size:18px; font-weight:700; line-height:1.25}
+.t-sub{grid-column:1; font-size:14px; color:var(--soft)}
+.t-side{grid-row:1 / span 2; grid-column:2; align-self:center; font-size:13px; color:var(--soft); text-align:right; white-space:nowrap}
+.t-side .chev{display:inline-block; margin-left:8px; transition:transform .18s ease; font-size:16px; color:var(--ink)}
+.task[open] .chev,.task.open .chev{transform:rotate(90deg)}
+.task.done .t-title{text-decoration:line-through; color:var(--soft); font-weight:500}
+.detail{padding:2px 0 18px}
+.detail .body{font-size:16px; line-height:1.5; max-width:38em; overflow-wrap:anywhere}
+.detail .body p{margin:0 0 .8em}
+.detail .body ul,.detail .body ol{margin:0 0 .8em; padding-left:1.3em}
+.detail .body a{color:var(--kid); font-weight:600}
+body[data-kid="sidney"] .detail .body a{color:#d9380d}
+@media (prefers-color-scheme:dark){
+  .detail .body a{color:#8d9bff}
+  body[data-kid="sidney"] .detail .body a{color:#ff7a55}
+}
+.from-image{border-left:3px solid var(--rule); padding-left:12px}
+.note{font-size:13px; color:var(--soft); margin:0 0 12px; max-width:38em}
+.facts{font-size:14px; color:var(--soft); margin:0 0 14px}
+.links{list-style:none; margin:0 0 6px; padding:0}
+.links li{border-top:1px solid var(--rule)}
+.links li:last-child{border-bottom:1px solid var(--rule)}
+.links a,.links .nolink{display:grid; grid-template-columns:52px 1fr auto; gap:0 10px; align-items:center; padding:11px 0;
+  text-decoration:none; font-weight:600; font-size:15px; overflow-wrap:anywhere}
+.links a:hover .l-name{text-decoration:underline}
+.kind{font-size:11px; font-weight:800; text-align:center; padding:4px 0; background:var(--ink); color:var(--paper);
+  font-variation-settings:"wdth" 75; letter-spacing:.02em}
+.kind.web{background:var(--kid); color:var(--kid-ink)}
+.l-size{font-size:13px; font-weight:400; color:var(--soft); white-space:nowrap}
+.l-name small{display:block; font-weight:400; font-size:13px; color:var(--soft)}
+.src{display:inline-block; margin-top:12px; font-size:14px; color:var(--soft)}
+
+/* ---------- footer ---------- */
+.foot{max-width:1080px; margin:0 auto; padding:18px var(--gut) calc(40px + env(safe-area-inset-bottom));
+  font-size:13px; color:var(--soft); border-top:2px solid var(--ink); display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:space-between}
+.foot button{text-decoration:underline; color:var(--soft)}
+.stale{background:var(--hi); color:var(--hi-ink); padding:8px var(--gut); font-size:14px; font-weight:600}
+</style>
+</head>
+<body data-kid="ivon">
+
+<form class="lock" id="lock" hidden autocomplete="off">
+  <h1>school</h1>
+  <label for="pw">Family password</label>
+  <input id="pw" type="password" autocomplete="current-password" autocapitalize="off" spellcheck="false" required>
+  <button class="go" type="submit">Unlock</button>
+  <p class="err" id="err" role="alert"></p>
+</form>
+
+<div id="app" hidden>
+  <div class="stale" id="stale" hidden></div>
+  <header class="mast"><div class="mast-in">
+    <div class="names" id="names" role="group" aria-label="Whose timetable"></div>
+    <p class="status" id="status"></p>
+  </div></header>
+  <main class="page">
+    <section aria-labelledby="h-tt"><h2 id="h-tt">timetable</h2><div id="tt"></div></section>
+    <section aria-labelledby="h-hw"><h2 id="h-hw">homework <span id="hw-count"></span></h2><div id="hw"></div></section>
+  </main>
+  <footer class="foot"><span id="checked"></span><button type="button" id="forget">Lock this device</button></footer>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var KEY_STORE = 'school.key', KID_STORE = 'school.kid';
+  var $ = function (id) { return document.getElementById(id); };
+  var DATA = null, ENC = null, kid = null, openTask = null;
+
+  // ---------- crypto ----------
+  function b64(s) { var b = atob(s), a = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; }
+  function toB64(a) { var s = ''; a = new Uint8Array(a); for (var i = 0; i < a.length; i++) s += String.fromCharCode(a[i]); return btoa(s); }
+  function keyFromPassword(pw, enc) {
+    return crypto.subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveBits'])
+      .then(function (k) { return crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt: b64(enc.salt), iterations: enc.iter }, k, 256); });
+  }
+  function decrypt(rawKey, enc) {
+    return crypto.subtle.importKey('raw', rawKey, 'AES-GCM', false, ['decrypt'])
+      .then(function (k) { return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(enc.iv) }, k, b64(enc.ct)); })
+      .then(function (buf) { return JSON.parse(new TextDecoder().decode(buf)); });
+  }
+  function store(k, v) { try { v === null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch (e) {} }
+  function read(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+
+  function fetchEnc() {
+    return fetch('data.enc?t=' + Date.now(), { cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status); return r.json();
+    });
+  }
+  function load() {
+    return fetchEnc().then(function (enc) {
+      ENC = enc;
+      var saved = read(KEY_STORE);
+      if (!saved) return showLock('');
+      return decrypt(b64(saved), enc).then(start, function () { store(KEY_STORE, null); showLock('The password has changed. Enter the new one.'); });
+    }, function () { showLock('Could not load the timetable data. Check the connection and reload.'); });
+  }
+  function showLock(msg) { $('app').hidden = true; $('lock').hidden = false; $('err').textContent = msg || ''; $('pw').focus(); }
+  $('lock').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!ENC) return load();
+    var pw = $('pw').value.trim(); $('err').textContent = '';
+    keyFromPassword(pw, ENC).then(function (bits) {
+      return decrypt(bits, ENC).then(function (d) { store(KEY_STORE, toB64(bits)); $('pw').value = ''; start(d); });
+    }).catch(function () { $('err').textContent = 'Wrong password. Try again.'; $('pw').select(); });
+  });
+  $('forget').addEventListener('click', function () { store(KEY_STORE, null); DATA = null; showLock(''); });
+
+  // ---------- dates ----------
+  var DAYS = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+  var MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+  function iso(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+  function parse(s) { var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2], 12); }
+  function add(s, n) { var d = parse(s); d.setDate(d.getDate() + n); return iso(d); }
+  function longDate(s) { var d = parse(s); return d.getDate() + ' ' + MONTHS[d.getMonth()]; }
+  function shortDate(s) { var d = parse(s); return DAYS[d.getDay()].slice(0, 3) + ' ' + d.getDate() + ' ' + MONTHS[d.getMonth()].slice(0, 3); }
+  function dayName(s) { return DAYS[parse(s).getDay()]; }
+  function mondayOf(s) { var d = parse(s); return add(s, -((d.getDay() + 6) % 7)); }
+  function nowHM() { var d = new Date(); return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2); }
+  function mins(t) { return +t.slice(0, 2) * 60 + +t.slice(3, 5); }
+  function stamp(isoStr) {
+    var d = new Date(isoStr), t = iso(new Date()), s = iso(d);
+    var day = s === t ? 'today' : s === add(t, -1) ? 'yesterday' : shortDate(s);
+    return day + ' at ' + ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2);
+  }
+
+  // ---------- small helpers ----------
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  var BOOK = ['#d6342a', '#2a63d6', '#2e9e55', '#e3a90f', '#7b46c2', '#ee7a1c', '#e05a9c', '#159a9c', '#8a5a36', '#5f6b7a', '#9bbf1e', '#1fb5e6', '#b0306a', '#3d4bb8', '#00795e', '#ff7f9a', '#6e7f00', '#a25bd6'];
+  var SUBJ = {};
+  function colour(subject) { var k = (subject || '').toLowerCase().replace(/ (literature|language)$/, ''); return BOOK[(SUBJ[k] || 0) % BOOK.length]; }
+  function indexSubjects(p) {
+    var seen = {}; SUBJ = {};
+    Object.keys(p.days).forEach(function (d) { (p.days[d] || []).forEach(function (l) { seen[l[2].toLowerCase()] = 1; }); });
+    p.hw.forEach(function (h) { seen[(h.subject || '').toLowerCase().replace(/ (literature|language)$/, '')] = 1; });
+    Object.keys(seen).sort().forEach(function (k, i) { SUBJ[k] = i; });
+  }
+  function dot(subject) { var d = el('span', 'dot'); d.style.setProperty('--c', colour(subject)); d.setAttribute('aria-hidden', 'true'); return d; }
+  function size(n) { if (!n) return ''; if (n < 1024 * 1024) return Math.max(1, Math.round(n / 1024)) + ' KB'; return (n / 1048576).toFixed(n < 10485760 ? 1 : 0) + ' MB'; }
+  function ext(name) { var m = /\.([a-z0-9]{1,5})$/i.exec(name || ''); return m ? m[1].toLowerCase() : 'file'; }
+  function plural(n, w) { return n + ' ' + w + (n === 1 ? '' : 's'); }
+
+  // teacher-written HTML: keep basic formatting and links, drop everything else
+  var OK = { P: 1, BR: 1, B: 1, STRONG: 1, I: 1, EM: 1, U: 1, UL: 1, OL: 1, LI: 1, A: 1 };
+  function clean(html) {
+    var src = new DOMParser().parseFromString('<div>' + (html || '') + '</div>', 'text/html').body.firstChild;
+    var out = document.createElement('div');
+    (function walk(from, to) {
+      for (var n = from.firstChild; n; n = n.nextSibling) {
+        if (n.nodeType === 3) { linkify(n.nodeValue, to); continue; }
+        if (n.nodeType !== 1) continue;
+        var tag = n.tagName;
+        if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'IFRAME') continue;
+        if (tag === 'DIV') tag = 'P';
+        if (!OK[tag]) { walk(n, to); continue; }
+        var e = document.createElement(tag);
+        if (tag === 'A') {
+          var href = n.getAttribute('href') || '';
+          if (!/^https?:\/\//i.test(href)) { walk(n, to); continue; }
+          e.href = href; e.target = '_blank'; e.rel = 'noopener noreferrer';
+          e.textContent = n.textContent; to.appendChild(e); continue;
+        }
+        if (tag === 'OL' && n.getAttribute('type')) e.setAttribute('type', n.getAttribute('type'));
+        if (tag === 'P' && n.className === 'from-image') e.className = 'from-image';
+        walk(n, e); to.appendChild(e);
+      }
+    })(src, out);
+    return out;
+  }
+  function linkify(text, to) {
+    var re = /https?:\/\/[^\s<>"']+[^\s<>"'.,;:!?)]/g, last = 0, m;
+    while ((m = re.exec(text))) {
+      if (m.index > last) to.appendChild(document.createTextNode(text.slice(last, m.index)));
+      var a = document.createElement('a'); a.href = m[0]; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = m[0];
+      to.appendChild(a); last = m.index + m[0].length;
+    }
+    if (last < text.length) to.appendChild(document.createTextNode(text.slice(last)));
+  }
+
+  // ---------- render ----------
+  function person() { return DATA.people.filter(function (p) { return p.id === kid; })[0] || DATA.people[0]; }
+  function isMinor(l) { return mins(l[1]) - mins(l[0]) <= 25 && /regist|tutor/i.test(l[2]); }
+
+  function start(d) {
+    DATA = d; $('lock').hidden = true; $('app').hidden = false;
+    var want = (location.hash || '').slice(1) || read(KID_STORE);
+    kid = d.people.some(function (p) { return p.id === want; }) ? want : d.people[0].id;
+    render();
+  }
+  function pick(id) { kid = id; openTask = null; store(KID_STORE, id); try { history.replaceState(null, '', '#' + id); } catch (e) {} render(); }
+
+  function render() {
+    var p = person(), today = iso(new Date());
+    document.body.setAttribute('data-kid', p.id); indexSubjects(p);
+    document.title = p.name.toLowerCase() + ' / school';
+    var names = $('names'); names.textContent = '';
+    DATA.people.forEach(function (q) {
+      var b = el('button', 'name', q.name.toLowerCase()); b.type = 'button';
+      b.setAttribute('aria-pressed', String(q.id === p.id));
+      b.addEventListener('click', function () { pick(q.id); });
+      names.appendChild(b);
+    });
+    renderStatus(p, today); renderTimetable(p, today); renderHomework(p, today);
+    $('checked').textContent = 'Last checked ' + stamp(p.at) + ' from ' + p.source + '. Updates about 06:30 and 16:00.';
+    var age = (Date.now() - new Date(p.at).getTime()) / 3600000;
+    $('stale').hidden = age < 30;
+    if (age >= 30) $('stale').textContent = 'This has not updated since ' + stamp(p.at) + ', so new homework may be missing.';
+  }
+
+  function nextSchoolDay(p, from) { for (var i = 1; i <= 21; i++) { var d = add(from, i); if (p.days[d] && p.days[d].length) return d; } return null; }
+
+  function renderStatus(p, today) {
+    var s = $('status'), ls = (p.days[today] || []).filter(function (l) { return !isMinor(l); }), now = mins(nowHM()), parts = [];
+    function place(l) { return l[3] ? ' in room ' + l[3] : ''; }
+    if (!ls.length) {
+      var nx = nextSchoolDay(p, today);
+      parts.push('No school today.' + (nx ? ' Back ' + (nx === add(today, 1) ? 'tomorrow' : 'on ' + dayName(nx)) + '.' : ''));
+    } else if (now < mins(ls[0][0])) {
+      parts.push(plural(ls.length, 'lesson') + ' today. First is <b>' + esc(ls[0][2]) + '</b> at ' + ls[0][0] + '.');
+    } else if (now >= mins(ls[ls.length - 1][1])) {
+      parts.push('School is done for today.');
+    } else {
+      var cur = ls.filter(function (l) { return mins(l[0]) <= now && now < mins(l[1]); })[0];
+      var nxt = ls.filter(function (l) { return mins(l[0]) > now; })[0];
+      if (cur) parts.push('Now: <b>' + esc(cur[2]) + '</b>' + esc(place(cur)) + ' until ' + cur[1] + '.');
+      else parts.push('Between lessons.');
+      if (nxt) parts.push('Next is <b>' + esc(nxt[2]) + '</b> at ' + nxt[0] + '.');
+    }
+    var open = p.hw.filter(function (h) { return !h.done && h.due >= today; });
+    if (open.length) {
+      var first = open[0].due, n = open.filter(function (h) { return h.due === first; }).length;
+      parts.push(plural(n, 'thing') + ' due ' + (first === today ? 'today' : first === add(today, 1) ? 'tomorrow' : 'on ' + dayName(first)) + '.');
+    } else parts.push('Nothing due.');
+    s.innerHTML = parts.join(' ');
+  }
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  function renderTimetable(p, today) {
+    var box = $('tt'); box.textContent = '';
+    var tomorrow = add(today, 1), second = (p.days[tomorrow] && p.days[tomorrow].length) ? tomorrow : (nextSchoolDay(p, today) || tomorrow);
+    [[today, 'today'], [second, second === tomorrow ? 'tomorrow' : dayName(second)]].forEach(function (pair) {
+      var d = pair[0], ls = p.days[d] || [], isToday = d === today, now = mins(nowHM());
+      var sec = el('div', 'day'), h = el('div', 'day-h');
+      h.appendChild(el('h3', '', pair[1]));
+      var wk = p.weeks && p.weeks[mondayOf(d)];
+      h.appendChild(el('p', '', (pair[1] === dayName(d) ? '' : dayName(d) + ' ') + longDate(d) + (wk && ls.length ? ', week ' + wk : '')));
+      sec.appendChild(h);
+      if (!ls.length) { sec.appendChild(el('p', 'none', (d in p.days) ? 'No lessons.' : 'No timetable loaded for this day yet.')); box.appendChild(sec); return; }
+      var ul = el('ul', 'lessons');
+      ls.forEach(function (l, i) {
+        if (i) { var gap = mins(l[0]) - mins(ls[i - 1][1]);
+          if (gap >= 15) { var g = el('li', 'gap', (gap >= 40 && mins(l[0]) >= 12 * 60 + 30 ? 'lunch' : 'break') + ', ' + gap + ' min'); ul.appendChild(g); } }
+        var li = el('li', 'lesson' + (isMinor(l) ? ' minor' : ''));
+        if (isToday && now >= mins(l[1])) li.className += ' past';
+        if (isToday && now >= mins(l[0]) && now < mins(l[1])) li.className += ' now';
+        var t = el('div', 'l-time', l[0]); t.appendChild(el('small', '', 'to ' + l[1])); li.appendChild(t);
+        var b = el('div'), sj = el('div', 'l-subj');
+        if (!isMinor(l)) sj.appendChild(dot(l[2]));
+        sj.appendChild(el('span', '', l[2])); b.appendChild(sj);
+        var meta = [l[3] ? 'Room ' + l[3] : '', l[4]].filter(Boolean).join(', ') || l[5];
+        if (meta) b.appendChild(el('div', 'l-meta', meta));
+        li.appendChild(b); ul.appendChild(li);
+      });
+      sec.appendChild(ul); box.appendChild(sec);
+    });
+  }
+
+  function renderHomework(p, today) {
+    var box = $('hw'); box.textContent = '';
+    var list = p.hw.filter(function (h) { return h.due >= today || !h.done; });
+    var todo = list.filter(function (h) { return !h.done; }).length;
+    $('hw-count').textContent = todo ? todo + ' to do' : '';
+    if (!list.length) { box.appendChild(el('p', 'none', 'Nothing set. Check ' + p.source + ' if that seems unlikely.')); return; }
+    var groups = [], by = {};
+    list.forEach(function (h) { var k = h.due < today ? 'late' : h.due; if (!by[k]) { by[k] = []; groups.push(k); } by[k].push(h); });
+    groups.sort(function (a, b) { return a === 'late' ? -1 : b === 'late' ? 1 : a < b ? -1 : 1; });
+    groups.forEach(function (k) {
+      var h = el('h3', 'due-h' + (k === 'late' ? ' late' : ''));
+      if (k === 'late') h.textContent = 'overdue';
+      else {
+        var rel = k === today ? 'today' : k === add(today, 1) ? 'tomorrow' : '';
+        var main = el('span', rel === 'today' ? 'hi' : '', rel || shortDate(k)); h.appendChild(main);
+        if (rel) h.appendChild(el('small', '', shortDate(k)));
+      }
+      box.appendChild(h);
+      by[k].forEach(function (t) { box.appendChild(task(p, t, k === 'late')); });
+    });
+  }
+
+  function task(p, t, late) {
+    var wrap = el('div', 'task' + (t.done ? ' done' : '')), id = 'd-' + t.id;
+    var b = el('button', 'task-b'); b.type = 'button'; b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-controls', id);
+    var title = el('span', 't-title'); title.appendChild(dot(t.subject)); title.appendChild(document.createTextNode(t.title)); b.appendChild(title);
+    var sub = [t.subject, late ? 'was due ' + shortDate(t.due) : '', t.dueAt && t.dueAt !== '23:59' ? (late ? '' : 'by ' + t.dueAt) : '', t.done ? 'ticked off' : ''].filter(Boolean).join(', ');
+    b.appendChild(el('span', 't-sub', sub));
+    var side = el('span', 't-side'), n = (t.files || []).length + (t.links || []).length;
+    side.appendChild(document.createTextNode(n ? plural(n, 'attachment') : ''));
+    var chev = el('span', 'chev', '›'); chev.setAttribute('aria-hidden', 'true'); side.appendChild(chev); b.appendChild(side);
+    wrap.appendChild(b);
+    var d = el('div', 'detail'); d.id = id; d.hidden = true; wrap.appendChild(d);
+    function toggle(open) {
+      wrap.classList.toggle('open', open); b.setAttribute('aria-expanded', String(open)); d.hidden = !open;
+      if (open && !d.firstChild) fill(d, p, t);
+    }
+    b.addEventListener('click', function () { var open = d.hidden; toggle(open); openTask = open ? t.id : null; });
+    if (openTask === t.id) toggle(true);
+    return wrap;
+  }
+
+  function fill(d, p, t) {
+    var facts = [t.teacher, t.group, t.set ? 'set ' + shortDate(t.set) : '', t.mins ? 'about ' + t.mins : '', t.status].filter(Boolean).join(', ');
+    if (facts) d.appendChild(el('p', 'facts', facts));
+    var body = clean(t.desc); body.className = 'body';
+    if (!body.textContent.trim()) body.appendChild(el('p', '', 'The teacher did not write any instructions for this one.'));
+    d.appendChild(body);
+    if (t.note) d.appendChild(el('p', 'note', t.note));
+    var items = [];
+    (t.links || []).forEach(function (l) { items.push({ kind: 'link', cls: 'web', name: l.title || l.url, sub: (l.matched ? 'Found by its title, so check it is the right page. ' : '') + l.url.replace(/^https?:\/\/(www\.)?/, '').split(/[/?#]/)[0], url: l.url }); });
+    (t.files || []).forEach(function (f) {
+      var real = decodeURIComponent((f.url || '').split('/').pop().split('?')[0]) || f.name;
+      var office = /\.(docx?|pptx?|xlsx?)$/i.test(real) && /sharepoint\.com/.test(f.url);
+      items.push({ kind: ext(real), cls: '', name: f.label || real.replace(/_/g, '_\u200b'), sub: /sharepoint\.com/.test(f.url) ? 'Opens with ' + p.name + '’s school login' : '', url: f.url + (office ? '?web=1' : ''), size: size(f.size) });
+    });
+    if (items.length) {
+      var ul = el('ul', 'links');
+      items.forEach(function (it) {
+        var li = el('li'), a = el(it.url ? 'a' : 'div', it.url ? '' : 'nolink');
+        if (it.url) { a.href = it.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; } else it.sub = 'No link found. Open it in ' + p.source + '.';
+        a.appendChild(el('span', 'kind ' + it.cls, it.kind));
+        var nm = el('span', 'l-name', it.name); if (it.sub) nm.appendChild(el('small', '', it.sub)); a.appendChild(nm);
+        a.appendChild(el('span', 'l-size', it.size || ''));
+        li.appendChild(a); ul.appendChild(li);
+      });
+      d.appendChild(ul);
+    }
+    if (t.url) { var s = el('a', 'src', 'Open in ' + p.source); s.href = t.url; s.target = '_blank'; s.rel = 'noopener noreferrer'; d.appendChild(s); }
+  }
+
+  // ---------- keep it current ----------
+  var loadedAt = Date.now();
+  setInterval(function () { if (DATA && !document.hidden) { var p = person(), t = iso(new Date()); renderStatus(p, t); renderTimetable(p, t); } }, 60000);
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden || !DATA) return;
+    if (Date.now() - loadedAt > 10 * 60000) { loadedAt = Date.now(); load(); } else render();
+  });
+  window.addEventListener('hashchange', function () { var h = location.hash.slice(1); if (DATA && h && h !== kid && DATA.people.some(function (p) { return p.id === h; })) pick(h); });
+
+  if (!window.crypto || !crypto.subtle) showLock('This browser cannot unlock the page. Open it over https in Safari or Chrome.');
+  else load();
+})();
+</script>
+</body>
+</html>
