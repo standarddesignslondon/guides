@@ -141,6 +141,7 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
   body[data-kid="sidney"] .detail .body a{color:#ff7a55}
 }
 .from-image{border-left:3px solid var(--rule); padding-left:12px}
+.hw-note{font-size:13px; color:var(--soft); margin:12px 0 0; max-width:38em}
 .note{font-size:13px; color:var(--soft); margin:0 0 12px; max-width:38em}
 .facts{font-size:14px; color:var(--soft); margin:0 0 14px}
 .links{list-style:none; margin:0 0 6px; padding:0}
@@ -463,6 +464,7 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
     var todo = list.filter(function (h) { return !h.done; }).length;
     $('hw-count').textContent = todo ? todo + ' to do' : '';
     if (!list.length) { box.appendChild(el('p', 'none', 'Nothing set. Check ' + p.source + ' if that seems unlikely.')); return; }
+    if (p.hwNote) box.appendChild(el('p', 'hw-note', p.hwNote));
     var groups = [], by = {};
     list.forEach(function (h) { var k = h.due < today ? 'late' : h.due; if (!by[k]) { by[k] = []; groups.push(k); } by[k].push(h); });
     groups.sort(function (a, b) { return a === 'late' ? -1 : b === 'late' ? 1 : a < b ? -1 : 1; });
@@ -483,7 +485,7 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
     var wrap = el('div', 'task' + (t.done ? ' done' : '')), id = 'd-' + t.id;
     var b = el('button', 'task-b'); b.type = 'button'; b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-controls', id);
     var title = el('span', 't-title'); title.appendChild(dot(t.subject)); title.appendChild(document.createTextNode(t.title)); b.appendChild(title);
-    var sub = [t.subject, late ? 'was due ' + shortDate(t.due) : '', t.dueAt && t.dueAt !== '23:59' ? (late ? '' : 'by ' + t.dueAt) : '', t.done ? 'ticked off' : ''].filter(Boolean).join(', ');
+    var sub = [t.subject, late ? 'was due ' + shortDate(t.due) : '', t.dueAt && t.dueAt !== '23:59' ? (late ? '' : 'by ' + t.dueAt) : '', t.done ? (t.type === 'Assignment' ? 'done' : 'ticked off') : ''].filter(Boolean).join(', ');
     b.appendChild(el('span', 't-sub', sub));
     var side = el('span', 't-side'), n = (t.files || []).length + (t.links || []).length;
     side.appendChild(document.createTextNode(n ? plural(n, 'attachment') : ''));
@@ -503,7 +505,9 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
     var facts = [t.teacher, t.group, t.set ? 'set ' + shortDate(t.set) : '', t.mins ? 'about ' + t.mins : '', t.status].filter(Boolean).join(', ');
     if (facts) d.appendChild(el('p', 'facts', facts));
     var body = clean(t.desc); body.className = 'body';
-    if (!body.textContent.trim()) body.appendChild(el('p', '', 'The teacher did not write any instructions for this one.'));
+    if (!body.textContent.trim()) body.appendChild(el('p', '', t.needsDetails
+      ? 'The instructions have not been copied from ' + p.source + ' yet. Open it there to read them' + ((t.files || []).length ? '; the attachments are below.' : '.')
+      : 'The teacher did not write any instructions for this one.'));
     d.appendChild(body);
     if (t.note) d.appendChild(el('p', 'note', t.note));
     var items = [];
