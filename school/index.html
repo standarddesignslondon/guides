@@ -99,6 +99,23 @@ h2 span{float:right}
 .none{padding:14px 0; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); color:var(--soft); margin:0}
 .dot{display:inline-block; width:10px; height:10px; margin-right:8px; background:var(--c,#888); vertical-align:1px}
 
+.kit{display:inline-block; font-size:11px; line-height:1.35; font-weight:800; border:1.5px solid currentColor; padding:0 4px;
+  margin-left:7px; vertical-align:2px; font-variation-settings:"wdth" 75}
+.chev{display:inline-block; transition:transform .18s ease; font-size:16px}
+.more-b{display:flex; justify-content:space-between; align-items:baseline; gap:12px; width:100%; text-align:left;
+  margin-top:8px; padding:14px 0; font-size:16px; font-weight:700; border-bottom:1px solid var(--rule)}
+.more-b.open .chev,.ahead.open > .ahead-b .chev{transform:rotate(90deg)}
+.wk-h{font-size:14px; font-weight:500; color:var(--soft); margin:0; padding:20px 0 8px; border-bottom:1px solid var(--rule)}
+.ahead{border-bottom:1px solid var(--rule)}
+.ahead-b{display:grid; grid-template-columns:64px 1fr auto; gap:0 12px; align-items:start; width:100%; text-align:left; padding:10px 0}
+.a-day{font-size:17px; font-weight:800; line-height:1.2; font-variation-settings:"wdth" 80}
+.a-day small{display:block; font-size:12px; font-weight:400; color:var(--soft); font-variation-settings:"wdth" 100}
+.a-subs{font-size:15px; line-height:1.6}
+.a-sub{display:inline-block; margin-right:12px; white-space:nowrap}
+.a-sub .dot{width:8px; height:8px; margin-right:6px}
+.a-none{color:var(--soft)}
+.ahead .lessons{margin:0 0 12px}
+
 /* ---------- homework ---------- */
 .due-h{display:flex; align-items:baseline; gap:10px; padding:20px 0 8px; margin:0; font-size:22px; font-weight:800;
   letter-spacing:-0.015em; font-variation-settings:"wdth" 80; border-bottom:1px solid var(--rule)}
@@ -174,7 +191,8 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
   'use strict';
   var KEY_STORE = 'school.key', KID_STORE = 'school.kid';
   var $ = function (id) { return document.getElementById(id); };
-  var DATA = null, ENC = null, kid = null, openTask = null;
+  var DATA = null, ENC = null, kid = null, openTask = null, openDays = {};
+  var MORE_STORE = 'school.more', moreOpen = false;
 
   // ---------- crypto ----------
   function b64(s) { var b = atob(s), a = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; }
@@ -291,12 +309,12 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
   function isMinor(l) { return mins(l[1]) - mins(l[0]) <= 25 && /regist|tutor/i.test(l[2]); }
 
   function start(d) {
-    DATA = d; $('lock').hidden = true; $('app').hidden = false;
+    DATA = d; moreOpen = read(MORE_STORE) === '1'; $('lock').hidden = true; $('app').hidden = false;
     var want = (location.hash || '').slice(1) || read(KID_STORE);
     kid = d.people.some(function (p) { return p.id === want; }) ? want : d.people[0].id;
     render();
   }
-  function pick(id) { kid = id; openTask = null; store(KID_STORE, id); try { history.replaceState(null, '', '#' + id); } catch (e) {} render(); }
+  function pick(id) { kid = id; openTask = null; openDays = {}; store(KID_STORE, id); try { history.replaceState(null, '', '#' + id); } catch (e) {} render(); }
 
   function render() {
     var p = person(), today = iso(new Date());
@@ -344,33 +362,98 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
   }
   function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
+  function isKit(p, subject) { var s = String(subject).toLowerCase(); return (p.kit || []).some(function (k) { return k.toLowerCase() === s; }); }
+  function kitTag() { return el('span', 'kit', 'kit'); }
+
+  function lessonList(p, ls, isToday) {
+    var ul = el('ul', 'lessons'), now = mins(nowHM());
+    ls.forEach(function (l, i) {
+      if (i) { var gap = mins(l[0]) - mins(ls[i - 1][1]);
+        if (gap >= 15) { var g = el('li', 'gap', (gap >= 40 && mins(l[0]) >= 12 * 60 + 30 ? 'lunch' : 'break') + ', ' + gap + ' min'); ul.appendChild(g); } }
+      var li = el('li', 'lesson' + (isMinor(l) ? ' minor' : ''));
+      if (isToday && now >= mins(l[1])) li.className += ' past';
+      if (isToday && now >= mins(l[0]) && now < mins(l[1])) li.className += ' now';
+      var t = el('div', 'l-time', l[0]); t.appendChild(el('small', '', 'to ' + l[1])); li.appendChild(t);
+      var b = el('div'), sj = el('div', 'l-subj');
+      if (!isMinor(l)) sj.appendChild(dot(l[2]));
+      sj.appendChild(el('span', '', l[2]));
+      if (isKit(p, l[2])) sj.appendChild(kitTag());
+      b.appendChild(sj);
+      var meta = [l[3] ? 'Room ' + l[3] : '', l[4]].filter(Boolean).join(', ') || l[5];
+      if (meta) b.appendChild(el('div', 'l-meta', meta));
+      li.appendChild(b); ul.appendChild(li);
+    });
+    return ul;
+  }
+
   function renderTimetable(p, today) {
     var box = $('tt'); box.textContent = '';
     var tomorrow = add(today, 1), second = (p.days[tomorrow] && p.days[tomorrow].length) ? tomorrow : (nextSchoolDay(p, today) || tomorrow);
     [[today, 'today'], [second, second === tomorrow ? 'tomorrow' : dayName(second)]].forEach(function (pair) {
-      var d = pair[0], ls = p.days[d] || [], isToday = d === today, now = mins(nowHM());
+      var d = pair[0], ls = p.days[d] || [];
       var sec = el('div', 'day'), h = el('div', 'day-h');
       h.appendChild(el('h3', '', pair[1]));
       var wk = p.weeks && p.weeks[mondayOf(d)];
       h.appendChild(el('p', '', (pair[1] === dayName(d) ? '' : dayName(d) + ' ') + longDate(d) + (wk && ls.length ? ', week ' + wk : '')));
       sec.appendChild(h);
-      if (!ls.length) { sec.appendChild(el('p', 'none', (d in p.days) ? 'No lessons.' : 'No timetable loaded for this day yet.')); box.appendChild(sec); return; }
-      var ul = el('ul', 'lessons');
-      ls.forEach(function (l, i) {
-        if (i) { var gap = mins(l[0]) - mins(ls[i - 1][1]);
-          if (gap >= 15) { var g = el('li', 'gap', (gap >= 40 && mins(l[0]) >= 12 * 60 + 30 ? 'lunch' : 'break') + ', ' + gap + ' min'); ul.appendChild(g); } }
-        var li = el('li', 'lesson' + (isMinor(l) ? ' minor' : ''));
-        if (isToday && now >= mins(l[1])) li.className += ' past';
-        if (isToday && now >= mins(l[0]) && now < mins(l[1])) li.className += ' now';
-        var t = el('div', 'l-time', l[0]); t.appendChild(el('small', '', 'to ' + l[1])); li.appendChild(t);
-        var b = el('div'), sj = el('div', 'l-subj');
-        if (!isMinor(l)) sj.appendChild(dot(l[2]));
-        sj.appendChild(el('span', '', l[2])); b.appendChild(sj);
-        var meta = [l[3] ? 'Room ' + l[3] : '', l[4]].filter(Boolean).join(', ') || l[5];
-        if (meta) b.appendChild(el('div', 'l-meta', meta));
-        li.appendChild(b); ul.appendChild(li);
+      if (!ls.length) sec.appendChild(el('p', 'none', (d in p.days) ? 'No lessons.' : 'No timetable loaded for this day yet.'));
+      else sec.appendChild(lessonList(p, ls, d === today));
+      box.appendChild(sec);
+    });
+    renderAhead(p, today, second, box);
+  }
+
+  // the days after the two above: to the end of next week (from a weekend, the two weeks coming up)
+  function renderAhead(p, today, second, box) {
+    var dow = parse(today).getDay(), weekend = dow === 0 || dow === 6;
+    var base = weekend ? add(mondayOf(today), 7) : mondayOf(today), last = add(base, 11), days = [];
+    for (var d = add(second > today ? second : today, 1); d <= last; d = add(d, 1)) { var w = parse(d).getDay(); if (w >= 1 && w <= 5) days.push(d); }
+    if (!days.length) return;
+    var b = el('button', 'more-b'); b.type = 'button'; b.setAttribute('aria-controls', 'ahead');
+    var lab = el('span'), chev = el('span', 'chev', '›'); chev.setAttribute('aria-hidden', 'true');
+    b.appendChild(lab); b.appendChild(chev);
+    var panel = el('div', 'ahead-box'); panel.id = 'ahead';
+    function set(open) {
+      moreOpen = open; store(MORE_STORE, open ? '1' : null);
+      b.setAttribute('aria-expanded', String(open)); b.classList.toggle('open', open); panel.hidden = !open;
+      lab.textContent = open ? 'Hide the extra days' : 'See more days, up to ' + shortDate(days[days.length - 1]);
+      if (open && !panel.firstChild) fillAhead(p, days, panel);
+    }
+    b.addEventListener('click', function () { set(panel.hidden); });
+    box.appendChild(b); box.appendChild(panel); set(moreOpen);
+  }
+
+  function fillAhead(p, days, panel) {
+    var week = '';
+    days.forEach(function (d) {
+      var m = mondayOf(d), ls = p.days[d] || [];
+      if (m !== week) { week = m; var wk = p.weeks && p.weeks[m];
+        panel.appendChild(el('h3', 'wk-h', 'week beginning ' + longDate(m) + (wk ? ', week ' + wk : ''))); }
+      var row = el('div', 'ahead'), dt = parse(d);
+      var head = el(ls.length ? 'button' : 'div', 'ahead-b'); if (ls.length) head.type = 'button';
+      var day = el('span', 'a-day', DAYS[dt.getDay()].slice(0, 3)); day.appendChild(el('small', '', dt.getDate() + ' ' + MONTHS[dt.getMonth()].slice(0, 3)));
+      head.appendChild(day);
+      var subs = el('span', 'a-subs'), prev = '';
+      ls.forEach(function (l) {
+        if (isMinor(l) || l[2] === prev) return; prev = l[2];
+        var c = el('span', 'a-sub'); c.appendChild(dot(l[2])); c.appendChild(document.createTextNode(l[2]));
+        if (isKit(p, l[2])) c.appendChild(kitTag());
+        subs.appendChild(c); subs.appendChild(document.createTextNode(' '));
       });
-      sec.appendChild(ul); box.appendChild(sec);
+      if (!ls.length) subs.appendChild(el('span', 'a-none', (d in p.days) ? 'No lessons' : 'Not loaded yet'));
+      head.appendChild(subs);
+      row.appendChild(head);
+      if (ls.length) {
+        var chev = el('span', 'chev', '›'); chev.setAttribute('aria-hidden', 'true'); head.appendChild(chev);
+        var full = el('div'); full.id = 'a-' + d; full.hidden = true; head.setAttribute('aria-controls', full.id); row.appendChild(full);
+        var show = function (open) {
+          head.setAttribute('aria-expanded', String(open)); row.classList.toggle('open', open); full.hidden = !open; openDays[d] = open;
+          if (open && !full.firstChild) full.appendChild(lessonList(p, ls, false));
+        };
+        head.addEventListener('click', function () { show(full.hidden); });
+        show(!!openDays[d]);
+      }
+      panel.appendChild(row);
     });
   }
 
