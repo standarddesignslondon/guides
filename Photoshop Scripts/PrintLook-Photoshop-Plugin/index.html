@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    html, body { height: 100%; }
+    body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 10px 12px 18px;
+        font-family: "SF Pro Text", "Helvetica Neue", sans-serif;
+        font-size: 12px;
+        color: #d6d6d6;
+    }
+    h1 { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; margin: 0 0 8px; color: #e8e8e8; }
+    h2 {
+        font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+        color: #9a9a9a; margin: 14px 0 6px; border-bottom: 1px solid #3a3a3a; padding-bottom: 3px;
+        cursor: pointer;
+    }
+    h2 .tw { color: #6f6f6f; margin-right: 4px; }
+    .row { display: flex; align-items: center; justify-content: space-between; margin: 4px 0; gap: 6px; }
+    .row label { flex: 1 1 auto; white-space: nowrap; overflow: hidden; }
+    select {
+        width: 175px; background: #262626; color: #e6e6e6; border: 1px solid #444;
+        border-radius: 3px; padding: 3px; font-size: 12px;
+    }
+    select.wide { width: 100%; }
+    input[type="text"], input[type="number"] {
+        width: 150px; background: #262626; color: #e6e6e6; border: 1px solid #444;
+        border-radius: 3px; padding: 3px 5px; font-size: 12px;
+    }
+    input[type="range"] { width: 112px; }
+    textarea {
+        width: 100%; box-sizing: border-box; background: #262626; color: #e6e6e6; border: 1px solid #444;
+        border-radius: 3px; padding: 4px 5px; font-size: 11px; font-family: Menlo, monospace; margin-top: 3px;
+    }
+    .val { width: 38px; text-align: right; color: #9a9a9a; font-variant-numeric: tabular-nums; }
+    .est { color: #b99a5a; font-size: 9px; margin-left: 3px; }
+    .hint { font-size: 10px; color: #7a7a7a; margin: 3px 0 6px; line-height: 1.4; }
+    #note { font-size: 11px; color: #b7b2a6; margin: 6px 0 4px; line-height: 1.45; min-height: 14px; }
+    .buttons { display: flex; gap: 6px; margin-top: 10px; }
+    button {
+        flex: 1; padding: 7px 0; border-radius: 4px; border: 1px solid #555; background: #333;
+        color: #e6e6e6; font-size: 12px; cursor: pointer;
+    }
+    button:hover { background: #3e3e3e; }
+    #renderBtn { background: #2d5b9e; border-color: #3a6cb5; font-weight: 600; }
+    #renderBtn:hover { background: #366bb8; }
+    #status { margin-top: 8px; font-size: 11px; color: #8fae8f; min-height: 14px; white-space: pre-line; }
+    #status.err { color: #c98080; }
+    .modified { color: #d9b36c; }
+    .offtag { color: #c98080; font-weight: 400; letter-spacing: 0.04em; display: none; }
+</style>
+</head>
+<body>
+    <h1>PRINTLOOK</h1>
+
+    <div class="row"><label>Looks</label>
+        <select id="group"></select>
+    </div>
+    <select id="look" class="wide"></select>
+    <div id="note"></div>
+
+    <div class="row">
+        <label>Source</label>
+        <select id="source">
+            <option value="layers">All visible layers, each a plate</option>
+            <option value="selected">Selected layers, each a plate</option>
+            <option value="merged">Whole image as one picture</option>
+        </select>
+    </div>
+    <div class="row">
+        <label>Output</label>
+        <select id="output">
+            <option value="layer">One printed layer</option>
+            <option value="plates">Each printing on its own layer</option>
+        </select>
+    </div>
+    <div class="row">
+        <label>Strength</label>
+        <input type="range" id="strength" min="0" max="100" value="100">
+        <span class="val" id="strengthVal">100</span>
+    </div>
+
+    <div class="buttons">
+        <button id="previewBtn">Preview selection</button>
+        <button id="renderBtn">Render</button>
+    </div>
+    <div class="buttons" style="margin-top:6px">
+        <button id="updateBtn">Re-render last</button>
+        <button id="seedBtn">New impression</button>
+    </div>
+    <div id="status"></div>
+    <div class="hint">Each colour layer of your artwork is one printing plate with one ink. Render prints them, bottom layer first, onto a new layer at the top; your artwork is untouched. Preview prints just the marquee selection. Choosing a look sets everything below it; the tick boxes on the section headers switch whole stages on and off. Settings marked <span class="est">est.</span> have defaults that are estimates, not documented figures.</div>
+
+    <div id="sections"></div>
+
+    <h2 id="presetsHead"><span class="tw">▾</span>My presets</h2>
+    <div id="presetsBody">
+        <div class="row"><label>Saved</label><select id="presetSel"><option value="none">(none)</option></select></div>
+        <div class="row"><label>Name</label><input type="text" id="presetName" placeholder="new preset name"></div>
+        <div class="buttons" style="margin-top:6px">
+            <button id="presetSaveBtn">Save preset</button>
+            <button id="presetDeleteBtn">Delete</button>
+        </div>
+        <div class="hint">Saves every setting on the panel. Presets live in the plugin's data folder and survive updates.</div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

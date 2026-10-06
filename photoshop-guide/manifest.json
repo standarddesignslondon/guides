@@ -8,7 +8,7 @@
   "noun_plural": "tools",
   "page_dir": "tools"
  },
- "generated": "2026-09-29",
+ "generated": "2026-10-03",
  "items": [
   {
    "num": "01",
@@ -142,6 +142,19 @@
   },
   {
    "num": "11",
+   "slug": "printlook",
+   "name": "PrintLook",
+   "tagline": "Prints your layers: each colour layer is a plate with one ink, put through letterpress, lithography, screenprint, gravure, stencil, duplicator or copier as it was done from the 1850s to the 1980s.",
+   "url": "tools/printlook.html",
+   "image": "images/printlook.png",
+   "facets": {
+    "app": "Photoshop",
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "12",
    "slug": "look-cookbook",
    "name": "Look Cookbook",
    "tagline": "Recipes for FilmLook and VideoLook, alone and chained: kitchen-sink titles, community cable, video art, artists' film and video-to-film oddities.",
@@ -154,7 +167,7 @@
    }
   },
   {
-   "num": "12",
+   "num": "13",
    "slug": "poster-pdf-export",
    "name": "Poster PDF Export",
    "tagline": "Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.",

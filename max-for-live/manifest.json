@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-09-21",
+ "generated": "2026-10-06",
  "items": [
   {
    "num": "01",
@@ -368,6 +368,18 @@
    "facets": {
     "kind": "Audio Effect",
     "author": "ChatGPT"
+   }
+  },
+  {
+   "num": "31",
+   "slug": "lucky-dip",
+   "name": "Lucky Dip",
+   "tagline": "Random kit maker: one press fills 16 Drum Rack pads with samples drawn from the whole sample library.",
+   "url": "devices/lucky-dip.html",
+   "image": "images/lucky-dip.png",
+   "facets": {
+    "kind": "MIDI Effect",
+    "author": "Claude"
    }
   }
  ]

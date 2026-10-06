@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lucky dip — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">31</p>
+  <h1>lucky dip</h1>
+  <p class="ch-sub">Random kit maker: one press fills 16 Drum Rack pads with samples drawn from the whole sample library.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/lucky-dip.png" alt="Lucky Dip"></div><figcaption>lucky dip</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">31.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Press <b>DIP</b> and 16 pads of a Drum Rack get random samples from Remote Samples and Splice-1-Org (320,800 files at the first scan). <b>FILL PADS WITH</b> chooses how. <code>Simpler</code> fills the pads in place, one Simpler per pad. <code>Drum Sampler</code> writes a Drum Rack preset called <code>Lucky Dip Kit</code>, made from the <code>_Drum Sampler Drum Rack v2</code> template with 16 samples loaded, which you then load from the browser with a double-click. A length filter and a tickbox per top-level folder decide what is in play. MIDI passes straight through.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>midi effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v0.1</dd></div><div class="fact"><dt>needs</dt><dd>Live 12.4 or later</dd></div><div class="fact"><dt>folder</dt><dd>Lucky Dip Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">31.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop Lucky Dip on a MIDI track (User Library &gt; Presets &gt; MIDI Effects &gt; Max MIDI Effect, or search the browser for it). An empty track is fine.</span></li>
+<li><span class="step-n">02</span><span class="step-t">The first time it ever runs it scans the sample folders, about 40 seconds. After that the saved index loads in a fraction of a second. Wait for the status line to show the number of samples in play.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Press <b>DIP</b>. In Simpler mode the track gets a Drum Rack with 16 pads from C1. Press again for a new kit.</span></li>
+<li><span class="step-n">04</span><span class="step-t">For Drum Samplers: set <b>FILL PADS WITH</b> to <code>Drum Sampler</code>, press <b>DIP</b>, then double-click <code>Lucky Dip Kit</code> in the browser with Lucky Dip&#x27;s track selected.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Narrow it down: untick folders, or alt-click one folder to draw from that folder alone.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">31.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">dip</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>DIP<span class="rng">button</span></dt><dd>Picks 16 samples and fills the pads (Simpler) or writes the kit preset (Drum Sampler).</dd></div>
+<div class="ctl-row"><dt>FILL PADS WITH<span class="rng">Simpler / Drum Sampler</span></dt><dd><b>Simpler</b>: the pads are filled on the track straight away. An empty track gets a new Drum Rack; an existing Drum Rack is reused. A pad that already holds a Simpler just gets a new sample, so the rest of its chain stays; any other instrument on the pad is swapped for a Simpler. <b>Drum Sampler</b>: writes <code>Lucky Dip Kit</code> to User Library &gt; Presets &gt; Instruments &gt; Drum Rack. Double-click it, or select it and press Enter, to load it.</dd></div>
+<div class="ctl-row"><dt>SIMPLER MODE<span class="rng">DEFAULT / 1-SHOT</span></dt><dd>Simpler mode only. DEFAULT leaves each Simpler as the default Simpler preset has it; 1-SHOT switches every loaded Simpler to 1-Shot playback.</dd></div>
+<div class="ctl-row"><dt>FIRST PAD<span class="rng">note, default C1</span></dt><dd>The note of the first of the 16 pads. C1 is the bottom-left pad of a new Drum Rack. Applies to both modes.</dd></div>
+</dl>
+<h3 class="sub">length</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>LENGTH FILTER<span class="rng">ON / OFF</span></dt><dd>On: only samples whose length is between SHORTEST and LONGEST are in play. Lengths are read from the file headers during the scan, so the filter costs nothing at DIP time.</dd></div>
+<div class="ctl-row"><dt>SHORTEST<span class="rng">0 ms - 10 s</span></dt><dd>Lower limit. Default 0.</dd></div>
+<div class="ctl-row"><dt>LONGEST<span class="rng">50 ms - 120 s</span></dt><dd>Upper limit. Default 5 s.</dd></div>
+</dl>
+<h3 class="sub">folders</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Folder panel<span class="rng">tickboxes</span></dt><dd>One box per top-level folder in Remote Samples, plus one for the whole of Splice-1-Org. The number is how many samples in that folder are in play with the current length filter. Click to tick or untick, drag to paint, alt-click to tick only that folder.</dd></div>
+<div class="ctl-row"><dt>ALL / NONE<span class="rng">buttons</span></dt><dd>Tick or untick every folder.</dd></div>
+<div class="ctl-row"><dt>CHANCES<span class="rng">Every file equal / Every folder equal</span></dt><dd><b>Every file equal</b> draws from the whole pool, so the big folders dominate. <b>Every folder equal</b> picks a ticked folder first, then a file inside it, so small folders turn up as often as large ones.</dd></div>
+</dl>
+<h3 class="sub">housekeeping</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>RESCAN<span class="rng">button</span></dt><dd>Walks the sample folders again, about 12 seconds. Press it after adding samples; new files are not in play until then.</dd></div>
+<div class="ctl-row"><dt>PROBE<span class="rng">button</span></dt><dd>Writes what Live reports about this track&#x27;s Drum Rack to the log. For diagnosis only.</dd></div>
+<div class="ctl-row"><dt>Status line</dt><dd>The gold text under the folder panel: samples in play, scan progress, and the result of each DIP.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">31.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">drum sampler kits, quickly</h3><p>Leave the browser on a search for <code>Lucky Dip Kit</code>. Each new kit is then DIP, double-click. Loading it replaces the Drum Rack on the selected track.</p>
+<h3 class="sub">keeping a kit</h3><p>A kit that is on a track lives in the Set and is not changed by later DIPs. To keep one as a preset, save the rack from the track under another name, because <code>Lucky Dip Kit</code> is overwritten every time.</p>
+<h3 class="sub">one-folder kits</h3><p>Alt-click a folder (BBC Radiophonic Workshop, NASA Sounds, Radio Recordings) and every pad comes from it. Turn the length filter off for longer material.</p>
+<h3 class="sub">changing the drum sampler defaults</h3><p>The kit is a copy of <code>_Drum Sampler Drum Rack v2</code>, read fresh on every DIP and never changed. Re-save that rack under the same name with different Drum Sampler settings or effects on the pads and the next kit follows. It has 64 pads from C1; Lucky Dip fills 16 from FIRST PAD and leaves the rest empty.</p>
+<h3 class="sub">adding a sample location</h3><p>Add an entry to <code>roots</code> in <code>~/LuckyDip/settings.json</code> and press RESCAN. <code>&quot;split&quot;: true</code> gives every top-level folder inside it a tickbox; <code>false</code> makes the whole location one tickbox.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">31.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Needs Live 12.4 or later.</li><li>Loading <code>Lucky Dip Kit</code> replaces the whole Drum Rack on the <b>selected</b> track, including anything you changed on it. Check the right track is selected before double-clicking.</li><li>Each Drum Sampler DIP overwrites <code>Lucky Dip Kit</code>. Save a rack under another name to keep it as a preset.</li><li>Drum Sampler mode needs <code>_Drum Sampler Drum Rack v2.adg</code> in User Library &gt; Presets &gt; Instruments &gt; Drum Rack. Don&#x27;t rename or move it.</li><li>Samples are used where they sit on the Crucial X9, in both modes. Use Collect All and Save if a Set needs to travel.</li><li>A Simpler-mode DIP is many undo steps, not one.</li><li>Simpler mode on a rack loaded from a Drum Sampler kit is slow (15 seconds for the 16 pads), because every Drum Sampler has to be swapped out.</li><li>If Hot-Swap is on when you press DIP in Drum Sampler mode, Lucky Dip switches it off.</li><li>Folder ticks are saved globally, not with the Set. The other controls are saved with the Set.</li><li>Not yet tried: Push, a FIRST PAD other than C1, <code>Every folder equal</code>, and running with the drive unplugged.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">31.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_lucky_dip.py</code> in the device folder writes <code>Lucky Dip.maxpat</code> and a frozen <code>Lucky Dip.amxd</code> (scripts embedded at build time, no Max freeze step). Copy the <code>.amxd</code> over the one in User Library &gt; Presets &gt; MIDI Effects &gt; Max MIDI Effect. <code>node test_node.js</code> and <code>node test_lom.js</code> are the offline tests.</p>
+<p>Three scripts: <code>luckydip_node.js</code> (node.script) scans, indexes, picks and writes the kit preset; <code>luckydip_lom.js</code> (js) fills Simpler pads through the Live API; <code>luckydip_ui.js</code> (v8ui) draws the folder panel.</p>
+<p>The index, settings and log are in <code>~/LuckyDip/</code>. The log lists every kit pad by pad with full paths.</p>
+<p>Live&#x27;s API cannot load a sample into a Drum Sampler or load a preset, which is why that mode writes a preset file instead. The README in the device folder has the file-format notes.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="tracking-lines.html"><span>previous</span>tracking lines</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-10-06</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

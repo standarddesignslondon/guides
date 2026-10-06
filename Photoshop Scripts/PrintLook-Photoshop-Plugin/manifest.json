@@ -1,0 +1,22 @@
+{
+    "id": "com.simonmorse.printlook",
+    "name": "PrintLook",
+    "version": "1.0.0",
+    "main": "index.html",
+    "manifestVersion": 5,
+    "host": {
+        "app": "PS",
+        "minVersion": "24.2.0"
+    },
+    "entrypoints": [
+        {
+            "type": "panel",
+            "id": "printlook.panel",
+            "label": { "default": "PrintLook" },
+            "minimumSize": { "width": 280, "height": 300 },
+            "maximumSize": { "width": 700, "height": 2400 },
+            "preferredDockedSize": { "width": 330, "height": 900 },
+            "preferredFloatingSize": { "width": 330, "height": 900 }
+        }
+    ]
+}
