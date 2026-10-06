@@ -514,8 +514,10 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
     (t.links || []).forEach(function (l) { items.push({ kind: 'link', cls: 'web', name: l.title || l.url, sub: (l.matched ? 'Found by its title, so check it is the right page. ' : '') + l.url.replace(/^https?:\/\/(www\.)?/, '').split(/[/?#]/)[0], url: l.url }); });
     (t.files || []).forEach(function (f) {
       var real = decodeURIComponent((f.url || '').split('/').pop().split('?')[0]) || f.name;
-      var office = /\.(docx?|pptx?|xlsx?)$/i.test(real) && /sharepoint\.com/.test(f.url);
-      items.push({ kind: ext(real), cls: '', name: f.label || real.replace(/_/g, '_\u200b'), sub: /sharepoint\.com/.test(f.url) ? 'Opens with ' + p.name + '’s school login' : '', url: f.url + (office ? '?web=1' : ''), size: size(f.size) });
+      var office = /\.(docx?|pptx?|xlsx?)$/i.test(real) && /sharepoint\.com/.test(f.url) && !f.mine;
+      var sub = f.mine ? p.name + '’s own copy to fill in. This link downloads a copy to read; do the work in ' + p.source + '.'
+        : /sharepoint\.com/.test(f.url) ? 'Opens with ' + p.name + '’s school login' : '';
+      items.push({ kind: ext(real), cls: '', name: f.label || real.replace(/_/g, '_\u200b'), sub: sub, url: f.url + (office ? '?web=1' : ''), size: size(f.size) });
     });
     if (items.length) {
       var ul = el('ul', 'links');
