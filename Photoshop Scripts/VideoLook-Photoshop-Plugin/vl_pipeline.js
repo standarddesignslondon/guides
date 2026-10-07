@@ -230,7 +230,8 @@ function finish(pic, s, rect, W, H, PW, PH, win, g, stages) {
  *      (where the scan was when the shutter opened), decay (phosphor afterglow, fraction of a field),
  *      soft (% of picture width: lens focus and enlargement), focus (px, older settings), flare (0..1 veiling glare),
  *      reflection (0..1), zoomOut (0..0.3: the camera pulled back to show the tube surround), tilt (degrees),
- *      finish: 'bw' = black-and-white negative and print with printEv (stops), printContrast, printBlack (0..1), grain, dust }
+ *      finish: 'bw' = black-and-white negative and print with printEv (stops), printContrast, printBlack (0..1), grain,
+ *      dust (amount) and dustLevel (how light the specks are, 1 = as measured) }
  * Half-frame 35 mm at 1/25 s was John Cura's Tele-snap practice [SEC Wikipedia "Tele-snaps"]: 1/25 s is one whole frame.
  * picB: the second field drawn separately (see run). */
 function wideBlur(a, w, h, sigma) { // a large-radius blur done on a small copy
@@ -296,33 +297,36 @@ function screenPhoto(pic, w, h, p, geo, picB) {
       L0[i] = L1[i] = L2[i] = Math.pow(10, -(D > 0 ? D : 0));
     }
   } else if (grainN) { const gs = p.grain * 0.06; for (let i = 0; i < n; i++) { const g0 = grainN[i] * gs; for (let c = 0; c < 3; c++) lin[c][i] = Math.max(0, lin[c][i] * (1 + g0) + g0 * 0.02); } }
-  if (p.dust) photoDust(lin, w, h, p.dust, geo, V.mulberry32(((p.seed || 1) * 7919 + 13) >>> 0));
+  if (p.dust) photoDust(lin, w, h, p.dust, geo, V.mulberry32(((p.seed || 1) * 7919 + 13) >>> 0), p.dustLevel);
   for (let c = 0; c < 3; c++) for (let i = 0; i < n; i++) pic[c][i] = DSP.srgbEncode(lin[c][i]);
 }
-/* Dust, hairs and scratches of a small negative enlarged: specks on the negative print white, pinholes and paper dust
- * print dark. Positions are in whole-picture coordinates so a preview matches the full render. Amounts [EST]. */
-function photoDust(lin, w, h, amt, geo, rnd) {
-  const W = geo.w, H = geo.h, n = w * h, white = 0.82;
-  const dab = (X, Y, r, a, dark) => {
-    const x0 = Math.floor(X - geo.x0 - r - 1), x1 = Math.ceil(X - geo.x0 + r + 1), y0 = Math.floor(Y - geo.y0 - r - 1), y1 = Math.ceil(Y - geo.y0 + r + 1);
-    if (x1 < 0 || y1 < 0 || x0 >= w || y0 >= h) return;
-    for (let y = Math.max(0, y0); y <= Math.min(h - 1, y1); y++) for (let x = Math.max(0, x0); x <= Math.min(w - 1, x1); x++) {
-      const dx = x + geo.x0 - X, dy = y + geo.y0 - Y, d = Math.sqrt(dx * dx + dy * dy), cov = d <= r - 0.5 ? 1 : (d >= r + 0.5 ? 0 : r + 0.5 - d);
-      if (cov <= 0) continue; const i = y * w + x, t = cov * a;
-      for (let c = 0; c < 3; c++) lin[c][i] += t * ((dark ? 0.004 : white) - lin[c][i]);
+/* Dust on a small negative, enlarged. Measured on 1960s off-screen stills (research K): the specks are small (about
+ * 0.1-0.3% of the picture width across), soft-edged, mostly faint (typically 25 code values lighter than a dark ground,
+ * a few 50-60), slightly irregular, about 150-350 per megapixel, and one in six or so is dark. Each speck here is one to
+ * three overlapping soft blobs. amt 0.2 gives about that density; level scales how light they are. Positions are in
+ * whole-picture coordinates. No hairs or scratches. */
+function photoDust(lin, w, h, amt, geo, rnd, level) {
+  const W = geo.w, H = geo.h, white = 0.82, lv = level === undefined ? 1 : level;
+  if (!(amt > 0) || !(lv > 0)) return;
+  const blob = (X, Y, sx, sy, ang, a, dark) => {
+    const R = 3 * Math.max(sx, sy), x0 = Math.max(0, Math.floor(X - geo.x0 - R)), x1 = Math.min(w - 1, Math.ceil(X - geo.x0 + R)), y0 = Math.max(0, Math.floor(Y - geo.y0 - R)), y1 = Math.min(h - 1, Math.ceil(Y - geo.y0 + R));
+    if (x1 < x0 || y1 < y0) return;
+    const cs = Math.cos(ang), sn = Math.sin(ang), target = dark ? 0.004 : white;
+    for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) {
+      const dx = x + geo.x0 - X, dy = y + geo.y0 - Y, u = (cs * dx + sn * dy) / sx, v = (-sn * dx + cs * dy) / sy, t = a * Math.exp(-0.5 * (u * u + v * v));
+      if (t < 0.002) continue; const i = y * w + x;
+      for (let c = 0; c < 3; c++) lin[c][i] += t * (target - lin[c][i]);
     }
   };
-  const specks = Math.round(amt * 150);
-  for (let s = 0; s < specks; s++) { const X = rnd() * W, Y = rnd() * H, r = W * (0.0005 + 0.0016 * rnd() * rnd()), a = 0.35 + 0.65 * rnd(); dab(X, Y, Math.max(0.5, r), a, rnd() < 0.12); }
-  const hairs = Math.round(amt * 5 + rnd() * amt * 3);
-  for (let s = 0; s < hairs; s++) { // short curled hairs and fibres
-    let X = rnd() * W, Y = rnd() * H, ang = rnd() * 6.283, curl = (rnd() - 0.5) * 0.25; const len = W * (0.015 + 0.05 * rnd()), r = Math.max(0.5, W * 0.00045), a = 0.3 + 0.5 * rnd();
-    for (let t = 0; t < len; t += 0.8) { dab(X, Y, r, a, false); X += Math.cos(ang) * 0.8; Y += Math.sin(ang) * 0.8; ang += curl * 0.8 / (W * 0.004) * (0.5 + rnd()); }
-  }
-  const scr = Math.round(amt * 1.6 * rnd() + amt * 0.4);
-  for (let s = 0; s < scr; s++) { // fine, faint scratches
-    let X = rnd() * W, Y = rnd() * H, ang = (rnd() - 0.5) * 0.5 + (rnd() < 0.5 ? 0 : 1.5708); const len = W * (0.03 + 0.09 * rnd()), r = Math.max(0.5, W * 0.00028), a = 0.08 + 0.14 * rnd(), bend = (rnd() - 0.5) * 0.002;
-    for (let t = 0; t < len; t += 0.8) { dab(X, Y, r, a * (0.4 + 0.6 * rnd()), false); X += Math.cos(ang) * 0.8; Y += Math.sin(ang) * 0.8; ang += bend; }
+  const n = Math.round(amt * 1250);
+  for (let s = 0; s < n; s++) {
+    const X = rnd() * W, Y = rnd() * H, dark = rnd() < 0.15;
+    // size: mostly tiny, a few larger (log-normal); strength: mostly faint, a few plain (the larger ones tend to be plainer)
+    const g1 = V.gaussRand(rnd), g2 = V.gaussRand(rnd), size = Math.exp(0.55 * g1);
+    const a = Math.min(0.45, 0.035 * Math.exp(0.8 * g2 + 0.35 * g1) * lv * (dark ? 6 : 1));
+    const sig = Math.max(a > 0.2 ? 0.85 : 0.6, W * 0.00042 * size); // a plain speck is never a single hard pixel
+    const parts = 1 + (rnd() < 0.35 ? 1 : 0) + (rnd() < 0.12 ? 1 : 0); let px = X, py = Y;
+    for (let k = 0; k < parts; k++) { const el = 1 + rnd() * rnd() * 1.4; blob(px, py, sig * el, sig / Math.sqrt(el), rnd() * 3.1416, a * (k ? 0.5 + 0.5 * rnd() : 1), dark); px += (rnd() - 0.5) * 3.2 * sig; py += (rnd() - 0.5) * 3.2 * sig; }
   }
 }
 const api = { run, pictureRect, screenPhoto };

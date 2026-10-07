@@ -39,7 +39,7 @@ const BASE = {
     decoder: { separation: "notch", palMode: "delay", ntscDemod: "equiband", phaseErr: 0, diffPhase: 0 },
     set: { sharpness: 0, contrast: 1, brightness: 0, colour: 1, overscan: 0.04, acCouple: 0, acTilt: 0 },
     display: { tube: "slot", screenIn: 22, primaries: "EBU", white: "D65", gamma: 2.4, maskStrength: 0.5, spot: 0.3, bloom: 0.7, glow: 0.04, barrel: 0.025, cornerDark: 0.25, roundScreen: 0 },
-    view: { mode: "closeup", deinterlace: "weave", exposure: 0, bandPos: 0.4, focus: 0, soft: 0, flare: 0, reflection: 0, zoomOut: 0, tilt: 0, finish: "none", printEv: 0, printContrast: 1, printBlack: 0.4, grain: 0, dust: 0 },
+    view: { mode: "closeup", deinterlace: "weave", exposure: 0, bandPos: 0.4, focus: 0, soft: 0, flare: 0, reflection: 0, zoomOut: 0, tilt: 0, finish: "none", printEv: 0, printContrast: 1, printBlack: 0.4, grain: 0, dust: 0, dustLevel: 1 },
     seed: 1
 };
 let st = deep(BASE);
@@ -168,8 +168,9 @@ const SECTIONS = [
         { kind: "slider", id: "pcon", label: "Print contrast", path: "view.printContrast", min: 0.5, max: 2.2, step: 0.01 },
         { kind: "slider", id: "pblack", label: "Print black (0 deep, 1 grey)", path: "view.printBlack", min: 0, max: 1, step: 0.01 },
         { kind: "slider", id: "pgrain", label: "Photo grain", path: "view.grain", min: 0, max: 1.5, step: 0.01 },
-        { kind: "slider", id: "pdust", label: "Dust, hairs and scratches", path: "view.dust", min: 0, max: 1.5, step: 0.01, est: true }
-    ], hint: "Photo of the screen. Exposure is in fields (1/50 s each in the UK): 2 is a whole frame (1/25 s, the old rule for photographing a screen), 1 catches one field, so only every other line shows (about 188 lines on 405), between 1 and 2 part of the screen gets both, and below 1 only a band is bright. 0 is a long exposure. Black-and-white print puts the photo through a negative and a print: lower the Print exposure and the screen's whites turn grey and milky. For a soft picture with crisp scan lines, use Softness under Camera, not Photo softness. A photo is made from the whole picture, so its previews take as long as a full render." },
+        { kind: "slider", id: "pdust", label: "Dust (amount)", path: "view.dust", min: 0, max: 1.5, step: 0.01, est: true },
+        { kind: "slider", id: "pdustLv", label: "Dust brightness", path: "view.dustLevel", min: 0, max: 3, step: 0.05 }
+    ], hint: "Photo of the screen. Exposure is in fields (1/50 s each in the UK): 2 is a whole frame (1/25 s, the old rule for photographing a screen), 1 catches one field, so only every other line shows (about 188 lines on 405), between 1 and 2 part of the screen gets both, and below 1 only a band is bright. 0 is a long exposure. Black-and-white print puts the photo through a negative and a print: lower the Print exposure and the screen's whites turn grey and milky. Dust is small, soft and mostly faint, as measured on 1960s off-screen stills: about 0.2 is their density, and Dust brightness 1 their strength. For a soft picture with crisp scan lines, use Softness under Camera, not Photo softness. A photo is made from the whole picture, so its previews take as long as a full render." },
     { key: "overlay", title: "Overlay", open: false, items: [
         { kind: "select", id: "ovKind", label: "Overlay", path: "overlay.kind", options: () => [["none", "(none)"], ["subtitle", "Subtitles"], ["teletext", "Teletext (set's decoder)"], ["timestamp", "Date/time stamp (recorded)"]], onChange: () => { rebuildOptions("subFam"); rebuildOptions("subFace"); } },
         { kind: "select", id: "subStyle", label: "Subtitle style", path: "overlay.style", options: () => Object.keys(TXT.SUB_STYLES).map(k => [k, TXT.SUB_STYLES[k].label]), onChange: () => { Object.assign(st.overlay, { font: "", fontFamily: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", caps: "style" }); rebuildOptions("subFam"); rebuildOptions("subFace"); syncUI(); } },

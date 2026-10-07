@@ -1484,12 +1484,12 @@ ITEMS.append({
         "343), CBS colour-wheel TV, Apollo 11, slow-scan TV, Pixelvision, CCTV, "
         "LaserDisc, CED, Canal+ scrambling and teletext. Version 1.2 adds the "
         "off-screen photograph as a proper stage: a shutter that catches one field "
-        "or a whole frame, a black-and-white negative and print, flare, dust and "
+        "or a whole frame, a black-and-white negative and print, flare, soft dust and "
         "the tube surround, together with two faults of older sets that turn dark "
         "captions grey (mean-level AGC and no DC restorer). The result goes on a "
         "new layer; the photo is untouched.",
     "facts": {
-        "version": "1.2.0",
+        "version": "1.2.1",
         "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
         "plugin id": "com.simonmorse.videolook",
         "looks": "84 (10 built from specifications alone)",
@@ -1675,9 +1675,12 @@ ITEMS.append({
               "exposure** (stops) sets how light it is: lower it and the screen's whites turn "
               "grey and milky; raise it and they burn out. **Print contrast** is the paper "
               "grade; **Print black** is how deep the print's black goes."],
-             ["Photo grain; Dust, hairs and scratches", "",
-              "Film grain, and the specks, hairs and fine scratches of a small negative "
-              "enlarged. Amounts are estimates; New noise moves them."],
+             ["Photo grain", "0 – 1.5", "Film grain. New noise moves it."],
+             ["Dust (amount), Dust brightness", "0 – 1.5; 0 – 3",
+              "The dust of a small negative enlarged: small, soft, mostly faint specks, a few "
+              "of them dark, modelled on those measured in 1960s off-screen stills. Amount "
+              "0.15–0.2 is about their density and brightness 1 their strength; the looks use "
+              "0.15 or 0.2. No hairs or scratches. New noise moves the specks."],
          ]},
         {"title": "Overlay",
          "rows": [
