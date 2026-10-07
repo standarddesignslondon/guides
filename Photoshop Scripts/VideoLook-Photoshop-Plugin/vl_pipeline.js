@@ -140,7 +140,7 @@ function run(doc, s, winDoc) {
     const rxg = rxName && V.STANDARDS[rxName] && V.STANDARDS[rxName].lineRate === g.lineRate ? V.geometry(rxName) : null;
     const co = ch.cochannel && ch.cochannel.ratio > 0 ? ch.cochannel : null;
     if (en.channel && en.encoder) {
-      const cho = Object.assign({ seed }, ch, { rx: rxg, overload: en.decoder ? rcv.overload || 0 : 0 });
+      const cho = Object.assign({ seed }, ch, { rx: rxg, overload: en.decoder ? rcv.overload || 0 : 0, agcMean: en.decoder ? rcv.agcMean || 0 : 0 });
       if (co) { // the interfering station: a second picture (another layer, or the photo mirrored) on the same channel
         const src2 = doc.interferer ? cutRegion(doc.interferer, W, H, rect, 0, 0) : region.map(p => { const q = new Float32Array(p.length); for (let y = 0; y < rect.h; y++) for (let x = 0; x < rect.w; x++) q[y * rect.w + x] = p[y * rect.w + rect.w - 1 - x]; return q; });
         cho.interferer = V.encode(toGrid(src2), g.name, {});
@@ -189,13 +189,20 @@ function run(doc, s, winDoc) {
     useCRT = false; mode = "grab";
   }
   for (const p of grid) for (let i = 0; i < p.length; i++) p[i] = p[i] < 0 ? 0 : (p[i] > 1.09 ? 1.09 : p[i]);
-  let pic;
-  if (useCRT) pic = DSP.crt(grid, g, PW, PH, s.display || {}, win);
+  let pic, picB = null;
+  // a photograph of the screen: the shutter may catch one field, or one and part of the next, so the two fields are drawn
+  // separately; the photograph is made of the whole picture, so a preview renders it all and shows the selected part
+  const vw = s.view || {}, photo = mode === "photo", pe = photo ? (vw.exposure || 0) : 0;
+  const twoField = photo && useCRT && pe > 0 && pe < 2 && !g.progressive && !g.fieldSeq;
+  const photoFull = !!(photo && win); // flare, grain, dust, tilt and pull-back all belong to the whole photograph
+  const cwin = photoFull ? null : win;
+  if (useCRT && twoField) { pic = DSP.crt(grid, g, PW, PH, Object.assign({}, s.display || {}, { field: 1 }), cwin); picB = DSP.crt(grid, g, PW, PH, Object.assign({}, s.display || {}, { field: 2 }), cwin); }
+  else if (useCRT) pic = DSP.crt(grid, g, PW, PH, s.display || {}, cwin);
   else { // frame-grab: deinterlace choice, then scale to square pixels
     const di = (s.view && s.view.deinterlace) || "weave";
     if (di === "bob") grid = grid.map(p => { const q = Float32Array.from(p); for (let r = 1; r < g.lines; r += 2) q.set(p.subarray((r - 1) * g.ns, r * g.ns), r * g.ns); return q; });
     else if (di === "blend") grid = grid.map(p => { const q = Float32Array.from(p); for (let r = 0; r < g.lines - 1; r++) for (let x = 0; x < g.ns; x++) q[r * g.ns + x] = 0.5 * (p[r * g.ns + x] + p[(r + 1) * g.ns + x]); return q; });
-    pic = crop(grid.map(p => V.resize(p, g.ns, g.lines, PW, PH)));
+    pic = grid.map(p => V.resize(p, g.ns, g.lines, PW, PH)); if (!photoFull) pic = crop(pic);
     for (const p of pic) for (let i = 0; i < p.length; i++) p[i] = p[i] < 0 ? 0 : (p[i] > 1 ? 1 : p[i]);
   }
   if (mode === "lens" && useCRT) { // the whole picture is needed for the lens: render it all, then crop to the preview window
@@ -203,8 +210,11 @@ function run(doc, s, winDoc) {
     const lv = DSP.lensView(full, PW, PH, s.view || {});
     pic = crop(lv); stages.push("through the magnifying lens");
   }
-  if (mode === "photo") screenPhoto(pic, win ? win.x1 - win.x0 : PW, win ? win.y1 - win.y0 : PH, Object.assign({ seed }, s.view || {}), { x0: win ? win.x0 : 0, y0: win ? win.y0 : 0, w: PW, h: PH });
-  stages.push(useCRT ? (mode === "photo" ? "screen photo" : "CRT") : "frame-grab");
+  if (photo) {
+    screenPhoto(pic, cwin ? cwin.x1 - cwin.x0 : PW, cwin ? cwin.y1 - cwin.y0 : PH, Object.assign({ seed }, vw), { x0: cwin ? cwin.x0 : 0, y0: cwin ? cwin.y0 : 0, w: PW, h: PH }, picB);
+    if (photoFull) pic = crop(pic);
+  }
+  stages.push(useCRT ? (photo ? "screen photo" + (twoField ? (pe <= 1 ? " (one field)" : " (one field and part of the next)") : "") + (vw.finish === "bw" ? " on a black-and-white print" : "") : "CRT") : "frame-grab");
   return finish(pic, s, rect, W, H, PW, PH, win, g, stages);
 }
 // Result: planes plus where they go. Native: the picture alone. Otherwise the document area (window or whole doc, matte black).
@@ -215,31 +225,105 @@ function finish(pic, s, rect, W, H, PW, PH, win, g, stages) {
   for (let c = 0; c < 3; c++) for (let y = 0; y < rect.h; y++) out[c].set(pic[c].subarray(y * rect.w, y * rect.w + rect.w), (rect.y + y) * W + rect.x);
   return { planes: out, left: 0, top: 0, width: W, height: H, rect, g, stages };
 }
-/* A photograph of the screen: exposure shorter than a field records a bright band with a fading tail (scan geometry) [EST],
- * plus lens softness, room reflection, and film/sensor grain. p: { exposure (fraction of a field, 0 = none), bandPos 0..1,
- * decay (fraction of height), focus (px), reflection (0..1), grain (0..1) } */
-function screenPhoto(pic, w, h, p, geo) {
+/* A photograph of the screen [EST unless marked].
+ * p: { exposure: shutter time in fields (0 or 2 = a whole frame; 1 = one field; below 1 = part of a field), bandPos 0..1
+ *      (where the scan was when the shutter opened), decay (phosphor afterglow, fraction of a field),
+ *      soft (% of picture width: lens focus and enlargement), focus (px, older settings), flare (0..1 veiling glare),
+ *      reflection (0..1), zoomOut (0..0.3: the camera pulled back to show the tube surround), tilt (degrees),
+ *      finish: 'bw' = black-and-white negative and print with printEv (stops), printContrast, printBlack (0..1), grain, dust }
+ * Half-frame 35 mm at 1/25 s was John Cura's Tele-snap practice [SEC Wikipedia "Tele-snaps"]: 1/25 s is one whole frame.
+ * picB: the second field drawn separately (see run). */
+function wideBlur(a, w, h, sigma) { // a large-radius blur done on a small copy
+  if (sigma < 6) { CAM.blur2D(a, w, h, sigma, sigma); return a; }
+  const f = sigma / 3, sw = Math.max(8, Math.round(w / f)), sh = Math.max(8, Math.round(h / f));
+  const sm = V.resize(a, w, h, sw, sh); CAM.blur2D(sm, sw, sh, sigma * sw / w, sigma * sh / h); return V.resize(sm, sw, sh, w, h);
+}
+function screenPhoto(pic, w, h, p, geo, picB) {
   geo = geo || { x0: 0, y0: 0, w, h };
   const n = w * h, rnd = V.mulberry32(((p.seed || 1) * 104729) >>> 0);
-  const lin = pic.map(a => { const b = new Float32Array(n); for (let i = 0; i < n; i++) { const v = a[i]; b[i] = v <= 0.04045 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); } return b; });
-  if (p.focus) for (const b of lin) CAM.blur2D(b, w, h, p.focus, p.focus);
-  const e = p.exposure || 0;
-  for (let y = 0; y < h; y++) {
-    let f = 1;
-    if (e > 0 && e < 1) { // lines scanned during the exposure are recorded at full strength; earlier lines have faded
-      // lines scanned during the exposure (start..start+e) record fully; lines scanned just before it are still
-      // glowing (phosphor afterglow tail above the band); the rest were last lit a field earlier and have faded
-      const t = (y + geo.y0) / geo.h, start = p.bandPos || 0.3; let inBand = t - start; if (inBand < 0) inBand += 1;
-      if (inBand <= e) f = 1; else { let before = start - t; if (before < 0) before += 1; f = Math.exp(-before / (p.decay || 0.08)) * 0.95 + 0.03; }
-    }
-    const refl = p.reflection ? p.reflection * 0.08 * Math.exp(-Math.pow(((y + geo.y0) / geo.h - 0.25) / 0.35, 2)) : 0;
-    for (let x = 0; x < w; x++) {
-      const i = y * w + x, rx = refl * Math.exp(-Math.pow(((x + geo.x0) / geo.w - 0.7) / 0.3, 2));
-      for (let c = 0; c < 3; c++) lin[c][i] = lin[c][i] * f + rx;
+  const toLin = a => { const b = new Float32Array(n); for (let i = 0; i < n; i++) { const v = a[i]; b[i] = v <= 0.04045 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); } return b; };
+  let lin = pic.map(toLin);
+  const e = p.exposure || 0, start = p.bandPos !== undefined ? p.bandPos : 0.3, dec = p.decay || 0.08;
+  if (picB) {
+    // field 1 is scanned during 0..1 and field 2 during 1..2 (in field times); a line scanned while the shutter is open
+    // records fully, one scanned shortly before it opened is still glowing, the rest have faded. Brightness is evened
+    // out as the photographer's aperture would do it.
+    const linB = picB.map(toLin), sc = 2 / Math.max(1, e);
+    const wt = (tau) => { const d = ((tau - start) % 2 + 2) % 2; return d <= e ? 1 : Math.exp(-(2 - d) / dec) * 0.95 + 0.02; };
+    for (let y = 0; y < h; y++) { const t = (y + geo.y0) / geo.h, wA = wt(t) * sc, wB = wt(1 + t) * sc;
+      for (let c = 0; c < 3; c++) { const A = lin[c], Bp = linB[c]; for (let i = y * w, i1 = i + w; i < i1; i++) A[i] = A[i] * wA + Bp[i] * wB; } }
+  } else if (e > 0 && e < 1) {
+    for (let y = 0; y < h; y++) {
+      const t = (y + geo.y0) / geo.h; let inBand = t - start; if (inBand < 0) inBand += 1; let f = 1;
+      if (inBand > e) { let before = start - t; if (before < 0) before += 1; f = Math.exp(-before / dec) * 0.95 + 0.03; }
+      for (let c = 0; c < 3; c++) { const A = lin[c]; for (let i = y * w, i1 = i + w; i < i1; i++) A[i] *= f; }
     }
   }
-  if (p.grain) { const gs = p.grain * 0.06; for (let i = 0; i < n; i++) { const g0 = V.gaussRand(rnd) * gs; for (let c = 0; c < 3; c++) lin[c][i] = Math.max(0, lin[c][i] * (1 + g0) + g0 * 0.02); } }
+  if (p.reflection) for (let y = 0; y < h; y++) { // a window or lamp reflected in the glass
+    const refl = p.reflection * 0.08 * Math.exp(-Math.pow(((y + geo.y0) / geo.h - 0.25) / 0.35, 2));
+    for (let x = 0; x < w; x++) { const i = y * w + x, rx = refl * Math.exp(-Math.pow(((x + geo.x0) / geo.w - 0.7) / 0.3, 2)); for (let c = 0; c < 3; c++) lin[c][i] += rx; }
+  }
+  // the camera pulled back and not quite square to the set: the dark tube surround shows (whole picture only)
+  const zo = Math.min(0.3, p.zoomOut || 0), th = (p.tilt || 0) * Math.PI / 180;
+  if ((zo > 0 || th) && w === geo.w && h === geo.h) {
+    const cs = Math.cos(th), sn = Math.sin(th), k = 1 / (1 - zo), cx = (w - 1) / 2, cy = (h - 1) / 2, sur = 0.0035;
+    lin = lin.map(src => { const o = new Float32Array(n);
+      for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+        const X = x - cx, Y = y - cy, sx = (cs * X + sn * Y) * k + cx, sy = (-sn * X + cs * Y) * k + cy, i = y * w + x;
+        if (sx < 0 || sy < 0 || sx > w - 1 || sy > h - 1) { o[i] = sur; continue; }
+        const x0 = sx | 0, y0 = sy | 0, fx = sx - x0, fy = sy - y0, x1 = x0 + 1 < w ? x0 + 1 : x0, y1 = y0 + 1 < h ? y0 + 1 : y0;
+        o[i] = Math.max(sur, (src[y0 * w + x0] * (1 - fx) + src[y0 * w + x1] * fx) * (1 - fy) + (src[y1 * w + x0] * (1 - fx) + src[y1 * w + x1] * fx) * fy);
+      } return o; });
+  }
+  const sigma = (p.soft || 0) / 100 * geo.w + (p.focus || 0);
+  if (sigma > 0.3) lin = lin.map(b => wideBlur(b, w, h, sigma));
+  if (p.flare) { // veiling glare: light scattered in the thick faceplate, the implosion guard and the camera lens
+    const fl = p.flare;
+    for (let c = 0; c < 3; c++) { const hz = wideBlur(Float32Array.from(lin[c]), w, h, 0.04 * geo.w); let m = 0; for (let i = 0; i < n; i++) m += hz[i]; m /= n; const b = lin[c]; for (let i = 0; i < n; i++) b[i] += fl * (0.22 * hz[i] + 0.03 * m); }
+  }
+  const bw = p.finish === "bw";
+  const grainN = p.grain ? (() => { const a = new Float32Array(n); for (let i = 0; i < n; i++) a[i] = V.gaussRand(rnd); const gs = Math.max(0, 0.0007 * geo.w);
+    if (gs > 0.45) { CAM.blur2D(a, w, h, gs, gs); let s2 = 0; for (let i = 0; i < n; i++) s2 += a[i] * a[i]; const kz = 1 / Math.sqrt(s2 / n || 1); for (let i = 0; i < n; i++) a[i] *= kz; } return a; })() : null;
+  if (bw) {
+    // black-and-white negative printed on paper: an S-shaped curve of print density against log exposure. A thin
+    // (under-exposed) negative or a dark print turns the screen's whites grey; paper black is not zero.
+    const ev = p.printEv || 0, con = p.printContrast || 1, lift = p.printBlack !== undefined ? p.printBlack : 0.4;
+    const Dmin = 0.04, Dmax = 2.6 - 1.1 * lift, k = 4 * 1.15 * con / (Dmax - Dmin), sa = (Dmax - 0.745) / (Dmax - Dmin), xm = -0.745 - Math.log(sa / (1 - sa)) / k;
+    const ex = Math.pow(2, ev), gk = (p.grain || 0) * 0.05, L0 = lin[0], L1 = lin[1], L2 = lin[2];
+    for (let i = 0; i < n; i++) {
+      const Y = (0.2126 * L0[i] + 0.7152 * L1[i] + 0.0722 * L2[i]) * ex, x = Math.log10(Y > 1e-5 ? Y : 1e-5);
+      const sg = 1 / (1 + Math.exp(-k * (x - xm))); let D = Dmax - (Dmax - Dmin) * sg; if (grainN) D += gk * grainN[i] * (0.4 + 2.4 * sg * (1 - sg));
+      L0[i] = L1[i] = L2[i] = Math.pow(10, -(D > 0 ? D : 0));
+    }
+  } else if (grainN) { const gs = p.grain * 0.06; for (let i = 0; i < n; i++) { const g0 = grainN[i] * gs; for (let c = 0; c < 3; c++) lin[c][i] = Math.max(0, lin[c][i] * (1 + g0) + g0 * 0.02); } }
+  if (p.dust) photoDust(lin, w, h, p.dust, geo, V.mulberry32(((p.seed || 1) * 7919 + 13) >>> 0));
   for (let c = 0; c < 3; c++) for (let i = 0; i < n; i++) pic[c][i] = DSP.srgbEncode(lin[c][i]);
 }
-const api = { run, pictureRect };
+/* Dust, hairs and scratches of a small negative enlarged: specks on the negative print white, pinholes and paper dust
+ * print dark. Positions are in whole-picture coordinates so a preview matches the full render. Amounts [EST]. */
+function photoDust(lin, w, h, amt, geo, rnd) {
+  const W = geo.w, H = geo.h, n = w * h, white = 0.82;
+  const dab = (X, Y, r, a, dark) => {
+    const x0 = Math.floor(X - geo.x0 - r - 1), x1 = Math.ceil(X - geo.x0 + r + 1), y0 = Math.floor(Y - geo.y0 - r - 1), y1 = Math.ceil(Y - geo.y0 + r + 1);
+    if (x1 < 0 || y1 < 0 || x0 >= w || y0 >= h) return;
+    for (let y = Math.max(0, y0); y <= Math.min(h - 1, y1); y++) for (let x = Math.max(0, x0); x <= Math.min(w - 1, x1); x++) {
+      const dx = x + geo.x0 - X, dy = y + geo.y0 - Y, d = Math.sqrt(dx * dx + dy * dy), cov = d <= r - 0.5 ? 1 : (d >= r + 0.5 ? 0 : r + 0.5 - d);
+      if (cov <= 0) continue; const i = y * w + x, t = cov * a;
+      for (let c = 0; c < 3; c++) lin[c][i] += t * ((dark ? 0.004 : white) - lin[c][i]);
+    }
+  };
+  const specks = Math.round(amt * 150);
+  for (let s = 0; s < specks; s++) { const X = rnd() * W, Y = rnd() * H, r = W * (0.0005 + 0.0016 * rnd() * rnd()), a = 0.35 + 0.65 * rnd(); dab(X, Y, Math.max(0.5, r), a, rnd() < 0.12); }
+  const hairs = Math.round(amt * 5 + rnd() * amt * 3);
+  for (let s = 0; s < hairs; s++) { // short curled hairs and fibres
+    let X = rnd() * W, Y = rnd() * H, ang = rnd() * 6.283, curl = (rnd() - 0.5) * 0.25; const len = W * (0.015 + 0.05 * rnd()), r = Math.max(0.5, W * 0.00045), a = 0.3 + 0.5 * rnd();
+    for (let t = 0; t < len; t += 0.8) { dab(X, Y, r, a, false); X += Math.cos(ang) * 0.8; Y += Math.sin(ang) * 0.8; ang += curl * 0.8 / (W * 0.004) * (0.5 + rnd()); }
+  }
+  const scr = Math.round(amt * 1.6 * rnd() + amt * 0.4);
+  for (let s = 0; s < scr; s++) { // fine, faint scratches
+    let X = rnd() * W, Y = rnd() * H, ang = (rnd() - 0.5) * 0.5 + (rnd() < 0.5 ? 0 : 1.5708); const len = W * (0.03 + 0.09 * rnd()), r = Math.max(0.5, W * 0.00028), a = 0.08 + 0.14 * rnd(), bend = (rnd() - 0.5) * 0.002;
+    for (let t = 0; t < len; t += 0.8) { dab(X, Y, r, a * (0.4 + 0.6 * rnd()), false); X += Math.cos(ang) * 0.8; Y += Math.sin(ang) * 0.8; ang += bend; }
+  }
+}
+const api = { run, pictureRect, screenPhoto };
 if (typeof module !== "undefined" && module.exports) module.exports = api;

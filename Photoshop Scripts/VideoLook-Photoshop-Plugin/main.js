@@ -18,6 +18,8 @@ function clamp(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
 function deep(o) { return JSON.parse(JSON.stringify(o)); }
 function getPath(o, p) { return p.split(".").reduce((a, k) => (a == null ? undefined : a[k]), o); }
 function setPath(o, p, v) { const ks = p.split("."); let a = o; for (let i = 0; i < ks.length - 1; i++) { if (a[ks[i]] == null || typeof a[ks[i]] !== "object") a[ks[i]] = {}; a = a[ks[i]]; } a[ks[ks.length - 1]] = v; }
+// Settings saved before 1.2 gave photo softness in pixels; it is now a percentage of the picture width (1 px taken as 0.03%).
+function migrate(o) { if (o && o.view && o.view.focus > 0) { if (!(o.view.soft > 0)) o.view.soft = Math.min(1.5, o.view.focus * 0.03); o.view.focus = 0; } return o; }
 function mergeDeep(a, b) { for (const k in b) { if (b[k] && typeof b[k] === "object" && !Array.isArray(b[k])) { if (!a[k] || typeof a[k] !== "object") a[k] = {}; mergeDeep(a[k], b[k]); } else a[k] = deep(b[k]); } return a; }
 
 // ------------------------------------------------------------------ state
@@ -25,19 +27,19 @@ function mergeDeep(a, b) { for (const k in b) { if (b[k] && typeof b[k] === "obj
 const SECTION_KEYS = ["camera", "encoder", "channel", "recording", "transfer", "decoder", "display", "view", "overlay"];
 const BASE = {
     standard: "PAL-I", aspect: 4 / 3,
-    camera: { type: "none", exposure: 0, overrides: {}, reg: {} },
+    camera: { type: "none", exposure: 0, soft: 0, overrides: {}, reg: {} },
     encoder: { ntscIQ: true },
     channel: { route: "aerial", snrDb: 44, ghosts: [{ delayUs: 2, amp: 0, phaseDeg: 0 }], impulses: 0, cnrDb: 14, scramble: "none",
         cochannel: { ratio: 0, offsetHz: 10400, dx: 0.31, dy: 0.37, source: "mirror" } },
-    receiver: { standard: "same", hold: "auto", vRoll: 0.4, hGain: 0.05, hFree: 0, overload: 0 },
+    receiver: { standard: "same", hold: "auto", vRoll: 0.4, hGain: 0.05, hFree: 0, overload: 0, agcMean: 0 },
     overlay: { kind: "none", fontFilter: "", mode: "mix", text: "", header: "", colour: "white", pos: "bl",
         style: "arial_shadow", font: "", fontFamily: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", position: "bottom", caps: "style", strength: 1 },
     recording: { format: "none", position: "studio", generations: 1, tracking: 0, trackingPos: 0.6 },
     transfer: { type: "none", method: "bbc1967", target: "PAL-I", gauge: 16, shutterBar: 0, mode: "pal60", pulldown: "clean", lag: 0, contrast: 1, generations: 1 },
     decoder: { separation: "notch", palMode: "delay", ntscDemod: "equiband", phaseErr: 0, diffPhase: 0 },
-    set: { sharpness: 0, contrast: 1, brightness: 0, colour: 1, overscan: 0.04 },
+    set: { sharpness: 0, contrast: 1, brightness: 0, colour: 1, overscan: 0.04, acCouple: 0, acTilt: 0 },
     display: { tube: "slot", screenIn: 22, primaries: "EBU", white: "D65", gamma: 2.4, maskStrength: 0.5, spot: 0.3, bloom: 0.7, glow: 0.04, barrel: 0.025, cornerDark: 0.25, roundScreen: 0 },
-    view: { mode: "closeup", deinterlace: "weave", exposure: 0, bandPos: 0.4, focus: 0, reflection: 0, grain: 0 },
+    view: { mode: "closeup", deinterlace: "weave", exposure: 0, bandPos: 0.4, focus: 0, soft: 0, flare: 0, reflection: 0, zoomOut: 0, tilt: 0, finish: "none", printEv: 0, printContrast: 1, printBlack: 0.4, grain: 0, dust: 0 },
     seed: 1
 };
 let st = deep(BASE);
@@ -64,6 +66,7 @@ const SECTIONS = [
     { key: "camera", title: "Camera", open: true, items: [
         { kind: "select", id: "camType", label: "Camera / pickup", path: "camera.type", options: () => [["none", "(none: the photo is the video)"]].concat(opt(CAM.CAMERAS)), onChange: () => { st.camera.overrides = {}; st.camera.reg = {}; } },
         { kind: "slider", id: "camExp", label: "Exposure (stops)", path: "camera.exposure", min: -2, max: 2.5, step: 0.05 },
+        { kind: "slider", id: "camSoft", label: "Softness (% of width)", path: "camera.soft", min: 0, max: 1.5, step: 0.01 },
         { kind: "slider", id: "camContour", label: "Edge sharpening", get: camVal("contour"), set: camSet("contour"), min: 0, max: 1.5, step: 0.01, est: true },
         { kind: "slider", id: "camNoise", label: "Signal-to-noise (dB)", get: camVal("noiseDb"), set: camSet("noiseDb"), min: 20, max: 60, step: 0.5 },
         { kind: "slider", id: "camLag", label: "Lag (needs motion)", get: camVal("lag"), set: camSet("lag"), min: 0, max: 0.8, step: 0.01 },
@@ -71,7 +74,7 @@ const SECTIONS = [
         { kind: "slider", id: "camHalo", label: "Image-orthicon halo", get: camVal("halo"), set: camSet("halo"), min: 0, max: 0.4, step: 0.01, est: true },
         { kind: "slider", id: "camRegR", label: "Red registration (ns)", get: () => { const r = Object.assign({}, (CAM.CAMERAS[st.camera.type] || {}).reg || {}, st.camera.reg || {}); return r.rx || 0; }, set: (v) => { st.camera.reg = st.camera.reg || {}; st.camera.reg.rx = v; }, min: -150, max: 150, step: 1 },
         { kind: "slider", id: "camRegB", label: "Blue registration (ns)", get: () => { const r = Object.assign({}, (CAM.CAMERAS[st.camera.type] || {}).reg || {}, st.camera.reg || {}); return r.bx || 0; }, set: (v) => { st.camera.reg = st.camera.reg || {}; st.camera.reg.bx = v; }, min: -150, max: 150, step: 1 }
-    ], hint: "Camera types carry figures from the BBC documents where they exist (Plumbicon response, 1964 camera comparisons, the 1980 BBC gamma, BBC-style edge sharpening taken from green). Registration: the BBC's 1967 tolerance was 25 ns for 3-tube cameras, 50 ns for a 4-tube camera's colour tubes." },
+    ], hint: "Camera types carry figures from the BBC documents where they exist (Plumbicon response, 1964 camera comparisons, the 1980 BBC gamma, BBC-style edge sharpening taken from green). Registration: the BBC's 1967 tolerance was 25 ns for 3-tube cameras, 50 ns for a 4-tube camera's colour tubes. Softness blurs the picture before it is scanned (a caption camera slightly out of focus), so the set's scan lines stay crisp over a soft picture." },
     { key: "encoder", title: "Standard & colour", open: true, items: [
         { kind: "select", id: "std", label: "Television standard", path: "standard", options: () => STD_OPTS, onChange: () => { if (st.standard === "405-A" && st.aspect === 16 / 9) st.aspect = 4 / 3; if (st.standard === "30-BAIRD") { st.aspect = 3 / 7; st.view.mode = "televisor"; } else if (st.aspect < 0.5) st.aspect = 4 / 3; if (st.standard === "MUSE") st.aspect = 16 / 9; if (st.standard === "120-SSTV") st.aspect = 1; } },
         { kind: "select", id: "aspect", label: "Picture shape", path: "aspect", num: true, options: () => [["1.3333333333333333", "4:3"], ["1.25", "5:4 (405-line before 1950)"], ["1.7777777777777777", "16:9 (PALplus, Hi-Vision, late DV)"], ["1.15", "1.15:1 (Germany 441)"], ["1", "1:1 (slow-scan)"], ["0.42857142857142855", "3:7 tall (Baird 30-line)"]] },
@@ -131,8 +134,11 @@ const SECTIONS = [
         { kind: "slider", id: "vRoll", label: "Roll position", path: "receiver.vRoll", min: 0, max: 1, step: 0.01 },
         { kind: "slider", id: "hFree", label: "Horizontal hold", path: "receiver.hFree", min: -4, max: 4, step: 0.05, est: true },
         { kind: "slider", id: "hGain", label: "Line lock strength", path: "receiver.hGain", min: 0.005, max: 0.3, step: 0.005, est: true },
-        { kind: "slider", id: "overload", label: "Overload (lockout)", path: "receiver.overload", min: 0, max: 1, step: 0.01, est: true }
-    ], hint: "Set built for: a set made for another country's system gets that system's carrier levels wrong (French L shows as a negative on a UK set, with no colour and no sync), and other sound carriers leave patterning. Horizontal hold off-centre makes the picture tear; Vertical hold 'Rolling' puts the field bar in the picture. A phase error turns NTSC hues; on a PAL delay-line set it only lowers saturation (cos of the error); simple PAL shows it as Hanover bars. Overscan applies to screen views, not frame-grabs." },
+        { kind: "slider", id: "overload", label: "Overload (lockout)", path: "receiver.overload", min: 0, max: 1, step: 0.01, est: true },
+        { kind: "slider", id: "agcMean", label: "Mean-level AGC (405, 819, French L)", path: "receiver.agcMean", min: 0, max: 1, step: 0.01, est: true },
+        { kind: "slider", id: "acCouple", label: "Black follows the picture (no DC restorer)", path: "set.acCouple", min: 0, max: 1, step: 0.01, est: true },
+        { kind: "slider", id: "acTilt", label: "Black-level tilt down the screen", path: "set.acTilt", min: 0, max: 1, step: 0.01, est: true }
+    ], hint: "Mean-level AGC and Black follows the picture are two faults of older sets, both of which turn a mostly black picture grey and over-drive its whites (and darken a mostly white one): early 405-line sets set their gain from the average signal, and sets with no DC restorer hold the picture's average, not its black, at a fixed brightness. Black-level tilt makes that follow the picture down the screen: grey above a white caption, black below it. Set built for: a set made for another country's system gets that system's carrier levels wrong (French L shows as a negative on a UK set, with no colour and no sync), and other sound carriers leave patterning. Horizontal hold off-centre makes the picture tear; Vertical hold 'Rolling' puts the field bar in the picture. A phase error turns NTSC hues; on a PAL delay-line set it only lowers saturation (cos of the error); simple PAL shows it as Hanover bars. Overscan applies to screen views, not frame-grabs." },
     { key: "display", title: "Display", open: false, items: [
         { kind: "select", id: "tube", label: "Tube", path: "display.tube", options: () => [["mono", "Black & white"], ["delta", "Delta-gun shadow mask"], ["slot", "Slot mask (in-line)"], ["trinitron", "Trinitron aperture grille"], ["wheel", "B&W tube + colour wheel (CBS)"], ["p7", "P7 long-persistence (radar)"]] },
         { kind: "slider", id: "screenIn", label: "Screen size (in)", path: "display.screenIn", min: 9, max: 32, step: 1 },
@@ -150,12 +156,20 @@ const SECTIONS = [
     { key: "view", title: "View", open: false, items: [
         { kind: "select", id: "vmode", label: "View", path: "view.mode", options: () => [["grab", "Frame-grab (no screen)"], ["closeup", "Screen close-up"], ["photo", "Photo of the screen"], ["lens", "Through a magnifying lens (KVN-49)"], ["televisor", "Baird Televisor (30-line only)"]] },
         { kind: "select", id: "deint", label: "Frame-grab fields", path: "view.deinterlace", options: () => [["weave", "Both fields (combing on motion)"], ["bob", "One field, line-doubled"], ["blend", "Fields blended"]] },
-        { kind: "slider", id: "pexp", label: "Photo exposure (fields)", path: "view.exposure", min: 0, max: 1, step: 0.01 },
-        { kind: "slider", id: "pband", label: "Bright band position", path: "view.bandPos", min: 0, max: 1, step: 0.01 },
-        { kind: "slider", id: "pfocus", label: "Photo softness (px)", path: "view.focus", min: 0, max: 4, step: 0.1 },
+        { kind: "slider", id: "pexp", label: "Photo exposure (fields; 0 = long)", path: "view.exposure", min: 0, max: 2, step: 0.01 },
+        { kind: "slider", id: "pband", label: "Scan position at the click", path: "view.bandPos", min: 0, max: 1, step: 0.01 },
+        { kind: "slider", id: "psoft", label: "Photo softness (% of width)", path: "view.soft", min: 0, max: 1.5, step: 0.01 },
+        { kind: "slider", id: "pflare", label: "Glass and lens flare", path: "view.flare", min: 0, max: 1.5, step: 0.01, est: true },
         { kind: "slider", id: "prefl", label: "Room reflection", path: "view.reflection", min: 0, max: 1, step: 0.01 },
-        { kind: "slider", id: "pgrain", label: "Photo grain", path: "view.grain", min: 0, max: 1.5, step: 0.01 }
-    ], hint: "Photo exposure below 1 means the shutter was open for less than one field (1/50 s in the UK), so only part of the picture is bright." },
+        { kind: "slider", id: "pzoom", label: "Pull back (show the tube surround)", path: "view.zoomOut", min: 0, max: 0.3, step: 0.005 },
+        { kind: "slider", id: "ptilt", label: "Camera tilt (°)", path: "view.tilt", min: -6, max: 6, step: 0.1 },
+        { kind: "select", id: "pfinish", label: "Photo finish", path: "view.finish", options: () => [["none", "As seen (colour, no print)"], ["bw", "Black-and-white print"]] },
+        { kind: "slider", id: "pev", label: "Print exposure (stops)", path: "view.printEv", min: -4, max: 3, step: 0.05 },
+        { kind: "slider", id: "pcon", label: "Print contrast", path: "view.printContrast", min: 0.5, max: 2.2, step: 0.01 },
+        { kind: "slider", id: "pblack", label: "Print black (0 deep, 1 grey)", path: "view.printBlack", min: 0, max: 1, step: 0.01 },
+        { kind: "slider", id: "pgrain", label: "Photo grain", path: "view.grain", min: 0, max: 1.5, step: 0.01 },
+        { kind: "slider", id: "pdust", label: "Dust, hairs and scratches", path: "view.dust", min: 0, max: 1.5, step: 0.01, est: true }
+    ], hint: "Photo of the screen. Exposure is in fields (1/50 s each in the UK): 2 is a whole frame (1/25 s, the old rule for photographing a screen), 1 catches one field, so only every other line shows (about 188 lines on 405), between 1 and 2 part of the screen gets both, and below 1 only a band is bright. 0 is a long exposure. Black-and-white print puts the photo through a negative and a print: lower the Print exposure and the screen's whites turn grey and milky. For a soft picture with crisp scan lines, use Softness under Camera, not Photo softness. A photo is made from the whole picture, so its previews take as long as a full render." },
     { key: "overlay", title: "Overlay", open: false, items: [
         { kind: "select", id: "ovKind", label: "Overlay", path: "overlay.kind", options: () => [["none", "(none)"], ["subtitle", "Subtitles"], ["teletext", "Teletext (set's decoder)"], ["timestamp", "Date/time stamp (recorded)"]], onChange: () => { rebuildOptions("subFam"); rebuildOptions("subFace"); } },
         { kind: "select", id: "subStyle", label: "Subtitle style", path: "overlay.style", options: () => Object.keys(TXT.SUB_STYLES).map(k => [k, TXT.SUB_STYLES[k].label]), onChange: () => { Object.assign(st.overlay, { font: "", fontFamily: "", italic: "style", size: "", subColour: "style", edge: "style", stage: "style", caps: "style" }); rebuildOptions("subFam"); rebuildOptions("subFace"); syncUI(); } },
@@ -320,7 +334,7 @@ function loadState() {
     try {
         const s = JSON.parse(localStorage.getItem("videolook.state") || "null");
         if (!s) return false;
-        st = mergeDeep(deep(BASE), s.st); enabled = s.enabled || {}; currentLook = s.currentLook || ""; modified = !!s.modified;
+        st = migrate(mergeDeep(deep(BASE), s.st)); enabled = s.enabled || {}; currentLook = s.currentLook || ""; modified = !!s.modified;
         $("strength").value = s.strength || "100"; $("strengthVal").textContent = $("strength").value;
         $("source").value = s.source || "merged"; $("output").value = s.output || "layer"; $("frame").value = s.frame || "matte";
         $("shiftX").value = s.shiftX || "0"; $("shiftY").value = s.shiftY || "0";
@@ -606,7 +620,7 @@ function refreshPresetList(selectName) {
 $("presetSel").addEventListener("change", () => {
     const name = $("presetSel").value; if (!name || !presets[name]) return;
     const p = presets[name];
-    st = mergeDeep(deep(BASE), p.st); enabled = Object.assign({}, p.enabled || {}); currentLook = p.look || ""; modified = true;
+    st = migrate(mergeDeep(deep(BASE), p.st)); enabled = Object.assign({}, p.enabled || {}); currentLook = p.look || ""; modified = true;
     if (p.motion) { $("motionPx").value = p.motion.px; $("motionAngle").value = p.motion.angle; $("motionSel").checked = !!p.motion.sel; }
     rebuildOptions("trMethod"); rebuildOptions("subFace"); syncUI(); saveState();
     $("presetName").value = name; setStatus("Loaded preset “" + name + "”.");

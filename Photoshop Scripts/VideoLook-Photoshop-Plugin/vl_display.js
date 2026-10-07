@@ -63,6 +63,25 @@ function set(grid, g, s) {
     const y = 0.299 * R[i] + 0.587 * G[i] + 0.114 * B[i];
     R[i] = (y + col * (R[i] - y)) * con + bri; G[i] = (y + col * (G[i] - y)) * con + bri; B[i] = (y + col * (B[i] - y)) * con + bri;
   }
+  // No DC restorer: with the video AC-coupled to the tube, the picture's average sits at a fixed brightness instead of its
+  // black, so "on a bright picture, the blacks get too black ... on a dark picture, the opposite happens", black turns
+  // grey [OBS videokarma.org, old_tv_nut, thread 248278]. A dark caption is lifted and its whites overdriven; the amount
+  // (0..1) is the user's and the average level the set was adjusted for is taken as a third of peak white [EST].
+  // acTilt > 0 shortens the time constant to a fraction of a field (0.25 / acTilt fields) with a fast attack, so the level
+  // drops at a white area and recovers down the next field [EST form; fits a 1968 off-screen photograph, cause not established].
+  if (s.acCouple > 0) {
+    const m0 = s.acRef !== undefined ? s.acRef : 0.34, lm = new Float32Array(nl), off = new Float32Array(nl); let tot = 0;
+    for (let y = 0; y < nl; y++) { let a = 0; const o = y * ns; for (let x = 0; x < ns; x++) a += 0.299 * R[o + x] + 0.587 * G[o + x] + 0.114 * B[o + x]; lm[y] = a / ns; tot += lm[y]; }
+    const mean = tot / nl;
+    if (!(s.acTilt > 0)) off.fill(mean - m0);
+    else {
+      // quick to follow a rise in the picture's level (a few lines), slow to let go: so a white caption pulls the level
+      // down at once, black inside and below it stays black, and the grey creeps back down the next field
+      const a = 1 - Math.exp(-1 / (0.25 / s.acTilt * nl)), aUp = a + (1 - Math.exp(-1 / 3) - a) * Math.min(1, s.acTilt * 4), vb = Math.round(nl * 0.075); let lp = mean;
+      for (let pass = 0; pass < 4; pass++) { for (let y = 0; y < nl; y++) { lp += (lm[y] > lp ? aUp : a) * (lm[y] - lp); off[y] = lp - m0; } for (let i = 0; i < vb; i++) lp -= a * lp; }
+    }
+    for (let y = 0; y < nl; y++) { const d = s.acCouple * off[y], o = y * ns; for (let x = 0; x < ns; x++) { R[o + x] -= d; G[o + x] -= d; B[o + x] -= d; } }
+  }
   if (s.overscan) { // the set shows only the inner part of the picture [SEC BBC guidance 3.5-5%/side]
     const ox = Math.round(ns * s.overscan), oy = Math.round(nl * s.overscan);
     return grid.map(p => { const cut = new Float32Array((ns - 2 * ox) * (nl - 2 * oy)); for (let y = 0; y < nl - 2 * oy; y++) cut.set(p.subarray((y + oy) * ns + ox, (y + oy) * ns + ns - ox), y * (ns - 2 * ox)); return VC.resize(cut, ns - 2 * ox, nl - 2 * oy, ns, nl); });
@@ -97,7 +116,9 @@ function crt(grid, g, w, h, d, win) {
   // 2. glow / halation map at grid resolution (light scattered in the faceplate) [EST physics]
   const glowMap = [0, 1, 2].map(c => { const a = Float32Array.from(lin[c]); const sx = ns * 0.02, sy = sx * (nl / ns) * 0.75; CAM.blur2D(a, ns, nl, sx, sy); return a; });
   const haloMap = [0, 1, 2].map(c => { const a = Float32Array.from(lin[c]); const sx = ns * 0.036, sy = sx * (nl / ns) * 0.75; CAM.blur2D(a, ns, nl, sx, sy); return a; });
-  for (let c = 0; c < 3; c++) for (let i = 0; i < glowMap[c].length; i++) glowMap[c][i] = d.glow * glowMap[c][i] + d.halation * haloMap[c][i];
+  // d.field 1 or 2: draw only the lines of one field (for a photograph whose shutter caught one field); each carries half the light
+  const FS = d.field === 1 || d.field === 2 ? d.field : 0, fk = FS ? 0.5 : 1;
+  for (let c = 0; c < 3; c++) for (let i = 0; i < glowMap[c].length; i++) glowMap[c][i] = fk * (d.glow * glowMap[c][i] + d.halation * haloMap[c][i]);
   // 3. horizontal upsampling of each scan line to output width (x2 for mask/convergence precision)
   const W2 = w;
   const up = lin.map(p => VC.resize(p, ns, nl, W2, nl));
@@ -155,6 +176,7 @@ function crt(grid, g, w, h, d, win) {
       for (let q = 0; q < NT; q++) {
         const j = jb + q; wts[q] = 0;
         if (j < 0 || j >= nl) continue;
+        if (FS && (j & 1) !== FS - 1) continue;
         const lv = upY[j * W2 + xl0] * (1 - fxl) + upY[j * W2 + xl1] * fxl;
         let dy = syl - j; if (dy < 0) dy = -dy; if (dy >= SPOT_DY) continue;
         const li = lv >= 1.5 ? SPOT_LV - 1 : (lv <= 0 ? 0 : (lv * (SPOT_LV - 1) / 1.5) | 0);

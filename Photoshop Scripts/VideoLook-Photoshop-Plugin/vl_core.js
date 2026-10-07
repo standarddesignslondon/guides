@@ -510,6 +510,19 @@ function channel(enc, opts) {
     const sb = opts.soundBeat !== undefined ? opts.soundBeat : (mismatch && g.soundMHz !== rx.soundMHz ? 0.04 : 0);
     if (sb && g.soundMHz > 0 && g.soundMHz * 1e6 < fs / 2) { const ws = 2 * Math.PI * g.soundMHz * 1e6 / fs; for (let i = 0; i < N; i++) S[i] += sb * Math.cos(ws * i); }
   }
+  // Mean-level AGC on a positive-modulation set (405 lines, French 819, System L): the first-generation AGC "merely
+  // detected the average value of the transmitted signal", and peak white is not always there to measure, so on a dark
+  // picture it turned the gain up: "a screen that was not black but mid-grey"; gated AGC from the mid-1950s sampled the
+  // back porch instead [SEC Wikipedia "405-line television system"]. Here the gain moves the mean carrier towards that of
+  // an average picture; a third of peak white is taken as average [EST], and the amount (0..1) is the user's.
+  if (opts.agcMean > 0 && rx.rfWhite > rx.rfBlank) {
+    let P = 0, Q = 0; for (let i = 0; i < N; i++) { const v = S[i]; if (v > 0) P += v; else Q += v; } P /= N; Q /= N;
+    const k = rx.rfWhite - rx.rfBlank, fa = (g.active / g.tLine) * (g.lines / g.total), m0 = opts.agcRef !== undefined ? opts.agcRef : 0.34;
+    const Cm = Math.max(0.05, rx.rfBlank + k * (P + Q)), C0 = rx.rfBlank + k * (fa * m0 + Q);
+    const G = Math.pow(C0 / Cm, Math.min(1, opts.agcMean)), lift = (G - 1) * rx.rfBlank / k;
+    for (let i = 0; i < N; i++) { const v = G * S[i] + lift; S[i] = v > 1.6 ? 1.6 : v; }
+    enc.agcGain = G;
+  }
   streamToRows(S, enc);
   enc.stream = S;
   return enc;

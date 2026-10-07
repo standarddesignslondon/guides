@@ -1482,13 +1482,17 @@ ITEMS.append({
         "East German, Japanese, Brazilian and Argentine systems, Hi-Vision, "
         "the pre-war systems (Baird 30 and 240 lines, Berlin and NBC 441, Moscow "
         "343), CBS colour-wheel TV, Apollo 11, slow-scan TV, Pixelvision, CCTV, "
-        "LaserDisc, CED, Canal+ scrambling and teletext. The result goes on a new "
-        "layer; the photo is untouched.",
+        "LaserDisc, CED, Canal+ scrambling and teletext. Version 1.2 adds the "
+        "off-screen photograph as a proper stage: a shutter that catches one field "
+        "or a whole frame, a black-and-white negative and print, flare, dust and "
+        "the tube surround, together with two faults of older sets that turn dark "
+        "captions grey (mean-level AGC and no DC restorer). The result goes on a "
+        "new layer; the photo is untouched.",
     "facts": {
-        "version": "1.1.6",
+        "version": "1.2.0",
         "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
         "plugin id": "com.simonmorse.videolook",
-        "looks": "78 (10 built from specifications alone)",
+        "looks": "84 (10 built from specifications alone)",
     },
     "quickstart": [
         "Open **Plugins › VideoLook** and choose a look. The note under the list "
@@ -1504,10 +1508,11 @@ ITEMS.append({
     "controls": [
         {"title": "Top of panel",
          "rows": [
-             ["Look", "78 looks in 13 groups",
+             ["Look", "84 looks in 14 groups",
               "UK broadcast, US broadcast, France, Home video, Archive and transfers, "
               "Long-distance reception, USSR and Eastern Europe, Japan, Early television, "
-              "Space, surveillance and toys, South America, Community TV and video art, Subtitles. "
+              "Space, surveillance and toys, South America, Community TV and video art, "
+              "Photographed off the screen, Subtitles. "
               "Choosing a look sets every stage and ticks the ones it uses."],
              ["Strength", "0 – 100", "Opacity of the result layer; updates the last render live."],
              ["Source", "Whole image / Selected layer",
@@ -1535,6 +1540,10 @@ ITEMS.append({
               "Fernseh), Apollo lunar camera, PXL-2000, CCTV and Portapak. Each sets the "
               "controls below."],
              ["Exposure", "−2 – +2.5 stops", "Pushes highlights into the tube's knee or the CCD's clip."],
+             ["Softness", "0 – 1.5% of the width",
+              "Blurs the picture before it is scanned, like a caption camera slightly out of "
+              "focus. Because it is in the camera, the set's scan lines stay crisp over a soft "
+              "picture, which is how 1960s off-screen photographs of captions look."],
              ["Edge sharpening", "0 – 1.5",
               "BBC-style contour correction: 3-tap, from green, added equally to R, G "
               "and B so the halos are neutral; off in the darks. The amount is an estimate."],
@@ -1620,6 +1629,20 @@ ITEMS.append({
               "a field oscillator. A clean signal locks and is unchanged; a wrong or weak "
               "one tears and rolls. The loop figures are estimates."],
              ["Overload (lockout)", "0 – 1", "Too strong a signal: sync crushed, picture partly negative."],
+             ["Mean-level AGC", "0 – 1",
+              "Early 405-line sets (and French 819 and System L sets) set their gain from the "
+              "average signal, so a mostly black picture was turned up until it was grey and "
+              "its whites over-driven. Gated AGC from the mid-1950s cured it. Only acts on "
+              "those systems. The amount is an estimate."],
+             ["Black follows the picture", "0 – 1",
+              "A set with no DC restorer holds the picture's average at a fixed brightness, "
+              "not its black: dark pictures go grey, bright ones go too dark. Works on any "
+              "system. The amount is an estimate."],
+             ["Black-level tilt", "0 – 1",
+              "Makes that follow the picture down the screen: the level drops at a white "
+              "caption and creeps back over the next field, leaving a grey band above the "
+              "caption and black below it. Fitted to one 1968 off-screen photograph; the "
+              "cause isn't established."],
          ]},
         {"title": "Display & view",
          "rows": [
@@ -1634,9 +1657,27 @@ ITEMS.append({
               "Mask and scan lines draw only where the image has enough pixels, and fade "
               "out rather than making moiré on small images."],
              ["View", "Frame-grab / Screen close-up / Photo of the screen / Magnifying lens / Televisor",
-              "Photo exposure below one field records only part of the scan, so a band is "
-              "brighter. The lens is the KVN-49's water-filled magnifier; the Televisor is "
+              "The lens is the KVN-49's water-filled magnifier; the Televisor is "
               "Baird's neon lamp and spinning disc."],
+             ["Photo exposure", "0 – 2 fields",
+              "How long the shutter was open, in fields (1/50 s each in the UK). 2 is a whole "
+              "frame (1/25 s, the usual rule, and John Cura's Tele-snap setting); 1 catches one "
+              "field, so only every other line shows (about 188 on 405 lines); between 1 and 2 "
+              "part of the screen gets both; below 1 only a band is bright. 0 is a long exposure. "
+              "**Scan position at the click** moves the band."],
+             ["Photo softness, Glass and lens flare, Room reflection", "",
+              "The camera's focus, light scattered in the faceplate and lens (it lifts the "
+              "blacks near bright areas), and a window reflected in the glass."],
+             ["Pull back, Camera tilt", "0 – 0.3; −6 – +6°",
+              "Shows the dark surround of the tube and a camera not held square."],
+             ["Photo finish", "As seen / Black-and-white print",
+              "Black-and-white print puts the photo through a negative and a print. **Print "
+              "exposure** (stops) sets how light it is: lower it and the screen's whites turn "
+              "grey and milky; raise it and they burn out. **Print contrast** is the paper "
+              "grade; **Print black** is how deep the print's black goes."],
+             ["Photo grain; Dust, hairs and scratches", "",
+              "Film grain, and the specks, hairs and fine scratches of a small negative "
+              "enlarged. Amounts are estimates; New noise moves them."],
          ]},
         {"title": "Overlay",
          "rows": [
@@ -1676,6 +1717,12 @@ ITEMS.append({
                  "Co-channel strength, Roll position and Horizontal hold, and press New "
                  "noise for another moment. For a real second station, add a layer named "
                  "*second picture*."},
+        {"title": "Off-screen photographs",
+         "text": "For a 1960s station symbol or caption as it survives in off-screen "
+                 "photographs: start with white artwork on black, choose a look from "
+                 "*Photographed off the screen*, then move Print exposure (grey and "
+                 "ghostly, or burnt out), Softness under Camera, and Mean-level AGC and "
+                 "Black follows the picture under Decoder & set. See the Look Cookbook."},
         {"title": "Evidence",
          "text": "Ten looks (Alexandra Palace 1937, 405-line at home, US live 1950, French "
                  "819-line, Moscow 343, Baird 240, Berlin and NBC 441, CBS colour, Belgian "
@@ -1686,6 +1733,9 @@ ITEMS.append({
     "gotchas": [
         "Large documents take a while: a 24-megapixel render with a CRT view is roughly "
         "10–20 seconds. Preview selection is quicker.",
+        "A Photo of the screen is made from the whole picture (flare, grain, dust, tilt), "
+        "so its previews take as long as a full render, and a one-field photo draws the "
+        "screen twice.",
         "The photo is treated as sRGB; convert documents in other profiles first.",
         "A still cannot show movement: the 60-field 'video look' of US sitcoms, dot crawl "
         "moving and interlace flicker are not there. Implied motion shows what a single "
@@ -1777,8 +1827,7 @@ ITEMS.append({
           "research-based · EMI 2001 four-tube Plumbicon → teletext subtitle → 625 PAL (UK System I) → 22in slot-mask set",
           "Page 888-style subtitles: double-height text in black boxes, white first then yellow, cyan and green for other speakers. Text invented and editable under Overlay."
          ]
-        ],
-        "intro": "Every look in the panel, in the panel's order. Under each name: how solid it is and the chain it builds. On the right: the note the panel shows under the Look menu. *From the specifications* means no authentic pictures survive to check it against."
+        ]
        },
        {
         "title": "US broadcast",
@@ -2122,6 +2171,41 @@ ITEMS.append({
           "Videotape to cinema film, 1964 (Electronovision-style)",
           "research-based · Image orthicon (B&W) → 2-inch Quad, high band → 525-line B&W → kinescope → frame-grab",
           "Before 200 Motels, Electronovision shot plays and concerts on videotape and moved them to film by kinescope for cinemas (Hamlet, The T.A.M.I. Show, 1964). A US colour-era camera on Quad, filmed off a monitor at 24 frames."
+         ]
+        ]
+       },
+       {
+        "title": "Photographed off the screen",
+        "rows": [
+         [
+          "Tele-snap: ident, grey and ghostly (1960s)",
+          "research-based · Vidicon → 405-line (UK, B&W) → 19in black-and-white tube, photographed on black-and-white film",
+          "A station symbol or caption photographed off a 405-line set on black-and-white film: whites come out a soft mid-grey with a faint glow, as in some 1960s off-screen stills. Matched to their measured tones (whites about 40-60% of full white, edges spread over about 1% of the width, about 190 lines down the screen, which is one field). Why the whites are grey isn't established (a thin negative, a dark print or a fade would all do it): Print exposure sets it, and about -2.6 gives the darkest ones. Works best on white graphics on black."
+         ],
+         [
+          "Tele-snap: ident, burnt-out whites and grey blacks (1960s)",
+          "research-based · Vidicon → 405-line (UK, B&W) → 19in black-and-white tube, photographed on black-and-white film",
+          "The opposite print: whites burnt out and swollen so the scan lines close up inside them, blacks a dusty dark grey. On a set with mean-level AGC and no DC restorer a mostly black caption is turned up and lifted ('a screen that was not black but mid-grey'), and the over-driven spot blooms. Both set faults are documented for 405-line sets; how much of each a given photograph shows is not."
+         ],
+         [
+          "Tele-snap: caption with a grey band above it (1968)",
+          "research-based · Vidicon → 405-line (UK, B&W) → 19in black-and-white tube, photographed on black-and-white film",
+          "A white caption box on black, with the screen above it turned grey and the screen below it black, the tube's rounded edge and dark surround in shot. Modelled as the set's black level dropping at once when the white box arrives and creeping back up over the next field, so the lettering and the screen below stay black. That fits one 1968 off-screen photograph, but the cause isn't established (it could equally lie at the station). Black-level tilt sets it."
+         ],
+         [
+          "Tele-snap: in-vision announcer (1967)",
+          "research-based · Image orthicon (B&W) → 405-line (UK, B&W) → 19in black-and-white tube, photographed on black-and-white film",
+          "A studio announcer photographed off a 405-line set, the whole tube face in shot: soft, flat and grey, nothing fully black or white. Image orthicon studio camera assumed. Matched to the tones of two 1967 off-screen stills (blacks about 10%, whites about 55-75%)."
+         ],
+         [
+          "Tele-snap: fringe reception, hard print (1967)",
+          "research-based · Vidicon → 405-line (UK, B&W) → 17in black-and-white tube, photographed on black-and-white film",
+          "A distant transmitter 'just about received in good weather' and photographed off the screen (Transdiffusion's description of late-1960s stills of ATV Midlands taken on the Wirral), printed hard: blacks solid, whites clean, snow hidden in the blacks and showing as ragged edges. Signal level and ghost [EST]."
+         ],
+         [
+          "405-line off-air on an early video recorder (mid-1960s)",
+          "research-based · Image orthicon (B&W) → Sony CV-2000 home VTR (B&W, skip-field) off-air → 405-line (UK, B&W) → frame-grab",
+          "The harsh look of some surviving 405-line clips: hard contrast, outlines round the edges, ragged verticals and coarse lines. Built as a studio picture recorded off-air on an early helical-scan recorder and frame-grabbed. Philips's EL3400 (1964) recorded 405 lines, but its figures weren't found, so the Sony CV-2000 model (one field shown twice) stands in. Whether a given clip's harshness comes from such a machine or from later copying and sharpening isn't established."
          ]
         ]
        },
@@ -3904,7 +3988,7 @@ ITEMS.append({
         "where a source is single or a setting is a judgement, it says so. Control names "
         "are as printed on the panels. Some things these plugins can't do yet (magnet-bent "
         "pictures, scan processors, step-printed motion) are listed at the end.",
-    "facts": {"covers": "FilmLook 1.x, VideoLook 1.1.6"},
+    "facts": {"covers": "FilmLook 1.x, VideoLook 1.2.0"},
     "quickstart": [
         "**Chaining the two panels.** Render the first plugin with Source set to *Whole image*. "
         "Then run the second, also on *Whole image*: VideoLook reads the FilmLook layer "
@@ -4005,6 +4089,49 @@ ITEMS.append({
                  "*Videotape to cinema film, 1964 (Electronovision-style)*: shot on tape, kinescoped to "
                  "film for cinemas, years before 200 Motels."],
              ]},
+            {"title": "photographed off the screen",
+             "intro": "1960s station symbols, captions and announcers as they survive in off-screen "
+                      "photographs (Tele-snaps). All six are in VideoLook's *Photographed off the screen* "
+                      "group. Start from clean artwork: white on black for symbols and captions.",
+             "rows": [
+                ["Station symbol, grey and ghostly",
+                 "VideoLook preset",
+                 "*Tele-snap: ident, grey and ghostly*. The whites come out a soft mid-grey. **Print "
+                 "exposure** is the main control: about -1.6 for a pale grey symbol, about -2.6 for "
+                 "the darkest captions. **Softness** under Camera sets how soft the artwork is while "
+                 "the scan lines stay crisp. Why real ones are grey isn't established (a thin "
+                 "negative, a dark print or a fade would all do it)."],
+                ["Station symbol, burnt out",
+                 "VideoLook preset",
+                 "*Tele-snap: ident, burnt-out whites and grey blacks*. The opposite print: whites "
+                 "swollen and solid, blacks a dusty dark grey. Raise **Mean-level AGC** and **Black "
+                 "follows the picture** (Decoder & set) for greyer blacks, **Blooming** (Display) for "
+                 "fatter whites."],
+                ["Caption with a grey band above it",
+                 "VideoLook preset",
+                 "*Tele-snap: caption with a grey band above it*. A white box on black: grey above "
+                 "the box, black below, the tube's edge in shot. **Black-level tilt** sets the band. "
+                 "Fitted to one 1968 photograph; the cause isn't established."],
+                ["In-vision announcer",
+                 "VideoLook preset",
+                 "*Tele-snap: in-vision announcer*. The whole tube face, soft, flat and grey. Raise "
+                 "**Pull back** to show more of the surround; **Camera tilt** for a hand-held snap."],
+                ["Fringe reception, hard print",
+                 "VideoLook preset",
+                 "*Tele-snap: fringe reception, hard print*. A distant transmitter, printed hard so "
+                 "the snow only shows as ragged edges. Lower Signal-to-noise (Channel) for more."],
+                ["Harsh early video recording",
+                 "VideoLook preset",
+                 "*405-line off-air on an early video recorder*. Hard contrast, outlines, ragged "
+                 "verticals, coarse lines. The Sony CV-2000 model stands in for whichever machine "
+                 "made a given clip."],
+                ["A tele-snap of your own title",
+                 "VideoLook",
+                 "Set the title as white type on a black layer in Photoshop (ordinary type, not "
+                 "VideoLook's subtitles, which are added after the camera and so stay sharp), then "
+                 "use the grey and ghostly preset. For a hurried, slanted snap: Camera tilt 2-3° "
+                 "and Pull back 0.02."],
+             ]},
             {"title": "artists' film and indie",
              "rows": [
                 ["Warhol Screen Tests (1964-66)",
@@ -4077,7 +4204,11 @@ ITEMS.append({
             "Blair Witch: Wikipedia; AV Club; Fangoria. Festen and Julien Donkey-Boy: Wikipedia; "
             "Filmmaker Magazine. 200 Motels: Wikipedia; Den of Geek. Electronovision: Wikipedia.",
             "Mothlight: Wikipedia. Paik: Langlois Foundation; Wikipedia.",
-            "Full notes: VideoLook-References/_research/J_cookbook.md.",
+            "Off-screen photographs: Transdiffusion (channel-tv.co.uk and associatedtelevision.network "
+            "tele-snap pages); Wikipedia, 405-line television system (mean-level AGC) and Tele-snaps "
+            "(half-frame 35 mm at 1/25 s); videokarma.org thread 248278 (no DC restorer); "
+            "rewindmuseum.com (Philips EL3400, 405 lines, 1964).",
+            "Full notes: VideoLook-References/_research/J_cookbook.md and K_offscreen_photographs.md.",
         ]},
     ],
 })

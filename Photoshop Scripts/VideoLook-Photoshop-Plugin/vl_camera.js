@@ -224,6 +224,9 @@ function camera(grid, g, cam, o) {
   } else {
     for (let c = 0; c < 3; c++) { VC.filterRows(L[c], ns, nl, hM); blur2D(L[c], ns, nl, 0, sigV); }
   }
+  // the user's extra softness (a caption camera a little out of focus, a soft slide): the same spread across and down,
+  // as a percentage of the picture width. Because it is in the camera, the set's scan lines stay crisp over it.
+  if (o.soft > 0) { const sx = o.soft / 100 * ns, sy = sx * (nl / ns) * (4 / 3); for (let c = 0; c < 3; c++) blur2D(L[c], ns, nl, sx, sy); if (Lum) blur2D(Lum, ns, nl, sx, sy); }
   if (cam.chromaSoft) { // single-tube / single-chip colour: soft chroma [OBS]
     const hC = VC.lp3dB(cam.chromaSoft, g.fs, 0.6e6);
     const Y = new Float32Array(n); for (let i = 0; i < n; i++) Y[i] = 0.299 * L[0][i] + 0.587 * L[1][i] + 0.114 * L[2][i];
