@@ -214,7 +214,8 @@ function camera(grid, g, cam, o) {
   const hM = firFromResponse(cam.mtf, g.fs, 63);
   let varH = 0; { const m = (hM.length - 1) / 2; for (let i = 0; i < hM.length; i++) varH += hM[i] * (i - m) * (i - m); }
   const sigH = Math.sqrt(Math.max(0, varH)); // samples
-  const sigV = sigH * (nl / ns) * (4 / 3);    // rows, same spread in picture units (4:3)
+  const asp = o.aspect > 0 ? o.aspect : 4 / 3; // the picture's shape (4:3 unless the document's own shape is being filled)
+  const sigV = sigH * (nl / ns) * asp;        // rows, the same spread down the picture as across it
   let Lum = null;
   if (cam.tubes === 4) { // separate luminance tube: sharp; colour tubes low-passed to colourMtf [SEC PH-11/T-132]
     Lum = new Float32Array(n); for (let i = 0; i < n; i++) Lum[i] = 0.299 * L[0][i] + 0.587 * L[1][i] + 0.114 * L[2][i];
@@ -226,7 +227,7 @@ function camera(grid, g, cam, o) {
   }
   // the user's extra softness (a caption camera a little out of focus, a soft slide): the same spread across and down,
   // as a percentage of the picture width. Because it is in the camera, the set's scan lines stay crisp over it.
-  if (o.soft > 0) { const sx = o.soft / 100 * ns, sy = sx * (nl / ns) * (4 / 3); for (let c = 0; c < 3; c++) blur2D(L[c], ns, nl, sx, sy); if (Lum) blur2D(Lum, ns, nl, sx, sy); }
+  if (o.soft > 0) { const sx = o.soft / 100 * ns, sy = sx * (nl / ns) * asp; for (let c = 0; c < 3; c++) blur2D(L[c], ns, nl, sx, sy); if (Lum) blur2D(Lum, ns, nl, sx, sy); }
   if (cam.chromaSoft) { // single-tube / single-chip colour: soft chroma [OBS]
     const hC = VC.lp3dB(cam.chromaSoft, g.fs, 0.6e6);
     const Y = new Float32Array(n); for (let i = 0; i < n; i++) Y[i] = 0.299 * L[0][i] + 0.587 * L[1][i] + 0.114 * L[2][i];
@@ -260,7 +261,7 @@ function camera(grid, g, cam, o) {
     const src = Lum || L[1], hi = new Float32Array(n);
     for (let i = 0; i < n; i++) hi[i] = Math.max(0, src[i] - 0.5);
     const a = Float32Array.from(hi), b = Float32Array.from(hi);
-    const rS = (cam.haloRadius || 0.02) * ns; blur2D(a, ns, nl, rS * 0.3, rS * 0.3 * (nl / ns) * 4 / 3); blur2D(b, ns, nl, rS, rS * (nl / ns) * 4 / 3);
+    const rS = (cam.haloRadius || 0.02) * ns; blur2D(a, ns, nl, rS * 0.3, rS * 0.3 * (nl / ns) * asp); blur2D(b, ns, nl, rS, rS * (nl / ns) * asp);
     const tgt = Lum ? [Lum] : L;
     for (const p of tgt) for (let i = 0; i < n; i++) p[i] = Math.max(0, p[i] - cam.halo * 3 * Math.max(0, b[i] - a[i] * 0.5));
   }

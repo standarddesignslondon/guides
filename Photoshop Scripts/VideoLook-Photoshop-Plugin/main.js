@@ -77,7 +77,7 @@ const SECTIONS = [
     ], hint: "Camera types carry figures from the BBC documents where they exist (Plumbicon response, 1964 camera comparisons, the 1980 BBC gamma, BBC-style edge sharpening taken from green). Registration: the BBC's 1967 tolerance was 25 ns for 3-tube cameras, 50 ns for a 4-tube camera's colour tubes. Softness blurs the picture before it is scanned (a caption camera slightly out of focus), so the set's scan lines stay crisp over a soft picture." },
     { key: "encoder", title: "Standard & colour", open: true, items: [
         { kind: "select", id: "std", label: "Television standard", path: "standard", options: () => STD_OPTS, onChange: () => { if (st.standard === "405-A" && st.aspect === 16 / 9) st.aspect = 4 / 3; if (st.standard === "30-BAIRD") { st.aspect = 3 / 7; st.view.mode = "televisor"; } else if (st.aspect < 0.5) st.aspect = 4 / 3; if (st.standard === "MUSE") st.aspect = 16 / 9; if (st.standard === "120-SSTV") st.aspect = 1; } },
-        { kind: "select", id: "aspect", label: "Picture shape", path: "aspect", num: true, options: () => [["1.3333333333333333", "4:3"], ["1.25", "5:4 (405-line before 1950)"], ["1.7777777777777777", "16:9 (PALplus, Hi-Vision, late DV)"], ["1.15", "1.15:1 (Germany 441)"], ["1", "1:1 (slow-scan)"], ["0.42857142857142855", "3:7 tall (Baird 30-line)"]] },
+        { kind: "select", id: "aspect", label: "Picture shape", path: "aspect", num: true, options: () => [["1.3333333333333333", "4:3"], ["1.25", "5:4 (405-line before 1950)"], ["1.7777777777777777", "16:9 (PALplus, Hi-Vision, late DV)"], ["1.15", "1.15:1 (Germany 441)"], ["1", "1:1 (slow-scan)"], ["0.42857142857142855", "3:7 tall (Baird 30-line)"]], hint: "Ignored when Frame (top of the panel) is set to Fill the document: the picture then takes the document's own shape." },
         { kind: "select", id: "ntscIQ", label: "NTSC colour coding", path: "encoder.ntscIQ", bool: true, options: () => [["true", "I/Q (FCC)"], ["false", "Equal-band (SMPTE 170M)"]] }
     ], hint: "Switch this stage off for a component or digital chain with no PAL/NTSC/SECAM coding (camera and tape straight to a frame-grab)." },
     { key: "channel", title: "Channel", open: false, items: [
@@ -507,6 +507,7 @@ async function render(mode) {
                 if (!region) throw new Error("Make a marquee selection first (the preview renders just that area).");
             }
             const W = Math.round(doc.width), H = Math.round(doc.height);
+            if (frame === "fill") s.aspect = W / H; // the picture takes the document's own shape: nothing cropped, no border
             let src = null;
             if (source === "layer") {
                 src = doc.activeLayers[0];

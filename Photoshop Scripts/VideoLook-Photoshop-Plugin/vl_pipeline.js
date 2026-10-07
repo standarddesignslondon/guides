@@ -84,7 +84,7 @@ function run(doc, s, winDoc) {
     const cam = camOn ? Object.assign({}, CAM.CAMERAS[s.camera.type], s.camera.overrides || {}) : null;
     if (cam && v) grid = TR.lagBlend(grid, gs.ns, gs.lines, v, mask, cam.lag || 0, cam.comet || 0);
     if (v && !gs.progressive && !gs.fieldSeq) grid = TR.interlace(grid, gs.ns, gs.lines, v, mask, 1);
-    if (cam) { grid = CAM.camera(grid, gs, cam, Object.assign({ seed }, s.camera)); stages.push("camera"); }
+    if (cam) { grid = CAM.camera(grid, gs, cam, Object.assign({ seed, aspect }, s.camera)); stages.push("camera"); }
   }
   if (sub && sub.st.stage === "studio" && sub.st.edge !== "cc") { grid = burnSub(grid, gs); stages.push("subtitles (" + sub.font + ")"); }
   if (ov && ov.kind === "timestamp") { grid = TXT.timestamp(grid, gs, ov); stages.push("date/time stamp"); }

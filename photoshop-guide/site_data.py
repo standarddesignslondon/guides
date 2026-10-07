@@ -1489,7 +1489,7 @@ ITEMS.append({
         "captions grey (mean-level AGC and no DC restorer). The result goes on a "
         "new layer; the photo is untouched.",
     "facts": {
-        "version": "1.2.1",
+        "version": "1.2.2",
         "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
         "plugin id": "com.simonmorse.videolook",
         "looks": "84 (10 built from specifications alone)",
@@ -1520,10 +1520,16 @@ ITEMS.append({
              ["Output", "New layer / New document",
               "A layer at document size, or a new document at the standard's own "
               "size in square pixels (767×575 for PAL, 647×485 for NTSC)."],
-             ["Frame", "Matte / Crop canvas",
+             ["Frame", "Matte / Crop canvas / Fill the document",
               "The picture is 4:3 (5:4 for early 405-line, 16:9 for Hi-Vision, 1.15:1 for "
               "Berlin 441, 1:1 for slow-scan, 3:7 tall for Baird 30-line); the rest of "
-              "the document is black, or the canvas is cropped to it."],
+              "the document is black, or the canvas is cropped to it. **Fill the document** "
+              "gives the picture the document's own shape instead, so nothing is cropped or "
+              "bordered: use it for a poster or any design that isn't TV-shaped. The setting "
+              "stays put when you change looks. Scan lines still run across, and the screen "
+              "views draw a screen of the document's shape. For every edge of the design to "
+              "survive, also set Overscan to 0 (Decoder & set), or use the Frame-grab view, "
+              "which has no screen."],
              ["Shift image X / Y", "pixels", "Moves the photo inside the picture: + X right, + Y down."],
              ["Implied motion", "pixels per field, degrees",
               "A still has no movement; this supplies it. It brings out interlace "
@@ -1562,7 +1568,7 @@ ITEMS.append({
               "Belgium F), 625 and 525 black and white, Soviet 625 and 343, Berlin and "
               "NBC 441, Baird 240 and 30, CBS field-sequential colour, Apollo 320, "
               "slow-scan 120, Hi-Vision MUSE, component 625/525."],
-             ["Picture shape", "4:3 / 5:4 / 16:9", "5:4 was 405-line's shape until April 1950."],
+             ["Picture shape", "4:3 / 5:4 / 16:9", "5:4 was 405-line's shape until April 1950. Ignored when Frame is Fill the document."],
              ["NTSC colour coding", "I/Q or equal-band", "FCC I/Q, or SMPTE 170M equal-band."],
          ]},
         {"title": "Channel",

@@ -141,7 +141,7 @@ function crt(grid, g, w, h, d, win) {
   const maskFade = Math.max(0, Math.min(1, (pitchPx - 2.5) / 4)) * d.maskStrength; // fades in from 2.5 to 6.5 px per triad // mask only where it resolves [EST]
   const lineSp = h / nl;                                // output px per scan line
   const conv = d.convergence * w;
-  const cx = (w - 1) / 2, cy = (h - 1) / 2, aspect = w / h;
+  const cx = (w - 1) / 2, cy = (h - 1) / 2, aspect = w / h, aspectN = Math.max(1, aspect); // a tall picture (document shape) behaves as a tube on its side
   const vals = new Float32Array(3);
   // normalise the mask so its average transmission per colour is 1 (the set's brightness control compensates) [EST]
   const maskFn = maskFunction(d.tube), norm = mono ? [1, 1, 1] : maskNorm(maskFn);
@@ -159,7 +159,7 @@ function crt(grid, g, w, h, d, win) {
   for (let y = Y0; y < Y1; y++) {
     for (let x = X0; x < X1; x++) {
       // geometry: barrel distortion of the raster on a curved tube [EST]
-      const u = (x - cx) / cx, v = (y - cy) / cy, r2 = (u * u * aspect * aspect + v * v) / (aspect * aspect);
+      const u = (x - cx) / cx, v = (y - cy) / cy, r2 = (u * u * aspect * aspect + v * v) / (aspectN * aspectN); // distance from the centre, in units of the longer half-side
       const k = 1 + d.barrel * r2;
       const su = u * k, sv = v * k;
       if (Math.abs(su) > 1 || Math.abs(sv) > 1) { continue; }
