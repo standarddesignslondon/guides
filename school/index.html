@@ -114,6 +114,8 @@ h2 span{float:right}
 .a-sub{display:inline-block; margin-right:12px; white-space:nowrap}
 .a-sub .dot{width:8px; height:8px; margin-right:6px}
 .a-none{color:var(--soft)}
+.day.proj,.ahead.proj > .ahead-b{opacity:.72}
+.exp-tag{font-size:11px; font-weight:600; letter-spacing:.02em; color:var(--soft); border:1px solid var(--rule); border-radius:4px; padding:0 5px; margin-left:6px; vertical-align:middle}
 .ahead .lessons{margin:0 0 12px}
 
 /* ---------- homework ---------- */
@@ -329,7 +331,8 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
       names.appendChild(b);
     });
     renderStatus(p, today); renderTimetable(p, today); renderHomework(p, today);
-    $('checked').textContent = 'Last checked ' + stamp(p.at) + ' from ' + p.source + '. Updates about 06:30 and 16:00.';
+    $('checked').textContent = 'Last checked ' + stamp(p.at) + ' from ' + p.source + '. Updates about 06:30 and 16:00.'
+      + (p.ttConfirmedThrough ? ' Timetable confirmed to ' + longDate(p.ttConfirmedThrough) + '; later days show the usual A/B pattern and may change.' : '');
     var age = (Date.now() - new Date(p.at).getTime()) / 3600000;
     $('stale').hidden = age < 30;
     if (age >= 30) $('stale').textContent = 'This has not updated since ' + stamp(p.at) + ', so new homework may be missing.';
@@ -395,7 +398,9 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
       var sec = el('div', 'day'), h = el('div', 'day-h');
       h.appendChild(el('h3', '', pair[1]));
       var wk = p.weeks && p.weeks[mondayOf(d)];
-      h.appendChild(el('p', '', (pair[1] === dayName(d) ? '' : dayName(d) + ' ') + longDate(d) + (wk && ls.length ? ', week ' + wk : '')));
+      var pj = p.projected && p.projected[d];
+      if (pj) sec.className += ' proj';
+      h.appendChild(el('p', '', (pair[1] === dayName(d) ? '' : dayName(d) + ' ') + longDate(d) + (wk && ls.length ? ', week ' + wk + (pj ? ' \u00b7 expected' : '') : '')));
       sec.appendChild(h);
       if (!ls.length) sec.appendChild(el('p', 'none', (d in p.days) ? 'No lessons.' : 'No timetable loaded for this day yet.'));
       else sec.appendChild(lessonList(p, ls, d === today));
@@ -429,8 +434,11 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
     days.forEach(function (d) {
       var m = mondayOf(d), ls = p.days[d] || [];
       if (m !== week) { week = m; var wk = p.weeks && p.weeks[m];
-        panel.appendChild(el('h3', 'wk-h', 'week beginning ' + longDate(m) + (wk ? ', week ' + wk : ''))); }
+        var wproj = p.projected && Object.keys(p.projected).some(function (x) { return mondayOf(x) === m; });
+        panel.appendChild(el('h3', 'wk-h', 'week beginning ' + longDate(m) + (wk ? ', week ' + wk + (wproj ? ' \u00b7 expected' : '') : ''))); }
       var row = el('div', 'ahead'), dt = parse(d);
+      var rproj = p.projected && p.projected[d];
+      if (rproj) row.className += ' proj';
       var head = el(ls.length ? 'button' : 'div', 'ahead-b'); if (ls.length) head.type = 'button';
       var day = el('span', 'a-day', DAYS[dt.getDay()].slice(0, 3)); day.appendChild(el('small', '', dt.getDate() + ' ' + MONTHS[dt.getMonth()].slice(0, 3)));
       head.appendChild(day);
@@ -442,6 +450,7 @@ body[data-kid="sidney"] .detail .body a{color:#d9380d}
         subs.appendChild(c); subs.appendChild(document.createTextNode(' '));
       });
       if (!ls.length) subs.appendChild(el('span', 'a-none', (d in p.days) ? 'No lessons' : 'Not loaded yet'));
+      if (rproj && ls.length) subs.appendChild(el('span', 'exp-tag', 'expected'));
       head.appendChild(subs);
       row.appendChild(head);
       if (ls.length) {
