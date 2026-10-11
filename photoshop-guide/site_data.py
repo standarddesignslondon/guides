@@ -2357,7 +2357,7 @@ ITEMS.append({'slug': 'printlook',
           'decade by decade, Ireland, the United States, France, Germany, Norway, the USSR, Japan and India, '
           'plus the generic processes and the office machines. The paper is optional: use a built-in stock, '
           'your own paper texture layer, or none.',
- 'facts': {'version': '1.1.1',
+ 'facts': {'version': '1.1.6',
            'requires': 'Photoshop 24.2+, RGB, 8 or 16-bit',
            'plugin id': 'com.simonmorse.printlook',
            'looks': '165 (25 sourced, 119 partly, 21 inferred)'},
@@ -2473,7 +2473,13 @@ ITEMS.append({'slug': 'printlook',
                         ['Soak into paper, Oil halo, Dent',
                          '',
                          'Ink spreading into absorbent paper, the oil stain round old letterpress, and the '
-                         'impression in the sheet.']]},
+                         'impression in the sheet.'],
+                        ['Starved edge, Edge ring',
+                         'amount, width / inset, width',
+                         'A pale band just inside every edge, or a pale line set in from it, uneven and '
+                         "grainy, breaking up where the ink is thinnest. The look of True Grit's Atomica "
+                         'actions. 0 in every process; pair Edge ring with Squeezed rim for a dark outline '
+                         'with a pale line inside it.']]},
               {'title': 'Faults',
                'rows': [['Uneven solids, Salty solids, Speckle',
                          '',
@@ -2496,13 +2502,15 @@ ITEMS.append({'slug': 'printlook',
                          'Takes ink out of the solids following a real texture rather than plain noise: foam '
                          'rollers, brushes, sponges, wood grain, wood type, grit, photocopier toner. Made '
                          'from your own texture collection. The texture is laid as a patchwork of irregular '
-                         'pieces, each flipped or turned and blended at the joins, and each letter gets its '
-                         'own pieces, so it never repeats however large the shape. Every process has a '
-                         'default; with a texture chosen, Salty solids is halved.'],
-                        ['Texture amount, size, more at edges, varies by letter, direction',
+                         'pieces, each flipped and blended at the joins, and each letter gets its own '
+                         'pieces, so it never repeats however large the shape. Every process has a default; '
+                         'with a texture chosen, Salty solids is halved.'],
+                        ['Texture amount, depth, size, more at edges, varies by letter, direction',
                          '',
-                         'Amount is the share of a solid the texture removes. More at edges makes it bite '
-                         'deeper near the outline, where worn type and starved rollers fail first.'],
+                         'Amount is the share of a solid the texture removes (the slider is finer at the '
+                         'bottom and goes down to 0.001). Depth is how much ink goes where it marks: 1 takes '
+                         'it all, 0.3 leaves the ink slightly paler, for a light even texture. More at edges '
+                         'makes it bite deeper near the outline.'],
                         ['Ink texture layer',
                          '0 – 1.5',
                          'Strength of your own texture: a layer whose name starts with **ink texture**. Each '
@@ -2522,8 +2530,9 @@ ITEMS.append({'slug': 'printlook',
                         ['Chips', 'amount, size', 'Small irregular bites out of edges and corners.'],
                         ['Broken letters, Cracked letters',
                          'share of letters, crack width',
-                         'A piece missing from a letter, or a jagged hairline across it. Letters under about '
-                         '3 mm are left alone.'],
+                         'A piece missing from a letter, or a crack that wanders across it, varying in '
+                         'width, sometimes branching or stopping partway. Letters under about 3 mm are left '
+                         'alone.'],
                         ['Starved letters',
                          'share of letters',
                          'One side of a letter short of ink, breaking up towards that side.'],

@@ -15,11 +15,12 @@ const PRESS0 = {
     ink: 1, pressure: 1, gain: 0, soften: 0, edge: 20, ragged: 0, raggedScale: 150, rim: 0, rimWidth: 70, starve: 0,
     bleed: 0, halo: 0, haloWidth: 300, impression: 0,
     mottle: 0, mottleScale: 3000, salt: 0, saltScale: 180, speckle: 0, sorts: 0, grain: 0, grainAngle: 0, wear: 0,
-    mesh: 0, meshPitch: 205, hollow: 0, hollowWidth: 600, spatter: 0, slur: 0, slurAngle: 90, hickeys: 0, specks: 0, scum: 0, banding: 0
+    mesh: 0, meshPitch: 205, hollow: 0, hollowWidth: 600, spatter: 0, slur: 0, slurAngle: 90, hickeys: 0, specks: 0, scum: 0, banding: 0,
+    edgeStarve: 0, edgeStarveWidth: 700, ring: 0, ringInset: 300, ringWidth: 150
 };
 // Texture in the solids, from the texture library (pl_textures.js). amount: the fraction of a solid the texture takes away.
 // scale: multiplies the texture's own size. edges: how much more it takes near an edge. vary: letter-to-letter difference.
-const DISTRESS0 = { tex: "none", amount: 0.1, scale: 1, edges: 0.5, vary: 0.5, turn: 0 };
+const DISTRESS0 = { tex: "none", amount: 0.1, depth: 1, scale: 1, edges: 0.5, vary: 0.5, turn: 0 };
 // Wear and damage to the printing surface (type, blocks, plates, stencils), in micrometres. All estimates: no source
 // measures any of this. amount multiplies everything.
 const DAMAGE0 = { amount: 1, edge: 0, edgeSize: 400, chips: 0, chipSize: 250, broken: 0, cracks: 0, crackWidth: 120, starved: 0, spurs: 0 };

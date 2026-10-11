@@ -8,6 +8,7 @@ const PL = require("./pl_plates.js");
 const E = require("./pl_engine.js");
 const PRE = require("./pl_presets.js");
 const TX = require("./pl_textures.js");
+const VERSION = "1.1.6";   // keep in step with manifest.json (the smoke test checks)
 const LOOKS = PRE.LOOKS, GROUPS = PRE.GROUPS;
 
 function $(id) { return document.getElementById(id); }
@@ -66,11 +67,16 @@ const SECTIONS = [
         { kind: "slider", id: "pRim", label: "Squeezed rim", path: "press.rim", min: 0, max: 1.5, step: 0.05, est: true },
         { kind: "slider", id: "pRimWidth", label: "Rim width (µm)", path: "press.rimWidth", min: 20, max: 400, step: 5, est: true },
         { kind: "slider", id: "pStarve", label: "Starved middle", path: "press.starve", min: 0, max: 0.9, step: 0.05, est: true },
+        { kind: "slider", id: "pEdgeStarve", label: "Starved edge", path: "press.edgeStarve", min: 0, max: 1, step: 0.05 },
+        { kind: "slider", id: "pEdgeStarveWidth", label: "Starved edge width (µm)", path: "press.edgeStarveWidth", min: 50, max: 2500, step: 25 },
+        { kind: "slider", id: "pRing", label: "Edge ring", path: "press.ring", min: 0, max: 1, step: 0.05 },
+        { kind: "slider", id: "pRingInset", label: "Edge ring inset (µm)", path: "press.ringInset", min: 50, max: 2000, step: 25 },
+        { kind: "slider", id: "pRingWidth", label: "Edge ring width (µm)", path: "press.ringWidth", min: 30, max: 800, step: 10 },
         { kind: "slider", id: "pBleed", label: "Soak into paper (µm)", path: "press.bleed", min: 0, max: 200, step: 2, est: true },
         { kind: "slider", id: "pHalo", label: "Oil halo", path: "press.halo", min: 0, max: 1, step: 0.05, est: true },
         { kind: "slider", id: "pHaloWidth", label: "Halo width (µm)", path: "press.haloWidth", min: 50, max: 1500, step: 10, est: true },
         { kind: "slider", id: "pImpression", label: "Dent in the paper", path: "press.impression", min: 0, max: 1, step: 0.05, est: true }
-    ], hint: "The mark itself: how far the ink spreads past the plate, how round the corners get, the darker rim that letterpress and flexo squeeze out, and the paler middle of a starved solid." },
+    ], hint: "The mark itself: how far the ink spreads past the plate, how round the corners get, the darker rim that letterpress and flexo squeeze out, and the paler middle of a starved solid. Starved edge and Edge ring are a pale band just inside every edge, or a pale line set in from it, uneven and grainy, breaking up where the ink is thinnest: the look of True Grit's Atomica actions. They are a look, not a measured fault, and every process has them at 0; try Edge ring with some Squeezed rim for a dark outline and a pale line inside it." },
     { key: "faults", title: "Faults", open: false, items: [
         { kind: "slider", id: "fMottle", label: "Uneven solids", path: "press.mottle", min: 0, max: 1, step: 0.05, est: true },
         { kind: "slider", id: "fMottleScale", label: "Unevenness size (µm)", path: "press.mottleScale", min: 300, max: 20000, step: 100, est: true },
@@ -93,14 +99,15 @@ const SECTIONS = [
         { kind: "slider", id: "fScum", label: "Scum", path: "press.scum", min: 0, max: 1, step: 0.05, est: true },
         { kind: "slider", id: "fBanding", label: "Banding", path: "press.banding", min: 0, max: 1, step: 0.05, est: true },
         { kind: "select", id: "disTex", label: "Solid texture", path: "distress.tex", options: () => [["none", "None (fine noise only)"]].concat(TX.TEXTURES.map(t => [t.id, t.cat + ": " + t.label])) },
-        { kind: "slider", id: "disAmount", label: "Texture amount", path: "distress.amount", min: 0, max: 0.6, step: 0.01 },
+        { kind: "slider", id: "disAmount", label: "Texture amount", path: "distress.amount", min: 0, max: 0.6, step: 0.005, curve: 2.5, digits: 3 },
+        { kind: "slider", id: "disDepth", label: "Texture depth", path: "distress.depth", min: 0, max: 1, step: 0.01 },
         { kind: "slider", id: "disScale", label: "Texture size", path: "distress.scale", min: 0.25, max: 4, step: 0.05 },
         { kind: "slider", id: "disEdges", label: "Texture: more at edges", path: "distress.edges", min: 0, max: 2, step: 0.05 },
         { kind: "slider", id: "disVary", label: "Texture: varies by letter", path: "distress.vary", min: 0, max: 1, step: 0.05 },
         { kind: "select", id: "disTurn", label: "Texture direction", path: "distress.turn", options: () => [["0", "As scanned"], ["90", "Turned 90°"]] },
         { kind: "slider", id: "texStrength", label: "Ink texture layer", path: "inkTexture.strength", min: 0, max: 1.5, step: 0.05 },
         { kind: "select", id: "texMode", label: "Ink texture reads", path: "inkTexture.mode", options: () => [["dark", "Dark removes ink"], ["light", "Light removes ink"]] }
-    ], hint: "What goes wrong in the solids and round the edges. Uneven letters and the ink texture are applied letter by letter. To use a texture of your own (a wood-type texture, say), put it on a layer whose name starts with \"ink texture\": each letter takes a different piece of it, so a repeating texture does not show its repeat. None of these amounts is in any source; the defaults are estimates set against scans. Solid texture takes ink out of the solids following a scanned texture (rollers, sponges, wood, grit, photocopies); Texture amount is the share of a solid it removes. Each letter takes its own piece of the texture, flipped, so it never repeats. With a texture chosen, Salty solids is halved." },
+    ], hint: "What goes wrong in the solids and round the edges. Uneven letters and the ink texture are applied letter by letter. To use a texture of your own (a wood-type texture, say), put it on a layer whose name starts with \"ink texture\": each letter takes a different piece of it, so a repeating texture does not show its repeat. None of these amounts is in any source; the defaults are estimates set against scans. Solid texture takes ink out of the solids following a scanned texture (rollers, sponges, wood, grit, photocopies); Texture amount is the share of a solid it removes (the slider is finer at the bottom: it goes down to 0.001). Texture depth is how much ink goes where the texture marks: 1 takes it all, 0.3 leaves it slightly paler, for a light, even texture. Each letter takes its own piece of the texture, flipped, so it never repeats. With a texture chosen, Salty solids is halved." },
     { key: "damage", title: "Wear and damage", open: false, items: [
         { kind: "slider", id: "dAmount", label: "Overall", path: "damage.amount", min: 0, max: 3, step: 0.05 },
         { kind: "slider", id: "dEdge", label: "Edge wear (µm)", path: "damage.edge", min: 0, max: 600, step: 5, est: true },
@@ -158,7 +165,11 @@ const SECTIONS = [
 const ITEMS = {};
 for (const s of SECTIONS) for (const it of s.items) ITEMS[it.id] = it;
 
-function fmt(v, it) { if (it.show) return it.show(v); const d = it.step >= 1 ? 0 : (it.step >= 0.1 ? 1 : 2); return (+v).toFixed(d); }
+function fmt(v, it) { if (it.show) return it.show(v); const d = it.digits !== undefined ? it.digits : (it.step >= 1 ? 0 : (it.step >= 0.1 ? 1 : (it.step >= 0.01 ? 2 : 3))); return (+v).toFixed(d); }
+// Slider position <-> value. A curved slider spends more of its travel on small values (fine control at the bottom).
+const SLN = 400;
+function posToVal(it, p) { if (!it.curve) return +(it.min + p * it.step).toFixed(4); const f = Math.pow(p / SLN, it.curve); return +(it.min + (it.max - it.min) * f).toFixed(4); }
+function valToPos(it, v) { if (!it.curve) return Math.round((clamp(v, it.min, it.max) - it.min) / it.step); const f = (clamp(v, it.min, it.max) - it.min) / (it.max - it.min); return Math.round(Math.pow(f, 1 / it.curve) * SLN); }
 function getVal(it) { const v = getPath(st, it.path); return v === undefined ? it.min : v; }
 function setVal(it, v) { if (it.set) it.set(v); else setPath(st, it.path, v); }
 function fillSelect(sel, options) { while (sel.firstChild) sel.removeChild(sel.firstChild); for (const [v, t] of options) { const op = document.createElement("option"); op.value = v; op.textContent = t; sel.appendChild(op); } }
@@ -195,9 +206,9 @@ function buildUI() {
                 row.appendChild(sel);
             } else {
                 const r = document.createElement("input"); r.type = "range"; r.id = it.id;
-                r.min = "0"; r.max = "" + Math.round((it.max - it.min) / it.step); r.step = "1";
+                r.min = "0"; r.max = "" + (it.curve ? SLN : Math.round((it.max - it.min) / it.step)); r.step = "1";
                 const val = document.createElement("span"); val.className = "val"; val.id = it.id + "Val";
-                r.addEventListener("input", () => { const v = +(it.min + parseInt(r.value, 10) * it.step).toFixed(4); setVal(it, v); val.textContent = fmt(v, it); switchOn(sec.key); markModified(); });
+                r.addEventListener("input", () => { const v = posToVal(it, parseInt(r.value, 10)); setVal(it, v); val.textContent = fmt(v, it); switchOn(sec.key); markModified(); });
                 r.addEventListener("change", saveState);
                 row.appendChild(r); row.appendChild(val);
             }
@@ -228,7 +239,7 @@ function syncUI() {
         if (it.kind === "text") { const v = getPath(st, it.path); el.value = v === undefined ? "" : "" + v; continue; }
         if (it.kind === "select") { const v = getPath(st, it.path), opts = it.options(); el.value = opts.some(o => o[0] === v) ? "" + v : opts[0][0]; continue; }
         const v = getVal(it);
-        el.value = "" + Math.round((clamp(v, it.min, it.max) - it.min) / it.step);
+        el.value = "" + valToPos(it, v);
         $(id + "Val").textContent = fmt(v, it);
     }
     const l = LOOKS.find(x => x.id === currentLook);
@@ -651,6 +662,7 @@ $("presetDeleteBtn").addEventListener("click", async () => {
 // ------------------------------------------------------------------ wiring
 
 buildUI();
+try { $("ver").textContent = "v" + VERSION; } catch (e) {}
 $("group").addEventListener("change", () => { fillLooks(); saveState(); });
 $("look").addEventListener("change", () => { const v = $("look").value; if (v.indexOf("__") === 0) { syncUI(); return; } applyLook(v === "custom" ? "" : v); });
 $("renderBtn").addEventListener("click", () => run("full"));
