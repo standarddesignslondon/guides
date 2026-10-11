@@ -7,6 +7,7 @@ const D = require("./pl_data.js");
 const PL = require("./pl_plates.js");
 const E = require("./pl_engine.js");
 const PRE = require("./pl_presets.js");
+const TX = require("./pl_textures.js");
 const LOOKS = PRE.LOOKS, GROUPS = PRE.GROUPS;
 
 function $(id) { return document.getElementById(id); }
@@ -18,7 +19,7 @@ function mergeDeep(a, b) { for (const k in b) { if (b[k] && typeof b[k] === "obj
 
 // ------------------------------------------------------------------ state
 
-const SECTION_KEYS = ["ink", "faults", "tone", "register", "paper", "age"];       // the stages that can be switched off
+const SECTION_KEYS = ["ink", "faults", "damage", "tone", "register", "paper", "age"];       // the stages that can be switched off
 const EXTRA = { inkTexture: { strength: 1, mode: "dark" }, read: "seen" };          // panel settings that are not part of a look
 function baseState() { return Object.assign(D.assemble({ process: "letterpress_job" }), deep(EXTRA)); }
 let st = baseState();
@@ -35,8 +36,9 @@ const own = (v) => (v < 0 ? "own" : (+v).toFixed(2));
 const SECTIONS = [
     { key: "process", title: "Process", open: true, noToggle: true, items: [
         { kind: "select", id: "procSel", label: "Process", path: "process", options: optsOf(D.PROCESSES), set: (v) => { D.applyProcess(st, v); } },
+        { kind: "select", id: "sheet", label: "Sheet size", path: "sheet", options: () => Object.keys(D.SHEETS).map(k => [k, D.SHEETS[k].label]) },
         { kind: "slider", id: "scale", label: "Detail scale", path: "scale", min: 0.25, max: 4, step: 0.05 }
-    ], hint: "Choosing a process resets the Ink, Faults and Tone sections to that process. Every size in this panel is a real size on the paper (micrometres), worked out from the document's resolution. Detail scale enlarges or shrinks all of it at once: 2 draws every dot, edge and fault twice as large, which is how to show a fine screen in a low-resolution document." },
+    ], hint: "Sheet size says how big the print really is: the long side of the document is taken as that length whatever its resolution, so a 2000-pixel document at 72 ppi can still print as an A3 bill. From the document's resolution uses Image > Image Size. Choosing a process resets the Ink, Faults and Tone sections to that process. Every size in this panel is a real size on the paper (micrometres), worked out from the document's resolution. Detail scale enlarges or shrinks all of it at once: 2 draws every dot, edge and fault twice as large, which is how to show a fine screen in a low-resolution document." },
     { key: "colour", title: "Plates and inks", open: true, noToggle: true, items: [
         { kind: "select", id: "inkMode", label: "Flat layers print in", path: "colour.inkMode", options: () => [["layer", "Their own colour"], ["set", "The nearest ink in the set"]] },
         { kind: "select", id: "inkset", label: "Ink set", path: "colour.inkset", options: optsOf(D.INKSETS) },
@@ -90,9 +92,27 @@ const SECTIONS = [
         { kind: "slider", id: "fSpecks", label: "Stray specks", path: "press.specks", min: 0, max: 1, step: 0.05, est: true },
         { kind: "slider", id: "fScum", label: "Scum", path: "press.scum", min: 0, max: 1, step: 0.05, est: true },
         { kind: "slider", id: "fBanding", label: "Banding", path: "press.banding", min: 0, max: 1, step: 0.05, est: true },
+        { kind: "select", id: "disTex", label: "Solid texture", path: "distress.tex", options: () => [["none", "None (fine noise only)"]].concat(TX.TEXTURES.map(t => [t.id, t.cat + ": " + t.label])) },
+        { kind: "slider", id: "disAmount", label: "Texture amount", path: "distress.amount", min: 0, max: 0.6, step: 0.01 },
+        { kind: "slider", id: "disScale", label: "Texture size", path: "distress.scale", min: 0.25, max: 4, step: 0.05 },
+        { kind: "slider", id: "disEdges", label: "Texture: more at edges", path: "distress.edges", min: 0, max: 2, step: 0.05 },
+        { kind: "slider", id: "disVary", label: "Texture: varies by letter", path: "distress.vary", min: 0, max: 1, step: 0.05 },
+        { kind: "select", id: "disTurn", label: "Texture direction", path: "distress.turn", options: () => [["0", "As scanned"], ["90", "Turned 90°"]] },
         { kind: "slider", id: "texStrength", label: "Ink texture layer", path: "inkTexture.strength", min: 0, max: 1.5, step: 0.05 },
         { kind: "select", id: "texMode", label: "Ink texture reads", path: "inkTexture.mode", options: () => [["dark", "Dark removes ink"], ["light", "Light removes ink"]] }
-    ], hint: "What goes wrong in the solids and round the edges. Uneven letters and the ink texture are applied letter by letter. To use a texture of your own (a wood-type texture, say), put it on a layer whose name starts with \"ink texture\": each letter takes a different piece of it, so a repeating texture does not show its repeat. None of these amounts is in any source; the defaults are estimates set against scans." },
+    ], hint: "What goes wrong in the solids and round the edges. Uneven letters and the ink texture are applied letter by letter. To use a texture of your own (a wood-type texture, say), put it on a layer whose name starts with \"ink texture\": each letter takes a different piece of it, so a repeating texture does not show its repeat. None of these amounts is in any source; the defaults are estimates set against scans. Solid texture takes ink out of the solids following a scanned texture (rollers, sponges, wood, grit, photocopies); Texture amount is the share of a solid it removes. Each letter takes its own piece of the texture, flipped, so it never repeats. With a texture chosen, Salty solids is halved." },
+    { key: "damage", title: "Wear and damage", open: false, items: [
+        { kind: "slider", id: "dAmount", label: "Overall", path: "damage.amount", min: 0, max: 3, step: 0.05 },
+        { kind: "slider", id: "dEdge", label: "Edge wear (µm)", path: "damage.edge", min: 0, max: 600, step: 5, est: true },
+        { kind: "slider", id: "dEdgeSize", label: "Edge wear size (µm)", path: "damage.edgeSize", min: 100, max: 3000, step: 50, est: true },
+        { kind: "slider", id: "dChips", label: "Chips", path: "damage.chips", min: 0, max: 1, step: 0.05, est: true },
+        { kind: "slider", id: "dChipSize", label: "Chip size (µm)", path: "damage.chipSize", min: 50, max: 1500, step: 25, est: true },
+        { kind: "slider", id: "dBroken", label: "Broken letters", path: "damage.broken", min: 0, max: 0.5, step: 0.01, est: true },
+        { kind: "slider", id: "dCracks", label: "Cracked letters", path: "damage.cracks", min: 0, max: 0.5, step: 0.01, est: true },
+        { kind: "slider", id: "dCrackWidth", label: "Crack width (µm)", path: "damage.crackWidth", min: 30, max: 500, step: 10, est: true },
+        { kind: "slider", id: "dStarved", label: "Starved letters", path: "damage.starved", min: 0, max: 1, step: 0.05, est: true },
+        { kind: "slider", id: "dSpurs", label: "Ink spurs", path: "damage.spurs", min: 0, max: 1, step: 0.05, est: true }
+    ], hint: "Damage to the type, blocks or stencil, so the shapes themselves break down: worn and nibbled edges, chips out of edges, letters with a piece missing or a crack across them, letters short of ink on one side, and ink creeping past an edge. Broken, cracked and starved letters are the share of letters affected (letters under about 3 mm are not broken or cracked, and small letters wear less). Overall scales everything. Applies to flat (line) layers, not pictures. New impression gives different letters. All amounts are estimates: no source measures them." },
     { key: "tone", title: "Tone", open: false, items: [
         { kind: "select", id: "carrier", label: "Tone is carried by", path: "tone.carrier", options: () => [["halftone", "Halftone dots"], ["line", "Parallel-line tint"], ["crayon", "Crayon on grained stone"], ["stipple", "Hand stipple"], ["spatter", "Spatter (crachis)"], ["gravure", "Gravure cells"], ["collotype", "Collotype grain"], ["grain", "Grain screen"], ["threshold", "Line only (no tone)"], ["contone", "Continuous"]] },
         { kind: "slider", id: "lpi", label: "Screen (lines/inch)", path: "tone.lpi", min: 20, max: 300, step: 1 },
@@ -130,7 +150,9 @@ const SECTIONS = [
         { kind: "slider", id: "ageWear", label: "Rubbing and cracks", path: "age.wear", min: 0, max: 1, step: 0.05, est: true },
         { kind: "slider", id: "ageDirt", label: "Dirt", path: "age.dirt", min: 0, max: 1, step: 0.05, est: true },
         { kind: "slider", id: "ageSetoff", label: "Set-off", path: "age.setoff", min: 0, max: 1, step: 0.05, est: true },
-        { kind: "slider", id: "ageOil", label: "Oil staining", path: "age.oil", min: 0, max: 1, step: 0.05, est: true }
+        { kind: "slider", id: "ageOil", label: "Oil staining", path: "age.oil", min: 0, max: 1, step: 0.05, est: true },
+        { kind: "slider", id: "ageScratches", label: "Scratches", path: "age.scratches", min: 0, max: 1, step: 0.05, est: true },
+        { kind: "slider", id: "ageFlaking", label: "Flaking ink", path: "age.flaking", min: 0, max: 1, step: 0.05, est: true }
     ], hint: "A fresh print has all of these at 0. Faded inks follows the pigment: fugitive lakes and dyes go first, blacks and earths hardly at all. Yellowing, edges, foxing and dirt are laid over whatever paper is in use, your own layer included; with Paper set to None they go onto the Multiply layer as a stain." }
 ];
 const ITEMS = {};
@@ -236,9 +258,9 @@ function applyLook(id) {
     const l = LOOKS.find(x => x.id === id);
     if (!l) { currentLook = ""; modified = true; syncUI(); saveState(); return; }
     // the paper choice, the detail scale, the texture layer settings and the seed belong to the document, not the look
-    const keep = { seed: st.seed, scale: st.scale, source: st.paper.source, layerStrength: st.paper.layerStrength, inkTexture: deep(st.inkTexture), read: st.read };
+    const keep = { sheet: st.sheet, seed: st.seed, scale: st.scale, source: st.paper.source, layerStrength: st.paper.layerStrength, inkTexture: deep(st.inkTexture), read: st.read };
     st = D.assemble(l);
-    st.seed = keep.seed; st.scale = keep.scale; st.paper.source = keep.source; st.paper.layerStrength = keep.layerStrength; st.inkTexture = keep.inkTexture; st.read = keep.read;
+    st.sheet = keep.sheet || "doc"; st.seed = keep.seed; st.scale = keep.scale; st.paper.source = keep.source; st.paper.layerStrength = keep.layerStrength; st.inkTexture = keep.inkTexture; st.read = keep.read;
     const paperOff = enabled.paper === false;
     enabled = {}; if (paperOff) enabled.paper = false;
     currentLook = l.id; modified = false;
@@ -488,11 +510,17 @@ async function render(mode) {
             }
             for (const l of hidden) l.visible = true;
             hidden.length = 0;
+            // ---- textures from the library (files inside the plugin)
+            const textures = {}, want = [];
+            if (en.faults !== false && s.distress && s.distress.tex && s.distress.tex !== "none" && s.distress.amount > 0) want.push(s.distress.tex);
+            if (en.age !== false && s.age.scratches > 0) want.push("scratches");
+            if (en.age !== false && s.age.flaking > 0) want.push("flaking");
+            for (const id of want) { try { textures[id] = await loadTexture(id); } catch (e) { notes.push("texture '" + id + "' could not be read (" + (e.message || e) + ")"); } }
 
             // ---- print
             const noPaper = s.paper.source === "none" && paperOn;
             const multiply = noPaper && !region;          // a preview over the artwork would multiply with it: previews are shown on white
-            const job = { W, H, ppi, plates, settings: s, enabled: en, region, bits, paperRgb: plan.paperRgb, paperLayer, inkTexture };
+            const job = { W, H, ppi, plates, settings: s, enabled: en, region, bits, paperRgb: plan.paperRgb, paperLayer, inkTexture, textures };
             const step = async (frac, label) => { try { ctx.reportProgress({ value: clamp(frac, 0, 1), commandName: label }); } catch (e) {} if (ctx.isCancelled) throw new Error("Cancelled."); await new Promise(res => setTimeout(res, 0)); };
             const runJob = async (only, label, f0, f1) => {
                 if (only !== undefined) job.only = only; else delete job.only;
@@ -530,9 +558,9 @@ async function render(mode) {
             if (selIDs) await selectLayers(selIDs);
             lastResults[doc.id] = { docID: doc.id, layerIDs: made, region, hiddenIDs, selIDs: selIDs || (last && last.selIDs) || null }; ok = true;
             const um = rinfo.um;
-            if (um > 130) notes.push("at " + Math.round(ppi) + " ppi" + (s.scale !== 1 ? " and Detail scale " + s.scale : "") + " one pixel is " + um.toFixed(0) + " µm of paper, too coarse to show most of what the process does; set the document's real resolution (Image > Image Size with Resample off) or raise Detail scale");
+            if (um > 130) notes.push("one pixel is " + um.toFixed(0) + " µm of paper, so the print is taken to be " + Math.round(Math.max(W, H) * um / 1000) + " mm across: too coarse to show most of what the process does. Choose a smaller Sheet size, set the document's real resolution (Image > Image Size with Resample off), or raise Detail scale");
             const plateList = rinfo.order.map((nm, i) => { const p = plates.find(q => q.name === nm); return (i + 1) + ". " + nm + (p && nm.indexOf(p.ink.label) < 0 ? " - " + p.ink.label : ""); });
-            info = (region ? (region.right - region.left) + "×" + (region.bottom - region.top) + " preview" : W + "×" + H) + (bits === 16 ? " (16-bit)" : "") + ", 1 px = " + um.toFixed(0) + " µm"
+            info = (region ? (region.right - region.left) + "×" + (region.bottom - region.top) + " preview" : W + "×" + H) + (bits === 16 ? " (16-bit)" : "") + ", 1 px = " + um.toFixed(0) + " µm, sheet " + Math.round(Math.max(W, H) * um / 1000) + " mm on its long side"
                 + "\nPrinted: " + plateList.join("; ")
                 + (hiddenIDs.length && !region ? "\nThe inks are on a Multiply layer; " + hiddenIDs.length + " artwork layer" + (hiddenIDs.length > 1 ? "s were" : " was") + " hidden so your paper shows through." : "")
                 + (noPaper && region ? "\nPreview shown on white (a full render goes on a Multiply layer)." : "")
@@ -552,6 +580,21 @@ async function render(mode) {
         throw err;
     }
     return info.replace("\n", ", " + ((Date.now() - t0) / 1000).toFixed(1) + "s\n");
+}
+
+// Library textures are read once from the plugin's own folder and kept.
+const TEXCACHE = {};
+async function loadTexture(id) {
+    if (TEXCACHE[id]) return TEXCACHE[id];
+    if (!TX.byId(id)) throw new Error("no such texture");
+    let buf = null, err = null;
+    try {
+        const uxp = require("uxp"), folder = await uxp.storage.localFileSystem.getPluginFolder();
+        const tf = await folder.getEntry("textures"), f = await tf.getEntry(id + ".bin");
+        buf = await f.read({ format: uxp.storage.formats.binary });
+    } catch (e) { err = e; }
+    if (!buf) { try { buf = require("fs").readFileSync("plugin:/textures/" + id + ".bin"); } catch (e) { throw err || e; } }
+    return (TEXCACHE[id] = TX.parseBin(buf, id));
 }
 
 async function run(mode) {

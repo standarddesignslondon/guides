@@ -17,6 +17,12 @@ const PRESS0 = {
     mottle: 0, mottleScale: 3000, salt: 0, saltScale: 180, speckle: 0, sorts: 0, grain: 0, grainAngle: 0, wear: 0,
     mesh: 0, meshPitch: 205, hollow: 0, hollowWidth: 600, spatter: 0, slur: 0, slurAngle: 90, hickeys: 0, specks: 0, scum: 0, banding: 0
 };
+// Texture in the solids, from the texture library (pl_textures.js). amount: the fraction of a solid the texture takes away.
+// scale: multiplies the texture's own size. edges: how much more it takes near an edge. vary: letter-to-letter difference.
+const DISTRESS0 = { tex: "none", amount: 0.1, scale: 1, edges: 0.5, vary: 0.5, turn: 0 };
+// Wear and damage to the printing surface (type, blocks, plates, stencils), in micrometres. All estimates: no source
+// measures any of this. amount multiplies everything.
+const DAMAGE0 = { amount: 1, edge: 0, edgeSize: 400, chips: 0, chipSize: 250, broken: 0, cracks: 0, crackWidth: 120, starved: 0, spurs: 0 };
 const TONE0 = { carrier: "halftone", lpi: 100, angle: 45, dot: "square", minDot: 0.04, maxDot: 0.95, comp: 0.7, contrast: 1, grainSize: 180, tintSteps: 0 };
 
 const PROCESSES = {
@@ -24,93 +30,114 @@ const PROCESSES = {
         press: { ink: 1.0, pressure: 0.9, gain: 48, soften: 40, edge: 22, ragged: 0.5, raggedScale: 180, rim: 0.5, rimWidth: 110, starve: 0.25, halo: 0.12, haloWidth: 350, impression: 0.3,
             mottle: 0.45, mottleScale: 5000, salt: 0.42, saltScale: 230, speckle: 0.3, sorts: 0.6, grain: 0.35, grainAngle: 0, wear: 0.4 },
         tone: { carrier: "halftone", lpi: 55, dot: "square", minDot: 0.08, maxDot: 0.9 },
+        distress: { tex: "woodtype_c", amount: 0.1, edges: 0.6 }, damage: { edge: 150, edgeSize: 800, chips: 0.45, chipSize: 400, broken: 0.06, cracks: 0.08, crackWidth: 120, starved: 0.15, spurs: 0.08 },
         note: "Wood letter and large metal type printed on a cylinder or hand press with soft packing on cheap damped paper (Southward 1915), so more squash and softer edges than book work." },
     letterpress_job: { label: "Letterpress: jobbing (platen)", family: "relief",
         press: { ink: 1.0, pressure: 1.0, gain: 28, soften: 20, edge: 18, ragged: 0.35, raggedScale: 95, rim: 0.45, rimWidth: 70, starve: 0.15, halo: 0.08, haloWidth: 250, impression: 0.25,
             mottle: 0.22, mottleScale: 2500, salt: 0.16, saltScale: 150, speckle: 0.32, sorts: 0.25, wear: 0.15 },
         tone: { carrier: "halftone", lpi: 100, dot: "square", minDot: 0.05, maxDot: 0.93 },
+        distress: { tex: "roller_speckled", amount: 0.06, edges: 0.5 }, damage: { edge: 25, edgeSize: 250, chips: 0.15, chipSize: 150, broken: 0.03, cracks: 0.02, crackWidth: 70, starved: 0.08 },
         note: "Metal type and blocks on a jobbing platen: tickets, programmes, handbills. Set by eye against Simon's 1931-58 tickets and programmes." },
     letterpress_fine: { label: "Letterpress: fine (art paper)", family: "relief",
         press: { ink: 0.95, pressure: 1.0, gain: 14, soften: 12, edge: 15, ragged: 0.12, raggedScale: 100, rim: 0.3, rimWidth: 45, starve: 0.08, impression: 0.12,
             mottle: 0.08, mottleScale: 2000, salt: 0.04, saltScale: 120, speckle: 0.15, sorts: 0.08 },
         tone: { carrier: "halftone", lpi: 133, dot: "square", minDot: 0.04, maxDot: 0.95 },
+        distress: { tex: "none" }, damage: { edge: 8, edgeSize: 200, chips: 0.03, chipSize: 100 },
         note: "Hard packing on coated or imitation-art paper: the dot is sharp with a pale centre (Getty Atlas)." },
     letterpress_news: { label: "Letterpress: rotary newspaper", family: "relief",
         press: { ink: 0.8, pressure: 0.85, gain: 45, soften: 30, edge: 20, ragged: 0.7, raggedScale: 110, rim: 0.3, rimWidth: 80, starve: 0.1, bleed: 6, halo: 0.25, haloWidth: 300,
             mottle: 0.3, mottleScale: 3500, salt: 0.3, saltScale: 220, speckle: 0.45, sorts: 0.08 },
         tone: { carrier: "halftone", lpi: 60, dot: "square", minDot: 0.08, maxDot: 0.88 },
+        distress: { tex: "grit_mixed", amount: 0.08, edges: 0.5 }, damage: { edge: 30, edgeSize: 250, chips: 0.2, chipSize: 150, broken: 0.04, starved: 0.1 },
         note: "Stereotype plates on newsprint with a non-drying mineral-oil ink that sets by soaking in (PrintWiki); 50-65 line screens (Whetton 1946)." },
     relief_block: { label: "Relief block: lino or woodcut", family: "relief",
         press: { ink: 1.05, pressure: 0.9, gain: 50, soften: 45, edge: 25, ragged: 0.45, raggedScale: 300, rim: 0.4, rimWidth: 110, starve: 0.2, impression: 0.2,
             mottle: 0.4, mottleScale: 6000, salt: 0.45, saltScale: 260, speckle: 0.15, grain: 0.25, wear: 0.25 },
         tone: { carrier: "threshold" },
+        distress: { tex: "wood_grain_bold", amount: 0.06, edges: 0.4 }, damage: { edge: 60, edgeSize: 600, chips: 0.3, chipSize: 350, cracks: 0.06, crackWidth: 150, starved: 0.1, spurs: 0.15 },
         note: "Lino and side-grain wood blocks for flat poster colour and tint grounds." },
     flexo: { label: "Aniline (flexographic) on bags", family: "relief",
         press: { ink: 0.8, pressure: 1.1, gain: 70, soften: 45, edge: 25, ragged: 0.7, raggedScale: 130, rim: 0.5, rimWidth: 110, starve: 0.25,
             mottle: 0.35, mottleScale: 1200, salt: 0.1, saltScale: 200, speckle: 0.3, spatter: 0.2 },
         tone: { carrier: "threshold" },
+        distress: { tex: "roller_blotchy", amount: 0.1, edges: 0.4 }, damage: { edge: 30, edgeSize: 300, chips: 0.1, chipSize: 200, starved: 0.1, spurs: 0.2 },
         note: "Rubber plates and thin spirit dye inks: a ring of squeezed-out ink, little embossing, cloudy solids (FBI, Flexopedia). Halo width is an estimate; the spatter is set from Simon's French paper bags." },
     litho_stone: { label: "Lithography: drawn on stone or zinc", family: "litho",
         press: { ink: 1.1, pressure: 1, gain: 15, soften: 25, edge: 30, ragged: 0.25, raggedScale: 160, mottle: 0.18, mottleScale: 3500, salt: 0.08, saltScale: 150, speckle: 0.1, scum: 0.04 },
         tone: { carrier: "crayon", grainSize: 150, comp: 0.9 },
+        distress: { tex: "chipboard", amount: 0.04, edges: 0.3 }, damage: { edge: 10, edgeSize: 300 },
         note: "Direct lithography: ink level with the paper, no squeezed rim, soft edges, tone from crayon grain, stipple or spatter (Graphics Atlas; Cumming 1904)." },
     litho_offset: { label: "Offset lithography", family: "litho",
         press: { ink: 0.9, pressure: 1, gain: 10, soften: 14, edge: 18, ragged: 0.12, raggedScale: 90, mottle: 0.1, mottleScale: 2500, speckle: 0.24, hickeys: 0.3 },
         tone: { carrier: "halftone", lpi: 133, dot: "round", minDot: 0.03, maxDot: 0.97 },
+        distress: { tex: "none" }, damage: { edge: 0 },
         note: "A thin film (1-2 micrometres, Voet 1952) off a rubber blanket: flat, slightly fuzzy dots, occasional hickeys." },
     litho_offset_small: { label: "Small offset (duplicator, instant print)", family: "litho",
         press: { ink: 0.85, pressure: 1, gain: 20, soften: 25, edge: 30, ragged: 0.2, raggedScale: 140, mottle: 0.25, mottleScale: 3000, speckle: 0.12, hickeys: 1.2, specks: 0.15, scum: 0.25, banding: 0.2 },
         tone: { carrier: "halftone", lpi: 85, dot: "round", minDot: 0.06, maxDot: 0.9 },
+        distress: { tex: "roller_fine", amount: 0.06, edges: 0.4 }, damage: { edge: 15, edgeSize: 250, starved: 0.1 },
         note: "Multilith, Rotaprint and instant-print offset from paper or thin metal plates: scumming, uneven inking, hickeys." },
     screen_film: { label: "Screenprint: knife-cut film stencil", family: "screen",
         press: { ink: 1.4, pressure: 1, gain: 40, soften: 60, edge: 20, ragged: 0.3, raggedScale: 320, rim: 0.25, rimWidth: 80, mottle: 0.12, mottleScale: 4000, speckle: 0.12, mesh: 0.5, meshPitch: 205 },
         tone: { carrier: "halftone", lpi: 65, dot: "round", minDot: 0.1, maxDot: 0.85 }, opacity: 0.9,
+        distress: { tex: "concrete_pits", amount: 0.03, edges: 0.2 }, damage: { edge: 10, edgeSize: 400, spurs: 0.05 },
         note: "A thick paint film (27-41 micrometres wet, from a 1962 coverage figure) through No. 12 silk; knife-cut film gives clean edges (Biegeleisen 1941). Fine speckle and rounded corners set from Simon's screenprint scans." },
     screen_glue: { label: "Screenprint: glue, tusche or paper stencil", family: "screen",
         press: { ink: 1.4, pressure: 1, gain: 50, soften: 55, edge: 25, ragged: 0.5, raggedScale: 260, rim: 0.25, rimWidth: 80, mottle: 0.2, mottleScale: 4000, salt: 0.12, saltScale: 200, speckle: 0.12, mesh: 0.8, meshPitch: 230 },
         tone: { carrier: "threshold" }, opacity: 0.9,
+        distress: { tex: "sponge_open", amount: 0.08, edges: 0.5 }, damage: { edge: 40, edgeSize: 400, chips: 0.15, chipSize: 250, spurs: 0.25 },
         note: "Glue and tusche stencils leave a ragged, mesh-marked edge and pinholes (Biegeleisen 1941)." },
     pochoir: { label: "Stencil and brush (pochoir, ROSTA, TASS)", family: "screen",
         press: { ink: 1.3, pressure: 1, gain: 0, soften: 80, edge: 60, ragged: 0.35, raggedScale: 600, rim: 0.7, rimWidth: 160, mottle: 0.45, mottleScale: 5000, speckle: 0.1, grain: 0.45, grainAngle: 20 },
         tone: { carrier: "threshold" }, opacity: 0.95,
+        distress: { tex: "brush_dry", amount: 0.12, edges: 0.6 }, damage: { edge: 40, edgeSize: 600, spurs: 0.2 },
         note: "Gouache or paint brushed through a cut stencil: a ridge at the stencil edge and bristle traces (Smithsonian Libraries)." },
     gravure: { label: "Rotogravure", family: "intaglio",
         press: { ink: 1.0, pressure: 1, gain: 10, soften: 18, edge: 20, ragged: 0.1, mottle: 0.08, mottleScale: 3000, salt: 0.1, saltScale: 170, speckle: 0.1, banding: 0.1 },
         tone: { carrier: "gravure", lpi: 150, angle: 45, minDot: 0, maxDot: 1 },
+        distress: { tex: "none" }, damage: { edge: 0 },
         note: "Equal cells of varying depth at 150-175 per inch; type is screened too, so it has a serrated edge (Tarr 1949, Focal 1960)." },
     collotype: { label: "Collotype", family: "screenless",
         press: { ink: 0.9, pressure: 1, gain: 5, soften: 15, edge: 25, mottle: 0.05, speckle: 0.05 },
         tone: { carrier: "collotype", grainSize: 125, minDot: 0, maxDot: 1 },
+        distress: { tex: "none" }, damage: { edge: 0 },
         note: "Tone in reticulated gelatin, polygons 0.10-0.15 mm across, no screen (Getty Atlas)." },
     woodblock_water: { label: "Woodblock, water-based (Japan)", family: "relief",
         press: { ink: 0.85, pressure: 0.8, gain: 20, soften: 50, edge: 45, ragged: 0.3, raggedScale: 300, rim: 0.15, rimWidth: 120, starve: 0.1, impression: 0.15,
             mottle: 0.4, mottleScale: 6000, salt: 0.15, saltScale: 260, speckle: 0.2, grain: 0.3, grainAngle: 0 },
         tone: { carrier: "contone" }, opacity: 0.1,
+        distress: { tex: "wood_grain_fine", amount: 0.07, edges: 0.3 }, damage: { edge: 40, edgeSize: 500, chips: 0.2, chipSize: 300, cracks: 0.04, crackWidth: 120 },
         note: "Water-based pigment rubbed in with a baren on soft paper: flat, matt, wood grain showing, gradations wiped by hand." },
     mimeo: { label: "Stencil duplicator (Gestetner, Roneo, mimeograph)", family: "duplicator",
         press: { ink: 0.9, pressure: 1, gain: 60, soften: 50, edge: 40, ragged: 0.6, raggedScale: 120, bleed: 30, halo: 0.5, haloWidth: 450,
             mottle: 0.3, mottleScale: 2500, salt: 0.3, saltScale: 150, speckle: 0.35, banding: 0.3 },
         tone: { carrier: "threshold" },
+        distress: { tex: "roller_patchy", amount: 0.12, edges: 0.5 }, damage: { edge: 25, edgeSize: 250, starved: 0.15, spurs: 0.15 },
         note: "Oil ink forced through a typed or drawn wax stencil onto absorbent paper: clotted strokes, an oil halo, filled counters (PSAP; Desborough 1917). Halo width is an estimate." },
     riso: { label: "Risograph (1980s)", family: "duplicator",
         press: { ink: 0.85, pressure: 1, gain: 30, soften: 30, edge: 30, ragged: 0.3, raggedScale: 120, bleed: 15, mottle: 0.2, mottleScale: 3000, salt: 0.15, saltScale: 150, speckle: 0.28, banding: 0.15 },
         tone: { carrier: "grain", grainSize: 110 },
+        distress: { tex: "roller_speckled", amount: 0.06, edges: 0.4 }, damage: { edge: 15, edgeSize: 250, starved: 0.08 },
         note: "Riso Kagaku's emulsion-ink stencil duplicator (Risograph 1980, RISO 007 1984). No resolution figure was found for the early machines; the grain is an estimate." },
     spirit: { label: "Spirit duplicator (Banda, Ditto)", family: "duplicator",
         press: { ink: 0.55, pressure: 1, gain: 30, soften: 60, edge: 80, ragged: 0.3, raggedScale: 200, bleed: 50, mottle: 0.35, mottleScale: 4000, salt: 0.1, speckle: 0.12, banding: 0.4 },
         tone: { carrier: "threshold" }, opacity: 0,
+        distress: { tex: "roller_blotchy", amount: 0.1, edges: 0.4 }, damage: { edge: 10, edgeSize: 400, starved: 0.2 },
         note: "Aniline dye lifted off a master by spirit: purple, fuzzy and ghostly, fading in light (PSAP)." },
     hecto: { label: "Hectograph (gelatin pad)", family: "duplicator",
         press: { ink: 0.5, pressure: 1, gain: 40, soften: 80, edge: 100, ragged: 0.25, raggedScale: 250, bleed: 70, mottle: 0.45, mottleScale: 6000, speckle: 0.08, banding: 0.2 },
         tone: { carrier: "threshold" }, opacity: 0,
+        distress: { tex: "roller_blotchy", amount: 0.12, edges: 0.4 }, damage: { edge: 10, edgeSize: 500, starved: 0.2 },
         note: "Dye transferred from a gelatin pad: soft violet lines, 20-100 copies, each fainter (PSAP)." },
     xerox_early: { label: "Xerography, early (914 era)", family: "copier",
         press: { ink: 1.0, pressure: 1, gain: 20, soften: 30, edge: 20, ragged: 0.5, raggedScale: 80, mottle: 0.15, salt: 0.15, saltScale: 100, speckle: 0.4, hollow: 0.8, hollowWidth: 500, specks: 0.35 },
         tone: { carrier: "threshold", contrast: 1.6 }, opacity: 1,
+        distress: { tex: "copy_toner", amount: 0.08, edges: 0.5 }, damage: { edge: 25, edgeSize: 200, starved: 0.1, spurs: 0.1 },
         note: "Solids develop only near their edges: 'black or dark adjacent to their edges and light or white at the central areas' (Haloid patent, 1954). The edge band width is an estimate." },
     xerox_late: { label: "Photocopier, 1970s-80s", family: "copier",
         press: { ink: 1.05, pressure: 1, gain: 25, soften: 28, edge: 20, ragged: 0.4, raggedScale: 80, mottle: 0.2, mottleScale: 4000, salt: 0.08, saltScale: 100, speckle: 0.3, hollow: 0.25, hollowWidth: 900, specks: 0.2, banding: 0.15 },
         tone: { carrier: "threshold", contrast: 1.5 }, opacity: 1,
+        distress: { tex: "copy_grain", amount: 0.06, edges: 0.4 }, damage: { edge: 15, edgeSize: 200, starved: 0.06, spurs: 0.05 },
         note: "High contrast with poor middle tones (Nicholson 1989); solids better filled than in the 1960s but still uneven." }
 };
 
@@ -266,6 +293,21 @@ const INKSETS = {
     typo_red_black: { label: "New Typography: red and black", inks: ["black_dense", "vermilion"], process: ["chrome_yellow", "vermilion", "royal_blue", "black_dense"] }
 };
 
+// ---------------------------------------------------------------- sheet sizes
+// How big the printed sheet is. "doc" takes the document's own resolution; any other choice sets the long side of the
+// document to that real length (standard sizes: ISO 216, JIS B, and British and US poster sizes).
+const SHEETS = {
+    doc: { label: "From the document's resolution", mm: 0 },
+    a5: { label: "A5 handbill (210 mm)", mm: 210 }, a4: { label: "A4 (297 mm)", mm: 297 }, a3: { label: "A3 (420 mm)", mm: 420 },
+    a2: { label: "A2 (594 mm)", mm: 594 }, a1: { label: "A1 (841 mm)", mm: 841 }, a0: { label: "A0 (1189 mm)", mm: 1189 },
+    crown: { label: "Crown, 15 x 20 in (508 mm)", mm: 508 }, window: { label: "Window card, 14 x 22 in (559 mm)", mm: 559 },
+    dcrown: { label: "Double crown, 20 x 30 in (762 mm)", mm: 762 }, ddemy: { label: "Double demy, 22.5 x 35 in (889 mm)", mm: 889 },
+    quad: { label: "Quad crown, 30 x 40 in (1016 mm)", mm: 1016 }, onesheet: { label: "US one-sheet, 27 x 41 in (1041 mm)", mm: 1041 },
+    b2: { label: "B2, Japan (728 mm)", mm: 728 }, b1: { label: "B1, Japan (1030 mm)", mm: 1030 }
+};
+// pixels per inch the engine works at: the document's own, or what the chosen sheet size makes it
+function effectivePpi(W, H, ppi, sheet) { const sz = SHEETS[sheet]; return sz && sz.mm > 0 ? Math.max(W, H) / (sz.mm / 25.4) : (ppi || 300); }
+
 // ---------------------------------------------------------------- full settings
 const BASE = {
     process: "letterpress_job",
@@ -274,8 +316,9 @@ const BASE = {
     colour: { pictures: "single", spotCount: 4, inkMode: "layer", inkset: "jobbing_uk", single: "auto", second: "poster_red", order: "stack", overlaps: "knockout_k", trap: 60, opacity: -1, gcr: 0.6, angles: "us1975", wet: 1 },
     register: { error: 0.15, stretch: 0.2, rotate: 0.01 },
     paper: { source: "stock", stock: "mf_white", colour: "", tooth: -1, texture: 0.6, fibres: 0.5, flecks: 0.5, showThrough: 0, layerStrength: 1 },
-    age: { yellow: 0, edges: 0, foxing: 0, fade: 0, folds: 0, wear: 0, dirt: 0, setoff: 0, oil: 0 },
-    scale: 1, seed: 1
+    age: { yellow: 0, edges: 0, foxing: 0, fade: 0, folds: 0, wear: 0, dirt: 0, setoff: 0, oil: 0, scratches: 0, flaking: 0 },
+    distress: Object.assign({}, DISTRESS0), damage: Object.assign({}, DAMAGE0),
+    scale: 1, seed: 1, sheet: "doc"
 };
 function deep(o) { return JSON.parse(JSON.stringify(o)); }
 function merge(a, b) { for (const k in b) { if (b[k] && typeof b[k] === "object" && !Array.isArray(b[k])) { if (!a[k] || typeof a[k] !== "object") a[k] = {}; merge(a[k], b[k]); } else a[k] = b[k]; } return a; }
@@ -283,9 +326,9 @@ function merge(a, b) { for (const k in b) { if (b[k] && typeof b[k] === "object"
 function assemble(look) {
     const s = deep(BASE), p = PROCESSES[look.process] || PROCESSES.letterpress_job;
     s.process = PROCESSES[look.process] ? look.process : "letterpress_job";
-    merge(s.press, p.press); merge(s.tone, p.tone || {});
+    merge(s.press, p.press); merge(s.tone, p.tone || {}); merge(s.distress, p.distress || {}); merge(s.damage, p.damage || {});
     if (p.opacity !== undefined) s.colour.opacity = p.opacity;
-    for (const k of ["press", "tone", "colour", "register", "paper", "age"]) if (look[k]) merge(s[k], deep(look[k]));
+    for (const k of ["press", "tone", "colour", "register", "paper", "age", "distress", "damage"]) if (look[k]) merge(s[k], deep(look[k]));
     if (look.scale) s.scale = look.scale;
     return s;
 }
@@ -293,6 +336,7 @@ function assemble(look) {
 function applyProcess(s, id) {
     const p = PROCESSES[id]; if (!p) return s;
     s.process = id; s.press = merge(Object.assign({}, PRESS0), p.press); s.tone = merge(Object.assign({}, TONE0), p.tone || {});
+    s.distress = merge(Object.assign({}, DISTRESS0), p.distress || {}); s.damage = merge(Object.assign({}, DAMAGE0), p.damage || {});
     s.colour.opacity = p.opacity !== undefined ? p.opacity : -1;
     return s;
 }
@@ -303,4 +347,4 @@ function nearestInk(rgb, setId) {
     return best;
 }
 
-module.exports = { PRESS0, TONE0, PROCESSES, PAPERS, INKS, INKSETS, BASE, assemble, applyProcess, ink, nearestInk, deep, merge };
+module.exports = { PRESS0, TONE0, DISTRESS0, DAMAGE0, SHEETS, effectivePpi, PROCESSES, PAPERS, INKS, INKSETS, BASE, assemble, applyProcess, ink, nearestInk, deep, merge };

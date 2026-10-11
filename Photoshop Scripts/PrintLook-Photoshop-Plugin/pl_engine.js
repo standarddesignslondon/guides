@@ -65,7 +65,7 @@ function gaussBig(src, dst, w, h, sigma, tmp) {
 // ------------------------------------------------------------------ per-job preparation
 function prepare(job) {
     const s = job.settings, en = job.enabled || {}, W = job.W, H = job.H;
-    const scale = Math.max(0.05, s.scale || 1), um = 25400 / (job.ppi || 300) / scale;   // micrometres of paper per pixel
+    const ppiEff = D.effectivePpi(W, H, job.ppi, s.sheet), scale = Math.max(0.05, s.scale || 1), um = 25400 / ppiEff / scale;   // micrometres of paper per pixel
     const px = (v) => v / um, mm = (v) => v * 1000 / um;
     const stock = D.PAPERS[s.paper.stock] || D.PAPERS.mf_white;
     const tooth = s.paper.tooth >= 0 ? s.paper.tooth : stock.tooth;
@@ -73,7 +73,7 @@ function prepare(job) {
     const P = Object.assign({}, D.PRESS0, s.press);
     if (!on("ink")) Object.assign(P, { gain: 0, soften: 0, edge: 0, ragged: 0, rim: 0, starve: 0, bleed: 0, halo: 0, impression: 0, ink: 1, pressure: 1 });
     if (!on("faults")) Object.assign(P, { mottle: 0, salt: 0, speckle: 0, sorts: 0, grain: 0, wear: 0, mesh: 0, hollow: 0, spatter: 0, slur: 0, hickeys: 0, specks: 0, scum: 0, banding: 0 });
-    const age = on("age") ? s.age : { yellow: 0, edges: 0, foxing: 0, fade: 0, folds: 0, wear: 0, dirt: 0, setoff: 0, oil: 0 };
+    const age = on("age") ? Object.assign({ scratches: 0, flaking: 0 }, s.age) : { yellow: 0, edges: 0, foxing: 0, fade: 0, folds: 0, wear: 0, dirt: 0, setoff: 0, oil: 0, scratches: 0, flaking: 0 };
     const seed = (s.seed | 0) || 1;
 
     // printing order
@@ -100,31 +100,70 @@ function prepare(job) {
         return feet;
     });
 
-    // letters ("sorts"): connected pieces of each line plate, found on a reduced copy
-    const needSorts = P.sorts > 0 || !!job.inkTexture;
+    // texture from the library in the solids (part of Faults), and wear and damage to the printing surface
+    const DS = Object.assign({}, D.DISTRESS0, s.distress || {}), DM = Object.assign({}, D.DAMAGE0, s.damage || {});
+    const dtex = on("faults") && DS.tex && DS.tex !== "none" && DS.amount > 0 && job.textures ? job.textures[DS.tex] : null;
+    const missing = on("faults") && DS.tex && DS.tex !== "none" && DS.amount > 0 && !dtex ? DS.tex : null;
+    const dis = dtex ? { tex: dtex, amount: C.clamp(DS.amount, 0, 0.95), edges: Math.max(0, DS.edges || 0), vary: C.clamp(DS.vary || 0, 0, 1), turn: +DS.turn === 90,
+        k: um / (dtex.texelUm * Math.max(0.1, DS.scale || 1)), zone: Math.max(1, mm(0.35) * Math.sqrt(Math.max(0.1, DS.scale || 1))), tone: Math.min(0.35, DS.amount * 1.5) } : null;
+    const dk = on("damage") ? Math.max(0, DM.amount) : 0;
+    const dmg = { edgePx: px(DM.edge * dk), edgeSizePx: Math.max(2, px(DM.edgeSize)), chips: Math.min(1, DM.chips * dk), chipPx: Math.max(1, px(DM.chipSize)),
+        broken: Math.min(1, DM.broken * dk), cracks: Math.min(1, DM.cracks * dk), crackPx: Math.max(0.7, px(DM.crackWidth * Math.sqrt(Math.max(dk, 0.3)))), starved: Math.min(1, DM.starved * dk), spurs: Math.min(1.5, DM.spurs * dk) };
+    dmg.letters = dmg.broken > 0 || dmg.cracks > 0 || dmg.starved > 0;
+    dmg.on = dmg.edgePx > 0.15 || dmg.chips > 0 || dmg.letters || dmg.spurs > 0;
+    // age textures: scratches and flaking take ink off
+    const ageTex = { scratches: age.scratches > 0 && job.textures ? job.textures.scratches : null, flaking: age.flaking > 0 && job.textures ? (job.textures.flaking || job.textures.cracked) : null };
+
+    // letters ("sorts"): connected pieces of each line plate, found on a reduced copy, with each one's size and centre
+    const needSorts = P.sorts > 0 || !!job.inkTexture || !!dis || dmg.on;
     const lf = Math.max(1, Math.ceil(Math.max(W, H) / 1400)), lw = Math.ceil(W / lf), lh = Math.ceil(H / lf);
-    const labels = job.plates.map((p) => {
+    const letters = job.plates.map(() => null);
+    const labels = job.plates.map((p, pi) => {
         if (!needSorts || p.kind !== "line") return null;
         const bin = new Uint8Array(lw * lh), cnt = new Uint16Array(lw * lh), sum = new Uint32Array(lw * lh);
         for (let y = 0; y < H; y++) { const ly = (y / lf) | 0, r = y * W; for (let x = 0; x < W; x++) { const li = ly * lw + ((x / lf) | 0); sum[li] += p.tau[r + x]; cnt[li]++; } }
         for (let i = 0; i < lw * lh; i++) bin[i] = sum[i] > cnt[i] * 90 ? 1 : 0;
-        const L = C.label(bin, lw, lh); return C.growLabels(L.labels, lw, lh, 3);
+        const L = C.label(bin, lw, lh), N = L.count + 1;
+        const x0 = new Float32Array(N).fill(1e9), x1 = new Float32Array(N).fill(-1e9), y0 = new Float32Array(N).fill(1e9), y1 = new Float32Array(N).fill(-1e9);
+        const area = new Float32Array(N), per = new Float32Array(N);
+        for (let y = 0; y < lh; y++) for (let x = 0; x < lw; x++) {
+            const i = y * lw + x, l = L.labels[i]; if (!l) continue; if (x < x0[l]) x0[l] = x; if (x > x1[l]) x1[l] = x; if (y < y0[l]) y0[l] = y; if (y > y1[l]) y1[l] = y;
+            area[l]++; per[l] += (x === 0 || L.labels[i - 1] !== l ? 1 : 0) + (x === lw - 1 || L.labels[i + 1] !== l ? 1 : 0) + (y === 0 || L.labels[i - lw] !== l ? 1 : 0) + (y === lh - 1 || L.labels[i + lw] !== l ? 1 : 0);
+        }
+        const sd = seed * 31 + pi * 7907, T = { n: N, stroke: new Float32Array(N), cx: new Float32Array(N), cy: new Float32Array(N), ex: new Float32Array(N), ey: new Float32Array(N), size: new Float32Array(N),
+            brk: new Float32Array(N), bc: new Float32Array(N), bs: new Float32Array(N), crk: new Uint8Array(N), kc: new Float32Array(N), ks: new Float32Array(N), kx: new Float32Array(N), ky: new Float32Array(N),
+            stv: new Float32Array(N), sc: new Float32Array(N), ss: new Float32Array(N), amt: new Float32Array(N), ox: new Float32Array(N), oy: new Float32Array(N), flip: new Uint8Array(N) };
+        for (let l = 1; l < N; l++) {
+            const cx = (x0[l] + x1[l] + 1) / 2 * lf, cy = (y0[l] + y1[l] + 1) / 2 * lf, ex = (x1[l] - x0[l] + 1) / 2 * lf, ey = (y1[l] - y0[l] + 1) / 2 * lf, hsh = (k) => C.hash2(l, k, sd);
+            T.stroke[l] = Math.max(1, 2 * area[l] / Math.max(1, per[l]) * 1.1) * lf;   // mean stroke width (2 x area / outline), so thin rules are not worn through
+            T.cx[l] = cx; T.cy[l] = cy; T.ex[l] = ex; T.ey[l] = ey; T.size[l] = C.clamp(2 * Math.max(ex, ey) / mm(10), 0.25, 1);   // small letters wear less, in proportion
+            const big = 2 * Math.max(ex, ey) >= mm(3);
+            if (big && hsh(1) < dmg.broken) { const a = hsh(2) * 2 * Math.PI, c = Math.cos(a), sn = Math.sin(a), e = Math.abs(c) * ex + Math.abs(sn) * ey; T.bc[l] = c; T.bs[l] = sn; T.brk[l] = e * (1 - 2 * (0.1 + 0.28 * hsh(3))); T.ex[l] = ex; }
+            else T.brk[l] = 1e9;
+            if (big && hsh(4) < dmg.cracks) { const a = (hsh(5) - 0.5) * 1.6 + (hsh(6) < 0.5 ? 0 : Math.PI / 2); T.crk[l] = 1; T.kc[l] = Math.cos(a); T.ks[l] = Math.sin(a); T.kx[l] = cx + (hsh(7) - 0.5) * ex * 0.8; T.ky[l] = cy + (hsh(8) - 0.5) * ey * 0.8; }
+            if (hsh(9) < dmg.starved) { const a = hsh(10) * 2 * Math.PI; T.stv[l] = 0.5 + 0.5 * hsh(11); T.sc[l] = Math.cos(a); T.ss[l] = Math.sin(a); }
+            T.amt[l] = dis ? 1 + dis.vary * (hsh(12) - 0.5) * 1.4 : 1;
+            T.ox[l] = hsh(13) * 4096; T.oy[l] = hsh(14) * 4096; T.flip[l] = (hsh(15) * 4) | 0 | (dis && !dis.tex.dir && hsh(16) < 0.5 ? 4 : 0);
+        }
+        letters[pi] = T;
+        return C.growLabels(L.labels, lw, lh, 3);
     });
 
     // blur radii in pixels
     const absorb = stock.absorb, pr = P.pressure;
     const fam = (D.PROCESSES[s.process] || {}).family;
     const q = {
-        relief: fam === "relief", family: fam, um, px, mm, scale, stock, tooth, P, age, seed, order, reg, ko, labels, lf, lw, lh, on,
+        relief: fam === "relief", family: fam, um, px, mm, scale, stock, tooth, P, age, seed, order, reg, ko, labels, letters, lf, lw, lh, on, dis, dmg, ageTex, missing,
         gain: px(P.gain * (0.55 + 0.45 * pr * P.ink) * (0.8 + 0.5 * absorb)),
         soften: px(P.soften * (1 + 0.6 * P.wear)), edgeW: Math.max(0.9, px(P.edge)),
         rimS: Math.max(0.5, px(P.rimWidth) / 2), haloS: px(P.haloWidth) / 2, hollowS: px(P.hollowWidth) / 2,
         bleedS: px(P.bleed * (0.4 + 1.2 * absorb)), spreadS: 1.2 * px(stock.spread),
         saltP: Math.max(1, px(P.saltScale)), mottleP: Math.max(2, px(P.mottleScale)), raggedP: Math.max(1.5, px(P.raggedScale)),
-        saltEff: P.salt * (0.5 + 1.25 * tooth) * C.clamp(1.6 - 0.6 * pr * P.ink, 0.3, 1.6),
-        raggedPx: px(P.ragged * (0.6 + tooth) * 55), slurPx: px(P.slur)
+        saltEff: P.salt * (0.5 + 1.25 * tooth) * C.clamp(1.6 - 0.6 * pr * P.ink, 0.3, 1.6) * (dis ? 0.5 : 1),   // a library texture takes over from most of the salt
+        raggedPx: px(P.ragged * (0.6 + tooth) * 55), slurPx: px(P.slur),
+        fineK: C.clamp((px(P.saltScale) - 0.8) / 1.7, 0, 1)   // 0 when the paper's hollows are smaller than a pixel: they then thin the film instead of making pixel-sized pepper
     };
-    const sig = [q.soften, q.gain / 1.4, q.rimS, q.haloS * (1 + age.oil), q.hollowS, q.bleedS, q.spreadS, px(600 * age.oil), mm(0.9)];
+    const sig = [q.soften, q.gain / 1.4, q.rimS, q.haloS * (1 + age.oil), q.hollowS, q.bleedS, q.spreadS, px(600 * age.oil), mm(0.9), (dmg.on || dis) ? (dmg.edgePx * 2.2 + dmg.chipPx * 2 + dmg.spurs * dmg.edgeSizePx * 0.3 + (dis ? dis.zone * 3 : 0)) / 3 : 0];
     q.margin = Math.min(900, Math.ceil(3 * Math.max.apply(null, sig) + maxShift + q.slurPx + 4));
     return q;
 }
@@ -167,6 +206,155 @@ function grow(src, dst, w, h, d, tmp) {
     const sg = Math.max(0.6, d / 1.3); C.gauss(src, dst, w, h, sg, tmp); const T = phi(-d / sg), wT = 0.3989 / sg;
     for (let i = 0; i < w * h; i++) { const v = (dst[i] - T) / wT + 0.5; dst[i] = v <= 0 ? 0 : (v >= 1 ? 1 : v); }
     return dst;
+}
+
+// ------------------------------------------------------------------ distance to the edge, and textures from the library
+// Exact Euclidean distance transform (Felzenszwalb and Huttenlocher 2012). in: distance from each inked pixel to the nearest
+// bare one; out: from each bare pixel to the nearest inked one (both in pixels, 0 on the other side). Pixels beyond the band
+// count as unknown, which is why the band margin covers the deepest damage.
+const DT_INF = 1e20;
+let DT = null;
+function dt1(f, n, d, v, z) {
+    let k = 0; v[0] = 0; z[0] = -DT_INF; z[1] = DT_INF;
+    for (let q = 1; q < n; q++) {
+        let s = ((f[q] + q * q) - (f[v[k]] + v[k] * v[k])) / (2 * q - 2 * v[k]);
+        while (s <= z[k] && k > 0) { k--; s = ((f[q] + q * q) - (f[v[k]] + v[k] * v[k])) / (2 * q - 2 * v[k]); }
+        if (s <= z[k]) { v[0] = q; z[0] = -DT_INF; z[1] = DT_INF; k = 0; continue; }
+        k++; v[k] = q; z[k] = s; z[k + 1] = DT_INF;
+    }
+    k = 0; for (let q = 0; q < n; q++) { while (z[k + 1] < q) k++; const r = q - v[k]; d[q] = r * r + f[v[k]]; }
+}
+function edt(c, w, h, inside, out) {
+    const m = Math.max(w, h);
+    if (!DT || DT.m < m) DT = { m, f: new Float64Array(m), d: new Float64Array(m), v: new Int32Array(m), z: new Float64Array(m + 1) };
+    const { f, d, v, z } = DT;
+    for (let x = 0; x < w; x++) {
+        for (let y = 0; y < h; y++) { const ink = c[y * w + x] >= 0.5; f[y] = (ink === inside) ? DT_INF : 0; }
+        dt1(f, h, d, v, z); for (let y = 0; y < h; y++) out[y * w + x] = d[y];
+    }
+    for (let y = 0; y < h; y++) {
+        const r = y * w; for (let x = 0; x < w; x++) f[x] = out[r + x];
+        dt1(f, w, d, v, z); for (let x = 0; x < w; x++) out[r + x] = d[x] >= 1e18 ? 1e6 : Math.sqrt(d[x]);
+    }
+    return out;
+}
+// A library texture, mirrored at its edges so that it tiles without a seam, sampled bilinearly at texel position (u, v).
+function texAt(T, u, v) {
+    const W = T.w, H = T.h, W2 = W * 2, H2 = H * 2, D = T.data;
+    let x = Math.floor(u), y = Math.floor(v); const fx = u - x, fy = v - y;
+    let x0 = x % W2; if (x0 < 0) x0 += W2; let x1 = x0 + 1; if (x1 >= W2) x1 = 0; let y0 = y % H2; if (y0 < 0) y0 += H2; let y1 = y0 + 1; if (y1 >= H2) y1 = 0;
+    if (x0 >= W) x0 = W2 - 1 - x0; if (x1 >= W) x1 = W2 - 1 - x1; if (y0 >= H) y0 = H2 - 1 - y0; if (y1 >= H) y1 = H2 - 1 - y1;
+    const a = D[y0 * W + x0], b = D[y0 * W + x1], c = D[y1 * W + x0], e = D[y1 * W + x1];
+    return (a + (b - a) * fx) * (1 - fy) + (c + (e - c) * fx) * fy;
+}
+// A patchwork over a library texture, so that it never shows a repeat however large the shape: the plane is cut into
+// irregular cells (jittered and warped, about a third of the texture across), and each cell shows its own piece of the
+// texture, flipped and (if the texture has no direction) turned. Pieces are taken from well inside the scan, so no cell
+// shows the mirror line of the tiling. Each letter gets its own pieces too. Built per band; a function of document position.
+function patchwork(T, k, seed, bx, by, w, h, wx, wy, turn, slack) {
+    const m = Math.min(T.w, T.h), csT = 0.33 * m, cs = csT / k, A = 0.45 * cs, E = 0.47 * m, sd = seed | 0, band = 0.3 * cs;
+    if (T.mean === undefined) { let sm = 0; for (let i = 0; i < T.data.length; i += 7) sm += T.data[i]; T.mean = sm / Math.ceil(T.data.length / 7); }
+    const mu = T.mean;
+    C.fbm(wx, w, h, bx, by, cs * 0.9, sd + 11, 2); C.fbm(wy, w, h, bx, by, cs * 0.9, sd + 12, 2);
+    const pad = 2 * cs + (slack || 0), gx0 = Math.floor((bx - pad) / cs), gx1 = Math.floor((bx + w + pad) / cs), gy0 = Math.floor((by - pad) / cs), gy1 = Math.floor((by + h + pad) / cs);
+    const nx = gx1 - gx0 + 1, ny = gy1 - gy0 + 1, ccx = new Float64Array(nx * ny), ccy = new Float64Array(nx * ny);
+    for (let j = 0; j < ny; j++) for (let i = 0; i < nx; i++) { const gx = gx0 + i, gy = gy0 + j; ccx[j * nx + i] = (gx + 0.5 + (C.hash2(gx, gy, sd + 13) - 0.5) * 0.8) * cs; ccy[j * nx + i] = (gy + 0.5 + (C.hash2(gx, gy, sd + 14) - 0.5) * 0.8) * cs; }
+    const uLo = T.w > 2 * E ? E : T.w / 2, uSpan = T.w > 2 * E ? T.w - 2 * E : 0, vLo = T.h > 2 * E ? E : T.h / 2, vSpan = T.h > 2 * E ? T.h - 2 * E : 0;
+    const look = (id, L, X, Y) => {   // this cell's piece of the texture at (X, Y)
+        const gx = gx0 + (id % nx), gy = gy0 + ((id / nx) | 0), key = Math.imul(gx, 7919) ^ Math.imul(L | 0, 104729);
+        const uc = uLo + C.hash2(key, gy, sd + 15) * uSpan, vc = vLo + C.hash2(key, gy, sd + 16) * vSpan, fl = ((C.hash2(key, gy, sd + 17) * 4) | 0) | (!T.dir && C.hash2(key, gy, sd + 18) < 0.5 ? 4 : 0);
+        let du = (X - ccx[id]) * k, dv = (Y - ccy[id]) * k;
+        if (turn) { const t = du; du = dv; dv = t; }
+        if (fl & 4) { const t = du; du = dv; dv = t; }
+        if (fl & 1) du = -du; if (fl & 2) dv = -dv;
+        return texAt(T, uc + du, vc + dv);
+    };
+    return function (o, X, Y, L) {
+        const px = X + (wx[o] - 0.5) * 2 * A, py = Y + (wy[o] - 0.5) * 2 * A, ci = Math.floor(px / cs) - gx0, cj = Math.floor(py / cs) - gy0;
+        let b1 = 1e30, c1 = -1, b2 = 1e30, c2 = -1;
+        for (let dj = -1; dj <= 1; dj++) { const jj = cj + dj; if (jj < 0 || jj >= ny) continue; for (let di = -1; di <= 1; di++) { const ii = ci + di; if (ii < 0 || ii >= nx) continue; const id = jj * nx + ii, ex = px - ccx[id], ey = py - ccy[id], d = ex * ex + ey * ey; if (d < b1) { b2 = b1; c2 = c1; b1 = d; c1 = id; } else if (d < b2) { b2 = d; c2 = id; } } }
+        if (c1 < 0) c1 = Math.min(nx * ny - 1, Math.max(0, cj * nx + ci));
+        const v1 = look(c1, L, X, Y);
+        if (c2 < 0) return v1;
+        const gap = Math.sqrt(b2) - Math.sqrt(b1); if (gap >= band) return v1;
+        // near a seam: mix the two pieces so the mix keeps the texture's contrast (variance-preserving blend)
+        const t = 0.5 + 0.5 * gap / band, w1 = t * t * (3 - 2 * t), w2 = 1 - w1, v2 = look(c2, L, X, Y);
+        return mu + (w1 * (v1 - mu) + w2 * (v2 - mu)) / Math.sqrt(w1 * w1 + w2 * w2);
+    };
+}
+// The texture value above which a fraction f of it lies (from the table stored with it).
+function texThr(T, f) { const j = C.clamp(f, 0, 1) * 256, j0 = j >= 256 ? 255 : (j | 0); return T.q[j0] + (T.q[j0 + 1] - T.q[j0]) * (j - j0); }
+
+// ------------------------------------------------------------------ wear and damage to the printing surface (line plates)
+// c: the plate in the band (0..1), before the tone carrier and the mark. Takes ink away where type and blocks are worn,
+// chipped, broken, cracked or starved of ink, and adds the odd spur where ink has crept past an edge.
+function damage(job, q, p, pi, c, bx, by, w, h, B) {
+    const G = q.dmg, n = w * h, r = q.reg[pi], X0 = bx - Math.round(r.dx), Y0 = by - Math.round(r.dy), seed = q.seed + 7777 * (pi + 1);
+    const sdi = B.sdi, sdo = B.sdo; edt(c, w, h, true, sdi); if (G.chips > 0 || G.spurs > 0) edt(c, w, h, false, sdo);
+    const lab = q.labels[pi], T = q.letters[pi], lf = q.lf, lw = q.lw, lh = q.lh;
+    const n1 = B.t1, n2 = B.t2, n3 = B.m;
+    if (G.edgePx > 0.15 || G.spurs > 0) { C.fbm(n1, w, h, X0, Y0, G.edgeSizePx, seed + 1, 3); C.noiseField(n2, w, h, X0, Y0, Math.max(1.2, G.edgeSizePx / 5), seed + 2); }
+    const needFine = G.letters; if (needFine) C.fbm(n3, w, h, X0, Y0, Math.max(1.5, q.px(260)), seed + 3, 3);
+    const jagP = Math.max(2, q.px(700)); let jag = null; if (G.broken > 0 || G.cracks > 0) { jag = B.e; C.fbm(jag, w, h, X0, Y0, jagP, seed + 4, 3); }
+    for (let y = 0; y < h; y++) {
+        const Y = Y0 + y, ly = Math.min(lh - 1, Math.max(0, (Y / lf) | 0)); let o = y * w;
+        for (let x = 0; x < w; x++, o++) {
+            const v = c[o]; if (v <= 0) continue;
+            const X = X0 + x, L = lab ? lab[ly * lw + Math.min(lw - 1, Math.max(0, (X / lf) | 0))] : 0;
+            const size = L ? T.size[L] : 1; let rm = 0;
+            if (G.edgePx > 0.15) {
+                // worn edge: the depth of wear wanders along the edge (large bites and small nibbles)
+                const g = n1[o] - 0.32; let D = G.edgePx * size * ((g > 0 ? Math.pow(g / 0.45, 1.6) * 1.6 : 0) + 0.45 * n2[o] * n2[o]);
+                if (L) { const cap = T.stroke[L] * 0.3; if (D > cap) D = cap; }
+                const t = D - (sdi[o] - 0.5) + 0.5;
+                if (t > 0) rm = t > 1 ? 1 : t;
+            }
+            if (L && rm < 1) {
+                const dx = X - T.cx[L], dy = Y - T.cy[L];
+                if (T.brk[L] < 1e8) {   // broken: a piece of the letter is missing, the break edge crumbling
+                    const e = Math.abs(T.bc[L]) * T.ex[L] + Math.abs(T.bs[L]) * T.ey[L], t = (dx * T.bc[L] + dy * T.bs[L] - T.brk[L] - (jag[o] - 0.5) * e * 0.5) / Math.max(1, e * 0.12);
+                    if (t > 1) rm = 1; else if (t > 0 && n3[o] < t) rm = Math.max(rm, 1);
+                }
+                if (T.crk[L]) {        // cracked: a jagged hairline across the letter
+                    const d = Math.abs(-(X - T.kx[L]) * T.ks[L] + (Y - T.ky[L]) * T.kc[L] + (jag[o] - 0.5) * jagP * 0.9), hw = G.crackPx * (0.35 + 0.55 * n3[o]) * Math.max(0.5, size), t = hw - d + 0.5;
+                    if (t > 0) rm = Math.max(rm, t > 1 ? 1 : t);
+                }
+                if (T.stv[L] > 0) {    // starved: one side of the letter short of ink, breaking up towards that side
+                    const e = Math.abs(T.sc[L]) * T.ex[L] + Math.abs(T.ss[L]) * T.ey[L], u = (dx * T.sc[L] + dy * T.ss[L]) / Math.max(1, e), g = C.smooth((u + 0.1) / 1.0) * T.stv[L] * Math.min(1, 0.6 + G.starved) * 0.78 * size;   // never all gone: the far side keeps specks
+                    if (g > 0) { const t = (g - n3[o] * 0.9) / 0.06; if (t > 0) rm = Math.max(rm, t > 1 ? 1 : t); }
+                }
+            }
+            if (rm > 0) c[o] = v * (1 - rm);
+        }
+    }
+    if (G.chips > 0) {
+        // chips: small irregular bites out of edges
+        const R0 = G.chipPx, cell = Math.max(3, R0 * 3.2), sd = seed + 11;
+        const gx0 = Math.floor(X0 / cell) - 1, gx1 = Math.floor((X0 + w) / cell) + 1, gy0 = Math.floor(Y0 / cell) - 1, gy1 = Math.floor((Y0 + h) / cell) + 1;
+        for (let gy = gy0; gy <= gy1; gy++) for (let gx = gx0; gx <= gx1; gx++) {
+            if (C.hash2(gx, gy, sd) > G.chips) continue;
+            const cX = (gx + C.hash2(gx, gy, sd + 1)) * cell - X0, cY = (gy + C.hash2(gx, gy, sd + 2)) * cell - Y0, ix = Math.round(cX), iy = Math.round(cY);
+            if (ix < 0 || iy < 0 || ix >= w || iy >= h) continue;
+            const ci = iy * w + ix, rad = R0 * (0.4 + 1.1 * Math.pow(C.hash2(gx, gy, sd + 3), 1.5)), sgn = sdi[ci] > 0 ? sdi[ci] : -sdo[ci];
+            if (sgn < -0.7 * rad || sgn > 0.6 * rad) continue;   // only where the centre sits on an edge
+            const a0 = C.hash2(gx, gy, sd + 4) * 6.283, ph = C.hash2(gx, gy, sd + 5) * 6.283, k3 = 0.18 + 0.2 * C.hash2(gx, gy, sd + 6), R = rad * 1.4 + 1;
+            const ax = Math.max(0, Math.floor(cX - R)), bxx = Math.min(w - 1, Math.ceil(cX + R)), ay = Math.max(0, Math.floor(cY - R)), byy = Math.min(h - 1, Math.ceil(cY + R));
+            for (let y = ay; y <= byy; y++) for (let x = ax; x <= bxx; x++) {
+                const ddx = x - cX, ddy = y - cY, d = Math.sqrt(ddx * ddx + ddy * ddy), th = Math.atan2(ddy, ddx);
+                const rr = rad * (1 + k3 * Math.sin(3 * th + a0) + 0.12 * Math.sin(7 * th + ph)), t = rr - d + 0.5, o = y * w + x;
+                if (t > 0) c[o] *= 1 - (t > 1 ? 1 : t);
+            }
+        }
+    }
+    if (G.spurs > 0) {
+        // spurs: ink creeping out past an edge here and there (a burr on the type, a stencil lifting)
+        const S = G.edgeSizePx * 0.18 * G.spurs;
+        for (let i = 0; i < n; i++) {
+            if (c[i] >= 1) continue; const d = sdo[i]; if (d <= 0 || d > S * 2.5) continue;
+            const g = (n1[i] - (0.78 - 0.08 * G.spurs)) / 0.2; if (g <= 0) continue;
+            const t = S * (g > 1 ? 1 : g) * (0.6 + 0.6 * n2[i]) - d + 0.5; if (t > 0) { const m = t > 1 ? 1 : t; if (m > c[i]) c[i] = m; }
+        }
+    }
 }
 
 // ------------------------------------------------------------------ tone carriers
@@ -259,13 +447,13 @@ function toneComp(job, q, pi) {
     const NS = 17, pw = 96, w = NS * pw, h = pw, n = w * h, bx = 40000, by = 30000;
     const a = new Float32Array(n);
     for (let k = 0; k < NS; k++) for (let y = 0; y < h; y++) a.fill(k / (NS - 1), y * w + k * pw, y * w + (k + 1) * pw);
-    const B = { e: new Float32Array(n), t1: new Float32Array(n), t2: new Float32Array(n), rim: new Float32Array(n), tooth: new Float32Array(n), inkmap: new Float32Array(n), m: new Float32Array(n), th: new Float32Array(n) };
+    const B = { e: new Float32Array(n), t1: new Float32Array(n), t2: new Float32Array(n), rim: new Float32Array(n), tooth: new Float32Array(n), inkmap: new Float32Array(n), m: new Float32Array(n), th: new Float32Array(n), sdiFor: -1 };
     C.fbm(B.tooth, w, h, bx, by, q.saltP, q.seed + 555, 2);
-    const keepTex = job.inkTexture, keepH = q.P.hickeys; job.inkTexture = null; q.P.hickeys = 0;
+    const keepTex = job.inkTexture, keepH = q.P.hickeys, keepDis = q.dis; job.inkTexture = null; q.P.hickeys = 0; q.dis = null;
     const saved = q.comp; q.comp = null;
     const notes = {}, contone = carrier(job, q, p, pi, a, bx, by, w, h, B.t1, notes);
     film(job, q, p, pi, a, contone, bx, by, w, h, B);
-    q.comp = saved; job.inkTexture = keepTex; q.P.hickeys = keepH;
+    q.comp = saved; job.inkTexture = keepTex; q.P.hickeys = keepH; q.dis = keepDis;
     const colOp = s.colour.opacity, o = C.clamp(colOp >= 0 ? colOp : p.ink.o, 0, 0.999), lin = C.rgbLin(p.ink.rgb).map(v => Math.max(v, 0.0015)), og = 1 - o, th = B.th;
     let hb = null; if (q.spreadS > 0.3 && og > 0.05) { hb = B.e; for (let i = 0; i < n; i++) hb[i] = a[i] * th[i]; C.gauss(hb, hb, w, h, q.spreadS, B.t1); }
     const D = new Float32Array(NS), wl = [0.2126, 0.7152, 0.0722];
@@ -364,6 +552,26 @@ function film(job, q, p, pi, c, contone, bx, by, w, h, B) {
     } else if (tex) {
         for (let y = 0; y < h; y++) { let o = y * w; const ty = (by + y) % tex.h; for (let x = 0; x < w; x++, o++) if (c[o] > 0) { const m = 1 - tk * tex.data[ty * tex.w + ((bx + x) % tex.w)]; c[o] *= m < 0 ? 0 : m; } }
     }
+    if (q.dis) {
+        // a texture from the library: each letter takes its own piece of it (offset, flipped), it bites deeper near the
+        // edges, and its lighter parts thin the film, so the solid follows the texture rather than plain noise
+        const Dz = q.dis, TX = Dz.tex, k = Dz.k, LT = q.letters[pi], tooth = B.tooth, useEdge = Dz.edges > 0 && B.sdiFor === pi, sdi = B.sdi, tone = p.kind === "tone";
+        const thr0 = texThr(TX, Dz.amount * (tone ? 0.3 : 1)), samp = patchwork(TX, k, q.seed + 31 * pi, bx, by, w, h, tmp, E, Dz.turn, Math.abs(r.dx) + Math.abs(r.dy));
+        for (let y = 0; y < h; y++) {
+            const Y = by + y - r.dy, ly = Math.min(q.lh - 1, Math.max(0, (Y / lf) | 0)); let o = y * w;
+            for (let x = 0; x < w; x++, o++) {
+                if (c[o] <= 0) continue;
+                const X = bx + x - r.dx;
+                let a = Dz.amount * (tone ? 0.3 : 1), L = 0;
+                if (lab) { L = lab[ly * lw + Math.min(lw - 1, Math.max(0, (X / lf) | 0))]; if (L) a *= LT.amt[L]; }
+                if (useEdge) a *= 1 + 2 * Dz.edges * Math.exp(-sdi[o] / Dz.zone);
+                // the paper's surface breaks ties where the texture is flat (a scan's solid black), so ink fails in patches, not as a grey
+                const val = samp(o, X, Y, L), vd = val + (tooth[o] - 0.5) * 12 * q.fineK, thr = (L || useEdge) ? texThr(TX, a) : thr0, t = (vd - thr) / 4 + 0.5;
+                if (t > 0) c[o] *= 1 - 0.97 * (t > 1 ? 1 : t);
+                { const f = val / 127.5 - 1; if (f > 0) th[o] *= 1 - Dz.tone * f * f; }   // the film thins towards the texture's marks
+            }
+        }
+    }
     if (P.grain > 0) {
         const gp = Math.max(1.5, q.px(300));
         C.noiseField(tmp, w, h, bx, by, gp, seed + 21, { ax: 16, angle: P.grainAngle });
@@ -376,12 +584,13 @@ function film(job, q, p, pi, c, contone, bx, by, w, h, B) {
     if (P.mottle > 0) { for (let i = 0; i < n; i++) if (c[i] > 0) th[i] *= 1 + P.mottle * (patch[i] - 0.5) * 1.6; }
     if (q.saltEff > 0.01) {
         // B.tooth holds the paper's surface (shared by all plates: the hollows are in the paper). Ink misses the hollows.
-        const tooth = B.tooth, f0 = 0.2 * Math.pow(Math.min(1.5, q.saltEff * (p.kind === "tone" ? 0.35 : 1)), 1.6), dl = 0.03;
+        const tooth = B.tooth, f0 = 0.2 * Math.pow(Math.min(1.5, q.saltEff * (p.kind === "tone" ? 0.35 : 1)), 1.6), dl = 0.03, fk = q.fineK;
         const QN = 24, qs = new Float32Array(QN + 1); for (let k = 0; k <= QN; k++) qs[k] = noiseQuantile(Math.min(0.6, f0 * 3.2 * k / QN));
         for (let i = 0; i < n; i++) {
             const v = c[i]; if (v <= 0) continue;
             const pm = (1 - patch[i]) * 1.9 - 0.45, f = (pm < 0.08 ? 0.08 : (pm > 1 ? 1 : pm)) * (1 - 0.65 * rimB[i]) * QN, k0 = f | 0, thr = qs[k0] + (qs[k0 < QN ? k0 + 1 : k0] - qs[k0]) * (f - k0);
-            const t = (tooth[i] - thr) / dl + 0.5; if (t > 0) c[i] = v * (1 - 0.94 * (t > 1 ? 1 : t));
+            if (fk < 1) c[i] = v * (1 - 0.94 * (1 - fk) * f / QN * f0 * 3.2 * 0.5);
+            const t = (tooth[i] - thr) / dl + 0.5; if (t > 0 && fk > 0) c[i] *= 1 - 0.94 * fk * (t > 1 ? 1 : t);
         }
     }
     if (P.speckle > 0) {
@@ -512,8 +721,15 @@ function paperBand(job, q, bx, by, w, h, R, B) {
 function wearBand(job, q, bx, by, w, h, keep, crease, B) {
     const age = q.age, n = w * h, W = job.W, H = job.H, seed = q.seed + 700001;
     keep.fill(1); crease.fill(0);
-    const folds = Math.round(age.folds || 0); if (!folds && !(age.wear > 0)) return false;
+    const folds = Math.round(age.folds || 0), AT = q.ageTex; if (!folds && !(age.wear > 0) && !AT.scratches && !AT.flaking) return false;
     const tmp = B.t1;
+    // scratches and flaking ink, from the texture library: one sheet-sized piece of each, mirrored to tile
+    for (const [T, amt, f, big, sx] of [[AT.scratches, age.scratches, 0.12, 1.6, 101], [AT.flaking, age.flaking, 0.3, 1.2, 202]]) {
+        if (!T || !(amt > 0)) continue;
+        const k = q.um / (T.texelUm * big), thr = texThr(T, f * amt), samp = patchwork(T, k, seed + sx * 3, bx, by, w, h, B.e, B.inkmap, false, 0);
+        C.fbm(B.t2, w, h, bx, by, q.mm(40), seed + sx, 2);   // worse in some places than others
+        for (let y = 0; y < h; y++) { let o = y * w; const Y = by + y; for (let x = 0; x < w; x++, o++) { const val = samp(o, bx + x, Y, 0) * (0.55 + 0.9 * B.t2[o]), t = (val - thr) / 16 + 0.5; if (t > 0) keep[o] *= 1 - 0.95 * (t > 1 ? 1 : t); } }
+    }
     if (age.wear > 0) { C.fbm(tmp, w, h, bx, by, q.mm(30), seed + 1, 3); C.noiseField(B.t2, w, h, bx, by, Math.max(1.5, q.px(260)), seed + 2, { ax: 7, angle: 28 }); for (let i = 0; i < n; i++) { const rub = C.smooth((tmp[i] - (0.78 - 0.2 * age.wear)) / 0.12), sc = C.smooth((B.t2[i] - 0.83) / 0.05); keep[i] *= 1 - age.wear * 0.55 * rub * (0.4 + 0.6 * sc) - age.wear * 0.18 * sc * (tmp[i] > 0.5 ? 1 : 0); } }
     if (folds) {
         const hs = folds >= 3 ? [0.25, 0.5, 0.75] : [0.5], vs = folds >= 2 ? [0.5] : [];
@@ -554,7 +770,7 @@ function* renderSteps(job) {
     let done = 0;
     for (let y0 = rt; y0 < rb; y0 += bandH) {
         const y1 = Math.min(rb, y0 + bandH), by = Math.max(0, y0 - M), be = Math.min(H, y1 + M), h = be - by, n = w * h;
-        if (n > cap) { cap = n; const f = () => new Float32Array(n); B = { e: f(), t1: f(), t2: f(), rim: f(), tooth: f(), inkmap: f(), m: f(), th: f() }; R = [f(), f(), f()]; c = f(); below = f(); keep = f(); crease = f(); }
+        if (n > cap) { cap = n; const f = () => new Float32Array(n); B = { e: f(), t1: f(), t2: f(), rim: f(), tooth: f(), inkmap: f(), m: f(), th: f(), sdi: (q.dmg.on || q.dis) ? f() : null, sdo: q.dmg.on ? f() : null, sdiFor: -1 }; R = [f(), f(), f()]; c = f(); below = f(); keep = f(); crease = f(); }
         else below.fill(0);
         C.fbm(B.tooth, w, h, x0, by, q.saltP, q.seed + 555, 2);
         if (only === undefined || only < 0) paperBand(job, q, x0, by, w, h, R, B); else { R[0].fill(1); R[1].fill(1); R[2].fill(1); }
@@ -577,6 +793,9 @@ function* renderSteps(job) {
                 job.plates.forEach((o2, oi) => { if (oi !== pi && o2.role === "spot" && o2.layer === p.layer && C.lum(C.rgbLin(o2.ink.rgb)) < lumP) { sampleOther(job, q, pi, o2.tau, x0, by, w, h, U, have); have = true; } });
                 if (have) { const G = B.e; grow(c, G, w, h, trapPx * 2, B.t1); for (let i = 0; i < n; i++) { const v = G[i] * (U[i] > 1 ? 1 : U[i]); if (v > c[i]) c[i] = v; } }
             }
+            B.sdiFor = -1;
+            if (p.kind === "line" && q.dmg.on) damage(job, q, p, pi, c, x0, by, w, h, B);
+            if (p.kind === "line" && q.dis && q.dis.edges > 0) { edt(c, w, h, true, B.sdi); B.sdiFor = pi; }
             let contone = false;
             if (p.kind === "tone") contone = carrier(job, q, p, pi, c, x0, by, w, h, B.t1, notes);
             else if (s.tone.carrier === "gravure" && q.on("tone")) contone = carrier(job, q, Object.assign({}, p, { angle: 45 }), pi, c, x0, by, w, h, B.t1, notes);
@@ -617,6 +836,7 @@ function* renderSteps(job) {
         }
         done += y1 - y0; yield done / oh;
     }
+    if (q.missing) notes.tex = "the texture '" + q.missing + "' could not be loaded, so the solids have no library texture";
     const info = { um: q.um, plates: job.plates.length, margin: M, notes: Object.keys(notes).map(k => notes[k]), order: q.order.map(i => job.plates[i].name), register: q.reg.map(r => ({ dx: r.dx * q.um / 1000, dy: r.dy * q.um / 1000 })) };
     return { data: out, left: rl, top: rt, width: ow, height: oh, info };
 }

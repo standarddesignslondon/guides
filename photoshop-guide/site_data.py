@@ -2357,7 +2357,7 @@ ITEMS.append({'slug': 'printlook',
           'decade by decade, Ireland, the United States, France, Germany, Norway, the USSR, Japan and India, '
           'plus the generic processes and the office machines. The paper is optional: use a built-in stock, '
           'your own paper texture layer, or none.',
- 'facts': {'version': '1.0.0',
+ 'facts': {'version': '1.1.1',
            'requires': 'Photoshop 24.2+, RGB, 8 or 16-bit',
            'plugin id': 'com.simonmorse.printlook',
            'looks': '165 (25 sourced, 119 partly, 21 inferred)'},
@@ -2406,6 +2406,14 @@ ITEMS.append({'slug': 'printlook',
                          '(Gestetner, Roneo, mimeograph); Risograph (1980s); Spirit duplicator (Banda, '
                          'Ditto); Hectograph (gelatin pad); Xerography, early (914 era); Photocopier, '
                          '1970s-80s. Choosing one resets Ink on paper, Faults and Tone to that process.'],
+                        ['Sheet size',
+                         'From the document / A5 to A0 / crown, double crown, quad crown / US one-sheet / '
+                         'Japanese B2, B1',
+                         'How big the print really is. Every size in the panel is a real size on paper, '
+                         "normally worked out from the document's resolution. Choosing a sheet size takes "
+                         "the document's long side as that length instead, so a 2000-pixel test at 72 ppi "
+                         'can be printed as an A3 bill rather than a 70 cm poster. Kept when you change '
+                         'looks.'],
                         ['Detail scale',
                          '0.25 – 4',
                          'Enlarges or shrinks every dot, edge and fault together. 2 draws everything twice '
@@ -2483,11 +2491,43 @@ ITEMS.append({'slug': 'printlook',
                          'show.'],
                         ['Hollow solids', '', 'Early photocopiers developed only the edges of large blacks.'],
                         ['Spatter, Slur, Hickeys, Stray specks, Scum, Banding', '', 'Press faults.'],
+                        ['Solid texture',
+                         'none, or one of 26 scanned textures',
+                         'Takes ink out of the solids following a real texture rather than plain noise: foam '
+                         'rollers, brushes, sponges, wood grain, wood type, grit, photocopier toner. Made '
+                         'from your own texture collection. The texture is laid as a patchwork of irregular '
+                         'pieces, each flipped or turned and blended at the joins, and each letter gets its '
+                         'own pieces, so it never repeats however large the shape. Every process has a '
+                         'default; with a texture chosen, Salty solids is halved.'],
+                        ['Texture amount, size, more at edges, varies by letter, direction',
+                         '',
+                         'Amount is the share of a solid the texture removes. More at edges makes it bite '
+                         'deeper near the outline, where worn type and starved rollers fail first.'],
                         ['Ink texture layer',
                          '0 – 1.5',
                          'Strength of your own texture: a layer whose name starts with **ink texture**. Each '
                          'letter takes a different piece of it, so a repeating texture does not show its '
                          'repeat.']]},
+              {'title': 'Wear and damage',
+               'intro': 'Damage to the type, blocks or stencil itself, so the shapes break down rather than '
+                        'only the solids. Line (flat) layers only. All amounts are estimates.',
+               'rows': [['Overall',
+                         '0 – 3',
+                         'Scales everything in the section. 1 is the process default; 2 to 3 for a '
+                         'thoroughly battered print.'],
+                        ['Edge wear',
+                         'µm, size',
+                         'Edges nibbled and bitten to a depth that wanders along the outline. Small letters '
+                         'and thin rules wear less, so they stay readable.'],
+                        ['Chips', 'amount, size', 'Small irregular bites out of edges and corners.'],
+                        ['Broken letters, Cracked letters',
+                         'share of letters, crack width',
+                         'A piece missing from a letter, or a jagged hairline across it. Letters under about '
+                         '3 mm are left alone.'],
+                        ['Starved letters',
+                         'share of letters',
+                         'One side of a letter short of ink, breaking up towards that side.'],
+                        ['Ink spurs', '', 'Ink creeping out past an edge here and there.']]},
               {'title': 'Tone',
                'rows': [['Tone is carried by',
                          '10 kinds',
@@ -2525,7 +2565,11 @@ ITEMS.append({'slug': 'printlook',
                          'staining',
                          '',
                          'All 0 for a fresh print. Faded inks follows the pigment: fugitive lakes and dyes '
-                         'go first.']]}],
+                         'go first.'],
+                        ['Scratches, Flaking ink',
+                         '',
+                         'Ink scratched and flaked off the sheet, from scanned scratch and flaking '
+                         'textures.']]}],
  'workflow': [{'title': 'A two-colour bill',
                'text': 'Set the red lines on one layer and the blue on another, pick a Britain look such as '
                        'a 1950s variety bill, and render. With *Nearest ink in the set* the layers are '
@@ -2553,6 +2597,8 @@ ITEMS.append({'slug': 'printlook',
              'screened.',
              "Scroll the panel with the pointer over the labels, not over a dropdown: Photoshop's panels let "
              "the scroll wheel change a dropdown's value.",
+             'A 72 ppi document is read as a very large print (2000 pixels = 70 cm), so textures and faults '
+             "come out at that scale. Set Sheet size, or the document's real resolution.",
              "Set the document's real resolution first. At 72 ppi a pixel is a third of a millimetre of "
              'paper and little of the process can show; the status line warns when this is the case.',
              'Fine detail needs pixels: a screen finer than about 125 lines per inch prints as smooth tint '
@@ -2567,7 +2613,10 @@ ITEMS.append({'slug': 'printlook',
              'One process per look. A sheet that mixed two (letterpress type on a lithographed picture) '
              'needs two renders.',
              'Ink and paper colours are estimates; nothing is colour-measured. 32-bit documents are not '
-             'supported.'],
+             'supported.',
+             'The scanned textures inside the plugin are derived from commercial texture packs licensed to '
+             "Simon: don't share the plugin outside the studio.",
+             'Wear and damage costs time: about 40% more than 1.0 on a typical bill.'],
  'sections': [{'label': 'looks',
                'type': 'reference',
                'data': [{'title': 'Process and era',
@@ -3979,7 +4028,11 @@ ITEMS.append({'slug': 'printlook',
                         'source files: PrintLook-References in the APA project (_research, _notes, '
                         '_toolkit).',
                         'The looks are generated: edit _toolkit/presets/part_*.js, run `node '
-                        "build_presets.js`, then zip the plugin folder's contents as PrintLook.ccx."]}]})
+                        "build_presets.js`, then zip the plugin folder's contents (textures folder included) "
+                        'as PrintLook.ccx.',
+                        'Texture library: textures/*.bin are built from _TEXTURES_FOR_CLAUDE by '
+                        '_analysis/texture_library (build.py); pl_textures.js lists them. 1.0.0 is kept in '
+                        'CCX Installers/_previous.']}]})
 
 
 ITEMS.append({
