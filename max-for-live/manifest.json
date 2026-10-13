@@ -388,7 +388,7 @@
    "name": "Harvest",
    "tagline": "Sample-driven MIDI sequencer: drop in a sample and its loudness, pitch and brightness, read step by step, become a MIDI loop.",
    "url": "devices/harvest.html",
-   "image": null,
+   "image": "images/harvest.png",
    "facets": {
     "kind": "MIDI Effect",
     "author": "Claude"
