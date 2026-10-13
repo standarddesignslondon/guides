@@ -4466,3 +4466,150 @@ ITEMS.append({
         "README in the device folder has the file-format notes.",
     ],
 })
+
+
+# --------------------------------------------------------------------------
+# HARVEST  (added 13 Oct 2026)
+# --------------------------------------------------------------------------
+ITEMS.append({
+    "slug": "harvest",
+    "name": "Harvest",
+    "kind": "MIDI Effect",
+    "author": "Claude",
+    "status": "v0.1 — awaiting test",
+    "folder": "Harvest Device",
+    "tagline": "Sample-driven MIDI sequencer: drop in a sample and its "
+               "loudness, pitch and brightness, read step by step, become "
+               "a MIDI loop.",
+    "blurb": "Drop a WAV or AIFF in and Harvest slices it into **Bars** x "
+             "**Note** steps, takes a reading at the start of each step, "
+             "and turns those readings into a MIDI loop, sample-and-hold "
+             "style. Each target (Pitch, Velocity, Length, Gate) picks its "
+             "own source, so loudness can drive pitch and brightness can "
+             "drive note length. The loop plays through whatever instrument "
+             "follows on the track, in time with Live, and **Write clip** "
+             "puts it in a Session clip.",
+    "quickstart": [
+        "Drop `Harvest.amxd` on a MIDI track in front of an instrument "
+        "(User Library > Presets > MIDI Effects > Max MIDI Effect).",
+        "Drop a sample on the drop zone. Harvest analyses it as soon as the "
+        "buffer has loaded and the status line reports how many notes it "
+        "made.",
+        "Set **Bars** and **Note** for the grid, then turn **Play** on and "
+        "start Live's transport.",
+        "Change a target's **src** menu to remap it. Every change rebuilds "
+        "the notes straight away.",
+        "To keep the result: highlight a Session clip slot on a MIDI track "
+        "and press **Write clip**.",
+    ],
+    "controls": [
+        {
+            "title": "Sample and grid",
+            "rows": [
+                ["Drop zone", "WAV / AIFF",
+                 "The sample to harvest. Analysis runs automatically when it "
+                 "has loaded."],
+                ["Harvest", "button", "Runs the analysis again."],
+                ["Bars", "1 / 2 / 4 / 8 / 16",
+                 "Loop length. Steps = Bars x 4, 8, 16 or 32 per bar, "
+                 "according to Note."],
+                ["Note", "1/4 / 1/8 / 1/16 / 1/32",
+                 "Step length. Default 1/16."],
+                ["Window", "1 - 500 ms",
+                 "How much of each step is analysed, from the step boundary. "
+                 "Short = sample-and-hold; long = averaged. Default 20 ms. "
+                 "Changing it re-analyses."],
+            ],
+        },
+        {
+            "title": "Targets",
+            "intro": "Pitch, Velocity and Length % each have a **src** menu, "
+                     "**min** and **max**, and **Invert**. Gate has a source "
+                     "and Invert only.",
+            "rows": [
+                ["Pitch", "0 - 127, default 48 - 72",
+                 "Note number, quantised to Root and Scale. Default source "
+                 "Pitch."],
+                ["Velocity", "1 - 127, default 40 - 127",
+                 "Default source Loud."],
+                ["Length %", "2 - 400, default 10 - 100",
+                 "Note length as a percentage of one step; over 100 "
+                 "overlaps the next step. Default source Loud."],
+                ["Gate", "source + Gate thr",
+                 "A step whose gate source is below **Gate thr** becomes a "
+                 "rest. Default source Loud."],
+                ["Invert", "toggle", "Flips that target's source."],
+            ],
+        },
+        {
+            "title": "Sources",
+            "intro": "All sources are normalised 0 - 1 across the sequence, "
+                     "so min and max always map the full range.",
+            "rows": [
+                ["Loud", "", "RMS level."],
+                ["Pitch", "", "Autocorrelation pitch, on a log scale."],
+                ["Bright", "", "Zero-crossing rate."],
+                ["Trans", "",
+                 "Attack: level just after the step boundary minus level "
+                 "just before."],
+                ["Noise", "", "1 minus pitch clarity."],
+                ["Ramp", "", "Step position, rising through the loop."],
+                ["Random", "", "A random value per step."],
+            ],
+        },
+        {
+            "title": "Pitch, playback and output",
+            "rows": [
+                ["Gate thr", "0 - 1", "Gate threshold. Default 0.1."],
+                ["Root", "C - B", "Key for the Pitch quantiser."],
+                ["Scale", "Major ... Chrom",
+                 "Major, Minor, Dorian, Mixolydian, Pentatonic major and "
+                 "minor, Blues, Harmonic minor, Whole tone, Chromatic."],
+                ["Play", "toggle",
+                 "Plays the loop through the next device on the track. It "
+                 "only advances while Live's transport runs."],
+                ["Write clip", "button",
+                 "Writes the notes into the highlighted Session slot: makes "
+                 "a clip if the slot is empty, otherwise replaces its "
+                 "notes."],
+            ],
+        },
+    ],
+    "workflow": [
+        {
+            "title": "Drum loops into melodies",
+            "text": "Harvest a drum loop with Pitch on **Loud** and Gate on "
+                    "**Trans**: the hits become the rhythm and their "
+                    "weight becomes the line. Narrow the Pitch min and max "
+                    "to keep it in a usable register.",
+        },
+        {
+            "title": "Speech and field recordings",
+            "text": "Spoken word gives lopsided, human phrasing. Try Pitch "
+                    "on **Pitch**, Length on **Noise** so the consonants "
+                    "come out short, and a longer Window to smooth it.",
+        },
+    ],
+    "gotchas": [
+        "Built in a cloud session and not yet checked in Live, so treat it "
+        "as untested.",
+        "Write clip needs a Session slot highlighted on a MIDI track. It "
+        "does not work in Arrangement view; the status line says so.",
+        "If the Max window prints `harvest.js: can't find file`, the copy "
+        "in `~/Documents/Max 9/Library/` is missing.",
+        "If note lengths look wrong at tempos other than 120 bpm, the "
+        "`plugsync~` tempo outlet may be wired to the wrong outlet (the "
+        "patch assumes outlet 5).",
+        "If Harvest or Write clip do nothing when pressed, the `live.text` "
+        "buttons may not be sending 1; wiring them straight to `t b` fixes "
+        "it.",
+    ],
+    "rebuild": [
+        "`python3 build_patch.py` in the device folder regenerates "
+        "`Harvest.amxd` and `Harvest.maxpat`. The engine is `harvest.js` "
+        "(v8): analysis, mapping, scale quantiser, synced playback and "
+        "Write to Clip.",
+        "Version 2 ideas, not built: a Probability target, a chroma pitch "
+        "source for chords, ratchets, micro-timing, and Save as .mid.",
+    ],
+})

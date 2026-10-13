@@ -206,6 +206,12 @@
         "manual_url": null,
         "category": "tape",
         "note": "Creative tape effect combining granular stretch, varispeed and stutter."
+      },
+      "KAZU": {
+        "product_url": "https://www.phasefiasco.com/kazu",
+        "manual_url": "https://everyreasontopanic.github.io/KAZU/manual.html",
+        "category": "other",
+        "note": "Multi-effect of 50 effects with a step sequencer and one-click Animate modulation."
       }
     }
   },

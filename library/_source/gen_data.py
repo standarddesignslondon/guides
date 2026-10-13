@@ -20,6 +20,9 @@ OWN_TYPE={
  'Evening Star':'tape','Mood':'delay','Bad Mood':'delay','Gen Loss':'tape',
  'Kurzwellen':'other','Composite':'other','Regatta':'sequencer',
  'Remainder':'other','Reverie':'granular',
+ # added 13 Oct 2026
+ 'Divisor':'other','Telegraph':'sequencer','Lens':'sampler',
+ 'Tracking Lines':'tape','Lucky Dip':'utility','Harvest':'sequencer',
 }
 sys.path.insert(0, os.path.join(GUIDES,'max-for-live'))
 import site_data as SD

@@ -274,5 +274,33 @@
     "note": "Effect-slot version of the Reason Rack for processing audio in the host."
    }
   }
+ },
+ "Illformed": {
+  "vendor_url": "https://illformed.com/",
+  "products": {
+   "Glitch2": {
+    "product_url": "https://illformed.com/glitch/",
+    "manual_url": "https://illformed.com/downloads/Glitch2_User_Guide.pdf",
+    "category": "other",
+    "note": "Multi-lane sequenced effects for chopping and mangling sound; now free."
+   },
+   "Glitch": {
+    "product_url": "https://illformed.com/glitch/",
+    "manual_url": "https://illformed.com/downloads/Glitch2_User_Guide.pdf",
+    "category": "other",
+    "note": "VST2 build of Glitch 2 (v2.1.5), the sequenced chop-and-mangle effect."
+   }
+  }
+ },
+ "Bitlayer Audio": {
+  "vendor_url": "https://riverfluxaudio.gumroad.com/",
+  "products": {
+   "BIT LAYER": {
+    "product_url": "https://riverfluxaudio.gumroad.com/l/BITLAYER",
+    "manual_url": null,
+    "category": "distortion",
+    "note": "Free eight-layer multiband bitcrusher by RiverFlux Audio, with tonal and transient modes."
+   }
+  }
  }
 }

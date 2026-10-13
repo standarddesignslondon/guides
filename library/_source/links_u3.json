@@ -298,5 +298,17 @@
   "maker": "sseker",
   "category": "drums",
   "note": "Four-track FM drum synthesizer built for Ableton Live."
+ },
+ "Frankenstein": {
+  "url": "https://maxforlive.com/library/device/16229/frankenstein",
+  "maker": "RemoDeVico",
+  "category": "sampler",
+  "note": "Builds a new sample by stitching fragments of up to 30 loaded samples."
+ },
+ "Pitchfield": {
+  "url": "https://maxforlive.com/library/device/16350/pitchfield",
+  "maker": "JudaBaduda",
+  "category": "sequencer",
+  "note": "Probabilistic pitch-map melodic sequencer, with Push 2 and Push 3 support."
  }
 }

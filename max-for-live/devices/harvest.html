@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>harvest — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">32</p>
+  <h1>harvest</h1>
+  <p class="ch-sub">Sample-driven MIDI sequencer: drop in a sample and its loudness, pitch and brightness, read step by step, become a MIDI loop.</p>
+</header>
+<figure class="shot"><div class="shot-frame empty"><span>images/harvest.png</span></div><figcaption>picture pending</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">32.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Drop a WAV or AIFF in and Harvest slices it into <b>Bars</b> x <b>Note</b> steps, takes a reading at the start of each step, and turns those readings into a MIDI loop, sample-and-hold style. Each target (Pitch, Velocity, Length, Gate) picks its own source, so loudness can drive pitch and brightness can drive note length. The loop plays through whatever instrument follows on the track, in time with Live, and <b>Write clip</b> puts it in a Session clip.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>midi effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v0.1 — awaiting test</dd></div><div class="fact"><dt>folder</dt><dd>Harvest Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">32.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Drop <code>Harvest.amxd</code> on a MIDI track in front of an instrument (User Library &gt; Presets &gt; MIDI Effects &gt; Max MIDI Effect).</span></li>
+<li><span class="step-n">02</span><span class="step-t">Drop a sample on the drop zone. Harvest analyses it as soon as the buffer has loaded and the status line reports how many notes it made.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Set <b>Bars</b> and <b>Note</b> for the grid, then turn <b>Play</b> on and start Live&#x27;s transport.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Change a target&#x27;s <b>src</b> menu to remap it. Every change rebuilds the notes straight away.</span></li>
+<li><span class="step-n">05</span><span class="step-t">To keep the result: highlight a Session clip slot on a MIDI track and press <b>Write clip</b>.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">32.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">sample and grid</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Drop zone<span class="rng">WAV / AIFF</span></dt><dd>The sample to harvest. Analysis runs automatically when it has loaded.</dd></div>
+<div class="ctl-row"><dt>Harvest<span class="rng">button</span></dt><dd>Runs the analysis again.</dd></div>
+<div class="ctl-row"><dt>Bars<span class="rng">1 / 2 / 4 / 8 / 16</span></dt><dd>Loop length. Steps = Bars x 4, 8, 16 or 32 per bar, according to Note.</dd></div>
+<div class="ctl-row"><dt>Note<span class="rng">1/4 / 1/8 / 1/16 / 1/32</span></dt><dd>Step length. Default 1/16.</dd></div>
+<div class="ctl-row"><dt>Window<span class="rng">1 - 500 ms</span></dt><dd>How much of each step is analysed, from the step boundary. Short = sample-and-hold; long = averaged. Default 20 ms. Changing it re-analyses.</dd></div>
+</dl>
+<h3 class="sub">targets</h3>
+<p class="lead">Pitch, Velocity and Length % each have a <b>src</b> menu, <b>min</b> and <b>max</b>, and <b>Invert</b>. Gate has a source and Invert only.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Pitch<span class="rng">0 - 127, default 48 - 72</span></dt><dd>Note number, quantised to Root and Scale. Default source Pitch.</dd></div>
+<div class="ctl-row"><dt>Velocity<span class="rng">1 - 127, default 40 - 127</span></dt><dd>Default source Loud.</dd></div>
+<div class="ctl-row"><dt>Length %<span class="rng">2 - 400, default 10 - 100</span></dt><dd>Note length as a percentage of one step; over 100 overlaps the next step. Default source Loud.</dd></div>
+<div class="ctl-row"><dt>Gate<span class="rng">source + Gate thr</span></dt><dd>A step whose gate source is below <b>Gate thr</b> becomes a rest. Default source Loud.</dd></div>
+<div class="ctl-row"><dt>Invert<span class="rng">toggle</span></dt><dd>Flips that target&#x27;s source.</dd></div>
+</dl>
+<h3 class="sub">sources</h3>
+<p class="lead">All sources are normalised 0 - 1 across the sequence, so min and max always map the full range.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Loud</dt><dd>RMS level.</dd></div>
+<div class="ctl-row"><dt>Pitch</dt><dd>Autocorrelation pitch, on a log scale.</dd></div>
+<div class="ctl-row"><dt>Bright</dt><dd>Zero-crossing rate.</dd></div>
+<div class="ctl-row"><dt>Trans</dt><dd>Attack: level just after the step boundary minus level just before.</dd></div>
+<div class="ctl-row"><dt>Noise</dt><dd>1 minus pitch clarity.</dd></div>
+<div class="ctl-row"><dt>Ramp</dt><dd>Step position, rising through the loop.</dd></div>
+<div class="ctl-row"><dt>Random</dt><dd>A random value per step.</dd></div>
+</dl>
+<h3 class="sub">pitch, playback and output</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Gate thr<span class="rng">0 - 1</span></dt><dd>Gate threshold. Default 0.1.</dd></div>
+<div class="ctl-row"><dt>Root<span class="rng">C - B</span></dt><dd>Key for the Pitch quantiser.</dd></div>
+<div class="ctl-row"><dt>Scale<span class="rng">Major ... Chrom</span></dt><dd>Major, Minor, Dorian, Mixolydian, Pentatonic major and minor, Blues, Harmonic minor, Whole tone, Chromatic.</dd></div>
+<div class="ctl-row"><dt>Play<span class="rng">toggle</span></dt><dd>Plays the loop through the next device on the track. It only advances while Live&#x27;s transport runs.</dd></div>
+<div class="ctl-row"><dt>Write clip<span class="rng">button</span></dt><dd>Writes the notes into the highlighted Session slot: makes a clip if the slot is empty, otherwise replaces its notes.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">32.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">drum loops into melodies</h3><p>Harvest a drum loop with Pitch on <b>Loud</b> and Gate on <b>Trans</b>: the hits become the rhythm and their weight becomes the line. Narrow the Pitch min and max to keep it in a usable register.</p>
+<h3 class="sub">speech and field recordings</h3><p>Spoken word gives lopsided, human phrasing. Try Pitch on <b>Pitch</b>, Length on <b>Noise</b> so the consonants come out short, and a longer Window to smooth it.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">32.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Built in a cloud session and not yet checked in Live, so treat it as untested.</li><li>Write clip needs a Session slot highlighted on a MIDI track. It does not work in Arrangement view; the status line says so.</li><li>If the Max window prints <code>harvest.js: can&#x27;t find file</code>, the copy in <code>~/Documents/Max 9/Library/</code> is missing.</li><li>If note lengths look wrong at tempos other than 120 bpm, the <code>plugsync~</code> tempo outlet may be wired to the wrong outlet (the patch assumes outlet 5).</li><li>If Harvest or Write clip do nothing when pressed, the <code>live.text</code> buttons may not be sending 1; wiring them straight to <code>t b</code> fixes it.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">32.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_patch.py</code> in the device folder regenerates <code>Harvest.amxd</code> and <code>Harvest.maxpat</code>. The engine is <code>harvest.js</code> (v8): analysis, mapping, scale quantiser, synced playback and Write to Clip.</p>
+<p>Version 2 ideas, not built: a Probability target, a chroma pitch source for chords, ratchets, micro-timing, and Save as .mid.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="lucky-dip.html"><span>previous</span>lucky dip</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-10-13</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

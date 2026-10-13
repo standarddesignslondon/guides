@@ -162,7 +162,7 @@
  {
   "vendor": "Arturia",
   "name": "Analog Lab V",
-  "version": "1",
+  "version": "5.12.6.6914",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
   "url": ""
@@ -610,7 +610,7 @@
  {
   "vendor": "Arturia",
   "name": "MiniFreak V",
-  "version": "4.0.2.6369",
+  "version": "5.0.1.5869",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
   "url": ""
@@ -722,7 +722,7 @@
  {
   "vendor": "Arturia",
   "name": "Pure SUB",
-  "version": "1.0.0.6835",
+  "version": "1.0.1.6861",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
   "url": ""
@@ -1036,6 +1036,14 @@
   "name": "Warp",
   "version": "65536",
   "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": ""
+ },
+ {
+  "vendor": "Bitlayer Audio",
+  "name": "BIT LAYER",
+  "version": "0.5.7",
+  "formats": "VST3",
   "category": "Fx",
   "url": ""
  },
@@ -2136,6 +2144,22 @@
   "url": ""
  },
  {
+  "vendor": "Illformed",
+  "name": "Glitch",
+  "version": "215",
+  "formats": "VST2",
+  "category": "",
+  "url": ""
+ },
+ {
+  "vendor": "Illformed",
+  "name": "Glitch2",
+  "version": "2.1.5",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": ""
+ },
+ {
   "vendor": "iZotope",
   "name": "Insight 2",
   "version": "2.6.0",
@@ -2625,6 +2649,14 @@
  },
  {
   "vendor": "Phase Fiasco",
+  "name": "KAZU",
+  "version": "0.1.587",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": ""
+ },
+ {
+  "vendor": "Phase Fiasco",
   "name": "Tape Fiasco",
   "version": "1.2.2",
   "formats": "VST3",
@@ -2970,7 +3002,7 @@
  {
   "vendor": "Splice",
   "name": "Splice Sounds",
-  "version": "0.3.5",
+  "version": "0.13.1",
   "formats": "VST3",
   "category": "Instrument",
   "url": ""
@@ -2978,7 +3010,7 @@
  {
   "vendor": "Splice",
   "name": "Splice Sounds Listener",
-  "version": "0.0.1",
+  "version": "0.13.1",
   "formats": "VST3",
   "category": "Fx, Analyzer",
   "url": ""

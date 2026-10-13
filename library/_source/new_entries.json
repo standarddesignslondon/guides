@@ -1,51 +1,44 @@
 [
  {
   "kind": "plugin",
-  "name": "Pure SUB",
-  "maker": "Arturia",
-  "category": "Instrument, Synth",
-  "version": "1.0.0.6835"
- },
- {
-  "kind": "plugin",
-  "name": "Reason Rack Plugin",
-  "maker": "Reason Studios",
-  "category": "Instrument",
-  "version": "14.1.0"
- },
- {
-  "kind": "plugin",
-  "name": "Reason Rack Plugin Effect",
-  "maker": "Reason Studios",
+  "name": "BIT LAYER",
+  "maker": "Bitlayer Audio",
   "category": "Fx",
-  "version": "14.1.0"
+  "version": "0.5.7"
+ },
+ {
+  "kind": "plugin",
+  "name": "Glitch",
+  "maker": "Illformed",
+  "category": "",
+  "version": "215"
+ },
+ {
+  "kind": "plugin",
+  "name": "Glitch2",
+  "maker": "Illformed",
+  "category": "Fx",
+  "version": "2.1.5"
+ },
+ {
+  "kind": "plugin",
+  "name": "KAZU",
+  "maker": "Phase Fiasco",
+  "category": "Fx",
+  "version": "0.1.587"
  },
  {
   "kind": "max for live",
-  "name": "Dystopian Waves Wah 1.5.0",
+  "name": "Frankenstein",
   "maker": "",
-  "category": "Audio Effect",
+  "category": "Instrument",
   "place": "User Library"
  },
  {
   "kind": "max for live",
-  "name": "ChromaPhase v1.1.5",
+  "name": "Pitchfield",
   "maker": "",
-  "category": "Audio Effect",
-  "place": "User Library"
- },
- {
-  "kind": "max for live",
-  "name": "Spectral Wobbler 1.2.0",
-  "maker": "",
-  "category": "Audio Effect",
-  "place": "User Library"
- },
- {
-  "kind": "max for live",
-  "name": "Auren Free 1.5.0",
-  "maker": "",
-  "category": "Audio Effect",
+  "category": "MIDI Effect",
   "place": "User Library"
  }
 ]

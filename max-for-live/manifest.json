@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-10-06",
+ "generated": "2026-10-13",
  "items": [
   {
    "num": "01",
@@ -377,6 +377,18 @@
    "tagline": "Random kit maker: one press fills 16 Drum Rack pads with samples drawn from the whole sample library.",
    "url": "devices/lucky-dip.html",
    "image": "images/lucky-dip.png",
+   "facets": {
+    "kind": "MIDI Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "32",
+   "slug": "harvest",
+   "name": "Harvest",
+   "tagline": "Sample-driven MIDI sequencer: drop in a sample and its loudness, pitch and brightness, read step by step, become a MIDI loop.",
+   "url": "devices/harvest.html",
+   "image": null,
    "facets": {
     "kind": "MIDI Effect",
     "author": "Claude"
