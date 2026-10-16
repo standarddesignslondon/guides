@@ -8,7 +8,7 @@
   "noun_plural": "devices",
   "page_dir": "devices"
  },
- "generated": "2026-10-13",
+ "generated": "2026-10-17",
  "items": [
   {
    "num": "01",
@@ -391,6 +391,18 @@
    "image": "images/harvest.png",
    "facets": {
     "kind": "MIDI Effect",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "33",
+   "slug": "platter",
+   "name": "Platter",
+   "tagline": "Push 3's pads as a turntable: scratch a sample round a ring of pads, with a cut fader, pitch, motor, vinyl surface noise and a cheat mode.",
+   "url": "devices/platter.html",
+   "image": "images/platter.png",
+   "facets": {
+    "kind": "Instrument",
     "author": "Claude"
    }
   }

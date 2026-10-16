@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>platter — max for live</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">max for live</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">33</p>
+  <h1>platter</h1>
+  <p class="ch-sub">Push 3&#x27;s pads as a turntable: scratch a sample round a ring of pads, with a cut fader, pitch, motor, vinyl surface noise and a cheat mode.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/platter.png" alt="Platter"></div><figcaption>platter</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/platter-pads.png" alt="Pad map on Push 3"></div><figcaption>pad map on push 3</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">33.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Drop a sample on Platter and it becomes a record on a motorised deck. Push 3&#x27;s pads show the record as a 24-pad ring with a red dot going round at 33, 45 or 78 rpm. Drag a finger round the ring to scratch, forwards or backwards at any speed; press harder to drag the record or stop it; let go and the motor brings it back up to speed. The left column is a cut fader and the right column holds speed, Start/Stop and pitch. Surface noise lives on the record itself, so it slows, stops and scratches with it. <b>Cheat</b> mode swaps scratching for instant jumps back to where the dot crossed a pad.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>instrument</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v1.0 — complete</dd></div><div class="fact"><dt>folder</dt><dd>Platter Device</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">33.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">On Push: Setup &gt; Expression = <b>MPE</b>. Scale &gt; <b>Sequential</b> (leftmost encoder) and <b>Chromatic</b> (leftmost lower button). Use Octave so the bottom-left pad plays <b>C1 (note 36)</b>.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Put <code>Platter.amxd</code> on an empty MIDI track and drop a sample on <b>DROP SAMPLE</b>.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Select the track so Push is in Note mode: the ring lights, with the red dot going round.</span></li>
+<li><span class="step-n">04</span><span class="step-t">Drag round the ring to scratch. Press harder to drag or stop the record; let go and it spins back up.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Optional: drop a vinyl crackle recording on <b>DROP VINYL</b> for real surface noise.</span></li>
+<li><span class="step-n">06</span><span class="step-t">To keep what you play, record Platter&#x27;s output onto another audio track.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">33.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">on the pads</h3>
+<p class="lead">See the pad map below. The device only lights the pads while its track is selected and Push is in Note mode.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Ring<span class="rng">24 pads, middle 6 columns</span></dt><dd>The record. Drag round it to scratch; one lap = one turn of the record at Sensitivity 1. Finger position within each pad is tracked, so movement is smooth.</dd></div>
+<div class="ctl-row"><dt>Pressure on the ring<span class="rng">light - firm</span></dt><dd>A still finger drags the record: a light touch slows it a little, firm pressure (Stop Press) stops it, with a short wind-down. A moving finger always grips.</dd></div>
+<div class="ctl-row"><dt>Left column<span class="rng">cut fader</span></dt><dd>Bottom pad = closed, top pad = open; slide within a pad to fine-tune. The lit bar shows the level.</dd></div>
+<div class="ctl-row"><dt>Right column, top three<span class="rng">33 / 45 / 78</span></dt><dd>Record speed. The selected speed is lit white.</dd></div>
+<div class="ctl-row"><dt>Right column, 4th pad<span class="rng">Start / Stop</span></dt><dd>Motor on or off. Green running, red stopped.</dd></div>
+<div class="ctl-row"><dt>Right column, bottom four<span class="rng">pitch fader</span></dt><dd>Top = faster, bottom = slower, within Pitch Range. Small catch at zero; both middle pads lit = zero. Holds where you leave it.</dd></div>
+</dl>
+<h3 class="sub">deck</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>DROP SAMPLE<span class="rng">WAV / AIFF</span></dt><dd>The record. Plays at its own pitch at full speed and wraps round at either end.</dd></div>
+<div class="ctl-row"><dt>Speed<span class="rng">33 / 45 / 78</span></dt><dd>How much audio passes per turn (1.8 s / 1.33 s / 0.77 s) and how fast the dot goes round. Pitch is unaffected.</dd></div>
+<div class="ctl-row"><dt>Motor<span class="rng">Stop / Start</span></dt><dd>Stop lets the record coast down.</dd></div>
+<div class="ctl-row"><dt>Spin Up<span class="rng">10 - 5000 ms, default 400</span></dt><dd>Time from standstill to full speed.</dd></div>
+<div class="ctl-row"><dt>Spin Down<span class="rng">50 - 15000 ms, default 1800</span></dt><dd>Time to coast to a stop with the motor off.</dd></div>
+<div class="ctl-row"><dt>Stop Press<span class="rng">10 - 100 %, default 80</span></dt><dd>Pressure needed to stop the record dead.</dd></div>
+<div class="ctl-row"><dt>Sensitivity<span class="rng">0.25 - 4, default 2</span></dt><dd>How far the record moves per finger movement. 1 = a real deck.</dd></div>
+<div class="ctl-row"><dt>Pitch<span class="rng">-50 - +50 %</span></dt><dd>Motor speed, like a pitch slider.</dd></div>
+<div class="ctl-row"><dt>Pitch Range<span class="rng">8 / 16 / 50</span></dt><dd>Span of the pitch pads, +/- %.</dd></div>
+<div class="ctl-row"><dt>Volume<span class="rng">-70 - +12 dB</span></dt><dd>Output level.</dd></div>
+</dl>
+<h3 class="sub">fader</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Fader Rest<span class="rng">Open / Closed / Hold</span></dt><dd>Where the fader goes when you let go. Open: tap low to cut. Closed: tap up to open, for chirps and transformers. Hold: stays put.</dd></div>
+<div class="ctl-row"><dt>Cut Curve<span class="rng">0 - 98 %, default 85</span></dt><dd>How early the sound is fully in. 85 = a sharp scratch-mixer cut-in; lower it for a gradual fade.</dd></div>
+</dl>
+<h3 class="sub">vinyl and cheat</h3>
+<p class="lead">All surface noise is addressed by the record&#x27;s own position, so it slows, stops, rewinds and scratches with it.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Crackle<span class="rng">0 - 100 %, default 30</span></dt><dd>Generated ticks and pops.</dd></div>
+<div class="ctl-row"><dt>Hiss<span class="rng">0 - 100 %, default 15</span></dt><dd>Generated surface hiss.</dd></div>
+<div class="ctl-row"><dt>Rumble<span class="rng">0 - 100 %, default 30</span></dt><dd>Motor rumble, 33 Hz hum plus low noise; fades with Start/Stop. Needs headphones or monitors to hear.</dd></div>
+<div class="ctl-row"><dt>DROP VINYL<span class="rng">any length</span></dt><dd>Your own crackle recording. Locked to the record and looped at its own length.</dd></div>
+<div class="ctl-row"><dt>Surface<span class="rng">0 - 100 %, default 50</span></dt><dd>Level of the DROP VINYL recording. Set Crackle and Hiss to 0 to hear only your recording.</dd></div>
+<div class="ctl-row"><dt>Cheat<span class="rng">Off / On</span></dt><dd>Scratching is switched off and the ring turns lime green. Tap a ring pad and playback restarts instantly from where the audio was when the dot last crossed that pad (always within the last turn), with no rewind sound.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="push-3">
+  <div class="block-label"><span class="bl-num">33.3</span>
+  <h2>push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">platter</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Speed</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Sensitivity</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Stop Press</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Spin Up</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Spin Down</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Pitch</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Pitch Range</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Volume</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Motor</span>
+<span class="btn">Cheat</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">fader + vinyl</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Fader Rest</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Cut Curve</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Crackle</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Hiss</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Rumble</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Surface</span></div>
+<div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Cheat</span>
+</div>
+</div></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">33.4</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">start with sensitivity 2</h3><p>A real deck (1) asks for long drags; 2 makes scratches and rewinds easy while keeping fine control.</p>
+<h3 class="sub">cuts and chirps</h3><p>Set Fader Rest to <b>Closed</b> and tap the upper fader pads in time with a scratch for chirps; leave it <b>Open</b> and tap the bottom pad for transformer-style cuts.</p>
+<h3 class="sub">cheat mode as a sampler</h3><p>With Cheat on, tapping just behind the dot re-triggers the last fraction of a second. Chasing the dot round the ring makes stutters and repeats a real deck can&#x27;t.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">33.5</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Push must be set to MPE, Sequential + Chromatic, with the bottom-left pad on C1 (36). In any other layout the pads map to the wrong places; the device shows a layout warning on its face.</li><li>The pads only light while Platter&#x27;s track is selected and Push is in Note mode, so other tracks&#x27; pads are left alone.</li><li>Cheat jumps land on where the dot crossed the CENTRE of a pad: 24 points per turn, about 75 ms apart at 33.</li><li>The generated vinyl noise is written when the device loads; Live may hitch briefly. The Max window then says &quot;vinyl noise table ready&quot;.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">33.6</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p><code>python3 build_platter.py</code> in the device folder rebuilds <code>Platter.amxd</code>, frozen, with both js files embedded. Engine: <code>platter_engine.genexpr</code> (gen~). Pads, touch and lights: <code>platter_ctl.js</code>. Face: <code>platter_face.js</code>.</p>
+<p><code>Platter Probe.amxd</code> is the test device that found the route: paint the pads via the control surface without grabbing them, and read the fingers as MPE notes. The README in the folder records every finding and version.</p></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="harvest.html"><span>previous</span>harvest</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>max for live</span>
+  <span>user guide</span></div>
+  <div class="sf-col"><span>generated 2026-10-17</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>
