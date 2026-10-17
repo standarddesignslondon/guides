@@ -178,6 +178,19 @@
     "kind": "Watch folder",
     "author": "Claude"
    }
+  },
+  {
+   "num": "14",
+   "slug": "opendocs",
+   "name": "OpenDocs",
+   "tagline": "A panel of live thumbnails of every open document. Click one to bring it to the front - no more hunting through the >> tab overflow.",
+   "url": "tools/opendocs.html",
+   "image": "images/opendocs.png",
+   "facets": {
+    "app": "Photoshop",
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
   }
  ]
 }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>opendocs — adobe</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">adobe</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">14</p>
+  <h1>opendocs</h1>
+  <p class="ch-sub">A panel of live thumbnails of every open document. Click one to bring it to the front - no more hunting through the &gt;&gt; tab overflow.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/opendocs.png" alt="OpenDocs"></div><figcaption>opendocs</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">14.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Photoshop&#x27;s document tabs run out of room after a handful of long filenames and everything else hides behind the &gt;&gt; button. OpenDocs is the pages panel InDesign has and Photoshop doesn&#x27;t: a grid of small pictures of what is actually open, the active document outlined, the filename and pixel size under each. It reads each picture from Photoshop&#x27;s own image pyramid through the UXP Imaging API, so a thumbnail of a 300 ppi A3 poster costs a fraction of a second and the document being read is never brought forward. Thumbnails refresh themselves a moment after you stop editing; nothing is written to any document.</p>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.0.1</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.opendocs</dd></div><div class="fact"><dt>folder</dt><dd>OpenDocs-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">14.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Open <b>Plugins › OpenDocs</b> and dock it wherever suits - it works as a tall single column at the side or a wide strip along the bottom; tiles wrap to fit.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Click a thumbnail to make that document active.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Step the tile size with <b>−</b> and <b>+</b> (XS to XL); the <b>TABS / A–Z</b> button toggles between Photoshop&#x27;s own tab order and alphabetical. Both settings are remembered.</span></li>
+<li><span class="step-n">04</span><span class="step-t">An orange dot before the filename means unsaved changes. Hover a tile for the full path.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">14.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">toolbar</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>− / +<span class="rng">XS / S / M / L / XL</span></dt><dd>Thumbnail square from 80 to 340 px. Pictures are read once at 480 px on the long edge, so changing size never re-reads Photoshop.</dd></div>
+<div class="ctl-row"><dt>TABS / A–Z</dt><dd>TABS is the order Photoshop lists the documents (the order of the tabs). A–Z is a case-insensitive alphabetical sort. Click to toggle.</dd></div>
+<div class="ctl-row"><dt>Hover the title</dt><dd>Shows the installed version.</dd></div>
+<div class="ctl-row"><dt>↻</dt><dd>Throws every cached thumbnail away and reads them all again. Only needed if a picture looks stale.</dd></div>
+</dl>
+<h3 class="sub">tiles</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Blue outline</dt><dd>The active document.</dd></div>
+<div class="ctl-row"><dt>● before the name</dt><dd>The document has unsaved changes.</dd></div>
+<div class="ctl-row"><dt>W × H px</dt><dd>Document size in pixels.</dd></div>
+<div class="ctl-row"><dt>Tooltip</dt><dd>Full file path, or just the title for a document never saved.</dd></div>
+<div class="ctl-row"><dt>No preview</dt><dd>Photoshop refused the pixel read for that document (seen with 32-bit documents); clicking the tile still switches to it.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">14.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">how it keeps up</h3><p>Every 1.5 s the panel compares the list of open documents and each one&#x27;s current history state with what it last saw - this costs nothing, no pixels are read. A document whose history state changed, or which was saved, is marked stale, and 0.7 s after the last change its thumbnail is re-read inside one <code>executeAsModal</code> call. Photoshop&#x27;s own <code>select</code>, <code>open</code>, <code>close</code>, <code>save</code> and <code>historyStateChanged</code> notifications trigger the same check immediately when they fire.</p>
+<h3 class="sub">colour</h3><p>Pixels are requested as 8-bit RGB with the sRGB profile and transparency matted on white, so CMYK, greyscale and 16-bit documents all preview correctly.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">14.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>If Photoshop has a dialog open, the modal read fails quietly and is retried 1.5 s later - thumbnails simply catch up once the dialog closes.</li><li>The panel polls only while it is visible; collapsed or closed it does nothing.</li><li>Switching documents by clicking a tile runs through <code>executeAsModal</code>; mid-brushstroke it waits for the stroke to finish, as any plugin must.</li><li>Thumbnails are a JPEG snapshot of the composite as Photoshop currently shows it - layer visibility, not layer selection.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">14.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>Source is <code>Guides/Photoshop Scripts/OpenDocs-Photoshop-Plugin/</code> (manifest.json, index.html, main.js - no build step). Zip those three files flat into <code>CCX Installers/OpenDocs.ccx</code> and install with the agent command below.</p></div>
+</section>
+<section class="block" id="installing">
+  <div class="block-label"><span class="bl-num">14.6</span>
+  <h2>installing</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">In Terminal, run Adobe&#x27;s installer agent on the plugin&#x27;s <code>.ccx</code> from <code>Photoshop Scripts/CCX Installers</code>: <code>&quot;/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent&quot; --install &lt;plugin&gt;.ccx</code></span></li>
+<li><span class="step-n">02</span><span class="step-t">Restart Photoshop. The panel appears under <b>Plugins</b> and survives restarts — UXP Developer Tools is not needed.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Do not double-click the <code>.ccx</code>: Creative Cloud wrongly reports <i>Compatible app required</i> for unsigned plugins.</span></li>
+</ol></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="poster-pdf-export.html"><span>previous</span>poster pdf export</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>adobe</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-10-17</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

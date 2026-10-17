@@ -1,0 +1,22 @@
+{
+    "id": "com.simonmorse.opendocs",
+    "name": "OpenDocs",
+    "version": "1.0.1",
+    "main": "index.html",
+    "manifestVersion": 5,
+    "host": {
+        "app": "PS",
+        "minVersion": "24.2.0"
+    },
+    "entrypoints": [
+        {
+            "type": "panel",
+            "id": "opendocs.panel",
+            "label": { "default": "OpenDocs" },
+            "minimumSize": { "width": 160, "height": 160 },
+            "maximumSize": { "width": 2400, "height": 2400 },
+            "preferredDockedSize": { "width": 300, "height": 700 },
+            "preferredFloatingSize": { "width": 520, "height": 420 }
+        }
+    ]
+}
