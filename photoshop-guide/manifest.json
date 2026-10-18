@@ -8,7 +8,7 @@
   "noun_plural": "tools",
   "page_dir": "tools"
  },
- "generated": "2026-10-17",
+ "generated": "2026-10-18",
  "items": [
   {
    "num": "01",
@@ -186,6 +186,19 @@
    "tagline": "A panel of live thumbnails of every open document. Click one to bring it to the front - no more hunting through the >> tab overflow.",
    "url": "tools/opendocs.html",
    "image": "images/opendocs.png",
+   "facets": {
+    "app": "Photoshop",
+    "kind": "UXP panel",
+    "author": "Claude"
+   }
+  },
+  {
+   "num": "15",
+   "slug": "pixachron",
+   "name": "Pixachron",
+   "tagline": "Audio effects for pictures: unroll the image along a path of your choosing, run a delay, flanger, filter, bitcrusher or reverb over it as a signal, roll it back. The path is the point.",
+   "url": "tools/pixachron.html",
+   "image": "images/pixachron.png",
    "facets": {
     "app": "Photoshop",
     "kind": "UXP panel",

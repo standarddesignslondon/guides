@@ -1,3 +1,7 @@
 .DS_Store
 __pycache__/
 library/_source/live-db/
+
+# Pixachron cheat sheet: 141 full-size images + a 270 MB PDF, kept local (the generator in _source is tracked)
+photoshop-guide/pixachron-cheatsheet/*
+!photoshop-guide/pixachron-cheatsheet/_source/

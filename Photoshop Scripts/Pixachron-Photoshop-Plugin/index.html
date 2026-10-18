@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    html, body { height: 100%; }
+    body {
+        overflow-y: scroll; overflow-x: hidden; margin: 0; padding: 10px 12px 18px;
+        font-family: "SF Pro Text", "Helvetica Neue", sans-serif; font-size: 12px; color: #d6d6d6;
+    }
+    h1 { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; margin: 0 0 2px; color: #e8e8e8; }
+    .tag { font-size: 10px; color: #7a7a7a; margin: 0 0 8px; }
+    h2 {
+        font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+        color: #9a9a9a; margin: 14px 0 6px; border-bottom: 1px solid #3a3a3a; padding-bottom: 3px; cursor: pointer;
+    }
+    h2 .tw { color: #6f6f6f; margin-right: 4px; }
+    .sec.closed .body { display: none; }
+    .row { display: flex; align-items: center; justify-content: space-between; margin: 4px 0; gap: 6px; }
+    .row label { flex: 1 1 auto; white-space: nowrap; overflow: hidden; }
+    select { width: 175px; background: #262626; color: #e6e6e6; border: 1px solid #444; border-radius: 3px; padding: 3px; font-size: 12px; }
+    select.wide { width: 100%; }
+    input[type="text"], input[type="number"] { width: 58px; background: #262626; color: #e6e6e6; border: 1px solid #444; border-radius: 3px; padding: 3px 5px; font-size: 12px; text-align: right; }
+    input[type="text"].wide { width: 100%; text-align: left; box-sizing: border-box; }
+    input[type="range"] { width: 104px; }
+    .val { width: 50px; text-align: right; color: #9a9a9a; font-variant-numeric: tabular-nums; }
+    .hint { font-size: 10px; color: #7a7a7a; margin: 3px 0 6px; line-height: 1.4; }
+    #note, #effectNote, #pathNote { font-size: 11px; color: #b7b2a6; margin: 6px 0 4px; line-height: 1.45; min-height: 14px; }
+    .buttons { display: flex; gap: 6px; margin-top: 10px; }
+    button { flex: 1; padding: 7px 0; border-radius: 4px; border: 1px solid #555; background: #333; color: #e6e6e6; font-size: 12px; cursor: pointer; }
+    button:hover { background: #3e3e3e; }
+    button.small { flex: 0 0 auto; padding: 3px 8px; font-size: 11px; }
+    #renderBtn { background: #2d5b9e; border-color: #3a6cb5; font-weight: 600; }
+    #renderBtn:hover { background: #366bb8; }
+    #status { margin-top: 8px; font-size: 11px; color: #8fae8f; min-height: 14px; white-space: pre-line; }
+    #status.err { color: #c98080; }
+    .modified { color: #d9b36c; }
+    .stg { color: #d9b36c; text-transform: none; letter-spacing: 0; font-weight: 400; margin-left: 6px; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0 6px; }
+    .tab { flex: 0 1 auto; padding: 4px 8px; font-size: 11px; border-radius: 3px; border: 1px solid #444; background: #262626; color: #bdbdbd; cursor: pointer; }
+    .tab.on { background: #2d5b9e; border-color: #3a6cb5; color: #fff; }
+    .tab.off { opacity: 0.5; text-decoration: line-through; }
+</style>
+</head>
+<body>
+    <h1>PIXACHRON</h1>
+    <div class="tag">which direction is time?</div>
+
+    <div class="row"><label>Preset</label><span id="presetMod" class="modified"></span></div>
+    <select id="preset" class="wide"></select>
+    <div id="note"></div>
+    <div class="row">
+        <input type="text" id="userName" class="wide" placeholder="name for a user preset">
+        <button class="small" id="saveUser">Save</button>
+        <button class="small" id="deleteUser">Delete</button>
+    </div>
+
+    <div class="sec" id="secChain">
+        <h2><span class="tw">▾</span>Chain</h2>
+        <div class="body">
+            <div id="stageTabs" class="tabs"></div>
+            <div class="row">
+                <button class="small" id="stageAdd">+ Add</button>
+                <button class="small" id="stageDup">Duplicate</button>
+                <button class="small" id="stageLeft">◀</button>
+                <button class="small" id="stageRight">▶</button>
+                <button class="small" id="stageDel">Remove</button>
+                <label style="flex:0 0 auto">On <input type="checkbox" id="stageOn"></label>
+            </div>
+            <div class="hint">Stages run in series: the picture comes out of one and goes into the next. Each stage has its own path, effect and signal settings below; the mask and output are shared. The selected stage is the one the Path, Effect and Signal sections edit.</div>
+        </div>
+    </div>
+
+    <div class="sec" id="secPath">
+        <h2><span class="tw">▾</span>Path (the direction of time) <span class="stg" id="stgPath"></span></h2>
+        <div class="body">
+            <select id="path" class="wide"></select>
+            <div id="pathNote"></div>
+            <div class="row"><label>Snake (alternate lines run back)</label><input type="checkbox" id="snake"></div>
+            <div class="row"><label>Angle (°)</label><input type="range" id="angle"><input type="text" id="angleN"></div>
+            <div class="row"><label>Centre X (%)</label><input type="range" id="cx"><input type="text" id="cxN"></div>
+            <div class="row"><label>Centre Y (%)</label><input type="range" id="cy"><input type="text" id="cyN"></div>
+            <div class="row"><label>Spiral pitch (px per turn)</label><input type="range" id="pitch"><input type="text" id="pitchN"></div>
+            <div class="row"><label>Spokes (0 = one per rim px)</label><input type="range" id="spokes"><input type="text" id="spokesN"></div>
+            <div class="row"><label>Twist (°)</label><input type="range" id="twist"><input type="text" id="twistN"></div>
+            <div class="row"><label>Inward (towards the centre / shapes)</label><input type="checkbox" id="inward"></div>
+            <div class="row"><label>Time runs backwards</label><input type="checkbox" id="reverse"></div>
+            <div class="row"><label>Tile size (px, 0 = whole image)</label><input type="range" id="tile"><input type="text" id="tileN"></div>
+            <div class="row"><label>Tiles in snake order</label><input type="checkbox" id="tileSnake"></div>
+            <div class="row"><label>Reset the effect</label>
+                <select id="segment"><option value="path">Never (one long signal)</option><option value="line">At every line / spoke</option><option value="tile">At every tile</option></select></div>
+            <div class="row"><label>Roll back along</label><select id="reroll"><option value="same">The same path</option></select></div>
+            <div class="hint">Rolling back along a different path scrambles the picture by the two paths alone, before any effect.</div>
+        </div>
+    </div>
+
+    <div class="sec" id="secMask">
+        <h2><span class="tw">▾</span>Mask</h2>
+        <div class="body">
+            <div class="row"><label>Mask from</label>
+                <select id="maskSource"><option value="none">None</option><option value="selection">Selection</option><option value="alpha">Layer transparency</option><option value="dark">Dark pixels</option><option value="light">Light pixels</option></select></div>
+            <div class="row"><label>Dark / light threshold (%)</label><input type="range" id="maskThr"><input type="text" id="maskThrN"></div>
+            <div class="row"><label>Use it <span class="stg" id="stgMask"></span></label>
+                <select id="maskUse"><option value="path">For the Contour path only</option><option value="only">Only masked pixels are samples</option><option value="except">Only unmasked pixels are samples</option></select></div>
+            <div class="hint">Layer transparency needs Source set to the selected layer. "Only masked pixels" skips the rest entirely: they are neither changed nor counted as time.</div>
+        </div>
+    </div>
+
+    <div class="sec" id="secEffect">
+        <h2><span class="tw">▾</span>Effect <span class="stg" id="stgEffect"></span></h2>
+        <div class="body">
+            <select id="effect" class="wide"></select>
+            <div id="effectNote"></div>
+            <div id="effectParams"></div>
+            <div class="row"><label>Seed</label><input type="text" id="seed"><button class="small" id="reseed">New</button></div>
+        </div>
+    </div>
+
+    <div class="sec" id="secSignal">
+        <h2><span class="tw">▾</span>Signal <span class="stg" id="stgSignal"></span></h2>
+        <div class="body">
+            <div class="row"><label>Channels</label>
+                <select id="channel"><option value="rgb">RGB, same effect on each</option><option value="luma">Luminance only</option><option value="spread">RGB with spread</option></select></div>
+            <div class="row"><label>Spread</label><input type="range" id="spread"><input type="text" id="spreadN"></div>
+            <div class="row"><label>Coupling</label>
+                <select id="coupling"><option value="ac">AC: effect the changes</option><option value="dc">DC: effect the whole level</option></select></div>
+            <div class="row"><label>AC period (px)</label><input type="range" id="couplingPeriod"><input type="text" id="couplingPeriodN"></div>
+            <div class="hint">AC takes the slow-moving level out along the path before the effect and puts it back after, so feedback builds on edges and detail rather than on the picture's overall tone (which otherwise runs away to white or black). DC is the raw databending behaviour.</div>
+            <div class="row"><label>Mix (wet %)</label><input type="range" id="mix"><input type="text" id="mixN"></div>
+        </div>
+    </div>
+
+    <div class="sec" id="secOutline">
+        <h2><span class="tw">▾</span>Outline mode</h2>
+        <div class="body">
+            <div class="row"><label><b>Work on an outline instead of pixels</b></label><input type="checkbox" id="olOn"></div>
+            <div class="row"><label>Outline from</label>
+                <select id="olSource"><option value="text">Selected text layer</option><option value="work">The work path</option><option value="vector">Selected layer's vector mask</option><option value="named">Path by name</option></select></div>
+            <div class="row"><label>Path name</label><input type="text" id="olName" class="wide" placeholder="as in the Paths panel"></div>
+            <div class="row"><label>Domain</label>
+                <select id="olDomain"><option value="direction">Direction (tangent angle)</option><option value="position">Position (x and y)</option></select></div>
+            <div class="hint">Direction runs the effect over the angle the outline is heading in, then walks it again: low-pass rounds corners, bitcrush makes a pixel font, delay echoes every corner. Position runs it over x and y as two channels: the shape itself echoes, smears and shuffles.</div>
+            <div class="row"><label>Sample spacing (px)</label><input type="range" id="olSpacing"><input type="text" id="olSpacingN"></div>
+            <div class="row"><label>Output spacing (px)</label><input type="range" id="olOut"><input type="text" id="olOutN"></div>
+            <div class="row"><label>Corner threshold (°)</label><input type="range" id="olCorner"><input type="text" id="olCornerN"></div>
+            <div class="row"><label>Closed outlines wrap round</label><input type="checkbox" id="olLoop"></div>
+            <div class="row"><label>One signal through every subpath</label><input type="checkbox" id="olContinuous"></div>
+            <div class="row"><label>Output</label>
+                <select id="olFill"><option value="path">New path only</option><option value="fill">New path + layer filled with the foreground colour</option></select></div>
+            <div class="hint">In outline mode the Path and Mask sections don't apply (only Time runs backwards does); each stage's effect, signal and mix do, with ⏱ distances measured in pixels along the outline. Preview and Render both make a new path; Update replaces the last one.</div>
+        </div>
+    </div>
+
+    <div class="sec" id="secOutput">
+        <h2><span class="tw">▾</span>Output</h2>
+        <div class="body">
+            <div class="row"><label>Source</label>
+                <select id="source"><option value="merged">Whole image (merged)</option><option value="layer">Selected layer only</option></select></div>
+            <div class="row"><label>Layer opacity (%)</label><input type="range" id="strength"><input type="text" id="strengthN"></div>
+            <div class="row"><label>Preview size (long side px)</label><input type="range" id="proxy"><input type="text" id="proxyN"></div>
+            <div class="hint">Preview renders the whole picture at the preview size, with all pixel distances scaled to match, and writes it (upsampled) to a "Pixachron preview" layer. Render does it at full size. Update re-renders the last result in place.</div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="previewBtn">Preview</button>
+        <button id="updateBtn">Update</button>
+        <button id="renderBtn">Render</button>
+    </div>
+    <div class="buttons">
+        <button id="randomBtn">Randomise</button>
+        <button id="resetBtn">Defaults</button>
+    </div>
+    <div id="status"></div>
+
+    <script src="px_paths.js"></script>
+    <script src="px_effects.js"></script>
+    <script src="px_engine.js"></script>
+    <script src="px_outline.js"></script>
+    <script src="px_presets.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

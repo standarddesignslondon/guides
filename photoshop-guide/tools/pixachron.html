@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pixachron — adobe</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">adobe</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">15</p>
+  <h1>pixachron</h1>
+  <p class="ch-sub">Audio effects for pictures: unroll the image along a path of your choosing, run a delay, flanger, filter, bitcrusher or reverb over it as a signal, roll it back. The path is the point.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/pixachron.png" alt="Pixachron"></div><figcaption>pixachron</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">15.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">An image has no time axis, so before an audio effect can touch it you have to invent one. Databending (opening a picture in Audacity) always picks the same one - left to right, top to bottom - and every result it gives comes from that accident. Pixachron makes the choice deliberate: the picture is unrolled along a <b>path</b> (rows, columns, lines at an angle, a Hilbert curve, a spiral, spokes, or outward from the edge of the type), the resulting one-dimensional signal is run through one effect borrowed from a music plugin, and the signal is rolled back along the same path or, for deliberate scrambling, a different one. The same delay gives horizontal streaks on a raster path, blotches and tendrils on a Hilbert curve, rings on a spiral, sunbursts on spokes and contour lines radiating off lettering on the Contour path. Nothing here imitates a real-world process; it is a way of finding forms Photoshop&#x27;s own filters cannot make. Everything is read and written through the UXP Imaging API and processed in JavaScript, as FilmLook, VideoLook and PrintLook are.</p>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.2.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+, RGB, 8 or 16-bit</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.pixachron</dd></div><div class="fact"><dt>folder</dt><dd>Pixachron-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">15.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">There is a one-control-at-a-time <b>cheat sheet</b>, kept on the Mac rather than on this site: <code>Guides/photoshop-guide/pixachron-cheatsheet/Pixachron Cheat Sheet.pdf</code> (142 pages, 141 images at 1 pt per pixel, each one setting away from a reference; <code>index.html</code> beside it is the same thing as a web page). The generator is in its <code>_source</code> folder.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Open <b>Plugins › Pixachron</b>. Choose a preset - <b>Hilbert echo</b> is the signature one - and press <b>Preview</b>. A &quot;Pixachron preview&quot; layer appears at the top of the stack, rendered from a reduced copy with every pixel distance scaled to match, so it looks like the full render will.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Change anything and press <b>Update</b> to re-render in place (Update also replaces a full render). A new Preview replaces the old preview layer; full <b>Render</b>s accumulate as separate layers so you can compare.</span></li>
+<li><span class="step-n">04</span><span class="step-t">When it&#x27;s right, press <b>Render</b> for the full-size version. Set <b>Layer opacity</b> under Output to blend it with the original.</span></li>
+<li><span class="step-n">05</span><span class="step-t">The real exploration is in the <b>Path</b> section: keep the effect and change the path, then keep the path and change the effect. <b>Randomise</b> throws a random path, effect and settings; <b>Defaults</b> clears everything.</span></li>
+<li><span class="step-n">06</span><span class="step-t">Type a name and press <b>Save</b> to keep a setting as your own preset; they appear at the bottom of the preset menu.</span></li>
+<li><span class="step-n">07</span><span class="step-t">To run effects in series, press <b>+ Add</b> under <b>Chain</b>. Each stage has its own path, effect and signal settings; the stage tabs show which one the sections below are editing. The picture comes out of stage 1 and goes into stage 2. The <i>chains</i> group of presets shows what that does.</span></li>
+<li><span class="step-n">08</span><span class="step-t">For type as vectors rather than pixels, select a text layer, tick <b>Work on an outline instead of pixels</b> under <b>Outline mode</b> and pick an <i>outlines</i> preset. The result is a new path in the Paths panel (and, by default, a layer filled with the foreground colour), not a pixel render.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">15.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">chain</h3>
+<p class="lead">Up to six stages in series. Each stage is a complete path + effect + signal setting; the mask source and the output settings are shared by all of them.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Stage tabs</dt><dd>One per stage, named by its path and effect. Click to select; Path, Effect, Signal and the mask&#x27;s Use it setting then edit that stage. A struck-through tab is switched off.</dd></div>
+<div class="ctl-row"><dt>+ Add / Duplicate</dt><dd>Inserts a fresh default stage, or a copy of the selected one, after the selected stage.</dd></div>
+<div class="ctl-row"><dt>◀ / ▶</dt><dd>Moves the selected stage earlier or later in the chain. Order matters: a bitcrush before a delay posterises what gets echoed; after it, the echoes themselves.</dd></div>
+<div class="ctl-row"><dt>Remove</dt><dd>Deletes the selected stage (the last one is reset to defaults rather than removed).</dd></div>
+<div class="ctl-row"><dt>On<span class="rng">on / off</span></dt><dd>Switches the selected stage out of the chain without deleting it, for A/B comparison.</dd></div>
+<div class="ctl-row"><dt>Randomise</dt><dd>Randomises only the selected stage, so a chain can be built up one random stage at a time.</dd></div>
+</dl>
+<h3 class="sub">path (the direction of time)</h3>
+<p class="lead">A path is a permutation of every pixel. Pixels are visited in that order, the effect sees them as a stream, and the results are written back in the same order.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Raster (rows)</dt><dd>Left to right, top to bottom: the databending default. Echoes smear to the right and wrap round at the line ends.</dd></div>
+<div class="ctl-row"><dt>Columns</dt><dd>Top to bottom, column by column.</dd></div>
+<div class="ctl-row"><dt>Lines at an angle<span class="rng">Angle 0 - 180°</span></dt><dd>Parallel lines at any angle, 1 px apart.</dd></div>
+<div class="ctl-row"><dt>Snake<span class="rng">on / off</span></dt><dd>For the three line paths: alternate lines run backwards, so the signal turns at the edges instead of jumping back to the start of the next line.</dd></div>
+<div class="ctl-row"><dt>Hilbert curve</dt><dd>A space-filling curve that keeps neighbours together: a delay of 1,000 px along a raster is a third of a row, along a Hilbert curve it is a blob about 32 px across. Echoes come out as blotches and tendrils. Tile sets the curve&#x27;s scale.</dd></div>
+<div class="ctl-row"><dt>Z-order (Morton)</dt><dd>The Hilbert curve&#x27;s blocky cousin, with jumps between blocks of 2, 4, 8… px.</dd></div>
+<div class="ctl-row"><dt>Spiral<span class="rng">Pitch 1 - 64 px per turn</span></dt><dd>Winds outward from Centre X/Y. Pitch 1 is tight concentric rings; a higher pitch gives a looser spiral whose rings interleave.</dd></div>
+<div class="ctl-row"><dt>Spokes<span class="rng">Spokes 0 - 720, Twist ±360°</span></dt><dd>Rays from the centre, each its own signal (set Reset to &quot;every line / spoke&quot;). 0 spokes means one per pixel of the rim. Twist bends the rays into a pinwheel.</dd></div>
+<div class="ctl-row"><dt>Contour (from the mask)</dt><dd>Time is signed distance from the edge of the masked shapes: it starts deep inside the letters, crosses the edge, and runs out into the background. Echoes radiate off the shapes like contour lines. Needs a mask.</dd></div>
+<div class="ctl-row"><dt>Centre X / Y<span class="rng">0 - 100 %</span></dt><dd>The origin for Spiral and Spokes, as a fraction of the document (or of each tile).</dd></div>
+<div class="ctl-row"><dt>Inward<span class="rng">on / off</span></dt><dd>Spiral, Spokes and Contour run towards the centre or shapes instead of away.</dd></div>
+<div class="ctl-row"><dt>Time runs backwards<span class="rng">on / off</span></dt><dd>Reverses the whole path: echoes trail the other way.</dd></div>
+<div class="ctl-row"><dt>Tile size<span class="rng">0 - 8192 px</span></dt><dd>0 uses the whole image. Otherwise the path is built per tile and the tiles visited in raster order (snake order with Tiles in snake order). Hilbert at a 64 px tile and at image scale are different textures.</dd></div>
+<div class="ctl-row"><dt>Reset the effect<span class="rng">never / line or spoke / tile</span></dt><dd>Where the effect&#x27;s memory is cleared. Never gives one long signal that wraps from line to line; resetting at each line keeps every row&#x27;s echoes to that row.</dd></div>
+<div class="ctl-row"><dt>Roll back along<span class="rng">same / any other path</span></dt><dd>Writes the processed signal back along a different path. With no effect at all this scrambles the picture by the two paths alone - raster out, Hilbert back is a favourite.</dd></div>
+</dl>
+<h3 class="sub">mask</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Mask from<span class="rng">none / selection / layer transparency / dark pixels / light pixels</span></dt><dd>Where the mask comes from. Layer transparency needs Source set to the selected layer. Dark and light use the luminance threshold.</dd></div>
+<div class="ctl-row"><dt>Use it<span class="rng">contour only / only masked / only unmasked</span></dt><dd>&quot;Only masked pixels are samples&quot; removes the rest from the signal entirely: they are neither changed nor counted as time, so echoes stay inside the letters. &quot;Only unmasked&quot; is the inverse: the letters stay crisp and the background takes the effect.</dd></div>
+</dl>
+<h3 class="sub">effect</h3>
+<p class="lead">One effect at a time. Parameters marked ⏱ are distances in pixels along the path; previews scale them to the preview size and channel spread scales them per channel. Seed fixes the random choices in Granular, Bitcrush jitter and the Random LFO; New draws another.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Delay<span class="rng">time, feedback, damping, taps, polarity</span></dt><dd>A feedback echo. Feedback above 1 saturates rather than explodes. Negative polarity inverts every repeat so colours flip each time round; Alternating flips every other one. Damping low-passes the feedback so echoes soften as they recede.</dd></div>
+<div class="ctl-row"><dt>Flanger<span class="rng">centre time, depth, LFO period, feedback, shape, source</span></dt><dd>A short delay swept by an LFO and mixed with the dry signal: comb patterns that breathe. The LFO can follow the path, or Image X or Y, so rows swing in a wave down the picture.</dd></div>
+<div class="ctl-row"><dt>Phaser<span class="rng">stages, period range, LFO, feedback, output</span></dt><dd>All-pass stages swept by an LFO. Mixed gives moving notches; &quot;All-passed only&quot; gives dispersion, every edge smeared into a decaying ripple; Difference shows only what moved.</dd></div>
+<div class="ctl-row"><dt>Filter<span class="rng">cutoff period, resonance, drive, mode, LFO</span></dt><dd>A resonant state-variable filter (low, high, band-pass, notch, peak). Cutoff is a period in pixels: detail finer than that is cut or kept. Resonance near 1 rings, so edges trail with oscillation. LFO depth sweeps the cutoff for a wah along the path.</dd></div>
+<div class="ctl-row"><dt>Bitcrush<span class="rng">levels, hold, dither, bit-flip, hold mode</span></dt><dd>Fewer levels and a lower sample rate. Hold repeats a value for a run of pixels along the path, so the blocks take the path&#x27;s shape. Bit-flip XORs the quantised value: the classic databending corruption, inverting colours in bands.</dd></div>
+<div class="ctl-row"><dt>Distortion<span class="rng">drive, bias, pre-emphasis, tone, type</span></dt><dd>Waveshaping (soft, hard, fold-back, tube, rectify, sine). Pre-emphasis high-passes along the path before the clipper and puts the slow level back afterwards, so flat areas pass and only the edges crossing the path are driven.</dd></div>
+<div class="ctl-row"><dt>Ring mod / tremolo<span class="rng">period, depth, phase, drift, mode, shape</span></dt><dd>Multiplies by an oscillator. Ring with a square wave inverts the picture in stripes that follow the path; Tremolo fades it; Add overlays the wave. Drift slowly varies the period.</dd></div>
+<div class="ctl-row"><dt>Reverb<span class="rng">size, decay, damping, diffusion, pre-delay</span></dt><dd>Eight parallel feedback combs into four all-passes (the Freeverb layout) along the path: a diffuse, grainy tail behind every edge.</dd></div>
+<div class="ctl-row"><dt>Granular<span class="rng">grain, reverse chance, repeat, scatter, pitch, size jitter</span></dt><dd>Cuts the signal into grains and re-lays them reversed, repeated (stutter), read from a random offset (scatter) or resampled (pitch 2 squashes, 0.5 stretches). Grains follow the path: arcs on a spiral, blobs on a Hilbert curve.</dd></div>
+<div class="ctl-row"><dt>Compressor<span class="rng">threshold, ratio, attack, release, make-up</span></dt><dd>An envelope follower drives gain. Attack and release are in pixels, so the gain lags behind edges in the path&#x27;s direction and leaves haloes that show which way time runs. Ratio below 1 expands.</dd></div>
+</dl>
+<h3 class="sub">signal</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Channels<span class="rng">RGB / luminance / RGB with spread</span></dt><dd>Same effect on each channel; luminance only (colour untouched); or RGB with Spread, which scales every ⏱ parameter differently for red, green and blue so echoes split into colour fringes.</dd></div>
+<div class="ctl-row"><dt>Coupling<span class="rng">AC / DC</span></dt><dd>AC takes the slow-moving level out of the signal before the effect and puts it back afterwards, so feedback builds on edges and detail rather than on the picture&#x27;s overall tone (which otherwise runs away to white or black within a few repeats). DC is the raw databending behaviour, and the right choice for Bitcrush, Ring mod and Granular, which want the whole level.</dd></div>
+<div class="ctl-row"><dt>AC period<span class="rng">2 - 100,000 px</span></dt><dd>How slow &quot;slow-moving&quot; is. Smaller values leave only fine detail for the effect.</dd></div>
+<div class="ctl-row"><dt>Mix<span class="rng">0 - 100 %</span></dt><dd>Wet/dry blend inside the render (Layer opacity does the same job non-destructively afterwards).</dd></div>
+</dl>
+<h3 class="sub">outline mode</h3>
+<p class="lead">The effects applied to a glyph&#x27;s outline instead of its pixels. The path is flattened and resampled at equal spacing along the contour, so &quot;time&quot; runs along the outline; the stage chain runs over that signal and the result is written back as a new path, so it stays vector.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Work on an outline instead of pixels<span class="rng">on / off</span></dt><dd>Switches the whole panel to outline mode. Preview and Render both make a new path; Update replaces the last one. The Path and Mask sections don&#x27;t apply (only Time runs backwards does).</dd></div>
+<div class="ctl-row"><dt>Outline from<span class="rng">text layer / work path / vector mask / path by name</span></dt><dd>Where the outline comes from. Text layer makes a temporary work path from the selected text layer (Type › Create Work Path) and removes it afterwards; the text layer itself is untouched.</dd></div>
+<div class="ctl-row"><dt>Domain<span class="rng">direction / position</span></dt><dd>Direction runs the effect over the tangent angle along the outline (with the loop&#x27;s steady turn taken out), then walks the outline again with the new angles and re-closes it: low-pass rounds corners, bitcrush snaps the outline to a few headings (a pixel font), delay echoes every corner, a resonant filter rings after each turn. Position runs it over x and y as two channels centred on the shape: the shape itself echoes, smears and shuffles.</dd></div>
+<div class="ctl-row"><dt>Sample spacing<span class="rng">0.25 - 4 px</span></dt><dd>Distance between samples along the outline. 1 px means ⏱ parameters are in pixels along the outline exactly.</dd></div>
+<div class="ctl-row"><dt>Output spacing<span class="rng">1 - 12 px</span></dt><dd>How often a sample becomes a path point. Points are smooth with Catmull-Rom handles, except where the outline turns more than the corner threshold, which become corner points.</dd></div>
+<div class="ctl-row"><dt>Corner threshold<span class="rng">10 - 120°</span></dt><dd>Turns sharper than this stay corners in the output path.</dd></div>
+<div class="ctl-row"><dt>Closed outlines wrap round<span class="rng">on / off</span></dt><dd>The effect is run round the loop twice and the second pass kept, so echoes wrap from the end of a contour back to its start instead of restarting.</dd></div>
+<div class="ctl-row"><dt>One signal through every subpath<span class="rng">on / off</span></dt><dd>Joins all the subpaths (every glyph and counter) into one signal in order, so echoes cross from one letter into the next.</dd></div>
+<div class="ctl-row"><dt>Output<span class="rng">path / path + filled layer</span></dt><dd>Just the path, or the path plus a new layer filled with the foreground colour (Layer opacity applies).</dd></div>
+</dl>
+<h3 class="sub">output</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Source<span class="rng">whole image / selected layer</span></dt><dd>Whole image reads the merged document with any Pixachron layers hidden; selected layer reads one layer and keeps its transparency.</dd></div>
+<div class="ctl-row"><dt>Layer opacity<span class="rng">0 - 100 %</span></dt><dd>Opacity given to the result layer.</dd></div>
+<div class="ctl-row"><dt>Preview size<span class="rng">128 - 8192 px</span></dt><dd>Long side of the reduced copy a Preview renders from. 1024 takes a second or two.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">15.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">how to think about it</h3><p>Audio effects are defined in time, and the only thing Pixachron really adds to Photoshop is the question of which direction time runs. So work path-first: pick a plain Delay, cycle through every path with the same settings, and only then start on the effect. Tile size and Reset change a path&#x27;s character as much as the path itself. The Contour path is the one built for type - mask from Dark pixels on dark lettering - and &quot;Only masked pixels are samples&quot; keeps any effect inside the letters.</p>
+<h3 class="sub">what the engine does</h3><p><code>px_paths.js</code> builds each path as a permutation of pixel indices (counting sorts, a Hilbert walk, a Euclidean distance transform for Contour) plus the positions where the effect&#x27;s state resets. <code>px_effects.js</code> holds the ten processors, each a plain function over a bipolar Float32 signal. <code>px_engine.js</code> unrolls, optionally AC-couples, runs the effect per channel and rolls back; it also makes the proxy for previews and scales the ⏱ parameters to match. <code>main.js</code> is the panel and the Photoshop I/O, following the VideoLook conventions. The engine runs unchanged in Node, which is how it was tested.</p>
+<h3 class="sub">chains</h3><p>A chain is the same engine run repeatedly, each stage reading the previous stage&#x27;s output. Because every stage picks its own path, the chain can change the direction of time between effects, and a &quot;roll back along&quot; stage with a neutral effect (Bitcrush at 256 levels, hold 1) is a pure scramble that a later stage can undo: an effect run between a scramble and its inverse is made in the scrambled space and lands in a shape no single path gives. The preset &quot;Scramble, echo, unscramble&quot; is that trick.</p>
+<h3 class="sub">outlines</h3><p>Outline mode is the same idea taken off the pixel grid. A closed contour is already a one-dimensional thing with a natural time axis (go round it), so no path needs choosing; the choice is the domain instead. Direction is the one built for type: the signal is where the outline is heading, so an effect on it changes how the letter turns rather than where it is, and the re-integrated outline is closed again and put back on its centroid. <code>px_outline.js</code> holds it all and runs in Node like the rest. The one thing the docs don&#x27;t settle is how Photoshop wants new paths built, so the panel tries the documented classes, plain objects and the recorded batchPlay form in turn.</p>
+<h3 class="sub">where it could go</h3><p>Not yet built: a pixel path that follows a Photoshop work path you draw, so echoes run along a line of your own.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">15.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Every path is built for the whole document and held in memory alongside three float planes in and out, so a 30-megapixel poster needs well over a gigabyte while rendering. Preview first; render full size once.</li><li>Contour needs a mask, and the mask comes from the pixels being read: Dark or Light pixels work on the merged picture, Layer transparency only with Source set to the selected layer.</li><li>With DC coupling and feedback, flat areas of tone build up until they clip. That is the real databending look; switch to AC if it isn&#x27;t what you want.</li><li>Hold, grain, time and the other ⏱ values are in pixels along the path, not across the picture - on a Hilbert curve 1,000 px is a small blob.</li><li>32-bit documents aren&#x27;t supported; CMYK documents need converting to RGB first.</li><li>User presets live in the panel&#x27;s own local storage, so they vanish if the plugin is uninstalled.</li><li>Each stage builds its own path and planes, so render time and memory grow with the number of stages; six Hilbert stages on a big poster is a wait.</li><li>Outline mode needs Photoshop 23.3+ for the path API, and a text layer that Type › Create Work Path can convert (live text, not rasterised). A small Output spacing on a long word makes thousands of path points, which Photoshop takes a few seconds to add.</li><li>Outline mode&#x27;s result lands at the same place as the original; move or hide the text layer to see it on its own.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">15.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>Source is <code>Guides/Photoshop Scripts/Pixachron-Photoshop-Plugin/</code> (manifest.json, index.html, main.js, px_paths.js, px_effects.js, px_engine.js, px_presets.js - no build step). Zip the seven files flat into <code>CCX Installers/Pixachron.ccx</code> and install with the agent command below.</p>
+<p>To add an effect, append an object to <code>LIST</code> in <code>px_effects.js</code> with <code>params</code> (mark pixel distances <code>time: true</code>), optional <code>options</code>, and a <code>run(signal, segStarts, params, ctx)</code> function; the panel builds its controls from that. Paths go in <code>px_paths.js</code> and its <code>LIST</code>.</p></div>
+</section>
+<section class="block" id="installing">
+  <div class="block-label"><span class="bl-num">15.6</span>
+  <h2>installing</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">In Terminal, run Adobe&#x27;s installer agent on the plugin&#x27;s <code>.ccx</code> from <code>Photoshop Scripts/CCX Installers</code>: <code>&quot;/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent&quot; --install &lt;plugin&gt;.ccx</code></span></li>
+<li><span class="step-n">02</span><span class="step-t">Restart Photoshop. The panel appears under <b>Plugins</b> and survives restarts — UXP Developer Tools is not needed.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Do not double-click the <code>.ccx</code>: Creative Cloud wrongly reports <i>Compatible app required</i> for unsigned plugins.</span></li>
+</ol></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="opendocs.html"><span>previous</span>opendocs</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>adobe</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-10-18</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>
