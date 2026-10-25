@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hexrack — adobe</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="item">
+<header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">adobe</a><a class="topbar-right" href="../../all.html">everything</a></header>
+<main>
+<header class="chapter">
+  <p class="ch-num">16</p>
+  <h1>hexrack</h1>
+  <p class="ch-sub">A databending effects rack: the picture becomes a file, a chain of devices damages the file in the ways hex editors, text editors, codecs and Audacity really do, and the file becomes a picture.</p>
+</header>
+<figure class="shot"><div class="shot-frame"><img src="../images/hexrack.png" alt="Hexrack"></div><figcaption>hexrack</figcaption></figure>
+<section class="block" id="about">
+  <div class="block-label"><span class="bl-num">16.0</span><h2>about</h2></div>
+  <div class="block-body">
+    <p class="lead">Databending is editing an image&#x27;s <i>bytes</i> rather than its pixels, and its whole look comes from the mechanics of whichever program did the damage. Hexrack does each of those for real instead of imitating the result: the layer is turned into a raw RGB byte stream, and every <b>device</b> in the rack either edits that stream directly (shift, cut and paste, find and replace, insert and delete, bit ops, stutter, bit rot, the text-editor accidents, wrong-header reinterpretation, the Audacity import trick) or encodes it into a real file format, damages the encoded bytes and decodes them again (a baseline <b>JPEG</b> encoder with a libjpeg-style forgiving decoder; <b>PNG</b> scanline filters). Palette abuse and pixel sorting round it out. Devices run top to bottom like an Ableton effects rack - up to eight, each with on/off, wet/dry mix, a band of rows it is confined to, a channel it writes back to, and its own seed - so formats that are never chained in practice can be. Everything is read and written through the UXP Imaging API and processed in JavaScript, as Pixachron is.</p>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>built, untested in photoshop</dd></div><div class="fact"><dt>version</dt><dd>1.0.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+, RGB, 8 or 16-bit (processed as 8-bit)</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.hexrack</dd></div><div class="fact"><dt>folder</dt><dd>Hexrack-Photoshop-Plugin</dd></div></dl>
+  </div>
+</section>
+<section class="block" id="quick-start">
+  <div class="block-label"><span class="bl-num">16.1</span>
+  <h2>quick start</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">Open <b>Plugins › Hexrack</b>. Choose a preset - <b>Bent JPEG</b>, <b>WordPad</b> and <b>Hex editor shift</b> are the three classics - and press <b>Preview</b>. A &quot;Hexrack preview&quot; layer appears at the top of the stack.</span></li>
+<li><span class="step-n">02</span><span class="step-t">Previews bend a reduced copy, so byte-level effects can&#x27;t scale exactly: the full <b>Render</b> will differ in detail (the picture is a different file at a different size). Treat the preview as a sketch.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Click a slot in the <b>Rack</b> to edit it; the <b>Device</b> section is that slot&#x27;s device and parameters, the <b>Stage</b> section its mix, row band and channel. <b>+ Add</b> puts a new device below the selected one; ▲ ▼ reorder; <b>On</b> mutes a slot without removing it.</span></li>
+<li><span class="step-n">04</span><span class="step-t"><b>Randomise stage</b> rolls the selected slot; <b>Randomise rack</b> builds a whole new rack of two to four devices. <b>New</b> beside Seed re-rolls only the random choices inside the current device.</span></li>
+<li><span class="step-n">05</span><span class="step-t">Save a rack you like with a name in the box and <b>Save</b>; it joins the preset menu under <i>your presets</i>. Racks also survive restarts on their own.</span></li>
+</ol></div>
+</section>
+<section class="block" id="controls">
+  <div class="block-label"><span class="bl-num">16.2</span>
+  <h2>controls</h2></div>
+  <div class="block-body"><h3 class="sub">hex devices</h3>
+<p class="lead">Edits on the raw byte stream, exactly as a hex editor would make them. Where an edit changes the file&#x27;s length, <b>Fill the end with</b> says what fills the gap (wrap the stream round, untouched source bytes, the last byte repeated, zeros, 0xFF, noise).</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Shift<span class="rng">px, rows, extra bytes</span></dt><dd>Slides the whole stream. Whole pixels move the picture sideways and wrap onto the next row; rows move it down; 1 or 2 extra bytes rotate the colour channels (the classic databent colour cast).</dd></div>
+<div class="ctl-row"><dt>Cut &amp; paste<span class="rng">block start %, length %, paste at %, blocks</span></dt><dd>Move, copy-insert, overwrite, swap or delete a block of the file. More than one block picks seeded random positions.</dd></div>
+<div class="ctl-row"><dt>Find &amp; replace<span class="rng">find, tolerance, replace, probability</span></dt><dd>Replace, swap, add, XOR, delete, insert-after or duplicate every byte near the Find value, optionally only in one channel&#x27;s bytes.</dd></div>
+<div class="ctl-row"><dt>Insert &amp; delete<span class="rng">every (px), jitter, bytes per edit</span></dt><dd>Adds or removes a few bytes at intervals: a staircase shear, drunk with jitter. Inserted bytes can repeat what came before, be a fixed value, random or zero.</dd></div>
+<div class="ctl-row"><dt>Bit ops<span class="rng">mask, bit, probability</span></dt><dd>XOR / AND / OR / add / subtract / rotate / swap nibbles / reverse bits / flip, set or clear one bit / NOT, on every byte or a random share.</dd></div>
+<div class="ctl-row"><dt>Stutter<span class="rng">stutters, run length, repeats, shrink</span></dt><dd>A stuck buffer: runs of bytes repeated over and over, overwriting what follows or inserted so everything after shifts.</dd></div>
+<div class="ctl-row"><dt>Bit rot<span class="rng">damaged bytes per 10,000, burst length</span></dt><dd>In-place decay: flipped bits, noise, zeros, 0xFF, held bytes or inversions, singly or in bursts.</dd></div>
+</dl>
+<h3 class="sub">text editor</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Accident<span class="rng">menu</span></dt><dd>WordPad (0A → 0D 0A), Windows and Unix and Classic Mac line-ending conversions, tab expansion and its reverse, Latin-1 → UTF-8 (every byte over 127 becomes two: the bright half of the picture stretches), UTF-8 → Latin-1, trailing-whitespace trim, null-run collapse, 7-bit strip, UPPER/lowercase, a BOM.</dd></div>
+<div class="ctl-row"><dt>Probability<span class="rng">0-100%</span></dt><dd>How many of the matching bytes get the treatment. UTF-8 at 100% is pure static; 5-30% is the range.</dd></div>
+</dl>
+<h3 class="sub">reinterpret</h3>
+<p class="lead">The same bytes read back with the wrong header.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Width error<span class="rng">±px</span></dt><dd>The classic diagonal weave: every row starts a little early or late.</dd></div>
+<div class="ctl-row"><dt>Bytes per pixel<span class="rng">1 / 2 / 3 / 4 / 6</span></dt><dd>4 treats every fourth byte as alpha and loses it, so the colours cycle across the picture.</dd></div>
+<div class="ctl-row"><dt>Bit depth<span class="rng">8 / 16 LE / 16 BE / 4 / 1</span></dt><dd>16-bit reads pairs of bytes as one sample and stretches the picture; 1-bit reads eight pixels from every byte.</dd></div>
+<div class="ctl-row"><dt>Layout<span class="rng">interleaved / planar / planar per row</span></dt><dd>Planar expects all the reds, then the greens, then the blues: three ghost copies stacked down the frame.</dd></div>
+<div class="ctl-row"><dt>Channel order, start offset<span class="rng">RGB…BRG, ±64 bytes</span></dt><dd>Permute the channels; start reading a few bytes in.</dd></div>
+</dl>
+<h3 class="sub">audacity</h3>
+<p class="lead">The import-raw-data trick: the file is read as audio samples, an effect is run, it is exported again. Pixachron does this idea in depth along chosen paths; this is the raw original on the interleaved bytes.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Effect<span class="rng">menu</span></dt><dd>Echo, reverse, invert, fades, phaser, wahwah, bass and treble boost, high- and low-pass, tremolo, change speed, normalize, amplify, compressor, repeat.</dd></div>
+<div class="ctl-row"><dt>Import as<span class="rng">u8 / s8 / U-Law / A-Law / s16 LE / s16 BE</span></dt><dd>U-Law gives the characteristic Audacity-bend colour fringing; 16-bit ties pairs of bytes together.</dd></div>
+<div class="ctl-row"><dt>Overflow<span class="rng">wrap / clip</span></dt><dd>Wrap is the true databend behaviour: overflowing samples come back round the other side.</dd></div>
+<div class="ctl-row"><dt>Time, amount, cutoff, resonance</dt><dd>Shared controls; which ones apply depends on the effect (the hints say).</dd></div>
+</dl>
+<h3 class="sub">jpeg</h3>
+<p class="lead">A real baseline JPEG round trip. Errors in the entropy-coded data knock the Huffman decoder off its stride, and because each block&#x27;s brightness is stored as a difference from the last, the damage smears along the scan until the next restart marker.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Quality, chroma subsampling<span class="rng">1-100; 4:2:0 / 4:2:2 / 4:4:4</span></dt><dd>The encoding itself. Low quality gives the blocks something to show.</dd></div>
+<div class="ctl-row"><dt>Restart interval<span class="rng">MCUs, 0 = none</span></dt><dd>How far damage travels before a marker resets it. 0 is the classic smear-to-the-end look.</dd></div>
+<div class="ctl-row"><dt>Damage, events per 10 KB, size<span class="rng">flip / noise / zero / insert / delete / duplicate / swap / none</span></dt><dd>Bit flips and byte noise leave the stream the same length; inserts and deletes shift it.</dd></div>
+<div class="ctl-row"><dt>Protect the first %<span class="rng">0-100</span></dt><dd>Leaves the top of the picture intact.</dd></div>
+<div class="ctl-row"><dt>Quant tables, tamper amount<span class="rng">honest / swap / luma × / luma ÷ / chroma × / high × / high to 1 / random / DC only</span></dt><dd>Header hacks: the picture is decoded with the wrong scale for every frequency. <b>High × 8</b> is a basket-weave mesh; <b>DC only</b> a pure mosaic.</dd></div>
+<div class="ctl-row"><dt>At restart markers<span class="rng">resync / let it slide</span></dt><dd>libjpeg jumps back to the right position at every marker; <i>let it slide</i> only resets the predictors, so lost bytes shift the whole picture.</dd></div>
+<div class="ctl-row"><dt>After a fatal error<span class="rng">grey / repeat last row / show source</span></dt><dd>What fills the part of the picture the decoder never reached.</dd></div>
+</dl>
+<h3 class="sub">png filters</h3>
+<p class="lead">PNG stores each row as the difference from a prediction (None / Sub / Up / Average / Paeth). Bend the residuals, or decode with the wrong filter, and the errors integrate down the picture as drifting colour.</p>
+<dl class="ctl">
+<div class="ctl-row"><dt>Encode filter, decode as<span class="rng">adaptive or fixed; same / fixed / one along</span></dt><dd>Encode Paeth, decode Up, and every edge smears downwards - deterministic, no randomness at all.</dd></div>
+<div class="ctl-row"><dt>Filter bytes rewritten<span class="rng">%</span></dt><dd>Rows that individually go wrong.</dd></div>
+<div class="ctl-row"><dt>Residual noise, noise size<span class="rng">per 10,000; 1-255</span></dt><dd>Damaged residual bytes: small values nudge, 255 replaces.</dd></div>
+<div class="ctl-row"><dt>Stream inserts / deletes, bytes per shift</dt><dd>Shifts every filter byte after the edit off its row - the most violent option.</dd></div>
+<div class="ctl-row"><dt>Rows dropped<span class="rng">%</span></dt><dd>Whole rows removed from the stream; lower rows then predict from the wrong neighbour.</dd></div>
+</dl>
+<h3 class="sub">palette and pixel sort</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Palette<span class="rng">colours, rotate, bump, dither, order, replace</span></dt><dd>Median-cut to N colours, then abuse the palette: rotate the indices, scramble it, bump indices at random, or replace it with a grey ramp, rainbow, heat ramp, random colours, two-tone or its inverse.</dd></div>
+<div class="ctl-row"><dt>Pixel sort<span class="rng">thresholds, interval, key, order, direction</span></dt><dd>Asendorf&#x27;s interval sort along rows or columns: by brightness band, outside the band, between edges, random lengths or whole lines.</dd></div>
+</dl>
+<h3 class="sub">stage (every device)</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Mix<span class="rng">wet %</span></dt><dd>Blends the device&#x27;s output with its input.</dd></div>
+<div class="ctl-row"><dt>Rows from, Rows<span class="rng">%</span></dt><dd>Confines the device to a band of rows, like selecting part of the file in a hex editor.</dd></div>
+<div class="ctl-row"><dt>Write back to<span class="rng">all / R / G / B</span></dt><dd>Keeps the other two channels from the input, so a bend can hit the red alone.</dd></div>
+<div class="ctl-row"><dt>Seed</dt><dd>Every random choice in the device follows it; <b>New</b> rolls another.</dd></div>
+</dl>
+<h3 class="sub">output</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Source<span class="rng">whole image / selected layer</span></dt><dd>Whole image hides earlier Hexrack layers while it reads, so renders don&#x27;t stack up on each other.</dd></div>
+<div class="ctl-row"><dt>Layer opacity, Preview size</dt><dd>As in Pixachron.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="workflow">
+  <div class="block-label"><span class="bl-num">16.3</span>
+  <h2>workflow</h2></div>
+  <div class="block-body"><h3 class="sub">chain formats that are never chained</h3><p>The point of the rack. A WordPad shear re-encoded as a JPEG and bent again puts the compression grid on top of the skew; a bent JPEG into a pixel sort pulls the colour casts out into streaks; a PNG mismatch into a one-byte shift adds colour rotation to the drift. Three or four devices is usually the limit before everything becomes noise.</p>
+<h3 class="sub">bands and channels</h3><p>Confining devices to row bands gives one file three different wrongs (the <i>Band sandwich</i> preset); writing a violent device back to one channel keeps the picture legible underneath (<i>Red channel only</i>).</p>
+<h3 class="sub">parameters that matter most</h3><p>On JPEG, the restart interval and the resync choice change the character more than the damage amount does. On the text editor and UTF-8 devices, probability is everything. On Reinterpret, a width error of 1 and of 1000 are different effects, not degrees of one.</p></div>
+</section>
+<section class="block" id="gotchas">
+  <div class="block-label"><span class="bl-num">16.4</span>
+  <h2>gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>Built in one session and <b>not yet run inside Photoshop</b>: the engine and the panel logic are tested in Node (every device, every option, every preset, the slider mapping and the rack editing), but the UXP render path is Pixachron&#x27;s, carried over unchanged. First thing to try if it fails: Preview on a small 8-bit RGB document and read the status line.</li><li>Previews are approximate for byte-level devices. Pixel distances (⏱) are scaled, but a file at a quarter of the size is a different file; render to see what you&#x27;ll really get.</li><li>Everything is processed as 8-bit RGB. 16-bit documents are converted in and out; 32-bit is refused.</li><li>Up to eight devices in a rack. JPEG takes about 1.3 s on a 6-megapixel image, the Audacity and PNG devices under a second; the rest are faster.</li><li>Byte edits that change the file&#x27;s length are padded or truncated back to the original size; the bottom of the picture is where the loss lands, and <i>Fill the end with</i> chooses what appears there.</li></ul></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">16.5</span>
+  <h2>rebuilding</h2></div>
+  <div class="block-body"><p>Source: <code>Photoshop Scripts/Hexrack-Photoshop-Plugin</code> - <code>main.js</code> (panel), <code>hx_engine.js</code> (rack runner and registry), <code>hx_bytes.js</code> (hex, text editor, reinterpret, Audacity), <code>hx_jpeg.js</code> (encoder, tolerant decoder, device), <code>hx_png.js</code>, <code>hx_palette.js</code> (palette, pixel sort), <code>hx_presets.js</code>, <code>hx_util.js</code>. A device is one object: id, name, group, hint, params, options and <code>run(img, p, ctx)</code>; add it to a group&#x27;s LIST and it appears in the menu with its sliders generated.</p>
+<p>The <code>.ccx</code> is a zip of the folder&#x27;s files at the root: <code>zip Hexrack.ccx manifest.json index.html main.js hx_*.js</code>.</p>
+<p>For quick iteration, load the folder&#x27;s <code>manifest.json</code> in <b>UXP Developer Tools</b> instead — dev-loads are live-reloadable but vanish when Photoshop restarts.</p>
+<p>To update the installed copy: bump <code>version</code> in <code>manifest.json</code>, zip <code>manifest.json</code> + <code>index.html</code> + <code>main.js</code> (at the archive root) with a <code>.ccx</code> extension, and run the installer agent again.</p></div>
+</section>
+<section class="block" id="installing">
+  <div class="block-label"><span class="bl-num">16.6</span>
+  <h2>installing</h2></div>
+  <div class="block-body"><ol class="steps">
+<li><span class="step-n">01</span><span class="step-t">In Terminal, run Adobe&#x27;s installer agent on the plugin&#x27;s <code>.ccx</code> from <code>Photoshop Scripts/CCX Installers</code>: <code>&quot;/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent&quot; --install &lt;plugin&gt;.ccx</code></span></li>
+<li><span class="step-n">02</span><span class="step-t">Restart Photoshop. The panel appears under <b>Plugins</b> and survives restarts — UXP Developer Tools is not needed.</span></li>
+<li><span class="step-n">03</span><span class="step-t">Do not double-click the <code>.ccx</code>: Creative Cloud wrongly reports <i>Compatible app required</i> for unsigned plugins.</span></li>
+</ol></div>
+</section>
+<nav class="chapnav"><a class="cn prev" href="pixachron.html"><span>previous</span>pixachron</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><span class="cn empty"></span></nav>
+</main>
+<footer class="siteftr">
+  <div class="sf-col"><span>adobe</span>
+  <span>process guide</span></div>
+  <div class="sf-col"><span>generated 2026-10-25</span>
+  <span>build_site.py</span></div>
+</footer>
+</body>
+</html>

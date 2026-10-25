@@ -1,0 +1,135 @@
+Bauhaus
+=======
+
+32 families, 97 styles. Alphabetical by family name as Illustrator lists it.
+Joost Stencil was in your Test library; add it here if you deleted Test.
+
+[ ] AkzidenzGrotesk  (Typefaces actually set at the Bauhaus)
+      - Regular  [AkzidenzGrotesk-Black]
+      - Regular  [AkzidenzGrotesk-Light]
+      - Regular  [AkzidenzGrotesk-Roman]
+[ ] Alfarn  (Revivals of lettering by Bauhaus people)
+      - Regular
+[ ] Bauhaus 93  (Later reconceptualisations)
+      - Regular
+[ ] Bauhaus Std  (Later reconceptualisations)
+      - Bold
+      - Demi
+      - Heavy
+      - Light
+      - Medium
+[ ] Berthold Akzidenz Grotesk  (Typefaces actually set at the Bauhaus)
+      - Bold
+      - Bold Condensed
+      - Condensed
+[ ] Berthold Akzidenz Grotesk BE  (Typefaces actually set at the Bauhaus)
+      - Regular  [AkzidenzGroteskBE-Md]
+      - Regular  [AkzidenzGroteskBE-Regular]
+[ ] Berthold Akzidenz Grotesk BE Li  (Typefaces actually set at the Bauhaus)
+      - Regular
+[ ] Berthold City  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Bold
+      - Bold Italic
+      - Medium
+      - Medium Italic
+      - Regular
+[ ] Berthold City Light  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Italic
+[ ] Blippo MN  (Later reconceptualisations)
+      - Black
+[ ] CarlMarx  (Revivals of lettering by Bauhaus people)
+      - Bold
+      - Regular
+[ ] Erbar  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Regular
+[ ] ErbarW01-Bold  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Regular
+[ ] ErbarW01-BoldCondensed  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Regular
+[ ] ErbarW01-Book  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Regular
+[ ] ErbarW01-DemiBold  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Regular
+[ ] ErbarW01-Light  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Regular
+[ ] ErbarW01-LightCondensed  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Regular
+[ ] ErbarW01-Medium  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Regular
+[ ] ErbarW02-BoldCondensed  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Regular
+[ ] ErbarW02-LightCondensed  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Regular
+[ ] Futura  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Bold
+      - Condensed ExtraBold
+      - Condensed Medium
+      - Medium
+      - Medium Italic
+[ ] Futura PT  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Bold
+      - Bold Oblique
+      - Book
+      - Book Oblique
+      - Demi
+      - Demi Oblique
+      - Extra Bold
+      - Extra Bold Oblique
+      - Heavy
+      - Heavy Oblique
+      - Light
+      - Light Oblique
+      - Medium
+      - Medium Oblique
+[ ] Futura PT Cond  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Bold
+      - Bold Oblique
+      - Book
+      - Book Oblique
+      - Extra Bold
+      - Extra Bold Oblique
+      - Medium
+      - Medium Oblique
+[ ] Futura Std  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Bold
+      - Bold Condensed
+      - Bold Condensed Oblique
+      - Bold Oblique
+      - Book
+      - Book Oblique
+      - Extra Bold
+      - Extra Bold Condensed
+      - Extra Bold Condensed Oblique
+      - Extra Bold Oblique
+      - Heavy
+      - Heavy Oblique
+      - Light
+      - Light Condensed
+      - Light Condensed Oblique
+      - Light Oblique
+      - Medium
+      - Medium Condensed
+      - Medium Condensed Oblique
+      - Medium Oblique
+[ ] ITC Kabel Std  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Bold
+      - Book
+      - Demi
+      - Medium
+      - Ultra
+[ ] Joost  (Revivals of lettering by Bauhaus people)
+      - Stencil
+[ ] Joschmi  (Revivals of lettering by Bauhaus people)
+      - Regular
+[ ] Neuzeit S LT Std  (Period geometric sans of the New Typography (contemporary, not Bauhaus))
+      - Book
+      - Book Heavy
+[ ] P22 Albers  (Revivals of lettering by Bauhaus people)
+      - One
+      - Three
+      - Two
+[ ] Reross  (Revivals of lettering by Bauhaus people)
+      - Quadratic
+      - Rectangular
+[ ] Xants  (Revivals of lettering by Bauhaus people)
+      - Regular

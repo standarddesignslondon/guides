@@ -1,0 +1,507 @@
+Swiss Style Posters
+===================
+
+66 families, 432 styles. Alphabetical by family name as Illustrator lists it.
+Schmalfette Grotesk Trial is a trial version - fine for sketches, not for things you sell.
+
+[ ] Aktiv Grotesk  (Later or modern near-equivalents)
+      - Black
+      - Black Italic
+      - Bold
+      - Bold Italic
+      - Hairline
+      - Hairline Italic
+      - Italic
+      - Light
+      - Light Italic
+      - Medium
+      - Medium Italic
+      - Regular
+      - SemiBold
+      - XBold
+      - XBold Italic
+[ ] AkzidenzGrotesk  (Swiss and Swiss-designed, 1950s-70s)
+      - Regular  [AkzidenzGrotesk-Black]
+      - Regular  [AkzidenzGrotesk-Light]
+      - Regular  [AkzidenzGrotesk-Roman]
+[ ] Antique Olive  (Continental faces used alongside, 1920s-70s)
+      - Bold
+      - Italic
+      - Regular
+[ ] Antique Olive Nord D  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] Antique Olive Std  (Continental faces used alongside, 1920s-70s)
+      - Black
+      - Bold
+      - Bold Condensed
+      - Compact
+      - Italic
+      - Light
+      - Nord
+      - Nord Italic
+      - Roman
+[ ] Berthold Akzidenz Grotesk  (Swiss and Swiss-designed, 1950s-70s)
+      - Bold
+      - Bold Condensed
+      - Condensed
+[ ] Berthold Akzidenz Grotesk BE  (Swiss and Swiss-designed, 1950s-70s)
+      - Regular  [AkzidenzGroteskBE-Md]
+      - Regular  [AkzidenzGroteskBE-Regular]
+[ ] Berthold Akzidenz Grotesk BE Li  (Swiss and Swiss-designed, 1950s-70s)
+      - Regular
+[ ] Berthold City  (Continental faces used alongside, 1920s-70s)
+      - Bold
+      - Bold Italic
+      - Medium
+      - Medium Italic
+      - Regular
+[ ] Berthold City Light  (Continental faces used alongside, 1920s-70s)
+      - Italic
+[ ] Clarendon  (Swiss and Swiss-designed, 1950s-70s)
+      - Regular
+[ ] Clarendon Condensed  (Swiss and Swiss-designed, 1950s-70s)
+      - Bold
+[ ] Clarendon URW  (Swiss and Swiss-designed, 1950s-70s)
+      - Bold
+      - Bold Oblique
+      - Extra Bold
+      - Extra Bold Oblique
+      - Light
+      - Light Oblique
+      - Medium
+      - Medium Oblique
+      - Regular
+      - Regular Oblique
+[ ] DIN  (Continental faces used alongside, 1920s-70s)
+      - Medium
+      - MediumAlternate
+      - Regular
+      - RegularAlternate
+[ ] DIN Alternate  (Continental faces used alongside, 1920s-70s)
+      - Bold
+[ ] DIN Condensed  (Continental faces used alongside, 1920s-70s)
+      - Bold
+[ ] Egyptienne F LT Std  (Swiss and Swiss-designed, 1950s-70s)
+      - 55 Roman
+      - 56 Italic
+      - 65 Bold
+      - 75 Black
+[ ] Erbar  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] ErbarW01-Bold  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] ErbarW01-BoldCondensed  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] ErbarW01-Book  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] ErbarW01-DemiBold  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] ErbarW01-Light  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] ErbarW01-LightCondensed  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] ErbarW01-Medium  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] ErbarW02-BoldCondensed  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] ErbarW02-LightCondensed  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] Eurostile  (Continental faces used alongside, 1920s-70s)
+      - Bold
+      - Regular
+[ ] Eurostile LT Std  (Continental faces used alongside, 1920s-70s)
+      - Bold
+      - Bold Condensed
+      - Bold Extended 2
+      - Bold Oblique
+      - Condensed
+      - Demi
+      - Demi Oblique
+      - Extended 2
+      - Medium
+      - Oblique
+[ ] Folio Std  (Continental faces used alongside, 1920s-70s)
+      - Bold
+      - Bold Condensed
+      - Extra Bold
+      - Light
+      - Medium
+[ ] Frutiger  (Swiss and Swiss-designed, 1950s-70s)
+      - Black
+      - Black Italic
+      - Bold
+      - Light
+      - Light Italic
+      - Regular
+      - Roman
+      - Roman Italic
+[ ] Frutiger Linotype  (Swiss and Swiss-designed, 1950s-70s)
+      - Bold
+      - Bold Italic
+      - Italic
+[ ] Frutiger LT Std  (Swiss and Swiss-designed, 1950s-70s)
+      - 45 Light
+      - 46 Light Italic
+      - 47 Light Condensed
+      - 55 Roman
+      - 56 Italic
+      - 57 Condensed
+      - 65 Bold
+      - 66 Bold Italic
+      - 67 Bold Condensed
+      - 75 Black
+      - 76 Black Italic
+      - 77 Black Condensed
+      - 87 Extra Black Condensed
+      - 95 Ultra Black
+[ ] Frutiger45-Light  (Swiss and Swiss-designed, 1950s-70s)
+      - Light
+[ ] Frutiger47-CondensedLight  (Swiss and Swiss-designed, 1950s-70s)
+      - Light
+[ ] Futura  (Continental faces used alongside, 1920s-70s)
+      - Bold
+      - Condensed ExtraBold
+      - Condensed Medium
+      - Medium
+      - Medium Italic
+[ ] Futura PT  (Continental faces used alongside, 1920s-70s)
+      - Bold
+      - Bold Oblique
+      - Book
+      - Book Oblique
+      - Demi
+      - Demi Oblique
+      - Extra Bold
+      - Extra Bold Oblique
+      - Heavy
+      - Heavy Oblique
+      - Light
+      - Light Oblique
+      - Medium
+      - Medium Oblique
+[ ] Futura PT Cond  (Continental faces used alongside, 1920s-70s)
+      - Bold
+      - Bold Oblique
+      - Book
+      - Book Oblique
+      - Extra Bold
+      - Extra Bold Oblique
+      - Medium
+      - Medium Oblique
+[ ] Futura Std  (Continental faces used alongside, 1920s-70s)
+      - Bold
+      - Bold Condensed
+      - Bold Condensed Oblique
+      - Bold Oblique
+      - Book
+      - Book Oblique
+      - Extra Bold
+      - Extra Bold Condensed
+      - Extra Bold Condensed Oblique
+      - Extra Bold Oblique
+      - Heavy
+      - Heavy Oblique
+      - Light
+      - Light Condensed
+      - Light Condensed Oblique
+      - Light Oblique
+      - Medium
+      - Medium Condensed
+      - Medium Condensed Oblique
+      - Medium Oblique
+[ ] Haettenschweiler  (Swiss and Swiss-designed, 1950s-70s)
+      - Regular
+[ ] Helvetica  (Swiss and Swiss-designed, 1950s-70s)
+      - Bold
+      - Bold Oblique
+      - Light
+      - Light Oblique
+      - Oblique
+      - Regular
+[ ] Helvetica Inserat LT Std  (Swiss and Swiss-designed, 1950s-70s)
+      - Roman
+[ ] Helvetica LT Pro  (Swiss and Swiss-designed, 1950s-70s)
+      - Bold
+      - Bold Oblique
+      - Light
+      - Light Oblique
+      - Oblique
+      - Roman
+[ ] Helvetica LT Std  (Swiss and Swiss-designed, 1950s-70s)
+      - Black
+      - Black Condensed
+      - Black Condensed Oblique
+      - Black Oblique
+      - Bold
+      - Bold Condensed
+      - Bold Condensed Oblique
+      - Bold Oblique
+      - Compressed
+      - Condensed
+      - Condensed Oblique
+      - Extra Compressed
+      - Fractions
+      - Fractions Bold
+      - Light
+      - Light Condensed
+      - Light Condensed Oblique
+      - Light Oblique
+      - Oblique
+      - Roman
+      - Ultra Compressed
+[ ] Helvetica Neue  (Swiss and Swiss-designed, 1950s-70s)
+      - Bold
+      - Bold Italic
+      - Condensed Black
+      - Condensed Bold
+      - Italic
+      - Light
+      - Light Italic
+      - Medium
+      - Medium Italic
+      - Regular
+      - Thin
+      - Thin Italic
+      - UltraLight
+      - UltraLight Italic
+[ ] Helvetica Neue LT Std  (Swiss and Swiss-designed, 1950s-70s)
+      - 107 Extra Black Condensed
+      - 107 Extra Black Condensed Oblique
+      - 23 Ultra Light Extended
+      - 23 Ultra Light Extended Oblique
+      - 25 Ultra Light
+      - 26 Ultra Light Italic
+      - 27 Ultra Light Condensed
+      - 27 Ultra Light Condensed Oblique
+      - 33 Thin Extended
+      - 33 Thin Extended Oblique
+      - 35 Thin
+      - 36 Thin Italic
+      - 37 Thin Condensed
+      - 37 Thin Condensed Oblique
+      - 43 Light Extended
+      - 43 Light Extended Oblique
+      - 45 Light
+      - 46 Light Italic
+      - 47 Light Condensed
+      - 47 Light Condensed Oblique
+      - 53 Extended
+      - 53 Extended Oblique
+      - 55 Roman
+      - 56 Italic
+      - 57 Condensed
+      - 57 Condensed Oblique
+      - 63 Medium Extended
+      - 63 Medium Extended Oblique
+      - 65 Medium
+      - 66 Medium Italic
+      - 67 Medium Condensed
+      - 67 Medium Condensed Oblique
+      - 73 Bold Extended
+      - 73 Bold Extended Oblique
+      - 75 Bold
+      - 75 Bold Outline
+      - 76 Bold Italic
+      - 77 Bold Condensed
+      - 77 Bold Condensed Oblique
+      - 83 Heavy Extended
+      - 83 Heavy Extended Oblique
+      - 85 Heavy
+      - 86 Heavy Italic
+      - 87 Heavy Condensed
+      - 87 Heavy Condensed Oblique
+      - 93 Black Extended
+      - 93 Black Extended Oblique
+      - 95 Black
+      - 96 Black Italic
+      - 97 Black Condensed
+      - 97 Black Condensed Oblique
+[ ] ITC Kabel Std  (Continental faces used alongside, 1920s-70s)
+      - Bold
+      - Book
+      - Demi
+      - Medium
+      - Ultra
+[ ] Meridien LT Std  (Swiss and Swiss-designed, 1950s-70s)
+      - Bold
+      - Bold Italic
+      - Italic
+      - Medium
+      - Medium Italic
+      - Roman
+[ ] MicrogrammaDBolExt  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] MicrogrammaDMedExt  (Continental faces used alongside, 1920s-70s)
+      - Regular
+[ ] Neue Haas Grotesk Display Pro  (Swiss and Swiss-designed, 1950s-70s)
+      - 55 Roman
+      - 65 Medium
+      - 75 Bold
+[ ] Neue Haas Grotesk Text Pro  (Swiss and Swiss-designed, 1950s-70s)
+      - 55 Roman
+      - 75 Bold
+[ ] Neue Haas Unica W1G  (Later or modern near-equivalents)
+      - Black
+      - Black Italic
+      - Bold
+      - Bold Italic
+      - ExtraBlack
+      - ExtraBlack Italic
+      - Heavy
+      - Heavy Italic
+      - Italic
+      - Light
+      - Light Italic
+      - Medium
+      - Medium Italic
+      - Regular
+      - Thin
+      - Thin Italic
+      - UltraLight
+      - UltraLight Italic
+[ ] Neuzeit S LT Std  (Continental faces used alongside, 1920s-70s)
+      - Book
+      - Book Heavy
+[ ] Nimbus Sans Cond L  (Later or modern near-equivalents)
+      - Black
+      - Bold
+      - Regular
+[ ] Nimbus Sans Extd  (Later or modern near-equivalents)
+      - Bold
+      - Regular
+[ ] Optima  (Continental faces used alongside, 1920s-70s)
+      - Bold
+      - Bold Italic
+      - ExtraBlack
+      - Italic
+      - Regular
+[ ] Optima LT Std  (Continental faces used alongside, 1920s-70s)
+      - Black
+      - Black Italic
+      - Bold
+      - Bold Italic
+      - Demi
+      - Demi Italic
+      - Extra Black
+      - Extra Black Italic
+      - Italic
+      - Medium
+      - Medium Italic
+      - Roman
+[ ] Schmalfette Grotesk Trial  (Swiss and Swiss-designed, 1950s-70s)
+      - Bold Condensed
+[ ] Serifa Std  (Swiss and Swiss-designed, 1950s-70s)
+      - 45 Light
+      - 46 Light Italic
+      - 55 Roman
+      - 56 Italic
+      - 65 Bold
+      - 75 Black
+[ ] Swiss721 BT  (Later or modern near-equivalents)
+      - Black
+      - Black Condensed
+      - Black Condensed Italic
+      - Black Extended
+      - Black Italic
+      - Black No2
+      - Black Outline
+      - Black Rounded
+      - Bold
+      - Bold Condensed
+      - Bold Condensed Italic
+      - Bold Condensed Outline
+      - Bold Extended
+      - Bold Italic
+      - Bold Outline
+      - Bold Rounded
+      - Condensed
+      - Extended
+      - Heavy
+      - Heavy Italic
+      - Italic
+      - Italic Condensed
+      - Light
+      - Light Condensed
+      - Light Condensed Italic
+      - Light Extended
+      - Light Italic
+      - Medium
+      - Medium Italic
+      - Regular
+      - Thin
+      - Thin Italic
+[ ] Syntax LT Std  (Swiss and Swiss-designed, 1950s-70s)
+      - Black
+      - Bold
+      - Italic
+      - Roman
+      - Ultra Black
+[ ] Univers Condensed  (Swiss and Swiss-designed, 1950s-70s)
+      - Bold
+      - Bold Italic
+      - Italic
+      - Medium
+      - Medium Italic
+      - Regular
+[ ] Univers LT Std  (Swiss and Swiss-designed, 1950s-70s)
+      - 39 Thin Ultra Condensed
+      - 45 Light
+      - 45 Light Oblique
+      - 47 Light Condensed
+      - 47 Light Condensed Oblique
+      - 49 Light Ultra Condensed
+      - 53 Extended
+      - 53 Extended Oblique
+      - 55 Oblique
+      - 55 Roman
+      - 57 Condensed
+      - 57 Condensed Oblique
+      - 59 Ultra Condensed
+      - 63 Bold Extended
+      - 63 Bold Extended Oblique
+      - 65 Bold
+      - 65 Bold Oblique
+      - 67 Bold Condensed
+      - 67 Bold Condensed Oblique
+      - 73 Black Extended
+      - 73 Black Extended Oblique
+      - 75 Black
+      - 75 Black Oblique
+      - 85 Extra Black
+      - 85 Extra Black Oblique
+      - 93 Extra Black Extended
+      - 93 Extra Black Extended Oblique
+[ ] Univers Next Pro  (Swiss and Swiss-designed, 1950s-70s)
+      - Black
+      - Black Italic
+      - Bold
+      - Bold Condensed
+      - Bold Condensed Italic
+      - Bold Italic
+      - Condensed
+      - Condensed Italic
+      - ExtraBlack Extended
+      - ExtraBlack Italic
+      - Heavy
+      - Heavy Condensed
+      - Heavy Italic
+      - Italic
+      - Light
+      - Light Condensed
+      - Light Condensed Italic
+      - Light Italic
+      - Medium
+      - Medium Condensed
+      - Medium Condensed Italic
+      - Medium Italic
+      - Regular
+      - Thin
+      - Thin Condensed
+      - Thin Condensed Italic
+      - Thin Italic
+      - UltraLight
+      - UltraLight Condensed
+      - UltraLight Condensed Italic
+      - UltraLight Italic
+[ ] URW DIN Cond  (Continental faces used alongside, 1920s-70s)
+      - Black

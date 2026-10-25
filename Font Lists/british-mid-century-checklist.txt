@@ -1,0 +1,334 @@
+British Mid-Century Posters
+===========================
+
+64 families, 264 styles. Alphabetical by family name as Illustrator lists it.
+Already in your library when I looked earlier this evening: Albertus (all four families), the three Bureau Grots, Compacta Bd BT, Compacta LET and CompactaComDLig (not Compacta Std), plus your own additions (AWT Hamilton Gothic Extended and Special, AWT Nesbitt Gothic, Brixton Wood).
+
+[ ] Albertus  (Core - British designed, in use 1930-65)
+      - Bold
+[ ] Albertus Extra Bold  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Albertus Medium  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Albertus MT Std  (Core - British designed, in use 1930-65)
+      - Italic
+      - Light
+      - Regular
+[ ] Ashley Script MT Std  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Braggadocio  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Bureau GrotThreeSeven  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] BureauGrotFiveThree  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] BureauGrotOneThree  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Castellar MT Std  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Clarendon  (Used in Britain, designed elsewhere or earlier)
+      - Regular
+[ ] Clarendon Condensed  (Used in Britain, designed elsewhere or earlier)
+      - Bold
+[ ] Clarendon URW  (Used in Britain, designed elsewhere or earlier)
+      - Bold
+      - Bold Oblique
+      - Extra Bold
+      - Extra Bold Oblique
+      - Light
+      - Light Oblique
+      - Medium
+      - Medium Oblique
+      - Regular
+      - Regular Oblique
+[ ] Compacta Bd BT  (Core - British designed, in use 1930-65)
+      - Bold
+[ ] Compacta LET  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Compacta Std  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] CompactaComDLig  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] CountdownComD  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] CountdownD  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] English Grotesque  (Modern faces based on British period lettering)
+      - Black
+      - Bold
+      - Extra Bold
+      - Light
+      - Medium
+      - Thin
+[ ] Falstaff MT Std  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Festival Titling MT Std  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Futura  (Used in Britain, designed elsewhere or earlier)
+      - Bold
+      - Condensed ExtraBold
+      - Condensed Medium
+      - Medium
+      - Medium Italic
+[ ] Futura PT  (Used in Britain, designed elsewhere or earlier)
+      - Bold
+      - Bold Oblique
+      - Book
+      - Book Oblique
+      - Demi
+      - Demi Oblique
+      - Extra Bold
+      - Extra Bold Oblique
+      - Heavy
+      - Heavy Oblique
+      - Light
+      - Light Oblique
+      - Medium
+      - Medium Oblique
+[ ] Futura PT Cond  (Used in Britain, designed elsewhere or earlier)
+      - Bold
+      - Bold Oblique
+      - Book
+      - Book Oblique
+      - Extra Bold
+      - Extra Bold Oblique
+      - Medium
+      - Medium Oblique
+[ ] Futura Std  (Used in Britain, designed elsewhere or earlier)
+      - Bold
+      - Bold Condensed
+      - Bold Condensed Oblique
+      - Bold Oblique
+      - Book
+      - Book Oblique
+      - Extra Bold
+      - Extra Bold Condensed
+      - Extra Bold Condensed Oblique
+      - Extra Bold Oblique
+      - Heavy
+      - Heavy Oblique
+      - Light
+      - Light Condensed
+      - Light Condensed Oblique
+      - Light Oblique
+      - Medium
+      - Medium Condensed
+      - Medium Condensed Oblique
+      - Medium Oblique
+[ ] Gill Floriated Caps MT Std  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Gill Sans  (Core - British designed, in use 1930-65)
+      - Bold
+      - Bold Italic
+      - Italic
+      - Light
+      - Light Italic
+      - Regular
+      - SemiBold
+      - SemiBold Italic
+      - UltraBold
+[ ] Gill Sans MT  (Core - British designed, in use 1930-65)
+      - Bold
+      - Bold Italic
+      - Italic
+      - Regular
+[ ] Gill Sans MT Condensed  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Gill Sans MT Ext Cond Bd  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Gill Sans MT Ext Condensed Bold  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Gill Sans MT Shadow  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Gill Sans Nova  (Modern faces based on British period lettering)
+      - Bold
+      - Bold Italic
+      - Condensed Bold
+      - Condensed Bold Italic
+      - Condensed Book
+      - Condensed Book Italic
+      - Condensed ExtraBold
+      - Condensed Heavy
+      - Condensed Heavy Italic
+      - Condensed Light
+      - Condensed Light Italic
+      - Condensed Medium
+      - Condensed Medium Italic
+      - Condensed SemiBold
+      - Condensed SemiBold Italic
+      - Condensed UltraBold
+      - Condensed UltraLight
+      - Condensed UltraLight Italic
+      - ExtraBold
+      - ExtraCondensed Bold
+      - Heavy
+      - Heavy Italic
+      - Light
+      - Light Italic
+      - SemiBold Italic
+      - UltraBold
+      - UltraLight
+      - UltraLight Italic
+[ ] Gill Sans Nova Deco  (Modern faces based on British period lettering)
+      - Regular
+[ ] Gill Sans Std  (Core - British designed, in use 1930-65)
+      - Bold
+      - Bold Condensed
+      - Bold Extra Condensed
+      - Bold Italic
+      - Condensed
+      - Extra Bold
+      - Extra Bold Display
+      - Italic
+      - Light
+      - Light Italic
+      - Light Shadowed
+      - Regular
+      - Shadowed
+      - Ultra Bold
+      - Ultra Bold Condensed
+[ ] Gravesend Sans  (Modern faces based on British period lettering)
+      - Bold
+      - Cameo
+      - Fine
+      - Inline
+      - Light
+      - Medium
+[ ] Grotesque Disp MT Std  (Core - British designed, in use 1930-65)
+      - Bold Cn
+      - Bold Ext
+[ ] Grotesque MT Std  (Core - British designed, in use 1930-65)
+      - Black
+      - Bold
+      - Bold Extended
+      - Condensed
+      - Extra Condensed
+      - Italic
+      - Light
+      - Light Condensed
+      - Light Italic
+      - Regular
+[ ] GrotesqueNo9T  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] GrotesqueNr9SB-BolConIta  (Core - British designed, in use 1930-65)
+      - Normal
+[ ] Hackney  (Added by Simon)
+      - Bold
+[ ] Joanna MT Std  (Core - British designed, in use 1930-65)
+      - Bold
+      - Bold Italic
+      - Extra Bold
+      - Italic
+      - Regular
+      - Semibold
+      - Semibold Italic
+[ ] Kino MT  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Klang MT Std  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Mercurius CT Std  (Core - British designed, in use 1930-65)
+      - Black
+      - Black Italic
+      - Light
+      - Light Italic
+      - Medium
+      - Medium Italic
+[ ] Mercurius MT Std  (Core - British designed, in use 1930-65)
+      - Bold Script
+[ ] P22 Johnston Underground  (Core - British designed, in use 1930-65)
+      - Bold
+      - Extras
+      - Regular
+[ ] P22 Underground  (Core - British designed, in use 1930-65)
+      - Book
+      - Book Petite Caps
+      - Book Small Caps
+      - Demi Petite Caps
+      - Demi Small Caps
+      - DemiBold
+      - Heavy
+      - Heavy Petite Caps
+      - Heavy Small Caps
+      - Light
+      - Light Petite Caps
+      - Light Small Caps
+      - Medium
+      - Medium Petite Caps
+      - Medium Small Caps
+      - Thin
+      - Thin Petite Caps
+      - Thin Small Caps
+[ ] P22JohnstonUnderground  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] P22JohnstonUnderground-Extras  (Core - British designed, in use 1930-65)
+      - Roman
+[ ] Peckham Press  (Added by Simon)
+      - Regular
+[ ] Perpetua Std  (Core - British designed, in use 1930-65)
+      - Bold
+      - Bold Italic
+      - Italic
+      - Regular
+[ ] Perpetua Titling MT  (Core - British designed, in use 1930-65)
+      - Bold
+      - Light
+[ ] Playbill  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Rockwell  (Core - British designed, in use 1930-65)
+      - Bold
+      - Bold Italic
+      - Italic
+      - Regular
+[ ] Rockwell Extra Bold  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Rockwell Std  (Core - British designed, in use 1930-65)
+      - Bold
+      - Bold Condensed
+      - Bold Italic
+      - Condensed
+      - Extra Bold
+      - Italic
+      - Light
+      - Light Italic
+      - Regular
+[ ] Times New Roman  (Used in Britain, designed elsewhere or earlier)
+      - Bold
+      - Bold Italic
+      - Italic
+      - Regular
+[ ] Univers LT Std  (Used in Britain, designed elsewhere or earlier)
+      - 39 Thin Ultra Condensed
+      - 45 Light
+      - 45 Light Oblique
+      - 47 Light Condensed
+      - 47 Light Condensed Oblique
+      - 49 Light Ultra Condensed
+      - 53 Extended
+      - 53 Extended Oblique
+      - 55 Oblique
+      - 55 Roman
+      - 57 Condensed
+      - 57 Condensed Oblique
+      - 59 Ultra Condensed
+      - 63 Bold Extended
+      - 63 Bold Extended Oblique
+      - 65 Bold
+      - 65 Bold Oblique
+      - 67 Bold Condensed
+      - 67 Bold Condensed Oblique
+      - 73 Black Extended
+      - 73 Black Extended Oblique
+      - 75 Black
+      - 75 Black Oblique
+      - 85 Extra Black
+      - 85 Extra Black Oblique
+      - 93 Extra Black Extended
+      - 93 Extra Black Extended Oblique
+[ ] Wolpe Pegasus  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] Wolpe Tempest  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] WolpeFanfareW05-Black  (Core - British designed, in use 1930-65)
+      - Regular
+[ ] WolpeFanfareW07-Regular  (Core - British designed, in use 1930-65)
+      - Regular

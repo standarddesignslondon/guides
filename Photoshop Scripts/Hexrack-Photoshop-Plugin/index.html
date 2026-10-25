@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    html, body { height: 100%; }
+    body {
+        overflow-y: scroll; overflow-x: hidden; margin: 0; padding: 10px 12px 18px;
+        font-family: "SF Pro Text", "Helvetica Neue", sans-serif; font-size: 12px; color: #d6d6d6;
+    }
+    h1 { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; margin: 0 0 2px; color: #e8e8e8; }
+    .tag { font-size: 10px; color: #7a7a7a; margin: 0 0 8px; }
+    h2 {
+        font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+        color: #9a9a9a; margin: 14px 0 6px; border-bottom: 1px solid #3a3a3a; padding-bottom: 3px; cursor: pointer;
+    }
+    h2 .tw { color: #6f6f6f; margin-right: 4px; }
+    .sec.closed .body { display: none; }
+    .row { display: flex; align-items: center; justify-content: space-between; margin: 4px 0; gap: 6px; }
+    .row label { flex: 1 1 auto; white-space: nowrap; overflow: hidden; }
+    select { width: 175px; background: #262626; color: #e6e6e6; border: 1px solid #444; border-radius: 3px; padding: 3px; font-size: 12px; }
+    select.wide { width: 100%; }
+    input[type="text"], input[type="number"] { width: 58px; background: #262626; color: #e6e6e6; border: 1px solid #444; border-radius: 3px; padding: 3px 5px; font-size: 12px; text-align: right; }
+    input[type="text"].wide { width: 100%; text-align: left; box-sizing: border-box; }
+    input[type="range"] { width: 104px; }
+    .hint { font-size: 10px; color: #7a7a7a; margin: 3px 0 6px; line-height: 1.4; }
+    #note, #deviceNote { font-size: 11px; color: #b7b2a6; margin: 6px 0 4px; line-height: 1.45; min-height: 14px; }
+    .buttons { display: flex; gap: 6px; margin-top: 10px; }
+    button { flex: 1; padding: 7px 0; border-radius: 4px; border: 1px solid #555; background: #333; color: #e6e6e6; font-size: 12px; cursor: pointer; }
+    button:hover { background: #3e3e3e; }
+    button.small { flex: 0 0 auto; padding: 3px 8px; font-size: 11px; }
+    #renderBtn { background: #7a3d2a; border-color: #9a4d35; font-weight: 600; }
+    #renderBtn:hover { background: #8f4731; }
+    #status { margin-top: 8px; font-size: 11px; color: #8fae8f; min-height: 14px; white-space: pre-line; }
+    #status.err { color: #c98080; }
+    .modified { color: #d9b36c; }
+    .stg { color: #d9b36c; text-transform: none; letter-spacing: 0; font-weight: 400; margin-left: 6px; }
+    .rack { display: flex; flex-direction: column; gap: 3px; margin: 4px 0 6px; }
+    .slot { display: flex; align-items: center; gap: 6px; padding: 4px 6px; font-size: 11px; border-radius: 3px; border: 1px solid #444; background: #262626; color: #bdbdbd; cursor: pointer; }
+    .slot.on { background: #7a3d2a; border-color: #9a4d35; color: #fff; }
+    .slot.off { opacity: 0.5; }
+    .slot.off .nm { text-decoration: line-through; }
+    .slot .num { color: #8a8a8a; width: 12px; }
+    .slot.on .num { color: #e8c9bd; }
+    .slot .nm { flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .slot .meta { color: #8a8a8a; font-size: 10px; }
+    .slot.on .meta { color: #e8c9bd; }
+</style>
+</head>
+<body>
+    <h1>HEXRACK</h1>
+    <div class="tag">a databending effects rack</div>
+
+    <div class="row"><label>Preset</label><span id="presetMod" class="modified"></span></div>
+    <select id="preset" class="wide"></select>
+    <div id="note"></div>
+    <div class="row">
+        <input type="text" id="userName" class="wide" placeholder="name for a user preset">
+        <button class="small" id="saveUser">Save</button>
+        <button class="small" id="deleteUser">Delete</button>
+    </div>
+
+    <div class="sec" id="secRack">
+        <h2><span class="tw">▾</span>Rack</h2>
+        <div class="body">
+            <div id="rack" class="rack"></div>
+            <div class="row">
+                <button class="small" id="stageAdd">+ Add</button>
+                <button class="small" id="stageDup">Duplicate</button>
+                <button class="small" id="stageUp">▲</button>
+                <button class="small" id="stageDown">▼</button>
+                <button class="small" id="stageDel">Remove</button>
+                <label style="flex:0 0 auto">On <input type="checkbox" id="stageOn"></label>
+            </div>
+            <div class="hint">Devices run top to bottom, like an effects rack: the bent file from one is the input to the next. Click a slot to edit it in the Device and Stage sections. Add puts a new device below the selected one.</div>
+        </div>
+    </div>
+
+    <div class="sec" id="secDevice">
+        <h2><span class="tw">▾</span>Device <span class="stg" id="stgDevice"></span></h2>
+        <div class="body">
+            <select id="device" class="wide"></select>
+            <div id="deviceNote"></div>
+            <div id="deviceParams"></div>
+            <div class="row"><label>Seed</label><input type="text" id="seed"><button class="small" id="reseed">New</button></div>
+        </div>
+    </div>
+
+    <div class="sec" id="secStage">
+        <h2><span class="tw">▾</span>Stage <span class="stg" id="stgStage"></span></h2>
+        <div class="body">
+            <div class="row"><label>Mix (wet %)</label><input type="range" id="mix"><input type="text" id="mixN"></div>
+            <div class="row"><label>Rows from (%)</label><input type="range" id="rowFrom"><input type="text" id="rowFromN"></div>
+            <div class="row"><label>Rows (%)</label><input type="range" id="rowSpan"><input type="text" id="rowSpanN"></div>
+            <div class="row"><label>Write back to</label>
+                <select id="chan"><option value="all">All channels</option><option value="r">Red only</option><option value="g">Green only</option><option value="b">Blue only</option></select></div>
+            <div class="hint">Rows from / Rows confine this device to a band of the file, like selecting part of it in a hex editor; what the device does inside the band stays inside it. Write back to a single channel keeps the other two from the input, so a bend can hit the red alone.</div>
+        </div>
+    </div>
+
+    <div class="sec" id="secOutput">
+        <h2><span class="tw">▾</span>Output</h2>
+        <div class="body">
+            <div class="row"><label>Source</label>
+                <select id="source"><option value="merged">Whole image (merged)</option><option value="layer">Selected layer only</option></select></div>
+            <div class="row"><label>Layer opacity (%)</label><input type="range" id="strength"><input type="text" id="strengthN"></div>
+            <div class="row"><label>Preview size (long side px)</label><input type="range" id="proxy"><input type="text" id="proxyN"></div>
+            <div class="hint">Preview bends a small copy of the picture (pixel distances scaled to match) and writes it, enlarged, to a "Hexrack preview" layer; byte-level effects can't scale exactly, so the full Render will differ in detail. Render does it at full size. Update re-renders the last result in place. Everything works on 8-bit RGB bytes; 16-bit documents are converted on the way in and out.</div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="previewBtn">Preview</button>
+        <button id="updateBtn">Update</button>
+        <button id="renderBtn">Render</button>
+    </div>
+    <div class="buttons">
+        <button id="randomBtn">Randomise stage</button>
+        <button id="randomAllBtn">Randomise rack</button>
+        <button id="resetBtn">Defaults</button>
+    </div>
+    <div id="status"></div>
+
+    <script src="hx_util.js"></script>
+    <script src="hx_bytes.js"></script>
+    <script src="hx_jpeg.js"></script>
+    <script src="hx_png.js"></script>
+    <script src="hx_palette.js"></script>
+    <script src="hx_engine.js"></script>
+    <script src="hx_presets.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
