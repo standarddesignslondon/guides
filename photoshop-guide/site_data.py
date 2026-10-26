@@ -4906,7 +4906,7 @@ ITEMS.append({
         "its own seed - so formats that are never chained in practice can be. "
         "Everything is read and written through the UXP Imaging API and "
         "processed in JavaScript, as Pixachron is.",
-    "facts": {"version": "1.0.0",
+    "facts": {"version": "1.1.0",
               "requires": "Photoshop 24.2+, RGB, 8 or 16-bit (processed as 8-bit)",
               "plugin id": "com.simonmorse.hexrack"},
     "quickstart": [
@@ -4926,6 +4926,11 @@ ITEMS.append({
         "Save a rack you like with a name in the box and **Save**; it joins the "
         "preset menu under *your presets*. Racks also survive restarts on their "
         "own.",
+        "The preset menu has three **type** groups (subtle, medium, extreme: "
+        "30 presets designed on black-on-white lettering, from a print-style "
+        "misregistration to a skyline of collapsed ink). Note that pixel sorting "
+        "does nothing inside solid letters - identical pixels sort to themselves - "
+        "so the type presets use whole-line sorts instead of thresholds.",
     ],
     "controls": [
         {"title": "Hex devices", "intro": "Edits on the raw byte stream, exactly "

@@ -19,7 +19,7 @@
   <div class="block-label"><span class="bl-num">16.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Databending is editing an image&#x27;s <i>bytes</i> rather than its pixels, and its whole look comes from the mechanics of whichever program did the damage. Hexrack does each of those for real instead of imitating the result: the layer is turned into a raw RGB byte stream, and every <b>device</b> in the rack either edits that stream directly (shift, cut and paste, find and replace, insert and delete, bit ops, stutter, bit rot, the text-editor accidents, wrong-header reinterpretation, the Audacity import trick) or encodes it into a real file format, damages the encoded bytes and decodes them again (a baseline <b>JPEG</b> encoder with a libjpeg-style forgiving decoder; <b>PNG</b> scanline filters). Palette abuse and pixel sorting round it out. Devices run top to bottom like an Ableton effects rack - up to eight, each with on/off, wet/dry mix, a band of rows it is confined to, a channel it writes back to, and its own seed - so formats that are never chained in practice can be. Everything is read and written through the UXP Imaging API and processed in JavaScript, as Pixachron is.</p>
-    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>built, untested in photoshop</dd></div><div class="fact"><dt>version</dt><dd>1.0.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+, RGB, 8 or 16-bit (processed as 8-bit)</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.hexrack</dd></div><div class="fact"><dt>folder</dt><dd>Hexrack-Photoshop-Plugin</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>built, untested in photoshop</dd></div><div class="fact"><dt>version</dt><dd>1.1.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+, RGB, 8 or 16-bit (processed as 8-bit)</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.hexrack</dd></div><div class="fact"><dt>folder</dt><dd>Hexrack-Photoshop-Plugin</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -31,6 +31,7 @@
 <li><span class="step-n">03</span><span class="step-t">Click a slot in the <b>Rack</b> to edit it; the <b>Device</b> section is that slot&#x27;s device and parameters, the <b>Stage</b> section its mix, row band and channel. <b>+ Add</b> puts a new device below the selected one; ▲ ▼ reorder; <b>On</b> mutes a slot without removing it.</span></li>
 <li><span class="step-n">04</span><span class="step-t"><b>Randomise stage</b> rolls the selected slot; <b>Randomise rack</b> builds a whole new rack of two to four devices. <b>New</b> beside Seed re-rolls only the random choices inside the current device.</span></li>
 <li><span class="step-n">05</span><span class="step-t">Save a rack you like with a name in the box and <b>Save</b>; it joins the preset menu under <i>your presets</i>. Racks also survive restarts on their own.</span></li>
+<li><span class="step-n">06</span><span class="step-t">The preset menu has three <b>type</b> groups (subtle, medium, extreme: 30 presets designed on black-on-white lettering, from a print-style misregistration to a skyline of collapsed ink). Note that pixel sorting does nothing inside solid letters - identical pixels sort to themselves - so the type presets use whole-line sorts instead of thresholds.</span></li>
 </ol></div>
 </section>
 <section class="block" id="controls">
@@ -141,7 +142,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>adobe</span>
   <span>process guide</span></div>
-  <div class="sf-col"><span>generated 2026-10-25</span>
+  <div class="sf-col"><span>generated 2026-10-26</span>
   <span>build_site.py</span></div>
 </footer>
 </body>
