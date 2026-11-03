@@ -302,5 +302,22 @@
     "note": "Free eight-layer multiband bitcrusher by RiverFlux Audio, with tonal and transient modes."
    }
   }
+ },
+ "Google Flow Music": {
+  "vendor_url": null,
+  "products": {
+   "Flow Effect": {
+    "product_url": "https://support.google.com/flow/answer/18631279?hl=en",
+    "manual_url": null,
+    "category": "other",
+    "note": "Host plugin that loads effects exported from Google Flow Music as .fmx files."
+   },
+   "Flow Instrument": {
+    "product_url": "https://support.google.com/flow/answer/18631279?hl=en",
+    "manual_url": null,
+    "category": "synth",
+    "note": "Host plugin that loads instruments exported from Google Flow Music as .fmx files."
+   }
+  }
  }
 }

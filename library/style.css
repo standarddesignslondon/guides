@@ -242,7 +242,7 @@ ul.gotchas li:first-child:before{top:0}
 /* ---------- catalogue ---------- */
 .cat-row{
   display:grid; align-items:baseline; gap:0 20px;
-  grid-template-columns:150px 1fr 96px 150px 120px;
+  grid-template-columns:150px 1fr 96px 150px 96px 120px;
   padding:13px 0; border-bottom:1px solid var(--line);
 }
 .cat-row[hidden]{display:none}
@@ -251,13 +251,18 @@ ul.gotchas li:first-child:before{top:0}
 .c-note{font-size:13px; color:var(--mid); line-height:1.45}
 .c-type{font-size:12px; color:var(--soft)}
 .c-maker{font-size:12px; color:var(--soft); overflow-wrap:anywhere}
+.c-date{font-size:12px; color:var(--soft); font-variant-numeric:tabular-nums;
+  white-space:nowrap}
+.c-date .by{color:var(--mid)}
+.sorter{display:flex; gap:14px; font-size:12px; color:var(--soft);
+  align-items:baseline}
 .c-links{display:flex; gap:12px; justify-content:flex-end}
 .c-links a{font-size:12px; color:var(--soft); border-bottom:1px solid var(--line2)}
 .c-links a:hover{color:var(--accent); border-bottom-color:var(--accent)}
 .c-links .own{color:var(--accent); border-bottom-color:var(--accent)}
 .cat-head{
   display:grid; gap:0 20px;
-  grid-template-columns:150px 1fr 96px 150px 120px;
+  grid-template-columns:150px 1fr 96px 150px 96px 120px;
   padding:14px 0 9px; border-bottom:1px solid var(--ink);
   font-size:10px; text-transform:uppercase; letter-spacing:.07em;
   color:var(--soft);
@@ -272,11 +277,13 @@ ul.gotchas li:first-child:before{top:0}
 @media (max-width:980px){
   /* name | maker | links across the top, description and type beneath */
   .cat-row,.cat-head{grid-template-columns:1fr 140px 108px}
-  .cat-head span:nth-child(2),.cat-head span:nth-child(3){display:none}
+  .cat-head span:nth-child(2),.cat-head span:nth-child(3),
+  .cat-head span:nth-child(5){display:none}
   .c-maker{grid-column:2; grid-row:1}
   .c-links{grid-column:3; grid-row:1}
   .c-note{grid-column:1/4; grid-row:2; padding-top:5px}
-  .c-type{grid-column:1/4; grid-row:3; padding-top:4px}
+  .c-type{grid-column:1/2; grid-row:3; padding-top:4px}
+  .c-date{grid-column:2/4; grid-row:3; padding-top:4px; text-align:right}
 }
 @media (max-width:620px){
   .cat-row,.cat-head{grid-template-columns:1fr 96px}
@@ -284,5 +291,6 @@ ul.gotchas li:first-child:before{top:0}
   .c-maker{display:none}
   .c-links{grid-column:2; grid-row:1}
   .c-note{grid-column:1/3}
-  .c-type{grid-column:1/3}
+  .c-type{grid-column:1/2}
+  .c-date{grid-column:2/3}
 }

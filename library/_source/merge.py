@@ -1,6 +1,6 @@
 import json, glob, re, collections, unicodedata, os
 from collapse import (collapse_plugins, own_prefix, guide_name, device_in_scope,
-                      OWN_PREFIXES)
+                      OWN_PREFIXES, plugin_key)
 HERE=os.path.dirname(os.path.abspath(__file__))
 os.chdir(HERE)
 
@@ -10,7 +10,8 @@ def load(f):
 
 plug_links={}
 for f in ['links_ik.json','links_arturia.json','links_b2.json','links_b3.json',
-          'links_b4.json','links_b5.json','links_b6.json','links_b7.json']:
+          'links_b4.json','links_b5.json','links_b6.json','links_b7.json',
+          'links_au.json']:
     for vendor,d in load(f).items():
         plug_links.setdefault(vendor,{'vendor_url':d.get('vendor_url'),'products':{}})
         plug_links[vendor]['vendor_url']=plug_links[vendor]['vendor_url'] or d.get('vendor_url')
@@ -24,6 +25,18 @@ for f in ['links_u0.json','links_u1.json','links_u2.json','links_u3.json']:
 
 P=json.load(open('plugins.json'))
 M=json.load(open('m4l2.json'))
+
+# earliest evidence of each thing being on the Mac, from dates.py
+_inst=load('installed.json') or {}
+inst_plugin=_inst.get('plugins',{})
+inst_device=_inst.get('devices',{})
+inst_listed=_inst.get('listed',{})
+if not _inst: print('!! no installed.json — run dates.py; install dates left blank')
+
+def installed(d):
+    """the two catalogue fields for one installed.json record"""
+    return dict(installed=d['date'], installed_by='by' if d['by'] else '') if d \
+        else dict(installed='', installed_by='')
 
 TYPES={'delay','reverb','eq','dynamics','distortion','modulation','filter','pitch',
        'spatial','utility','analyser','synth','sampler','drums','sequencer',
@@ -68,7 +81,8 @@ for p in P:
         fmt=p['formats'], origin='Plugin',
         note=d.get('note') or '', version=p['version'],
         url=d.get('product_url') or L.get('vendor_url') or p.get('url') or '',
-        manual=d.get('manual_url') or '', guide=''))
+        manual=d.get('manual_url') or '', guide='',
+        **installed(inst_plugin.get(p['vendor']+'\t'+plugin_key(p['name'])))))
 
 # ---------------- max for live ----------------
 def cls(r):
@@ -112,12 +126,23 @@ for r in M:
     cur=best.get(key)
     if cur is None or r['used']>cur['used']: best[key]=r
 
+# a built-here device is many files; date it by the earliest of them
+own_dates=collections.defaultdict(list)
+for r in M:
+    o=own_prefix(r['name'])
+    if o and cls(r)!='Out of scope' and r['path'] in inst_device:
+        d=inst_device[r['path']]
+        own_dates[o].append((d['by'] and 1 or 0, d['date'], d))
+
 for (kind,k),r in best.items():
     c=cls(r)
     if kind=='own':
+        # the earliest file; on a tie, the date not capped by a bulk copy
+        od=min(own_dates[k], key=lambda x:(x[1],x[0]))[2] if own_dates[k] else None
         rows.append(dict(slug=slug('m-'+k),name=guide_name(k),source='Max for Live',
             type=None,maker='Claude + Simon',fmt=r['kind'],origin='Built here',
-            note='',version='',url='',manual='',guide=f'../max-for-live/devices/{OWN[k]}.html'))
+            note='',version='',url='',manual='',guide=f'../max-for-live/devices/{OWN[k]}.html',
+            **installed(od)))
         continue
     name=r['name']
     if c=='Live built-in':
@@ -125,7 +150,8 @@ for (kind,k),r in best.items():
         rows.append(dict(slug=slug('m-builtin-'+name),name=name,source='Max for Live',
             type=norm_type(d.get('category')) or 'other',maker='Ableton',fmt=r['kind'],
             origin='Live built-in',note=d.get('note') or '',version='',
-            url=d.get('manual_url') or '',manual=d.get('manual_url') or '',guide=''))
+            url=d.get('manual_url') or '',manual=d.get('manual_url') or '',guide='',
+            installed='',installed_by=''))
     elif c=='Pack':
         pk=r['place']; pd=packs.get(pk,{}) or {}
         dd=(pd.get('devices') or {}).get(name,{}) or {}
@@ -134,18 +160,27 @@ for (kind,k),r in best.items():
             maker=re.sub(r'^.* by ','',pk) if ' by ' in pk else 'Ableton',
             fmt=r['kind'],origin=pk,note=dd.get('note') or '',version='',
             url=dd.get('device_url') or pd.get('pack_url') or '',
-            manual=pd.get('docs_url') or '',guide=''))
+            manual=pd.get('docs_url') or '',guide='',
+            **installed(inst_device.get(r['path']))))
     else:
         d=udev.get(name,{}) or {}
         rows.append(dict(slug=slug('m-user-'+name),name=name,source='Max for Live',
             type=norm_type(d.get('category')) or 'other',
             maker=d.get('maker') or 'Unknown',fmt=r['kind'],origin='User Library',
             note=d.get('note') or '',version='',url=d.get('url') or '',
-            manual='',guide=''))
+            manual='',guide='',**installed(inst_device.get(r['path']))))
 
 # tutorial pack devices get their own type so they filter away
 for r in rows:
     if r['origin']=='Building Max Devices': r['type']='tutorial'
+
+# an entry the site already listed was installed by that commit's date; that
+# catches plugins whose update replaced the bundle and reset Date Added
+from dates import catalogue_key
+for r in rows:
+    seen=inst_listed.get(catalogue_key(r))
+    if seen and (not r['installed'] or seen<r['installed']):
+        r['installed'],r['installed_by']=seen,'by'
 
 # --- corrections found by spot-checking the researched links against the
 # --- real pages. Keyed on name; applied last so they survive a regenerate.
@@ -165,3 +200,6 @@ print('by type:',collections.Counter(r['type'] for r in rows).most_common())
 print('with url:',sum(1 for r in rows if r['url']),'with manual:',sum(1 for r in rows if r['manual']),
       'with guide:',sum(1 for r in rows if r['guide']),'with note:',sum(1 for r in rows if r['note']))
 print('makers:',len({r['maker'] for r in rows}))
+print('install dates:',collections.Counter(
+    ('by ' if r['installed_by'] else '')+('dated' if r['installed'] else 'none')
+    for r in rows))

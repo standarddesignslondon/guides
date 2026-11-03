@@ -5,7 +5,10 @@
   "version": "3.2.0",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/2RuleSynthV-3-2.vst3"
+  ]
  },
  {
   "vendor": "2Rule",
@@ -13,7 +16,10 @@
   "version": "3.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TugGlicento.vst3"
+  ]
  },
  {
   "vendor": "2Rule",
@@ -21,7 +27,10 @@
   "version": "1.2.0",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TugImgSynth.vst3"
+  ]
  },
  {
   "vendor": "2Rule",
@@ -29,7 +38,10 @@
   "version": "2.3.0",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TugMidiSeq.vst3"
+  ]
  },
  {
   "vendor": "2Rule",
@@ -37,7 +49,10 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TugMultiEffect.vst3"
+  ]
  },
  {
   "vendor": "2Rule",
@@ -45,7 +60,10 @@
   "version": "1.3.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TugPhonon.vst3"
+  ]
  },
  {
   "vendor": "2Rule",
@@ -53,7 +71,10 @@
   "version": "1.0.4.2",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TugSpect.vst3"
+  ]
  },
  {
   "vendor": "Aberrant DSP",
@@ -61,7 +82,10 @@
   "version": "1.0",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Cataclysm.vst3"
+  ]
  },
  {
   "vendor": "Aberrant DSP",
@@ -69,7 +93,21 @@
   "version": "1.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Lofi Oddity.vst3"
+  ]
+ },
+ {
+  "vendor": "Aberrant DSP",
+  "name": "SketchCassette II",
+  "version": "2.3",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/SketchCassette II.component"
+  ]
  },
  {
   "vendor": "AIR Music Technology",
@@ -77,7 +115,11 @@
   "version": "1.0.0.37",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/AIR Multiband Filterbank.vst",
+   "/Library/Audio/Plug-Ins/VST3/AIR Multiband Filterbank.vst3"
+  ]
  },
  {
   "vendor": "AIR Music Technology",
@@ -85,7 +127,11 @@
   "version": "65536",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/AIR Tape Double Track.vst",
+   "/Library/Audio/Plug-Ins/VST3/AIR Tape Double Track.vst3"
+  ]
  },
  {
   "vendor": "Airwindows",
@@ -93,7 +139,10 @@
   "version": "1.2025.63",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Airwindows Consolidated.vst3"
+  ]
  },
  {
   "vendor": "AnalogObsession",
@@ -101,7 +150,11 @@
   "version": "30000",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Chopa.vst",
+   "/Library/Audio/Plug-Ins/VST3/Chopa.vst3"
+  ]
  },
  {
   "vendor": "AnalogObsession",
@@ -109,7 +162,10 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/DrGate.vst3"
+  ]
  },
  {
   "vendor": "AnalogObsession",
@@ -117,7 +173,10 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/RazorClip.vst3"
+  ]
  },
  {
   "vendor": "AnalogObsession",
@@ -125,7 +184,10 @@
   "version": "2.0.0",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/ReLife.vst3"
+  ]
  },
  {
   "vendor": "Applied Acoustics Systems",
@@ -133,7 +195,11 @@
   "version": "4",
   "formats": "VST2/VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Lounge Lizard Session 4.vst",
+   "/Library/Audio/Plug-Ins/VST3/Applied Acoustics Systems/Lounge Lizard Session 4.vst3"
+  ]
  },
  {
   "vendor": "Applied Acoustics Systems",
@@ -141,7 +207,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Strum Session 2.vst",
+   "/Library/Audio/Plug-Ins/VST3/Applied Acoustics Systems/Strum Session 2.vst3"
+  ]
  },
  {
   "vendor": "Applied Acoustics Systems",
@@ -149,7 +219,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Ultra Analog Session 2.vst",
+   "/Library/Audio/Plug-Ins/VST3/Applied Acoustics Systems/Ultra Analog Session 2.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -157,7 +231,11 @@
   "version": "1.1.5.6367",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Acid V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Acid V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -165,7 +243,11 @@
   "version": "5.12.6.6914",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Analog Lab V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Analog Lab V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -173,7 +255,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/ARP 2600 V3.vst",
+   "/Library/Audio/Plug-Ins/VST3/ARP 2600 V3.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -181,7 +267,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Augmented BRASS.vst",
+   "/Library/Audio/Plug-Ins/VST3/Augmented BRASS.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -189,7 +279,11 @@
   "version": "2.0.2.6369",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Augmented GRAND PIANO.vst",
+   "/Library/Audio/Plug-Ins/VST3/Augmented GRAND PIANO.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -197,7 +291,11 @@
   "version": "2.0.2.6369",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Augmented MALLETS.vst",
+   "/Library/Audio/Plug-Ins/VST3/Augmented MALLETS.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -205,7 +303,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Augmented PERSIA.vst",
+   "/Library/Audio/Plug-Ins/VST3/Augmented PERSIA.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -213,7 +315,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Augmented STRINGS.vst",
+   "/Library/Audio/Plug-Ins/VST3/Augmented STRINGS.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -221,7 +327,11 @@
   "version": "2.0.2.6369",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Augmented VOICES.vst",
+   "/Library/Audio/Plug-Ins/VST3/Augmented VOICES.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -229,7 +339,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Augmented WOODWINDS.vst",
+   "/Library/Audio/Plug-Ins/VST3/Augmented WOODWINDS.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -237,7 +351,11 @@
   "version": "2.0.2.6369",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Augmented YANGTZE.vst",
+   "/Library/Audio/Plug-Ins/VST3/Augmented YANGTZE.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -245,7 +363,11 @@
   "version": "2.9.5.6366",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/B-3 V2.vst",
+   "/Library/Audio/Plug-Ins/VST3/B-3 V2.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -253,7 +375,11 @@
   "version": "1.13.4.6366",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Buchla Easel V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Buchla Easel V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -261,7 +387,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Bus EXCITER-104.vst",
+   "/Library/Audio/Plug-Ins/VST3/Bus EXCITER-104.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -269,7 +399,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Mastering",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Bus FORCE.vst",
+   "/Library/Audio/Plug-Ins/VST3/Bus FORCE.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -277,7 +411,11 @@
   "version": "1.0.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Bus PEAK.vst",
+   "/Library/Audio/Plug-Ins/VST3/Bus PEAK.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -285,7 +423,11 @@
   "version": "1.0.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Tools",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Bus TRANSIENT.vst",
+   "/Library/Audio/Plug-Ins/VST3/Bus TRANSIENT.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -293,7 +435,11 @@
   "version": "1.5.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Chorus DIMENSION-D.vst",
+   "/Library/Audio/Plug-Ins/VST3/Chorus DIMENSION-D.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -301,7 +447,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Chorus JUN-6.vst",
+   "/Library/Audio/Plug-Ins/VST3/Chorus JUN-6.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -309,7 +459,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Clavinet V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Clavinet V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -317,7 +471,11 @@
   "version": "1.13.4.6366",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/CMI V.vst",
+   "/Library/Audio/Plug-Ins/VST3/CMI V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -325,7 +483,11 @@
   "version": "1.4.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Comp DIODE-609.vst",
+   "/Library/Audio/Plug-Ins/VST3/Comp DIODE-609.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -333,7 +495,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Comp FET-76.vst",
+   "/Library/Audio/Plug-Ins/VST3/Comp FET-76.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -341,7 +507,11 @@
   "version": "1.7.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Comp TUBE-STA.vst",
+   "/Library/Audio/Plug-Ins/VST3/Comp TUBE-STA.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -349,7 +519,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Comp VCA-65.vst",
+   "/Library/Audio/Plug-Ins/VST3/Comp VCA-65.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -357,7 +531,11 @@
   "version": "1.0.5.6366",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/CP-70 V.vst",
+   "/Library/Audio/Plug-Ins/VST3/CP-70 V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -365,7 +543,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/CS-80 V4.vst",
+   "/Library/Audio/Plug-Ins/VST3/CS-80 V4.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -373,7 +555,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/CZ V.vst",
+   "/Library/Audio/Plug-Ins/VST3/CZ V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -381,7 +567,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Delay BRIGADE.vst",
+   "/Library/Audio/Plug-Ins/VST3/Delay BRIGADE.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -389,7 +579,11 @@
   "version": "1.7.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Delay ETERNITY.vst",
+   "/Library/Audio/Plug-Ins/VST3/Delay ETERNITY.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -397,7 +591,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Delay TAPE-201.vst",
+   "/Library/Audio/Plug-Ins/VST3/Delay TAPE-201.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -405,7 +603,11 @@
   "version": "1.2.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Dist COLDFIRE.vst",
+   "/Library/Audio/Plug-Ins/VST3/Dist COLDFIRE.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -413,7 +615,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Dist OPAMP-21.vst",
+   "/Library/Audio/Plug-Ins/VST3/Dist OPAMP-21.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -421,7 +627,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Dist TUBE-CULTURE.vst",
+   "/Library/Audio/Plug-Ins/VST3/Dist TUBE-CULTURE.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -429,7 +639,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/DX7 V.vst",
+   "/Library/Audio/Plug-Ins/VST3/DX7 V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -437,7 +651,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Efx AMBIENT.vst",
+   "/Library/Audio/Plug-Ins/VST3/Efx AMBIENT.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -445,7 +663,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Tools",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Efx FRAGMENTS.vst",
+   "/Library/Audio/Plug-Ins/VST3/Efx FRAGMENTS.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -453,7 +675,11 @@
   "version": "1.1.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Tools",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Efx MOTIONS.vst",
+   "/Library/Audio/Plug-Ins/VST3/Efx MOTIONS.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -461,7 +687,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Efx REFRACT.vst",
+   "/Library/Audio/Plug-Ins/VST3/Efx REFRACT.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -469,7 +699,11 @@
   "version": "1.6.4.6366",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Emulator II V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Emulator II V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -477,7 +711,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/EQ SITRAL-295.vst",
+   "/Library/Audio/Plug-Ins/VST3/EQ SITRAL-295.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -485,7 +723,11 @@
   "version": "1.13.4.6366",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Farfisa V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Farfisa V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -493,7 +735,11 @@
   "version": "1.8.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Filter",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Filter M12.vst",
+   "/Library/Audio/Plug-Ins/VST3/Filter M12.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -501,7 +747,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Filter",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Filter MINI.vst",
+   "/Library/Audio/Plug-Ins/VST3/Filter MINI.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -509,7 +759,11 @@
   "version": "1.2.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Filter",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Filter MS-20.vst",
+   "/Library/Audio/Plug-Ins/VST3/Filter MS-20.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -517,7 +771,11 @@
   "version": "1.8.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Filter",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Filter SEM.vst",
+   "/Library/Audio/Plug-Ins/VST3/Filter SEM.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -525,7 +783,11 @@
   "version": "1.5.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Flanger BL-20.vst",
+   "/Library/Audio/Plug-Ins/VST3/Flanger BL-20.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -533,7 +795,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Jun-6 V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Jun-6 V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -541,7 +807,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Jup-8 V4.vst",
+   "/Library/Audio/Plug-Ins/VST3/Jup-8 V4.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -549,7 +819,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Jup-8000 V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Jup-8000 V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -557,7 +831,11 @@
   "version": "1.3.4.6366",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/KORG MS-20 V.vst",
+   "/Library/Audio/Plug-Ins/VST3/KORG MS-20 V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -565,7 +843,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Matrix-12 V2.vst",
+   "/Library/Audio/Plug-Ins/VST3/Matrix-12 V2.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -573,7 +855,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Mellotron V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Mellotron V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -581,7 +867,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Memory V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Memory V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -589,7 +879,11 @@
   "version": "3.12.0.3422",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Mini V3.vst",
+   "/Library/Audio/Plug-Ins/VST3/Mini V3.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -597,7 +891,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Mini V4.vst",
+   "/Library/Audio/Plug-Ins/VST3/Mini V4.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -605,15 +903,23 @@
   "version": "1.0.6.6366",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/MiniBrute V.vst",
+   "/Library/Audio/Plug-Ins/VST3/MiniBrute V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
   "name": "MiniFreak V",
-  "version": "5.0.1.5869",
+  "version": "5.1.1.6945",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/MiniFreak V.vst",
+   "/Library/Audio/Plug-Ins/VST3/MiniFreak V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -621,7 +927,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Tools",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Mix DRUMS.vst",
+   "/Library/Audio/Plug-Ins/VST3/Mix DRUMS.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -629,7 +939,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Modular V3.vst",
+   "/Library/Audio/Plug-Ins/VST3/Modular V3.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -637,7 +951,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/OP-Xa V.vst",
+   "/Library/Audio/Plug-Ins/VST3/OP-Xa V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -645,7 +963,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Phaser BI-TRON.vst",
+   "/Library/Audio/Plug-Ins/VST3/Phaser BI-TRON.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -653,7 +975,11 @@
   "version": "3.3.4.6366",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Piano V3.vst",
+   "/Library/Audio/Plug-Ins/VST3/Piano V3.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -661,7 +987,11 @@
   "version": "7.0.1.6772",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Pigments.vst",
+   "/Library/Audio/Plug-Ins/VST3/Pigments.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -669,7 +999,11 @@
   "version": "1.0.0.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Tools",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Pitch SHIFTER-910.vst",
+   "/Library/Audio/Plug-Ins/VST3/Pitch SHIFTER-910.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -677,7 +1011,11 @@
   "version": "1.9.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Pre 1973.vst",
+   "/Library/Audio/Plug-Ins/VST3/Pre 1973.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -685,7 +1023,11 @@
   "version": "1.8.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Pre TridA.vst",
+   "/Library/Audio/Plug-Ins/VST3/Pre TridA.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -693,7 +1035,11 @@
   "version": "1.8.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Pre V76.vst",
+   "/Library/Audio/Plug-Ins/VST3/Pre V76.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -701,7 +1047,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Prophet-5 V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Prophet-5 V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -709,7 +1059,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Prophet-VS V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Prophet-VS V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -717,7 +1071,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Pure LoFi.vst",
+   "/Library/Audio/Plug-Ins/VST3/Pure LoFi.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -725,7 +1083,11 @@
   "version": "1.0.1.6861",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Pure SUB.vst",
+   "/Library/Audio/Plug-Ins/VST3/Pure SUB.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -733,7 +1095,11 @@
   "version": "1.6.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Rev INTENSITY.vst",
+   "/Library/Audio/Plug-Ins/VST3/Rev INTENSITY.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -741,7 +1107,11 @@
   "version": "1.2.1.6567",
   "formats": "VST2/VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Rev LX-24.vst",
+   "/Library/Audio/Plug-Ins/VST3/Rev LX-24.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -749,7 +1119,11 @@
   "version": "1.0.1.5886",
   "formats": "VST2/VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Rev OCEAN.vst",
+   "/Library/Audio/Plug-Ins/VST3/Rev OCEAN.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -757,7 +1131,11 @@
   "version": "1.7.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Rev PLATE-140.vst",
+   "/Library/Audio/Plug-Ins/VST3/Rev PLATE-140.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -765,7 +1143,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Rev SPRING-636.vst",
+   "/Library/Audio/Plug-Ins/VST3/Rev SPRING-636.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -773,7 +1155,11 @@
   "version": "1.2.1.6566",
   "formats": "VST2/VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Rotary CLS-222.vst",
+   "/Library/Audio/Plug-Ins/VST3/Rotary CLS-222.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -781,7 +1167,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/SEM V2.vst",
+   "/Library/Audio/Plug-Ins/VST3/SEM V2.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -789,7 +1179,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/SEM V3.vst",
+   "/Library/Audio/Plug-Ins/VST3/SEM V3.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -797,7 +1191,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Solina V2.vst",
+   "/Library/Audio/Plug-Ins/VST3/Solina V2.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -805,7 +1203,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/SQ80 V.vst",
+   "/Library/Audio/Plug-Ins/VST3/SQ80 V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -813,7 +1215,11 @@
   "version": "2.6.5.6366",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Stage-73 V2.vst",
+   "/Library/Audio/Plug-Ins/VST3/Stage-73 V2.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -821,7 +1227,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Synclavier V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Synclavier V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -829,7 +1239,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Synthi V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Synthi V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -837,7 +1251,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Synthx V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Synthx V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -845,7 +1263,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Tools",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Tape J-37.vst",
+   "/Library/Audio/Plug-Ins/VST3/Tape J-37.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -853,7 +1275,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Tape MELLO-FI.vst",
+   "/Library/Audio/Plug-Ins/VST3/Tape MELLO-FI.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -861,7 +1287,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Vocoder V.vst",
+   "/Library/Audio/Plug-Ins/VST3/Vocoder V.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -869,7 +1299,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/VOX Continental V2.vst",
+   "/Library/Audio/Plug-Ins/VST3/VOX Continental V2.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -877,7 +1311,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Wurli V2.vst",
+   "/Library/Audio/Plug-Ins/VST3/Wurli V2.vst3"
+  ]
  },
  {
   "vendor": "Arturia",
@@ -885,7 +1323,33 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Wurli V3.vst",
+   "/Library/Audio/Plug-Ins/VST3/Wurli V3.vst3"
+  ]
+ },
+ {
+  "vendor": "Audio Damage, Inc.",
+  "name": "Descent",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Descent.component"
+  ]
+ },
+ {
+  "vendor": "Audio Damage, Inc.",
+  "name": "Replicant 2",
+  "version": "2.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Replicant 2.component"
+  ]
  },
  {
   "vendor": "Audio Damage, Inc.",
@@ -893,7 +1357,10 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/ShinRonin.vst3"
+  ]
  },
  {
   "vendor": "Audiomodern",
@@ -901,7 +1368,11 @@
   "version": "1.1.3",
   "formats": "VST2/VST3",
   "category": "Fx, Filter, Generator, Modulation, Tools",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Filterstep.vst",
+   "/Library/Audio/Plug-Ins/VST3/Filterstep.vst3"
+  ]
  },
  {
   "vendor": "Audiomodern",
@@ -909,7 +1380,11 @@
   "version": "65795",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Gatelab.vst",
+   "/Library/Audio/Plug-Ins/VST3/Gatelab.vst3"
+  ]
  },
  {
   "vendor": "Audiomodern",
@@ -917,7 +1392,11 @@
   "version": "1.0.1",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Panflow.vst",
+   "/Library/Audio/Plug-Ins/VST3/Panflow.vst3"
+  ]
  },
  {
   "vendor": "Audiomodern",
@@ -925,7 +1404,54 @@
   "version": "1.0.7",
   "formats": "VST3",
   "category": "Instrument, Instrument Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Soundbox.vst3"
+  ]
+ },
+ {
+  "vendor": "Audiority",
+  "name": "PlexiTape",
+  "version": "1.2.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/PlexiTape.component"
+  ]
+ },
+ {
+  "vendor": "Audiority",
+  "name": "The Sword",
+  "version": "1.0.1",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/The Sword.component"
+  ]
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Dials",
+  "version": "1.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Dials.component"
+  ]
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Filterjam",
+  "version": "1.3.3",
+  "formats": "VST3",
+  "category": "Fx, Modulation",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Filterjam.vst3"
+  ]
  },
  {
   "vendor": "AudioThing",
@@ -933,7 +1459,10 @@
   "version": "2.3.0",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/FogConvolver2.vst3"
+  ]
  },
  {
   "vendor": "AudioThing",
@@ -941,7 +1470,21 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx, Delay, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/MoonEcho.vst3"
+  ]
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Noises",
+  "version": "1.2.1",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Noises.component"
+  ]
  },
  {
   "vendor": "AudioThing",
@@ -949,7 +1492,10 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx, Filter",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Octaves.vst3"
+  ]
  },
  {
   "vendor": "AudioThing",
@@ -957,7 +1503,10 @@
   "version": "1.5.4",
   "formats": "VST3",
   "category": "Fx, Delay, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Reels.vst3"
+  ]
  },
  {
   "vendor": "AudioThing",
@@ -965,7 +1514,10 @@
   "version": "1.3.3",
   "formats": "VST3",
   "category": "Fx, Distortion, EQ, Mastering",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Speakers.vst3"
+  ]
  },
  {
   "vendor": "AudioThing",
@@ -973,7 +1525,54 @@
   "version": "1.3.5",
   "formats": "VST3",
   "category": "Fx, EQ, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Springs.vst3"
+  ]
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Things Flip EQ",
+  "version": "1.1.1",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/ThingsFlipEQ.component"
+  ]
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Things Texture",
+  "version": "1.1.1",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/ThingsTexture.component"
+  ]
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Vinyl Strip",
+  "version": "1.6.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/VinylStrip.component"
+  ]
+ },
+ {
+  "vendor": "AudioThing",
+  "name": "Wires",
+  "version": "1.2.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Wires.component"
+  ]
  },
  {
   "vendor": "BABY Audio",
@@ -981,7 +1580,11 @@
   "version": "66048",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Beat Slammer.vst",
+   "/Library/Audio/Plug-Ins/VST3/Beat Slammer.vst3"
+  ]
  },
  {
   "vendor": "BABY Audio",
@@ -989,7 +1592,23 @@
   "version": "1.5",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Comeback Kid.vst",
+   "/Library/Audio/Plug-Ins/VST3/Comeback Kid.vst3"
+  ]
+ },
+ {
+  "vendor": "BABY Audio",
+  "name": "HyperWarp",
+  "version": "1.0.1",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/HyperWarp.vst",
+   "/Library/Audio/Plug-Ins/VST3/HyperWarp.vst3"
+  ]
  },
  {
   "vendor": "BABY Audio",
@@ -997,7 +1616,11 @@
   "version": "1.1",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Magic Dice.vst",
+   "/Library/Audio/Plug-Ins/VST3/Magic Dice.vst3"
+  ]
  },
  {
   "vendor": "BABY Audio",
@@ -1005,7 +1628,11 @@
   "version": "1.1",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Magic Switch.vst",
+   "/Library/Audio/Plug-Ins/VST3/Magic Switch.vst3"
+  ]
  },
  {
   "vendor": "BABY Audio",
@@ -1013,7 +1640,11 @@
   "version": "65792",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Pitch Drift.vst",
+   "/Library/Audio/Plug-Ins/VST3/Pitch Drift.vst3"
+  ]
  },
  {
   "vendor": "BABY Audio",
@@ -1021,7 +1652,11 @@
   "version": "1.6",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Super VHS.vst",
+   "/Library/Audio/Plug-Ins/VST3/Super VHS.vst3"
+  ]
  },
  {
   "vendor": "BABY Audio",
@@ -1029,7 +1664,11 @@
   "version": "65792",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Tekno.vst",
+   "/Library/Audio/Plug-Ins/VST3/Tekno.vst3"
+  ]
  },
  {
   "vendor": "BABY Audio",
@@ -1037,7 +1676,11 @@
   "version": "65536",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Warp.vst",
+   "/Library/Audio/Plug-Ins/VST3/Warp.vst3"
+  ]
  },
  {
   "vendor": "Bitlayer Audio",
@@ -1045,7 +1688,76 @@
   "version": "0.5.7",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/BIT LAYER.vst3"
+  ]
+ },
+ {
+  "vendor": "Caelum Audio",
+  "name": "Flux Mini",
+  "version": "1.1.5",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Flux Mini.component"
+  ]
+ },
+ {
+  "vendor": "Caelum Audio",
+  "name": "Flux Mini 2",
+  "version": "1.0.3",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Flux Mini 2.component"
+  ]
+ },
+ {
+  "vendor": "Caelum Audio",
+  "name": "Tape Cassette 2",
+  "version": "1.3.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Tape Cassette 2.component"
+  ]
+ },
+ {
+  "vendor": "Cherry Audio",
+  "name": "Novachord",
+  "version": "1.0.2",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Novachord.component"
+  ]
+ },
+ {
+  "vendor": "Cherry Audio",
+  "name": "Solovox",
+  "version": "1.0.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Solovox.component"
+  ]
+ },
+ {
+  "vendor": "chowdsp",
+  "name": "CHOWTapeModel",
+  "version": "2.11.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/CHOWTapeModel.component"
+  ]
  },
  {
   "vendor": "Crow Hill",
@@ -1053,7 +1765,11 @@
   "version": "1.0.6",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Crow Hill/Vaults.vst",
+   "/Library/Audio/Plug-Ins/VST3/Vaults.vst3"
+  ]
  },
  {
   "vendor": "Cymatics",
@@ -1061,7 +1777,10 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx, Pitch Shift",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Cymatics Deja vu.vst3"
+  ]
  },
  {
   "vendor": "Cymatics",
@@ -1069,7 +1788,10 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx, Pitch Shift",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Cymatics Memory.vst3"
+  ]
  },
  {
   "vendor": "Cymatics",
@@ -1077,7 +1799,22 @@
   "version": "65536",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Cymatics Origin.vst",
+   "/Library/Audio/Plug-Ins/VST3/Cymatics Origin.vst3"
+  ]
+ },
+ {
+  "vendor": "Davisynth",
+  "name": "Ripple Delay Free",
+  "version": "1.0.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/RippleDelayFree_osx.component"
+  ]
  },
  {
   "vendor": "Dawesome",
@@ -1085,7 +1822,10 @@
   "version": "1.0",
   "formats": "VST3",
   "category": "Fx, Distortion, Generator, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Sol.vst3"
+  ]
  },
  {
   "vendor": "Decidedly",
@@ -1093,7 +1833,11 @@
   "version": "68614",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/DecentSampler.vst",
+   "/Library/Audio/Plug-Ins/VST3/DecentSampler.vst3"
+  ]
  },
  {
   "vendor": "Eventide",
@@ -1101,7 +1845,10 @@
   "version": "1.0.8",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Eventide/Temperance Lite.vst3"
+  ]
  },
  {
   "vendor": "every something",
@@ -1109,7 +1856,10 @@
   "version": "2.0.7",
   "formats": "VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/artikulation.vst3"
+  ]
  },
  {
   "vendor": "every something",
@@ -1117,7 +1867,10 @@
   "version": "2.0.7",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/glosso.vst3"
+  ]
  },
  {
   "vendor": "Excite Audio",
@@ -1125,7 +1878,11 @@
   "version": "65536",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Bloom Mura Masa.vst",
+   "/Library/Audio/Plug-Ins/VST3/Bloom Mura Masa.vst3"
+  ]
  },
  {
   "vendor": "FKFX Audio",
@@ -1133,7 +1890,11 @@
   "version": "65542",
   "formats": "VST2/VST3",
   "category": "Fx, Dynamics, Modulation, Tools",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Nanomix.vst",
+   "/Library/Audio/Plug-Ins/VST3/Nanomix.vst3"
+  ]
  },
  {
   "vendor": "Fors",
@@ -1141,7 +1902,10 @@
   "version": "1.0",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Junior-Lite.vst3"
+  ]
  },
  {
   "vendor": "Fors",
@@ -1149,7 +1913,65 @@
   "version": "1.22",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Pivot-Lite.vst3"
+  ]
+ },
+ {
+  "vendor": "Freakshow Industries",
+  "name": "Backmask",
+  "version": "1.0.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Backmask.component"
+  ]
+ },
+ {
+  "vendor": "Freakshow Industries",
+  "name": "DreamEater",
+  "version": "1.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/DreamEater.component"
+  ]
+ },
+ {
+  "vendor": "Freakshow Industries",
+  "name": "Dumpster Fire",
+  "version": "1.0.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Dumpster Fire.component"
+  ]
+ },
+ {
+  "vendor": "Freakshow Industries",
+  "name": "MISHBY",
+  "version": "1.0.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/MISHBY.component"
+  ]
+ },
+ {
+  "vendor": "Freakshow Industries",
+  "name": "PocketDimension",
+  "version": "1.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/PocketDimension.component"
+  ]
  },
  {
   "vendor": "Full Bucket Music",
@@ -1157,7 +1979,10 @@
   "version": "1.1.2",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/BucketOne.vst3"
+  ]
  },
  {
   "vendor": "Full Bucket Music",
@@ -1165,7 +1990,21 @@
   "version": "10102",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/BucketOne.vst"
+  ]
+ },
+ {
+  "vendor": "Full Bucket Music",
+  "name": "BucketPops",
+  "version": "1.1.5",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/BucketPops.component"
+  ]
  },
  {
   "vendor": "Full Bucket Music",
@@ -1173,7 +2012,10 @@
   "version": "1.1.2",
   "formats": "VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/GrainStrain.vst3"
+  ]
  },
  {
   "vendor": "Full Bucket Music",
@@ -1181,7 +2023,32 @@
   "version": "10102",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/GrainStrain.vst"
+  ]
+ },
+ {
+  "vendor": "Full Bucket Music",
+  "name": "Nabla",
+  "version": "1.3.1",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Nabla.component"
+  ]
+ },
+ {
+  "vendor": "Full Bucket Music",
+  "name": "NY",
+  "version": "1.0.1",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/NY.component"
+  ]
  },
  {
   "vendor": "Full Bucket Music",
@@ -1189,7 +2056,22 @@
   "version": "10004",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/PECS.vst",
+   "/Library/Audio/Plug-Ins/VST3/PECS.vst3"
+  ]
+ },
+ {
+  "vendor": "GForce",
+  "name": "M-Tron Pro",
+  "version": "3.0.1",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/M-Tron Pro.component"
+  ]
  },
  {
   "vendor": "GForce",
@@ -1197,7 +2079,10 @@
   "version": "1.0.2",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/M-Tron Pro IV.vst3"
+  ]
  },
  {
   "vendor": "Glitchmachines",
@@ -1205,7 +2090,32 @@
   "version": "1.4.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Hysteresis.vst3"
+  ]
+ },
+ {
+  "vendor": "Google Flow Music",
+  "name": "Flow Effect",
+  "version": "0.6.4",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/FlowEffect.vst3"
+  ]
+ },
+ {
+  "vendor": "Google Flow Music",
+  "name": "Flow Instrument",
+  "version": "0.6.4",
+  "formats": "VST3",
+  "category": "Instrument, Synth",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/FlowInstrument.vst3"
+  ]
  },
  {
   "vendor": "Higher Plane Software",
@@ -1213,7 +2123,21 @@
   "version": "1.1.0",
   "formats": "VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/SpaceWalk.vst3"
+  ]
+ },
+ {
+  "vendor": "HY-Plugins",
+  "name": "HY-ESG",
+  "version": "1.0.3",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/HY-ESG.component"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1221,7 +2145,11 @@
   "version": "330247",
   "formats": "VST2/VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/AmpliTube 5.vst",
+   "/Library/Audio/Plug-Ins/VST3/AmpliTube 5.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1229,7 +2157,11 @@
   "version": "3.1.0",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/ARC 3.vst",
+   "/Library/Audio/Plug-Ins/VST3/ARC 3.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1237,7 +2169,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Black 76.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1245,7 +2180,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Brickwall Limiter.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1253,7 +2191,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 British Channel.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1261,7 +2202,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Bus Compressor.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1269,7 +2213,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Classic Clipper.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1277,7 +2224,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Classic Comp.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1285,7 +2235,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Classic EQ.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1293,7 +2246,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Classic Multi Band Limiter.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1301,7 +2257,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Comprexxor.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1309,7 +2268,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 CSR Hall.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1317,7 +2279,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 CSR Inverse.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1325,7 +2290,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 CSR Plate.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1333,7 +2301,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 CSR Room.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1341,7 +2312,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 De Esser.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1349,7 +2323,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Dyna-Mu.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1357,7 +2334,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Master EQ-432.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1365,7 +2345,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 EQ-73.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1373,7 +2356,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 EQ-81.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1381,7 +2367,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 EQ-PA.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1389,7 +2378,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 EQ-PB.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1397,7 +2389,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 EQ-PG.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1405,7 +2400,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 EQual.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1413,7 +2411,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Fame Studio Reverb.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1421,7 +2422,21 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 The Farm Stone Room.vst"
+  ]
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "Hammond B-3X",
+  "version": "1.3.5",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Hammond B-3X.component"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1429,7 +2444,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Joe Chiccarelli Vocal Strip.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1437,7 +2455,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Leslie.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1445,7 +2466,21 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Linear Phase EQ.vst"
+  ]
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "Lurssen Mastering Console",
+  "version": "1.2.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Lurssen Mastering Console.component"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1453,7 +2488,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Master Match.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1461,7 +2499,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Quad Compressor.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1469,7 +2510,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Quad Image.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1477,7 +2521,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Quad Limiter.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1485,7 +2532,21 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Mic Room.vst"
+  ]
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "MixBox",
+  "version": "1.5.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/MixBox.component"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1493,7 +2554,11 @@
   "version": "2.0.5",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/MODO BASS 2.vst",
+   "/Library/Audio/Plug-Ins/VST3/MODO BASS 2.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1501,7 +2566,11 @@
   "version": "66816",
   "formats": "VST2/VST3",
   "category": "Instrument, Drum",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/MODO DRUM.vst",
+   "/Library/Audio/Plug-Ins/VST3/MODO DRUM.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1509,7 +2578,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 One.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1517,7 +2589,21 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Opto Comp.vst"
+  ]
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "Philharmonik 2",
+  "version": "2.0",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Philharmonik 2.component"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1525,7 +2611,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Precision Comp-Limiter.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1533,7 +2622,10 @@
   "version": "1.0.5",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/ReSing.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1541,7 +2633,22 @@
   "version": "262662",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/SampleTank 4.vst",
+   "/Library/Audio/Plug-Ins/VST3/SampleTank 4.vst3"
+  ]
+ },
+ {
+  "vendor": "IK Multimedia",
+  "name": "SampleTron 2",
+  "version": "2.0.5",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/SampleTron 2.component"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1549,7 +2656,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Saturator X.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1557,7 +2667,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Space Delay.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1565,7 +2678,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Stealth Limiter.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1573,7 +2689,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Sunset Sound Studio Reverb.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1581,7 +2700,11 @@
   "version": "2.1.3",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Syntronik 2.vst",
+   "/Library/Audio/Plug-Ins/VST3/Syntronik 2.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1589,7 +2712,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Suite.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1597,7 +2723,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Metering.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1605,7 +2734,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Tape Echo.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1613,7 +2745,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Tape Machine 24.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1621,7 +2756,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Tape Machine 440.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1629,7 +2767,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Tape Machine 80.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1637,7 +2778,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 Tape Machine 99.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1645,7 +2789,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 TASCAM 388.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1653,7 +2800,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 TASCAM PORTA ONE.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1661,7 +2811,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 TEAC A-3340S.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1669,7 +2822,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 TEAC A-6100 MKII.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1677,7 +2833,10 @@
   "version": "1.12.0",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TONEX.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1685,7 +2844,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Black 76.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1693,7 +2855,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Brickwall Limiter.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1701,7 +2866,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 British Channel.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1709,7 +2877,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Bus Compressor.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1717,7 +2888,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Classic Clipper.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1725,7 +2899,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Classic Comp.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1733,7 +2910,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Classic EQ.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1741,7 +2921,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Classic Multi Band Limiter.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1749,7 +2932,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Comprexxor.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1757,7 +2943,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 CSR Hall.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1765,7 +2954,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 CSR Inverse.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1773,7 +2965,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 CSR Plate.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1781,7 +2976,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 CSR Room.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1789,7 +2987,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 De Esser.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1797,7 +2998,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Dyna-Mu.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1805,7 +3009,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 EQ-73.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1813,7 +3020,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 EQ-81.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1821,7 +3031,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 EQ-PA.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1829,7 +3042,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 EQ-PB.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1837,7 +3053,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 EQ-PG.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1845,7 +3064,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 EQP-1A.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1853,7 +3075,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 EQual.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1861,7 +3086,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Fame Studio Reverb.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1869,7 +3097,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Joe Chiccarelli Vocal Strip.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1877,7 +3108,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Leslie.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1885,7 +3119,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Linear Phase EQ.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1893,7 +3130,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Master EQ-432.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1901,7 +3141,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Master Match.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1909,7 +3152,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Metering.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1917,7 +3163,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Mic Room.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1925,7 +3174,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 One.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1933,7 +3185,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Opto Comp.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1941,7 +3196,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Precision Comp-Limiter.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1949,7 +3207,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Quad Compressor.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1957,7 +3218,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Spatial",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Quad Image.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1965,7 +3229,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Quad Limiter.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1973,7 +3240,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Saturator X.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1981,7 +3251,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Space Delay.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1989,7 +3262,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Stealth Limiter.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -1997,7 +3273,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Suite.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2005,7 +3284,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Sunset Sound Studio Reverb.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2013,7 +3295,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Tape Echo.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2021,7 +3306,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Tape Machine 24.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2029,7 +3317,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Tape Machine 440.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2037,7 +3328,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Tape Machine 80.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2045,7 +3339,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 Tape Machine 99.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2053,7 +3350,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 TASCAM 388.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2061,7 +3361,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 TASCAM PORTA ONE.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2069,7 +3372,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 TEAC A-3340S.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2077,7 +3383,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 TEAC A-6100 MKII.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2085,7 +3394,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 The Farm Stone Room.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2093,7 +3405,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 VC-670.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2101,7 +3416,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 White 2A.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2109,7 +3427,10 @@
   "version": "5.10.4",
   "formats": "VST3",
   "category": "Fx, EQ, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/TR5 White Channel.vst3"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2117,7 +3438,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 VC-670.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2125,7 +3449,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 EQP-1A.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2133,7 +3460,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 White 2A.vst"
+  ]
  },
  {
   "vendor": "IK Multimedia",
@@ -2141,7 +3471,10 @@
   "version": "330244",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/TR5 White Channel.vst"
+  ]
  },
  {
   "vendor": "Illformed",
@@ -2149,7 +3482,10 @@
   "version": "215",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Glitch2.vst"
+  ]
  },
  {
   "vendor": "Illformed",
@@ -2157,7 +3493,10 @@
   "version": "2.1.5",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Glitch2.vst3"
+  ]
  },
  {
   "vendor": "iZotope",
@@ -2165,7 +3504,10 @@
   "version": "2.6.0",
   "formats": "VST3",
   "category": "Fx, Analyzer",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Insight 2.vst3"
+  ]
  },
  {
   "vendor": "iZotope",
@@ -2173,7 +3515,10 @@
   "version": "4.6.0",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Neutron 4 Elements.vst3"
+  ]
  },
  {
   "vendor": "iZotope",
@@ -2181,7 +3526,10 @@
   "version": "11.3.0",
   "formats": "VST3",
   "category": "Fx, Mastering",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Ozone 11 Elements.vst3"
+  ]
  },
  {
   "vendor": "iZotope",
@@ -2189,7 +3537,10 @@
   "version": "11.3.0",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Ozone 11 Equalizer.vst3"
+  ]
  },
  {
   "vendor": "iZotope",
@@ -2197,7 +3548,10 @@
   "version": "2.3.0",
   "formats": "VST3",
   "category": "Fx, Spatial",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Ozone Imager 2.vst3"
+  ]
  },
  {
   "vendor": "iZotope",
@@ -2205,7 +3559,10 @@
   "version": "1.7.0",
   "formats": "VST3",
   "category": "Fx, Spatial",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Relay.vst3"
+  ]
  },
  {
   "vendor": "iZotope",
@@ -2213,7 +3570,10 @@
   "version": "2.10.0",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Tonal Balance Control 2.vst3"
+  ]
  },
  {
   "vendor": "iZotope",
@@ -2221,7 +3581,10 @@
   "version": "1.3.0",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Trash.vst3"
+  ]
  },
  {
   "vendor": "iZotope",
@@ -2229,7 +3592,10 @@
   "version": "1.13.0",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Vinyl.vst3"
+  ]
  },
  {
   "vendor": "iZotope",
@@ -2237,7 +3603,10 @@
   "version": "1.4.0",
   "formats": "VST3",
   "category": "Fx, Modulation, Vocals",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Vocal Doubler.vst3"
+  ]
  },
  {
   "vendor": "JMGSound",
@@ -2245,7 +3614,11 @@
   "version": "1.0",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Lofinity.vst",
+   "/Library/Audio/Plug-Ins/VST3/Lofinity.vst3"
+  ]
  },
  {
   "vendor": "Justin Sheriff",
@@ -2253,7 +3626,10 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/De-Space.vst3"
+  ]
  },
  {
   "vendor": "Karanyi Sounds",
@@ -2261,7 +3637,10 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Breeze Black Edition.vst3"
+  ]
  },
  {
   "vendor": "Karanyi Sounds",
@@ -2269,7 +3648,395 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Matra.vst3"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs 3-Band EQ",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs 3-Band EQ.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Bitcrush",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Bitcrush.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Channel Mixer",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Channel Mixer.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Chorus",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Chorus.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Clipper",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Clipper.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Comb Filter",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Comb Filter.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Compactor",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Compactor.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Compressor",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Compressor.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Delay",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Delay.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Distortion",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Distortion.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Dual Delay",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Dual Delay.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Dynamics",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Dynamics.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Ensemble",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Ensemble.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Filter",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Filter.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Flanger",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Flanger.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Formant Filter",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Formant Filter.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Frequency Shifter",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Frequency Shifter.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Gain",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Gain.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Gate",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Gate.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Haas",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Haas.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Ladder Filter",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Ladder Filter.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Limiter",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Limiter.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Nonlinear Filter",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Nonlinear Filter.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Phase Distortion",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Phase Distortion.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Phaser",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Phaser.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Pitch Shifter",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Pitch Shifter.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Resonator",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Resonator.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Reverb",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Reverb.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Reverser",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Reverser.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Ring Mod",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Ring Mod.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Shaper",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Shaper.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Stereo",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Stereo.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Tape Stop",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Tape Stop.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Trance Gate",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Trance Gate.component"
+  ]
+ },
+ {
+  "vendor": "Kilohearts",
+  "name": "kHs Transient Shaper",
+  "version": "2.4.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/kHs Transient Shaper.component"
+  ]
  },
  {
   "vendor": "Klanghelm",
@@ -2277,7 +4044,22 @@
   "version": "3.5.0",
   "formats": "VST2/VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/DC1A3.vst",
+   "/Library/Audio/Plug-Ins/VST3/DC1A3.vst3"
+  ]
+ },
+ {
+  "vendor": "Klevgrand",
+  "name": "DAW Cassette",
+  "version": "1.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/DAWCassette.component"
+  ]
  },
  {
   "vendor": "Klevgrand",
@@ -2285,7 +4067,11 @@
   "version": "1.0.6",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Degrader.vst",
+   "/Library/Audio/Plug-Ins/VST3/Degrader.vst3"
+  ]
  },
  {
   "vendor": "Klevgrand",
@@ -2293,7 +4079,408 @@
   "version": "65540",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/R0Verb.vst",
+   "/Library/Audio/Plug-Ins/VST3/R0Verb.vst3"
+  ]
+ },
+ {
+  "vendor": "Klevgrand",
+  "name": "Revolv",
+  "version": "1.0.4",
+  "formats": "VST2/VST3",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Revolv.vst",
+   "/Library/Audio/Plug-Ins/VST3/Revolv.vst3"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Abu Dhabi (Slicer)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/AbuDhabi.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Alexandria (Organ)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Alexandria.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Amsterdam (SFX)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Amsterdam.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Berlin (Sync)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Berlin.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Bilbao (Sampler)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Bilbao.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Brussels (Lead)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Brussels.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Chiangmai (FM)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Chiangmai.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Chicago (Acid)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Chicago.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Darwin (M1)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Darwin.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Dublin (Semi-modular)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Dublin.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Firenze (Clav)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Firenze.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Gladstone (Drum)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Gladstone.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Glasgow (Keys)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Glasgow.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Helsinki (Pad)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Helsinki.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Kamata (4-Bit)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Kamata.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Kiev (Vector)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Kiev.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Kingston (Arcade)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Kingston.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Lexington (Odyssey)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Lexington.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Lisbon (Sci-Fi)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Lisbon.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "London (Drum)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/London.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Madrid (Bass)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Madrid.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Marseille (Keys)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Marseille.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Miami (Wobble)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Miami.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Milpitas (Wavestation)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Milpitas.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Montpellier (Mono/Poly)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Montpellier.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Montreal (E.Piano)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Montreal.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Phoenix (Analog)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Phoenix.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Recife (Drum)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Recife.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Rosario (G.Amp)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Rosario.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Salzburg (Piano)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Salzburg.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Stockholm (Dr. Octorex)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Stockholm.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Tokyo (E.Perc)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Tokyo.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Vancouver (Sample)",
+  "version": "1.7.4",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Vancouver.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Wolfsburg (Digital)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Wolfsburg.component"
+  ]
+ },
+ {
+  "vendor": "KORG",
+  "name": "Zurich (Recorder)",
+  "version": "1.7.3",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Zurich.component"
+  ]
  },
  {
   "vendor": "LANDR",
@@ -2301,7 +4488,10 @@
   "version": "1.0.2.18",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/LANDR/LANDR FX Bass.vst3"
+  ]
  },
  {
   "vendor": "LANDR",
@@ -2309,7 +4499,10 @@
   "version": "1.0.2.18",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/LANDR/LANDR FX Beats.vst3"
+  ]
  },
  {
   "vendor": "LANDR",
@@ -2317,7 +4510,10 @@
   "version": "1.0.2.18",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/LANDR/LANDR FX Electric.vst3"
+  ]
  },
  {
   "vendor": "LANDR",
@@ -2325,7 +4521,10 @@
   "version": "1.0.2.18",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/LANDR/LANDR FX Voice.vst3"
+  ]
  },
  {
   "vendor": "Lese",
@@ -2333,7 +4532,10 @@
   "version": "2.0.0",
   "formats": "VST3",
   "category": "Fx, Distortion, Tools",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/codec.vst3"
+  ]
  },
  {
   "vendor": "Lese",
@@ -2341,7 +4543,43 @@
   "version": "1.3.5",
   "formats": "VST3",
   "category": "Fx, Filter",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/sweep.vst3"
+  ]
+ },
+ {
+  "vendor": "Lostin70s",
+  "name": "DevilSpring",
+  "version": "1.2.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/DevilSpring1.component"
+  ]
+ },
+ {
+  "vendor": "Lostin70s",
+  "name": "Harmonus",
+  "version": "1.0.2",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Harmonus_v1.component"
+  ]
+ },
+ {
+  "vendor": "Lostin70s",
+  "name": "Live Pedalboard",
+  "version": "1.0.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/LivePedalboard1.component"
+  ]
  },
  {
   "vendor": "Lunacy Audio",
@@ -2349,7 +4587,10 @@
   "version": "2.0.24",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/BEAM Filter.vst3"
+  ]
  },
  {
   "vendor": "Lunacy Audio",
@@ -2357,7 +4598,164 @@
   "version": "2.0.24",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/BEAM Haze.vst3"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Combo",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Degrade",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Detune",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Dub Delay",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Dynamics",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Re-Psycho!",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Ring Mod",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Round Pan",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Shepard Tones",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Stereo Simulator",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Sub-Bass Synthesizer",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Talkbox",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Test Tone",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
+ },
+ {
+  "vendor": "mda",
+  "name": "Tracker",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/mda.component"
+  ]
  },
  {
   "vendor": "Minuit",
@@ -2365,7 +4763,10 @@
   "version": "1.0.1",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Solstice.vst3"
+  ]
  },
  {
   "vendor": "Mixed In Key",
@@ -2373,7 +4774,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Captain Beat Epic.vst",
+   "/Library/Audio/Plug-Ins/VST3/Captain Beat Epic.vst3"
+  ]
  },
  {
   "vendor": "Mixed In Key",
@@ -2381,7 +4786,11 @@
   "version": "8.0.0.10287",
   "formats": "VST2/VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Captain Chords Epic.vst",
+   "/Library/Audio/Plug-Ins/VST3/Captain Chords Epic.vst3"
+  ]
  },
  {
   "vendor": "Mixed In Key",
@@ -2389,7 +4798,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Captain Deep Epic.vst",
+   "/Library/Audio/Plug-Ins/VST3/Captain Deep Epic.vst3"
+  ]
  },
  {
   "vendor": "Mixed In Key",
@@ -2397,7 +4810,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Captain Melody Epic.vst",
+   "/Library/Audio/Plug-Ins/VST3/Captain Melody Epic.vst3"
+  ]
  },
  {
   "vendor": "Mixed In Key",
@@ -2405,7 +4822,11 @@
   "version": "1",
   "formats": "VST2/VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Captain Play Epic.vst",
+   "/Library/Audio/Plug-Ins/VST3/Captain Play Epic.vst3"
+  ]
  },
  {
   "vendor": "Mixed In Key LLC",
@@ -2413,7 +4834,10 @@
   "version": "1",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Captain Beat.vst"
+  ]
  },
  {
   "vendor": "Mixed In Key LLC",
@@ -2421,7 +4845,10 @@
   "version": "1",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Captain Chords.vst"
+  ]
  },
  {
   "vendor": "Mixed In Key LLC",
@@ -2429,7 +4856,10 @@
   "version": "1",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Captain Deep.vst"
+  ]
  },
  {
   "vendor": "Mixed In Key LLC",
@@ -2437,7 +4867,10 @@
   "version": "1",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Captain Melody.vst"
+  ]
  },
  {
   "vendor": "Mixed In Key LLC",
@@ -2445,7 +4878,10 @@
   "version": "1",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Captain Play.vst"
+  ]
  },
  {
   "vendor": "Moog",
@@ -2453,7 +4889,10 @@
   "version": "1.2.0",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Mariana.vst3"
+  ]
  },
  {
   "vendor": "Moonwave",
@@ -2461,7 +4900,10 @@
   "version": "1.5.1",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Parallax.vst3"
+  ]
  },
  {
   "vendor": "MSXII Sound Design",
@@ -2469,7 +4911,11 @@
   "version": "1.0.0.27",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Fly Tape II.vst",
+   "/Library/Audio/Plug-Ins/VST3/Fly Tape II.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2477,7 +4923,10 @@
   "version": "6.0.1",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Absynth 6.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2485,7 +4934,10 @@
   "version": "6.0.1",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Absynth 6 FX.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2493,7 +4945,10 @@
   "version": "4.3",
   "formats": "VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Battery 4.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2501,7 +4956,10 @@
   "version": "1.3.7 (R34)",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Bite.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2509,7 +4967,10 @@
   "version": "1.3.7 (R34)",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Dirt.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2517,7 +4978,10 @@
   "version": "1.3.7 (R34)",
   "formats": "VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Freak.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2525,7 +4989,10 @@
   "version": "7.0.2 (R0)",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Guitar Rig 7.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2533,7 +5000,10 @@
   "version": "6.8.0",
   "formats": "VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Kontakt.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2541,7 +5011,10 @@
   "version": "7.10.9",
   "formats": "VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Kontakt 7.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2549,7 +5022,10 @@
   "version": "8.10.2",
   "formats": "VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Kontakt 8.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2557,7 +5033,10 @@
   "version": "1.7.1 (R0)",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Massive X.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2565,7 +5044,10 @@
   "version": "1.3.7 (R34)",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Raum.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2573,7 +5055,10 @@
   "version": "6.5.0",
   "formats": "VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Reaktor 6.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2581,7 +5066,10 @@
   "version": "6.5.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Reaktor 6.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2589,7 +5077,10 @@
   "version": "1.6.7 (R34)",
   "formats": "VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Replika.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2597,7 +5088,10 @@
   "version": "1.4.11 (R34)",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Supercharger.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2605,7 +5099,10 @@
   "version": "1.4.11 (R34)",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Supercharger GT.vst3"
+  ]
  },
  {
   "vendor": "Native Instruments",
@@ -2613,7 +5110,10 @@
   "version": "1.4.11 (R34)",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Transient Master.vst3"
+  ]
  },
  {
   "vendor": "Neutone",
@@ -2621,7 +5121,10 @@
   "version": "1.5.1",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Neutone FX.vst3"
+  ]
  },
  {
   "vendor": "Neutone",
@@ -2629,7 +5132,21 @@
   "version": "1.1.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Neutone Morpho.vst3"
+  ]
+ },
+ {
+  "vendor": "Newfangled Audio",
+  "name": "Pendulate",
+  "version": "1.6.9",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Pendulate.component"
+  ]
  },
  {
   "vendor": "Overloud",
@@ -2637,7 +5154,11 @@
   "version": "1.0.5",
   "formats": "VST2/VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Overloud/Gem ECHOSON.vst",
+   "/Library/Audio/Plug-Ins/VST3/Overloud/Gem ECHOSON.vst3"
+  ]
  },
  {
   "vendor": "Phase Fiasco",
@@ -2645,15 +5166,21 @@
   "version": "0.1.0",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Annulus.vst3"
+  ]
  },
  {
   "vendor": "Phase Fiasco",
   "name": "KAZU",
-  "version": "0.1.587",
+  "version": "0.1.700",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/KAZU.vst3"
+  ]
  },
  {
   "vendor": "Phase Fiasco",
@@ -2661,7 +5188,32 @@
   "version": "1.2.2",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Tape Fiasco.vst3"
+  ]
+ },
+ {
+  "vendor": "Phase Fiasco",
+  "name": "Tape Fiasco 2",
+  "version": "2.0.4.974",
+  "formats": "VST3",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Tape Fiasco 2.vst3"
+  ]
+ },
+ {
+  "vendor": "Polyverse Music",
+  "name": "Wider",
+  "version": "2.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Wider.component"
+  ]
  },
  {
   "vendor": "Puremagnetik",
@@ -2669,7 +5221,11 @@
   "version": "2.8.73",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Driftmaker.vst",
+   "/Library/Audio/Plug-Ins/VST3/Driftmaker.vst3"
+  ]
  },
  {
   "vendor": "Puremagnetik",
@@ -2677,7 +5233,11 @@
   "version": "133193",
   "formats": "VST2/VST3",
   "category": "Instrument, Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Expanse.vst",
+   "/Library/Audio/Plug-Ins/VST3/Expanse.vst3"
+  ]
  },
  {
   "vendor": "Puremagnetik",
@@ -2685,7 +5245,11 @@
   "version": "2.9.45",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Klamur.vst",
+   "/Library/Audio/Plug-Ins/VST3/Klamur.vst3"
+  ]
  },
  {
   "vendor": "Puremagnetik",
@@ -2693,7 +5257,11 @@
   "version": "2.8.128",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/MimikOD.vst",
+   "/Library/Audio/Plug-Ins/VST3/MimikOD.vst3"
+  ]
  },
  {
   "vendor": "Puremagnetik",
@@ -2701,7 +5269,11 @@
   "version": "133248",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Partikl.vst",
+   "/Library/Audio/Plug-Ins/VST3/Partikl.vst3"
+  ]
  },
  {
   "vendor": "Puremagnetik",
@@ -2709,7 +5281,11 @@
   "version": "2.9.45",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Pastfabric2.vst",
+   "/Library/Audio/Plug-Ins/VST3/Pastfabric2.vst3"
+  ]
  },
  {
   "vendor": "Puremagnetik",
@@ -2717,7 +5293,11 @@
   "version": "2.9.45",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Permute.vst",
+   "/Library/Audio/Plug-Ins/VST3/Permute.vst3"
+  ]
  },
  {
   "vendor": "Puremagnetik",
@@ -2725,7 +5305,11 @@
   "version": "133248",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Replicas.vst",
+   "/Library/Audio/Plug-Ins/VST3/Replicas.vst3"
+  ]
  },
  {
   "vendor": "Puremagnetik",
@@ -2733,7 +5317,11 @@
   "version": "2.8.128",
   "formats": "VST2/VST3",
   "category": "Instrument, Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Swarm.vst",
+   "/Library/Audio/Plug-Ins/VST3/Swarm.vst3"
+  ]
  },
  {
   "vendor": "Puremagnetik",
@@ -2741,7 +5329,11 @@
   "version": "2.8.155",
   "formats": "VST2/VST3",
   "category": "Instrument, Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Verv.vst",
+   "/Library/Audio/Plug-Ins/VST3/Verv.vst3"
+  ]
  },
  {
   "vendor": "Puremagnetik",
@@ -2749,7 +5341,11 @@
   "version": "133248",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Zerone.vst",
+   "/Library/Audio/Plug-Ins/VST3/Zerone.vst3"
+  ]
  },
  {
   "vendor": "Reason Studios",
@@ -2757,7 +5353,10 @@
   "version": "14.1.0",
   "formats": "VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Reason Rack Plugin.vst3"
+  ]
  },
  {
   "vendor": "Reason Studios",
@@ -2765,7 +5364,43 @@
   "version": "14.1.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Reason Rack Plugin.vst3"
+  ]
+ },
+ {
+  "vendor": "SampleScience",
+  "name": "80s Soviet Drums",
+  "version": "2.9.5",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/80s Soviet Drums.component"
+  ]
+ },
+ {
+  "vendor": "SampleScience",
+  "name": "Pianotone 600 v2",
+  "version": "2.9.5",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Pianotone 600 v2.component"
+  ]
+ },
+ {
+  "vendor": "SampleScience",
+  "name": "VHS Noise Generator",
+  "version": "2.9.5",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/VHS Noise Generator.component"
+  ]
  },
  {
   "vendor": "Session Loops",
@@ -2773,7 +5408,10 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/PitchNet.vst3"
+  ]
  },
  {
   "vendor": "Sinevibes",
@@ -2781,7 +5419,54 @@
   "version": "2.0.1",
   "formats": "VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/SinevibesSkew2.vst3"
+  ]
+ },
+ {
+  "vendor": "Sinuslabs",
+  "name": "Bandbreite",
+  "version": "1.1.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Bandbreite.component"
+  ]
+ },
+ {
+  "vendor": "Somerville Sounds",
+  "name": "Prototype Dusty Felts",
+  "version": "1.0.2",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Prototype Dusty Felts.component"
+  ]
+ },
+ {
+  "vendor": "Somerville Sounds",
+  "name": "Prototype Meyer Choir",
+  "version": "1.0.6",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Prototype Meyer Choir.component"
+  ]
+ },
+ {
+  "vendor": "Somerville Sounds",
+  "name": "Prototype Rubber Bridge",
+  "version": "1.0.1",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Prototype Rubber Bridge.component"
+  ]
  },
  {
   "vendor": "Sonnox",
@@ -2789,7 +5474,21 @@
   "version": "1.00.0[6004]",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Sonnox/Sonnox Soften.vst3"
+  ]
+ },
+ {
+  "vendor": "Sonosaurus",
+  "name": "PaulXStretch",
+  "version": "1.6.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/PaulXStretch.component"
+  ]
  },
  {
   "vendor": "Sound Particles",
@@ -2797,7 +5496,10 @@
   "version": "1.0.2",
   "formats": "VST3",
   "category": "Fx, EQ, Filter",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/AirMusic.vst3"
+  ]
  },
  {
   "vendor": "SoundeviceDigital",
@@ -2805,7 +5507,11 @@
   "version": "1.0",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Randomachine.vst",
+   "/Library/Audio/Plug-Ins/VST3/Randomachine.vst3"
+  ]
  },
  {
   "vendor": "SoundGhost",
@@ -2813,7 +5519,10 @@
   "version": "1.0.1",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Ekko Demo.vst3"
+  ]
  },
  {
   "vendor": "SoundGhost",
@@ -2821,7 +5530,21 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Texturize.vst3"
+  ]
+ },
+ {
+  "vendor": "Soundly",
+  "name": "Soundly Place it",
+  "version": "1.0.3",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/PlaceIt.component"
+  ]
  },
  {
   "vendor": "SoundMorph",
@@ -2829,7 +5552,10 @@
   "version": "1.2.7",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Dust.vst3"
+  ]
  },
  {
   "vendor": "SoundMorph",
@@ -2837,7 +5563,10 @@
   "version": "1.2.7",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Dust (fx).vst3"
+  ]
  },
  {
   "vendor": "SoundMorph",
@@ -2845,7 +5574,10 @@
   "version": "1.1.0",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveWarper 2.vst3"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2853,7 +5585,10 @@
   "version": "5.5.4.18982",
   "formats": "VST3",
   "category": "Fx, Dynamics, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Soundtoys/Devil-Loc.vst3"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2861,7 +5596,10 @@
   "version": "1",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Soundtoys/Devil-Loc.vst"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2869,7 +5607,10 @@
   "version": "5.5.4.18982",
   "formats": "VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Soundtoys/EchoBoyJr.vst3"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2877,7 +5618,10 @@
   "version": "1",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Soundtoys/EchoBoyJr.vst"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2885,7 +5629,10 @@
   "version": "5.5.4.18982",
   "formats": "VST3",
   "category": "Fx, Pitch Shift, Spatial",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Soundtoys/LittleMicroShift.vst3"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2893,7 +5640,10 @@
   "version": "5.5.4.18982",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Soundtoys/LittlePlate.vst3"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2901,7 +5651,10 @@
   "version": "5.5.4.18982",
   "formats": "VST3",
   "category": "Delay, Pitch Shift, Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Soundtoys/LittlePrimalTap.vst3"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2909,7 +5662,10 @@
   "version": "5.3.8.16762",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Soundtoys/LittleRadiator.vst3"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2917,7 +5673,10 @@
   "version": "1",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Soundtoys/LittleMicroShift.vst"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2925,7 +5684,10 @@
   "version": "1",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Soundtoys/LittlePlate.vst"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2933,7 +5695,10 @@
   "version": "1",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Soundtoys/LittlePrimalTap.vst"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2941,7 +5706,10 @@
   "version": "1",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Soundtoys/LittleRadiator.vst"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2949,7 +5717,11 @@
   "version": "5.4.3.17500",
   "formats": "VST2/VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Soundtoys/PhaseMistress.vst",
+   "/Library/Audio/Plug-Ins/VST3/Soundtoys/PhaseMistress.vst3"
+  ]
  },
  {
   "vendor": "Soundtoys",
@@ -2957,7 +5729,44 @@
   "version": "5.5.4.18982",
   "formats": "VST2/VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Soundtoys/SpaceBlender.vst",
+   "/Library/Audio/Plug-Ins/VST3/Soundtoys/SpaceBlender.vst3"
+  ]
+ },
+ {
+  "vendor": "Spectral Plugins",
+  "name": "OCS-45",
+  "version": "1.1.5",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/OCS-45.component"
+  ]
+ },
+ {
+  "vendor": "Spectral Plugins",
+  "name": "Pancz",
+  "version": "1.1.7",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Pancz.component"
+  ]
+ },
+ {
+  "vendor": "Spectral Plugins",
+  "name": "Spacer",
+  "version": "1.0.4",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Spacer.component"
+  ]
  },
  {
   "vendor": "Spitfire Audio",
@@ -2965,7 +5774,11 @@
   "version": "67328",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/BBC Symphony Orchestra.vst",
+   "/Library/Audio/Plug-Ins/VST3/BBC Symphony Orchestra.vst3"
+  ]
  },
  {
   "vendor": "Spitfire Audio",
@@ -2973,7 +5786,11 @@
   "version": "3.7.8",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/LABS.vst",
+   "/Library/Audio/Plug-Ins/VST3/LABS.vst3"
+  ]
  },
  {
   "vendor": "Spitfire Audio",
@@ -2981,7 +5798,11 @@
   "version": "67084",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/Solar.vst",
+   "/Library/Audio/Plug-Ins/VST3/Solar.vst3"
+  ]
  },
  {
   "vendor": "Splice",
@@ -2989,7 +5810,10 @@
   "version": "5.1.1",
   "formats": "VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/SpliceBridge.vst3"
+  ]
  },
  {
   "vendor": "Splice",
@@ -2997,23 +5821,43 @@
   "version": "2.3.5",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Splice INSTRUMENT.vst3"
+  ]
  },
  {
   "vendor": "Splice",
   "name": "Splice Sounds",
-  "version": "0.13.1",
+  "version": "0.16.0",
   "formats": "VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Splice Sounds.vst3"
+  ]
  },
  {
   "vendor": "Splice",
   "name": "Splice Sounds Listener",
-  "version": "0.13.1",
+  "version": "0.16.0",
   "formats": "VST3",
   "category": "Fx, Analyzer",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Splice Sounds Listener.vst3"
+  ]
+ },
+ {
+  "vendor": "superflyDSP",
+  "name": "Lost-Vinyls",
+  "version": "1.1.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Lost-Vinyls.component"
+  ]
  },
  {
   "vendor": "Superlunar",
@@ -3021,7 +5865,10 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/GX-8600.vst3"
+  ]
  },
  {
   "vendor": "Synful",
@@ -3029,7 +5876,11 @@
   "version": "132865",
   "formats": "VST2/VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/SynfulOrchestra.vst",
+   "/Library/Audio/Plug-Ins/VST3/SynfulOrchestra.vst3"
+  ]
  },
  {
   "vendor": "Ternar Music Technology",
@@ -3037,7 +5888,10 @@
   "version": "2.0.3",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/ChannelStrip.vst3"
+  ]
  },
  {
   "vendor": "Ternar Music Technology",
@@ -3045,7 +5899,21 @@
   "version": "2.1.0",
   "formats": "VST3",
   "category": "Instrument",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Flechtwerk.vst3"
+  ]
+ },
+ {
+  "vendor": "Tilr",
+  "name": "TIME-12",
+  "version": "0.1.5",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/TIME-12.component"
+  ]
  },
  {
   "vendor": "UJAM",
@@ -3053,7 +5921,10 @@
   "version": "1.3.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/FIN-RETRO.vst3"
+  ]
  },
  {
   "vendor": "Unfiltered Audio",
@@ -3061,7 +5932,21 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/BattleFX.vst3"
+  ]
+ },
+ {
+  "vendor": "Unison",
+  "name": "Unison Zen Master",
+  "version": "1.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Unison Zen Master.component"
+  ]
  },
  {
   "vendor": "Universal Audio (UADx)",
@@ -3069,7 +5954,10 @@
   "version": "1.0.3",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/uaudio_ua_1176.vst3"
+  ]
  },
  {
   "vendor": "Universal Audio (UADx)",
@@ -3077,7 +5965,10 @@
   "version": "1.0.15",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/uaudio_610_a.vst3"
+  ]
  },
  {
   "vendor": "Universal Audio (UADx)",
@@ -3085,7 +5976,10 @@
   "version": "1.0.15",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/uaudio_610_b.vst3"
+  ]
  },
  {
   "vendor": "Universal Audio (UADx)",
@@ -3093,7 +5987,10 @@
   "version": "1.0.16",
   "formats": "VST3",
   "category": "Fx, Channel Strip, EQ, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/uaudio_century_channel_strip.vst3"
+  ]
  },
  {
   "vendor": "Universal Audio (UADx)",
@@ -3101,7 +5998,10 @@
   "version": "1.3.16",
   "formats": "VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/uaudio_galaxy_tape_echo.vst3"
+  ]
  },
  {
   "vendor": "Universal Audio (UADx)",
@@ -3109,7 +6009,10 @@
   "version": "1.0.17",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/uaudio_oxide_tape.vst3"
+  ]
  },
  {
   "vendor": "Universal Audio (UADx)",
@@ -3117,7 +6020,10 @@
   "version": "1.0.16",
   "formats": "VST3",
   "category": "Instrument, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/uaudio_polymax.vst3"
+  ]
  },
  {
   "vendor": "Universal Audio (UADx)",
@@ -3125,7 +6031,10 @@
   "version": "1.4.16",
   "formats": "VST3",
   "category": "Fx, Reverb",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/uaudio_pure_plate.vst3"
+  ]
  },
  {
   "vendor": "Universal Audio (UADx)",
@@ -3133,7 +6042,10 @@
   "version": "1.0.1",
   "formats": "VST3",
   "category": "Fx, Guitar",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/uaudio_showtime_amp.vst3"
+  ]
  },
  {
   "vendor": "Universal Audio (UADx)",
@@ -3141,7 +6053,10 @@
   "version": "1.0.5",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/uaudio_verve.vst3"
+  ]
  },
  {
   "vendor": "Universal Audio (UADx)",
@@ -3149,7 +6064,21 @@
   "version": "1.1.0",
   "formats": "VST3",
   "category": "Fx, Distortion",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/uaudio_verve_essentials.vst3"
+  ]
+ },
+ {
+  "vendor": "unplugred",
+  "name": "SunBurnt",
+  "version": "1.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/SunBurnt.component"
+  ]
  },
  {
   "vendor": "UVI",
@@ -3157,7 +6086,10 @@
   "version": "1.0.1",
   "formats": "VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/UVI Tape Chorus.vst3"
+  ]
  },
  {
   "vendor": "UVI",
@@ -3165,7 +6097,10 @@
   "version": "1.0.1",
   "formats": "VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/UVI Tape Color.vst3"
+  ]
  },
  {
   "vendor": "UVI",
@@ -3173,7 +6108,10 @@
   "version": "1.0.1",
   "formats": "VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/UVI Tape Delay.vst3"
+  ]
  },
  {
   "vendor": "UVI",
@@ -3181,7 +6119,10 @@
   "version": "1.0.1",
   "formats": "VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/UVI Tape Flanger.vst3"
+  ]
  },
  {
   "vendor": "UVI",
@@ -3189,7 +6130,10 @@
   "version": "65537",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/UVI Tape Chorus.vst"
+  ]
  },
  {
   "vendor": "UVI",
@@ -3197,7 +6141,10 @@
   "version": "65537",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/UVI Tape Color.vst"
+  ]
  },
  {
   "vendor": "UVI",
@@ -3205,7 +6152,10 @@
   "version": "65537",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/UVI Tape Delay.vst"
+  ]
  },
  {
   "vendor": "UVI",
@@ -3213,7 +6163,10 @@
   "version": "65537",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/UVI Tape Flanger.vst"
+  ]
  },
  {
   "vendor": "UVI",
@@ -3221,7 +6174,10 @@
   "version": "4.0.2",
   "formats": "VST3",
   "category": "Instrument, Sampler, Synth",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/UVIWorkstation.vst3"
+  ]
  },
  {
   "vendor": "UVI",
@@ -3229,7 +6185,10 @@
   "version": "262146",
   "formats": "VST2",
   "category": "",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/UVIWorkstationVST.vst"
+  ]
  },
  {
   "vendor": "Valhalla DSP, LLC",
@@ -3237,7 +6196,11 @@
   "version": "1.2.8",
   "formats": "VST2/VST3",
   "category": "Fx, Delay",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/ValhallaFreqEcho.vst",
+   "/Library/Audio/Plug-Ins/VST3/ValhallaFreqEcho.vst3"
+  ]
  },
  {
   "vendor": "Valhalla DSP, LLC",
@@ -3245,7 +6208,11 @@
   "version": "66056",
   "formats": "VST2/VST3",
   "category": "Fx, Modulation",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/ValhallaSpaceModulator.vst",
+   "/Library/Audio/Plug-Ins/VST3/ValhallaSpaceModulator.vst3"
+  ]
  },
  {
   "vendor": "Valhalla DSP, LLC",
@@ -3253,7 +6220,11 @@
   "version": "327680",
   "formats": "VST2/VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST/ValhallaSupermassive.vst",
+   "/Library/Audio/Plug-Ins/VST3/ValhallaSupermassive.vst3"
+  ]
  },
  {
   "vendor": "Wave Alchemy",
@@ -3261,7 +6232,98 @@
   "version": "1.1.1",
   "formats": "VST3",
   "category": "Instrument, Drum",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Triaz Player.vst3"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "Abbey Road Chambers",
+  "version": "11.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "Abbey Road Plates",
+  "version": "11.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "Abbey Road Saturator",
+  "version": "11.0.61",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell6-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "Abbey Road Vinyl",
+  "version": "11.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "Abbey Road Vinyl Light",
+  "version": "11.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "AR TG Mastering",
+  "version": "11.0.64",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell9-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "AR TG Meter Bridge",
+  "version": "11.0.64",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell9-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "Bass Fingers",
+  "version": "11.0.54",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell3-AU 11.0.component"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3269,7 +6331,10 @@
   "version": "16.7.76.232",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 16.7.vst3"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3277,7 +6342,10 @@
   "version": "16.7.76.232",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 16.7.vst3"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3285,7 +6353,10 @@
   "version": "16.7.76.232",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 16.7.vst3"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3293,7 +6364,10 @@
   "version": "16.7.76.232",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 16.7.vst3"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3301,7 +6375,10 @@
   "version": "15.5.79.262",
   "formats": "VST3",
   "category": "Fx, Dynamics - Multiband",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 15.5.vst3"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3309,7 +6386,10 @@
   "version": "15.5.79.262",
   "formats": "VST3",
   "category": "Fx, Dynamics - Multiband",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 15.5.vst3"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3317,7 +6397,10 @@
   "version": "15.5.79.262",
   "formats": "VST3",
   "category": "Fx, Dynamics - Multiband",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 15.5.vst3"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3325,7 +6408,21 @@
   "version": "15.5.79.262",
   "formats": "VST3",
   "category": "Fx, Dynamics - Multiband",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 15.5.vst3"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "J37",
+  "version": "11.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 11.0.component"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3333,7 +6430,10 @@
   "version": "16.6.53.160",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 16.6.vst3"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3341,7 +6441,87 @@
   "version": "16.6.53.160",
   "formats": "VST3",
   "category": "Fx, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 16.6.vst3"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "REDD17",
+  "version": "11.0.61",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell6-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "REDD37-51",
+  "version": "11.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "Reel ADT",
+  "version": "11.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "Reel ADT2V",
+  "version": "11.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "RS56",
+  "version": "11.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "TG12345",
+  "version": "11.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 11.0.component"
+  ]
+ },
+ {
+  "vendor": "Waves",
+  "name": "The Kings Microphones",
+  "version": "11.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 11.0.component"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3349,7 +6529,10 @@
   "version": "16.7.33.189",
   "formats": "VST3",
   "category": "Fx, Pitch Shift",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 16.7.vst3"
+  ]
  },
  {
   "vendor": "Waves",
@@ -3357,7 +6540,21 @@
   "version": "16.7.33.189",
   "formats": "VST3",
   "category": "Fx, Pitch Shift",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/WaveShell1-VST3 16.7.vst3"
+  ]
+ },
+ {
+  "vendor": "Wavesfactory",
+  "name": "Cassette",
+  "version": "1.0.7",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Cassette.component"
+  ]
  },
  {
   "vendor": "Wildergarden",
@@ -3365,7 +6562,76 @@
   "version": "1.0.0",
   "formats": "VST3",
   "category": "Fx",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/Maim.vst3"
+  ]
+ },
+ {
+  "vendor": "XLN Audio",
+  "name": "DB-30 Drum Butter",
+  "version": "1.1.3",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/DB-30 Drum Butter.component"
+  ]
+ },
+ {
+  "vendor": "XLN Audio",
+  "name": "Life",
+  "version": "1.3.4",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Life.component"
+  ]
+ },
+ {
+  "vendor": "XLN Audio",
+  "name": "Life DAW Recorder",
+  "version": "1.2.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Life DAW Recorder.component"
+  ]
+ },
+ {
+  "vendor": "XLN Audio",
+  "name": "RC-20 Retro Color",
+  "version": "1.5.2",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/RC-20 Retro Color.component"
+  ]
+ },
+ {
+  "vendor": "XLN Audio",
+  "name": "RC-20 Retro Color v2",
+  "version": "2.0.0",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/RC-20 Retro Color v2.component"
+  ]
+ },
+ {
+  "vendor": "XLN Audio",
+  "name": "XO",
+  "version": "1.8.10",
+  "formats": "AU",
+  "category": "Instrument",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/XO.component"
+  ]
  },
  {
   "vendor": "Xynth Audio",
@@ -3373,7 +6639,21 @@
   "version": "1.0.4",
   "formats": "VST3",
   "category": "Fx, Distortion, Dynamics",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/LePhonk.vst3"
+  ]
+ },
+ {
+  "vendor": "Youlean",
+  "name": "Youlean Loudness Meter 2",
+  "version": "2.5.10",
+  "formats": "AU",
+  "category": "Fx",
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/Components/Youlean Loudness Meter 2.component"
+  ]
  },
  {
   "vendor": "ZL",
@@ -3381,6 +6661,9 @@
   "version": "1.1.0",
   "formats": "VST3",
   "category": "Fx, EQ",
-  "url": ""
+  "url": "",
+  "paths": [
+   "/Library/Audio/Plug-Ins/VST3/ZL Equalizer 2.vst3"
+  ]
  }
 ]

@@ -28,6 +28,8 @@ Two databases matter:
 
 import collections
 import datetime
+import plistlib
+import re
 import json
 import os
 import sqlite3
@@ -129,25 +131,107 @@ def extract_plugins():
         fmt = "VST3" if ".vst3" in path_ else "VST2"
         a = agg.setdefault((vendor or "Unknown", name), {
             "vendor": vendor or "Unknown", "name": name, "version": version,
-            "category": (subcat or "").replace("|", ", "), "fmts": set()})
+            "category": (subcat or "").replace("|", ", "), "fmts": set(),
+            "paths": set()})
         a["fmts"].add(fmt)
+        if path_:
+            a["paths"].add(path_)
         if subcat:
             a["category"] = subcat.replace("|", ", ")
 
     out = [{"vendor": a["vendor"], "name": a["name"], "version": a["version"],
             "formats": "/".join(sorted(a["fmts"])), "category": a["category"],
-            "url": ""}
+            "url": "", "paths": sorted(a["paths"])}
            for a in agg.values()]
     out.sort(key=lambda x: (x["vendor"].lower(), x["name"].lower()))
+
+    au = extract_au_only(out)
+    out = sorted(out + au, key=lambda x: (x["vendor"].lower(),
+                                          x["name"].lower()))
 
     rejected = [{"path": m[1], "state": m[2]}
                 for m in mods.values() if m[2] != 1]
     json.dump(out, open(os.path.join(HERE, "plugins.json"), "w"), indent=1)
     json.dump(rejected, open(os.path.join(HERE, "bad.json"), "w"), indent=1)
-    print(f"  plugins: {len(out)} enabled, "
+    print(f"  plugins: {len(out) - len(au)} enabled in Live, "
+          f"plus {len(au)} installed only as Audio Units, "
           f"{len({p['vendor'] for p in out})} makers, "
           f"{len(rejected)} modules Live rejected")
     return out
+
+
+# ------------------------------------------------- audio-unit-only plugins
+
+AU_DIRS = ("/Library/Audio/Plug-Ins/Components",
+           os.path.expanduser("~/Library/Audio/Plug-Ins/Components"))
+# effect, instrument, MIDI-controlled effect, MIDI effect — not Apple's codecs
+AU_TYPES = {"aufx": "Fx", "aumf": "Fx", "aumu": "Instrument",
+            "aumi": "Fx"}
+
+
+def extract_au_only(vst):
+    """Plugins installed as an Audio Unit with no VST2/VST3 build in Live.
+
+    Live-plugins-1.db only holds VST2 and VST3, so on its own it misses
+    these. Some are AU-only downloads (all of Kilohearts' Snapins, the mda
+    set, several Waves and XLN titles); others do have a VST build that Live
+    rejected — the 35 KORG Gadget plugins' VST2s are Intel-only — so the AU
+    is the only one Live can load. Read straight from each component's
+    Info.plist. A product already in Live's list under its VST name is left
+    to that entry.
+    """
+    from collapse import plugin_key
+    have = {plugin_key(p["name"]) for p in vst}
+    vendors = {p["vendor"] for p in vst}
+
+    def vendor_for(maker):
+        # Use Live's spelling of a maker it already knows, so the two sources
+        # file under one name ("Mixed In Key" → "Mixed In Key LLC").
+        # Whole words only: "Wavesfactory" is not "Waves".
+        def prefix(a, b):
+            return a == b or a.startswith(b + " ") or a.startswith(b + ",")
+        m = maker.lower()
+        hit = [v for v in vendors
+               if prefix(v.lower(), m) or prefix(m, v.lower())]
+        return min(hit, key=len) if hit else maker
+
+    agg = {}
+    for d in AU_DIRS:
+        if not os.path.isdir(d):
+            continue
+        for f in sorted(os.listdir(d)):
+            if not f.endswith(".component"):
+                continue
+            b = os.path.join(d, f)
+            try:
+                pl = plistlib.load(open(os.path.join(b, "Contents",
+                                                     "Info.plist"), "rb"))
+            except Exception:
+                continue
+            for ac in pl.get("AudioComponents") or []:
+                if ac.get("type") not in AU_TYPES:
+                    continue
+                maker, _, name = (ac.get("name") or "").partition(":")
+                maker, name = maker.strip(), name.strip()
+                if not name or maker.startswith("Apple"):
+                    continue
+                # Waves lists each channel layout and its low-latency
+                # "Live" build as a separate component; one product.
+                name = re.sub(r"\s*\((m|s|m->s|0->2)\)$", "", name)
+                name = re.sub(r"\s+live$", "", name, flags=re.I)
+                # Native Instruments ship extra AU-only flavours of products
+                # Live already lists ("Guitar Rig 7 MFX", "Reaktor 6 MIDIFX").
+                base = re.sub(r"\s+(FX|MFX|MIDIFX)$", "", name)
+                if plugin_key(name) in have or plugin_key(base) in have:
+                    continue
+                v = vendor_for(maker)
+                a = agg.setdefault((v, name), {
+                    "vendor": v, "name": name,
+                    "version": pl.get("CFBundleShortVersionString") or "",
+                    "formats": "AU", "category": AU_TYPES[ac["type"]],
+                    "url": "", "paths": set()})
+                a["paths"].add(b)
+    return [dict(a, paths=sorted(a["paths"])) for a in agg.values()]
 
 
 # -------------------------------------------------------------- m4l devices
@@ -240,5 +324,5 @@ if __name__ == "__main__":
     print(f"reading {DB_DIR}")
     extract_plugins()
     extract_devices()
-    print("\nnext: python3 merge.py  →  python3 gen_data.py  →  "
+    print("\nnext: python3 dates.py  →  python3 merge.py  →  python3 gen_data.py  →  "
           "python3 ../build_catalogue.py")

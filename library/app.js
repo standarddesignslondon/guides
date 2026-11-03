@@ -28,14 +28,32 @@
     if (count) count.textContent = shown + ' of ' + rows.length + ' shown';
   }
 
-  document.querySelectorAll('button.f').forEach(function (b) {
+  document.querySelectorAll('button.f[data-f]').forEach(function (b) {
     state[b.dataset.f] = state[b.dataset.f] || '';
     b.addEventListener('click', function () {
       state[b.dataset.f] = b.dataset.v;
-      b.parentNode.querySelectorAll('button.f').forEach(function (o) {
+      b.parentNode.querySelectorAll('button.f[data-f]').forEach(function (o) {
         o.classList.toggle('on', o === b);
       });
       apply();
+    });
+  });
+
+  var order = rows.slice();
+  document.querySelectorAll('button.s').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var list = order.slice();
+      if (b.dataset.s === 'date') {
+        // newest first; undated entries go last, keeping their a-z order
+        list.sort(function (x, y) {
+          var a = x.dataset.date || '', c = y.dataset.date || '';
+          return a === c ? 0 : (a < c ? 1 : -1);
+        });
+      }
+      list.forEach(function (r) { grid.appendChild(r); });
+      document.querySelectorAll('button.s').forEach(function (o) {
+        o.classList.toggle('on', o === b);
+      });
     });
   });
 

@@ -10255,5 +10255,18 @@
   "size_kb": 102,
   "modified": "2026-10-06",
   "used": 2
+ },
+ {
+  "name": "Platter",
+  "kind": "Instrument",
+  "source": "Project/Other",
+  "place": "User Library",
+  "path": "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Platter.amxd",
+  "tags": "",
+  "maxtype": "",
+  "version": "",
+  "size_kb": 99,
+  "modified": "2026-10-16",
+  "used": 2
  }
 ]

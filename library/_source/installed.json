@@ -1,0 +1,5390 @@
+{
+ "devices": {
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Brass Quartet by Spitfire Audio/Utility/Group Start.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Brass Quartet by Spitfire Audio/Utility/MPE Note Off.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Brass Quartet by Spitfire Audio/Utility/Mod Table.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 1 - Tour/Devices/Filler.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 1 - Tour/Devices/Macro Knob.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 2 - Introduction/Devices/Basic Saw.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 2 - Introduction/Devices/Human LFO.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 2 - Introduction/Devices/Noise Adder.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 2 - Introduction/Devices/Note Doubler.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 2 - Introduction/Devices/Note Monitor.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 2 - Introduction/Devices/Octave Adder.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 2 - Introduction/Devices/Side Drive.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/1 MIDI Effects/Devices/1 Splitting notes.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/1 MIDI Effects/Devices/2 UI and Values.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/1 MIDI Effects/Devices/3 Event flow.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/1 MIDI Effects/Devices/4 Encapsulation.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/1 MIDI Effects/Devices/5 Bonus - Push.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/1 MIDI Effects/Devices/Velocity Randomizer.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/2 Audio Effects/Devices/1 Audio signals.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/2 Audio Effects/Devices/2 Signal generation.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/2 Audio Effects/Devices/3 Writing to a buffer.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/2 Audio Effects/Devices/4 Adding randomness.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/2 Audio Effects/Devices/5 Adding feedback.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/2 Audio Effects/Devices/6 Adding pitch.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/2 Audio Effects/Devices/7 Going Stereo.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/2 Audio Effects/Devices/8 Multichannel.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/2 Audio Effects/Devices/Snipper.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/3 Instruments/Devices/1 Notes to audio.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/3 Instruments/Devices/2 Mono FM.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/3 Instruments/Devices/3 Polyphony.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/3 Instruments/Devices/4 Polyphony pt2.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/3 Instruments/Devices/5 Next.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/3 Instruments/Devices/6 Pitch LFO.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/3 Instruments/Devices/7 Spread.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/3 Instruments/Devices/Bell Tower.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/4 Controlling Live/Devices/1 Listening to Live.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/4 Controlling Live/Devices/2 Random launching.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/4 Controlling Live/Devices/3 Showing clip names.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/4 Controlling Live/Devices/4 Launching earlier.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/4 Controlling Live/Devices/5 Adding progress.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/4 Controlling Live/Devices/6 Stay in blocks.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/4 Controlling Live/Devices/7 Cleaning up.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/4 Controlling Live/Devices/8 Bonus - UI.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/4 Controlling Live/Devices/Launcher.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/5 Routing and modulating/Devices/1 Another input.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/5 Routing and modulating/Devices/2 Selecting Parameter.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/5 Routing and modulating/Devices/3 Remote Control.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/5 Routing and modulating/Devices/4 Copy from Macro Knob.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/5 Routing and modulating/Devices/5 Polishing.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/5 Routing and modulating/Devices/6 Bonus - Doubling.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/5 Routing and modulating/Devices/Sidechain Modulator.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/6 Debugging/Devices/1.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/6 Debugging/Devices/2.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/6 Debugging/Devices/3.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/6 Debugging/Devices/4.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/6 Debugging/Devices/5.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/6 Debugging/Devices/Octave.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 3 - Lessons/7 Final result/Devices/Introduction.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Audio effects/ChannelEQ/Devices/Channel EQ.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Audio effects/Chorus/Devices/Chorus.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Audio effects/Delay/Devices/Delay.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Audio effects/Flanger/Devices/Flanger.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Audio effects/Limiter/Devices/Limiter.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Audio effects/Looper/Devices/Looper.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Audio effects/Overdrive/Devices/Overdrive.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Audio effects/Panner/Devices/Panner.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Audio effects/Pitch Shifter/Devices/Pitch Shifter.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Audio effects/Plate Reverb/Devices/Plate Reverb.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Controlling Live/API Browser/Devices/API Browser.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Controlling Live/Arrangement Clips/Devices/Arrangement Clips.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Controlling Live/Mapping/Devices/Mapping.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Controlling Live/Note Change Colors/Devices/Note Change Colors.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Controlling Live/Notes API/Devices/Notes API.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Controlling Live/Simpler Slices/Devices/Simpler Slices.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Controlling Live/Warp Markers/Devices/Warp Markers.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Controlling Live/XY Controller/Devices/XY Controller.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Controlling Live/XY Controller/Devices/XY.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Instruments/Aliasing/Devices/Antialiased.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Instruments/Aliasing/Devices/Naive.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Instruments/Grain Cloud Simpler/Devices/Grain Cloud Simpler.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Instruments/Mono Synth/Devices/Mono Synth.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Instruments/Poly Synth/Devices/Poly Synth.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Instruments/Stretch Simpler/Devices/Stretch Simpler.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/MIDI effects/Arpeggiator/Devices/Arpeggiator.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/MIDI effects/Humanizer/Devices/Humanizer.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/MIDI effects/MIDI Echo/Devices/MIDI Echo.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/MIDI effects/MPE/Devices/MPE.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/MIDI effects/Note Player/Devices/Note Player.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Push/Game of Live/Game of Live.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Routing/Midi Routing Input/Devices/MIDI Routing Input.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Routing/Midi Routing Output/Devices/MIDI Routing Output.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Visuals/After Effects Export/Devices/After Effects Export.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Visuals/Video Slicer/Devices/Video Slicer.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Visuals/Visuals Builder/Devices/Visuals Builder.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Building Max Devices/Part 4 - Examples/Visuals/Visuals Builder/Devices/Visuals Exporter.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/CV Tools/CV Instruments/CV Instrument/Ableton Folder Info/CV Instrument.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/CV Tools/CV Instruments/CV Triggers/Ableton Folder Info/CV Triggers.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/CV Tools/CV Instruments/Rotating Rhythm Generator/Ableton Folder Info/Rotating Rhythm Generator.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/CV Tools/CV Modulation/CV Envelope Follower/Ableton Folder Info/CV Envelope Follower.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/CV Tools/CV Modulation/CV In/Ableton Folder Info/CV In.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/CV Tools/CV Modulation/CV LFO/Ableton Folder Info/CV LFO.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/CV Tools/CV Modulation/CV Shaper/Ableton Folder Info/CV Shaper.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/CV Tools/CV Utilities/CV Clock In/Ableton Folder Info/CV Clock In.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/CV Tools/CV Utilities/CV Clock Out/Ableton Folder Info/CV Clock Out.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/CV Tools/CV Utilities/CV Utility/Ableton Folder Info/CV Utility.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Connection Kit/Devices/Arduino.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Connection Kit/Devices/Camera.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Connection Kit/Devices/JSON Video.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Connection Kit/Devices/JSON Weather.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Connection Kit/Devices/LEGO MINDSTORMS EV3.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Connection Kit/Devices/OSC Leap Motion.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Connection Kit/Devices/OSC MIDI Send.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Connection Kit/Devices/OSC Monitor.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Connection Kit/Devices/OSC Send.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Connection Kit/Devices/OSC TouchOSC.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Connection Kit/Devices/littleBits.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Convolution Reverb/Convolution Reverb Pro/Ableton Folder Info/Convolution Reverb Pro.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Convolution Reverb/Convolution Reverb/Ableton Folder Info/Convolution Reverb.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Convolution Reverb/IR Measurement Device/Ableton Folder Info/IR Measurement Device.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Creative Extensions/Audio Effects/Color Limiter/Ableton Folder Info/Color Limiter.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Creative Extensions/Audio Effects/Gated Delay/Ableton Folder Info/Gated Delay.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Creative Extensions/Audio Effects/Pitch Hack/Ableton Folder Info/Pitch Hack.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Creative Extensions/Audio Effects/Re-Enveloper/Ableton Folder Info/Re-Enveloper.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Creative Extensions/Audio Effects/Spectral Blur/Ableton Folder Info/Spectral Blur.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Creative Extensions/Instruments/Bass/Ableton Folder Info/Bass.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Creative Extensions/Instruments/Poli/Ableton Folder Info/Poli.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Creative Extensions/MIDI Effects/Melodic Steps/Ableton Folder Info/Melodic Steps.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Drone Lab/Instruments/Harmonic Drone Generator/Harmonic Drone Generator.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Expressive Choir by Spitfire Audio/Utility/Mod Table.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2026-01-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Expressive Chords/Expressive Chords/Ableton Folder Info/Expressive Chords.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-26"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Generators by Iftah/Generators/Patterns by Iftah.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-21"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Generators by Iftah/Generators/Sting by Iftah.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-21"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Granulator III/Granulator III/Ableton Folder Info/Granulator III.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Inspired by Nature by Dillon Bastan/Audio Effects/Vector Delay/Ableton Folder Info/Vector Delay.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Inspired by Nature by Dillon Bastan/Audio Effects/Vector Map/Ableton Folder Info/Vector Map.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Inspired by Nature by Dillon Bastan/Instruments/Emit/Ableton Folder Info/Emit.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Inspired by Nature by Dillon Bastan/Instruments/Tree Tone/Ableton Folder Info/Tree Tone.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Inspired by Nature by Dillon Bastan/Instruments/Vector FM/Ableton Folder Info/Vector FM.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Inspired by Nature by Dillon Bastan/Instruments/Vector Grain/Ableton Folder Info/Vector Grain.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Inspired by Nature by Dillon Bastan/MIDI Effects/Bouncy Notes/Ableton Folder Info/Bouncy Notes.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Lost and Found/Utility/4Xfade.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/M4L Granulator II/Granulator II/Granulator II.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/M4L Granulator II/Granulator II/GranulatorFollow II.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/M4L Granulator II/Granulator II/GranulatorInput II.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/MIDI Tools by Philip Meyer-1/MIDI Tools/Generators/Phase Pattern.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/MIDI Tools by Philip Meyer-1/MIDI Tools/Generators/Polyrhythm.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/MIDI Tools by Philip Meyer-1/MIDI Tools/Generators/Stages.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/MIDI Tools by Philip Meyer-1/MIDI Tools/Transformations/Retrigger.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/MIDI Tools by Philip Meyer-1/MIDI Tools/Transformations/Slice Shuffler.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/MIDI Tools by Philip Meyer/MIDI Tools/Generators/Phase Pattern.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/MIDI Tools by Philip Meyer/MIDI Tools/Generators/Polyrhythm.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/MIDI Tools by Philip Meyer/MIDI Tools/Generators/Stages.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/MIDI Tools by Philip Meyer/MIDI Tools/Transformations/Retrigger.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/MIDI Tools by Philip Meyer/MIDI Tools/Transformations/Slice Shuffler.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Audio Effect/Buffer Shuffler/Buffer Shuffler 2.0.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Audio Effect/Control Devices/Device Randomizer.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Audio Effect/Control Devices/Envelope Follower.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Audio Effect/Control Devices/LFO.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Audio Effect/Control Devices/Map8.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Audio Effect/Control Devices/MultiMap.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Audio Effect/Control Devices/XY Pad.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Audio Effect/Convolution Reverb/Convolution Reverb Pro.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Audio Effect/Convolution Reverb/Convolution Reverb.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Audio Effect/Convolution Reverb/IR Measurement Device.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Audio Effect/Pitchdrop/PitchDrop.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/Bass.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth Clap.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth Clave.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth Cymbal.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth FM2.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth FMPerc.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth Glass.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth HH.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth Kick.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth Kplus.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth Shaker.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth Snare.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth Snare2.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/DrumSynth/Cells/DrumSynth Tom.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/Multi.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Instrument/Poli.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Midi Effect/Arp.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Midi Effect/Control Devices MIDI/Envelope.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Midi Effect/Control Devices MIDI/Expression Control.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Midi Effect/Control Devices MIDI/LFO MIDI.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Midi Effect/Instant Haus.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Midi Effect/MIDIMonitor.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Midi Effect/Mono Sequencer.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Max for Live Essentials/Max Midi Effect/Note Echo.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-10-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Microtuner/Microtuner/Ableton Folder Info/Microtuner.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Performance Pack by Iftah/Arrangement Looper/Ableton Folder Info/Arrangement Looper.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Performance Pack by Iftah/Performer/Ableton Folder Info/Performer.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Performance Pack by Iftah/Prearranger/Ableton Folder Info/Prearranger.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Performance Pack by Iftah/Variations/Ableton Folder Info/Variations.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/PitchLoop89/PitchLoop89/Ableton Folder Info/PitchLoop89.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-12-21"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Probability Pack by Sonic Faction/Dr Chaos.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Probability Pack by Sonic Faction/Melodic Probability.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Probability Pack by Sonic Faction/Probability Arp.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Probability Pack by Sonic Faction/Rhythmic Probability.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Probability Pack by Sonic Faction/Step Divider.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Sequencers/Rhythmic Steps/Ableton Folder Info/Rhythmic Steps.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Sequencers/SQ Sequencer/Ableton Folder Info/SQ Sequencer.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Sequencers/Step Arp/Ableton Folder Info/Step Arp.amxd": {
+   "basis": "pack install",
+   "by": false,
+   "date": "2025-11-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Stray Cats Collection by Max for Cats/Audio Effects/Color.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Stray Cats Collection by Max for Cats/Audio Effects/SkramDelay.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Stray Cats Collection by Max for Cats/Audio Effects/Stochastic Delay.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Stray Cats Collection by Max for Cats/Audio Effects/Verbotron.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Stray Cats Collection by Max for Cats/Instruments/MSE/MSE.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Stray Cats Collection by Max for Cats/Instruments/MSE/Quad.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Stray Cats Collection by Max for Cats/Instruments/MSE/Seq8.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Stray Cats Collection by Max for Cats/MIDI Effects/ConChord.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/String Quartet by Spitfire Audio/Utility/Group Start.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/String Quartet by Spitfire Audio/Utility/MPE Note Off.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/String Quartet by Spitfire Audio/Utility/Mod Table.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Surround Panner/Surround Panner/Ableton Folder Info/Surround Panner.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/The Forge by Hecq/Max Audio Effects/Max AutoPanner.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/The Forge by Hecq/Max Audio Effects/Max CombFilter.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/The Forge by Hecq/Max Audio Effects/Max Compressor.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/The Forge by Hecq/Max Audio Effects/Max DelayTaps.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/The Forge by Hecq/Max Audio Effects/Max SpectralHarm.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/The Forge by Hecq/Max Audio Effects/PluggoFuzz.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/The Forge by Hecq/Max Audio Effects/Speed Shifter.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/The Forge by Hecq/Max Audio Effects/Tapped Delay.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Upright Piano by Spitfire Audio/Utility/Custom Note Off.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Upright Piano by Spitfire Audio/Utility/Pedal Noise.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/Factory Packs Remote/Upright Piano by Spitfire Audio/Utility/Piano Pedal Trigger.amxd": {
+   "basis": "pack install",
+   "by": true,
+   "date": "2025-05-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/BEAST Repeat.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Devices/Flow Demo/Flow Demo.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Lode.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/MIDI Tools/Max Generators/M2TM Chords.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/MIDI Tools/Max Generators/M2TM Notes.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/MIDI Tools/Max Generators/M2TM Progressions.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/MIDI Tools/Max Transformations/MFA Mutator Free.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/MIDI Tools/Max Transformations/Step Copy/Step Copy.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Ableton Youtube Player V1 AbletonDrummer.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Auren Free 1.5.0.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-26"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Automate Rack Macro Variations V1 AbletonDrummer.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Backspin v1.0.1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Backspin v1.0.2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Bad Mood.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-23"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Boss DD-3 Digital Delay.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Boss DS-1 Distortion v1.1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Boss GE-7 Equalizer.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Boss NS-2 Noise Suppressor.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Boss TR-2 Tremolo.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Cascade.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/ChannelStrip-1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/ChannelStrip.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/ChromaPhase v1.1.5.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-26"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Colour.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Composite v1.0.2.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-24"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Contemporary texture.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Crap Cassette v1.0.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Cycle Variations Up + Down V1 AbletonDrummer.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Disintegration-v0.3.1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Divisor.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-08"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Drox II Free.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Drox II Pro.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Dystopian Waves Wah 1.5.0.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-26"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Evening Star v0.1.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-22"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Evening Star v0.2.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-23"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Excite.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/False Memory v0.4.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Filter Glass.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Filter.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/GLITCH LOOP.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Geiger LFO.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Gen Loss.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-23"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Glitchera.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/GrainFreeze.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Image2Wavetable-1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Image2Wavetable.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Inflation(OS).amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Inflation.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Irrational Delay.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/JG.MultibandDelay.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/JG.SpectralDelay.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/KGlitch.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Kurzwellen-1.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Kurzwellen.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/LFO Random-1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/LFO Random.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA Audio Cycler.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA Audio S&H.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA Audiodubber.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA Autodubber.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA Cosmus.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA Errata.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA Follower.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA Gain Tracker.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA LFOx.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA Manual S&H.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA Solarus.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MFA X-Control.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Mapr16x2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Microcosmos.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Mix Matcher.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Mood.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-23"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/MultiMapper32Audio V2.7.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/NTS Streamer.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/ORAM.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Oscillosope V1.4.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Oxide v1.02.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Radio Garden.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Remainder.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-06"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Reverie v0.1.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-06"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Reverie-1.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-07"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Reverie.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-06"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/STRIKE_Resonator.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/SW Radio-1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/SW Radio-10.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/SW Radio-2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/SW Radio-3.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/SW Radio-4.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/SW Radio-5.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/SW Radio-6.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/SW Radio-7.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/SW Radio-8.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/SW Radio-9.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/SW Radio.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Scene Placer v0.1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Sektor.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Select + MAP Single Variation AUDIO V1 AbletonDrummer.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Shift.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Smooth Automator Audio.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Spect 1.3.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Spectral Wobbler 1.2.0.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-26"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/StripSilence.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/TapPanZeit-v12.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Tape Error.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/TapeStop 2.0.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/The Lot Radio.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/The1958Machine-1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/The1958Machine.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Tracking Lines-1.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-21"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Tracking Lines-2.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-21"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Tracking Lines.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-21"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/TransientDesigner.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/VC3.5.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/Widen.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/YT Sampler-1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/YT Sampler.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/bve.glitchlooper.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/j11-tone-Resonator v1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/j90 1.5.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/j90 1.7.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jBBL v3.3.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jBi-Phase v2.7.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jChorus-6 v1.3.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jChorus-6 v1.4.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jDisperser3 v1.1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jKnob v1.6.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jL3v3ll3r v1.4.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jLeslie v2.8.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jMackie-Feedback v4.0.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jPalme v1.2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jPalme3 v1.2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jRat v2.0.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jRat v3.1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jSpring-Tank v1.3.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/jTap 3.1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/ml.distance.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/trnr.BitEcho.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/trnr.DmmG.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Imported/trnr.Duckling.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/NirvanaFX C/NirvanaFX C.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/NirvanaFX SM/NirvanaFX SM.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/NirvanaFX/NirvanaFX.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Audio Effects/Max Audio Effect/Splice 1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MFA Tactum.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Chord Generator.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 - JC - Learn/Learn Chords.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 - JC - Learn/Learn Scales.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/AdaptFilter/HarmoAdaptFilter J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Display/HarmoDisplay J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Guess/HarmoGuessScale J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Guitar/HarmoDisplayGuitar J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/HarmoChord J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/HarmoChordFilter J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/HarmoScale J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/HarmoScaleFilter J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Legacy Devices/HarmoChordFilterAPI J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Legacy Devices/HarmoScaleFilterAPI J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Network/HarmoChordNotesOut J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Network/HarmoChordRecv J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Network/HarmoChordSend J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Network/HarmoScaleRecv J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Network/HarmoScaleSend J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Other Devices/HarmoChordBass J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Other Devices/HarmoPadFilter J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Other Devices/HarmoTonicFilter J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/J74HarmoTools_v1_stal_5231/J74 HarmoTools - Max for Live patches for Ableton Live/Scale2Chords/HarmoScale2Chords J74.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Coral.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/DrumBrain.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Expressive Chords 1.1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Hocket 2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/L.ObliqueStrategies.v1.2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Labyrinth Seq 1.0.0.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/M2TM Chords DV.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/MDD_MARIONNETTE_1.3.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/MDD___ARPOoO_V2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/MDD___SNAKE_V3.2.3.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/MFA Cheat Code.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/MFA MIDI ADSRx.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/MFA MIDI Cycler.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/MFA MIDI Dubber.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/MFA MIDI Key Tracker.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/MFA MIDI LFOx.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/MFA MIDI X-Control.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/MFA Note Raum.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Note Triggered Modulator.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Potee.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Premo.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Probee-1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Probee.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Program Change.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Ravel 1.1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/STING!64 by SKINNERBOX.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Select + MAP Single Variation MIDI V1 AbletonDrummer .amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Smooth Automator MIDI.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Tombola.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/Turing Machine 3.1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/MIDI Effects/Max MIDI Effect/Imported/polyrhythmus v1.01.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Copy Machine.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/DR01D.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Frankenstein.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-08"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Friend.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Lens.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Lood.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Magnabelt v1.0.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-18"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Manual Tape v0.2.1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/MultiSquisher.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/No_Input Synth.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Ondes Martenot-1.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Ondes Martenot-2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Ondes Martenot.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Platter.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-17"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Pluck.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Pulsograph.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Pyr by Iftah 1.2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Rhythmic Crazy Slicer.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-19"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/STRIKE_MIDI.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/Schaeffer's Nightmare.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/ScratchBacker-v3.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/SimulScrub-v6.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/cb_rainer 1.6.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/html instruments.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/jOdyssey v5.2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/jOdyssey v6.0.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/jPro v1.2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/trnr.Flechtwerk.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/trnr.Hatster.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/trnr.RetroSampler.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/trnr.TriplexClassic.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Imported/visage_1.0.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Nirvana C/Nirvana C.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Nirvana SM/Nirvana SM.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/Instruments/Max Instrument/Nirvana/Nirvana.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Imported/Chorb.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Imported/Harvest.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Imported/Potee.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Imported/Premo.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Imported/Preset Scroll.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Imported/Regatta.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-30"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Imported/Resampler Pro.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Imported/Sting 2.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Imported/Tape Error Trigger.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Imported/Telegraph.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-20"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Key-Detector.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Lucky Dip.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-06"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Pitchfield.amxd": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-25"
+  },
+  "//Volumes/Crucial X9/Remote Music/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/Randomise Session Colours.amxd": {
+   "basis": "date added",
+   "by": true,
+   "date": "2026-08-14"
+  }
+ },
+ "listed": {
+  "Max for Live\t1": "2026-08-21",
+  "Max for Live\t1 Another input": "2026-08-21",
+  "Max for Live\t1 Audio signals": "2026-08-21",
+  "Max for Live\t1 Listening to Live": "2026-08-21",
+  "Max for Live\t1 Notes to audio": "2026-08-21",
+  "Max for Live\t1 Splitting notes": "2026-08-21",
+  "Max for Live\t2": "2026-08-21",
+  "Max for Live\t2 Mono FM": "2026-08-21",
+  "Max for Live\t2 Random launching": "2026-08-21",
+  "Max for Live\t2 Selecting Parameter": "2026-08-21",
+  "Max for Live\t2 Signal generation": "2026-08-21",
+  "Max for Live\t2 UI and Values": "2026-08-21",
+  "Max for Live\t3": "2026-08-21",
+  "Max for Live\t3 Event flow": "2026-08-21",
+  "Max for Live\t3 Polyphony": "2026-08-21",
+  "Max for Live\t3 Remote Control": "2026-08-21",
+  "Max for Live\t3 Showing clip names": "2026-08-21",
+  "Max for Live\t3 Writing to a buffer": "2026-08-21",
+  "Max for Live\t4": "2026-08-21",
+  "Max for Live\t4 Adding randomness": "2026-08-21",
+  "Max for Live\t4 Copy from Macro Knob": "2026-08-21",
+  "Max for Live\t4 Encapsulation": "2026-08-21",
+  "Max for Live\t4 Launching earlier": "2026-08-21",
+  "Max for Live\t4 Polyphony pt2": "2026-08-21",
+  "Max for Live\t4Xfade": "2026-08-21",
+  "Max for Live\t5": "2026-08-21",
+  "Max for Live\t5 Adding feedback": "2026-08-21",
+  "Max for Live\t5 Adding progress": "2026-08-21",
+  "Max for Live\t5 Bonus - Push": "2026-08-21",
+  "Max for Live\t5 Next": "2026-08-21",
+  "Max for Live\t5 Polishing": "2026-08-21",
+  "Max for Live\t6 Adding pitch": "2026-08-21",
+  "Max for Live\t6 Bonus - Doubling": "2026-08-21",
+  "Max for Live\t6 Pitch LFO": "2026-08-21",
+  "Max for Live\t6 Stay in blocks": "2026-08-21",
+  "Max for Live\t7 Cleaning up": "2026-08-21",
+  "Max for Live\t7 Going Stereo": "2026-08-21",
+  "Max for Live\t7 Spread": "2026-08-21",
+  "Max for Live\t8 Bonus - UI": "2026-08-21",
+  "Max for Live\t8 Multichannel": "2026-08-21",
+  "Max for Live\tAPI Browser": "2026-08-21",
+  "Max for Live\tAbleton Youtube Player V1 AbletonDrummer": "2026-08-21",
+  "Max for Live\tAfter Effects Export": "2026-08-21",
+  "Max for Live\tAlign Delay": "2026-08-21",
+  "Max for Live\tAntialiased": "2026-08-21",
+  "Max for Live\tArduino": "2026-08-21",
+  "Max for Live\tArp": "2026-08-21",
+  "Max for Live\tArpeggiator": "2026-08-21",
+  "Max for Live\tArrangement Clips": "2026-08-21",
+  "Max for Live\tArrangement Looper": "2026-08-21",
+  "Max for Live\tAuren Free 1.5.0": "2026-09-07",
+  "Max for Live\tAutomate Rack Macro Variations V1 AbletonDrummer": "2026-08-21",
+  "Max for Live\tBEAST Repeat": "2026-08-21",
+  "Max for Live\tBackspin v1.0.1": "2026-08-21",
+  "Max for Live\tBackspin v1.0.2": "2026-08-21",
+  "Max for Live\tBad Mood": "2026-09-07",
+  "Max for Live\tBasic Saw": "2026-08-21",
+  "Max for Live\tBass": "2026-08-21",
+  "Max for Live\tBell Tower": "2026-08-21",
+  "Max for Live\tBoss DD-3 Digital Delay": "2026-08-21",
+  "Max for Live\tBoss DS-1 Distortion v1.1": "2026-08-21",
+  "Max for Live\tBoss GE-7 Equalizer": "2026-08-21",
+  "Max for Live\tBoss NS-2 Noise Suppressor": "2026-08-21",
+  "Max for Live\tBoss TR-2 Tremolo": "2026-08-21",
+  "Max for Live\tBouncy Notes": "2026-08-21",
+  "Max for Live\tBuffer Shuffler 2.0": "2026-08-21",
+  "Max for Live\tCV Clock In": "2026-08-21",
+  "Max for Live\tCV Clock Out": "2026-08-21",
+  "Max for Live\tCV Envelope Follower": "2026-08-21",
+  "Max for Live\tCV In": "2026-08-21",
+  "Max for Live\tCV Instrument": "2026-08-21",
+  "Max for Live\tCV LFO": "2026-08-21",
+  "Max for Live\tCV Shaper": "2026-08-21",
+  "Max for Live\tCV Triggers": "2026-08-21",
+  "Max for Live\tCV Utility": "2026-08-21",
+  "Max for Live\tCamera": "2026-08-21",
+  "Max for Live\tCascade": "2026-08-21",
+  "Max for Live\tChannel EQ": "2026-08-21",
+  "Max for Live\tChannelStrip": "2026-08-21",
+  "Max for Live\tChannelStrip-1": "2026-08-21",
+  "Max for Live\tChorb": "2026-08-21",
+  "Max for Live\tChord Generator": "2026-08-21",
+  "Max for Live\tChorus": "2026-08-21",
+  "Max for Live\tChromaPhase v1.1.5": "2026-09-07",
+  "Max for Live\tColor": "2026-08-21",
+  "Max for Live\tColor Limiter": "2026-08-21",
+  "Max for Live\tColour": "2026-08-21",
+  "Max for Live\tComposite": "2026-09-07",
+  "Max for Live\tConChord": "2026-08-21",
+  "Max for Live\tContemporary texture": "2026-08-21",
+  "Max for Live\tConvolution Reverb": "2026-08-21",
+  "Max for Live\tConvolution Reverb Pro": "2026-08-21",
+  "Max for Live\tCopy Machine": "2026-08-21",
+  "Max for Live\tCoral": "2026-08-21",
+  "Max for Live\tCrap Cassette v1.0": "2026-08-21",
+  "Max for Live\tCustom Note Off": "2026-08-21",
+  "Max for Live\tCycle Variations Up + Down V1 AbletonDrummer": "2026-08-21",
+  "Max for Live\tDR01D": "2026-08-21",
+  "Max for Live\tDS Clang": "2026-08-21",
+  "Max for Live\tDS Clap": "2026-08-21",
+  "Max for Live\tDS Cymbal": "2026-08-21",
+  "Max for Live\tDS FM": "2026-08-21",
+  "Max for Live\tDS HH": "2026-08-21",
+  "Max for Live\tDS Kick": "2026-08-21",
+  "Max for Live\tDS Sampler": "2026-08-21",
+  "Max for Live\tDS Snare": "2026-08-21",
+  "Max for Live\tDS Tom": "2026-08-21",
+  "Max for Live\tDelay": "2026-08-21",
+  "Max for Live\tDevice Randomizer": "2026-08-21",
+  "Max for Live\tDisintegration": "2026-08-21",
+  "Max for Live\tDivisor": "2026-10-13",
+  "Max for Live\tDr Chaos": "2026-08-21",
+  "Max for Live\tDrox II Free": "2026-08-21",
+  "Max for Live\tDrox II Pro": "2026-08-21",
+  "Max for Live\tDrumBrain": "2026-08-21",
+  "Max for Live\tDrumSynth Clap": "2026-08-21",
+  "Max for Live\tDrumSynth Clave": "2026-08-21",
+  "Max for Live\tDrumSynth Cymbal": "2026-08-21",
+  "Max for Live\tDrumSynth FM2": "2026-08-21",
+  "Max for Live\tDrumSynth FMPerc": "2026-08-21",
+  "Max for Live\tDrumSynth Glass": "2026-08-21",
+  "Max for Live\tDrumSynth HH": "2026-08-21",
+  "Max for Live\tDrumSynth Kick": "2026-08-21",
+  "Max for Live\tDrumSynth Kplus": "2026-08-21",
+  "Max for Live\tDrumSynth Shaker": "2026-08-21",
+  "Max for Live\tDrumSynth Snare": "2026-08-21",
+  "Max for Live\tDrumSynth Snare2": "2026-08-21",
+  "Max for Live\tDrumSynth Tom": "2026-08-21",
+  "Max for Live\tDystopian Waves Wah 1.5.0": "2026-09-07",
+  "Max for Live\tEmit": "2026-08-21",
+  "Max for Live\tEnvelope": "2026-08-21",
+  "Max for Live\tEnvelope Follower": "2026-08-21",
+  "Max for Live\tEnvelope MIDI": "2026-08-21",
+  "Max for Live\tEuclidean": "2026-08-21",
+  "Max for Live\tEvening Star": "2026-09-07",
+  "Max for Live\tExcite": "2026-08-21",
+  "Max for Live\tExpression Control": "2026-08-21",
+  "Max for Live\tExpression Control Legacy": "2026-08-21",
+  "Max for Live\tExpressive Chords": "2026-08-21",
+  "Max for Live\tExpressive Chords 1.1": "2026-08-21",
+  "Max for Live\tFalse Memory": "2026-08-21",
+  "Max for Live\tFiller": "2026-08-21",
+  "Max for Live\tFilter": "2026-08-21",
+  "Max for Live\tFilter Glass": "2026-08-21",
+  "Max for Live\tFlanger": "2026-08-21",
+  "Max for Live\tFlow Demo": "2026-08-21",
+  "Max for Live\tFrankenstein": "2026-10-13",
+  "Max for Live\tFriend": "2026-08-21",
+  "Max for Live\tGLITCH LOOP": "2026-08-21",
+  "Max for Live\tGame of Live": "2026-08-21",
+  "Max for Live\tGated Delay": "2026-08-21",
+  "Max for Live\tGeiger LFO": "2026-08-21",
+  "Max for Live\tGen Loss": "2026-09-07",
+  "Max for Live\tGlitchera": "2026-08-21",
+  "Max for Live\tGrain Cloud Simpler": "2026-08-21",
+  "Max for Live\tGrainFreeze": "2026-08-21",
+  "Max for Live\tGranulator II": "2026-08-21",
+  "Max for Live\tGranulator III": "2026-08-21",
+  "Max for Live\tGranulatorFollow II": "2026-08-21",
+  "Max for Live\tGranulatorInput II": "2026-08-21",
+  "Max for Live\tGroup Start": "2026-08-21",
+  "Max for Live\tHarmoAdaptFilter J74": "2026-08-21",
+  "Max for Live\tHarmoChord J74": "2026-08-21",
+  "Max for Live\tHarmoChordBass J74": "2026-08-21",
+  "Max for Live\tHarmoChordFilter J74": "2026-08-21",
+  "Max for Live\tHarmoChordFilterAPI J74": "2026-08-21",
+  "Max for Live\tHarmoChordNotesOut J74": "2026-08-21",
+  "Max for Live\tHarmoChordRecv J74": "2026-08-21",
+  "Max for Live\tHarmoChordSend J74": "2026-08-21",
+  "Max for Live\tHarmoDisplay J74": "2026-08-21",
+  "Max for Live\tHarmoDisplayGuitar J74": "2026-08-21",
+  "Max for Live\tHarmoGuessScale J74": "2026-08-21",
+  "Max for Live\tHarmoPadFilter J74": "2026-08-21",
+  "Max for Live\tHarmoScale J74": "2026-08-21",
+  "Max for Live\tHarmoScale2Chords J74": "2026-08-21",
+  "Max for Live\tHarmoScaleFilter J74": "2026-08-21",
+  "Max for Live\tHarmoScaleFilterAPI J74": "2026-08-21",
+  "Max for Live\tHarmoScaleRecv J74": "2026-08-21",
+  "Max for Live\tHarmoScaleSend J74": "2026-08-21",
+  "Max for Live\tHarmoTonicFilter J74": "2026-08-21",
+  "Max for Live\tHarmonic Drone Generator": "2026-08-21",
+  "Max for Live\tHarvest": "2026-10-13",
+  "Max for Live\tHocket 2": "2026-08-21",
+  "Max for Live\tHuman LFO": "2026-08-21",
+  "Max for Live\tHumanizer": "2026-08-21",
+  "Max for Live\tIR Measurement Device": "2026-08-21",
+  "Max for Live\tImage2Wavetable": "2026-08-21",
+  "Max for Live\tImage2Wavetable-1": "2026-08-21",
+  "Max for Live\tInflation": "2026-08-21",
+  "Max for Live\tInflation(OS)": "2026-08-21",
+  "Max for Live\tInstant Haus": "2026-08-21",
+  "Max for Live\tIntroduction": "2026-08-21",
+  "Max for Live\tIrrational Delay": "2026-08-21",
+  "Max for Live\tJG.MultibandDelay": "2026-08-21",
+  "Max for Live\tJG.SpectralDelay": "2026-08-21",
+  "Max for Live\tJSON Video": "2026-08-21",
+  "Max for Live\tJSON Weather": "2026-08-21",
+  "Max for Live\tKGlitch": "2026-08-21",
+  "Max for Live\tKey-Detector": "2026-08-21",
+  "Max for Live\tKurzwellen": "2026-09-07",
+  "Max for Live\tL.ObliqueStrategies.v1.2": "2026-08-21",
+  "Max for Live\tLEGO MINDSTORMS EV3": "2026-08-21",
+  "Max for Live\tLFO": "2026-08-21",
+  "Max for Live\tLFO MIDI": "2026-08-21",
+  "Max for Live\tLFO Random": "2026-08-21",
+  "Max for Live\tLFO Random-1": "2026-08-21",
+  "Max for Live\tLabyrinth Seq 1.0.0": "2026-08-21",
+  "Max for Live\tLauncher": "2026-08-21",
+  "Max for Live\tLearn Chords": "2026-08-21",
+  "Max for Live\tLearn Scales": "2026-08-21",
+  "Max for Live\tLens": "2026-10-13",
+  "Max for Live\tLimiter": "2026-08-21",
+  "Max for Live\tLode": "2026-08-21",
+  "Max for Live\tLood": "2026-08-21",
+  "Max for Live\tLooper": "2026-08-21",
+  "Max for Live\tLucky Dip": "2026-10-13",
+  "Max for Live\tM2TM Chords": "2026-08-21",
+  "Max for Live\tM2TM Chords DV": "2026-08-21",
+  "Max for Live\tM2TM Notes": "2026-08-21",
+  "Max for Live\tM2TM Progressions": "2026-08-21",
+  "Max for Live\tMDD_MARIONNETTE_1.3": "2026-08-21",
+  "Max for Live\tMDD___ARPOoO_V2": "2026-08-21",
+  "Max for Live\tMDD___SNAKE_V3.2.3": "2026-08-21",
+  "Max for Live\tMFA Audio Cycler": "2026-08-21",
+  "Max for Live\tMFA Audio S&H": "2026-08-21",
+  "Max for Live\tMFA Audiodubber": "2026-08-21",
+  "Max for Live\tMFA Autodubber": "2026-08-21",
+  "Max for Live\tMFA Cheat Code": "2026-08-21",
+  "Max for Live\tMFA Cosmus": "2026-08-21",
+  "Max for Live\tMFA Errata": "2026-08-21",
+  "Max for Live\tMFA Follower": "2026-08-21",
+  "Max for Live\tMFA Gain Tracker": "2026-08-21",
+  "Max for Live\tMFA LFOx": "2026-08-21",
+  "Max for Live\tMFA MIDI ADSRx": "2026-08-21",
+  "Max for Live\tMFA MIDI Cycler": "2026-08-21",
+  "Max for Live\tMFA MIDI Dubber": "2026-08-21",
+  "Max for Live\tMFA MIDI Key Tracker": "2026-08-21",
+  "Max for Live\tMFA MIDI LFOx": "2026-08-21",
+  "Max for Live\tMFA MIDI X-Control": "2026-08-21",
+  "Max for Live\tMFA Manual S&H": "2026-08-21",
+  "Max for Live\tMFA Mutator Free": "2026-08-21",
+  "Max for Live\tMFA Note Raum": "2026-08-21",
+  "Max for Live\tMFA Solarus": "2026-08-21",
+  "Max for Live\tMFA Tactum": "2026-08-21",
+  "Max for Live\tMFA X-Control": "2026-08-21",
+  "Max for Live\tMIDI Echo": "2026-08-21",
+  "Max for Live\tMIDI Monitor": "2026-08-21",
+  "Max for Live\tMIDI Routing Input": "2026-08-21",
+  "Max for Live\tMIDI Routing Output": "2026-08-21",
+  "Max for Live\tMIDIMonitor": "2026-08-21",
+  "Max for Live\tMPE": "2026-08-21",
+  "Max for Live\tMPE Control": "2026-08-21",
+  "Max for Live\tMPE Note Off": "2026-08-21",
+  "Max for Live\tMSE": "2026-08-21",
+  "Max for Live\tMacro Knob": "2026-08-21",
+  "Max for Live\tMagnabelt": "2026-08-21",
+  "Max for Live\tManual Tape": "2026-08-21",
+  "Max for Live\tMap8": "2026-08-21",
+  "Max for Live\tMapping": "2026-08-21",
+  "Max for Live\tMapr16x2": "2026-08-21",
+  "Max for Live\tMax AutoPanner": "2026-08-21",
+  "Max for Live\tMax CombFilter": "2026-08-21",
+  "Max for Live\tMax Compressor": "2026-08-21",
+  "Max for Live\tMax DelayTaps": "2026-08-21",
+  "Max for Live\tMax SpectralHarm": "2026-08-21",
+  "Max for Live\tMelodic Probability": "2026-08-21",
+  "Max for Live\tMelodic Steps": "2026-08-21",
+  "Max for Live\tMicrocosmos": "2026-08-21",
+  "Max for Live\tMicrotuner": "2026-08-21",
+  "Max for Live\tMix Matcher": "2026-08-21",
+  "Max for Live\tMod Table": "2026-08-21",
+  "Max for Live\tMono Sequencer": "2026-08-21",
+  "Max for Live\tMono Synth": "2026-08-21",
+  "Max for Live\tMood": "2026-09-07",
+  "Max for Live\tMulti": "2026-08-21",
+  "Max for Live\tMultiMap": "2026-08-21",
+  "Max for Live\tMultiMapper32Audio V2.7": "2026-08-21",
+  "Max for Live\tMultiSquisher": "2026-08-21",
+  "Max for Live\tNTS Streamer": "2026-08-21",
+  "Max for Live\tNaive": "2026-08-21",
+  "Max for Live\tNirvana": "2026-08-21",
+  "Max for Live\tNirvana C": "2026-08-21",
+  "Max for Live\tNirvana SM": "2026-08-21",
+  "Max for Live\tNirvanaFX": "2026-08-21",
+  "Max for Live\tNirvanaFX C": "2026-08-21",
+  "Max for Live\tNirvanaFX SM": "2026-08-21",
+  "Max for Live\tNo_Input Synth": "2026-08-21",
+  "Max for Live\tNoise Adder": "2026-08-21",
+  "Max for Live\tNote Change Colors": "2026-08-21",
+  "Max for Live\tNote Doubler": "2026-08-21",
+  "Max for Live\tNote Echo": "2026-08-21",
+  "Max for Live\tNote Monitor": "2026-08-21",
+  "Max for Live\tNote Player": "2026-08-21",
+  "Max for Live\tNote Triggered Modulator": "2026-08-21",
+  "Max for Live\tNotes API": "2026-08-21",
+  "Max for Live\tORAM": "2026-08-21",
+  "Max for Live\tOSC Leap Motion": "2026-08-21",
+  "Max for Live\tOSC MIDI Send": "2026-08-21",
+  "Max for Live\tOSC Monitor": "2026-08-21",
+  "Max for Live\tOSC Send": "2026-08-21",
+  "Max for Live\tOSC TouchOSC": "2026-08-21",
+  "Max for Live\tOctave": "2026-08-21",
+  "Max for Live\tOctave Adder": "2026-08-21",
+  "Max for Live\tOndes Martenot": "2026-08-21",
+  "Max for Live\tOscillosope V1.4": "2026-08-21",
+  "Max for Live\tOverdrive": "2026-08-21",
+  "Max for Live\tOxide v1.02": "2026-08-21",
+  "Max for Live\tPanner": "2026-08-21",
+  "Max for Live\tPatterns by Iftah": "2026-08-21",
+  "Max for Live\tPedal Noise": "2026-08-21",
+  "Max for Live\tPerformer": "2026-08-21",
+  "Max for Live\tPhase Pattern": "2026-08-21",
+  "Max for Live\tPiano Pedal Trigger": "2026-08-21",
+  "Max for Live\tPitch Hack": "2026-08-21",
+  "Max for Live\tPitch Shifter": "2026-08-21",
+  "Max for Live\tPitchDrop": "2026-08-21",
+  "Max for Live\tPitchLoop89": "2026-08-21",
+  "Max for Live\tPitchfield": "2026-10-13",
+  "Max for Live\tPlate Reverb": "2026-08-21",
+  "Max for Live\tPluck": "2026-08-21",
+  "Max for Live\tPluggoFuzz": "2026-08-21",
+  "Max for Live\tPoli": "2026-08-21",
+  "Max for Live\tPoly Synth": "2026-08-21",
+  "Max for Live\tPolyrhythm": "2026-08-21",
+  "Max for Live\tPotee": "2026-08-21",
+  "Max for Live\tPrearranger": "2026-08-21",
+  "Max for Live\tPremo": "2026-08-21",
+  "Max for Live\tPreset Scroll": "2026-08-21",
+  "Max for Live\tProbability Arp": "2026-08-21",
+  "Max for Live\tProbee": "2026-08-21",
+  "Max for Live\tProbee-1": "2026-08-21",
+  "Max for Live\tProgram Change": "2026-08-21",
+  "Max for Live\tPulsograph": "2026-08-21",
+  "Max for Live\tPyr by Iftah 1.2": "2026-08-21",
+  "Max for Live\tQuad": "2026-08-21",
+  "Max for Live\tRadio Garden": "2026-08-21",
+  "Max for Live\tRandomise Session Colours": "2026-08-21",
+  "Max for Live\tRavel 1.1": "2026-08-21",
+  "Max for Live\tRe-Enveloper": "2026-08-21",
+  "Max for Live\tRegatta": "2026-09-07",
+  "Max for Live\tRemainder": "2026-09-07",
+  "Max for Live\tResampler Pro": "2026-08-21",
+  "Max for Live\tRetrigger": "2026-08-21",
+  "Max for Live\tReverie": "2026-09-07",
+  "Max for Live\tRhythmic Crazy Slicer": "2026-08-21",
+  "Max for Live\tRhythmic Probability": "2026-08-21",
+  "Max for Live\tRhythmic Steps": "2026-08-21",
+  "Max for Live\tRotating Rhythm Generator": "2026-08-21",
+  "Max for Live\tSQ Sequencer": "2026-08-21",
+  "Max for Live\tSTING!64 by SKINNERBOX": "2026-08-21",
+  "Max for Live\tSTRIKE_MIDI": "2026-08-21",
+  "Max for Live\tSTRIKE_Resonator": "2026-08-21",
+  "Max for Live\tSW Radio": "2026-08-21",
+  "Max for Live\tScene Placer": "2026-08-21",
+  "Max for Live\tSchaeffer's Nightmare": "2026-08-21",
+  "Max for Live\tScratchBacker-v3": "2026-08-21",
+  "Max for Live\tSektor": "2026-08-21",
+  "Max for Live\tSelect + MAP Single Variation AUDIO V1 AbletonDrummer": "2026-08-21",
+  "Max for Live\tSelect + MAP Single Variation MIDI V1 AbletonDrummer ": "2026-08-21",
+  "Max for Live\tSeq8": "2026-08-21",
+  "Max for Live\tShaper": "2026-08-21",
+  "Max for Live\tShaper MIDI": "2026-08-21",
+  "Max for Live\tShift": "2026-08-21",
+  "Max for Live\tSide Drive": "2026-08-21",
+  "Max for Live\tSidechain Modulator": "2026-08-21",
+  "Max for Live\tSimpler Slices": "2026-08-21",
+  "Max for Live\tSimulScrub-v6": "2026-08-21",
+  "Max for Live\tSkramDelay": "2026-08-21",
+  "Max for Live\tSlice Shuffler": "2026-08-21",
+  "Max for Live\tSmooth Automator Audio": "2026-08-21",
+  "Max for Live\tSmooth Automator MIDI": "2026-08-21",
+  "Max for Live\tSnipper": "2026-08-21",
+  "Max for Live\tSpect 1.3": "2026-08-21",
+  "Max for Live\tSpectral Blur": "2026-08-21",
+  "Max for Live\tSpectral Wobbler 1.2.0": "2026-09-07",
+  "Max for Live\tSpeed Shifter": "2026-08-21",
+  "Max for Live\tSplice (Tape Collage)": "2026-08-21",
+  "Max for Live\tStages": "2026-08-21",
+  "Max for Live\tStep Arp": "2026-08-21",
+  "Max for Live\tStep Copy": "2026-08-21",
+  "Max for Live\tStep Divider": "2026-08-21",
+  "Max for Live\tSting 2": "2026-08-21",
+  "Max for Live\tSting by Iftah": "2026-08-21",
+  "Max for Live\tStochastic Delay": "2026-08-21",
+  "Max for Live\tStretch Simpler": "2026-08-21",
+  "Max for Live\tStrip Silence": "2026-08-21",
+  "Max for Live\tSurround Panner": "2026-08-21",
+  "Max for Live\tTapPanZeit-v12": "2026-08-21",
+  "Max for Live\tTape Error": "2026-08-21",
+  "Max for Live\tTapeStop 2.0": "2026-08-21",
+  "Max for Live\tTapped Delay": "2026-08-21",
+  "Max for Live\tTelegraph": "2026-10-13",
+  "Max for Live\tThe 1958 Machine": "2026-08-21",
+  "Max for Live\tThe Lot Radio": "2026-08-21",
+  "Max for Live\tTombola": "2026-08-21",
+  "Max for Live\tTracking Lines": "2026-10-13",
+  "Max for Live\tTransientDesigner": "2026-08-21",
+  "Max for Live\tTree Tone": "2026-08-21",
+  "Max for Live\tTuring Machine 3.1": "2026-08-21",
+  "Max for Live\tVC3.5": "2026-08-21",
+  "Max for Live\tVariations": "2026-08-21",
+  "Max for Live\tVector Delay": "2026-08-21",
+  "Max for Live\tVector FM": "2026-08-21",
+  "Max for Live\tVector Grain": "2026-08-21",
+  "Max for Live\tVector Map": "2026-08-21",
+  "Max for Live\tVelocity Randomizer": "2026-08-21",
+  "Max for Live\tVelocity Shaper": "2026-08-21",
+  "Max for Live\tVerbotron": "2026-08-21",
+  "Max for Live\tVideo Slicer": "2026-08-21",
+  "Max for Live\tVisuals Builder": "2026-08-21",
+  "Max for Live\tVisuals Exporter": "2026-08-21",
+  "Max for Live\tWarp Markers": "2026-08-21",
+  "Max for Live\tWiden": "2026-08-21",
+  "Max for Live\tXY": "2026-08-21",
+  "Max for Live\tXY Controller": "2026-08-21",
+  "Max for Live\tXY Pad": "2026-08-21",
+  "Max for Live\tYT Sampler": "2026-08-21",
+  "Max for Live\tbve.glitchlooper": "2026-08-21",
+  "Max for Live\tcb_rainer 1.6": "2026-08-21",
+  "Max for Live\thtml instruments": "2026-08-21",
+  "Max for Live\tj11-tone-Resonator v1": "2026-08-21",
+  "Max for Live\tj90 1.5": "2026-08-21",
+  "Max for Live\tj90 1.7": "2026-08-21",
+  "Max for Live\tjBBL v3.3": "2026-08-21",
+  "Max for Live\tjBi-Phase v2.7": "2026-08-21",
+  "Max for Live\tjChorus-6 v1.3": "2026-08-21",
+  "Max for Live\tjChorus-6 v1.4": "2026-08-21",
+  "Max for Live\tjDisperser3 v1.1": "2026-08-21",
+  "Max for Live\tjKnob v1.6": "2026-08-21",
+  "Max for Live\tjL3v3ll3r v1.4": "2026-08-21",
+  "Max for Live\tjLeslie v2.8": "2026-08-21",
+  "Max for Live\tjMackie-Feedback v4.0": "2026-08-21",
+  "Max for Live\tjOdyssey v5.2": "2026-08-21",
+  "Max for Live\tjOdyssey v6.0": "2026-08-21",
+  "Max for Live\tjPalme v1.2": "2026-08-21",
+  "Max for Live\tjPalme3 v1.2": "2026-08-21",
+  "Max for Live\tjPro v1.2": "2026-08-21",
+  "Max for Live\tjRat v2.0": "2026-08-21",
+  "Max for Live\tjRat v3.1": "2026-08-21",
+  "Max for Live\tjSpring-Tank v1.3": "2026-08-21",
+  "Max for Live\tjTap 3.1": "2026-08-21",
+  "Max for Live\tlittleBits": "2026-08-21",
+  "Max for Live\tml.distance": "2026-08-21",
+  "Max for Live\tpolyrhythmus v1.01": "2026-08-21",
+  "Max for Live\ttrnr.BitEcho": "2026-08-21",
+  "Max for Live\ttrnr.DmmG": "2026-08-21",
+  "Max for Live\ttrnr.Duckling": "2026-08-21",
+  "Max for Live\ttrnr.Flechtwerk": "2026-08-21",
+  "Max for Live\ttrnr.Hatster": "2026-08-21",
+  "Max for Live\ttrnr.RetroSampler": "2026-08-21",
+  "Max for Live\ttrnr.TriplexClassic": "2026-08-21",
+  "Max for Live\tvisage_1.0": "2026-08-21",
+  "Plugin\t2Rule\t2rulesynthv31": "2026-08-21",
+  "Plugin\t2Rule\ttugglicento": "2026-08-21",
+  "Plugin\t2Rule\ttugimgsynth": "2026-08-21",
+  "Plugin\t2Rule\ttugmidiseq": "2026-08-21",
+  "Plugin\t2Rule\ttugmultieffect": "2026-08-21",
+  "Plugin\t2Rule\ttugphonon": "2026-08-21",
+  "Plugin\t2Rule\ttugspect": "2026-08-21",
+  "Plugin\tAIR Music Technology\tmultibandfilterbank": "2026-08-21",
+  "Plugin\tAIR Music Technology\ttapedoubletrack": "2026-08-21",
+  "Plugin\tAberrant DSP\tcataclysm": "2026-08-21",
+  "Plugin\tAberrant DSP\tlofioddity": "2026-08-21",
+  "Plugin\tAirwindows\tairwindowsconsolidated": "2026-08-21",
+  "Plugin\tAnalogObsession\tchopa": "2026-08-21",
+  "Plugin\tAnalogObsession\tdrgate": "2026-08-21",
+  "Plugin\tAnalogObsession\trazorclip": "2026-08-21",
+  "Plugin\tAnalogObsession\trelife": "2026-08-21",
+  "Plugin\tApplied Acoustics Systems\tloungelizardsession4": "2026-08-21",
+  "Plugin\tApplied Acoustics Systems\tstrumsession2": "2026-08-21",
+  "Plugin\tApplied Acoustics Systems\tultraanalogsession2": "2026-08-21",
+  "Plugin\tArturia\tacidv": "2026-08-21",
+  "Plugin\tArturia\tanaloglabv": "2026-08-21",
+  "Plugin\tArturia\tarp2600v3": "2026-08-21",
+  "Plugin\tArturia\taugmentedbrass": "2026-08-21",
+  "Plugin\tArturia\taugmentedgrandpiano": "2026-08-21",
+  "Plugin\tArturia\taugmentedmallets": "2026-08-21",
+  "Plugin\tArturia\taugmentedpersia": "2026-08-21",
+  "Plugin\tArturia\taugmentedstrings": "2026-08-21",
+  "Plugin\tArturia\taugmentedvoices": "2026-08-21",
+  "Plugin\tArturia\taugmentedwoodwinds": "2026-08-21",
+  "Plugin\tArturia\taugmentedyangtze": "2026-08-21",
+  "Plugin\tArturia\tb3v2": "2026-08-21",
+  "Plugin\tArturia\tbuchlaeaselv": "2026-08-21",
+  "Plugin\tArturia\tbusexciter104": "2026-08-21",
+  "Plugin\tArturia\tbusforce": "2026-08-21",
+  "Plugin\tArturia\tbuspeak": "2026-08-21",
+  "Plugin\tArturia\tbustransient": "2026-08-21",
+  "Plugin\tArturia\tchorusdimensiond": "2026-08-21",
+  "Plugin\tArturia\tchorusjun6": "2026-08-21",
+  "Plugin\tArturia\tclavinetv": "2026-08-21",
+  "Plugin\tArturia\tcmiv": "2026-08-21",
+  "Plugin\tArturia\tcompdiode609": "2026-08-21",
+  "Plugin\tArturia\tcompfet76": "2026-08-21",
+  "Plugin\tArturia\tcomptubesta": "2026-08-21",
+  "Plugin\tArturia\tcompvca65": "2026-08-21",
+  "Plugin\tArturia\tcp70v": "2026-08-21",
+  "Plugin\tArturia\tcs80v4": "2026-08-21",
+  "Plugin\tArturia\tczv": "2026-08-21",
+  "Plugin\tArturia\tdelaybrigade": "2026-08-21",
+  "Plugin\tArturia\tdelayeternity": "2026-08-21",
+  "Plugin\tArturia\tdelaytape201": "2026-08-21",
+  "Plugin\tArturia\tdistcoldfire": "2026-08-21",
+  "Plugin\tArturia\tdistopamp21": "2026-08-21",
+  "Plugin\tArturia\tdisttubeculture": "2026-08-21",
+  "Plugin\tArturia\tdx7v": "2026-08-21",
+  "Plugin\tArturia\tefxambient": "2026-08-21",
+  "Plugin\tArturia\tefxfragments": "2026-08-21",
+  "Plugin\tArturia\tefxmotions": "2026-08-21",
+  "Plugin\tArturia\tefxrefract": "2026-08-21",
+  "Plugin\tArturia\temulatoriiv": "2026-08-21",
+  "Plugin\tArturia\teqsitral295": "2026-08-21",
+  "Plugin\tArturia\tfarfisav": "2026-08-21",
+  "Plugin\tArturia\tfilterm12": "2026-08-21",
+  "Plugin\tArturia\tfiltermini": "2026-08-21",
+  "Plugin\tArturia\tfilterms20": "2026-08-21",
+  "Plugin\tArturia\tfiltersem": "2026-08-21",
+  "Plugin\tArturia\tflangerbl20": "2026-08-21",
+  "Plugin\tArturia\tjun6v": "2026-08-21",
+  "Plugin\tArturia\tjup8000v": "2026-08-21",
+  "Plugin\tArturia\tjup8v4": "2026-08-21",
+  "Plugin\tArturia\tkorgms20v": "2026-08-21",
+  "Plugin\tArturia\tmatrix12v2": "2026-08-21",
+  "Plugin\tArturia\tmellotronv": "2026-08-21",
+  "Plugin\tArturia\tmemoryv": "2026-08-21",
+  "Plugin\tArturia\tminibrutev": "2026-08-21",
+  "Plugin\tArturia\tminifreakv": "2026-08-21",
+  "Plugin\tArturia\tminiv3": "2026-08-21",
+  "Plugin\tArturia\tminiv4": "2026-08-21",
+  "Plugin\tArturia\tmixdrums": "2026-08-21",
+  "Plugin\tArturia\tmodularv3": "2026-08-21",
+  "Plugin\tArturia\topxav": "2026-08-21",
+  "Plugin\tArturia\tphaserbitron": "2026-08-21",
+  "Plugin\tArturia\tpianov3": "2026-08-21",
+  "Plugin\tArturia\tpigments": "2026-08-21",
+  "Plugin\tArturia\tpitchshifter910": "2026-08-21",
+  "Plugin\tArturia\tpre1973": "2026-08-21",
+  "Plugin\tArturia\tpretrida": "2026-08-21",
+  "Plugin\tArturia\tprev76": "2026-08-21",
+  "Plugin\tArturia\tprophet5v": "2026-08-21",
+  "Plugin\tArturia\tprophetvsv": "2026-08-21",
+  "Plugin\tArturia\tpurelofi": "2026-08-21",
+  "Plugin\tArturia\tpuresub": "2026-09-07",
+  "Plugin\tArturia\trevintensity": "2026-08-21",
+  "Plugin\tArturia\trevlx24": "2026-08-21",
+  "Plugin\tArturia\trevocean": "2026-08-21",
+  "Plugin\tArturia\trevplate140": "2026-08-21",
+  "Plugin\tArturia\trevspring636": "2026-08-21",
+  "Plugin\tArturia\trotarycls222": "2026-08-21",
+  "Plugin\tArturia\tsemv2": "2026-08-21",
+  "Plugin\tArturia\tsemv3": "2026-08-21",
+  "Plugin\tArturia\tsolinav2": "2026-08-21",
+  "Plugin\tArturia\tsq80v": "2026-08-21",
+  "Plugin\tArturia\tstage73v2": "2026-08-21",
+  "Plugin\tArturia\tsynclavierv": "2026-08-21",
+  "Plugin\tArturia\tsynthiv": "2026-08-21",
+  "Plugin\tArturia\tsynthxv": "2026-08-21",
+  "Plugin\tArturia\ttapej37": "2026-08-21",
+  "Plugin\tArturia\ttapemellofi": "2026-08-21",
+  "Plugin\tArturia\tvocoderv": "2026-08-21",
+  "Plugin\tArturia\tvoxcontinentalv2": "2026-08-21",
+  "Plugin\tArturia\twurliv2": "2026-08-21",
+  "Plugin\tArturia\twurliv3": "2026-08-21",
+  "Plugin\tAudio Damage, Inc.\tshinronin": "2026-08-21",
+  "Plugin\tAudioThing\tfogconvolver2": "2026-08-21",
+  "Plugin\tAudioThing\tmoonecho": "2026-08-21",
+  "Plugin\tAudioThing\toctaves": "2026-08-21",
+  "Plugin\tAudioThing\treels": "2026-08-21",
+  "Plugin\tAudioThing\tspeakers": "2026-08-21",
+  "Plugin\tAudioThing\tsprings": "2026-08-21",
+  "Plugin\tAudiomodern\tfilterstep": "2026-08-21",
+  "Plugin\tAudiomodern\tgatelab": "2026-08-21",
+  "Plugin\tAudiomodern\tpanflow": "2026-08-21",
+  "Plugin\tAudiomodern\tsoundbox": "2026-08-21",
+  "Plugin\tBABY Audio\tbeatslammer": "2026-08-21",
+  "Plugin\tBABY Audio\tcomebackkid": "2026-08-21",
+  "Plugin\tBABY Audio\tmagicdice": "2026-08-21",
+  "Plugin\tBABY Audio\tmagicswitch": "2026-08-21",
+  "Plugin\tBABY Audio\tpitchdrift": "2026-08-21",
+  "Plugin\tBABY Audio\tsupervhs": "2026-08-21",
+  "Plugin\tBABY Audio\ttekno": "2026-08-21",
+  "Plugin\tBABY Audio\twarp": "2026-08-21",
+  "Plugin\tBitlayer Audio\tbitlayer": "2026-10-13",
+  "Plugin\tCrow Hill\tvaults": "2026-08-21",
+  "Plugin\tCymatics\tcymaticsdejavu": "2026-08-21",
+  "Plugin\tCymatics\tcymaticsmemory": "2026-08-21",
+  "Plugin\tCymatics\tcymaticsorigin": "2026-08-21",
+  "Plugin\tDawesome\tsol": "2026-08-21",
+  "Plugin\tDecidedly\tdecentsampler": "2026-08-21",
+  "Plugin\tEventide\ttemperancelite": "2026-08-21",
+  "Plugin\tExcite Audio\tbloommuramasa": "2026-08-21",
+  "Plugin\tFKFX Audio\tfkfxnanomix": "2026-08-21",
+  "Plugin\tFors\tjuniorlite": "2026-08-21",
+  "Plugin\tFors\tpivotlite": "2026-08-21",
+  "Plugin\tFull Bucket Music\tbucketone": "2026-08-21",
+  "Plugin\tFull Bucket Music\tgrainstrain": "2026-08-21",
+  "Plugin\tFull Bucket Music\tpecs": "2026-08-21",
+  "Plugin\tGForce\tmtronproiv": "2026-08-21",
+  "Plugin\tGlitchmachines\thysteresis": "2026-08-21",
+  "Plugin\tHigher Plane Software\tspacewalk": "2026-08-21",
+  "Plugin\tIK Multimedia\tamplitube5": "2026-08-21",
+  "Plugin\tIK Multimedia\tarc3": "2026-08-21",
+  "Plugin\tIK Multimedia\tblack76": "2026-08-21",
+  "Plugin\tIK Multimedia\tbrickwalllimiter": "2026-08-21",
+  "Plugin\tIK Multimedia\tbritishchannel": "2026-08-21",
+  "Plugin\tIK Multimedia\tbuscompressor": "2026-08-21",
+  "Plugin\tIK Multimedia\tclassicclipper": "2026-08-21",
+  "Plugin\tIK Multimedia\tclassiccomp": "2026-08-21",
+  "Plugin\tIK Multimedia\tclassiceq": "2026-08-21",
+  "Plugin\tIK Multimedia\tclassiclimiter": "2026-08-21",
+  "Plugin\tIK Multimedia\tclassicmultibandlimiter": "2026-08-21",
+  "Plugin\tIK Multimedia\tcomprexxor": "2026-08-21",
+  "Plugin\tIK Multimedia\tcsrhall": "2026-08-21",
+  "Plugin\tIK Multimedia\tcsrinverse": "2026-08-21",
+  "Plugin\tIK Multimedia\tcsrplate": "2026-08-21",
+  "Plugin\tIK Multimedia\tcsrroom": "2026-08-21",
+  "Plugin\tIK Multimedia\tdeesser": "2026-08-21",
+  "Plugin\tIK Multimedia\tdynamu": "2026-08-21",
+  "Plugin\tIK Multimedia\teq432": "2026-08-21",
+  "Plugin\tIK Multimedia\teq73": "2026-08-21",
+  "Plugin\tIK Multimedia\teq81": "2026-08-21",
+  "Plugin\tIK Multimedia\teqp1a": "2026-08-21",
+  "Plugin\tIK Multimedia\teqpa": "2026-08-21",
+  "Plugin\tIK Multimedia\teqpb": "2026-08-21",
+  "Plugin\tIK Multimedia\teqpg": "2026-08-21",
+  "Plugin\tIK Multimedia\tequal": "2026-08-21",
+  "Plugin\tIK Multimedia\tfame": "2026-08-21",
+  "Plugin\tIK Multimedia\tfamestudioreverb": "2026-08-21",
+  "Plugin\tIK Multimedia\tfarmstoneroom": "2026-08-21",
+  "Plugin\tIK Multimedia\tjcvocalstrip": "2026-08-21",
+  "Plugin\tIK Multimedia\tjoechiccarellivocalstrip": "2026-08-21",
+  "Plugin\tIK Multimedia\tleslie": "2026-08-21",
+  "Plugin\tIK Multimedia\tlinearphaseeq": "2026-08-21",
+  "Plugin\tIK Multimedia\tmastereq432": "2026-08-21",
+  "Plugin\tIK Multimedia\tmastermatch": "2026-08-21",
+  "Plugin\tIK Multimedia\tmbandcomp": "2026-08-21",
+  "Plugin\tIK Multimedia\tmbandimage": "2026-08-21",
+  "Plugin\tIK Multimedia\tmbandlim": "2026-08-21",
+  "Plugin\tIK Multimedia\tmetering": "2026-08-21",
+  "Plugin\tIK Multimedia\tmicr": "2026-08-21",
+  "Plugin\tIK Multimedia\tmicroom": "2026-08-21",
+  "Plugin\tIK Multimedia\tmodobass2": "2026-08-21",
+  "Plugin\tIK Multimedia\tmododrum": "2026-08-21",
+  "Plugin\tIK Multimedia\tone": "2026-08-21",
+  "Plugin\tIK Multimedia\toptocomp": "2026-08-21",
+  "Plugin\tIK Multimedia\tprecisioncomplimiter": "2026-08-21",
+  "Plugin\tIK Multimedia\tprecl": "2026-08-21",
+  "Plugin\tIK Multimedia\tquadcompressor": "2026-08-21",
+  "Plugin\tIK Multimedia\tquadimage": "2026-08-21",
+  "Plugin\tIK Multimedia\tquadlimiter": "2026-08-21",
+  "Plugin\tIK Multimedia\tresing": "2026-08-21",
+  "Plugin\tIK Multimedia\tsampletank4": "2026-08-21",
+  "Plugin\tIK Multimedia\tsaturatorx": "2026-08-21",
+  "Plugin\tIK Multimedia\tsatx": "2026-08-21",
+  "Plugin\tIK Multimedia\tspacedelay": "2026-08-21",
+  "Plugin\tIK Multimedia\tstealthlimiter": "2026-08-21",
+  "Plugin\tIK Multimedia\tsuite": "2026-08-21",
+  "Plugin\tIK Multimedia\tsunsetsound": "2026-08-21",
+  "Plugin\tIK Multimedia\tsunsetsoundstudioreverb": "2026-08-21",
+  "Plugin\tIK Multimedia\tsyntronik2": "2026-08-21",
+  "Plugin\tIK Multimedia\ttapeecho": "2026-08-21",
+  "Plugin\tIK Multimedia\ttapemachine24": "2026-08-21",
+  "Plugin\tIK Multimedia\ttapemachine440": "2026-08-21",
+  "Plugin\tIK Multimedia\ttapemachine80": "2026-08-21",
+  "Plugin\tIK Multimedia\ttapemachine99": "2026-08-21",
+  "Plugin\tIK Multimedia\ttascam388": "2026-08-21",
+  "Plugin\tIK Multimedia\ttascamportaone": "2026-08-21",
+  "Plugin\tIK Multimedia\tteaca3340s": "2026-08-21",
+  "Plugin\tIK Multimedia\tteaca6100mkii": "2026-08-21",
+  "Plugin\tIK Multimedia\tthefarmstoneroom": "2026-08-21",
+  "Plugin\tIK Multimedia\ttonex": "2026-08-21",
+  "Plugin\tIK Multimedia\ttracks5": "2026-08-21",
+  "Plugin\tIK Multimedia\ttracks5metering": "2026-08-21",
+  "Plugin\tIK Multimedia\tvc670": "2026-08-21",
+  "Plugin\tIK Multimedia\tvintageprogrameq1a": "2026-08-21",
+  "Plugin\tIK Multimedia\twhite2a": "2026-08-21",
+  "Plugin\tIK Multimedia\twhitechannel": "2026-08-21",
+  "Plugin\tIllformed\tglitch": "2026-10-13",
+  "Plugin\tIllformed\tglitch2": "2026-10-13",
+  "Plugin\tJMGSound\tlofinity": "2026-08-21",
+  "Plugin\tJustin Sheriff\tdespace": "2026-08-21",
+  "Plugin\tKaranyi Sounds\tbreezeblackedition": "2026-08-21",
+  "Plugin\tKaranyi Sounds\tmatra": "2026-08-21",
+  "Plugin\tKlanghelm\tdc1a3": "2026-08-21",
+  "Plugin\tKlevgrand\tdegrader": "2026-08-21",
+  "Plugin\tKlevgrand\tr0verb": "2026-08-21",
+  "Plugin\tLANDR\tlandrfxbass": "2026-08-21",
+  "Plugin\tLANDR\tlandrfxbeats": "2026-08-21",
+  "Plugin\tLANDR\tlandrfxelectric": "2026-08-21",
+  "Plugin\tLANDR\tlandrfxvoice": "2026-08-21",
+  "Plugin\tLese\tcodec": "2026-08-21",
+  "Plugin\tLese\tsweep": "2026-08-21",
+  "Plugin\tLunacy Audio\tbeamfilter": "2026-08-21",
+  "Plugin\tLunacy Audio\tbeamhaze": "2026-08-21",
+  "Plugin\tMSXII Sound Design\tflytapeii": "2026-08-21",
+  "Plugin\tMinuit\tsolstice": "2026-08-21",
+  "Plugin\tMixed In Key\tcaptainbeatepic": "2026-08-21",
+  "Plugin\tMixed In Key\tcaptainchordsepic": "2026-08-21",
+  "Plugin\tMixed In Key\tcaptaindeepepic": "2026-08-21",
+  "Plugin\tMixed In Key\tcaptainmelodyepic": "2026-08-21",
+  "Plugin\tMixed In Key\tcaptainplayepic": "2026-08-21",
+  "Plugin\tMixed In Key LLC\tcaptainbeat": "2026-08-21",
+  "Plugin\tMixed In Key LLC\tcaptainchords": "2026-08-21",
+  "Plugin\tMixed In Key LLC\tcaptaindeep": "2026-08-21",
+  "Plugin\tMixed In Key LLC\tcaptainmelody": "2026-08-21",
+  "Plugin\tMixed In Key LLC\tcaptainplay": "2026-08-21",
+  "Plugin\tMoog\tmariana": "2026-08-21",
+  "Plugin\tMoonwave\tparallax": "2026-08-21",
+  "Plugin\tNative Instruments\tabsynth6": "2026-08-21",
+  "Plugin\tNative Instruments\tabsynth6fx": "2026-08-21",
+  "Plugin\tNative Instruments\tbattery4": "2026-08-21",
+  "Plugin\tNative Instruments\tbite": "2026-08-21",
+  "Plugin\tNative Instruments\tdirt": "2026-08-21",
+  "Plugin\tNative Instruments\tfreak": "2026-08-21",
+  "Plugin\tNative Instruments\tguitarrig7": "2026-08-21",
+  "Plugin\tNative Instruments\tkontakt": "2026-08-21",
+  "Plugin\tNative Instruments\tkontakt7": "2026-08-21",
+  "Plugin\tNative Instruments\tkontakt8": "2026-08-21",
+  "Plugin\tNative Instruments\tmassivex": "2026-08-21",
+  "Plugin\tNative Instruments\traum": "2026-08-21",
+  "Plugin\tNative Instruments\treaktor6": "2026-08-21",
+  "Plugin\tNative Instruments\treaktor6fx": "2026-08-21",
+  "Plugin\tNative Instruments\treplika": "2026-08-21",
+  "Plugin\tNative Instruments\tsupercharger": "2026-08-21",
+  "Plugin\tNative Instruments\tsuperchargergt": "2026-08-21",
+  "Plugin\tNative Instruments\ttransientmaster": "2026-08-21",
+  "Plugin\tNeutone\tneutonefx": "2026-08-21",
+  "Plugin\tNeutone\tneutonemorpho": "2026-08-21",
+  "Plugin\tOverloud\tgemechoson": "2026-08-21",
+  "Plugin\tPhase Fiasco\tannulus": "2026-08-21",
+  "Plugin\tPhase Fiasco\tkazu": "2026-10-13",
+  "Plugin\tPhase Fiasco\ttapefiasco": "2026-08-21",
+  "Plugin\tPuremagnetik\tdriftmaker": "2026-08-21",
+  "Plugin\tPuremagnetik\texpanse": "2026-08-21",
+  "Plugin\tPuremagnetik\tklamur": "2026-08-21",
+  "Plugin\tPuremagnetik\tmimikod": "2026-08-21",
+  "Plugin\tPuremagnetik\tpartikl": "2026-08-21",
+  "Plugin\tPuremagnetik\tpastfabric2": "2026-08-21",
+  "Plugin\tPuremagnetik\tpermute": "2026-08-21",
+  "Plugin\tPuremagnetik\treplicas": "2026-08-21",
+  "Plugin\tPuremagnetik\tswarm": "2026-08-21",
+  "Plugin\tPuremagnetik\tverv": "2026-08-21",
+  "Plugin\tPuremagnetik\tzerone": "2026-08-21",
+  "Plugin\tReason Studios\treasonrackplugin": "2026-09-07",
+  "Plugin\tReason Studios\treasonrackplugineffect": "2026-09-07",
+  "Plugin\tSession Loops\tpitchnet": "2026-08-21",
+  "Plugin\tSinevibes\tskewv2": "2026-08-21",
+  "Plugin\tSonnox\tsoften": "2026-08-21",
+  "Plugin\tSound Particles\tairmusic": "2026-08-21",
+  "Plugin\tSoundGhost\tekkodemo": "2026-08-21",
+  "Plugin\tSoundGhost\ttexturize": "2026-08-21",
+  "Plugin\tSoundMorph\tdust": "2026-08-21",
+  "Plugin\tSoundMorph\tdustfx": "2026-08-21",
+  "Plugin\tSoundMorph\twavewarper2": "2026-08-21",
+  "Plugin\tSoundeviceDigital\trandomachine": "2026-08-21",
+  "Plugin\tSoundtoys\tdevilloc": "2026-08-21",
+  "Plugin\tSoundtoys\techoboyjr": "2026-08-21",
+  "Plugin\tSoundtoys\tlittlemicroshift": "2026-08-21",
+  "Plugin\tSoundtoys\tlittleplate": "2026-08-21",
+  "Plugin\tSoundtoys\tlittleprimaltap": "2026-08-21",
+  "Plugin\tSoundtoys\tlittleradiator": "2026-08-21",
+  "Plugin\tSoundtoys\tphasemistress": "2026-08-21",
+  "Plugin\tSoundtoys\tspaceblender": "2026-08-21",
+  "Plugin\tSpitfire Audio\tbbcsymphonyorchestra": "2026-08-21",
+  "Plugin\tSpitfire Audio\tlabs": "2026-08-21",
+  "Plugin\tSpitfire Audio\tsolar": "2026-08-21",
+  "Plugin\tSplice\tsplicebridge": "2026-08-21",
+  "Plugin\tSplice\tspliceinstrument": "2026-08-21",
+  "Plugin\tSplice\tsplicesounds": "2026-08-21",
+  "Plugin\tSplice\tsplicesoundslistener": "2026-08-21",
+  "Plugin\tSuperlunar\tgx8600": "2026-08-21",
+  "Plugin\tSynful\tsynfulorchestra": "2026-08-21",
+  "Plugin\tTernar Music Technology\tchannelstrip": "2026-08-21",
+  "Plugin\tTernar Music Technology\tflechtwerk": "2026-08-21",
+  "Plugin\tUJAM\tfinretro": "2026-08-21",
+  "Plugin\tUVI\ttapechorus": "2026-08-21",
+  "Plugin\tUVI\ttapecolor": "2026-08-21",
+  "Plugin\tUVI\ttapedelay": "2026-08-21",
+  "Plugin\tUVI\ttapeflanger": "2026-08-21",
+  "Plugin\tUVI\tuviworkstation": "2026-08-21",
+  "Plugin\tUnfiltered Audio\tbattlefx": "2026-08-21",
+  "Plugin\tUniversal Audio (UADx)\t1176fetcompressor": "2026-08-21",
+  "Plugin\tUniversal Audio (UADx)\t610apreampandeq": "2026-08-21",
+  "Plugin\tUniversal Audio (UADx)\t610bpreampandeq": "2026-08-21",
+  "Plugin\tUniversal Audio (UADx)\tcenturytubechannelstrip": "2026-08-21",
+  "Plugin\tUniversal Audio (UADx)\tgalaxytapeecho": "2026-08-21",
+  "Plugin\tUniversal Audio (UADx)\toxidetaperecorder": "2026-08-21",
+  "Plugin\tUniversal Audio (UADx)\tpolymaxsynth": "2026-08-21",
+  "Plugin\tUniversal Audio (UADx)\tpureplatereverb": "2026-08-21",
+  "Plugin\tUniversal Audio (UADx)\tshowtime64tubeamp": "2026-08-21",
+  "Plugin\tUniversal Audio (UADx)\tverveanalogmachines": "2026-08-21",
+  "Plugin\tUniversal Audio (UADx)\tvibeanalogmachinesessentials": "2026-08-21",
+  "Plugin\tValhalla DSP, LLC\tvalhallafreqecho": "2026-08-21",
+  "Plugin\tValhalla DSP, LLC\tvalhallaspacemodulator": "2026-08-21",
+  "Plugin\tValhalla DSP, LLC\tvalhallasupermassive": "2026-08-21",
+  "Plugin\tWave Alchemy\ttriazplayer": "2026-08-21",
+  "Plugin\tWaves\tcurvesresolve": "2026-08-21",
+  "Plugin\tWaves\tcurvesresolvelive": "2026-08-21",
+  "Plugin\tWaves\tharmony": "2026-08-21",
+  "Plugin\tWaves\tidxintelligentdynamics": "2026-08-21",
+  "Plugin\tWaves\tidxliveintelligentdynamics": "2026-08-21",
+  "Plugin\tWaves\tmagmastressbox": "2026-08-21",
+  "Plugin\tWildergarden\tmaim": "2026-08-21",
+  "Plugin\tXynth Audio\tlephonk": "2026-08-21",
+  "Plugin\tZL\tzlequalizer2": "2026-08-21",
+  "Plugin\tevery something\tartikulation": "2026-08-21",
+  "Plugin\tevery something\tglosso": "2026-08-21",
+  "Plugin\tiZotope\tinsight2": "2026-08-21",
+  "Plugin\tiZotope\tneutron4elements": "2026-08-21",
+  "Plugin\tiZotope\tozone11elements": "2026-08-21",
+  "Plugin\tiZotope\tozone11equalizer": "2026-08-21",
+  "Plugin\tiZotope\tozoneimager2": "2026-08-21",
+  "Plugin\tiZotope\trelay": "2026-08-21",
+  "Plugin\tiZotope\ttonalbalancecontrol2": "2026-08-21",
+  "Plugin\tiZotope\ttrash": "2026-08-21",
+  "Plugin\tiZotope\tvinyl": "2026-08-21",
+  "Plugin\tiZotope\tvocaldoubler": "2026-08-21"
+ },
+ "plugins": {
+  "2Rule\t2rulesynthv31": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-04-23"
+  },
+  "2Rule\ttugglicento": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-04-23"
+  },
+  "2Rule\ttugimgsynth": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-04-23"
+  },
+  "2Rule\ttugmidiseq": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-04-23"
+  },
+  "2Rule\ttugmultieffect": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-04-23"
+  },
+  "2Rule\ttugphonon": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-11"
+  },
+  "2Rule\ttugspect": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-04-23"
+  },
+  "AIR Music Technology\tmultibandfilterbank": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-28"
+  },
+  "AIR Music Technology\ttapedoubletrack": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-28"
+  },
+  "Aberrant DSP\tcataclysm": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-01"
+  },
+  "Aberrant DSP\tlofioddity": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-12"
+  },
+  "Aberrant DSP\tsketchcassetteii": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-01-01"
+  },
+  "Airwindows\tairwindowsconsolidated": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-09"
+  },
+  "AnalogObsession\tchopa": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-22"
+  },
+  "AnalogObsession\tdrgate": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-22"
+  },
+  "AnalogObsession\trazorclip": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-22"
+  },
+  "AnalogObsession\trelife": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-22"
+  },
+  "Applied Acoustics Systems\tloungelizardsession4": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-01-12"
+  },
+  "Applied Acoustics Systems\tstrumsession2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-01-12"
+  },
+  "Applied Acoustics Systems\tultraanalogsession2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-01-12"
+  },
+  "Arturia\tacidv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tanaloglabv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-09"
+  },
+  "Arturia\tarp2600v3": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\taugmentedbrass": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-07"
+  },
+  "Arturia\taugmentedgrandpiano": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\taugmentedmallets": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-07"
+  },
+  "Arturia\taugmentedpersia": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-11"
+  },
+  "Arturia\taugmentedstrings": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\taugmentedvoices": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\taugmentedwoodwinds": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-07"
+  },
+  "Arturia\taugmentedyangtze": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-07"
+  },
+  "Arturia\tb3v2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tbuchlaeaselv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tbusexciter104": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tbusforce": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tbuspeak": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tbustransient": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-11"
+  },
+  "Arturia\tchorusdimensiond": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tchorusjun6": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tclavinetv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tcmiv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tcompdiode609": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tcompfet76": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tcomptubesta": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tcompvca65": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tcp70v": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tcs80v4": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tczv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tdelaybrigade": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tdelayeternity": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tdelaytape201": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tdistcoldfire": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tdistopamp21": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tdisttubeculture": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tdx7v": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tefxambient": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-11"
+  },
+  "Arturia\tefxfragments": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tefxmotions": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tefxrefract": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\temulatoriiv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\teqsitral295": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tfarfisav": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tfilterm12": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tfiltermini": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tfilterms20": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tfiltersem": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tflangerbl20": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tjun6v": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tjup8000v": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tjup8v4": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tkorgms20v": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tmatrix12v2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tmellotronv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tmemoryv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-11"
+  },
+  "Arturia\tminibrutev": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tminifreakv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-27"
+  },
+  "Arturia\tminiv3": {
+   "basis": "date added",
+   "by": false,
+   "date": "2023-03-09"
+  },
+  "Arturia\tminiv4": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tmixdrums": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tmodularv3": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\topxav": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tphaserbitron": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tpianov3": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tpigments": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-05"
+  },
+  "Arturia\tpitchshifter910": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-11"
+  },
+  "Arturia\tpre1973": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tpretrida": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tprev76": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tprophet5v": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tprophetvsv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tpurelofi": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tpuresub": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-09-10"
+  },
+  "Arturia\trevintensity": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\trevlx24": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\trevocean": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-05"
+  },
+  "Arturia\trevplate140": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\trevspring636": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\trotarycls222": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tsemv2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-12-03"
+  },
+  "Arturia\tsemv3": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tsolinav2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tsq80v": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tstage73v2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tsynclavierv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tsynthiv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tsynthxv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\ttapej37": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\ttapemellofi": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-16"
+  },
+  "Arturia\tvocoderv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\tvoxcontinentalv2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Arturia\twurliv2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2023-03-09"
+  },
+  "Arturia\twurliv3": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-29"
+  },
+  "Audio Damage, Inc.\tshinronin": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-07-03"
+  },
+  "AudioThing\tfilterjam": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-29"
+  },
+  "AudioThing\tfogconvolver2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-02-19"
+  },
+  "AudioThing\tmoonecho": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-07-16"
+  },
+  "AudioThing\toctaves": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-04-14"
+  },
+  "AudioThing\treels": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-19"
+  },
+  "AudioThing\tspeakers": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-19"
+  },
+  "AudioThing\tsprings": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-02-23"
+  },
+  "Audiomodern\tfilterstep": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-01"
+  },
+  "Audiomodern\tgatelab": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-01"
+  },
+  "Audiomodern\tpanflow": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-01"
+  },
+  "Audiomodern\tsoundbox": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-01"
+  },
+  "BABY Audio\tbeatslammer": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-12-18"
+  },
+  "BABY Audio\tcomebackkid": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-08-02"
+  },
+  "BABY Audio\thyperwarp": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-23"
+  },
+  "BABY Audio\tmagicdice": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-12-18"
+  },
+  "BABY Audio\tmagicswitch": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-12-18"
+  },
+  "BABY Audio\tpitchdrift": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-12-18"
+  },
+  "BABY Audio\tsupervhs": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-11"
+  },
+  "BABY Audio\ttekno": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-11"
+  },
+  "BABY Audio\twarp": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-12-18"
+  },
+  "Bitlayer Audio\tbitlayer": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-13"
+  },
+  "Cherry Audio\tnovachord": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2023-05-18"
+  },
+  "Cherry Audio\tsolovox": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2023-05-18"
+  },
+  "Crow Hill\tvaults": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-28"
+  },
+  "Cymatics\tcymaticsdejavu": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-12-28"
+  },
+  "Cymatics\tcymaticsmemory": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-12-28"
+  },
+  "Cymatics\tcymaticsorigin": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-06-12"
+  },
+  "Dawesome\tsol": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-10"
+  },
+  "Decidedly\tdecentsampler": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-01-13"
+  },
+  "Eventide\ttemperancelite": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-31"
+  },
+  "Excite Audio\tbloommuramasa": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-05-11"
+  },
+  "FKFX Audio\tfkfxnanomix": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-07-24"
+  },
+  "Fors\tjuniorlite": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-19"
+  },
+  "Fors\tpivotlite": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-22"
+  },
+  "Freakshow Industries\tbackmask": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-11-18"
+  },
+  "Freakshow Industries\tdreameater": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-11-18"
+  },
+  "Freakshow Industries\tdumpsterfire": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-11-18"
+  },
+  "Freakshow Industries\tmishby": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-11-18"
+  },
+  "Freakshow Industries\tpocketdimension": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-11-18"
+  },
+  "Full Bucket Music\tbucketone": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "Full Bucket Music\tgrainstrain": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "Full Bucket Music\tnabla": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-11-17"
+  },
+  "Full Bucket Music\tpecs": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-11"
+  },
+  "GForce\tmtronproiv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-05-25"
+  },
+  "Glitchmachines\thysteresis": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-28"
+  },
+  "Google Flow Music\tfloweffect": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-13"
+  },
+  "Google Flow Music\tflowinstrument": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-13"
+  },
+  "Higher Plane Software\tspacewalk": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-19"
+  },
+  "IK Multimedia\tamplitube5": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-06"
+  },
+  "IK Multimedia\tarc3": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-06"
+  },
+  "IK Multimedia\tblack76": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tbrickwalllimiter": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tbritishchannel": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tbuscompressor": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tclassicclipper": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tclassiccomp": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tclassiceq": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tclassiclimiter": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tclassicmultibandlimiter": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tcomprexxor": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tcsrhall": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tcsrinverse": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tcsrplate": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tcsrroom": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tdeesser": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tdynamu": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\teq432": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\teq73": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\teq81": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\teqp1a": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\teqpa": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\teqpb": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\teqpg": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tequal": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tfame": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tfamestudioreverb": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tfarmstoneroom": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\thammondb3x": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-06"
+  },
+  "IK Multimedia\tjcvocalstrip": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tjoechiccarellivocalstrip": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tleslie": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tlinearphaseeq": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tlurssenmasteringconsole": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-06"
+  },
+  "IK Multimedia\tmastereq432": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tmastermatch": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tmbandcomp": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tmbandimage": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tmbandlim": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tmetering": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tmicr": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tmicroom": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tmixbox": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tmodobass2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-18"
+  },
+  "IK Multimedia\tmododrum": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-06"
+  },
+  "IK Multimedia\tone": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\toptocomp": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tphilharmonik2": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-06"
+  },
+  "IK Multimedia\tprecisioncomplimiter": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tprecl": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tquadcompressor": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tquadimage": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tquadlimiter": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tresing": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-18"
+  },
+  "IK Multimedia\tsampletank4": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-07-29"
+  },
+  "IK Multimedia\tsampletron2": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tsaturatorx": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tsatx": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tspacedelay": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tstealthlimiter": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tsuite": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tsunsetsound": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tsunsetsoundstudioreverb": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tsyntronik2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-04-12"
+  },
+  "IK Multimedia\ttapeecho": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\ttapemachine24": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\ttapemachine440": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\ttapemachine80": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\ttapemachine99": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\ttascam388": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\ttascamportaone": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tteaca3340s": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tteaca6100mkii": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tthefarmstoneroom": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\ttonex": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-05-08"
+  },
+  "IK Multimedia\ttracks5": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\ttracks5metering": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tvc670": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\tvintageprogrameq1a": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\twhite2a": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "IK Multimedia\twhitechannel": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-03-05"
+  },
+  "Illformed\tglitch2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-11"
+  },
+  "JMGSound\tlofinity": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-14"
+  },
+  "Justin Sheriff\tdespace": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-16"
+  },
+  "KORG\tabudhabislicer": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\talexandriaorgan": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tamsterdamsfx": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tberlinsync": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tbilbaosampler": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tbrusselslead": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tchiangmaifm": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tchicagoacid": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tdarwinm1": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tdublinsemimodular": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tfirenzeclav": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tgladstonedrum": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tglasgowkeys": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\thelsinkipad": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tkamata4bit": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tkievvector": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tkingstonarcade": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tlexingtonodyssey": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tlisbonscifi": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tlondondrum": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tmadridbass": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tmarseillekeys": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tmiamiwobble": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tmilpitaswavestation": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tmontpelliermonopoly": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tmontrealepiano": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tphoenixanalog": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\trecifedrum": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\trosariogamp": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tsalzburgpiano": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tstockholmdroctorex": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\ttokyoeperc": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tvancouversample": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\twolfsburgdigital": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "KORG\tzurichrecorder": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "Karanyi Sounds\tbreezeblackedition": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-28"
+  },
+  "Karanyi Sounds\tmatra": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-19"
+  },
+  "Klanghelm\tdc1a3": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-06-18"
+  },
+  "Klevgrand\tdegrader": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-18"
+  },
+  "Klevgrand\tr0verb": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-01-12"
+  },
+  "Klevgrand\trevolv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-11-01"
+  },
+  "LANDR\tlandrfxbass": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-12"
+  },
+  "LANDR\tlandrfxbeats": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-12"
+  },
+  "LANDR\tlandrfxelectric": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-12"
+  },
+  "LANDR\tlandrfxvoice": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-12"
+  },
+  "Lese\tcodec": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-11-05"
+  },
+  "Lese\tsweep": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-11-05"
+  },
+  "Lunacy Audio\tbeamfilter": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-13"
+  },
+  "Lunacy Audio\tbeamhaze": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-13"
+  },
+  "MSXII Sound Design\tflytapeii": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-16"
+  },
+  "Minuit\tsolstice": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-11"
+  },
+  "Mixed In Key\tcaptainbeatepic": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-04"
+  },
+  "Mixed In Key\tcaptainchordsepic": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-04"
+  },
+  "Mixed In Key\tcaptaindeepepic": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-04"
+  },
+  "Mixed In Key\tcaptainmelodyepic": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-04"
+  },
+  "Mixed In Key\tcaptainplayepic": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-04"
+  },
+  "Moog\tmariana": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-12-16"
+  },
+  "Moonwave\tparallax": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-02-14"
+  },
+  "Native Instruments\tabsynth6": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-09"
+  },
+  "Native Instruments\tabsynth6fx": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-09"
+  },
+  "Native Instruments\tbattery4": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-08"
+  },
+  "Native Instruments\tbite": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-08"
+  },
+  "Native Instruments\tdirt": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-08"
+  },
+  "Native Instruments\tfreak": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-08"
+  },
+  "Native Instruments\tguitarrig7": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-17"
+  },
+  "Native Instruments\tkontakt": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-17"
+  },
+  "Native Instruments\tkontakt7": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-08"
+  },
+  "Native Instruments\tkontakt8": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-08"
+  },
+  "Native Instruments\tmassivex": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-03-18"
+  },
+  "Native Instruments\traum": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-17"
+  },
+  "Native Instruments\treaktor6": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-08"
+  },
+  "Native Instruments\treaktor6fx": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-08"
+  },
+  "Native Instruments\treplika": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-17"
+  },
+  "Native Instruments\tsupercharger": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-17"
+  },
+  "Native Instruments\tsuperchargergt": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-08"
+  },
+  "Native Instruments\ttransientmaster": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-08"
+  },
+  "Neutone\tneutonefx": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-02-04"
+  },
+  "Neutone\tneutonemorpho": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-02-05"
+  },
+  "Overloud\tgemechoson": {
+   "basis": "date added",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "Phase Fiasco\tannulus": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-11"
+  },
+  "Phase Fiasco\tkazu": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-23"
+  },
+  "Phase Fiasco\ttapefiasco": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-02-08"
+  },
+  "Phase Fiasco\ttapefiasco2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-23"
+  },
+  "Puremagnetik\tdriftmaker": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-05-09"
+  },
+  "Puremagnetik\texpanse": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-05-09"
+  },
+  "Puremagnetik\tklamur": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-02"
+  },
+  "Puremagnetik\tmimikod": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-02"
+  },
+  "Puremagnetik\tpartikl": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-28"
+  },
+  "Puremagnetik\tpastfabric2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-28"
+  },
+  "Puremagnetik\tpermute": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-02"
+  },
+  "Puremagnetik\treplicas": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-02"
+  },
+  "Puremagnetik\tswarm": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-28"
+  },
+  "Puremagnetik\tverv": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-05-09"
+  },
+  "Puremagnetik\tzerone": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-09-28"
+  },
+  "Reason Studios\treasonrackplugin": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-27"
+  },
+  "Reason Studios\treasonrackplugineffect": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-08-27"
+  },
+  "Session Loops\tpitchnet": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-07-24"
+  },
+  "Sinevibes\tskewv2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-17"
+  },
+  "Somerville Sounds\tprototypedustyfelts": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-09-10"
+  },
+  "Somerville Sounds\tprototypemeyerchoir": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-09-10"
+  },
+  "Sonnox\tsoften": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-11"
+  },
+  "Sonosaurus\tpaulxstretch": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-07-11"
+  },
+  "Sound Particles\tairmusic": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-06-15"
+  },
+  "SoundGhost\tekkodemo": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-05"
+  },
+  "SoundGhost\ttexturize": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-02-12"
+  },
+  "SoundMorph\tdust": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-28"
+  },
+  "SoundMorph\tdustfx": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-28"
+  },
+  "SoundMorph\twavewarper2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-26"
+  },
+  "SoundeviceDigital\trandomachine": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-04-18"
+  },
+  "Soundly\tsoundlyplaceit": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2023-08-04"
+  },
+  "Soundtoys\tdevilloc": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-18"
+  },
+  "Soundtoys\techoboyjr": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-10"
+  },
+  "Soundtoys\tlittlemicroshift": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-15"
+  },
+  "Soundtoys\tlittleplate": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-16"
+  },
+  "Soundtoys\tlittleprimaltap": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-09"
+  },
+  "Soundtoys\tlittleradiator": {
+   "basis": "date added",
+   "by": false,
+   "date": "2022-11-21"
+  },
+  "Soundtoys\tphasemistress": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-11-01"
+  },
+  "Soundtoys\tspaceblender": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-15"
+  },
+  "Spectral Plugins\tocs45": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-04-04"
+  },
+  "Spectral Plugins\tpancz": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-04-04"
+  },
+  "Spectral Plugins\tspacer": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-04-04"
+  },
+  "Spitfire Audio\tbbcsymphonyorchestra": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-27"
+  },
+  "Spitfire Audio\tlabs": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-01-02"
+  },
+  "Spitfire Audio\tsolar": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-07-31"
+  },
+  "Splice\tsplicebridge": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-03-13"
+  },
+  "Splice\tspliceinstrument": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-07-15"
+  },
+  "Splice\tsplicesounds": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-30"
+  },
+  "Splice\tsplicesoundslistener": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-10-30"
+  },
+  "Superlunar\tgx8600": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-07-24"
+  },
+  "Synful\tsynfulorchestra": {
+   "basis": "date added",
+   "by": false,
+   "date": "2023-08-26"
+  },
+  "Ternar Music Technology\tchannelstrip": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-07-04"
+  },
+  "Ternar Music Technology\tflechtwerk": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-19"
+  },
+  "UJAM\tfinretro": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-28"
+  },
+  "UVI\ttapechorus": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-29"
+  },
+  "UVI\ttapecolor": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-29"
+  },
+  "UVI\ttapedelay": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-29"
+  },
+  "UVI\ttapeflanger": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-29"
+  },
+  "UVI\tuviworkstation": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-05-10"
+  },
+  "Unfiltered Audio\tbattlefx": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-05-17"
+  },
+  "Unison\tunisonzenmaster": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2023-07-01"
+  },
+  "Universal Audio (UADx)\t1176fetcompressor": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-30"
+  },
+  "Universal Audio (UADx)\t610apreampandeq": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-01-13"
+  },
+  "Universal Audio (UADx)\t610bpreampandeq": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-01-13"
+  },
+  "Universal Audio (UADx)\tcenturytubechannelstrip": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-30"
+  },
+  "Universal Audio (UADx)\tgalaxytapeecho": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-27"
+  },
+  "Universal Audio (UADx)\toxidetaperecorder": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-19"
+  },
+  "Universal Audio (UADx)\tpolymaxsynth": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-30"
+  },
+  "Universal Audio (UADx)\tpureplatereverb": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-30"
+  },
+  "Universal Audio (UADx)\tshowtime64tubeamp": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-30"
+  },
+  "Universal Audio (UADx)\tverveanalogmachines": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-07-14"
+  },
+  "Universal Audio (UADx)\tvibeanalogmachinesessentials": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-04-15"
+  },
+  "Valhalla DSP, LLC\tvalhallafreqecho": {
+   "basis": "date added",
+   "by": false,
+   "date": "2022-11-27"
+  },
+  "Valhalla DSP, LLC\tvalhallaspacemodulator": {
+   "basis": "date added",
+   "by": false,
+   "date": "2022-11-27"
+  },
+  "Valhalla DSP, LLC\tvalhallasupermassive": {
+   "basis": "date added",
+   "by": false,
+   "date": "2022-11-27"
+  },
+  "Wave Alchemy\ttriazplayer": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-08-13"
+  },
+  "Waves\tcurvesresolve": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-01-19"
+  },
+  "Waves\tcurvesresolvelive": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-01-19"
+  },
+  "Waves\tharmony": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-01-19"
+  },
+  "Waves\tidxintelligentdynamics": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-28"
+  },
+  "Waves\tidxliveintelligentdynamics": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-28"
+  },
+  "Waves\tmagmastressbox": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-11-28"
+  },
+  "Wavesfactory\tcassette": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-03-24"
+  },
+  "Wildergarden\tmaim": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-10"
+  },
+  "XLN Audio\trc20retrocolor": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-11-03"
+  },
+  "XLN Audio\trc20retrocolorv2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-11-03"
+  },
+  "Xynth Audio\tlephonk": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-06-15"
+  },
+  "Youlean\tyouleanloudnessmeter2": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-12-28"
+  },
+  "ZL\tzlequalizer2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-31"
+  },
+  "chowdsp\tchowtapemodel": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2024-07-29"
+  },
+  "every something\tartikulation": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-19"
+  },
+  "every something\tglosso": {
+   "basis": "date added",
+   "by": false,
+   "date": "2026-06-19"
+  },
+  "iZotope\tinsight2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-12-18"
+  },
+  "iZotope\tneutron4elements": {
+   "basis": "date added",
+   "by": false,
+   "date": "2024-08-31"
+  },
+  "iZotope\tozone11elements": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-30"
+  },
+  "iZotope\tozone11equalizer": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-30"
+  },
+  "iZotope\tozoneimager2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-05-22"
+  },
+  "iZotope\trelay": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-12"
+  },
+  "iZotope\ttonalbalancecontrol2": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-05-22"
+  },
+  "iZotope\ttrash": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-10-30"
+  },
+  "iZotope\tvinyl": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-05-22"
+  },
+  "iZotope\tvocaldoubler": {
+   "basis": "date added",
+   "by": false,
+   "date": "2025-06-12"
+  },
+  "mda\tcombo": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\tdegrade": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\tdetune": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\tdubdelay": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\tdynamics": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\trepsycho": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\tringmod": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\troundpan": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\tshepardtones": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\tstereosimulator": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\tsubbasssynthesizer": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\ttalkbox": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\ttesttone": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  },
+  "mda\ttracker": {
+   "basis": "installer receipt",
+   "by": false,
+   "date": "2025-05-31"
+  }
+ }
+}

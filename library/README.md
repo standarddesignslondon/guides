@@ -53,10 +53,11 @@ seventeen `.amxd` files on disk) and link across to their written chapter in
 ## Refreshing
 
 Ask Claude to update the plugin list and the `refresh-plugin-library` skill
-takes it from here. By hand, it is five steps in `_source/`:
+takes it from here. By hand, it is six steps in `_source/`:
 
 ```
 python3 extract.py     # read Live's databases   → plugins.json, m4l2.json
+python3 dates.py       # on mac since (on the Mac, drive mounted) → installed.json
 python3 diff.py        # what changed?           → new_entries.json
                        # research only those, add to links_*.json
 python3 merge.py       # data + links            → catalogue.json
@@ -64,6 +65,9 @@ python3 gen_data.py    #                         → ../catalogue_data.py
 cd .. && python3 build_catalogue.py
 cd .. && python3 build_site.py hub && ./publish.sh
 ```
+
+`dates.py` works out the **on mac since** column; its docstring sets out
+which sources it trusts, how far, and the bulk events it has to ignore.
 
 `extract.py` finds the Live Database folder in a connected folder, or takes a
 path as its argument. **Diff before researching** — a refresh usually has a

@@ -23,6 +23,8 @@ OWN_TYPE={
  # added 13 Oct 2026
  'Divisor':'other','Telegraph':'sequencer','Lens':'sampler',
  'Tracking Lines':'tape','Lucky Dip':'utility','Harvest':'sequencer',
+ # added 3 Nov 2026
+ 'Platter':'sampler',
 }
 sys.path.insert(0, os.path.join(GUIDES,'max-for-live'))
 import site_data as SD
@@ -54,7 +56,7 @@ for e in rows:
     if e['type']=='tutorial': e['role']='Audio Effect'
     out.append({k:e.get(k,'') or '' for k in
         ('slug','name','source','type','role','maker','fmt','origin','note',
-         'version','url','manual','guide')})
+         'version','url','manual','guide','installed','installed_by')})
 
 # sort: own devices first, then alphabetically
 out.sort(key=lambda e:(0 if e['origin']=='Built here' else 1, e['name'].lower()))
@@ -70,15 +72,30 @@ SUBJECT={
  'blurb':'Everything Ableton can load on this machine — every plugin and every '
          'Max for Live device, with a link out to the product page and the '
          'manual wherever one exists. Read straight out of Live’s own '
-         'plugin database and browser index, so it is what Live actually sees, '
-         'not what I remember installing.',
+         'plugin database and browser index, plus the Audio Unit plugins '
+         'installed on the Mac that Live’s VST list leaves out, so it is what '
+         'is really there, not what I remember installing.',
  'legend':'**Type** is the maker’s own classification where they publish one, '
           'otherwise the category Live reports. **guide** links go to the '
           'written chapter for the devices built here; **product** and '
           '**manual** open the maker’s own pages. Entries with no link are '
           'ones whose source I could not find — they are still installed, '
           'just undocumented. *Building Max Devices* lesson patches are filed '
-          'under the **tutorial** type so they stay out of the way.',
+          'under the **tutorial** type so they stay out of the way. '
+          '**On mac since** is the earliest evidence that something was on '
+          'this Mac: Finder’s date added, the installer receipt, Live’s own '
+          'Pack install stamp, or the first time this list included it. It '
+          'was installed on or before that day; an update that replaces the '
+          'files can hide an older install. **by** marks a date set by '
+          'moving a whole folder (the User Library to the external drive on '
+          '14 Aug 2026, most Packs on 25 May 2025) — it was there by then, '
+          'possibly long before. Devices that come inside Live itself show '
+          'when this list first included them. Some plugins are installed only '
+          'as Audio Units (or their VST build will not load), so Live shows '
+          'them only with Audio Units turned on in its Plug-Ins settings; most '
+          'of those have no date, '
+          'because macOS reset their Finder dates on 29 Oct 2026 and they '
+          'have no installer receipt.',
  'hub_label':'guides',
  'accent':'#ff4f00',
  'facets':[

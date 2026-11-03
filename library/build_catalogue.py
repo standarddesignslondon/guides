@@ -44,7 +44,7 @@ EXTRA_CSS = """
 /* ---------- catalogue ---------- */
 .cat-row{
   display:grid; align-items:baseline; gap:0 20px;
-  grid-template-columns:150px 1fr 96px 150px 120px;
+  grid-template-columns:150px 1fr 96px 150px 96px 120px;
   padding:13px 0; border-bottom:1px solid var(--line);
 }
 .cat-row[hidden]{display:none}
@@ -53,13 +53,18 @@ EXTRA_CSS = """
 .c-note{font-size:13px; color:var(--mid); line-height:1.45}
 .c-type{font-size:12px; color:var(--soft)}
 .c-maker{font-size:12px; color:var(--soft); overflow-wrap:anywhere}
+.c-date{font-size:12px; color:var(--soft); font-variant-numeric:tabular-nums;
+  white-space:nowrap}
+.c-date .by{color:var(--mid)}
+.sorter{display:flex; gap:14px; font-size:12px; color:var(--soft);
+  align-items:baseline}
 .c-links{display:flex; gap:12px; justify-content:flex-end}
 .c-links a{font-size:12px; color:var(--soft); border-bottom:1px solid var(--line2)}
 .c-links a:hover{color:var(--accent); border-bottom-color:var(--accent)}
 .c-links .own{color:var(--accent); border-bottom-color:var(--accent)}
 .cat-head{
   display:grid; gap:0 20px;
-  grid-template-columns:150px 1fr 96px 150px 120px;
+  grid-template-columns:150px 1fr 96px 150px 96px 120px;
   padding:14px 0 9px; border-bottom:1px solid var(--ink);
   font-size:10px; text-transform:uppercase; letter-spacing:.07em;
   color:var(--soft);
@@ -74,11 +79,13 @@ EXTRA_CSS = """
 @media (max-width:980px){
   /* name | maker | links across the top, description and type beneath */
   .cat-row,.cat-head{grid-template-columns:1fr 140px 108px}
-  .cat-head span:nth-child(2),.cat-head span:nth-child(3){display:none}
+  .cat-head span:nth-child(2),.cat-head span:nth-child(3),
+  .cat-head span:nth-child(5){display:none}
   .c-maker{grid-column:2; grid-row:1}
   .c-links{grid-column:3; grid-row:1}
   .c-note{grid-column:1/4; grid-row:2; padding-top:5px}
-  .c-type{grid-column:1/4; grid-row:3; padding-top:4px}
+  .c-type{grid-column:1/2; grid-row:3; padding-top:4px}
+  .c-date{grid-column:2/4; grid-row:3; padding-top:4px; text-align:right}
 }
 @media (max-width:620px){
   .cat-row,.cat-head{grid-template-columns:1fr 96px}
@@ -86,7 +93,8 @@ EXTRA_CSS = """
   .c-maker{display:none}
   .c-links{grid-column:2; grid-row:1}
   .c-note{grid-column:1/3}
-  .c-type{grid-column:1/3}
+  .c-type{grid-column:1/2}
+  .c-date{grid-column:2/3}
 }
 """
 
@@ -120,14 +128,32 @@ CAT_JS = """
     if (count) count.textContent = shown + ' of ' + rows.length + ' shown';
   }
 
-  document.querySelectorAll('button.f').forEach(function (b) {
+  document.querySelectorAll('button.f[data-f]').forEach(function (b) {
     state[b.dataset.f] = state[b.dataset.f] || '';
     b.addEventListener('click', function () {
       state[b.dataset.f] = b.dataset.v;
-      b.parentNode.querySelectorAll('button.f').forEach(function (o) {
+      b.parentNode.querySelectorAll('button.f[data-f]').forEach(function (o) {
         o.classList.toggle('on', o === b);
       });
       apply();
+    });
+  });
+
+  var order = rows.slice();
+  document.querySelectorAll('button.s').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var list = order.slice();
+      if (b.dataset.s === 'date') {
+        // newest first; undated entries go last, keeping their a-z order
+        list.sort(function (x, y) {
+          var a = x.dataset.date || '', c = y.dataset.date || '';
+          return a === c ? 0 : (a < c ? 1 : -1);
+        });
+      }
+      list.forEach(function (r) { grid.appendChild(r); });
+      document.querySelectorAll('button.s').forEach(function (o) {
+        o.classList.toggle('on', o === b);
+      });
     });
   });
 
@@ -163,19 +189,28 @@ def links_cell(e):
     return "".join(out)
 
 
+def date_cell(e):
+    if not e.get("installed"):
+        return ""
+    if e.get("installed_by"):
+        return f'<span class="by">by</span> {E(e["installed"])}'
+    return E(e["installed"])
+
+
 def index_page():
     rows = []
     for e in ENTRIES:
         blob = " ".join(str(e.get(k, "")) for k in
                         ("name", "maker", "note", "type", "origin", "source",
-                         "fmt", "version")).lower()
+                         "fmt", "version", "installed")).lower()
         rows.append(f"""<div class="cat-row" data-source="{E(e['source'])}"
    data-type="{E(e['type'])}" data-role="{E(e['role'])}"
-   data-text="{E(blob)}">
+   data-date="{E(e.get('installed') or '')}" data-text="{E(blob)}">
   <span class="c-name">{E(e['name'])}</span>
   <span class="c-note">{rich(e.get('note') or '')}</span>
   <span class="c-type">{E(e['type'])}</span>
   <span class="c-maker">{E(e['maker'])}</span>
+  <span class="c-date">{date_cell(e)}</span>
   <span class="c-links">{links_cell(e)}</span>
 </div>""")
 
@@ -193,6 +228,10 @@ def index_page():
             f.append(f'<button class="f" data-f="{E(fac["field"])}" '
                      f'data-v="{E(v)}">{E(v.lower())}</button>')
         f.append("</div>")
+    f.append('<div class="sorter"><span>sort</span>'
+             '<button class="f s on" data-s="name">a–z</button>'
+             '<button class="f s" data-s="date">newest on the mac</button>'
+             '</div>')
     f.append("</div>")
 
     title_html = "<br>".join(E(x) for x in SUBJECT["title"].split("\n"))
@@ -205,7 +244,8 @@ def index_page():
 {''.join(f)}
 <p class="count-line" id="count"></p>
 <div class="cat-head"><span>name</span><span>what it is</span>
-<span>type</span><span>maker</span><span>links</span></div>
+<span>type</span><span>maker</span><span>on mac since</span>
+<span>links</span></div>
 <div id="grid">{''.join(rows)}</div>
 <p class="empty-msg" id="empty" hidden>nothing matches that.</p>
 <p class="legend">{rich(SUBJECT['legend'])}</p>

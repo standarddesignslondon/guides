@@ -120,6 +120,12 @@
         "manual_url": null,
         "category": "pitch",
         "note": "Free varispeed effect with independent stretch control, from Transit 2."
+      },
+      "HyperWarp": {
+        "product_url": "https://babyaud.io/hyperwarp",
+        "manual_url": "https://babyaud.io/docs/hyperwarp-manual",
+        "category": "granular",
+        "note": "Time-twisting multi-effect built on a granular engine, warped along a drawn graph."
       }
     }
   },
@@ -189,6 +195,12 @@
         "manual_url": "https://cdn.klevgrand.com/manuals/r0verb_docs.pdf",
         "category": "reverb",
         "note": "Hybrid reverb and delay built from up to 50 separate delay lines."
+      },
+      "Revolv": {
+        "product_url": "https://klevgrand.com/products/revolv",
+        "manual_url": "https://cdn.klevgrand.com/manuals/revolv_docs.pdf",
+        "category": "reverb",
+        "note": "Convolution reverb using impulse responses of real Swedish locations."
       }
     }
   },

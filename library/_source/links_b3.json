@@ -212,6 +212,12 @@
         "manual_url": "https://everyreasontopanic.github.io/KAZU/manual.html",
         "category": "other",
         "note": "Multi-effect of 50 effects with a step sequencer and one-click Animate modulation."
+      },
+      "Tape Fiasco 2": {
+        "product_url": "https://www.phasefiasco.com/tapefiasco-2",
+        "manual_url": null,
+        "category": "tape",
+        "note": "Multi-effect turning a single audio loop into a performance instrument."
       }
     }
   },

@@ -1,0 +1,1150 @@
+{
+ "Kilohearts": {
+  "vendor_url": "https://kilohearts.com/",
+  "products": {
+   "kHs 3-Band EQ": {
+    "product_url": "https://kilohearts.com/products/3band_eq",
+    "manual_url": "https://kilohearts.com/docs/snapins#3band_eq",
+    "category": "eq",
+    "note": "Boosts or cuts low, mid and high bands with adjustable split points."
+   },
+   "kHs Bitcrush": {
+    "product_url": "https://kilohearts.com/products/bitcrush",
+    "manual_url": "https://kilohearts.com/docs/snapins#bitcrush",
+    "category": "distortion",
+    "note": "Reduces sample rate and bit depth for lo-fi distortion."
+   },
+   "kHs Channel Mixer": {
+    "product_url": "https://kilohearts.com/products/channel_mixer",
+    "manual_url": "https://kilohearts.com/docs/snapins#channel_mixer",
+    "category": "utility",
+    "note": "Sets each stereo channel's level and can route one channel into the other."
+   },
+   "kHs Chorus": {
+    "product_url": "https://kilohearts.com/products/chorus",
+    "manual_url": "https://kilohearts.com/docs/snapins#chorus",
+    "category": "modulation",
+    "note": "Mixes the signal with slightly delayed, modulated copies to thicken and widen it."
+   },
+   "kHs Clipper": {
+    "product_url": "https://kilohearts.com/products/clipper",
+    "manual_url": "https://kilohearts.com/docs/snapins#clipper",
+    "category": "dynamics",
+    "note": "Free peak-trimming plugin that applies per-sample clipping."
+   },
+   "kHs Comb Filter": {
+    "product_url": "https://kilohearts.com/products/comb_filter",
+    "manual_url": "https://kilohearts.com/docs/snapins#comb_filter",
+    "category": "filter",
+    "note": "Mixes the signal with a delayed copy to create evenly spaced spectral peaks."
+   },
+   "kHs Compactor": {
+    "product_url": "https://kilohearts.com/products/compactor",
+    "manual_url": "https://kilohearts.com/docs/snapins#compactor",
+    "category": "dynamics",
+    "note": "Ducks or limits audio by its own level or a sidechain input."
+   },
+   "kHs Compressor": {
+    "product_url": "https://kilohearts.com/products/compressor",
+    "manual_url": "https://kilohearts.com/docs/snapins#compressor",
+    "category": "dynamics",
+    "note": "Reduces gain when the signal exceeds a set threshold."
+   },
+   "kHs Delay": {
+    "product_url": "https://kilohearts.com/products/delay",
+    "manual_url": "https://kilohearts.com/docs/snapins#delay",
+    "category": "delay",
+    "note": "Echo delay with tempo sync, feedback, panning and ducking."
+   },
+   "kHs Distortion": {
+    "product_url": "https://kilohearts.com/products/distortion",
+    "manual_url": "https://kilohearts.com/docs/snapins#distortion",
+    "category": "distortion",
+    "note": "Several distortion algorithms with drive, bias and stereo spread controls."
+   },
+   "kHs Dual Delay": {
+    "product_url": "https://kilohearts.com/products/dual_delay",
+    "manual_url": "https://kilohearts.com/docs/snapins#dual_delay",
+    "category": "delay",
+    "note": "Two delay lines that feed into each other."
+   },
+   "kHs Dynamics": {
+    "product_url": "https://kilohearts.com/products/dynamics",
+    "manual_url": "https://kilohearts.com/docs/snapins#dynamics",
+    "category": "dynamics",
+    "note": "Upward and downward compression and expansion set on a visual graph."
+   },
+   "kHs Ensemble": {
+    "product_url": "https://kilohearts.com/products/ensemble",
+    "manual_url": "https://kilohearts.com/docs/snapins#ensemble",
+    "category": "modulation",
+    "note": "Simulates multiple detuned unison voices using phase modulation."
+   },
+   "kHs Filter": {
+    "product_url": "https://kilohearts.com/products/filter",
+    "manual_url": "https://kilohearts.com/docs/snapins#filter",
+    "category": "filter",
+    "note": "Standard filter types including low-pass, high-pass, band-pass and shelving."
+   },
+   "kHs Flanger": {
+    "product_url": "https://kilohearts.com/products/flanger",
+    "manual_url": "https://kilohearts.com/docs/snapins#flanger",
+    "category": "modulation",
+    "note": "Mixes the signal with a short, modulated delayed copy for a sweeping effect."
+   },
+   "kHs Formant Filter": {
+    "product_url": "https://kilohearts.com/products/formant_filter",
+    "manual_url": "https://kilohearts.com/docs/snapins#formant_filter",
+    "category": "filter",
+    "note": "Boosts two frequencies to imitate vowel sounds."
+   },
+   "kHs Frequency Shifter": {
+    "product_url": "https://kilohearts.com/products/frequency_shifter",
+    "manual_url": "https://kilohearts.com/docs/snapins#frequency_shifter",
+    "category": "pitch",
+    "note": "Shifts every frequency in the signal up or down by a fixed amount."
+   },
+   "kHs Gain": {
+    "product_url": "https://kilohearts.com/products/gain",
+    "manual_url": "https://kilohearts.com/docs/snapins#gain",
+    "category": "utility",
+    "note": "Raises or lowers level in decibels and shows output level."
+   },
+   "kHs Gate": {
+    "product_url": "https://kilohearts.com/products/gate",
+    "manual_url": "https://kilohearts.com/docs/snapins#gate",
+    "category": "dynamics",
+    "note": "Passes audio only above a threshold, with timing and attenuation controls."
+   },
+   "kHs Haas": {
+    "product_url": "https://kilohearts.com/products/haas",
+    "manual_url": "https://kilohearts.com/docs/snapins#haas",
+    "category": "spatial",
+    "note": "Widens the stereo image by slightly delaying the left or right channel."
+   },
+   "kHs Ladder Filter": {
+    "product_url": "https://kilohearts.com/products/ladder_filter",
+    "manual_url": "https://kilohearts.com/docs/snapins#ladder_filter",
+    "category": "filter",
+    "note": "Emulates classic hardware synth low-pass ladder filters, with optional saturation."
+   },
+   "kHs Limiter": {
+    "product_url": "https://kilohearts.com/products/limiter",
+    "manual_url": "https://kilohearts.com/docs/snapins#limiter",
+    "category": "dynamics",
+    "note": "Prevents audio from exceeding a maximum level."
+   },
+   "kHs Nonlinear Filter": {
+    "product_url": "https://kilohearts.com/products/nonlinear_filter",
+    "manual_url": "https://kilohearts.com/docs/snapins#nonlinear_filter",
+    "category": "filter",
+    "note": "Filter that adds colour and distortion through internal nonlinearities."
+   },
+   "kHs Phase Distortion": {
+    "product_url": "https://kilohearts.com/products/phase_distortion",
+    "manual_url": "https://kilohearts.com/docs/snapins#phase_distortion",
+    "category": "distortion",
+    "note": "Distorts sound by shifting harmonic phases, driven by the signal itself."
+   },
+   "kHs Phaser": {
+    "product_url": "https://kilohearts.com/products/phaser",
+    "manual_url": "https://kilohearts.com/docs/snapins#phaser",
+    "category": "modulation",
+    "note": "Filters the signal to create moving peaks and troughs across the spectrum."
+   },
+   "kHs Pitch Shifter": {
+    "product_url": "https://kilohearts.com/products/pitch_shifter",
+    "manual_url": "https://kilohearts.com/docs/snapins#pitch_shifter",
+    "category": "pitch",
+    "note": "Raises or lowers pitch by a set number of semitones."
+   },
+   "kHs Resonator": {
+    "product_url": "https://kilohearts.com/products/resonator",
+    "manual_url": "https://kilohearts.com/docs/snapins#resonator",
+    "category": "filter",
+    "note": "Adds harmonic resonance at a chosen pitch with decay and timbre control."
+   },
+   "kHs Reverb": {
+    "product_url": "https://kilohearts.com/products/reverb",
+    "manual_url": "https://kilohearts.com/docs/snapins#reverb",
+    "category": "reverb",
+    "note": "Simulates room reflections to add a sense of space."
+   },
+   "kHs Reverser": {
+    "product_url": "https://kilohearts.com/products/reverser",
+    "manual_url": "https://kilohearts.com/docs/snapins#reverser",
+    "category": "other",
+    "note": "Plays reversed sections of the input at a set delay, mixed with dry."
+   },
+   "kHs Ring Mod": {
+    "product_url": "https://kilohearts.com/products/ring_mod",
+    "manual_url": "https://kilohearts.com/docs/snapins#ring_mod",
+    "category": "modulation",
+    "note": "Ring modulates the input with an oscillator, noise or a secondary input."
+   },
+   "kHs Shaper": {
+    "product_url": "https://kilohearts.com/products/shaper",
+    "manual_url": "https://kilohearts.com/docs/snapins#shaper",
+    "category": "distortion",
+    "note": "Reshapes audio level with a custom curve to create distortion."
+   },
+   "kHs Stereo": {
+    "product_url": "https://kilohearts.com/products/stereo",
+    "manual_url": "https://kilohearts.com/docs/snapins#stereo",
+    "category": "spatial",
+    "note": "Adjusts stereo width, mid level and panning, with balance and correlation meter."
+   },
+   "kHs Tape Stop": {
+    "product_url": "https://kilohearts.com/products/tape_stop",
+    "manual_url": "https://kilohearts.com/docs/snapins#tape_stop",
+    "category": "other",
+    "note": "Simulates a tape machine slowing to a stop or spinning up."
+   },
+   "kHs Trance Gate": {
+    "product_url": "https://kilohearts.com/products/trance_gate",
+    "manual_url": "https://kilohearts.com/docs/snapins#trance_gate",
+    "category": "modulation",
+    "note": "Modulates volume with a programmable rhythmic pattern."
+   },
+   "kHs Transient Shaper": {
+    "product_url": "https://kilohearts.com/products/transient_shaper",
+    "manual_url": "https://kilohearts.com/docs/snapins#transient_shaper",
+    "category": "dynamics",
+    "note": "Adjusts the strength of a sound's attack and sustain."
+   }
+  }
+ },
+ "mda": {
+  "vendor_url": "https://sourceforge.net/projects/mda-vst/",
+  "products": {
+   "Combo": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "amp",
+    "note": "Guitar amp simulator with selectable speaker types and distortion controls."
+   },
+   "Degrade": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "distortion",
+    "note": "Bit-depth and sample-rate reduction imitating vintage digital hardware."
+   },
+   "Detune": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "pitch",
+    "note": "Pitch shifter shifting left channel down and right up for detuning."
+   },
+   "Dub Delay": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "delay",
+    "note": "Delay with filtering, saturation and pitch modulation in the feedback loop."
+   },
+   "Dynamics": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "dynamics",
+    "note": "Compressor and noise gate with a limiter preset to 0 dBFS."
+   },
+   "Re-Psycho!": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "pitch",
+    "note": "Triggered pitch shifter that detects transients and retriggers playback."
+   },
+   "Ring Mod": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "modulation",
+    "note": "Simple ring modulator with sine carrier and feedback control."
+   },
+   "Round Pan": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "spatial",
+    "note": "3D autopanner making sound seem to circle the listener."
+   },
+   "Shepard Tones": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "other",
+    "note": "Generates continuously rising or falling Risset tones."
+   },
+   "Stereo Simulator": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "spatial",
+    "note": ""
+   },
+   "Sub-Bass Synthesizer": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "other",
+    "note": ""
+   },
+   "Talkbox": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "vocal",
+    "note": "High-resolution vocoder using a second input bus as carrier."
+   },
+   "Test Tone": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "utility",
+    "note": "Generates sine, noise and sweep test signals."
+   },
+   "Tracker": {
+    "product_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/",
+    "manual_url": "https://sourceforge.net/projects/mda-vst/files/mda-vst/mda-au-2020-12-28/mda%20Audio%20Units%20readme.txt/download",
+    "category": "other",
+    "note": "Tracks input pitch to drive an oscillator, ring modulator or peaking EQ."
+   }
+  }
+ },
+ "Waves": {
+  "vendor_url": "https://www.waves.com/",
+  "products": {
+   "Abbey Road Chambers": {
+    "product_url": "https://www.waves.com/plugins/abbey-road-chambers",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/abbey-road-chambers.pdf",
+    "category": "reverb",
+    "note": "Models the Abbey Road Studio Two echo chamber, including its S.T.E.E.D. setup."
+   },
+   "Abbey Road Plates": {
+    "product_url": "https://www.waves.com/plugins/abbey-road-reverb-plates",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/abbey-road-reverb-plates.pdf",
+    "category": "reverb",
+    "note": "Models the four reverb plates at Abbey Road Studios."
+   },
+   "Abbey Road Saturator": {
+    "product_url": "https://www.waves.com/plugins/abbey-road-saturator",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/abbey-road-saturator.pdf",
+    "category": "distortion",
+    "note": "Saturation chain modelled on an EMI TG12321 unit, with compansion effect."
+   },
+   "Abbey Road Vinyl": {
+    "product_url": "https://www.waves.com/plugins/abbey-road-vinyl",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/abbey-road-vinyl.pdf",
+    "category": "other",
+    "note": "Models Abbey Road's vinyl cutting and playback chain."
+   },
+   "Abbey Road Vinyl Light": {
+    "product_url": "https://www.waves.com/plugins/abbey-road-vinyl",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/abbey-road-vinyl.pdf",
+    "category": "other",
+    "note": "Lighter-CPU component of Abbey Road Vinyl that omits some functions."
+   },
+   "AR TG Mastering": {
+    "product_url": "https://www.waves.com/plugins/abbey-road-tg-mastering-chain",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/abbey-road-tg-mastering-chain.pdf",
+    "category": "other",
+    "note": "Modular mastering chain modelled on the EMI TG12410 transfer console."
+   },
+   "AR TG Meter Bridge": {
+    "product_url": "https://www.waves.com/plugins/abbey-road-tg-mastering-chain",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/abbey-road-tg-mastering-chain.pdf",
+    "category": "utility",
+    "note": "Companion plugin giving access to all TG Mastering Chain instances in a session."
+   },
+   "Bass Fingers": {
+    "product_url": "https://www.waves.com/plugins/bass-fingers",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/bass-fingers.pdf",
+    "category": "sampler",
+    "note": "Multi-sampled fingerstyle bass instrument with keyswitched articulations."
+   },
+   "J37": {
+    "product_url": "https://www.waves.com/plugins/j37-tape",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/j37-tape.pdf",
+    "category": "tape",
+    "note": "Tape saturation modelled on the Abbey Road J37 tape machine."
+   },
+   "REDD17": {
+    "product_url": "https://www.waves.com/plugins/redd",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/redd.zip",
+    "category": "other",
+    "note": "REDD Consoles component modelling the REDD.17 valve console (Siemens V72 amps)."
+   },
+   "REDD37-51": {
+    "product_url": "https://www.waves.com/plugins/redd",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/redd.zip",
+    "category": "other",
+    "note": "REDD Consoles component modelling the REDD.37 console with REDD.51 preamps."
+   },
+   "Reel ADT": {
+    "product_url": "https://www.waves.com/plugins/reel-adt",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/reel-adt.pdf",
+    "category": "modulation",
+    "note": "Models Abbey Road's tape-based automatic double tracking effect."
+   },
+   "Reel ADT2V": {
+    "product_url": "https://www.waves.com/plugins/reel-adt",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/reel-adt.pdf",
+    "category": "modulation",
+    "note": "Reel ADT component adding a second ADT voice with its own controls."
+   },
+   "RS56": {
+    "product_url": "https://www.waves.com/plugins/rs56",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/rs56.pdf",
+    "category": "eq",
+    "note": "Passive three-band EQ with stereo, dual-mono and mid-side modes."
+   },
+   "TG12345": {
+    "product_url": "https://www.waves.com/plugins/emi-tg12345",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/tg12345.pdf",
+    "category": "other",
+    "note": "Channel strip modelled on the EMI TG12345 console, with EQ and compressor."
+   },
+   "The Kings Microphones": {
+    "product_url": "https://www.waves.com/plugins/the-king-s-microphones",
+    "manual_url": "https://assets.wavescdn.com/pdf/plugins/the-kings-microphones.pdf",
+    "category": "other",
+    "note": "Models three historic royal microphones from the EMI Archive."
+   }
+  }
+ },
+ "Wavesfactory": {
+  "vendor_url": "https://www.wavesfactory.com/",
+  "products": {
+   "Cassette": {
+    "product_url": "https://www.wavesfactory.com/audio-plugins/cassette/",
+    "manual_url": "https://www.wavesfactory.com/audio-plugins/manuals/Cassette-User-Manual.pdf",
+    "category": "tape",
+    "note": "Simulates cassette tape frequency response, saturation and noise."
+   }
+  }
+ },
+ "AudioThing": {
+  "vendor_url": "https://www.audiothing.net/",
+  "products": {
+   "Dials": {
+    "product_url": "https://audiothing.net/effects/dials/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_Dials.pdf",
+    "category": "eq",
+    "note": "Channel strip modelling a 1950s German preamp and Allison Labs filters."
+   },
+   "Noises": {
+    "product_url": "https://audiothing.net/instruments/noises/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_Noises.pdf",
+    "category": "other",
+    "note": "Noise texture instrument with 36 noise banks, sequencing and filtering, made with Hainbach."
+   },
+   "Things Flip EQ": {
+    "product_url": "https://audiothing.net/effects/things-tilt/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_ThingsFlipEQ.pdf",
+    "category": "eq",
+    "note": "Tilt EQ with mid/side mode; one knob boosts highs and cuts lows."
+   },
+   "Things Texture": {
+    "product_url": "https://audiothing.net/effects/things-texture/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_ThingsTexture.pdf",
+    "category": "granular",
+    "note": "Granular reverb with pitch shifting and a mid/side mode."
+   },
+   "Vinyl Strip": {
+    "product_url": "https://audiothing.net/effects/vinyl-strip/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_Vinyl_Strip.pdf",
+    "category": "distortion",
+    "note": "Modular channel strip of six rearrangeable modules adding vinyl-style character."
+   },
+   "Wires": {
+    "product_url": "https://audiothing.net/effects/wires/",
+    "manual_url": "https://www.audiothing.net/docs/AudioThing_Wires.pdf",
+    "category": "delay",
+    "note": "Echo effect emulating a 1970s Soviet magnetic wire recorder."
+   }
+  }
+ },
+ "Cherry Audio": {
+  "vendor_url": "https://cherryaudio.com/",
+  "products": {
+   "Novachord": {
+    "product_url": "https://cherryaudio.com/products/novachord-solovox",
+    "manual_url": "https://docs.cherryaudio.com/cherry-audio/instruments/novachord/getting-started",
+    "category": "synth",
+    "note": "Recreation of Hammond's 1939 polyphonic Novachord with 32 synthesized voices."
+   },
+   "Solovox": {
+    "product_url": "https://cherryaudio.com/products/novachord-solovox",
+    "manual_url": "https://docs.cherryaudio.com/cherry-audio/instruments/solovox/getting-started",
+    "category": "synth",
+    "note": "Virtual analogue model of Hammond's monophonic Solovox keyboard attachment (1940-1950)."
+   }
+  }
+ },
+ "GForce": {
+  "vendor_url": "https://www.gforcesoftware.com/",
+  "products": {
+   "M-Tron Pro": {
+    "product_url": "https://www.gforcesoftware.com/products/m-tron-pro/",
+    "manual_url": null,
+    "category": "sampler",
+    "note": "Mellotron M400 recreation from original master tapes; page now covers M-Tron Pro IV."
+   }
+  }
+ },
+ "IK Multimedia": {
+  "vendor_url": "https://www.ikmultimedia.com/",
+  "products": {
+   "Hammond B-3X": {
+    "product_url": "https://www.ikmultimedia.com/products/hammondb3x/",
+    "manual_url": "https://ikmultimedia.com/pages/downloads?product=hammondb3x",
+    "category": "synth",
+    "note": "Officially licensed Hammond tonewheel organ with Leslie cabinet and stomp effects."
+   },
+   "Lurssen Mastering Console": {
+    "product_url": "https://www.ikmultimedia.com/products/lurssen/",
+    "manual_url": null,
+    "category": "dynamics",
+    "note": "Emulation of the mastering chain used at Lurssen Mastering."
+   },
+   "MixBox": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "other",
+    "note": "500-series-style rack holding eight of 70+ mixing and effects processors."
+   },
+   "Philharmonik 2": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "sampler",
+    "note": "Orchestral sample library made with Miroslav Vitous, built on SampleTank 3."
+   },
+   "SampleTron 2": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "sampler",
+    "note": "Tape-based sampler of Mellotron, Chamberlin and other tapes on SampleTank 4 engine."
+   }
+  }
+ },
+ "Klevgrand": {
+  "vendor_url": "https://klevgrand.com",
+  "products": {
+   "DAW Cassette": {
+    "product_url": "https://klevgrand.com/products/dawcassette",
+    "manual_url": "https://cdn.klevgrand.com/manuals/dawcassette_docs_1_1.pdf",
+    "category": "tape",
+    "note": "Cassette deck emulation adding saturation, distortion, noise and wobble."
+   }
+  }
+ },
+ "XLN Audio": {
+  "vendor_url": "https://www.xlnaudio.com/",
+  "products": {
+   "DB-30 Drum Butter": {
+    "product_url": "https://www.xlnaudio.com/products/addictive_fx/effect/db-30_drum_butter",
+    "manual_url": null,
+    "category": "dynamics",
+    "note": "Drum bus processor with six modules for punch and character."
+   },
+   "Life": {
+    "product_url": "https://www.xlnaudio.com/products/life",
+    "manual_url": null,
+    "category": "drums",
+    "note": "Turns recorded or imported sounds into automatically generated beat grooves."
+   },
+   "Life DAW Recorder": {
+    "product_url": "https://www.xlnaudio.com/products/life",
+    "manual_url": null,
+    "category": "utility",
+    "note": "Companion to Life that captures audio from any DAW output into Life."
+   },
+   "RC-20 Retro Color": {
+    "product_url": "https://www.xlnaudio.com/products/addictive_fx/effect/rc-20_retro_color",
+    "manual_url": null,
+    "category": "distortion",
+    "note": "Effect recreating the sound and imperfections of vintage recording gear."
+   },
+   "RC-20 Retro Color v2": {
+    "product_url": "https://www.xlnaudio.com/products/addictive_fx/effect/rc-20_retro_color",
+    "manual_url": null,
+    "category": "distortion",
+    "note": "Version 2 of RC-20; installs as a separate plugin alongside the original."
+   },
+   "XO": {
+    "product_url": "https://www.xlnaudio.com/products/xo",
+    "manual_url": null,
+    "category": "drums",
+    "note": "Drum plugin that arranges sample libraries by sound similarity for auditioning."
+   }
+  }
+ },
+ "KORG": {
+  "vendor_url": "https://www.korg.com/",
+  "products": {
+   "Abu Dhabi (Slicer)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "sampler",
+    "note": "Loop slicer that automatically slices loops; supports imported samples."
+   },
+   "Alexandria (Organ)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Sampled vintage organ with rotary speaker, vibrato/chorus and overdrive."
+   },
+   "Amsterdam (SFX)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "sampler",
+    "note": "Four-part PCM module with 100+ effects, one-shots, scratches and chord samples."
+   },
+   "Berlin (Sync)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Monophonic lead synth with a sync oscillator."
+   },
+   "Bilbao (Sampler)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "sampler",
+    "note": "16-part one-shot sample player supporting imported samples."
+   },
+   "Brussels (Lead)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Monophonic synth producing thick unison lead sounds."
+   },
+   "Chiangmai (FM)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Polyphonic variable phase modulation (VPM) synth, suited to bell tones."
+   },
+   "Chicago (Acid)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Acid bass machine with Bite filter, arpeggiator and multi-effect."
+   },
+   "Darwin (M1)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "PCM synth based on KORG iM1 with M1 workstation sounds."
+   },
+   "Dublin (Semi-modular)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Monophonic semi-modular synth with subtractive synthesis and patching."
+   },
+   "Firenze (Clav)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Clavinet-style keyboard with pickup and filter switches and Mute slider."
+   },
+   "Gladstone (Drum)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "drums",
+    "note": "Acoustic drum module with 20 kits and master effects."
+   },
+   "Glasgow (Keys)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "PCM synth with strings, brass and synth sounds."
+   },
+   "Helsinki (Pad)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Polyphonic ambient pad synth with lo-fi and reverb effects."
+   },
+   "Kamata (4-Bit)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Wavetable synth based on Namco CUSTOM30 arcade sound chip, 4-bit samples."
+   },
+   "Kiev (Vector)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Vector synthesis across four oscillators with touchpad warp effect."
+   },
+   "Kingston (Arcade)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Polyphonic 8-bit chip synth with classic computer waveforms."
+   },
+   "Lexington (Odyssey)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Duophonic synth based on the ARP Odyssey with three filter types."
+   },
+   "Lisbon (Sci-Fi)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Polyphonic circuit-modelled sci-fi synth with five effects."
+   },
+   "London (Drum)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "drums",
+    "note": "PCM drum module with 400+ samples and per-part effects."
+   },
+   "Madrid (Bass)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Acoustic and electric bass instrument with six bass amp types."
+   },
+   "Marseille (Keys)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Polyphonic PCM synth with keys, brass, strings and a Chord function."
+   },
+   "Miami (Wobble)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Monophonic wobble bass synth with X-MOD oscillator and WOBBLE modulation."
+   },
+   "Milpitas (Wavestation)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Wave sequence synth based on the KORG Wavestation."
+   },
+   "Montpellier (Mono/Poly)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Four-VCO analogue synth based on the KORG Mono/Poly."
+   },
+   "Montreal (E.Piano)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Vintage electric piano with EQ, tremolo and drive circuit."
+   },
+   "Phoenix (Analog)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Polyphonic analogue-emulation synth for chords and pads."
+   },
+   "Recife (Drum)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "drums",
+    "note": "Drum module with 16 pads, acoustic drums, sound effects and 30 kits."
+   },
+   "Rosario (G.Amp)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "amp",
+    "note": "Guitar effect processor with 19 amp models, 12 cabinets and 24 pedals."
+   },
+   "Salzburg (Piano)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Acoustic grand piano with un-looped samples and sympathetic resonance."
+   },
+   "Stockholm (Dr. Octorex)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "sampler",
+    "note": "Reason's Dr. Octo Rex loop player; loads eight REX files."
+   },
+   "Tokyo (E.Perc)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "drums",
+    "note": "Analogue percussion synth with four modules for kick, snare, tom, percussion."
+   },
+   "Vancouver (Sample)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "sampler",
+    "note": "Keyboard-played layering sampler with 90+ sounds and two sample oscillators."
+   },
+   "Wolfsburg (Digital)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "synth",
+    "note": "Hybrid polyphonic synth using digitally resampled analogue waveforms."
+   },
+   "Zurich (Recorder)": {
+    "product_url": "https://www.korg.com/us/products/software/korg_gadget/gadget_collection.php",
+    "manual_url": "https://www.korg.com/us/support/download/manual/0/170/2364/",
+    "category": "utility",
+    "note": "Audio recorder gadget for importing audio and recording vocals or instruments."
+   }
+  }
+ },
+ "Aberrant DSP": {
+  "vendor_url": "https://aberrantdsp.com/",
+  "products": {
+   "SketchCassette II": {
+    "product_url": "https://aberrantdsp.com/plugins/sketchcassette/",
+    "manual_url": "https://aberrantdsp.com/wp-content/uploads/2020/11/SketchCassette-II-User-Manual.pdf",
+    "category": "tape",
+    "note": "Cassette-inspired degradation with saturation, wow and flutter, and dropouts."
+   }
+  }
+ },
+ "Audio Damage, Inc.": {
+  "vendor_url": "https://www.audiodamage.com/",
+  "products": {
+   "Descent": {
+    "product_url": "https://www.audiodamage.com/products/ad061-descent",
+    "manual_url": "https://audio-damage-inc.github.io/manuals/Descent_Manual.pdf",
+    "category": "granular",
+    "note": "Real-time granular effect playing incoming audio back as up to fifty grains."
+   },
+   "Replicant 2": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "other",
+    "note": "Earlier version of Audio Damage's Replicant; the maker now sells Replicant 3."
+   }
+  }
+ },
+ "Audiority": {
+  "vendor_url": "https://www.audiority.com/",
+  "products": {
+   "PlexiTape": {
+    "product_url": "https://www.audiority.com/shop/plexitape/",
+    "manual_url": "https://www.audiority.com/manuals/Audiority_PlexiTape_Manual.pdf?ver=1.4",
+    "category": "delay",
+    "note": "Analog-modelled tape echo based on the Maestro Echoplex EP-3."
+   },
+   "The Sword": {
+    "product_url": "https://www.audiority.com/shop/the-sword/",
+    "manual_url": "https://www.audiority.com/manuals/Audiority_TheSword_Manual.pdf",
+    "category": "eq",
+    "note": "Free booster pairing a 10-band graphic EQ with a 20dB gain stage."
+   }
+  }
+ },
+ "Caelum Audio": {
+  "vendor_url": "https://www.caelumaudio.com/",
+  "products": {
+   "Flux Mini": {
+    "product_url": "https://www.caelumaudio.com/CaelumAudio/?Page=FluxMini",
+    "manual_url": null,
+    "category": "modulation",
+    "note": "Legacy free graph envelope shaping amplitude or low/high-pass filter."
+   },
+   "Flux Mini 2": {
+    "product_url": "https://www.caelumaudio.com/CaelumAudio/?Page=FluxMini2",
+    "manual_url": null,
+    "category": "modulation",
+    "note": "Free drawable graph modulating cutoff, resonance, amplitude and mix."
+   },
+   "Tape Cassette 2": {
+    "product_url": "https://www.caelumaudio.com/CaelumAudio/?Page=TapeCassette2",
+    "manual_url": null,
+    "category": "tape",
+    "note": "Free cassette emulation adding saturation, noise, and wow and flutter."
+   }
+  }
+ },
+ "chowdsp": {
+  "vendor_url": "https://chowdsp.com/",
+  "products": {
+   "CHOWTapeModel": {
+    "product_url": "https://github.com/jatinchowdhury18/AnalogTapeModel",
+    "manual_url": "https://chowdsp.com/manuals/ChowTapeManual.pdf",
+    "category": "tape",
+    "note": "Open-source reel-to-reel analog tape emulation, originally modelling the Sony TC-260."
+   }
+  }
+ },
+ "Davisynth": {
+  "vendor_url": "https://www.davisynth.com/",
+  "products": {
+   "Ripple Delay Free": {
+    "product_url": "https://www.davisynth.com/product/ripple-delay-free/",
+    "manual_url": null,
+    "category": "delay",
+    "note": "Free curve-based multi-tap delay; no longer developed."
+   }
+  }
+ },
+ "Freakshow Industries": {
+  "vendor_url": "https://freakshowindustries.com/",
+  "products": {
+   "Backmask": {
+    "product_url": "https://freakshowindustries.com/backmask",
+    "manual_url": null,
+    "category": "other",
+    "note": "Chaotic reverser plugin with an automatable chaos mode."
+   },
+   "DreamEater": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "delay",
+    "note": "Not listed on maker's current site; press describes it as a multi-delay."
+   },
+   "Dumpster Fire": {
+    "product_url": "https://freakshowindustries.com/dumpster-fire",
+    "manual_url": null,
+    "category": "pitch",
+    "note": "Five-knob transformation effect; maker page gives few technical details."
+   },
+   "MISHBY": {
+    "product_url": "https://freakshowindustries.com/mishby",
+    "manual_url": null,
+    "category": "tape",
+    "note": "Tape-based effect modelled on a broken tape machine."
+   },
+   "PocketDimension": {
+    "product_url": "https://freakshowindustries.com/pocketdimension",
+    "manual_url": null,
+    "category": "granular",
+    "note": "Experimental time-manipulation effect; maker page gives few technical details."
+   }
+  }
+ },
+ "Full Bucket Music": {
+  "vendor_url": "https://www.fullbucket.de/music/",
+  "products": {
+   "BucketPops": {
+    "product_url": "https://www.fullbucket.de/music/bucketpops.html",
+    "manual_url": "https://www.fullbucket.de/music/dl.php?file=bucketpops_manual_1_1",
+    "category": "drums",
+    "note": "Simulation of the 1966 KORG Mini Pops-7 rhythm machine."
+   },
+   "Nabla": {
+    "product_url": "https://www.fullbucket.de/music/nabla.html",
+    "manual_url": "https://www.fullbucket.de/music/dl.php?file=nabla_manual_1_4",
+    "category": "synth",
+    "note": "Simulation of the 1979 KORG Delta DL-50 strings synthesizer."
+   },
+   "NY": {
+    "product_url": "https://www.fullbucket.de/music/ny.html",
+    "manual_url": "https://www.fullbucket.de/music/dl.php?file=ny_manual_1_0",
+    "category": "synth",
+    "note": "Simulation of the 1979 KORG Lambda ES-50 polyphonic ensemble."
+   }
+  }
+ },
+ "HY-Plugins": {
+  "vendor_url": null,
+  "products": {
+   "HY-ESG": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "dynamics",
+    "note": "Free gate effect driven by a Euclidean sequencer, distributed via Bedroom Producers Blog."
+   }
+  }
+ },
+ "Lostin70s": {
+  "vendor_url": "https://lostin70s.com/",
+  "products": {
+   "DevilSpring": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "reverb",
+    "note": "Spring reverb, now replaced on maker's site by Timeless Reverb."
+   },
+   "Harmonus": {
+    "product_url": "https://lostin70s.com/products/Harmonus",
+    "manual_url": null,
+    "category": "sampler",
+    "note": "Free sampled 1968 Magnus Model 300 harmonium with built-in effects."
+   },
+   "Live Pedalboard": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "amp",
+    "note": "Guitar stompbox rig; no longer listed on maker's site."
+   }
+  }
+ },
+ "Newfangled Audio": {
+  "vendor_url": "https://www.newfangledaudio.com/",
+  "products": {
+   "Pendulate": {
+    "product_url": "https://www.newfangledaudio.com/pendulate",
+    "manual_url": null,
+    "category": "synth",
+    "note": "Free chaotic monosynth built on a double-pendulum oscillator."
+   }
+  }
+ },
+ "Polyverse Music": {
+  "vendor_url": "https://polyversemusic.com/",
+  "products": {
+   "Wider": {
+    "product_url": "https://polyversemusic.com/products/wider/",
+    "manual_url": null,
+    "category": "spatial",
+    "note": "Free stereo widener that stays phase-safe when summed to mono."
+   }
+  }
+ },
+ "SampleScience": {
+  "vendor_url": "https://www.samplescience.info/",
+  "products": {
+   "80s Soviet Drums": {
+    "product_url": "https://www.samplescience.info/2023/10/80s-soviet-drums.html",
+    "manual_url": null,
+    "category": "drums",
+    "note": "Nine kits sampled from 1980s Soviet drum machines, with effects."
+   },
+   "Pianotone 600 v2": {
+    "product_url": "https://www.samplescience.info/2020/12/pianotone-600.html",
+    "manual_url": null,
+    "category": "sampler",
+    "note": "Sampled 1970s Jen Pianotone 600 analog electronic piano."
+   },
+   "VHS Noise Generator": {
+    "product_url": "https://www.samplescience.info/2023/12/vhs-noise-generator.html",
+    "manual_url": null,
+    "category": "other",
+    "note": "26 background noises recorded from old VCR tapes, plus effects."
+   }
+  }
+ },
+ "Sinuslabs": {
+  "vendor_url": "https://www.sinuslabs.io/",
+  "products": {
+   "Bandbreite": {
+    "product_url": "https://www.sinuslabs.io/products/bandbreite",
+    "manual_url": null,
+    "category": "distortion",
+    "note": "Free saturation plugin with Drive, Tone and Dry/Wet controls."
+   }
+  }
+ },
+ "Somerville Sounds": {
+  "vendor_url": "https://somervillesounds.com/",
+  "products": {
+   "Prototype Dusty Felts": {
+    "product_url": "https://somervillesounds.com/dustyfelts/",
+    "manual_url": null,
+    "category": "sampler",
+    "note": "Free felt piano instrument based on Jon Meyer's Kawai felt piano samples."
+   },
+   "Prototype Meyer Choir": {
+    "product_url": "https://somervillesounds.com/meyer_choir/",
+    "manual_url": null,
+    "category": "sampler",
+    "note": "Pay-what-you-want family choir vocal instrument."
+   },
+   "Prototype Rubber Bridge": {
+    "product_url": "https://somervillesounds.com/rubber-bridge-plucks/",
+    "manual_url": null,
+    "category": "sampler",
+    "note": "Muted parlour guitar with rubber bridge and flat-wound strings."
+   }
+  }
+ },
+ "Sonosaurus": {
+  "vendor_url": "https://sonosaurus.com/",
+  "products": {
+   "PaulXStretch": {
+    "product_url": "https://sonosaurus.com/paulxstretch/",
+    "manual_url": null,
+    "category": "pitch",
+    "note": "Free open-source extreme time-stretching tool for ambient and sound design."
+   }
+  }
+ },
+ "Soundly": {
+  "vendor_url": "https://getsoundly.com/",
+  "products": {
+   "Soundly Place it": {
+    "product_url": "https://getsoundly.com/tools/",
+    "manual_url": null,
+    "category": "spatial",
+    "note": "Free speaker emulation placed in 40 convolution-based environments."
+   }
+  }
+ },
+ "Spectral Plugins": {
+  "vendor_url": null,
+  "products": {
+   "OCS-45": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "tape",
+    "note": "Cassette simulator; maker ceased trading in 2024 and site is offline."
+   },
+   "Pancz": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "dynamics",
+    "note": "Multiband transient shaper; maker ceased trading in 2024."
+   },
+   "Spacer": {
+    "product_url": null,
+    "manual_url": null,
+    "category": "reverb",
+    "note": "Modular reverb and delay multi-effect; maker ceased trading in 2024."
+   }
+  }
+ },
+ "superflyDSP": {
+  "vendor_url": "https://superflydsp.com/",
+  "products": {
+   "Lost-Vinyls": {
+    "product_url": "https://superflydsp.com/index.php/lost-vinyls-freeware/",
+    "manual_url": null,
+    "category": "other",
+    "note": "Free lo-fi vinyl effect with selectable vinyl types and noise."
+   }
+  }
+ },
+ "Tilr": {
+  "vendor_url": "https://github.com/tiagolr",
+  "products": {
+   "TIME-12": {
+    "product_url": "https://github.com/tiagolr/time12",
+    "manual_url": null,
+    "category": "delay",
+    "note": "Envelope-based delay modulator for stutter, tape stop and reverse effects."
+   }
+  }
+ },
+ "Unison": {
+  "vendor_url": "https://unison.audio/",
+  "products": {
+   "Unison Zen Master": {
+    "product_url": "https://unison.audio/zen-master",
+    "manual_url": null,
+    "category": "other",
+    "note": "Free five-knob lo-fi multi-effect."
+   }
+  }
+ },
+ "unplugred": {
+  "vendor_url": null,
+  "products": {
+   "SunBurnt": {
+    "product_url": "https://vst.unplug.red/sunburnt",
+    "manual_url": null,
+    "category": "reverb",
+    "note": "Reverb whose characteristics are drawn as a curve, including reverse tails."
+   }
+  }
+ },
+ "Youlean": {
+  "vendor_url": "https://youlean.co/",
+  "products": {
+   "Youlean Loudness Meter 2": {
+    "product_url": "https://youlean.co/youlean-loudness-meter/",
+    "manual_url": "https://docs.youlean.co/youlean-loudness-meter/",
+    "category": "analyser",
+    "note": "Measures loudness and dynamic range for broadcast and streaming delivery."
+   }
+  }
+ }
+}

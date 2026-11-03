@@ -1,44 +1,1143 @@
 [
  {
   "kind": "plugin",
-  "name": "BIT LAYER",
-  "maker": "Bitlayer Audio",
+  "name": "SketchCassette II",
+  "maker": "Aberrant DSP",
   "category": "Fx",
-  "version": "0.5.7"
+  "version": "2.3"
  },
  {
   "kind": "plugin",
-  "name": "Glitch",
-  "maker": "Illformed",
-  "category": "",
-  "version": "215"
+  "name": "Descent",
+  "maker": "Audio Damage, Inc.",
+  "category": "Fx",
+  "version": "1.0.4"
  },
  {
   "kind": "plugin",
-  "name": "Glitch2",
-  "maker": "Illformed",
+  "name": "Replicant 2",
+  "maker": "Audio Damage, Inc.",
   "category": "Fx",
-  "version": "2.1.5"
+  "version": "2.0.0"
  },
  {
   "kind": "plugin",
-  "name": "KAZU",
-  "maker": "Phase Fiasco",
+  "name": "PlexiTape",
+  "maker": "Audiority",
   "category": "Fx",
-  "version": "0.1.587"
+  "version": "1.2.2"
  },
  {
-  "kind": "max for live",
-  "name": "Frankenstein",
-  "maker": "",
+  "kind": "plugin",
+  "name": "The Sword",
+  "maker": "Audiority",
+  "category": "Fx",
+  "version": "1.0.1"
+ },
+ {
+  "kind": "plugin",
+  "name": "Dials",
+  "maker": "AudioThing",
+  "category": "Fx",
+  "version": "1.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Noises",
+  "maker": "AudioThing",
   "category": "Instrument",
-  "place": "User Library"
+  "version": "1.2.1"
  },
  {
-  "kind": "max for live",
-  "name": "Pitchfield",
-  "maker": "",
-  "category": "MIDI Effect",
-  "place": "User Library"
+  "kind": "plugin",
+  "name": "Things Flip EQ",
+  "maker": "AudioThing",
+  "category": "Fx",
+  "version": "1.1.1"
+ },
+ {
+  "kind": "plugin",
+  "name": "Things Texture",
+  "maker": "AudioThing",
+  "category": "Fx",
+  "version": "1.1.1"
+ },
+ {
+  "kind": "plugin",
+  "name": "Vinyl Strip",
+  "maker": "AudioThing",
+  "category": "Fx",
+  "version": "1.6.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "Wires",
+  "maker": "AudioThing",
+  "category": "Fx",
+  "version": "1.2.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Flux Mini",
+  "maker": "Caelum Audio",
+  "category": "Fx",
+  "version": "1.1.5"
+ },
+ {
+  "kind": "plugin",
+  "name": "Flux Mini 2",
+  "maker": "Caelum Audio",
+  "category": "Fx",
+  "version": "1.0.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Tape Cassette 2",
+  "maker": "Caelum Audio",
+  "category": "Fx",
+  "version": "1.3.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Novachord",
+  "maker": "Cherry Audio",
+  "category": "Instrument",
+  "version": "1.0.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "Solovox",
+  "maker": "Cherry Audio",
+  "category": "Instrument",
+  "version": "1.0.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "CHOWTapeModel",
+  "maker": "chowdsp",
+  "category": "Fx",
+  "version": "2.11.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Ripple Delay Free",
+  "maker": "Davisynth",
+  "category": "Fx",
+  "version": "1.0.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "Backmask",
+  "maker": "Freakshow Industries",
+  "category": "Fx",
+  "version": "1.0.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "DreamEater",
+  "maker": "Freakshow Industries",
+  "category": "Fx",
+  "version": "1.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Dumpster Fire",
+  "maker": "Freakshow Industries",
+  "category": "Fx",
+  "version": "1.0.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "MISHBY",
+  "maker": "Freakshow Industries",
+  "category": "Fx",
+  "version": "1.0.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "PocketDimension",
+  "maker": "Freakshow Industries",
+  "category": "Fx",
+  "version": "1.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "BucketPops",
+  "maker": "Full Bucket Music",
+  "category": "Instrument",
+  "version": "1.1.5"
+ },
+ {
+  "kind": "plugin",
+  "name": "Nabla",
+  "maker": "Full Bucket Music",
+  "category": "Instrument",
+  "version": "1.3.1"
+ },
+ {
+  "kind": "plugin",
+  "name": "NY",
+  "maker": "Full Bucket Music",
+  "category": "Instrument",
+  "version": "1.0.1"
+ },
+ {
+  "kind": "plugin",
+  "name": "M-Tron Pro",
+  "maker": "GForce",
+  "category": "Instrument",
+  "version": "3.0.1"
+ },
+ {
+  "kind": "plugin",
+  "name": "HY-ESG",
+  "maker": "HY-Plugins",
+  "category": "Fx",
+  "version": "1.0.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Hammond B-3X",
+  "maker": "IK Multimedia",
+  "category": "Instrument",
+  "version": "1.3.5"
+ },
+ {
+  "kind": "plugin",
+  "name": "Lurssen Mastering Console",
+  "maker": "IK Multimedia",
+  "category": "Fx",
+  "version": "1.2.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "MixBox",
+  "maker": "IK Multimedia",
+  "category": "Fx",
+  "version": "1.5.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "Philharmonik 2",
+  "maker": "IK Multimedia",
+  "category": "Instrument",
+  "version": "2.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "SampleTron 2",
+  "maker": "IK Multimedia",
+  "category": "Instrument",
+  "version": "2.0.5"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs 3-Band EQ",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Bitcrush",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Channel Mixer",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Chorus",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Clipper",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Comb Filter",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Compactor",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Compressor",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Delay",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Distortion",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Dual Delay",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Dynamics",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Ensemble",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Filter",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Flanger",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Formant Filter",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Frequency Shifter",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Gain",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Gate",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Haas",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Ladder Filter",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Limiter",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Nonlinear Filter",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Phase Distortion",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Phaser",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Pitch Shifter",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Resonator",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Reverb",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Reverser",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Ring Mod",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Shaper",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Stereo",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Tape Stop",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Trance Gate",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "kHs Transient Shaper",
+  "maker": "Kilohearts",
+  "category": "Fx",
+  "version": "2.4.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "DAW Cassette",
+  "maker": "Klevgrand",
+  "category": "Fx",
+  "version": "1.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Abu Dhabi (Slicer)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Alexandria (Organ)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Amsterdam (SFX)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Berlin (Sync)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Bilbao (Sampler)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Brussels (Lead)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Chiangmai (FM)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Chicago (Acid)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Darwin (M1)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Dublin (Semi-modular)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Firenze (Clav)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Gladstone (Drum)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Glasgow (Keys)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Helsinki (Pad)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Kamata (4-Bit)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Kiev (Vector)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Kingston (Arcade)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Lexington (Odyssey)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Lisbon (Sci-Fi)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "London (Drum)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Madrid (Bass)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Marseille (Keys)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Miami (Wobble)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Milpitas (Wavestation)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Montpellier (Mono/Poly)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Montreal (E.Piano)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Phoenix (Analog)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Recife (Drum)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Rosario (G.Amp)",
+  "maker": "KORG",
+  "category": "Fx",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Salzburg (Piano)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Stockholm (Dr. Octorex)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Tokyo (E.Perc)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Vancouver (Sample)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Wolfsburg (Digital)",
+  "maker": "KORG",
+  "category": "Instrument",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Zurich (Recorder)",
+  "maker": "KORG",
+  "category": "Fx",
+  "version": "1.7.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "DevilSpring",
+  "maker": "Lostin70s",
+  "category": "Fx",
+  "version": "1.2.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Harmonus",
+  "maker": "Lostin70s",
+  "category": "Instrument",
+  "version": "1.0.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "Live Pedalboard",
+  "maker": "Lostin70s",
+  "category": "Fx",
+  "version": "1.0.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "Combo",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Degrade",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Detune",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Dub Delay",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Dynamics",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Re-Psycho!",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Ring Mod",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Round Pan",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Shepard Tones",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Stereo Simulator",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Sub-Bass Synthesizer",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Talkbox",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Test Tone",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Tracker",
+  "maker": "mda",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Pendulate",
+  "maker": "Newfangled Audio",
+  "category": "Instrument",
+  "version": "1.6.9"
+ },
+ {
+  "kind": "plugin",
+  "name": "Wider",
+  "maker": "Polyverse Music",
+  "category": "Fx",
+  "version": "2.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "80s Soviet Drums",
+  "maker": "SampleScience",
+  "category": "Instrument",
+  "version": "2.9.5"
+ },
+ {
+  "kind": "plugin",
+  "name": "Pianotone 600 v2",
+  "maker": "SampleScience",
+  "category": "Instrument",
+  "version": "2.9.5"
+ },
+ {
+  "kind": "plugin",
+  "name": "VHS Noise Generator",
+  "maker": "SampleScience",
+  "category": "Instrument",
+  "version": "2.9.5"
+ },
+ {
+  "kind": "plugin",
+  "name": "Bandbreite",
+  "maker": "Sinuslabs",
+  "category": "Fx",
+  "version": "1.1.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Prototype Dusty Felts",
+  "maker": "Somerville Sounds",
+  "category": "Instrument",
+  "version": "1.0.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "Prototype Meyer Choir",
+  "maker": "Somerville Sounds",
+  "category": "Instrument",
+  "version": "1.0.6"
+ },
+ {
+  "kind": "plugin",
+  "name": "Prototype Rubber Bridge",
+  "maker": "Somerville Sounds",
+  "category": "Instrument",
+  "version": "1.0.1"
+ },
+ {
+  "kind": "plugin",
+  "name": "PaulXStretch",
+  "maker": "Sonosaurus",
+  "category": "Fx",
+  "version": "1.6.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Soundly Place it",
+  "maker": "Soundly",
+  "category": "Fx",
+  "version": "1.0.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "OCS-45",
+  "maker": "Spectral Plugins",
+  "category": "Fx",
+  "version": "1.1.5"
+ },
+ {
+  "kind": "plugin",
+  "name": "Pancz",
+  "maker": "Spectral Plugins",
+  "category": "Fx",
+  "version": "1.1.7"
+ },
+ {
+  "kind": "plugin",
+  "name": "Spacer",
+  "maker": "Spectral Plugins",
+  "category": "Fx",
+  "version": "1.0.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Lost-Vinyls",
+  "maker": "superflyDSP",
+  "category": "Fx",
+  "version": "1.1.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "TIME-12",
+  "maker": "Tilr",
+  "category": "Fx",
+  "version": "0.1.5"
+ },
+ {
+  "kind": "plugin",
+  "name": "Unison Zen Master",
+  "maker": "Unison",
+  "category": "Fx",
+  "version": "1.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "SunBurnt",
+  "maker": "unplugred",
+  "category": "Fx",
+  "version": "1.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Abbey Road Chambers",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Abbey Road Plates",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Abbey Road Saturator",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.61"
+ },
+ {
+  "kind": "plugin",
+  "name": "Abbey Road Vinyl",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Abbey Road Vinyl Light",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "AR TG Mastering",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.64"
+ },
+ {
+  "kind": "plugin",
+  "name": "AR TG Meter Bridge",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.64"
+ },
+ {
+  "kind": "plugin",
+  "name": "Bass Fingers",
+  "maker": "Waves",
+  "category": "Instrument",
+  "version": "11.0.54"
+ },
+ {
+  "kind": "plugin",
+  "name": "J37",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "REDD17",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.61"
+ },
+ {
+  "kind": "plugin",
+  "name": "REDD37-51",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Reel ADT",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Reel ADT2V",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "RS56",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "TG12345",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "The Kings Microphones",
+  "maker": "Waves",
+  "category": "Fx",
+  "version": "11.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "Cassette",
+  "maker": "Wavesfactory",
+  "category": "Fx",
+  "version": "1.0.7"
+ },
+ {
+  "kind": "plugin",
+  "name": "DB-30 Drum Butter",
+  "maker": "XLN Audio",
+  "category": "Fx",
+  "version": "1.1.3"
+ },
+ {
+  "kind": "plugin",
+  "name": "Life",
+  "maker": "XLN Audio",
+  "category": "Instrument",
+  "version": "1.3.4"
+ },
+ {
+  "kind": "plugin",
+  "name": "Life DAW Recorder",
+  "maker": "XLN Audio",
+  "category": "Fx",
+  "version": "1.2.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "RC-20 Retro Color",
+  "maker": "XLN Audio",
+  "category": "Fx",
+  "version": "1.5.2"
+ },
+ {
+  "kind": "plugin",
+  "name": "RC-20 Retro Color v2",
+  "maker": "XLN Audio",
+  "category": "Fx",
+  "version": "2.0.0"
+ },
+ {
+  "kind": "plugin",
+  "name": "XO",
+  "maker": "XLN Audio",
+  "category": "Instrument",
+  "version": "1.8.10"
+ },
+ {
+  "kind": "plugin",
+  "name": "Youlean Loudness Meter 2",
+  "maker": "Youlean",
+  "category": "Fx",
+  "version": "2.5.10"
  }
 ]

@@ -114,6 +114,12 @@
     "manual_url": "https://www.audiothing.net/docs/AudioThing_Springs.pdf",
     "category": "reverb",
     "note": "Collection of vintage spring reverb emulations with Baxandall EQ."
+   },
+   "Filterjam": {
+    "product_url": "https://www.audiothing.net/effects/filterjam/",
+    "manual_url": null,
+    "category": "filter",
+    "note": "Free multi-band resonant filter giving weird ringmod-like filtered sounds."
    }
   }
  },
