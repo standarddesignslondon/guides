@@ -8,7 +8,7 @@
   "noun_plural": "tools",
   "page_dir": "tools"
  },
- "generated": "2026-11-03",
+ "generated": "2026-11-16",
  "items": [
   {
    "num": "01",
@@ -129,45 +129,6 @@
   },
   {
    "num": "10",
-   "slug": "videolook",
-   "name": "VideoLook",
-   "tagline": "Television and video looks from Baird's 30 lines to DV: 405-line to PAL, NTSC and SECAM, Soviet, Japanese and pre-war systems, long-distance reception, tube cameras, Quad to VHS, discs, teletext and CRT sets.",
-   "url": "tools/videolook.html",
-   "image": "images/videolook.png",
-   "facets": {
-    "app": "Photoshop",
-    "kind": "UXP panel",
-    "author": "Claude"
-   }
-  },
-  {
-   "num": "11",
-   "slug": "printlook",
-   "name": "PrintLook",
-   "tagline": "Prints your layers: each colour layer is a plate with one ink, put through letterpress, lithography, screenprint, gravure, stencil, duplicator or copier as it was done from the 1850s to the 1980s.",
-   "url": "tools/printlook.html",
-   "image": "images/printlook.png",
-   "facets": {
-    "app": "Photoshop",
-    "kind": "UXP panel",
-    "author": "Claude"
-   }
-  },
-  {
-   "num": "12",
-   "slug": "look-cookbook",
-   "name": "Look Cookbook",
-   "tagline": "Recipes for FilmLook and VideoLook, alone and chained: kitchen-sink titles, community cable, video art, artists' film and video-to-film oddities.",
-   "url": "tools/look-cookbook.html",
-   "image": "images/look-cookbook.png",
-   "facets": {
-    "app": "Photoshop",
-    "kind": "Recipe book",
-    "author": "Claude"
-   }
-  },
-  {
-   "num": "13",
    "slug": "poster-pdf-export",
    "name": "Poster PDF Export",
    "tagline": "Drop a finished Illustrator poster into a folder and five print-ready GRACoL PDFs appear on the Desktop.",
@@ -180,7 +141,7 @@
    }
   },
   {
-   "num": "14",
+   "num": "11",
    "slug": "opendocs",
    "name": "OpenDocs",
    "tagline": "A panel of live thumbnails of every open document. Click one to bring it to the front - no more hunting through the >> tab overflow.",
@@ -193,7 +154,7 @@
    }
   },
   {
-   "num": "15",
+   "num": "12",
    "slug": "pixachron",
    "name": "Pixachron",
    "tagline": "Audio effects for pictures: unroll the image along a path of your choosing, run a delay, flanger, filter, bitcrusher or reverb over it as a signal, roll it back. The path is the point.",
@@ -206,7 +167,7 @@
    }
   },
   {
-   "num": "16",
+   "num": "13",
    "slug": "hexrack",
    "name": "Hexrack",
    "tagline": "A databending effects rack: the picture becomes a file, a chain of devices damages the file in the ways hex editors, text editors, codecs and Audacity really do, and the file becomes a picture.",

@@ -1,5 +1,5 @@
 // FilmLook calibration: per-film overrides fitted to reference frames
-// (Shotdeck stills of current transfers, analysed 26-27 Sept 2026). Applied
+// (Shotdeck stills of current transfers, analysed 26-27 Sept 2026; three 1955 films added 16 Nov 2026). Applied
 // after each preset's research-based settings, so the two stay auditable.
 // Fitted: contrast, white and black level, zone colour casts (as grade lift,
 // grade gain and printer lights), colour separation and grain, against 8-34
@@ -25,6 +25,10 @@ const CAL = {
     "rashomon": {"contrast": 1.503, "gradeWhite": 0.894, "gradeBlack": -0.014, "grain": 1.058},
     "strangers-on-a-train": {"contrast": 1.793, "gradeWhite": 1.112, "gradeBlack": 0, "grain": 0.89},
     "rear-window": {"contrast": 1.677, "gradeWhite": 0.924, "gradeBlack": -0.033, "saturation": 1.169, "gradeLift": [-0.0133, -0.0141, 0.0274], "gradeGain": [0.98, 1.0042, 1.015], "timing": [0.99, 0.29, 0.72], "grain": 0.96},
+    "all-that-heaven-allows": {"contrast": 1.498, "gradeWhite": 0.956, "gradeBlack": -0.025, "saturation": 1.35, "gradeLift": [-0.0227, -0.0051, 0.0278], "gradeGain": [1.0303, 0.993, 0.9771], "timing": [-0.25, -0.59, 0.85], "grain": 0.575},
+    "seven-year-itch": {"contrast": 1.675, "gradeWhite": 1.04, "gradeBlack": -0.03, "saturation": 0.75, "gradeLift": [-0.0141, -0.0174, 0.0316], "gradeGain": [0.9516, 0.9569, 1.0929], "timing": [2.39, -0.72, -1.67], "grain": 0.613},
+    "to-catch-a-thief": {"contrast": 1.662, "gradeWhite": 1.129, "gradeBlack": -0.02, "saturation": 0.88, "gradeLift": [-0.0195, -0.0073, 0.0268], "gradeGain": [0.9233, 0.9616, 1.1201], "timing": [-0.55, -0.26, 0.8], "grain": 0.47},
+    "to-catch-a-thief-night": {"contrast": 1.662, "gradeBlack": 0, "grain": 0.47},
     "seven-samurai": {"contrast": 1.535, "gradeWhite": 0.939, "gradeBlack": -0.014, "grain": 1.439},
     "vertigo": {"contrast": 1.631, "gradeWhite": 0.843, "gradeBlack": -0.027, "saturation": 1.16, "gradeLift": [-0.0219, -0.0143, 0.0363], "gradeGain": [1.0248, 0.9757, 0.9996], "timing": [-0.35, -0.55, 0.9], "grain": 0.536},
     "north-by-northwest": {"contrast": 1.57, "gradeWhite": 0.917, "gradeBlack": -0.027, "saturation": 0.909, "gradeLift": [-0.0416, 0.002, 0.0396], "gradeGain": [0.8813, 1.0059, 1.1177], "timing": [2.53, 0.27, -1.19], "grain": 0.439},
@@ -79,7 +83,7 @@ const CAL = {
     "the-shining-snow": {"contrast": 1.79, "gradeWhite": 1.143, "gradeBlack": 0, "grain": 0.508},
     "blade-runner-tyrell": {"contrast": 1.913, "gradeWhite": 0.866, "gradeBlack": 0, "grain": 0.495},
 };
-const DERIVED = ["2001-dawn", "a-bout-de-souffle-int", "andrei-rublev-icons", "blade-runner-tyrell", "good-bad-ugly-2014", "ivans-childhood-dream", "jaws-hunt", "long-goodbye-mexico", "long-goodbye-night", "nosferatu-dawn", "nosferatu-day", "nostalghia-sepia", "out-of-the-past-ext", "oz-kansas", "playtime-2014", "rosemarys-baby-dream", "solaris-mono", "sound-of-music-70mm", "taxi-driver-climax", "the-shining-snow", "vertigo-green"];
+const DERIVED = ["2001-dawn", "a-bout-de-souffle-int", "andrei-rublev-icons", "blade-runner-tyrell", "good-bad-ugly-2014", "ivans-childhood-dream", "jaws-hunt", "long-goodbye-mexico", "long-goodbye-night", "nosferatu-dawn", "nosferatu-day", "nostalghia-sepia", "out-of-the-past-ext", "oz-kansas", "playtime-2014", "rosemarys-baby-dream", "solaris-mono", "sound-of-music-70mm", "taxi-driver-climax", "the-shining-snow", "to-catch-a-thief-night", "vertigo-green"];
 for (const f of P.FILMS) if (CAL[f.id]) f.cal = CAL[f.id];
 P.CALIBRATED = Object.keys(CAL).filter((k) => DERIVED.indexOf(k) < 0);
 P.DERIVED = DERIVED.filter((k) => CAL[k]);

@@ -10,20 +10,20 @@
 <header class="topbar"><a class="wordmark" href="../../index.html">guides</a><a class="topbar-mid" href="../index.html">adobe</a><a class="topbar-right" href="../../all.html">everything</a></header>
 <main>
 <header class="chapter">
-  <p class="ch-num">15</p>
+  <p class="ch-num">12</p>
   <h1>pixachron</h1>
   <p class="ch-sub">Audio effects for pictures: unroll the image along a path of your choosing, run a delay, flanger, filter, bitcrusher or reverb over it as a signal, roll it back. The path is the point.</p>
 </header>
 <figure class="shot"><div class="shot-frame"><img src="../images/pixachron.png" alt="Pixachron"></div><figcaption>pixachron</figcaption></figure>
 <section class="block" id="about">
-  <div class="block-label"><span class="bl-num">15.0</span><h2>about</h2></div>
+  <div class="block-label"><span class="bl-num">12.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">An image has no time axis, so before an audio effect can touch it you have to invent one. Databending (opening a picture in Audacity) always picks the same one - left to right, top to bottom - and every result it gives comes from that accident. Pixachron makes the choice deliberate: the picture is unrolled along a <b>path</b> (rows, columns, lines at an angle, a Hilbert curve, a spiral, spokes, or outward from the edge of the type), the resulting one-dimensional signal is run through one effect borrowed from a music plugin, and the signal is rolled back along the same path or, for deliberate scrambling, a different one. The same delay gives horizontal streaks on a raster path, blotches and tendrils on a Hilbert curve, rings on a spiral, sunbursts on spokes and contour lines radiating off lettering on the Contour path. Nothing here imitates a real-world process; it is a way of finding forms Photoshop&#x27;s own filters cannot make. Everything is read and written through the UXP Imaging API and processed in JavaScript, as FilmLook, VideoLook and PrintLook are.</p>
     <dl class="facts"><div class="fact"><dt>app</dt><dd>photoshop</dd></div><div class="fact"><dt>type</dt><dd>uxp panel</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>version</dt><dd>1.2.0</dd></div><div class="fact"><dt>requires</dt><dd>Photoshop 24.2+, RGB, 8 or 16-bit</dd></div><div class="fact"><dt>plugin id</dt><dd>com.simonmorse.pixachron</dd></div><div class="fact"><dt>folder</dt><dd>Pixachron-Photoshop-Plugin</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
-  <div class="block-label"><span class="bl-num">15.1</span>
+  <div class="block-label"><span class="bl-num">12.1</span>
   <h2>quick start</h2></div>
   <div class="block-body"><ol class="steps">
 <li><span class="step-n">01</span><span class="step-t">There is a one-control-at-a-time <b>cheat sheet</b>, kept on the Mac rather than on this site: <code>Guides/photoshop-guide/pixachron-cheatsheet/Pixachron Cheat Sheet.pdf</code> (142 pages, 141 images at 1 pt per pixel, each one setting away from a reference; <code>index.html</code> beside it is the same thing as a web page). The generator is in its <code>_source</code> folder.</span></li>
@@ -37,7 +37,7 @@
 </ol></div>
 </section>
 <section class="block" id="controls">
-  <div class="block-label"><span class="bl-num">15.2</span>
+  <div class="block-label"><span class="bl-num">12.2</span>
   <h2>controls</h2></div>
   <div class="block-body"><h3 class="sub">chain</h3>
 <p class="lead">Up to six stages in series. Each stage is a complete path + effect + signal setting; the mask source and the output settings are shared by all of them.</p>
@@ -115,7 +115,7 @@
 </dl></div>
 </section>
 <section class="block" id="workflow">
-  <div class="block-label"><span class="bl-num">15.3</span>
+  <div class="block-label"><span class="bl-num">12.3</span>
   <h2>workflow</h2></div>
   <div class="block-body"><h3 class="sub">how to think about it</h3><p>Audio effects are defined in time, and the only thing Pixachron really adds to Photoshop is the question of which direction time runs. So work path-first: pick a plain Delay, cycle through every path with the same settings, and only then start on the effect. Tile size and Reset change a path&#x27;s character as much as the path itself. The Contour path is the one built for type - mask from Dark pixels on dark lettering - and &quot;Only masked pixels are samples&quot; keeps any effect inside the letters.</p>
 <h3 class="sub">what the engine does</h3><p><code>px_paths.js</code> builds each path as a permutation of pixel indices (counting sorts, a Hilbert walk, a Euclidean distance transform for Contour) plus the positions where the effect&#x27;s state resets. <code>px_effects.js</code> holds the ten processors, each a plain function over a bipolar Float32 signal. <code>px_engine.js</code> unrolls, optionally AC-couples, runs the effect per channel and rolls back; it also makes the proxy for previews and scales the ⏱ parameters to match. <code>main.js</code> is the panel and the Photoshop I/O, following the VideoLook conventions. The engine runs unchanged in Node, which is how it was tested.</p>
@@ -124,18 +124,18 @@
 <h3 class="sub">where it could go</h3><p>Not yet built: a pixel path that follows a Photoshop work path you draw, so echoes run along a line of your own.</p></div>
 </section>
 <section class="block" id="gotchas">
-  <div class="block-label"><span class="bl-num">15.4</span>
+  <div class="block-label"><span class="bl-num">12.4</span>
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>Every path is built for the whole document and held in memory alongside three float planes in and out, so a 30-megapixel poster needs well over a gigabyte while rendering. Preview first; render full size once.</li><li>Contour needs a mask, and the mask comes from the pixels being read: Dark or Light pixels work on the merged picture, Layer transparency only with Source set to the selected layer.</li><li>With DC coupling and feedback, flat areas of tone build up until they clip. That is the real databending look; switch to AC if it isn&#x27;t what you want.</li><li>Hold, grain, time and the other ⏱ values are in pixels along the path, not across the picture - on a Hilbert curve 1,000 px is a small blob.</li><li>32-bit documents aren&#x27;t supported; CMYK documents need converting to RGB first.</li><li>User presets live in the panel&#x27;s own local storage, so they vanish if the plugin is uninstalled.</li><li>Each stage builds its own path and planes, so render time and memory grow with the number of stages; six Hilbert stages on a big poster is a wait.</li><li>Outline mode needs Photoshop 23.3+ for the path API, and a text layer that Type › Create Work Path can convert (live text, not rasterised). A small Output spacing on a long word makes thousands of path points, which Photoshop takes a few seconds to add.</li><li>Outline mode&#x27;s result lands at the same place as the original; move or hide the text layer to see it on its own.</li></ul></div>
 </section>
 <section class="block" id="rebuilding">
-  <div class="block-label"><span class="bl-num">15.5</span>
+  <div class="block-label"><span class="bl-num">12.5</span>
   <h2>rebuilding</h2></div>
   <div class="block-body"><p>Source is <code>Guides/Photoshop Scripts/Pixachron-Photoshop-Plugin/</code> (manifest.json, index.html, main.js, px_paths.js, px_effects.js, px_engine.js, px_presets.js - no build step). Zip the seven files flat into <code>CCX Installers/Pixachron.ccx</code> and install with the agent command below.</p>
 <p>To add an effect, append an object to <code>LIST</code> in <code>px_effects.js</code> with <code>params</code> (mark pixel distances <code>time: true</code>), optional <code>options</code>, and a <code>run(signal, segStarts, params, ctx)</code> function; the panel builds its controls from that. Paths go in <code>px_paths.js</code> and its <code>LIST</code>.</p></div>
 </section>
 <section class="block" id="installing">
-  <div class="block-label"><span class="bl-num">15.6</span>
+  <div class="block-label"><span class="bl-num">12.6</span>
   <h2>installing</h2></div>
   <div class="block-body"><ol class="steps">
 <li><span class="step-n">01</span><span class="step-t">In Terminal, run Adobe&#x27;s installer agent on the plugin&#x27;s <code>.ccx</code> from <code>Photoshop Scripts/CCX Installers</code>: <code>&quot;/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent&quot; --install &lt;plugin&gt;.ccx</code></span></li>
@@ -148,7 +148,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>adobe</span>
   <span>process guide</span></div>
-  <div class="sf-col"><span>generated 2026-11-03</span>
+  <div class="sf-col"><span>generated 2026-11-16</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

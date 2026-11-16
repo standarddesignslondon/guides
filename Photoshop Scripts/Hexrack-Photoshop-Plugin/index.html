@@ -44,6 +44,30 @@
     .slot .nm { flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .slot .meta { color: #8a8a8a; font-size: 10px; }
     .slot.on .meta { color: #e8c9bd; }
+
+    /* Light and Lightest Photoshop themes (UXP prefers-color-scheme, UXP 4.1+). Dark themes use the rules above. */
+@media (prefers-color-scheme: lightest), (prefers-color-scheme: light) {
+    body { color: #1b1b1b; }
+    h1 { color: #000; }
+    h2 { color: #333; border-bottom-color: #8c8c8c; }
+    h2 .tw { color: #555; }
+    .val, .tag { color: #3a3a3a; }
+    .hint { color: #444; }
+    #note, #effectNote, #pathNote, #deviceNote { color: #4f4430; }
+    .est { color: #7a5a1a; }
+    select, input[type="text"], input[type="number"], textarea { background: #fbfbfb; color: #1b1b1b; border-color: #8c8c8c; }
+    button { background: #e6e6e6; border-color: #8c8c8c; color: #1b1b1b; }
+    button:hover { background: #d4d4d4; }
+    #renderBtn { color: #fff; }
+    #status { color: #2f6b2f; }
+    #status.err { color: #a33030; }
+    .modified, .stg, h2.lit { color: #8a5a00; }
+    .offtag { color: #a33030; }
+    .slot { background: #fbfbfb; border-color: #8c8c8c; color: #333; }
+    .slot .num, .slot .meta { color: #555; }
+    .slot.on { background: #7a3d2a; border-color: #9a4d35; color: #fff; }
+    .slot.on .num, .slot.on .meta { color: #e8c9bd; }
+}
 </style>
 </head>
 <body>

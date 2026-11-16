@@ -190,7 +190,7 @@ function refreshVisibility() {
     rowOf("couplingPeriod").style.display = sg.coupling === "ac" ? "" : "none";
     rowOf("maskThr").style.display = (st.maskSource === "dark" || st.maskSource === "light") ? "" : "none";
     rowOf("olName").style.display = st.outline.source === "named" ? "" : "none";
-    document.querySelector("#secOutline h2").style.color = st.outline.on ? "#d9b36c" : "";
+    { const oh = document.querySelector("#secOutline h2"); if (st.outline.on) oh.classList.add("lit"); else oh.classList.remove("lit"); }
     const def = PX_PATHS.LIST.find(x => x.id === p); $("pathNote").textContent = def ? def.hint : "";
     $("effectNote").textContent = effectDef().hint;
 }

@@ -51,6 +51,26 @@
     #status.err { color: #c98080; }
     .modified { color: #d9b36c; }
     .offtag { color: #c98080; font-weight: 400; letter-spacing: 0.04em; display: none; }
+
+    /* Light and Lightest Photoshop themes (UXP prefers-color-scheme, UXP 4.1+). Dark themes use the rules above. */
+@media (prefers-color-scheme: lightest), (prefers-color-scheme: light) {
+    body { color: #1b1b1b; }
+    h1 { color: #000; }
+    h2 { color: #333; border-bottom-color: #8c8c8c; }
+    h2 .tw { color: #555; }
+    .val, .tag { color: #3a3a3a; }
+    .hint { color: #444; }
+    #note, #effectNote, #pathNote, #deviceNote { color: #4f4430; }
+    .est { color: #7a5a1a; }
+    select, input[type="text"], input[type="number"], textarea { background: #fbfbfb; color: #1b1b1b; border-color: #8c8c8c; }
+    button { background: #e6e6e6; border-color: #8c8c8c; color: #1b1b1b; }
+    button:hover { background: #d4d4d4; }
+    #renderBtn { color: #fff; }
+    #status { color: #2f6b2f; }
+    #status.err { color: #a33030; }
+    .modified, .stg, h2.lit { color: #8a5a00; }
+    .offtag { color: #a33030; }
+}
 </style>
 </head>
 <body>

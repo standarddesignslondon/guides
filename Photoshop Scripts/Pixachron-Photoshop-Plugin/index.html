@@ -35,10 +35,33 @@
     #status.err { color: #c98080; }
     .modified { color: #d9b36c; }
     .stg { color: #d9b36c; text-transform: none; letter-spacing: 0; font-weight: 400; margin-left: 6px; }
+    h2.lit { color: #d9b36c; }
     .tabs { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0 6px; }
     .tab { flex: 0 1 auto; padding: 4px 8px; font-size: 11px; border-radius: 3px; border: 1px solid #444; background: #262626; color: #bdbdbd; cursor: pointer; }
     .tab.on { background: #2d5b9e; border-color: #3a6cb5; color: #fff; }
     .tab.off { opacity: 0.5; text-decoration: line-through; }
+
+    /* Light and Lightest Photoshop themes (UXP prefers-color-scheme, UXP 4.1+). Dark themes use the rules above. */
+@media (prefers-color-scheme: lightest), (prefers-color-scheme: light) {
+    body { color: #1b1b1b; }
+    h1 { color: #000; }
+    h2 { color: #333; border-bottom-color: #8c8c8c; }
+    h2 .tw { color: #555; }
+    .val, .tag { color: #3a3a3a; }
+    .hint { color: #444; }
+    #note, #effectNote, #pathNote, #deviceNote { color: #4f4430; }
+    .est { color: #7a5a1a; }
+    select, input[type="text"], input[type="number"], textarea { background: #fbfbfb; color: #1b1b1b; border-color: #8c8c8c; }
+    button { background: #e6e6e6; border-color: #8c8c8c; color: #1b1b1b; }
+    button:hover { background: #d4d4d4; }
+    #renderBtn { color: #fff; }
+    #status { color: #2f6b2f; }
+    #status.err { color: #a33030; }
+    .modified, .stg, h2.lit { color: #8a5a00; }
+    .offtag { color: #a33030; }
+    .tab { background: #fbfbfb; border-color: #8c8c8c; color: #333; }
+    .tab.on { background: #2d5b9e; border-color: #3a6cb5; color: #fff; }
+}
 </style>
 </head>
 <body>

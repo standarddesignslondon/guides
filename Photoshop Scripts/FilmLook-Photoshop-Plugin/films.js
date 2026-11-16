@@ -112,6 +112,25 @@ F({ id: "seven-samurai", year: 1954, title: "Seven Samurai", variant: "",
     p: { contrast: 1.45, grain: 1.2, generations: 1, dustWhite: 0.05, dustBlack: 0.05, scratches: 0.12, flicker: 0.05 },
     note: "Toho 4K from a master positive (the negative is lost): strong contrast, natural grain, mild scratches remain. Overcast skies clip; telephoto compression in action scenes." });
 
+F({ id: "seven-year-itch", year: 1955, title: "The Seven Year Itch", variant: "",
+    process: "eastman_50s", format: "scope", lens: "anamorphic", condition: "finegrain",
+    p: { aspect: 2.55, edgeSoft: 0.5, streak: 0.15, grain: 0.7, dustWhite: 0.02, dustBlack: 0.02 },
+    note: "CinemaScope 2.55 with early Bausch & Lomb anamorphic lenses, Color by De Luxe (Eastman Color negative and Eastman prints implied, stock undocumented; claims of Technicolor contradict the credit). Moderate saturation, creamy warm highlights, solid blacks, soft edges and wide shots. No 4K exists: the circulating Fox HD master (2012) comes from a restored print, with mild flicker." });
+
+F({ id: "to-catch-a-thief", year: 1955, title: "To Catch a Thief", variant: "",
+    process: "eastman_ib", format: "vista", lens: "clean", condition: "pristine",
+    p: { saturation: 1.15, contrast: 1.24, grain: 0.5 },
+    note: "VistaVision (8-perf) on colour negative (5248 claimed by one review only), Technicolor IB prints. Paramount's 6K negative scan with a 1960 IB print as reference: very fine grain, crisp detail, dense saturated Riviera blues and greens, warm skin. Calibrated on 1.78 day exteriors, probably the 2020 master, which reviewers found cooler than the 2024 4K." });
+F({ id: "to-catch-a-thief-night", year: 1955, title: "To Catch a Thief", variant: "night (green filter)",
+    process: "eastman_ib", format: "vista", lens: "clean", condition: "pristine",
+    p: { saturation: 0.9, contrast: 1.24, grain: 0.5, exposure: -1.1, gradeWhite: 0.85, gradeGain: [0.84, 1.0, 0.97] },
+    note: "Hitchcock shot night scenes through a green filter to avoid royal-blue skies, aiming for a dark slate blue (Hitchcock/Truffaut). IB prints and the 2024 4K show a green-slate cast; the 2020 Blu-ray turned them blue. Not fitted to frames: no night stills supplied." });
+
+F({ id: "all-that-heaven-allows", year: 1955, title: "All That Heaven Allows", variant: "",
+    process: "eastman_ib", format: "flat185", lens: "clean", condition: "pristine",
+    p: { aspect: 1.75, saturation: 1.3, contrast: 1.25, grain: 0.6 },
+    note: "Eastmancolor negative, Technicolor IB prints; Russell Metty lit colour expressively (cold blue against burnt orange, coloured window light; gels undocumented). Calibrated on Criterion's 2014 2K scan of the camera negative at 1.75 (theatres showed it anywhere from 1.37 to 2.00): saturated autumn oranges and turquoise, soft creamy highlights held well below white, fine grain. The deep blue night mood of IB prints is weaker on video." });
+
 F({ id: "vertigo", year: 1958, title: "Vertigo", variant: "",
     process: "eastman_ib", format: "vista", lens: "clean", condition: "pristine",
     p: { saturation: 1.18, contrast: 1.24, grain: 0.5, diffusion: 0.1 },
