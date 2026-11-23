@@ -14,12 +14,12 @@
   <h1>pulsograph</h1>
   <p class="ch-sub">Early-electronic rhythm machine — four synthesis lanes on a 32-step grid that drifts like a real motor.</p>
 </header>
-<figure class="shot"><div class="shot-frame"><img src="../images/pulsograph.png" alt="Pulsograph"></div><figcaption>pulsograph</figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="../images/pulsograph.png" alt="Pulsograph"></div><figcaption>pulsograph</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/pulsograph-push.png" alt="Push 3 screen, Live 13 (rendered offline; Push&#x27;s own font differs slightly)"></div><figcaption>push 3 screen, live 13 (rendered offline; push&#x27;s own font differs slightly)</figcaption></figure>
 <section class="block" id="about">
   <div class="block-label"><span class="bl-num">04.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Four lane voices, each able to be any of four classes (Thud, Tick, Burst, Odd), sequenced on a 32-step grid with per-lane length, direction and rate. Timing is sample-accurate inside gen~ and derived from Live&#x27;s transport, so loops and relocates resync for free — but <b>Drift</b> lets the whole thing breathe against the grid like a machine with a motor. Add per-lane Grit, slow parameter wander (Var), a delay circuit and hum/hiss, and it exports to audio or MIDI.</p>
-    <dl class="facts"><div class="fact"><dt>type</dt><dd>instrument</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete</dd></div><div class="fact"><dt>folder</dt><dd>Pulsograph Device</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>instrument</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete · v1.1 push screen awaiting test</dd></div><div class="fact"><dt>version</dt><dd>1.1</dd></div><div class="fact"><dt>push screen</dt><dd>Live 13 / Max 9.2</dd></div><div class="fact"><dt>folder</dt><dd>Pulsograph Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -78,7 +78,7 @@
   <h2>push 3</h2></div>
   <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
 <div class="bank">
-<div class="bank-head">lane 1</div>
+<div class="bank-head">lane1</div>
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
 <div class="enc"><span class="enc-n">1</span><span class="enc-l">Class</span></div>
 <div class="enc"><span class="enc-n">2</span><span class="enc-l">Tune</span></div>
@@ -88,10 +88,13 @@
 <div class="enc"><span class="enc-n">6</span><span class="enc-l">Grit</span></div>
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Var</span></div>
 <div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
-<div class="bank-head">lane 2</div>
+<div class="bank-head">lane2</div>
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
 <div class="enc"><span class="enc-n">1</span><span class="enc-l">Class</span></div>
 <div class="enc"><span class="enc-n">2</span><span class="enc-l">Tune</span></div>
@@ -101,10 +104,13 @@
 <div class="enc"><span class="enc-n">6</span><span class="enc-l">Grit</span></div>
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Var</span></div>
 <div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
-<div class="bank-head">lane 3</div>
+<div class="bank-head">lane3</div>
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
 <div class="enc"><span class="enc-n">1</span><span class="enc-l">Class</span></div>
 <div class="enc"><span class="enc-n">2</span><span class="enc-l">Tune</span></div>
@@ -114,10 +120,13 @@
 <div class="enc"><span class="enc-n">6</span><span class="enc-l">Grit</span></div>
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Var</span></div>
 <div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
-<div class="bank-head">lane 4</div>
+<div class="bank-head">lane4</div>
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
 <div class="enc"><span class="enc-n">1</span><span class="enc-l">Class</span></div>
 <div class="enc"><span class="enc-n">2</span><span class="enc-l">Tune</span></div>
@@ -127,19 +136,25 @@
 <div class="enc"><span class="enc-n">6</span><span class="enc-l">Grit</span></div>
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Var</span></div>
 <div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
 <div class="bank-head">delay</div>
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
-<div class="enc"><span class="enc-n">1</span><span class="enc-l">Mode</span></div>
-<div class="enc"><span class="enc-n">2</span><span class="enc-l">Steps</span></div>
-<div class="enc"><span class="enc-n">3</span><span class="enc-l">Time</span></div>
-<div class="enc"><span class="enc-n">4</span><span class="enc-l">Feedback</span></div>
-<div class="enc"><span class="enc-n">5</span><span class="enc-l">Wet</span></div>
-<div class="enc"><span class="enc-n">6</span><span class="enc-l">Tone</span></div>
-<div class="enc"><span class="enc-n">7</span><span class="enc-l">Grit</span></div>
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">DMode</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">DSteps</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">DTime</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">DFdbk</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">DWet</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">DTone</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">DGrit</span></div>
 <div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -147,9 +162,9 @@
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
 <div class="enc"><span class="enc-n">1</span><span class="enc-l">Volume</span></div>
 <div class="enc"><span class="enc-n">2</span><span class="enc-l">Drift</span></div>
-<div class="enc"><span class="enc-n">3</span><span class="enc-l">Electricity</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Elec</span></div>
 <div class="enc"><span class="enc-n">4</span><span class="enc-l">Bars</span></div>
-<div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Source</span></div>
 <div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
 <div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
 <div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
@@ -157,8 +172,9 @@
 <div class="buttons"><span class="btn-label">buttons</span>
 <span class="btn">To MIDI</span>
 <span class="btn">Bounce</span>
+<span class="btn">Screen</span>
 </div>
-<p class="bank-note">Lanes never straddle banks — one lane per page. Buttons are momentary and self-resetting.</p>
+<p class="bank-note">Lanes never straddle banks — one lane per page. Buttons are momentary and self-resetting. Button rows start at slot 2 — Push 3 reserves the leftmost top-row button for the device name. <b>Screen</b> is the last button above the display (slot 8) in every bank: it switches between the device&#x27;s own picture and Push&#x27;s normal view.</p>
 </div></div>
 </section>
 <section class="block" id="workflow">
@@ -173,10 +189,20 @@
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li><b>Freeze required from stage 2 on</b> — there&#x27;s external js. Rebuild → Edit in Max → snowflake → Cmd+S. A blank/white grid area means the device isn&#x27;t frozen.</li><li>&quot;no function beats&quot; errors at the <i>top</i> of the Max console are benign — messages arriving before the js engines compile.</li><li>Bounces land in <b><code>~/Music/Pulsograph</code></b> — create that folder once in Finder; the device can&#x27;t make it.</li><li>Don&#x27;t change tempo mid-bounce.</li></ul></div>
 </section>
-<section class="block" id="rebuilding">
+<section class="block" id="push-3-screen">
   <div class="block-label"><span class="bl-num">04.6</span>
+  <h2>push 3 screen</h2></div>
+  <div class="block-body"><h3 class="sub">what it shows</h3><p>A <b>pen chart recorder</b>. Dark chart paper scrolls with the song, bar numbers along the bottom, and four pens ink every hit as a little trace of its voice: THUD a slowing swing, TICK a needle, BURST a scribble, ODD a beating pattern. Height is Level and accent, length is Decay, swing rate is Tune, shape is Tone; Grit steps and crackles the trace, Var varies each hit, delay echoes trail behind, Drift nudges hits off the grid lines (drawn twice as large as heard) and Electricity adds hum. Ahead of the pens the coming steps are punched into the paper (filled = accent, a tick = that lane&#x27;s loop restarting). The right panel follows the bank: a lane&#x27;s voice as a large specimen trace, the echo train (Delay), or the motor, mains, volume and pattern source (Master). The pens lift when the transport stops.</p>
+<h3 class="sub">pattern from a clip</h3><p><b>Source</b> (Master bank, knob 5; on the face under BOUNCE) chooses <b>Grid</b> or <b>Clip</b>. Clip reads the MIDI clip playing on Pulsograph&#x27;s track, so the pattern can be made on Push: notes 36–39 map straight to lanes 1–4, otherwise the clip&#x27;s pitches, lowest first, become lanes 1–4. Velocity 101 or more is an accent; up to 32 sixteenths (2 bars). No clip playing gives an empty pattern. Entering Clip sets every lane to loop at x1; in Clip mode the grid shows FROM CLIP, can&#x27;t be clicked, and MIDI notes 36–39 stop triggering lanes so the clip doesn&#x27;t play twice. The hand-made grid is overwritten by the clip.</p>
+<h3 class="sub">the screen button</h3><p><b>Screen</b> is the last button above the display, in every bank. It switches between this picture and Push&#x27;s normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before.</p>
+<h3 class="sub">what it needs</h3><p>Live 13 with Max 9.2 or later, and Push 3. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push.</p>
+<h3 class="sub">not yet tried on push</h3><p>Built and checked in the offline Push Screen Kit simulator on 23 Nov 2026 (the picture above is its render); not yet run in Live or on Push. The old version is kept beside the new one.</p></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">04.7</span>
   <h2>rebuilding</h2></div>
-  <div class="block-body"><p><code>python3 build_pulsograph.py</code>, then add to Live and <b>freeze</b>.</p>
+  <div class="block-body"><p><code>python3 build_pulsograph_v11.py</code> builds v1.1 (Push screen + pattern from a clip), already frozen with all four js files embedded. v1.0 is kept as <code>Pulsograph v1.0.amxd</code>. Don&#x27;t run the old <code>build_pulsograph.py</code> on its own: it would overwrite <code>Pulsograph.amxd</code> with an unfrozen v1.0.</p>
+<p><code>python3 build_pulsograph.py</code>, then add to Live and <b>freeze</b>.</p>
 <p>Offline checks: <code>sim_voice.py</code>, <code>sim_seq.py</code>, <code>sim_drift.py</code>, <code>sim_delay.py</code>, <code>sim_grit.py</code>, plus <code>node test_grid_node.js</code> and <code>node test_export_node.js</code>.</p></div>
 </section>
 <nav class="chapnav"><a class="cn prev" href="kurzwellen.html"><span>previous</span>kurzwellen</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="oram.html"><span>next</span>oram</a></nav>

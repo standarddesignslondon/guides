@@ -14,12 +14,12 @@
   <h1>gen loss</h1>
   <p class="ch-sub">Tape degradation after the Chase Bliss Generation Loss MKII — wow, flutter, saturation, eleven tape models and a Failure knob.</p>
 </header>
-<figure class="shot"><div class="shot-frame"><img src="../images/gen-loss.png" alt="Gen Loss"></div><figcaption>gen loss</figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="../images/gen-loss.png" alt="Gen Loss"></div><figcaption>gen loss</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/gen-loss-push.png" alt="Push 3 screen, Live 13 (rendered offline; Push&#x27;s own font differs slightly)"></div><figcaption>push 3 screen, live 13 (rendered offline; push&#x27;s own font differs slightly)</figcaption></figure>
 <section class="block" id="about">
   <div class="block-label"><span class="bl-num">22.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">A stereo audio effect that follows the pedal&#x27;s signal flow: <b>Saturate → Model → Drops → Wow/Flutter → Dry blend</b>. The whole DSP is one gen~ codebox, so the device has no dependencies. Three Push 3 banks mirror the pedal&#x27;s knobs, its toggles and dip switches, and its hidden options.</p>
-    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>awaiting test</dd></div><div class="fact"><dt>folder</dt><dd>Generation Loss Device</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>awaiting test · v1.1 push screen</dd></div><div class="fact"><dt>version</dt><dd>1.1</dd></div><div class="fact"><dt>push screen</dt><dd>Live 13 / Max 9.2</dd></div><div class="fact"><dt>folder</dt><dd>Generation Loss Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -82,6 +82,9 @@
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Dry</span></div>
 <div class="enc"><span class="enc-n">8</span><span class="enc-l">Noise</span></div>
 </div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
+</div>
 </div>
 <div class="bank">
 <div class="bank-head">aux &amp; stereo</div>
@@ -94,6 +97,9 @@
 <div class="enc"><span class="enc-n">6</span><span class="enc-l">Dry Type</span></div>
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Drop Byp</span></div>
 <div class="enc"><span class="enc-n">8</span><span class="enc-l">Snag Byp</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -108,6 +114,10 @@
 <div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
 <div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
 </div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
+</div>
+<p class="bank-note"><b>Screen</b> is the last button above the display (slot 8) in every bank: it switches between the device&#x27;s own picture and Push&#x27;s normal view.</p>
 </div></div>
 </section>
 <section class="block" id="gotchas">
@@ -115,10 +125,19 @@
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>The wet path has a fixed 10 ms delay, so a high <b>Dry</b> setting combs against it — that is the chorus effect the manual describes, not a fault.</li><li><b>Aux On</b> is a parameter, not a momentary switch: map it to a pad for footswitch behaviour.</li></ul></div>
 </section>
-<section class="block" id="rebuilding">
+<section class="block" id="push-3-screen">
   <div class="block-label"><span class="bl-num">22.5</span>
+  <h2>push 3 screen</h2></div>
+  <div class="block-body"><h3 class="sub">what it shows</h3><p><b>A VHS monitor.</b> The output is drawn as a scan-line picture of the last ten seconds, newest on the right, and the gen~ code&#x27;s real faults happen to it: Wow bends the top of the picture, Flutter jitters the lines, drops leave white streaks and dark gaps, snags tear a band sideways, crinkle pops are white flecks, and Noise adds snow plus a rolling hum bar (or the VCR head-switching tear with Hum Type VCR). A strip underneath marks every drop, snag and pop. Model sets the colour smear. Aux Stop slows the picture at the real tape speed, freezes it and shows the blue STOP screen; Aux Fail fills a TRACKING meter; the counter runs at tape speed. The right panel follows the bank: the machine with its EQ curve and a wow-and-flutter meter (Pedal), the footswitch, onset curve and the two tape heads (Aux &amp; Stereo), the drive curve and noise floor (Hidden).</p>
+<h3 class="sub">the screen button</h3><p><b>Screen</b> is the last button above the display, in every bank. It switches between this picture and Push&#x27;s normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before.</p>
+<h3 class="sub">what it needs</h3><p>Live 13 with Max 9.2 or later, and Push 3. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push.</p>
+<h3 class="sub">not yet tried on push</h3><p>Built and checked in the offline Push Screen Kit simulator on 23 Nov 2026 (the picture above is its render); not yet run in Live or on Push. The old version is kept beside the new one.</p></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">22.6</span>
   <h2>rebuilding</h2></div>
-  <div class="block-body"><p><code>python3 build_amxd.py</code> in <code>Generation Loss Device/Gen Loss source/</code> regenerates the <code>.amxd</code> from <code>dsp.genexpr</code>; <code>proto.py</code> is the offline Python port of the DSP.</p></div>
+  <div class="block-body"><p><code>python3 &quot;Gen Loss source/build_genloss_v11.py&quot;</code> builds v1.1, starting from <code>Gen Loss v1.0.amxd</code> (the older <code>dsp.genexpr</code> in the source folder predates the working device&#x27;s fix). The gen~ code only gains eight report outlets for the screen, so the sound is unchanged.</p>
+<p><code>python3 build_amxd.py</code> in <code>Generation Loss Device/Gen Loss source/</code> regenerates the <code>.amxd</code> from <code>dsp.genexpr</code>; <code>proto.py</code> is the offline Python port of the DSP.</p></div>
 </section>
 <nav class="chapnav"><a class="cn prev" href="bad-mood.html"><span>previous</span>bad mood</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="composite.html"><span>next</span>composite</a></nav>
 </main>

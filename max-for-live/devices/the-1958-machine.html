@@ -14,12 +14,12 @@
   <h1>the 1958 machine</h1>
   <p class="ch-sub">Turns anything into the sound of the early European electronic-music studios, c. 1950–65.</p>
 </header>
-<figure class="shot"><div class="shot-frame"><img src="../images/the–1958–machine.png" alt="The 1958 Machine"></div><figcaption>the 1958 machine</figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="../images/the–1958–machine.png" alt="The 1958 Machine"></div><figcaption>the 1958 machine</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/the-1958-machine-push.png" alt="Push 3 screen, Live 13 (rendered offline; Push&#x27;s own font differs slightly)"></div><figcaption>push 3 screen, live 13 (rendered offline; push&#x27;s own font differs slightly)</figcaption></figure>
 <section class="block" id="about">
   <div class="block-label"><span class="bl-num">06.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">A single chain modelled on the Philips NatLab / Room 306 workflow: band-limiting, a singing band-pass, ring modulation, bell resonators, a tape stage with true varispeed loop capture, a granular splicer, a delay wheel, an FDN chamber and tape echo. <b>Every module bypasses at 0</b>, so all dials down passes clean.</p>
-    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v2.1</dd></div><div class="fact"><dt>folder</dt><dd>The 1958 Machine</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v2.2 · push screen awaiting test</dd></div><div class="fact"><dt>version</dt><dd>2.2</dd></div><div class="fact"><dt>push screen</dt><dd>Live 13 / Max 9.2</dd></div><div class="fact"><dt>folder</dt><dd>The 1958 Machine</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -71,13 +71,16 @@
 <div class="bank-head">performance</div>
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
 <div class="enc"><span class="enc-n">1</span><span class="enc-l">Colour</span></div>
-<div class="enc"><span class="enc-n">2</span><span class="enc-l">Resonance</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Reson</span></div>
 <div class="enc"><span class="enc-n">3</span><span class="enc-l">Metal</span></div>
 <div class="enc"><span class="enc-n">4</span><span class="enc-l">Tape</span></div>
 <div class="enc"><span class="enc-n">5</span><span class="enc-l">Splice</span></div>
 <div class="enc"><span class="enc-n">6</span><span class="enc-l">Space</span></div>
-<div class="enc"><span class="enc-n">7</span><span class="enc-l">Feedback</span></div>
-<div class="enc"><span class="enc-n">8</span><span class="enc-l">Instability</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Feedbk</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Instab</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -86,8 +89,8 @@
 <div class="enc"><span class="enc-n">1</span><span class="enc-l">Era</span></div>
 <div class="enc"><span class="enc-n">2</span><span class="enc-l">Bell</span></div>
 <div class="enc"><span class="enc-n">3</span><span class="enc-l">Speed</span></div>
-<div class="enc"><span class="enc-n">4</span><span class="enc-l">EchoTime</span></div>
-<div class="enc"><span class="enc-n">5</span><span class="enc-l">EchoAmt</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">EchTime</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">EchAmt</span></div>
 <div class="enc"><span class="enc-n">6</span><span class="enc-l">Width</span></div>
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Dropout</span></div>
 <div class="enc"><span class="enc-n">8</span><span class="enc-l">Damage</span></div>
@@ -97,13 +100,14 @@
 <span class="btn">TapePlay</span>
 <span class="btn">Reverse</span>
 <span class="btn">Mono</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
 <div class="bank-head">studio</div>
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
 <div class="enc"><span class="enc-n">1</span><span class="enc-l">Shift</span></div>
-<div class="enc"><span class="enc-n">2</span><span class="enc-l">HandSync</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">HdSync</span></div>
 <div class="enc"><span class="enc-n">3</span><span class="enc-l">Grain</span></div>
 <div class="enc"><span class="enc-n">4</span><span class="enc-l">IRMix</span></div>
 <div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
@@ -116,8 +120,9 @@
 <span class="btn">TapePlay</span>
 <span class="btn">Reverse</span>
 <span class="btn">Mono</span>
+<span class="btn">Screen</span>
 </div>
-<p class="bank-note">The four buttons appear on both Bank 2 and Bank 3. Banks are wiped on load before being recreated — harmless &quot;delete&quot; warnings may appear in the Max console.</p>
+<p class="bank-note">The four buttons appear on both Machine and Studio, as before. Button rows start at slot 2 — Push 3 reserves the leftmost top-row button for the device name. <b>Screen</b> is the last button above the display (slot 8) in every bank: it switches between the device&#x27;s own picture and Push&#x27;s normal view.</p>
 </div></div>
 </section>
 <section class="block" id="workflow">
@@ -131,10 +136,19 @@
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>With <b>Tape &gt; 0</b> on the <i>live</i> stream there&#x27;s a ~30 ms wobble-delay latency by design — you can&#x27;t flutter a signal that hasn&#x27;t happened yet.</li><li>The loaded IR is <b>not</b> stored in the Live Set. Reload it per session, or resave the device with a default.</li><li>If you hear pumping at silly settings, that&#x27;s the final <code>limi~ 2</code> doing its job.</li><li>If the <code>.amxd</code> ever refuses to load: open <code>The1958Machine.maxpat</code> in Max, select all, copy, paste into a blank Max Audio Effect, save.</li></ul></div>
 </section>
-<section class="block" id="rebuilding">
+<section class="block" id="push-3-screen">
   <div class="block-label"><span class="bl-num">06.6</span>
+  <h2>push 3 screen</h2></div>
+  <div class="block-body"><h3 class="sub">what it shows</h3><p><b>The Room 306 signal chain as a studio rack</b>, in the order the sound passes through it: ERA, COLOUR, METAL, SHIFT, BELL, TAPE, SPLICE, WHEEL, CHAMBER, ECHO. A unit lights when its dial is above 0 and stays grey when bypassed; the units the current bank controls get amber titles. Each draws what it is doing from the real gen~ values: the era&#x27;s band, the band-pass at its real centre (wandering with Instability), the ring modulator&#x27;s carrier, harmonics moved by the shifter, the bell&#x27;s five partials ringing. <b>TAPE</b> has reels turning at Speed (backwards with Reverse), REC while capturing, then the captured loop itself with the real playhead and the HandSync second machine drifting against it, and a red flash on a dropout. SPLICE shows the grains being cut, WHEEL the five taps glowing with the feedback, CHAMBER the room filling (and a loaded IR when IRMix is up), ECHO the repeats at EchoTime and the Width.</p>
+<h3 class="sub">the screen button</h3><p><b>Screen</b> is the last button above the display, in every bank. It switches between this picture and Push&#x27;s normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before.</p>
+<h3 class="sub">what it needs</h3><p>Live 13 with Max 9.2 or later, and Push 3. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push.</p>
+<h3 class="sub">not yet tried on push</h3><p>Built and checked in the offline Push Screen Kit simulator on 23 Nov 2026 (the picture above is its render); not yet run in Live or on Push. The old version is kept beside the new one.</p></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">06.7</span>
   <h2>rebuilding</h2></div>
-  <div class="block-body"><p><code>python3 build_1958machine.py</code> regenerates both device files from <code>the1958machine_dsp.genexpr</code>. The DSP is embedded — no freeze needed.</p></div>
+  <div class="block-body"><p><code>python3 build_1958machine_v22.py</code> builds v2.2 from <code>The1958Machine v2.1.amxd</code> with <code>Push Screen Kit/pushscreen_genfx.py</code>: 13 report outlets for the screen (the sound is unchanged), the banks made static, frozen.</p>
+<p><code>python3 build_1958machine.py</code> regenerates both device files from <code>the1958machine_dsp.genexpr</code>. The DSP is embedded — no freeze needed.</p></div>
 </section>
 <nav class="chapnav"><a class="cn prev" href="oram.html"><span>previous</span>oram</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="splice-tape-collage.html"><span>next</span>splice (tape collage)</a></nav>
 </main>

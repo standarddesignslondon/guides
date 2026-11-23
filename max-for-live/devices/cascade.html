@@ -14,12 +14,12 @@
   <h1>cascade</h1>
   <p class="ch-sub">Multi-tap machine — up to 64 echoes spread across a window you shape by hand.</p>
 </header>
-<figure class="shot"><div class="shot-frame"><img src="../images/cascade.png" alt="Cascade"></div><figcaption>cascade</figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="../images/cascade.png" alt="Cascade"></div><figcaption>cascade</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/cascade-push.png" alt="Push 3 screen, Live 13 (rendered offline; Push&#x27;s own font differs slightly)"></div><figcaption>push 3 screen, live 13 (rendered offline; push&#x27;s own font differs slightly)</figcaption></figure>
 <section class="block" id="about">
   <div class="block-label"><span class="bl-num">01.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">An UltraTap-equivalent built from scratch. Rather than one delay time, Cascade scatters 1–64 taps across a <b>Length</b> window and lets you reshape their spacing (Spread), level contour (Taper) and stereo placement (Width). Add Feedback, Tone, Slurm and a Chop block in front and it runs from tight slapback through rhythmic clouds to full soundscape wash. Wet level is energy-normalised, so Taps and Taper change <i>character</i>, not loudness.</p>
-    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete</dd></div><div class="fact"><dt>folder</dt><dd>Cascade Device</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete · v1.1 push screen awaiting test</dd></div><div class="fact"><dt>version</dt><dd>1.1</dd></div><div class="fact"><dt>push screen</dt><dd>Live 13 / Max 9.2</dd></div><div class="fact"><dt>folder</dt><dd>Cascade Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -75,12 +75,15 @@
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
 <div class="enc"><span class="enc-n">1</span><span class="enc-l">Length</span></div>
 <div class="enc"><span class="enc-n">2</span><span class="enc-l">Taps</span></div>
-<div class="enc"><span class="enc-n">3</span><span class="enc-l">Pre-delay</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Predelay</span></div>
 <div class="enc"><span class="enc-n">4</span><span class="enc-l">Spread</span></div>
 <div class="enc"><span class="enc-n">5</span><span class="enc-l">Taper</span></div>
 <div class="enc"><span class="enc-n">6</span><span class="enc-l">Width</span></div>
-<div class="enc"><span class="enc-n">7</span><span class="enc-l">Feedback</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Feedbk</span></div>
 <div class="enc"><span class="enc-n">8</span><span class="enc-l">Sync</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -97,6 +100,7 @@
 </div>
 <div class="buttons"><span class="btn-label">buttons</span>
 <span class="btn">Set B</span>
+<span class="btn">Screen</span>
 </div>
 <p class="bank-note">Set B on Push is momentary — it fires the snapshot capture and resets itself.</p>
 </div>
@@ -112,6 +116,10 @@
 <div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
 <div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
 </div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
+</div>
+<p class="bank-note"><b>Screen</b> is the last button above the display (slot 8) in every bank: it switches between the device&#x27;s own picture and Push&#x27;s normal view.</p>
 </div></div>
 </section>
 <section class="block" id="workflow">
@@ -126,10 +134,19 @@
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li><b>Freeze after every rebuild.</b> <code>build_cascade.py</code> writes an <i>unfrozen</i> device; without a freeze the js can&#x27;t be found and Morph is dead. Open in Live → Edit (spanner) → snowflake → Cmd+S.</li><li>&quot;no function cur&quot; errors <i>at device load</i> are benign (messages beat the js compile). The same errors <i>after</i> load mean the freeze didn&#x27;t happen.</li><li>Never rescue a copy from an old Set — rebuild from the script instead.</li></ul></div>
 </section>
-<section class="block" id="rebuilding">
+<section class="block" id="push-3-screen">
   <div class="block-label"><span class="bl-num">01.6</span>
+  <h2>push 3 screen</h2></div>
+  <div class="block-body"><h3 class="sub">what it shows</h3><p><b>The cascade.</b> Time runs left to right from the input meter to the last echo. What you play flows along the middle (already Chopped) and lights each tap as it arrives. Each tap is a bar: up is its left-channel share, down its right. Width zig-zags them, Taper shortens them, Spread bunches them, Pre-delay shifts them right, Feedback adds fainter repeats a Length further on, Slurm blurs and wobbles them and Tone colours them from dark blue to warm gold. With Sync on the ruler counts beats. The right panel follows the bank: <b>Machine</b> shows the taps from above (stereo position against delay), <b>Perform</b> the Morph loom between A (the dials) and B (Set B) with the Chop shape and rate, <b>Levels</b> the In and Out meters and the Mix.</p>
+<h3 class="sub">the screen button</h3><p><b>Screen</b> is the last button above the display, in every bank. It switches between this picture and Push&#x27;s normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before.</p>
+<h3 class="sub">what it needs</h3><p>Live 13 with Max 9.2 or later, and Push 3. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push.</p>
+<h3 class="sub">not yet tried on push</h3><p>Built and checked in the offline Push Screen Kit simulator on 23 Nov 2026 (the picture above is its render); not yet run in Live or on Push. The old version is kept beside the new one.</p></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">01.7</span>
   <h2>rebuilding</h2></div>
-  <div class="block-body"><p><code>python3 build_cascade.py</code> builds <code>Cascade.amxd</code> + <code>Cascade.maxpat</code> from nothing and runs the wiring post-checks. Then <b>freeze</b>.</p>
+  <div class="block-body"><p><code>python3 build_cascade_v11.py</code> builds v1.1 (the Push screen), already frozen with the morph and screen js embedded, so no freeze step. v1.0 is kept as <code>Cascade v1.0.amxd</code>. Don&#x27;t run the old <code>build_cascade.py</code> on its own: it would write an unfrozen v1.0 over <code>Cascade.amxd</code>.</p>
+<p><code>python3 build_cascade.py</code> builds <code>Cascade.amxd</code> + <code>Cascade.maxpat</code> from nothing and runs the wiring post-checks. Then <b>freeze</b>.</p>
 <p><code>python3 sim_cascade.py</code> is an offline mirror of the DSP maths — run it after any change to the gen~ code.</p></div>
 </section>
 <nav class="chapnav"><span class="cn empty"></span><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="microcosmos.html"><span>next</span>microcosmos</a></nav>

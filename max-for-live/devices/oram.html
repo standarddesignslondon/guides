@@ -14,12 +14,12 @@
   <h1>oram</h1>
   <p class="ch-sub">Drawn sound after Daphne Oram&#x27;s Oramics — paint film strips and the machine performs them.</p>
 </header>
-<figure class="shot"><div class="shot-frame"><img src="../images/oram.png" alt="ORAM"></div><figcaption>oram</figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="../images/oram.png" alt="ORAM"></div><figcaption>oram</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/oram-push.png" alt="Push 3 screen, Live 13 (rendered offline; Push&#x27;s own font differs slightly)"></div><figcaption>push 3 screen, live 13 (rendered offline; push&#x27;s own font differs slightly)</figcaption></figure>
 <section class="block" id="about">
   <div class="block-label"><span class="bl-num">05.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Four voices read single-cycle waveforms (&quot;slides&quot;) from a 128-strong library; seven painted lanes (&quot;film strips&quot;) drive pitch, vibrato, four voice volumes and a reverb send across a bar-synced loop. It also listens: <b>Capture</b> turns whatever is playing into a new slide, and <b>To Score</b> transcribes a phrase you just played straight into the strips. Then you vandalise the drawing.</p>
-    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>stages 1–5 passed · 6a–6d awaiting test</dd></div><div class="fact"><dt>folder</dt><dd>ORAM Device</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>stages 1–5 passed · 6a–6d awaiting test · v1.1 push screen awaiting test</dd></div><div class="fact"><dt>version</dt><dd>1.1</dd></div><div class="fact"><dt>push screen</dt><dd>Live 13 / Max 9.2</dd></div><div class="fact"><dt>folder</dt><dd>ORAM Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -87,6 +87,9 @@
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Chamber</span></div>
 <div class="enc"><span class="enc-n">8</span><span class="enc-l">Scan</span></div>
 </div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
+</div>
 </div>
 <div class="bank">
 <div class="bank-head">score</div>
@@ -100,13 +103,16 @@
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Slide 3</span></div>
 <div class="enc"><span class="enc-n">8</span><span class="enc-l">Slide 4</span></div>
 </div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
+</div>
 </div>
 <div class="bank">
 <div class="bank-head">gate</div>
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
-<div class="enc"><span class="enc-n">1</span><span class="enc-l">Gate Start</span></div>
-<div class="enc"><span class="enc-n">2</span><span class="enc-l">Gate Length</span></div>
-<div class="enc"><span class="enc-n">3</span><span class="enc-l">Gate Step</span></div>
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Start</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Length</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Step</span></div>
 <div class="enc"><span class="enc-n">4</span><span class="enc-l">Decay</span></div>
 <div class="enc"><span class="enc-n">5</span><span class="enc-l">Damp</span></div>
 <div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
@@ -118,8 +124,9 @@
 <span class="btn">To Score</span>
 <span class="btn">Rescore</span>
 <span class="btn">Preview</span>
+<span class="btn">Screen</span>
 </div>
-<p class="bank-note">The full loop with hands on Push: play pads → Score page, set Target → Gate page, press To Score. Or: Gate page, nudge the brackets, Preview, Rescore.</p>
+<p class="bank-note">The full loop with hands on Push: play pads → Score page, set Target → Gate page, press To Score. Or: Gate page, nudge the brackets, Preview, Rescore. Button rows start at slot 2 — Push 3 reserves the leftmost top-row button for the device name. <b>Screen</b> is the last button above the display (slot 8) in every bank: it switches between the device&#x27;s own picture and Push&#x27;s normal view.</p>
 </div></div>
 </section>
 <section class="block" id="workflow">
@@ -135,10 +142,20 @@
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li><b>Freezing is required</b> from stage 3 on — two external js files. Delete the old instance, drag <code>ORAM.amxd</code> in fresh from the folder (<i>not</i> from an old Set), Edit in Max, snowflake, Cmd+S. A healthy freeze prints &quot;Adding file oram_strips.js&quot; and &quot;Adding file oram_capture.js&quot; with no &quot;Unable to add&quot;.</li><li>Script builds are <b>always unfrozen</b>. If a device opens in Max already frozen, it isn&#x27;t a fresh build — delete it, don&#x27;t save it. Saving a stale frozen instance overwrites the good <code>ORAM.amxd</code>.</li><li>Slide files are indexed by their 3-digit filename prefix. <b>Never rename them</b> — captured slides continue the numbering.</li><li>A flat Pitch line after To Score is usually correct: a single repeated pitch transcribes as a level line. Play a phrase with moving notes.</li><li>The slide-library path is baked into the device&#x27;s readfolder message. If the folder moves, re-run <code>build_oram.py</code>.</li></ul></div>
 </section>
-<section class="block" id="rebuilding">
+<section class="block" id="push-3-screen">
   <div class="block-label"><span class="bl-num">05.6</span>
+  <h2>push 3 screen</h2></div>
+  <div class="block-body"><h3 class="sub">what it shows</h3><p><b>The film gate.</b> The seven strips run through the gate right to left past the photocell scan line, the whole loop always in view: PITCH as a melody line, VIB, VOL 1–4 and SEND as filled shapes. Each photocell lights by what it reads, the pitch it reads is tagged beside the line, bar notches run along the top and a bright seam marks where the loop restarts. The right panel follows the bank: <b>Perform</b> shows the four glass slides glowing by their level right now, with the summed waveform, note and Hz; <b>Score</b> shows what the next transcription will write, the Mode and the slide rack; <b>Gate</b> shows the dropped file&#x27;s waveform with its bracket and preview playhead, and the chamber&#x27;s tail.</p>
+<h3 class="sub">standalone push</h3><p>The slide library is read from a folder on the Mac, so on Push standalone the slides won&#x27;t load. The screen is for Push 3 with Live on the Mac.</p>
+<h3 class="sub">the screen button</h3><p><b>Screen</b> is the last button above the display, in every bank. It switches between this picture and Push&#x27;s normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before.</p>
+<h3 class="sub">what it needs</h3><p>Live 13 with Max 9.2 or later, and Push 3. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push.</p>
+<h3 class="sub">not yet tried on push</h3><p>Built and checked in the offline Push Screen Kit simulator on 23 Nov 2026 (the picture above is its render); not yet run in Live or on Push. The old version is kept beside the new one.</p></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">05.7</span>
   <h2>rebuilding</h2></div>
-  <div class="block-body"><p><code>python3 build_oram.py</code> regenerates <code>ORAM.maxpat</code> + <code>ORAM.amxd</code>. Then freeze. <code>generate_slides.py</code> rewrites the 128-slide starter library (deterministic, seed 1957).</p>
+  <div class="block-body"><p><code>python3 build_oram_v11.py</code> builds v1.1 (the Push screen), already frozen with the strips, capture and screen js embedded. v1.0 is kept as <code>ORAM v1.0.amxd</code>. Don&#x27;t run the old <code>build_oram.py</code> on its own: it would write an unfrozen v1.0 over <code>ORAM.amxd</code>.</p>
+<p><code>python3 build_oram.py</code> regenerates <code>ORAM.maxpat</code> + <code>ORAM.amxd</code>. Then freeze. <code>generate_slides.py</code> rewrites the 128-slide starter library (deterministic, seed 1957).</p>
 <p>Parked by choice: scores-on-disk, a FIDELITY/anti-alias switch, and a manual.</p></div>
 </section>
 <nav class="chapnav"><a class="cn prev" href="pulsograph.html"><span>previous</span>pulsograph</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="the-1958-machine.html"><span>next</span>the 1958 machine</a></nav>
