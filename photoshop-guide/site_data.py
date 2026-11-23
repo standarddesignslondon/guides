@@ -1453,6 +1453,4259 @@ ITEMS.append({
 })
 
 ITEMS.append({
+    "slug": "videolook",
+    "name": "VideoLook",
+    "kind": "UXP panel",
+    "app": "Photoshop",
+    "author": "Claude",
+    "status": "Working",
+    "folder": "VideoLook-Photoshop-Plugin",
+    "tagline": "Television and video looks from Baird's 30 lines to broken digital streams: 405-line to PAL, NTSC and SECAM, tube cameras, Quad to VHS, teletext and CRT sets, terminals and home computers, CCTV, wired TV, pay-TV scrambling, video synthesisers, LCD, plasma and LED screens, night vision, thermal cameras, videophones and early web video, vector displays, video printers, fax, wirephoto and weather-satellite pictures, lost keyframes and macroblock break-up, and the pictures of other instruments: space-probe cameras, Landsat, radar and sonar screens, ultrasound, CT, MRI, X-ray and gamma cameras, and electron and atomic force microscopes, early digital cameras, scanners and slit-scan, instant film, computer print-out, and pictures sent by cable and radio before television, videotex, slow-scan TV and radiofax, and early web images.",
+    "blurb": "The companion to FilmLook for television. It does not paint a look on: it turns the photo into a real video signal at the standard's own resolution (575 lines of about 922 samples for PAL, sampled at four times the colour subcarrier), passes it through a camera, a transmission channel, a tape machine and any transfer, then decodes it with the chosen receiver, so cross-colour, dot crawl, NTSC hue errors, PAL desaturation, Hanover bars and SECAM streaks come out of the maths as they did in reality. A display stage then rebuilds the picture at document size with scan lines, shadow mask or aperture grille, glow and tube geometry, or as a clean frame-grab, or as a photograph of the screen. The numbers come from the standards themselves (ITU-R BT.470, the UK System I specification, FCC and SMPTE documents) and from BBC engineering sources: the 1964 BBC camera comparisons, the 1967 registration report, BBC training sheets on camera processing, tape and colour-under recording, receivers and the 1967 standards converter. Settings whose defaults are estimates are marked est. on the panel. Version 1.1 adds the receiving set as a stage of its own: a set built for another country's system (French System L comes out as a rolling negative on a UK set), co-channel interference from a second picture, overload, and the set's sync, so pictures tear and roll for real reasons. It also adds Soviet, East German, Japanese, Brazilian and Argentine systems, Hi-Vision, the pre-war systems (Baird 30 and 240 lines, Berlin and NBC 441, Moscow 343), CBS colour-wheel TV, Apollo 11, slow-scan TV, Pixelvision, CCTV, LaserDisc, CED, Canal+ scrambling and teletext. Version 1.2 adds the off-screen photograph as a proper stage: a shutter that catches one field or a whole frame, a black-and-white negative and print, flare, soft dust and the tube surround, together with two faults of older sets that turn dark captions grey (mean-level AGC and no DC restorer). The result goes on a new layer; the photo is untouched. Version 1.3 turns to the sharper, harsher end. A new Picture source stage draws the photo as a terminal, a home computer or a teletext decoder could have drawn it: character pictures on the DEC VT05 and VT100 and the IBM monochrome display, CGA and BBC Micro palettes, teletext mosaics and a Tektronix storage tube, each on its own raster, with monochrome phosphors (P1, P3, P4, P31, P39) whose colours are worked out from their published spectra. High-resolution CCTV gets 570-line cameras on 1000-line monitors, wide-angle lenses and an infrared night mode; Rediffusion's wired television, studio RGB monitors and sets with scan velocity modulation cover the sharp end of home viewing. A Digital stream stage breaks pictures the way MPEG-2 and H.264 decoders do, on real 16 x 16 macroblocks and 8 x 8 DCT blocks: lost keyframes and datamoshing, slice errors that tile, tint and jumble the rows, and H.264 error smear. Version 1.4 widens the field again. Pay-TV scrambling adds Sky's VideoCrypt cut-and-rotate (and what a home-built decoder made of it), the BBC Select line shuffles and Nagravision Syster. The Picture source stage gains the video synthesisers of the early 1970s: a Rutt/Etra-style scan processor that lifts each line by its brightness, Paik/Abe scan modulation and the magnet on the tube, Scanimate and Sandin-style colourisers, and video feedback. A flat-panel display replaces the tube with a Game Boy LCD, pocket LCD televisions, laptop STN screens, orange gas plasma, LED signs or a flip-disc board, and new cameras cover night vision from the wartime infrared converter to Gen 3, and thermal imagers with White Hot, Black Hot, Ironbow, Rainbow, Arctic and Lava palettes. Version 1.5 adds three more areas. The Digital stream stage gains a starved videophone and web codec in the manner of H.261 (1990): QCIF and CIF videophones, the grey QuickCam and CU-SeeMe, RealVideo over a 28.8k modem and 3GP phone clips, with only the most-changed blocks sent so old and new picture break up together. The Picture source stage gains a vector display that traces the picture's contours as beam strokes, in white, colour, oscilloscope green or on a radar tube. A new Screen to paper stage puts the finished picture through a machine that printed it: a dye-sublimation colour video printer, a black-and-white medical video printer, a Group 3 fax with dither and line errors, a 1930s wirephoto, or a NOAA weather satellite's APT line with its sync bars and telemetry wedges. Version 1.6 reaches beyond television to other imaging instruments, all under Picture source: space-probe cameras from TIROS-1 to Voyager (few pixels, few bits, reseau dots, lost telemetry, colour from filtered frames, Mariner 4's picture coloured in crayon on printed numbers) and Lunar Orbiter's film read out in strips; the Landsat multispectral scanner in false colour or single bands, striped in sixes; radar screens with a turning sweep on a P7 tube, weather radar, side-scan sonar and echo sounders; ultrasound, CT (really projected and reconstructed), MRI with its ringing, wrap-around and ghosts, the X-ray image intensifier and the gamma camera; and the scanning electron and atomic force microscopes. In each one the photo stands in for what the instrument saw. Version 1.7 adds the first digital cameras and camera phones (Dycam, QuickTake, QV-10, the Game Boy Camera, Mavica, early camera phones: few pixels, a colour mosaic, JPEG blocks), hand-held and flatbed scanners and slit-scan photo-finish cameras under Picture source; and under Screen to paper, instant film (SX-70, 600, Spectra, peel-apart, Instax, black and white, with manipulation, expiry and roller marks), the line printer and teleprinter (pictures made of overprinted characters), the 9-pin dot-matrix printer, the pen plotter, the thermal receipt printer, and pictures by wire and radio from before television: Bartlane cable pictures, the Fultograph and the Hellschreiber. Version 1.8 adds pictures that came down phone lines and radio: Prestel and Minitel mosaic pages, Telidon and NAPLPS pictures drawn as flat shapes, amateur slow-scan TV (Macdonald's 120 lines, Robot, Martin and Scottie modes, with static, fading, slant and pictures cut short), HF radiofax photos and charts, and the early web: GIFs in the browser-safe 216 colours or their own palettes, interlaced GIFs and progressive JPEGs caught part-way, half-loaded JPEGs, and JPEGs dithered on a 256-colour screen.",
+    "facts": {
+        "version": "1.8.0",
+        "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
+        "plugin id": "com.simonmorse.videolook",
+        "looks": "370 (43 built from specifications alone)"
+    },
+    "quickstart": [
+        "Open **Plugins › VideoLook** and choose a look. The note under the list says what the chain is and what it rests on.",
+        "Draw a marquee and press **Preview selection** to see just that area. The whole frame still goes through the signal chain, so the preview is exact.",
+        "Press **Render**. The look goes on a new *VideoLook ·* layer at the top; **Strength** is that layer's opacity.",
+        "Adjust any stage below and press **Re-render last**. Tick boxes on the section headers switch whole stages on and off. Save combinations under **My presets**."
+    ],
+    "controls": [
+        {
+            "title": "Top of panel",
+            "rows": [
+                [
+                    "Look",
+                    "370 looks in 39 groups",
+                    "UK broadcast, US broadcast, France, Home video, Archive and transfers, Long-distance reception, USSR and Eastern Europe, Japan, Early television, Space, surveillance and toys, South America, Community TV and video art, Photographed off the screen, Subtitles, Terminals and VDUs, Teletext and home computers, CCTV and security, Piped TV and monitors, Broken digital streams, Pay-TV scrambling, Video synthesisers, Flat and odd displays, Night vision and thermal, Videophones and web video, Vector displays, Screen to paper, Space probes, Earth observation, Radar and sonar, Medical scanners, Microscopes, Early digital cameras, Scanners and slit-scan, Instant film, Computer print-out, Pictures by cable, Videotex, Radio pictures, Early web images. Choosing a look sets every stage and ticks the ones it uses."
+                ],
+                [
+                    "Strength",
+                    "0 – 100",
+                    "Opacity of the result layer; updates the last render live."
+                ],
+                [
+                    "Source",
+                    "Whole image / Selected layer",
+                    "Whole image hides earlier VideoLook layers while it reads."
+                ],
+                [
+                    "Output",
+                    "New layer / New document",
+                    "A layer at document size, or a new document at the standard's own size in square pixels (767×575 for PAL, 647×485 for NTSC)."
+                ],
+                [
+                    "Frame",
+                    "Matte / Crop canvas / Fill the document",
+                    "The picture is 4:3 (5:4 for early 405-line, 16:9 for Hi-Vision, 1.15:1 for Berlin 441, 1:1 for slow-scan, 3:7 tall for Baird 30-line); the rest of the document is black, or the canvas is cropped to it. **Fill the document** gives the picture the document's own shape instead, so nothing is cropped or bordered: use it for a poster or any design that isn't TV-shaped. The setting stays put when you change looks. Scan lines still run across, and the screen views draw a screen of the document's shape. For every edge of the design to survive, also set Overscan to 0 (Decoder & set), or use the Frame-grab view, which has no screen."
+                ],
+                [
+                    "Shift image X / Y",
+                    "pixels",
+                    "Moves the photo inside the picture: + X right, + Y down."
+                ],
+                [
+                    "Implied motion",
+                    "pixels per field, degrees",
+                    "A still has no movement; this supplies it. It brings out interlace combing, tube lag and comet tails, 3:2 pulldown and converter double images. **Only the selection moves** makes the selection the moving subject."
+                ],
+                [
+                    "New noise",
+                    "",
+                    "New random seed for noise, dropouts and grain."
+                ]
+            ]
+        },
+        {
+            "title": "Camera",
+            "rows": [
+                [
+                    "Camera / pickup",
+                    "24 types",
+                    "Emitron, CPS Emitron, image orthicon (B&W and 3-tube colour), vidicon, 3-tube Plumbicon, 1964 four-tube, EMI 2001, Saticon camcorder, broadcast 3-CCD, consumer 1-CCD, DV 3-CCD, intermediate film (Baird / Fernseh), Apollo lunar camera, PXL-2000, CCTV and Portapak., night vision (Gen 0 infrared converter, Gen 1 Starlight scope, Gen 2 and Gen 3) and thermal (pyroelectric tube, 160 x 120 and 320 x 240 sensors). Each sets the controls below."
+                ],
+                [
+                    "Exposure",
+                    "−2 – +2.5 stops",
+                    "Pushes highlights into the tube's knee or the CCD's clip."
+                ],
+                [
+                    "Softness",
+                    "0 – 1.5% of the width",
+                    "Blurs the picture before it is scanned, like a caption camera slightly out of focus. Because it is in the camera, the set's scan lines stay crisp over a soft picture, which is how 1960s off-screen photographs of captions look."
+                ],
+                [
+                    "Wide-angle lens",
+                    "0 – 0.6",
+                    "Barrel distortion of a short CCTV lens: straight lines bow outward and the corners fall into the dark edge of the image circle. Amounts are estimates."
+                ],
+                [
+                    "Infrared night mode",
+                    "0 – 1",
+                    "A monochrome camera under an infrared lamp: plants go pale and the lamp lights the middle most. A normal photo has no infrared record, so this is an estimate throughout."
+                ],
+                [
+                    "Night vision: scene light",
+                    "0 – 1",
+                    "For the night-vision cameras: starlight to dusk. Darker scenes sparkle with noise; brighter ones show the tube's honeycomb pattern. Estimates throughout, since a photo has no infrared record."
+                ],
+                [
+                    "Thermal palette",
+                    "White hot / Black hot / Ironbow / Rainbow / Arctic / Lava",
+                    "For the thermal cameras. Temperatures are guessed from colour and brightness: skin and lamps warm, sky cold."
+                ],
+                [
+                    "Edge sharpening",
+                    "0 – 1.5",
+                    "BBC-style contour correction: 3-tap, from green, added equally to R, G and B so the halos are neutral; off in the darks. The amount is an estimate."
+                ],
+                [
+                    "Signal-to-noise",
+                    "20 – 60 dB",
+                    "Camera noise, rising with frequency on photoconductive tubes."
+                ],
+                [
+                    "Lag / Comet tails",
+                    "",
+                    "Trails behind moving bright objects (needs implied motion)."
+                ],
+                [
+                    "Image-orthicon halo",
+                    "",
+                    "Dark ring round bright objects. Its size is an estimate."
+                ],
+                [
+                    "Red / Blue registration",
+                    "−150 – +150 ns",
+                    "Colour tubes out of register. The BBC's 1967 tolerance was 25 ns for 3-tube cameras (0.05% of the width) and 50 ns for a 4-tube camera's colour tubes."
+                ]
+            ]
+        },
+        {
+            "title": "Picture source",
+            "rows": [
+                [
+                    "Picture made by",
+                    "none / Character picture / Bitmap with a palette / Teletext mosaics / Rutt/Etra scan processor / Paik/Abe scan modulation / Colouriser / Video feedback / Vector display / Space-probe camera / Film read out in strips / Multispectral scanner / Radar screen / Side-scan sonar / Echo sounder / Ultrasound / CT / MRI / X-ray image intensifier / Gamma camera / Scanning electron microscope / Scanning probe microscope / Early digital camera / Scanner / Slit-scan camera / Minitel / Telidon / Slow-scan TV / HF radiofax / Early web image",
+                    "Replaces the photo with what a terminal, a computer or a teletext decoder could actually show, on the standard's own raster. Usually used with Standard & colour switched off, so the picture drives the monitor directly."
+                ],
+                [
+                    "Characters",
+                    "ASCII / IBM PC set with shade blocks",
+                    "Each cell gets the character (and bright or normal level) that best matches the photo there, judged on overall tone and shape. VideoLook's dot font stands in for each terminal's character ROM."
+                ],
+                [
+                    "Reverse video, Dot stretching",
+                    "",
+                    "Reverse cells allow solid light areas; dot stretching is the VT100's trick of lengthening every dot by one."
+                ],
+                [
+                    "Palette, Dither",
+                    "1-bit, 16 greys (QuickCam, CU-SeeMe), MDA 4 levels, CGA palettes, RGBI 16, 8-colour digital RGB, BBC MODE 1; none / ordered / error diffusion",
+                    "Ordered (Bayer) dither gives the regular cross-hatch of the period; error diffusion (Floyd-Steinberg) the finer scatter."
+                ],
+                [
+                    "Teletext mosaics, hold mosaics",
+                    "Contiguous / Separated; on / off",
+                    "40 x 24 cells of 2 x 3 blocks in seven colours. Each colour change costs a cell, shown as a space unless Hold Mosaics repeats the last block."
+                ],
+                [
+                    "Contrast, Brightness before conversion",
+                    "",
+                    "How the operator prepared the picture before converting it."
+                ],
+                [
+                    "Storage-tube background glow",
+                    "0 – 0.3",
+                    "The faint glow the Tektronix tube's flood guns give the whole screen."
+                ],
+                [
+                    "Scan processor: lines, height, rotation, depth, trace brightness",
+                    "",
+                    "Each line is drawn lifted by its brightness, as on the Rutt/Etra: fewer lines and more height make a ridged landscape."
+                ],
+                [
+                    "Scan modulation: frequency and amount across and down, waveform",
+                    "0 – 2,000 Hz across, 0 – 20,000 Hz down",
+                    "Audio tones bend the raster. Multiples of the field rate (50 or 60 Hz) keep the bends still and symmetrical."
+                ],
+                [
+                    "Magnet on the tube: strength, across, down",
+                    "",
+                    "Twists the raster round a point."
+                ],
+                [
+                    "Colouriser colours, edge emphasis, soft level changes",
+                    "",
+                    "Slices the grey scale into flat colours; edge emphasis adds the differentiator's outlines."
+                ],
+                [
+                    "Feedback: zoom, trips round the loop, hue turn, loop strength",
+                    "",
+                    "A camera pointed at its own monitor: pulled back for a tunnel, zoomed in with gain for runaway smears."
+                ],
+                [
+                    "Vector display: detail, contour levels, straighten strokes, colour by level, beam colour, corner dots, beam width",
+                    "",
+                    "The picture becomes a list of strokes: contour lines of its brightness, straightened, drawn by the beam on black. Fewer levels and more straightening give a few angular strokes; colour by level suits a colour vector monitor."
+                ],
+                [
+                    "Instrument controls",
+                    "",
+                    "Choosing an instrument shows its own controls and hides the rest: pixels and bits, reseau marks and lost lines for probes; strips and seams for Lunar Orbiter; bands, striping and skew for Landsat; radius, sweep, afterglow, rings and colours for radar; height, relief and speckle for side-scan sonar; probe shape, beam lines, shadows and display for ultrasound; matrix, angles, window and level for CT and MRI, with motion ghosts, wrap-around and chemical shift for MRI; pincushion, glare and dose for the image intensifier; counts and colours for the gamma camera; edge glow, charging and the data bar for the SEM; line offsets, streaks and relief shading for the probe microscope. Picking a different instrument starts it from its defaults."
+                ],
+                [
+                    "Camera and scanner controls",
+                    "",
+                    "Early digital camera: pixels across and down, colour mosaic, saturation, exposure, clipping, smear, noise, edge enhancement, JPEG compression, grey levels with dither, Game Boy greens. Scanner: flatbed or hand-held, uneven speed and wobble, passes, three-pass misregistration, a subject that moved part-way. Slit-scan: speeds, stops (which turn still things into stripes), a wavering slit, direction, timing marks and finish line."
+                ],
+                [
+                    "Videotex, radio and web controls",
+                    "",
+                    "Minitel: black-and-white or colour screen, joined or separated mosaic, service row text, how much of the page has arrived. Telidon: palette, detail, rounding, outlines, drawing part-way. Slow-scan TV: mode, noise, fading, slant, static crashes, whistle, colours out of step, picture cut short, a caption. Radiofax: photo or chart, phase, phasing lines, static, whistle, ink and paper. Web image: GIF or JPEG, size, palette and dither, interlace passes, progressive scans, part-loaded, shown on a 256-colour screen."
+                ]
+            ]
+        },
+        {
+            "title": "Standard & colour",
+            "rows": [
+                [
+                    "Television standard",
+                    "37 systems and rasters",
+                    "625 PAL (UK I, Europe B/G/H), 525 NTSC (US, Japan), SECAM (France L, USSR D/K, East Germany B/G), PAL-M, PAL-N, 405-line, 819-line (France E, Belgium F), 625 and 525 black and white, Soviet 625 and 343, Berlin and NBC 441, Baird 240 and 30, CBS field-sequential colour, Apollo 320, slow-scan 120, Hi-Vision MUSE, component 625/525. Version 1.3 adds 625 and 525 CCTV (no broadcast filter, a 1000-line monitor), the DEC VT100 (800 x 240), the IBM monochrome display (720 x 350), CGA (200 lines), a home computer on a 625-line monitor (288 lines, not interlaced), the Tektronix 4010 storage tube, and digital frames at 352 x 288, 720 x 576, 1280 x 720 and 1920 x 1080."
+                ],
+                [
+                    "Picture shape",
+                    "4:3 / 5:4 / 16:9",
+                    "5:4 was 405-line's shape until April 1950. Ignored when Frame is Fill the document."
+                ],
+                [
+                    "NTSC colour coding",
+                    "I/Q or equal-band",
+                    "FCC I/Q, or SMPTE 170M equal-band."
+                ]
+            ]
+        },
+        {
+            "title": "Channel",
+            "rows": [
+                [
+                    "Route",
+                    "Studio / Aerial / Satellite FM / D-MAC",
+                    "Satellite FM is Sky on Astra (PAL over FM, sparklies on a weak dish); D-MAC is BSB (no subcarrier, so no cross-colour)."
+                ],
+                [
+                    "Signal-to-noise",
+                    "10 – 60 dB",
+                    "Snow. The US TASO grades: 44 excellent, 34 fine, 27 passable, 23 marginal, 17 inferior."
+                ],
+                [
+                    "Ghost",
+                    "delay, strength, type",
+                    "Multipath echo: 1 µs is about 2% of the picture width; positive, inverted or edge-like depending on its RF phase."
+                ],
+                [
+                    "Interference spots",
+                    "",
+                    "Impulse noise: white spots on 405, 819 and French L, dark on the others."
+                ],
+                [
+                    "Co-channel station",
+                    "strength, offset, position",
+                    "A second station on the same channel (long-distance reception): it shows through with its own sync bars, striped by the few-kHz carrier offset. The second picture is the photo mirrored, or a layer named *second picture*."
+                ],
+                [
+                    "Scrambling",
+                    "None / Discret 11 / VideoCrypt / VideoCrypt through a home-built decoder / VideoCrypt-S full, half, line delay / Nagravision Syster",
+                    "Canal+ Discret 11 from 1984: each line delayed by 0, 0.9 or 1.8 µs at random. VideoCrypt (Sky, 1989): each line cut at one of 256 points and its halves swapped. VideoCrypt-S (BBC Select, 1992-94): lines shuffled in six blocks of 47 per field. Syster: each field's lines read out of a 32-line store in permuted order. Sync and colour burst are left alone, so the set still locks."
+                ]
+            ]
+        },
+        {
+            "title": "Recording",
+            "rows": [
+                [
+                    "Format",
+                    "24 formats",
+                    "2-inch Quad (high and low band), 1-inch B and C, U-matic (LB, HB, SP), Betacam, Betacam SP, MII, VHS (SP, LP, EP), S-VHS, Betamax, Video8, Hi8, V2000, Philips VCR, D1, Digital Betacam, D2/D3, DV, DVCPRO."
+                ],
+                [
+                    "Recorded",
+                    "At the studio / At home",
+                    "Studio tape goes before transmission; a home recording is made of the received, noisy signal."
+                ],
+                [
+                    "Copy generations",
+                    "1 – 5",
+                    "Each copy adds tape noise and smear again."
+                ],
+                [
+                    "Timebase wobble, Dropouts, Head-switch lines, Tracking error",
+                    "",
+                    "Domestic machine faults. The amounts are estimates."
+                ],
+                [
+                    "Quad head banding",
+                    "",
+                    "Per-head bands every 16 lines, with colour errors growing across the picture."
+                ]
+            ]
+        },
+        {
+            "title": "Digital stream",
+            "rows": [
+                [
+                    "What went wrong",
+                    "Lost keyframe / datamosh, MPEG-2 slice errors, H.264 error smear, Starved videophone / web codec (H.261 style)",
+                    "Built on real 4:2:0 macroblocks with the MPEG-2 quantiser and half-pixel motion compensation."
+                ],
+                [
+                    "Coded picture size",
+                    "from the standard / 352 x 288 / 720 x 576 / 720 x 480 / 1280 x 720 / 1920 x 1080 / CIF 352 x 288 / QCIF 176 x 144 / Sub-QCIF 128 x 96 / 320 x 240 / 160 x 120",
+                    "The size the stream was coded at; the decoded picture is scaled without softening so its blocks stay hard."
+                ],
+                [
+                    "Picture the decoder still holds",
+                    "Mid grey / Empty buffer / The photo mirrored / Layer named 'second picture' / The photo itself",
+                    "For a lost keyframe: the picture the new scene's motion is applied to. An empty buffer decodes as dark green; the photo itself repeated is P-frame 'bloom'."
+                ],
+                [
+                    "Frames since the error, Movement across and down",
+                    "0 – 60; −16 – +16 px a frame",
+                    "How long the damage has been carried on, and how the scene moves meanwhile."
+                ],
+                [
+                    "Stray vectors in flat areas",
+                    "0 – 24",
+                    "Block matching finds nothing to match in flat areas and picks near-random vectors, which is what smears. Estimate."
+                ],
+                [
+                    "Quantiser",
+                    "2 – 31",
+                    "How coarsely the blocks are coded."
+                ],
+                [
+                    "Slice errors",
+                    "0 – 1",
+                    "Share of macroblock rows hit. Once a row is hit the rest of it decodes wrongly (tinted tiles, strips from elsewhere, striped blocks or the last good picture) until the next row starts cleanly."
+                ],
+                [
+                    "H.264 error position, garbage",
+                    "0 – 1",
+                    "From the error to the bottom, blocks are predicted from their neighbours' edges, so streaks run off."
+                ],
+                [
+                    "Videophone: share of blocks sent, change needed, enlarged by the player",
+                    "0 – 1; 0 – 40; blocky / smoothed",
+                    "For the videophone codec. With 0 frames since the error the whole picture is coded once, coarsely. With more frames only the blocks that changed most are sent; the rest keep the earlier picture. Smoothed enlarges the small picture the way a web player did."
+                ],
+                [
+                    "Only inside the selection",
+                    "No / Yes",
+                    "For a lost keyframe: only the selected macroblocks carry the motion."
+                ]
+            ]
+        },
+        {
+            "title": "Transfer",
+            "rows": [
+                [
+                    "Conversion generations",
+                    "1 - 12",
+                    "Repeat the conversion, each copy made from the last: with Optical and the same target standard, a picture re-shot off a monitor again and again."
+                ],
+                [
+                    "Standards conversion",
+                    "Optical / BBC 1967 / Digital / Motion-compensated",
+                    "Re-codes to the target standard. The BBC 1967 field store blends one field in five and insets the picture in a black border."
+                ],
+                [
+                    "Telerecording",
+                    "Suppressed field / Stored field / US kinescope",
+                    "Video filmed off a monitor: fewer lines, film grain, ~40:1 range. The result is the film."
+                ],
+                [
+                    "Telecine",
+                    "Clean / 3:2 mixed frame",
+                    "Flying-spot film scanner in place of the camera. Run FilmLook first for the film stock."
+                ],
+                [
+                    "Tape played on another system",
+                    "PAL-60 / NTSC 4.43 / SECAM on PAL",
+                    "American tapes on UK machines, and SECAM on a PAL-only set (black and white with dots)."
+                ]
+            ]
+        },
+        {
+            "title": "Decoder & set",
+            "rows": [
+                [
+                    "Luma/colour separation",
+                    "Notch, low-pass, comb, none",
+                    "A notch gives cross-colour on fine detail; a comb removes it on still pictures; none is a black-and-white set, which shows the subcarrier as dots."
+                ],
+                [
+                    "PAL decoder",
+                    "Delay line / Simple",
+                    "All British sets had the delay line by 1970, so phase errors only reduce saturation; simple PAL shows Hanover bars."
+                ],
+                [
+                    "Phase error / Differential phase",
+                    "degrees",
+                    "NTSC hue errors (\"Never The Same Colour\"); the PAL equivalent is lost saturation."
+                ],
+                [
+                    "Set controls",
+                    "",
+                    "Sharpness (up to 2, the showroom setting), contrast, brightness, colour, overscan."
+                ],
+                [
+                    "Set built for",
+                    "same / UK / Dutch-German / French / Soviet",
+                    "A set for another system gets that system's carrier levels wrong: French System L shows as a negative on a UK set, with no colour, and loses sync; other sound carriers leave patterning."
+                ],
+                [
+                    "Vertical hold, Roll position, Horizontal hold, Line lock",
+                    "",
+                    "The set's own timebases: a sync separator, a flywheel line oscillator and a field oscillator. A clean signal locks and is unchanged; a wrong or weak one tears and rolls. The loop figures are estimates."
+                ],
+                [
+                    "Overload (lockout)",
+                    "0 – 1",
+                    "Too strong a signal: sync crushed, picture partly negative."
+                ],
+                [
+                    "Mean-level AGC",
+                    "0 – 1",
+                    "Early 405-line sets (and French 819 and System L sets) set their gain from the average signal, so a mostly black picture was turned up until it was grey and its whites over-driven. Gated AGC from the mid-1950s cured it. Only acts on those systems. The amount is an estimate."
+                ],
+                [
+                    "Black follows the picture",
+                    "0 – 1",
+                    "A set with no DC restorer holds the picture's average at a fixed brightness, not its black: dark pictures go grey, bright ones go too dark. Works on any system. The amount is an estimate."
+                ],
+                [
+                    "Black-level tilt",
+                    "0 – 1",
+                    "Makes that follow the picture down the screen: the level drops at a white caption and creeps back over the next field, leaving a grey band above the caption and black below it. Fitted to one 1968 off-screen photograph; the cause isn't established."
+                ]
+            ]
+        },
+        {
+            "title": "Display & view",
+            "rows": [
+                [
+                    "Tube",
+                    "B&W / Delta-gun / Slot mask / Trinitron / colour wheel / P7 / Flat panel",
+                    "The phosphor pattern, sized from the screen size. P7 is the radar tube used for slow-scan TV: a blue flash, then a yellow-green afterglow. Flat panel replaces the tube with the panel chosen below."
+                ],
+                [
+                    "Panel, Panel dither",
+                    "Game Boy LCD / pocket LCD TV / laptop STN / colour LCD / orange plasma (on-off, 16 shades, PLATO IV) / red or amber LED / flip-disc",
+                    "Each panel has its own resolution, number of shades, cell colours and shape. LCDs show the shadow of their pixels on the reflector and passive-matrix shading; plasma and LEDs glow. Colours and some sizes are estimates."
+                ],
+                [
+                    "Monochrome phosphor",
+                    "white / P4 / P31 / P39 / P1 / P3 / P12",
+                    "The colour of a black-and-white tube: P4 white (TV, VT100), P31 green (most green monitors), P39 green with a long glow (IBM 5151), P1 green (oscilloscopes, Tektronix), P3 amber, P12 orange. Chromaticities are worked out from each phosphor's published peak and width."
+                ],
+                [
+                    "Scan velocity modulation",
+                    "0 – 3",
+                    "The spot speeds up either side of an edge and slows across it, so light areas shrink and dark edges harden, as on many large sets from the 1980s on. The amount is an estimate."
+                ],
+                [
+                    "Phosphors, White point, Tube gamma",
+                    "EBU / SMPTE C / 1953 / Japanese; D65 / 9300 K / 9300 K + 27 MPCD",
+                    "US sets often ran at 9300 K and Japanese sets at 9300 K + 27 MPCD; no UK figure was found, so D65 is the default."
+                ],
+                [
+                    "Round tube face",
+                    "",
+                    "For round tubes: the KVN-49 and radar tubes."
+                ],
+                [
+                    "Mask, Scan lines, Blooming, Glow, Curvature, Corners",
+                    "",
+                    "Mask and scan lines draw only where the image has enough pixels, and fade out rather than making moiré on small images."
+                ],
+                [
+                    "View",
+                    "Frame-grab / Screen close-up / Photo of the screen / Magnifying lens / Televisor",
+                    "The lens is the KVN-49's water-filled magnifier; the Televisor is Baird's neon lamp and spinning disc."
+                ],
+                [
+                    "Photo exposure",
+                    "0 – 2 fields",
+                    "How long the shutter was open, in fields (1/50 s each in the UK). 2 is a whole frame (1/25 s, the usual rule, and John Cura's Tele-snap setting); 1 catches one field, so only every other line shows (about 188 on 405 lines); between 1 and 2 part of the screen gets both; below 1 only a band is bright. 0 is a long exposure. **Scan position at the click** moves the band."
+                ],
+                [
+                    "Photo softness, Glass and lens flare, Room reflection",
+                    "",
+                    "The camera's focus, light scattered in the faceplate and lens (it lifts the blacks near bright areas), and a window reflected in the glass."
+                ],
+                [
+                    "Pull back, Camera tilt",
+                    "0 – 0.3; −6 – +6°",
+                    "Shows the dark surround of the tube and a camera not held square."
+                ],
+                [
+                    "Photo finish",
+                    "As seen / Black-and-white print",
+                    "Black-and-white print puts the photo through a negative and a print. **Print exposure** (stops) sets how light it is: lower it and the screen's whites turn grey and milky; raise it and they burn out. **Print contrast** is the paper grade; **Print black** is how deep the print's black goes."
+                ],
+                [
+                    "Photo grain",
+                    "0 – 1.5",
+                    "Film grain. New noise moves it."
+                ],
+                [
+                    "Dust (amount), Dust brightness",
+                    "0 – 1.5; 0 – 3",
+                    "The dust of a small negative enlarged: small, soft, mostly faint specks, a few of them dark, modelled on those measured in 1960s off-screen stills. Amount 0.15–0.2 is about their density and brightness 1 their strength; the looks use 0.15 or 0.2. No hairs or scratches. New noise moves the specks."
+                ]
+            ]
+        },
+        {
+            "title": "Screen to paper",
+            "rows": [
+                [
+                    "Printed by",
+                    "(none) / Colour video printer / B&W video printer / Fax / Wirephoto / Weather satellite (NOAA APT) / Instant film / Line printer / Teleprinter picture / Dot-matrix printer / Pen plotter / Thermal receipt printer / Bartlane / Fultograph / Hellschreiber",
+                    "Runs on the finished picture, after the view. The printers, fax and wirephoto print in their own lines and dots; the satellite turns the picture into an APT line."
+                ],
+                [
+                    "Paper margin round the picture",
+                    "0 – 0.15",
+                    "Adds paper round the picture, like a real print. Leave it at 0 to fill your design."
+                ],
+                [
+                    "Printer: dots across, lines down, heat carried to the next line, head streaks, misregistration",
+                    "",
+                    "Video printers lay the picture down one line at a time with a thermal head: dark areas drag a little down the page, and uneven head elements leave faint streaks. 0 dots uses the machine's own count (720 x 468 colour, 1,280 B&W)."
+                ],
+                [
+                    "B&W printer: grey levels",
+                    "4 – 256",
+                    "Older thermal printers had few levels and patterned the steps between them."
+                ],
+                [
+                    "Fax: pels across, resolution, photo mode, line errors, bad lines printed as, scanner dirt, paper, fading",
+                    "",
+                    "Group 3: about 203 pels to the inch across and 98 (standard) or 196 (fine) lines to the inch down, one bit each. Photo mode dithers the greys; text mode gives pure black and white. Line errors garble runs or repeat the line before."
+                ],
+                [
+                    "Wirephoto / satellite: lines; wirephoto timing wander, mains hum, crackle, print tone",
+                    "",
+                    "A wirephoto is about 100 lines to the inch, each line a continuous tone sent over a telephone line, printed glossy."
+                ],
+                [
+                    "Satellite: lines lost to static, shown, noise, noise at the start and end of the pass, slant, colours, printed on",
+                    "",
+                    "The whole APT line shows both channels with their sync bars and telemetry wedges; channel A or B alone fills the picture. The infrared channel is made up from the picture. Slant imitates a decoder that has not locked."
+                ],
+                [
+                    "Print-out controls",
+                    "",
+                    "Each new machine shows its own controls: film, frame (off by default), manipulation, expiry and rollers for instant film; characters across, lines to the inch, overprinting, tone and green-bar paper for the line printer and teleprinter; density, dither, misaligned passes and ribbon for dot matrix; pens, spacing, width and angle for the plotter; dots, dead elements and fading for receipts; tones and printing for Bartlane; lines, fading, static and slip for the Fultograph; strips, gap and slant for Hell. Ink and paper colours can be changed."
+                ]
+            ]
+        },
+        {
+            "title": "Overlay",
+            "rows": [
+                [
+                    "Subtitles",
+                    "12 styles",
+                    "Typeset with your installed fonts (a temporary text layer, read and deleted), then burned in where they belonged: on the film print (chemically etched with ragged letters, or laser-etched with a thin dark halo), at the studio (BBC slab serif with a black edge or on a grey label, Arial italic with a soft shadow, VHS release, Dutch TV, Channel 4, DVD 4-colour bitmap, early black box), or by the set (US Line 21 closed captions). The BBC's own face, TKST, isn't available: Rockwell stands in. Font, italic, size, colour, edge, position (bottom, middle for titles, or top) and case can all be changed."
+                ],
+                [
+                    "Overlay",
+                    "Teletext / Date-time stamp",
+                    "Teletext is drawn by the set after the decoder: mixed over the picture, as a full page, or as boxed subtitles. The stamp is burned in before recording, so the tape softens it."
+                ],
+                [
+                    "Load font list, Filter families, Font family, Font style",
+                    "",
+                    "Press **Load font list** once per session to fetch your installed fonts from Photoshop (it isn't read at start-up, so it can't hold up other panels). Type part of a name in Filter families to narrow the list, then pick the family and style. Leave the family on *the style's own font* to use the style's list."
+                ],
+                [
+                    "or PostScript name",
+                    "",
+                    "Type a PostScript name instead (e.g. `Arial-ItalicMT`), or several separated by commas, used in order of preference. Font Book shows it in each font's info panel."
+                ],
+                [
+                    "Text",
+                    "",
+                    "Colours with {red} {green} {yellow} {blue} {magenta} {cyan} {white}, double height with {dh}, boxes with {box}...{/box}; 40 characters a line. The font is VideoLook's own."
+                ]
+            ]
+        }
+    ],
+    "workflow": [
+        {
+            "title": "Film on television",
+            "text": "For 1970s drama exteriors or any film shown on TV, render the FilmLook stock first, then apply VideoLook's telecine look to the result."
+        },
+        {
+            "title": "Long-distance reception",
+            "text": "Summer lift, French TV on a UK set, Sporadic-E: pick the look, then move Co-channel strength, Roll position and Horizontal hold, and press New noise for another moment. For a real second station, add a layer named *second picture*."
+        },
+        {
+            "title": "Off-screen photographs",
+            "text": "For a 1960s station symbol or caption as it survives in off-screen photographs: start with white artwork on black, choose a look from *Photographed off the screen*, then move Print exposure (grey and ghostly, or burnt out), Softness under Camera, and Mean-level AGC and Black follows the picture under Decoder & set. See the Look Cookbook."
+        },
+        {
+            "title": "Terminals and computers",
+            "text": "Character pictures read best from pictures with strong shapes and plain backgrounds. Raise Contrast before conversion under Picture source if a face goes to blank cells; try Screen close-up and then Photo of the screen for a period print."
+        },
+        {
+            "title": "Broken streams",
+            "text": "For a datamosh between two pictures, put the earlier scene on a layer named *second picture* and choose *Datamosh from a second picture*. Change Frames since the error and the Movement sliders, and press New noise for another break-up."
+        },
+        {
+            "title": "Video synthesisers and panels",
+            "text": "Scan-processor looks work best on pictures with large light and dark shapes. Chain a second instrument by trying the colouriser after a scan-processor look. Panel looks crop the picture to the panel's own shape, so move the subject with Shift image if it falls outside."
+        },
+        {
+            "title": "Videophones, vectors and paper",
+            "text": "Videophone looks are tiny pictures enlarged, so they read best at a distance. Vector looks need clear light and dark shapes; raise the detail for busy pictures. Screen to paper works on the whole picture, so a preview of a selection still renders everything first and takes a little longer."
+        },
+        {
+            "title": "Instruments",
+            "text": "The instruments read the photo as their subject: brightness becomes echo strength, height, density or activity, and edges become echoes. Strong shapes and clear contrast work best. Set Frame to Fill the document to use the whole canvas; the round screens (radar, CT, image intensifier) then sit in the middle. Put a radar look on the P7 tube, or send an ultrasound to the B&W video printer under Screen to paper, to finish it the way it was seen."
+        },
+        {
+            "title": "Print-outs and early digital",
+            "text": "The print-outs run on the finished picture at the document's size, so a large document gives the line printer, plotter and Hell tapes room to show their marks; a small one makes them coarse. Instant film fills the document unless you turn its frame on. For a Game Boy Camera picture on its own printer, combine the camera with the receipt printer, as the look of that name does."
+        },
+        {
+            "title": "Videotex, radio and web",
+            "text": "These looks redraw the photo the way the system carried it, at the system's own small size, so they look the same whatever the document size. Prestel and Minitel look best on their screens (the looks that end in a set or tube); the clean versions suit graphic work. The loading looks (part-drawn pages, first GIF pass, first JPEG scan) are snapshots of a picture still arriving."
+        },
+        {
+            "title": "Evidence",
+            "text": "Ten looks (Alexandra Palace 1937, 405-line at home, US live 1950, French 819-line, Moscow 343, Baird 240, Berlin and NBC 441, CBS colour, Belgian 819) are built from the specifications alone, because no authentic pictures survive. The rest are research-based and can be calibrated against reference frames."
+        }
+    ],
+    "gotchas": [
+        "Large documents take a while: a 24-megapixel render with a CRT view is roughly 10–20 seconds. Preview selection is quicker.",
+        "The Tektronix storage-tube look works on a 2048-sample raster and takes several times longer than the other terminal looks.",
+        "A Photo of the screen is made from the whole picture (flare, grain, dust, tilt), so its previews take as long as a full render, and a one-field photo draws the screen twice.",
+        "The photo is treated as sRGB; convert documents in other profiles first.",
+        "A still cannot show movement: the 60-field 'video look' of US sitcoms, dot crawl moving and interlace flicker are not there. Implied motion shows what a single frame of movement would look like.",
+        "32-bit documents are not supported.",
+        "Hi-Vision has no camera stage (HD cameras aren't modelled) and needs Implied motion with 'Only the selection moves' to show its motion blur."
+    ],
+    "sections": [
+        {
+            "label": "looks",
+            "type": "reference",
+            "data": [
+                {
+                    "title": "UK broadcast",
+                    "rows": [
+                        [
+                            "BBC Alexandra Palace, 1937",
+                            "from the specifications · Emitron / iconoscope → 405-line (UK, B&W) → 12in black-and-white tube",
+                            "405 lines, 5:4 picture, Emitron camera, seen on a pre-war set. No live pictures survive, so this is built from the standards; the set's size and phosphor colour are estimates."
+                        ],
+                        [
+                            "405-line live studio at home, 1953",
+                            "from the specifications · CPS Emitron → 405-line (UK, B&W) → 14in black-and-white tube",
+                            "BBC 405-line picture on a 14in set: 3 MHz, 377 lines, visible scan lines. Live pictures only survive on film, so the as-broadcast look is built from the standards."
+                        ],
+                        [
+                            "405-line telerecording, 1953",
+                            "research-based · Emitron / iconoscope → 405-line (UK, B&W) → suppressed-field telerecording → frame-grab",
+                            "How surviving 1950s BBC television looks (e.g. The Quatermass Experiment): suppressed-field film recording keeps 188.5 lines, with spot wobble, film grain and a ~40:1 range."
+                        ],
+                        [
+                            "BBC2 625-line monochrome, 1964",
+                            "research-based · Image orthicon (B&W) → 625-line B&W → 19in black-and-white tube",
+                            "625 lines, 5.5 MHz, on a 19in set. The BBC2 camera fleet was not found; an image orthicon is assumed."
+                        ],
+                        [
+                            "UK colour studio, mid-1970s",
+                            "research-based · EMI 2001 four-tube Plumbicon → 2-inch Quad, high band → 625 PAL (UK System I) → 22in delta-gun set",
+                            "EMI 2001 four-tube Plumbicon camera, 2-inch Quad, PAL System I, on a 22in delta-gun set with the PAL delay line all British sets had."
+                        ],
+                        [
+                            "UK colour outside broadcast, early 1970s",
+                            "research-based · 3-tube Plumbicon → 2-inch Quad, high band → 625 PAL (UK System I) → 22in delta-gun set",
+                            "3-tube Plumbicon OB camera on Quad. OB picture traits are not documented; the camera settings are the studio ones."
+                        ],
+                        [
+                            "1970s drama: 16 mm film exteriors",
+                            "research-based · flying-spot telecine → 625 PAL (UK System I) → 22in delta-gun set",
+                            "Film shot on location, through a Rank Cintel flying-spot telecine. Run FilmLook first for the 16 mm stock, then this."
+                        ],
+                        [
+                            "1970s drama: studio video interiors",
+                            "research-based · EMI 2001 four-tube Plumbicon → 2-inch Quad, high band → 625 PAL (UK System I) → 22in delta-gun set",
+                            "The other half of the film-and-video mix: EMI 2001 cameras on Quad, as Doctor Who's studio scenes were made."
+                        ],
+                        [
+                            "Colour show on B&W film (with PAL dots)",
+                            "research-based · EMI 2001 four-tube Plumbicon → 625 PAL (UK System I) → stored-field telerecording → frame-grab",
+                            "A colour programme kept only as a 16 mm black-and-white telerecording for overseas sales; the unfiltered PAL subcarrier leaves fine dots in coloured areas (the basis of BBC colour recovery). Dots show best on large documents."
+                        ],
+                        [
+                            "News on U-matic, 1983",
+                            "research-based · 3-tube Plumbicon → U-matic high band → 625 PAL (UK System I) → 20in slot-mask set",
+                            "Tube ENG camera on high-band U-matic, edited and broadcast; the BBC's colour-under figures set the U-matic colour."
+                        ],
+                        [
+                            "News on Betacam SP, 1989",
+                            "research-based · 3-CCD broadcast → Betacam SP → 625 PAL (UK System I) → 21in slot-mask set",
+                            "CCD camera on Betacam SP (component, ~4.5 MHz luma, 1.5 MHz colour)."
+                        ],
+                        [
+                            "Sky on Astra, 1990",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → 21in slot-mask set",
+                            "Analogue PAL over an FM satellite link, so all PAL artefacts remain; sparklies appear on a weak dish. Satellite noise amounts are estimates."
+                        ],
+                        [
+                            "BSB D-MAC, 1990",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → 21in slot-mask set",
+                            "BSB's D-MAC: no subcarrier, so no cross-colour or dot crawl; sharper colour across, half the colour detail down. Bandwidths estimated from the compression ratios."
+                        ],
+                        [
+                            "Teletext page mixed over the picture, 1983",
+                            "research-based · EMI 2001 four-tube Plumbicon → teletext mix → 625 PAL (UK System I) → 22in slot-mask set",
+                            "The set's teletext decoder writing a page over the programme ('mix'): 24 rows of 40 characters on the 6 MHz dot clock, rounded characters, eight colours. The font is VideoLook's own; the page text is invented and editable under Overlay."
+                        ],
+                        [
+                            "Teletext subtitles, 1985",
+                            "research-based · EMI 2001 four-tube Plumbicon → teletext subtitle → 625 PAL (UK System I) → 22in slot-mask set",
+                            "Page 888-style subtitles: double-height text in black boxes, white first then yellow, cyan and green for other speakers. Text invented and editable under Overlay."
+                        ]
+                    ]
+                },
+                {
+                    "title": "US broadcast",
+                    "rows": [
+                        [
+                            "US live TV, 1950",
+                            "from the specifications · Image orthicon (B&W) → 525-line B&W → 17in black-and-white tube",
+                            "525-line monochrome from an image orthicon (dark halo round highlights), 4.2 MHz, on a 17in set. Live pictures survive mainly as kinescopes."
+                        ],
+                        [
+                            "US kinescope, 1952",
+                            "research-based · Image orthicon (B&W) → 525-line B&W → kinescope → frame-grab",
+                            "525/60 filmed at 24 fps; a drifting shutter leaves a brighter band. 16 mm grain and ~40:1 range."
+                        ],
+                        [
+                            "Early RCA colour, 1958",
+                            "research-based · 3-tube image orthicon colour (Marconi/RCA) → 2-inch Quad, high band → 525 NTSC (US) → 21in delta-gun set",
+                            "3-tube image orthicon colour camera, NTSC with the 1953 primaries on a delta-gun set; equal-band colour decoding."
+                        ],
+                        [
+                            "US network sitcom, 1975",
+                            "research-based · 3-tube Plumbicon → 2-inch Quad, high band → 525 NTSC (US) → 19in slot-mask set",
+                            "Multi-camera Plumbicon studio on Quad, NTSC, on a slot-mask set at 9300 K. Its famous 'video look' is mostly 60-field motion, which a still cannot show."
+                        ],
+                        [
+                            "US local news, 1985",
+                            "research-based · 3-tube Plumbicon → U-matic high band → 525 NTSC (US) → 19in slot-mask set",
+                            "Tube ENG camera on U-matic, NTSC over the air."
+                        ]
+                    ]
+                },
+                {
+                    "title": "France",
+                    "rows": [
+                        [
+                            "French 819-line TV, 1960",
+                            "from the specifications · Image orthicon (B&W) → 819-line (France, B&W) → 17in black-and-white tube",
+                            "RTF 819 lines, 10 MHz: the sharpest broadcast standard before HD. Camera type not found; an image orthicon is assumed."
+                        ],
+                        [
+                            "ORTF SECAM colour, 1975",
+                            "research-based · 3-tube Plumbicon → 625 SECAM (France L) → 22in delta-gun set",
+                            "SECAM L: FM colour on alternate lines (half the colour detail down, streaks on colour edges). Studios often worked in PAL or component and coded SECAM for transmission."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Home video",
+                    "rows": [
+                        [
+                            "VHS off-air recording, 1986 (UK)",
+                            "research-based · 3-tube Plumbicon → VHS (SP) off-air → 625 PAL (UK System I) → frame-grab",
+                            "A broadcast recorded on a home VHS at SP from an aerial with a faint ghost, as a frame-grab."
+                        ],
+                        [
+                            "VHS third-generation copy",
+                            "research-based · 3-tube Plumbicon → VHS (LP) off-air → 625 PAL (UK System I) → frame-grab",
+                            "An off-air LP recording copied twice more: noise, smear and wobble build up with each generation."
+                        ],
+                        [
+                            "VHS off-air recording, 1988 (US)",
+                            "research-based · 3-tube Plumbicon → VHS (SP) off-air → 525 NTSC (US) → frame-grab",
+                            "NTSC VHS SP off-air, frame-grab."
+                        ],
+                        [
+                            "Betamax off-air, 1981",
+                            "research-based · 3-tube Plumbicon → Betamax off-air → 625 PAL (UK System I) → frame-grab",
+                            "Betamax recording of a broadcast. Betamax figures are estimates."
+                        ],
+                        [
+                            "Tube camcorder, 1984",
+                            "research-based · Saticon tube camcorder → VHS (SP) → 625 PAL (UK System I) → frame-grab",
+                            "Single Saticon tube (lag, orange-red flare, soft colour) recording to VHS-C."
+                        ],
+                        [
+                            "Video8 camcorder, 1988",
+                            "research-based · Single-CCD consumer camcorder → Video8 → 625 PAL (UK System I) → frame-grab",
+                            "Single-CCD consumer camcorder on Video8 (vertical smear on highlights)."
+                        ],
+                        [
+                            "Hi8 camcorder, 1994",
+                            "research-based · Single-CCD consumer camcorder → Hi8 → 625 PAL (UK System I) → frame-grab",
+                            "Sharper Hi8 luma, same narrow colour."
+                        ],
+                        [
+                            "S-VHS camcorder, 1992",
+                            "research-based · Single-CCD consumer camcorder → S-VHS → 625 PAL (UK System I) → frame-grab",
+                            "S-VHS: sharp luma, VHS colour."
+                        ],
+                        [
+                            "MiniDV, 2002 (PAL)",
+                            "research-based · DV 3-CCD → DV / DVCAM (PAL 4:2:0) → Component 625 (studio/digital) → frame-grab",
+                            "3-CCD DV camcorder: 4:2:0 colour, 8×8 DCT blocks and mosquito noise at 25 Mbit/s, hard highlight clip."
+                        ],
+                        [
+                            "MiniDV, 2002 (NTSC)",
+                            "research-based · DV 3-CCD → DV (NTSC 4:1:1) → Component 525 (studio/digital) → frame-grab",
+                            "NTSC DV: 4:1:1 colour (only 180 colour samples across)."
+                        ],
+                        [
+                            "LaserDisc (PAL, CLV crosstalk), 1990",
+                            "research-based · flying-spot telecine → LaserDisc (CLV) → 625 PAL (UK System I) → 25in Trinitron",
+                            "A film on a long-play (CLV) LaserDisc: full broadcast detail on an optical disc, but crosstalk from the neighbouring track drifts through as bands of fine noise ('barber poles'). Crosstalk form and amount [EST]."
+                        ],
+                        [
+                            "LaserDisc with laser rot",
+                            "research-based · flying-spot telecine → LaserDisc with laser rot → 625 PAL (UK System I) → frame-grab",
+                            "An oxidised disc: sparkling specks, some coloured, some dark, scattered over the picture. Density [EST]."
+                        ],
+                        [
+                            "RCA CED videodisc, worn (1983)",
+                            "research-based · flying-spot telecine → RCA CED videodisc (worn) → 525 NTSC (US) → 19in slot-mask set",
+                            "RCA's grooved capacitance disc: 3 MHz of detail, narrow colour, and dust and wear ('video virus') giving dropouts and snow. How the colour was carried isn't confirmed; modelled as a narrow colour band."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Archive and transfers",
+                    "rows": [
+                        [
+                            "US show on the BBC, 1970",
+                            "research-based · 3-tube Plumbicon → 2-inch Quad, high band → 525 NTSC (US) → BBC 1967 converter to 625 PAL → 22in delta-gun set",
+                            "NTSC converted to PAL by the BBC's 1967 field-store converter: picture inset with black borders; with implied motion, one field in five is a double image."
+                        ],
+                        [
+                            "UK show on US TV, 1985",
+                            "research-based · EMI 2001 four-tube Plumbicon → 625 PAL (UK System I) → digital converter to 525 NTSC → 19in slot-mask set",
+                            "PAL converted to NTSC by a digital four-field converter."
+                        ],
+                        [
+                            "Optical standards conversion, 1962",
+                            "research-based · 3-tube image orthicon colour (Marconi/RCA) → 525 NTSC (US) → optical conversion to 625 PAL → frame-grab",
+                            "A camera pointed at a monitor: the source scan lines beat against the new ones."
+                        ],
+                        [
+                            "NTSC tape on a UK VCR (PAL-60)",
+                            "research-based · 3-tube Plumbicon → VHS (SP) → 525 NTSC (US) → played as PAL-60 → 21in slot-mask set",
+                            "An American VHS played on a UK machine that outputs PAL-60: correct colour, but only 480 lines, so the line structure is coarser."
+                        ],
+                        [
+                            "NTSC 4.43 on a PAL-only set",
+                            "research-based · 3-tube Plumbicon → VHS (SP) → 525 NTSC (US) → played as NTSC 4.43 → frame-grab",
+                            "NTSC colour on the PAL subcarrier has no V switch, so a PAL set's delay line cancels half the colour: reds turn dark."
+                        ],
+                        [
+                            "SECAM tape on a PAL-only set",
+                            "research-based · 3-tube Plumbicon → 625 SECAM (France L) → SECAM on a PAL-only set → 21in slot-mask set",
+                            "No SECAM decoder: black and white, with the FM subcarrier showing as a dot pattern even on greys."
+                        ],
+                        [
+                            "US film telecine with 3:2 pulldown",
+                            "research-based · flying-spot telecine → 525 NTSC (US) → frame-grab",
+                            "Film on NTSC: two frames in five mix two film frames. Set Implied motion to see the combing."
+                        ],
+                        [
+                            "Photo of the TV screen, 1978",
+                            "research-based · EMI 2001 four-tube Plumbicon → 2-inch Quad, high band → 625 PAL (UK System I) → 22in slot-mask set, photographed",
+                            "A UK colour broadcast photographed off a slot-mask set at 1/125 s: the exposure catches only part of the scan, so a band is brighter."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Long-distance reception",
+                    "rows": [
+                        [
+                            "Summer lift: Dutch TV on a UK set, 1983",
+                            "research-based · 3-tube Plumbicon → 625 PAL (Europe B/G/H) → co-channel interference → received on a UK set (System I PAL) → 22in slot-mask set",
+                            "Nederland 1 or 2 (Goes, Lopik) across the North Sea under a summer high. Dutch System G PAL: full colour, no sound on a UK set, and the 5.5 MHz Dutch sound carrier leaves fine patterning. A weak co-channel station floats underneath, striped by the carrier offset. The mechanisms are documented; the amounts (signal level, interference) are yours to set. For a real second picture, name a layer 'second picture'."
+                        ],
+                        [
+                            "Belgian RTBF on a UK set, 1984",
+                            "research-based · 3-tube Plumbicon → 625 PAL (Europe B/G/H) → received on a UK set (System I PAL) → 22in slot-mask set",
+                            "RTBF 1 or Télé 2 on a good lift: Belgian PAL (System H on UHF, 5.5 MHz sound), so colour but silence on a UK set, with faint sound-carrier patterning. Signal level [EST]."
+                        ],
+                        [
+                            "French TV (TF1, Antenne 2) on a UK set, 1983",
+                            "research-based · 3-tube Plumbicon → 625 SECAM (France L) → received on a UK set (System I PAL) → 22in slot-mask set",
+                            "France's System L puts the picture on the carrier the other way up (positive modulation), so a UK set shows a negative; its SECAM colour is lost; and the set can't find the French sync, so the picture tears sideways and rolls, with the blanking showing as white bars. Built from the ITU levels and receiver behaviour; no off-screen photos checked. New noise gives another moment; Vertical hold 'rolling' and Roll position move the bar."
+                        ],
+                        [
+                            "Canal+ without a decoder, 1984",
+                            "research-based · 3-CCD broadcast → 625 SECAM (France L) → Discret 11 scrambling → 22in slot-mask set",
+                            "Canal+ (from 4 Nov 1984) scrambled with Discret 11: every line delayed by 0, 0.9 or 1.8 µs at random, black filling the gap. Shown on a French SECAM set. The delays are documented; the pseudo-random sequence here is VideoLook's own."
+                        ],
+                        [
+                            "Sporadic-E on Band I, DXer's portable, 1978",
+                            "research-based · 3-tube Plumbicon → 625 PAL (Europe B/G/H) → co-channel interference → 12in black-and-white tube",
+                            "A distant continental Band I station by Sporadic-E (May to September, 500-1,400 miles) on a black-and-white portable: snow, a long echo, and a second station on the same channel sliding across. Mechanisms from Bunney (1981); all amounts [EST]."
+                        ],
+                        [
+                            "Overloaded set near a transmitter (lockout)",
+                            "research-based · EMI 2001 four-tube Plumbicon → 625 PAL (UK System I) → overloaded set → 22in slot-mask set",
+                            "Too much signal: the set's IF stage overloads and the sync tips are crushed below the picture: 'lockout, i.e. negative picture and buzz' (Television, July 1976). One source; the overload curve is [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "USSR and Eastern Europe",
+                    "rows": [
+                        [
+                            "Moscow 343-line, 1938",
+                            "from the specifications · Emitron / iconoscope → 343-line (Moscow 1938) → 12in black-and-white tube",
+                            "343 lines at 25 frames on RCA equipment (from 1938; dates conflict). Bandwidth 3.29 MHz and negative modulation are RCA's figures from a single source; an iconoscope camera is assumed."
+                        ],
+                        [
+                            "Soviet 625-line on a KVN-49 with its water lens, 1950",
+                            "research-based · Emitron / iconoscope → 625-line B&W (USSR, 6 MHz) → 7in black-and-white tube through its lens",
+                            "The Soviet Union's own 625-line standard (the one Europe adopted), 6 MHz, on the KVN-49: a 140 x 105 mm picture on an 18 cm round tube, seen through the add-on lens filled with water or glycerine (about 4x). The lens's distortion, fringing and reflection are [EST]; the studio camera is not researched (an iconoscope is assumed)."
+                        ],
+                        [
+                            "Soviet colour on a Rubin set, late 1970s",
+                            "research-based · 3-tube Plumbicon → 625 SECAM (USSR/East D/K) → 24in delta-gun set",
+                            "SECAM on System D/K from 1 Oct 1967: the same colour coding as France but the ordinary negative modulation, so interference makes dark spots. Soviet tube phosphors per GOST 26799-85 are the EBU set. Camera assumed."
+                        ],
+                        [
+                            "East German SECAM colour, 1975",
+                            "research-based · 3-tube Plumbicon → 625 SECAM (East Germany B/G) → 22in delta-gun set",
+                            "DFF colour from 1969: SECAM on System B/G (5 MHz), until the switch to PAL at the end of 1991. East German set phosphors not found; EBU assumed."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Japan",
+                    "rows": [
+                        [
+                            "Japanese NTSC on a 9300 K set, 1985",
+                            "research-based · 3-tube Plumbicon → 525 NTSC (Japan, no set-up) → 21in Trinitron",
+                            "NTSC-J: black sits at blanking (no 7.5% set-up), and receivers were set to 9300 K + 27 MPCD, a cool, slightly green white (x 0.281, y 0.311). Receiver phosphors from a 1979 Matsushita patent. Many real sets measured nearer 8500-8800 K."
+                        ],
+                        [
+                            "Hi-Vision (MUSE) analogue HD, 1991",
+                            "research-based · 1125-line Hi-Vision MUSE → 36in Trinitron",
+                            "NHK's 1125-line analogue HD by satellite (1989-2007). Still pictures keep ~598 lines of detail, but anything moving drops to about a quarter: set Implied motion and tick 'Only the selection moves' to see it (camera pans stay sharp). No camera stage: HD cameras aren't modelled."
+                        ],
+                        [
+                            "Sony CV-2000 home video, 1966",
+                            "research-based · Vidicon → Sony CV-2000 home VTR (B&W, skip-field) → 525-line B&W → 11in black-and-white tube",
+                            "One of the first home video recorders: half-inch tape, black and white, recording only one field and showing it twice (skip-field), about 220 lines. With a vidicon camera."
+                        ],
+                        [
+                            "Sony Portapak video art, 1970",
+                            "research-based · Portapak vidicon → EIAJ-1 Portapak (1/2 in reel, B&W) → 625-line B&W → 12in black-and-white tube",
+                            "EIAJ-1 half-inch reel recorder and vidicon camera (needed about 50 foot-candles): black and white, laggy, noisy, with 'flagging' at the top on replay. European (625) version."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Early television",
+                    "rows": [
+                        [
+                            "Baird 30-line on a Televisor, 1933",
+                            "research-based · 30-line Baird (1929-35) → Televisor",
+                            "The BBC's 30-line service (to 1935): 30 vertical lines, 12.5 pictures a second, a tall 3:7 picture sent on a medium-wave channel (~10 kHz), seen as an orange neon glow through a spinning disc, 'about the size of a postage stamp'. Off-air recordings survive at tvdawn.com for comparison."
+                        ],
+                        [
+                            "Baird 240-line intermediate film, 1936",
+                            "from the specifications · Intermediate film → 240-line Baird (1936-37) → 12in black-and-white tube",
+                            "Alexandra Palace, Nov 1936-Feb 1937, alternating with EMI's 405 lines: shot on film, developed in about a minute and scanned wet. 240 lines at 25 frames; bandwidth and picture shape not found (4:3 and equal detail assumed). No pictures survive."
+                        ],
+                        [
+                            "Berlin 441-line, 1938",
+                            "from the specifications · Emitron / iconoscope → 441-line (Germany 1937-44) → 12in black-and-white tube",
+                            "Fernsehsender Paul Nipkow: 441 lines interlaced (383 active), 2 MHz, positive modulation, a nearly square 1.15:1 picture (single source). Iconoscope camera."
+                        ],
+                        [
+                            "NBC 441-line, 1940",
+                            "from the specifications · Emitron / iconoscope → 441-line (US 1939-41) → 12in black-and-white tube",
+                            "The pre-war American standard (1939-41): 441 lines, 60 fields, 2.8 MHz, negative modulation (single source). RCA iconoscope camera."
+                        ],
+                        [
+                            "CBS field-sequential colour, 1951",
+                            "from the specifications · 3-tube image orthicon colour (Marconi/RCA) → 405-line CBS field-sequential colour (1951) → 12in colour-wheel set",
+                            "Broadcast June-October 1951: 405 lines, 144 fields a second, each field one colour, put back together by a spinning colour wheel in front of a black-and-white tube. About half the horizontal detail of ordinary 525-line. Set Implied motion to see colours split apart on movement. Filter colours [EST]."
+                        ],
+                        [
+                            "Belgian 819-line, 1955",
+                            "from the specifications · Image orthicon (B&W) → 819-line (Belgium F, B&W) → 17in black-and-white tube",
+                            "Belgium's 819-line System F (1953-68) squeezed the French line count into 7 MHz channels: ~5 MHz of video (sources say 5 or 5.5), so far less horizontal detail than French 819."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Space, surveillance and toys",
+                    "rows": [
+                        [
+                            "Apollo 11 moonwalk as broadcast, 1969",
+                            "research-based · Apollo lunar camera → 320-line Apollo lunar camera → optical conversion to 525-line B&W → 19in black-and-white tube",
+                            "The lunar camera sent 320 lines at 10 frames a second; on Earth an RCA TK-22 camera re-shot a 10-inch monitor to make NTSC, losing contrast and detail, and the monitor's persistence left moving figures trailing ghosts (needs Implied motion). Honeysuckle Creek settings; set Converter contrast up for Goldstone's over-contrasty picture."
+                        ],
+                        [
+                            "Fisher-Price Pixelvision, 1988",
+                            "research-based · Fisher-Price PXL-2000 → PXL-2000 audio cassette (8 grey levels) → 525-line B&W → 13in slot-mask set",
+                            "The PXL-2000 toy camcorder: a 120 x 90 CCD recorded on audio cassette at 9x speed, black and white with only a few grey levels (one source says about 8), shown small in the middle of the TV. Inset size and noise [EST]."
+                        ],
+                        [
+                            "Time-lapse CCTV, 1994",
+                            "research-based · Black-and-white CCTV camera → date stamp → Time-lapse CCTV VHS (24 h mode, B&W) → 625-line B&W → frame-grab",
+                            "A black-and-white CCTV camera on a time-lapse VHS in 24-hour mode (5 fields a second, 300 lines), date and time burned in, replayed as a single field. Recorder figures from a period manual; the rest [EST]. Edit the stamp under Overlay."
+                        ],
+                        [
+                            "Amateur slow-scan TV on a radar tube, 1958",
+                            "research-based · 120-line slow-scan (1958) → 7in P7 radar tube",
+                            "Copthorne Macdonald's 1958 slow-scan TV: 120 lines, 8 seconds a picture, sent as audio over short-wave, shown on a P7 radar tube whose blue flash fades to a yellow-green afterglow lasting about 10 s, so the top of the picture has already faded as the bottom is written. Afterglow colours [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "South America",
+                    "rows": [
+                        [
+                            "Brazilian PAL-M, 1985",
+                            "research-based · 3-tube Plumbicon → 525 PAL-M (Brazil) → 20in slot-mask set",
+                            "Brazil's PAL-M (colour from 1972): American 525/60 scanning with PAL colour on its own 3.576 MHz subcarrier, so no NTSC hue errors but 4.2 MHz of detail and the 7.5% set-up. Set phosphors assumed."
+                        ],
+                        [
+                            "Argentine PAL-N, 1985",
+                            "research-based · 3-tube Plumbicon → 625 PAL-N (Argentina) → 20in slot-mask set",
+                            "Argentina's N/PAL: European 625/50 in American 6 MHz channels, 4.2 MHz of video and a 3.58 MHz PAL subcarrier nearer the luma, so softer and with more cross-colour than European PAL. Black at blanking (no set-up)."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Community TV and video art",
+                    "rows": [
+                        [
+                            "Swindon Viewpoint, 1974 (black-and-white cable)",
+                            "research-based · Portapak vidicon → EIAJ-1 Portapak (1/2 in reel, B&W) → 625-line B&W → 22in black-and-white tube",
+                            "Britain's community cable station (from Sept 1973, EMI-funded, on the Radio Rentals relay network). Until 1977 it was black and white: Sony Portapaks and 1-inch Sony recorders, low light on location, copy-edited with a glitch at each edit, then carried cleanly by cable. The half-inch Portapak format stands in for both machines; the haloes come from the set's sharpness control here, which is [EST]."
+                        ],
+                        [
+                            "Swindon Viewpoint, 1978 (colour U-matic)",
+                            "research-based · Saticon tube camcorder → U-matic low band → 625 PAL (UK System I) → 22in slot-mask set",
+                            "From 1977 the station moved to colour: U-matic recorders and single-tube Sony cameras, and by its own account 'picture quality, or at least resolution, went down somewhat with the move to colour'. Single-tube camera model stands in [EST]."
+                        ],
+                        [
+                            "Re-shot off a monitor, again and again",
+                            "research-based · 3-tube Plumbicon → 625 PAL (UK System I) → optical conversion to 625 PAL → 22in slot-mask set",
+                            "After David Hall's 'This Is A Television Receiver' (BBC, 1976), where a newsreader was re-shot off a monitor, each copy from the last, 'until there is a complete degeneration of both sound and image'. Set Conversion generations under Transfer (1-12). The monitor-and-camera model is the optical converter's [EST]."
+                        ],
+                        [
+                            "Videotape to cinema film, 1964 (Electronovision-style)",
+                            "research-based · Image orthicon (B&W) → 2-inch Quad, high band → 525-line B&W → kinescope → frame-grab",
+                            "Before 200 Motels, Electronovision shot plays and concerts on videotape and moved them to film by kinescope for cinemas (Hamlet, The T.A.M.I. Show, 1964). A US colour-era camera on Quad, filmed off a monitor at 24 frames."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Photographed off the screen",
+                    "rows": [
+                        [
+                            "Tele-snap: ident, grey and ghostly (1960s)",
+                            "research-based · Vidicon → 405-line (UK, B&W) → 19in black-and-white tube, photographed on black-and-white film",
+                            "A station symbol or caption photographed off a 405-line set on black-and-white film: whites come out a soft mid-grey with a faint glow, as in some 1960s off-screen stills. Matched to their measured tones (whites about 40-60% of full white, edges spread over about 1% of the width, about 190 lines down the screen, which is one field). Why the whites are grey isn't established (a thin negative, a dark print or a fade would all do it): Print exposure sets it, and about -2.6 gives the darkest ones. Works best on white graphics on black."
+                        ],
+                        [
+                            "Tele-snap: ident, burnt-out whites and grey blacks (1960s)",
+                            "research-based · Vidicon → 405-line (UK, B&W) → 19in black-and-white tube, photographed on black-and-white film",
+                            "The opposite print: whites burnt out and swollen so the scan lines close up inside them, blacks a dusty dark grey. On a set with mean-level AGC and no DC restorer a mostly black caption is turned up and lifted ('a screen that was not black but mid-grey'), and the over-driven spot blooms. Both set faults are documented for 405-line sets; how much of each a given photograph shows is not."
+                        ],
+                        [
+                            "Tele-snap: caption with a grey band above it (1968)",
+                            "research-based · Vidicon → 405-line (UK, B&W) → 19in black-and-white tube, photographed on black-and-white film",
+                            "A white caption box on black, with the screen above it turned grey and the screen below it black, the tube's rounded edge and dark surround in shot. Modelled as the set's black level dropping at once when the white box arrives and creeping back up over the next field, so the lettering and the screen below stay black. That fits one 1968 off-screen photograph, but the cause isn't established (it could equally lie at the station). Black-level tilt sets it."
+                        ],
+                        [
+                            "Tele-snap: in-vision announcer (1967)",
+                            "research-based · Image orthicon (B&W) → 405-line (UK, B&W) → 19in black-and-white tube, photographed on black-and-white film",
+                            "A studio announcer photographed off a 405-line set, the whole tube face in shot: soft, flat and grey, nothing fully black or white. Image orthicon studio camera assumed. Matched to the tones of two 1967 off-screen stills (blacks about 10%, whites about 55-75%)."
+                        ],
+                        [
+                            "Tele-snap: fringe reception, hard print (1967)",
+                            "research-based · Vidicon → 405-line (UK, B&W) → 17in black-and-white tube, photographed on black-and-white film",
+                            "A distant transmitter 'just about received in good weather' and photographed off the screen (Transdiffusion's description of late-1960s stills of ATV Midlands taken on the Wirral), printed hard: blacks solid, whites clean, snow hidden in the blacks and showing as ragged edges. Signal level and ghost [EST]."
+                        ],
+                        [
+                            "405-line off-air on an early video recorder (mid-1960s)",
+                            "research-based · Image orthicon (B&W) → Sony CV-2000 home VTR (B&W, skip-field) off-air → 405-line (UK, B&W) → frame-grab",
+                            "The harsh look of some surviving 405-line clips: hard contrast, outlines round the edges, ragged verticals and coarse lines. Built as a studio picture recorded off-air on an early helical-scan recorder and frame-grabbed. Philips's EL3400 (1964) recorded 405 lines, but its figures weren't found, so the Sony CV-2000 model (one field shown twice) stands in. Whether a given clip's harshness comes from such a machine or from later copying and sharpening isn't established."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Subtitles",
+                    "rows": [
+                        [
+                            "Foreign film on BBC2, late 1980s",
+                            "research-based · flying-spot telecine → subtitles: BBC slab serif (TKST-style), black edge → 625 PAL (UK System I) → 22in slot-mask set",
+                            "A subtitled film through a flying-spot telecine, with the BBC's slab-serif subtitles (TKST, 'based at many removes on Rockwell Light', 1975-77) added at the studio with a black edge. TKST isn't available, so Rockwell stands in. Run FilmLook first for the film stock. Edit the text under Overlay."
+                        ],
+                        [
+                            "BBC subtitles on a grey label",
+                            "research-based · flying-spot telecine → subtitles: BBC slab serif on a grey label → 625 PAL (UK System I) → 22in slot-mask set",
+                            "The BBC's later fix for edging problems: the picture darkened and its colour killed in a rectangle behind the text (the designer's own account; single source)."
+                        ],
+                        [
+                            "Arthouse print with laser subtitles, 1990s",
+                            "research-based · flying-spot telecine → subtitles: Cinema print, laser-etched (1988 on) → 625 PAL (UK System I) → frame-grab",
+                            "Subtitles burned into the release print by laser (from 1988): clear white letters with a thin dark halo, then the print on a telecine. Use 'Cinema print, chemically etched' for older prints with ragged letters."
+                        ],
+                        [
+                            "Subtitled VHS release, 1990",
+                            "research-based · flying-spot telecine → subtitles: VHS / LaserDisc release (Univers-style) → VHS (SP) → 625 PAL (UK System I) → frame-grab",
+                            "A subtitled film on a rental VHS: Univers-style subtitles with a black edge on the master, softened by the tape. The edge treatment is [EST]."
+                        ],
+                        [
+                            "US closed captions, 1990",
+                            "research-based · 3-tube Plumbicon → subtitles: US closed captions (Line 21) → 525 NTSC (US) → 19in slot-mask set",
+                            "Line 21 captions drawn by the set's decoder: white capitals on black cells, 32 columns. The decoder's own font isn't documented, so VideoLook's dot font stands in."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Terminals and VDUs",
+                    "rows": [
+                        [
+                            "DEC VT05 terminal, 1970",
+                            "research-based · character picture → 525-line CCTV (B&W, 1000-line monitor) → 15in black-and-white tube (P4 white)",
+                            "DEC's first video terminal: 20 lines of 72 capitals in a 5 x 7 dot font, on a monitor built to the EIA RS-330 closed-circuit TV standard, so the photo becomes a picture made of characters. VideoLook's dot font stands in for the VT05's ROM; cell size, phosphor (P4 white) and screen size [EST]."
+                        ],
+                        [
+                            "DEC VT100 character picture, 1978",
+                            "research-based · character picture → DEC VT100 terminal (240 lines) → 12in black-and-white tube (P4 white)",
+                            "80 x 24 characters, each cell 10 dots by 10 scan lines, 800 x 240 in all at 60 Hz. The dot stretcher ORs each dot with the one before, and the video amplifier is peaked to 12 MHz, which is why VT100 text looks so crisp. Bold (bright) and normal intensity both used. ROM font replaced by VideoLook's dot font; phosphor P4 white and the 12-inch screen [EST]."
+                        ],
+                        [
+                            "IBM PC monochrome display (5151), 1981",
+                            "research-based · character picture → IBM Monochrome Display (350 lines) → 11.5in black-and-white tube (P39)",
+                            "IBM's MDA text mode on the 5151: 80 x 25 characters in 9 x 14 cells, 720 x 350 at 50 Hz, a long-persistence green P39 phosphor. Normal and high intensity come from separate video and intensity pins. ROM font replaced by VideoLook's dot font; dot clock and screen glow [EST]."
+                        ],
+                        [
+                            "IBM PC shade-block picture, 1980s",
+                            "research-based · character picture with shade blocks → IBM Monochrome Display (350 lines) → 11.5in black-and-white tube (P39)",
+                            "The same 5151, with the picture built from the PC character set's light, medium and dark shade blocks and the full block as well as letters, as text-mode art did. The shade blocks' dot patterns here [EST]."
+                        ],
+                        [
+                            "Monochrome graphics on an amber monitor, 1980s",
+                            "research-based · 1 bit (on / off), error-diffusion dither → IBM Monochrome Display (350 lines) → 12in black-and-white tube (P3)",
+                            "A one-bit 720 x 348 bitmap (the Hercules graphics card's resolution) on an MDA-type monitor with a P3 amber phosphor (602 nm), error-diffusion dithered as image programs of the time did. Dither choice and screen size [EST]."
+                        ],
+                        [
+                            "CGA 640 x 200 on a green monitor, 1980s",
+                            "research-based · 1 bit (on / off), ordered dither → IBM CGA / home computer (200 lines) → 12in black-and-white tube (P31)",
+                            "The IBM CGA's two-colour 640 x 200 mode, ordered-dithered, on a green-screen composite monitor with the common P31 phosphor. Each dot is twice as tall as it is wide, so the dither pattern makes horizontal stripes. Dither and monitor [EST]."
+                        ],
+                        [
+                            "Tektronix 4010 storage-tube plot, 1972",
+                            "research-based · 1 bit (on / off), error-diffusion dither → Tektronix 4010 storage tube → 11in black-and-white tube (P1)",
+                            "A direct-view bistable storage tube: 1024 points across, 780 down, each one either stored (bright green) or not, on a background the flood guns keep faintly glowing. No grey scale at all, so the photo is plotted as error-diffused dots. P1 phosphor and glow level [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Teletext and home computers",
+                    "rows": [
+                        [
+                            "IBM CGA, cyan, magenta and white",
+                            "research-based · CGA 320 x 200, palette 1 high (cyan, magenta, white), ordered dither → IBM CGA / home computer (200 lines) → 13in slot-mask set",
+                            "CGA's 320 x 200 four-colour mode with palette 1 at high intensity (black, light cyan, light magenta, white), ordered dither, on a digital RGBI colour monitor. Palette from the RGBI table; dither and the monitor's tube [EST]."
+                        ],
+                        [
+                            "IBM CGA, green, red and yellow",
+                            "research-based · CGA 320 x 200, palette 0 high (green, red, yellow) → IBM CGA / home computer (200 lines) → 13in slot-mask set",
+                            "Palette 0 at high intensity (black, light green, light red, yellow), nearest colour with no dither, so the photo falls into flat posterised areas. Dither choice [EST]."
+                        ],
+                        [
+                            "IBM CGA mode 5, cyan, red and white",
+                            "research-based · CGA mode 5 (cyan, red, white), error-diffusion dither → IBM CGA / home computer (200 lines) → 13in slot-mask set",
+                            "CGA's third four-colour palette, reached through mode 5 (black, light cyan, light red, white), error-diffusion dithered. Dither [EST]."
+                        ],
+                        [
+                            "Teletext graphics page",
+                            "research-based · teletext mosaics → 625 PAL (UK System I) → 22in slot-mask set",
+                            "The photo drawn as a teletext page: 40 x 24 cells, each a 2 x 3 block of mosaic dots in one of seven colours on black. Every colour change uses up a cell, shown as a space, which is what gives teletext pictures their black gaps. Drawn by the set's own decoder straight to the tube, so it is sharp. Colour matching to the photo [EST]."
+                        ],
+                        [
+                            "Teletext separated graphics",
+                            "research-based · teletext mosaics (separated) → 625 PAL (UK System I) → 22in slot-mask set",
+                            "The same page with Separated Mosaic Graphics switched on: each block dot drawn smaller with a black gap round it, a texture teletext artists used for shading. Gap size [EST]."
+                        ],
+                        [
+                            "Teletext with hold mosaics",
+                            "research-based · teletext mosaics (hold) → 625 PAL (UK System I) → 22in slot-mask set",
+                            "Hold Mosaics on: a colour-change cell repeats the last block instead of leaving a space, so the black gaps close up and shapes run on. Matching to the photo [EST]."
+                        ],
+                        [
+                            "BBC Micro MODE 2 on an RGB monitor",
+                            "research-based · 8 colours, digital RGB (BBC Micro, teletext), ordered dither → Home computer on a TV (288 lines, progressive) → 14in slot-mask set",
+                            "160 x 256 pixels in eight colours, ordered-dithered, fed as digital RGB to a colour monitor: 64 µs lines, 312 lines a field, not interlaced, so the scan lines show plainly. Pixel shape follows from the mode; monitor tube and size [EST]."
+                        ],
+                        [
+                            "BBC Micro MODE 1, red, yellow and white",
+                            "research-based · BBC MODE 1 default (black, red, yellow, white), error-diffusion dither → Home computer on a TV (288 lines, progressive) → 14in slot-mask set",
+                            "320 x 256 in four colours with the default palette (black, red, yellow, white), error-diffusion dithered, on an RGB monitor. Default palette and monitor [EST]."
+                        ],
+                        [
+                            "Home computer through the aerial socket",
+                            "research-based · 8 colours, digital RGB (BBC Micro, teletext), ordered dither → 625 PAL (UK System I) → 20in slot-mask set",
+                            "An eight-colour 160 x 256 picture coded as PAL by the computer's own encoder and RF modulator and shown on the family TV: colour bleeds and dot crawl soften the sharp pixels. Modulator quality and signal level [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "CCTV and security",
+                    "rows": [
+                        [
+                            "1970s vidicon CCTV on a white monitor",
+                            "research-based · Vidicon → 625-line CCTV (B&W, 1000-line monitor) → 12in black-and-white tube (P4 white)",
+                            "An industrial vidicon camera on coax straight into a 12-inch black-and-white monitor: no broadcast filtering, so edges stay hard, but the vidicon smears highlights and lags. Monitor P4 white. Camera amounts [EST]."
+                        ],
+                        [
+                            "High-resolution CCTV, late 1990s",
+                            "research-based · Black-and-white CCTV camera → 625-line CCTV (B&W, 1000-line monitor) → 12in black-and-white tube (P4 white)",
+                            "A 570 TV-line black-and-white CCD camera (the Sony SSC-M383 class) on a 12-inch monitor rated 1000 lines at the centre. With nothing in the chain to soften it, this is one of the sharpest analogue pictures there was: hard, contrasty, with the camera's edge enhancement on show. Camera response shape and edge sharpening [EST]."
+                        ],
+                        [
+                            "Wide-angle lift camera",
+                            "research-based · Black-and-white CCTV camera → date stamp → 625-line CCTV (B&W, 1000-line monitor) → 12in black-and-white tube (P4 white)",
+                            "A ceiling camera behind a very short lens: strong barrel distortion bends straight lines outward and the corners fall into the dark edge of the lens's image circle. Fisheye lenses only reach their wide angles through large barrel distortion. Amount of distortion and the burned-in label [EST]."
+                        ],
+                        [
+                            "Infrared night camera",
+                            "research-based · Black-and-white CCTV camera → date stamp → 625-line CCTV (B&W, 1000-line monitor) → 12in black-and-white tube (P4 white)",
+                            "A black-and-white CCD seeing by a near-infrared lamp: plants turn pale, the lamp lights the middle more than the corners, and noise rises. A normal photo has no infrared record, so all of this is an estimate built from the colour channels [EST throughout]."
+                        ],
+                        [
+                            "CCTV facing a bright doorway",
+                            "research-based · Black-and-white CCTV camera → 625-line CCTV (B&W, 1000-line monitor) → 12in black-and-white tube (P4 white)",
+                            "The camera's exposure set for the room while the doorway behind blazes: the highlights clip to a flat white and bloom on the monitor, the edges ring from the camera's enhancement. Amounts [EST]."
+                        ],
+                        [
+                            "US store camera, 525 lines",
+                            "research-based · Black-and-white CCTV camera → date stamp → 525-line CCTV (B&W, 1000-line monitor) → 9in black-and-white tube (P4 white)",
+                            "A 525-line black-and-white CCD camera on a small 9-inch monitor by the till, contrast turned up. Monitor size and settings [EST]."
+                        ],
+                        [
+                            "Colour CCTV on a composite monitor",
+                            "research-based · Single-CCD consumer camcorder → date stamp → 625 PAL (UK System I) → 14in slot-mask set",
+                            "A single-chip colour camera sent as composite PAL down coax to a 14-inch colour monitor: no transmitter, no noise, but the composite colour is soft and smeared beside the hard black-and-white detail. Camera stands in from the consumer single-CCD model [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Piped TV and monitors",
+                    "rows": [
+                        [
+                            "Rediffusion wired TV, 405 lines",
+                            "research-based · Image orthicon (B&W) → 405-line (UK, B&W) → crossview from the other wired channel → 19in black-and-white tube",
+                            "Relay television by wire: BBC and ITV on their own carriers (4.95 and 8.45 MHz) down separate pairs to a set with no tuner, so no aerial noise or ghosts at all, just a faint picture from the other channel (crossview), which the system was designed to hold 28 dB down. About 700,000 homes by 1967. How crossview looked on screen [EST]."
+                        ],
+                        [
+                            "Rediffusion wired colour (TD.80)",
+                            "research-based · EMI 2001 four-tube Plumbicon → 625 PAL (UK System I) → crossview from the other wired channel → 22in delta-gun set",
+                            "The 625-line colour version of the wired system, on 5.9 and 8.9 MHz carriers, with crossview held 31 to 33 dB down. Clean, steady and a little harder than an aerial picture. How crossview looked [EST]."
+                        ],
+                        [
+                            "Studio RGB monitor (Trinitron)",
+                            "research-based · 3-CCD broadcast → Betacam SP → Component 625 (studio/digital) → 14in Trinitron",
+                            "A broadcast camera's component picture fed as RGB straight into a Sony PVM-type Trinitron monitor: no PAL coding at all, a fine aperture grille, a tightly focused spot. About as sharp as a 625-line picture ever looked. Spot and grille settings [EST]."
+                        ],
+                        [
+                            "Set with scan velocity modulation",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → 25in Trinitron with scan velocity modulation",
+                            "Many large sets from the 1980s on varied the speed of the scanning spot with the picture's edges: it speeds up either side of an edge and slows across it, so light areas shrink and dark edges sharpen. Philips' engineers described a race among makers in which more was taken to be better. Amount [EST]."
+                        ],
+                        [
+                            "Showroom setting: everything turned up",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → 28in Trinitron with scan velocity modulation",
+                            "The same kind of set with sharpness, contrast and scan velocity modulation all at maximum, as sets were set up to catch the eye in a shop. Haloes on every edge, glaring whites. Settings [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Broken digital streams",
+                    "rows": [
+                        [
+                            "Lost keyframe, grey start",
+                            "research-based · Lost keyframe / datamosh → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "The decoder joined the stream without its keyframe, so it applies the following P-frames to an empty grey picture: the scene appears only where the encoder sent fresh blocks or large corrections, around its edges and detail. Real 16 x 16 macroblocks and 8 x 8 DCT. Encoder decisions [EST]."
+                        ],
+                        [
+                            "Lost keyframe, green start",
+                            "research-based · Lost keyframe / datamosh → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "The same, but the decoder's buffer was all zeros, which in Y'CbCr is a dark green rather than black: the familiar green of a broken digital picture. Encoder decisions [EST]."
+                        ],
+                        [
+                            "Datamosh into the previous scene",
+                            "research-based · Lost keyframe / datamosh → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "The cut's keyframe removed, so the new scene's motion drags the old scene's pixels around (the old scene here is the photo mirrored; use the 'second picture' look below for your own). The technique video artists used from Takeshi Murata's Monster Movie (2005) on. Vector behaviour in flat areas [EST]."
+                        ],
+                        [
+                            "Datamosh from a second picture",
+                            "research-based · Lost keyframe / datamosh → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "As above, with the old scene taken from a layer named 'second picture': the photo's motion is applied to that picture, so it melts into the shape of the new one. Vector behaviour [EST]."
+                        ],
+                        [
+                            "P-frame bloom",
+                            "research-based · Lost keyframe / datamosh → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "One P-frame repeated thirty times: the same vectors and corrections applied again and again to the picture itself, so detail swells and smears along the motion. Vector behaviour [EST]."
+                        ],
+                        [
+                            "Datamosh: only the selection moves",
+                            "research-based · Lost keyframe / datamosh → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "Make a selection round the subject first: only those macroblocks carry the motion, so the subject smears across a background that holds still. Without a selection the whole picture moves. Vector behaviour [EST]."
+                        ],
+                        [
+                            "Datamosh, two seconds without a keyframe",
+                            "research-based · Lost keyframe / datamosh → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "Sixty frames of motion with no keyframe to reset it: the old picture is stretched and folded until little of it is recognisable. Vector behaviour [EST]."
+                        ],
+                        [
+                            "Digital terrestrial break-up",
+                            "research-based · MPEG-2 slice errors (DVB, DVD, Video CD) → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "An MPEG-2 picture losing data. Each row of macroblocks is a slice that is decoded from its own start, so an error spoils the rest of its row and the decoder picks up again on the next: some rows show tinted tiles, some strips of picture from elsewhere, some the last good picture. Error mix and rate [EST]."
+                        ],
+                        [
+                            "MPEG-2 colour drift",
+                            "research-based · MPEG-2 slice errors (DVB, DVD, Video CD) → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "Only the DC (average) values are going wrong: they are coded as differences along the slice, so once one is wrong every block after it is off by more, and rows break into tinted tiles. Amounts [EST]."
+                        ],
+                        [
+                            "MPEG-2 jigsaw",
+                            "research-based · MPEG-2 slice errors (DVB, DVD, Video CD) → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "Wrong motion vectors carried along each damaged slice, so rows fill with pieces of the picture from somewhere else, then several more frames move and recombine them. The abstract jigsaw of a stream that has gone badly wrong. Amounts [EST]."
+                        ],
+                        [
+                            "MPEG-2 striped blocks",
+                            "research-based · MPEG-2 slice errors (DVB, DVD, Video CD) → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "Garbage transform coefficients: each damaged block decodes as a patch of the DCT's own stripes and checks. Amounts [EST]."
+                        ],
+                        [
+                            "Satellite picture in a rain fade",
+                            "research-based · MPEG-2 slice errors (DVB, DVD, Video CD) → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "Heavy loss: most rows are concealed from the last good picture (here the photo mirrored), with drifting tiles between them, so two pictures are torn together in strips. Error mix [EST]."
+                        ],
+                        [
+                            "Scratched Video CD",
+                            "research-based · MPEG-2 slice errors (DVB, DVD, Video CD) → Digital 352 x 288 (Video CD, CIF) → frame-grab",
+                            "MPEG-1 at 352 x 288 from a damaged disc, coded coarsely and with slice errors, scaled up so the blocks are large. MPEG-2's slice behaviour stands in for MPEG-1's [EST]."
+                        ],
+                        [
+                            "Scratched DVD",
+                            "research-based · MPEG-2 slice errors (DVB, DVD, Video CD) → Digital 720 x 576 (DVD, DVB) → frame-grab",
+                            "A DVD player reading through a scratch: rows lost and concealed, wrong vectors dragging strips sideways. Amounts [EST]."
+                        ],
+                        [
+                            "Set-top box break-up on a CRT",
+                            "research-based · MPEG-2 slice errors (DVB, DVD, Video CD) → Component 625 (studio/digital) → 28in slot-mask set",
+                            "A broken DVB picture from a 2000s set-top box, sent as RGB over SCART to a slot-mask CRT, so the macroblocks are seen through scan lines and phosphor. Error mix [EST]."
+                        ],
+                        [
+                            "H.264 error smear",
+                            "research-based · H.264 error smear → Digital 1280 x 720 → frame-grab",
+                            "An H.264 picture sent as one slice: from the error to the bottom, every block is predicted from the edges of its neighbours with nonsense modes, so colour streaks run down and across. Prediction modes are real; their choice and the garbage [EST]."
+                        ],
+                        [
+                            "H.264 smear, fast-changing",
+                            "research-based · H.264 error smear → Digital 1280 x 720 → frame-grab",
+                            "The same, breaking earlier and switching prediction modes more often, so the streaks fracture into a patchwork of blocks. Amounts [EST]."
+                        ],
+                        [
+                            "HD stream, lost keyframe",
+                            "research-based · Lost keyframe / datamosh → Digital 1920 x 1080 → frame-grab",
+                            "A 1920 x 1080 stream joined without its keyframe and starting from a grey buffer. The macroblocks are small against the picture, so the result is finer and more painterly than at standard definition. Encoder decisions [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Pay-TV scrambling",
+                    "rows": [
+                        [
+                            "VideoCrypt channel without a decoder",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → VideoCrypt scrambling → 21in slot-mask set",
+                            "Sky's VideoCrypt (from 1989): every line cut at one of 256 points and its two halves swapped, the cut never nearer than about an eighth of the width to either edge, received by satellite on a UK set with no decoder. Sync and colour burst are left alone, so the set locks and the picture is a horizontal smear of stray colour. The pseudo-random sequence here is VideoLook's own."
+                        ],
+                        [
+                            "VideoCrypt on a small dish, sparklies",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → VideoCrypt scrambling → 21in slot-mask set",
+                            "The same scrambled channel on a dish too small for the signal, so FM sparklies are sprinkled through the smear. Reception level [EST]."
+                        ],
+                        [
+                            "VideoCrypt through a home-built decoder",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → VideoCrypt through a home-built decoder scrambling → 21in slot-mask set",
+                            "Kuhn's AntiSky (1994) showed a computer could undo VideoCrypt by trying all 256 cut points and keeping the one that best matched the line above. Most lines come back right; the ones it misjudges stay rotated by the error. Error rate [EST]."
+                        ],
+                        [
+                            "Home-built decoder losing its way",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → VideoCrypt through a home-built decoder scrambling → 21in slot-mask set",
+                            "The same kind of decoder on a picture it cannot match well, so nearly half the lines are left at a wrong cut. Error rate [EST]."
+                        ],
+                        [
+                            "BBC Select overnight, line shuffle (1992-94)",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → VideoCrypt-S line shuffle scrambling → 22in slot-mask set",
+                            "VideoCrypt-S on BBC terrestrial: the lines are shuffled in six blocks of 47 lines per field. The BBC chose shuffling because cut-and-rotate suffered more from ghosting and co-channel interference. Where the blocks sit in the field [EST]."
+                        ],
+                        [
+                            "BBC Select, half shuffle",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → VideoCrypt-S half shuffle scrambling → 22in slot-mask set",
+                            "VideoCrypt-S's half-shuffle format: only alternate fields are scrambled, so a clean picture shows through the striped one. In a still both fields are woven together."
+                        ],
+                        [
+                            "BBC Select, line delay",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → VideoCrypt-S line delay scrambling → 22in slot-mask set",
+                            "VideoCrypt-S's third format: the start of each line's picture delayed by a pseudo-random amount. The size of the delays [EST]."
+                        ],
+                        [
+                            "Nagravision Syster without a decoder",
+                            "research-based · 3-CCD broadcast → 625 PAL (Europe B/G/H) → Nagravision Syster scrambling → 25in slot-mask set",
+                            "Kudelski's Nagravision for PAL (Premiere in Germany, Canal+ in France and Spain, 1990s satellite): the lines of each field are read out of a 32-line store in permuted order, so the field is shifted by 32 lines and finely shuffled. The store model [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Video synthesisers",
+                    "rows": [
+                        [
+                            "Rutt/Etra scan processor, 1973",
+                            "research-based · Vidicon → rutt/etra scan processor → 525 NTSC (US) → 17in black-and-white tube (P31)",
+                            "Each scan line's brightness lifts it up the screen (\"brightness becomes elevation\"), drawn on a green X-Y monitor and re-shot. Height, rotation and depth were front-panel controls; line count and trace width [EST]."
+                        ],
+                        [
+                            "Rutt/Etra, steep relief",
+                            "research-based · Vidicon → rutt/etra scan processor → 525 NTSC (US) → 17in black-and-white tube (P4 white)",
+                            "Few lines, a tall lift and a strong tilt, so the picture becomes a ridged landscape. Settings [EST]; the controls are the unit's own."
+                        ],
+                        [
+                            "Rutt/Etra, fine raster",
+                            "research-based · 3-tube Plumbicon → rutt/etra scan processor → 525 NTSC (US) → 19in black-and-white tube (P4 white)",
+                            "Many lines and a shallow lift: the picture stays recognisable, embossed in raster lines. Settings [EST]."
+                        ],
+                        [
+                            "Scan processor into a colouriser",
+                            "research-based · 3-tube Plumbicon → rutt/etra scan processor into a colouriser (density slicing) → 625 PAL (UK System I) → 20in slot-mask set",
+                            "The scan processor's output patched into a colouriser, as studios chained their instruments, so the traces take colour by brightness. Colours [EST]."
+                        ],
+                        [
+                            "Paik/Abe scan modulation",
+                            "research-based · Vidicon → paik/abe scan modulation → 525 NTSC (US) → 19in black-and-white tube",
+                            "An audio tone on the deflection, a multiple of the field rate so the bends stand still and symmetrical, which Paik found gave the clearest distortions. Frequencies and amounts [EST]."
+                        ],
+                        [
+                            "Scan modulation, both ways",
+                            "research-based · Vidicon → paik/abe scan modulation → 525 NTSC (US) → 19in delta-gun set",
+                            "Tones on both deflections: across bends the edges, down squeezes the raster into bright bands and stretches it into dim ones, because the beam keeps its speed. Frequencies [EST]."
+                        ],
+                        [
+                            "Magnet on the picture tube",
+                            "research-based · Vidicon → paik/abe scan modulation → 525 NTSC (US) → 19in black-and-white tube",
+                            "A strong magnet held against the set, as in Paik's magnet pieces of the mid-1960s: the raster twists round a point. The shape of the twist [EST]."
+                        ],
+                        [
+                            "Scanimate-style colouriser",
+                            "research-based · 3-tube Plumbicon → colouriser (density slicing) → 525 NTSC (US) → 19in slot-mask set",
+                            "Five grey levels, each with its own red, green and blue, as Scanimate's colouriser worked. The five colours here [EST]."
+                        ],
+                        [
+                            "Sandin Image Processor, edges and slices",
+                            "research-based · 3-tube Plumbicon → colouriser (density slicing) → 525 NTSC (US) → 19in delta-gun set",
+                            "Amplitude classifier (grey levels to colours) with the differentiator adding edges, two of the Sandin Image Processor's modules (1971-74). Colours and amounts [EST]."
+                        ],
+                        [
+                            "Differentiator only, glowing outlines",
+                            "research-based · 3-tube Plumbicon → colouriser (density slicing) → 525 NTSC (US) → 19in delta-gun set",
+                            "Only the differentiator: the rate of change along each line, so edges glow on black. Amount and colour [EST]."
+                        ],
+                        [
+                            "Video feedback tunnel",
+                            "research-based · 3-tube Plumbicon → video feedback → 625 PAL (UK System I) → 20in slot-mask set",
+                            "A camera pulled back from its own monitor and turned slightly: the picture repeats inside itself, each copy smaller and shifted in hue. Every amount [EST]."
+                        ],
+                        [
+                            "Video feedback, runaway gain",
+                            "research-based · 3-tube Plumbicon → video feedback → 625 PAL (UK System I) → 20in slot-mask set",
+                            "The camera zoomed in past the monitor's edge with the gain up, so bright areas feed on themselves and smear outward. Every amount [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Flat and odd displays",
+                    "rows": [
+                        [
+                            "Game Boy screen, 1989",
+                            "research-based · Home computer on a TV (288 lines, progressive) → Reflective STN LCD, 4 shades (Game Boy, 1989)",
+                            "160 x 144 reflective STN LCD with four shades of grey-green. The exact tint, the shadow each dark pixel casts on the reflector and the slightly paler grid are [EST]."
+                        ],
+                        [
+                            "Four shades, dithered",
+                            "research-based · Home computer on a TV (288 lines, progressive) → Reflective STN LCD, 4 shades (Game Boy, 1989), ordered dither",
+                            "The same four-shade LCD with the picture dithered to fake more greys. The dither pattern is a choice, not a documented device [EST]."
+                        ],
+                        [
+                            "Black-and-white LCD pocket TV, off-air",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → Pocket LCD TV, black and white (passive STN)",
+                            "A passive-matrix LCD television on a weak signal: few dots, a handful of greys, and shading along rows and columns where the drive leaks. Resolution and amounts [EST]."
+                        ],
+                        [
+                            "Colour LCD pocket TV, late 1980s",
+                            "research-based · 3-CCD broadcast → 625 PAL (UK System I) → Colour LCD pocket TV (late 1980s)",
+                            "Colour LCD televisions arrived in the late 1980s (Sony's FDL-330S, 1988-89). Backlit red, green and blue cells in a staggered layout with a grey black. Resolution and layout [EST]."
+                        ],
+                        [
+                            "Laptop STN screen, blue on grey",
+                            "research-based · Home computer on a TV (288 lines, progressive) → Laptop STN LCD, blue on grey (late 1980s)",
+                            "640 x 400 passive LCD of the late 1980s, eight shades, with crosstalk shading. Colours [EST]."
+                        ],
+                        [
+                            "Toshiba T3100 orange plasma, 1986",
+                            "research-based · Home computer on a TV (288 lines, progressive) → Orange gas plasma, on/off (Toshiba T3100, 1986)",
+                            "9.5in neon-orange gas plasma, 640 x 400, each cell on or off. Colour [EST]."
+                        ],
+                        [
+                            "Orange plasma, dithered",
+                            "research-based · Home computer on a TV (288 lines, progressive) → Orange gas plasma, on/off (Toshiba T3100, 1986), ordered dither",
+                            "The on/off plasma with an ordered dither, the usual way a two-level screen showed a photograph. Colour [EST]."
+                        ],
+                        [
+                            "Toshiba T3100SX, 16 shades of orange",
+                            "research-based · Home computer on a TV (288 lines, progressive) → Orange gas plasma, 16 shades (Toshiba T3100SX)",
+                            "The later plasma: 640 x 480 with 16 shades. Colour [EST]."
+                        ],
+                        [
+                            "PLATO IV plasma terminal, 1972",
+                            "research-based · Home computer on a TV (288 lines, progressive) → Orange plasma panel, 512 x 512 (PLATO IV, 1972), error-diffusion dither",
+                            "The 512 x 512 orange plasma panel of the PLATO IV teaching terminal, each dot on or off, dithered here. Colour and dot shape [EST]."
+                        ],
+                        [
+                            "Red LED dot-matrix sign",
+                            "research-based · Home computer on a TV (288 lines, progressive) → Red LED dot matrix sign",
+                            "Early LED signs were red. Matrix size, four brightness steps and glow [EST]."
+                        ],
+                        [
+                            "Amber LED sign, 1990s",
+                            "research-based · Home computer on a TV (288 lines, progressive) → Amber LED dot matrix sign (AlInGaP, 1990s)",
+                            "AlInGaP LEDs brought bright amber from the late 1980s. Matrix size and glow [EST]."
+                        ],
+                        [
+                            "Flip-disc sign",
+                            "research-based · Home computer on a TV (288 lines, progressive) → Flip-disc sign (Ferranti-Packard)",
+                            "Discs black on one face and bright on the other (Ferranti-Packard; the Montreal Stock Exchange board of 1961), one bit per disc, dithered. Disc colour and matrix size [EST]."
+                        ],
+                        [
+                            "Sony Watchman 2in screen, 1982",
+                            "research-based · 3-CCD broadcast → 525 NTSC (US) → 2in black-and-white tube",
+                            "The FD-210's two-inch black-and-white flat CRT, its electron gun lying beside the screen, receiving an off-air signal. The tube's look and the reception are [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Night vision and thermal",
+                    "rows": [
+                        [
+                            "Infrared converter and searchlight, 1940s",
+                            "research-based · Infrared converter + searchlight → 625 PAL (UK System I) → frame-grab",
+                            "Generation 0: an image converter that only works with an infrared searchlight, so the scene is lit from the middle and falls away. All amounts [EST]; a photograph has no infrared record, so foliage and skin are guessed from colour."
+                        ],
+                        [
+                            "Starlight scope, 1960s",
+                            "research-based · Starlight scope → 525 NTSC (US) → frame-grab",
+                            "Generation 1: about 1,000 times gain, needing moonlight; cascaded tubes add pincushion distortion. Relayed by a camera. Amounts [EST]."
+                        ],
+                        [
+                            "Microchannel-plate night vision, 1980s",
+                            "research-based · Microchannel-plate night vision → 625 PAL (UK System I) → frame-grab",
+                            "Generation 2: the microchannel plate (about 20,000 times), scintillation in the dark areas, chicken-wire lines and edge glow, both listed tube blemishes. Amounts [EST]."
+                        ],
+                        [
+                            "Gen 3 night vision, early 1990s",
+                            "research-based · GaAs night vision → 625 PAL (UK System I) → frame-grab",
+                            "Generation 3: GaAs photocathode, brighter and sharper, with the larger halo round lights that its ion-barrier film brings. Amounts [EST]."
+                        ],
+                        [
+                            "Night vision in too much light",
+                            "research-based · GaAs night vision → 625 PAL (UK System I) → 14in slot-mask set",
+                            "An intensifier used at dusk: the honeycomb pattern of its fibre bundles shows, as it does at high light levels. Pattern size [EST]."
+                        ],
+                        [
+                            "Firefighter's thermal camera (pyroelectric tube)",
+                            "research-based · Pyroelectric vidicon thermal camera, white hot → 625-line B&W → 9in black-and-white tube",
+                            "The pyroelectric vidicon served mainly in firefighting cameras: soft, white hot, on a small monitor. Everything about the temperatures is a guess from colour and brightness [EST]."
+                        ],
+                        [
+                            "Thermal camera 160 x 120, white hot",
+                            "research-based · Uncooled thermal camera, 160 x 120, white hot → 625 PAL (UK System I) → frame-grab",
+                            "An uncooled sensor of 160 x 120 cells scaled up, White Hot (the most common palette), with the dark halo early ferroelectric sensors gave hot objects. Temperatures guessed from the photo [EST]."
+                        ],
+                        [
+                            "Thermal camera, black hot, blocky",
+                            "research-based · Uncooled thermal camera, 160 x 120, black hot → 625 PAL (UK System I) → frame-grab",
+                            "The same sensor in Black Hot, shown with its cells unsmoothed. Temperatures guessed from the photo [EST]."
+                        ],
+                        [
+                            "Thermal camera 320 x 240, Ironbow",
+                            "research-based · Uncooled thermal camera, 320 x 240, Ironbow → 625 PAL (UK System I) → frame-grab",
+                            "Ironbow runs from black through blue and magenta to orange, yellow and white. Colour stops and temperatures [EST]."
+                        ],
+                        [
+                            "Thermal camera, Rainbow",
+                            "research-based · Uncooled thermal camera, 320 x 240, Rainbow → 625 PAL (UK System I) → frame-grab",
+                            "The Rainbow palette, more colours for small temperature steps. Colour stops and temperatures [EST]."
+                        ],
+                        [
+                            "Thermal, Arctic palette on a CRT",
+                            "research-based · Uncooled thermal camera, 160 x 120, Arctic → 625 PAL (UK System I) → 10in slot-mask set",
+                            "Arctic (gold and blue) from the 160 x 120 sensor, seen on a small colour monitor. Colour stops and temperatures [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Videophones and web video",
+                    "rows": [
+                        [
+                            "H.261 videoconference, CIF, 1990",
+                            "research-based · Starved videophone / web codec (H.261 style) → Digital 352 x 288 (Video CD, CIF) → frame-grab",
+                            "H.261 (CCITT, December 1990) at CIF, 352 x 288: 16 x 16 macroblocks, 8 x 8 DCT and the flat quantiser the standard fixed. Quantiser choice [EST]."
+                        ],
+                        [
+                            "H.261 at 64 kbit/s, QCIF",
+                            "research-based · Starved videophone / web codec (H.261 style) → Digital 352 x 288 (Video CD, CIF) → frame-grab",
+                            "QCIF, 176 x 144, the size every H.261 codec had to support, with the quantiser run coarse as it was at one 64 kbit/s ISDN channel. Quantiser [EST]."
+                        ],
+                        [
+                            "Videophone, the head moved",
+                            "research-based · Starved videophone / web codec (H.261 style) → Digital 352 x 288 (Video CD, CIF) → frame-grab",
+                            "Only the blocks that changed most are sent; the rest keep the picture from a few frames ago, so the subject breaks into old and new blocks. Budget and movement [EST]."
+                        ],
+                        [
+                            "Videoconference on the room's TV",
+                            "research-based · Starved videophone / web codec (H.261 style) → 625 PAL (UK System I) → 26in slot-mask set",
+                            "A CIF H.261 picture decoded to PAL and shown on the conference room's colour monitor. Quantiser and monitor [EST]."
+                        ],
+                        [
+                            "Grey QuickCam, 1994",
+                            "research-based · 16 greys, 4 bits (QuickCam, CU-SeeMe) → Digital 352 x 288 (Video CD, CIF) → frame-grab",
+                            "Connectix QuickCam (August 1994): 320 x 240 in 16 shades of grey (4 bits a pixel)."
+                        ],
+                        [
+                            "CU-SeeMe, 160 x 120 greys",
+                            "research-based · 16 greys, 4 bits (QuickCam, CU-SeeMe) → Starved videophone / web codec (H.261 style) → Digital 352 x 288 (Video CD, CIF) → frame-grab",
+                            "Cornell's CU-SeeMe (from 1992): 160 x 120 in 16 greys, sending an 8 x 8 block only when it had changed past a threshold. Block size here is H.261's 16 x 16; threshold and movement [EST]."
+                        ],
+                        [
+                            "CU-SeeMe on a crowded link",
+                            "research-based · 16 greys, 4 bits (QuickCam, CU-SeeMe) → Starved videophone / web codec (H.261 style) → Digital 352 x 288 (Video CD, CIF) → frame-grab",
+                            "The same with too little bandwidth: few blocks get through, so most of the picture is older than the rest. Pushed past the published behaviour [EST]."
+                        ],
+                        [
+                            "RealVideo on a 28.8k modem, 1997",
+                            "research-based · Starved videophone / web codec (H.261 style) → Digital 352 x 288 (Video CD, CIF) → frame-grab",
+                            "RealVideo (February 1997) streamed at a few frames a second over 28.8k modems; 160 x 120 was a common web size. Codec details differ (RealVideo was proprietary), so this is the H.261-style coder at its coarsest, enlarged smoothly by the player [EST]."
+                        ],
+                        [
+                            "Web video, rebuffering",
+                            "research-based · Starved videophone / web codec (H.261 style) → Digital 352 x 288 (Video CD, CIF) → frame-grab",
+                            "A stream that stalled and caught up: a coarse picture patched with blocks from frames ago, smoothed by the player. Pushed hard [EST]."
+                        ],
+                        [
+                            "Phone video, 3GP, 2003",
+                            "research-based · Starved videophone / web codec (H.261 style) → Digital 352 x 288 (Video CD, CIF) → frame-grab",
+                            "3GP (2003) phone clips: QCIF, 176 x 144, at up to 64 kbit/s. Phones used H.263, a successor of H.261 that this coder stands in for [EST]."
+                        ],
+                        [
+                            "Phone video, Sub-QCIF blocks",
+                            "research-based · Starved videophone / web codec (H.261 style) → Digital 352 x 288 (Video CD, CIF) → frame-grab",
+                            "128 x 96 (Sub-QCIF, an H.263 size) at the coarsest quantiser, pixel-doubled: the picture as large blocks. Pushed hard [EST]."
+                        ],
+                        [
+                            "Webcam window on a PC monitor",
+                            "research-based · Starved videophone / web codec (H.261 style) → Digital 352 x 288 (Video CD, CIF) → 14in Trinitron",
+                            "A 320 x 240 webcam picture, compressed, seen close up on a 14-inch computer monitor. Quantiser and monitor [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Vector displays",
+                    "rows": [
+                        [
+                            "Black-and-white vector monitor, 1979",
+                            "research-based · vector display (contour strokes) → Home computer on a TV (288 lines, progressive) → 19in black-and-white tube (P4 white)",
+                            "A vector monitor draws only lines, from endpoints, and redraws them 30-40 times a second. A photo has no line list, so VideoLook traces contour lines of its brightness; the bright dots are the beam pausing at corners [EST]."
+                        ],
+                        [
+                            "Colour vector monitor, 1981",
+                            "research-based · vector display (contour strokes) → Home computer on a TV (288 lines, progressive) → 19in delta-gun set",
+                            "Colour vector monitors used a shadow-mask tube; here each contour level gets its own colour. Colours [EST]."
+                        ],
+                        [
+                            "Home vector console, 1982",
+                            "research-based · vector display (contour strokes) → Home computer on a TV (288 lines, progressive) → 9in black-and-white tube (P4 white)",
+                            "A home vector system drew with analogue X and Y integrators and a brightness signal on a small black-and-white tube, so its lines are softer and its corners brighter. Amounts [EST]."
+                        ],
+                        [
+                            "Oscilloscope trace",
+                            "research-based · vector display (contour strokes) → Home computer on a TV (288 lines, progressive) → 12in black-and-white tube (P1)",
+                            "The contour lines drawn on a green P1 oscilloscope screen with a fine beam. Beam and levels [EST]."
+                        ],
+                        [
+                            "Vector, many fine contours",
+                            "research-based · vector display (contour strokes) → Home computer on a TV (288 lines, progressive) → 19in black-and-white tube (P4 white)",
+                            "Eight levels traced on a fine grid with little straightening: a dense, map-like drawing. Pushed past what a real display list could hold in one refresh [EST]."
+                        ],
+                        [
+                            "Vector, few straight strokes",
+                            "research-based · vector display (contour strokes) → Home computer on a TV (288 lines, progressive) → 19in black-and-white tube (P4 white)",
+                            "Two levels on a coarse grid, heavily straightened: a few angular strokes, as an early display list might have held. Amounts [EST]."
+                        ],
+                        [
+                            "Vector on a long-afterglow tube",
+                            "research-based · vector display (contour strokes) → Home computer on a TV (288 lines, progressive) → 12in P7 radar tube",
+                            "The strokes on a P7 tube, the blue flash and long yellow afterglow of radar displays. Levels [EST]."
+                        ],
+                        [
+                            "Vector screen, photographed",
+                            "research-based · vector display (contour strokes) → Home computer on a TV (288 lines, progressive) → 19in black-and-white tube (P4 white), photographed on black-and-white film",
+                            "Amber strokes photographed off the screen on black-and-white film, with flare and grain. Amounts [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Screen to paper",
+                    "rows": [
+                        [
+                            "Colour video printer, late 1980s",
+                            "research-based · 525 NTSC (US) → frame-grab → colour video printer (dye sublimation)",
+                            "A dye-sublimation video printer of the Sony Mavigraph kind: a 720 x 468 frame from NTSC printed in three passes of a thermal head. Heat carry-over, head streaks and pass registration [EST]."
+                        ],
+                        [
+                            "Video print with its white margin",
+                            "research-based · 525 NTSC (US) → frame-grab → colour video printer (dye sublimation)",
+                            "The same print with its paper margin, a worn head and passes out of register. Amounts [EST]."
+                        ],
+                        [
+                            "Video print of a paused VHS tape",
+                            "research-based · VHS (SP) off-air → 625 PAL (UK System I) → frame-grab → colour video printer (dye sublimation)",
+                            "A colour video print made from a home VHS recording on pause. Printer amounts [EST]."
+                        ],
+                        [
+                            "Black-and-white medical video print",
+                            "research-based · 625-line B&W → frame-grab → black-and-white video printer (medical, thermal)",
+                            "A direct thermal video printer of the kind used beside ultrasound and endoscopy monitors: a 1,280-dot head and 256 greys on glossy paper. Paper tone and streaks [EST]."
+                        ],
+                        [
+                            "Early thermal video print, 16 greys",
+                            "research-based · 625-line B&W → frame-grab → black-and-white video printer (medical, thermal)",
+                            "An older black-and-white thermal video printer with a coarser head and few grey levels, patterned between them. Head size and levels [EST]."
+                        ],
+                        [
+                            "Fax, photo mode, standard resolution",
+                            "research-based · 625 PAL (UK System I) → frame-grab → fax (Group 3, 1 bit)",
+                            "Group 3 fax: about 203 pels per inch across and 98 lines per inch down, one bit each, the greys made by a 4 x 4 dither, printed on thermal paper. Picture width on the page and paper tone [EST]."
+                        ],
+                        [
+                            "Fax, fine mode, error diffusion",
+                            "research-based · 625 PAL (UK System I) → frame-grab → fax (Group 3, 1 bit), fine",
+                            "Fine resolution (196 lines per inch) with error diffusion, which some machines used for photographs. Amounts [EST]."
+                        ],
+                        [
+                            "Photo sent as a text fax",
+                            "research-based · 625 PAL (UK System I) → frame-grab → fax (Group 3, 1 bit)",
+                            "A photograph sent in text mode: every pel black or white, no greys at all. Threshold [EST]."
+                        ],
+                        [
+                            "Fax over a bad line, faded",
+                            "research-based · 625 PAL (UK System I) → frame-grab → fax (Group 3, 1 bit)",
+                            "Transmission errors garble a run of lines or repeat the line before, dirt on the scanner draws lines down the page, and the thermal paper has faded. Error rate and fading [EST]."
+                        ],
+                        [
+                            "Fax of a fax of a fax",
+                            "research-based · 625 PAL (UK System I) → frame-grab → fax (Group 3, 1 bit)",
+                            "A small picture on the page, coarsely dithered, with many line errors. Pushed hard [EST]."
+                        ],
+                        [
+                            "Wirephoto, 1935",
+                            "research-based · 625 PAL (UK System I) → frame-grab → wirephoto (drum, telephone line)",
+                            "AP Wirephoto (1935): a drum at 100 rpm and a spot 1/100 inch wide, so about 100 lines to the inch, each line sent as a continuous tone over a telephone line and printed glossy. Line noise and print tone [EST]."
+                        ],
+                        [
+                            "Wirephoto over a long line",
+                            "research-based · 625 PAL (UK System I) → frame-grab → wirephoto (drum, telephone line)",
+                            "A coarser scan over a noisy long-distance line: lines wander, mains hum draws slanting bars, and crackle leaves streaks. Amounts [EST]."
+                        ],
+                        [
+                            "Weather satellite, whole APT line",
+                            "research-based · 625 PAL (UK System I) → frame-grab → weather satellite picture (NOAA APT)",
+                            "NOAA APT: each line is 2,080 words: sync, space, 909 words of channel A, telemetry wedges, then the same for channel B. Channel B here is an infrared stand-in made from the picture (cold shows white) [EST]; noise rises at the start and end of the pass."
+                        ],
+                        [
+                            "Weather satellite, visible channel",
+                            "research-based · 625 PAL (UK System I) → frame-grab → weather satellite picture (NOAA APT), channel A",
+                            "Channel A alone, two lines a second, received with some noise. Noise [EST]."
+                        ],
+                        [
+                            "Weather satellite infrared, false colour",
+                            "research-based · 625 PAL (UK System I) → frame-grab → weather satellite picture (NOAA APT), channel B",
+                            "The infrared channel in a false-colour scale, as hobby decoders show it. The infrared values are a stand-in made from the picture [EST]."
+                        ],
+                        [
+                            "Satellite decoder out of step",
+                            "research-based · 625 PAL (UK System I) → frame-grab → weather satellite picture (NOAA APT)",
+                            "A decoder that has not locked to the sync: every line starts a little late, so the picture, the sync bars and the wedges run diagonally, with noise as the satellite sets. Amounts [EST]."
+                        ],
+                        [
+                            "Satellite picture on a fax recorder",
+                            "research-based · 625 PAL (UK System I) → frame-grab → weather satellite picture (NOAA APT), channel A",
+                            "The visible channel printed line by line on a weather-fax recorder's paper. Paper and noise [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Space probes",
+                    "rows": [
+                        [
+                            "First weather satellite, TIROS-1, 1960",
+                            "research-based · space-probe camera → frame-grab",
+                            "TIROS-1 (1 April 1960) carried two small vidicon cameras of 500 lines and stored pictures on tape for the ground station. Its pictures were low in contrast, so cloud and snow were hard to tell apart. Shading and noise [EST]."
+                        ],
+                        [
+                            "First picture of Mars, Mariner 4, 1965",
+                            "research-based · space-probe camera → frame-grab",
+                            "Mariner 4's camera gave 200 x 200 pixels of 6 bits, sent at 8 1/3 bits a second, about 10 hours a picture. Shown here as square pixels, as the first prints were. Shading and noise [EST]."
+                        ],
+                        [
+                            "Mars by numbers, coloured in crayon, 1965",
+                            "research-based · space-probe camera → frame-grab",
+                            "Before the picture could be processed, JPL printed Mariner 4's numbers on strips of paper and staff coloured them by hand in pastel crayon, browns to yellows, to a key of values. VideoLook colours in 8 bands; the exact key and hatching [EST]."
+                        ],
+                        [
+                            "Ranger closing on the Moon, 1964",
+                            "research-based · space-probe camera → frame-grab",
+                            "Ranger's P cameras scanned 300 x 300 and sent pictures back until the craft hit the surface. Here the last frame is cut short by noise. Noise, coherent interference and the cut point [EST]."
+                        ],
+                        [
+                            "Mars flyby frame with reseau dots, 1969",
+                            "research-based · space-probe camera → frame-grab",
+                            "Mariner 6 and 7 had a 7 x 9 grid of reseau marks on the vidicon, used to correct distortion, so every frame carries a field of small dots. Pixel count, dot size and noise [EST]."
+                        ],
+                        [
+                            "Mars orbiter frame, Mariner 9, 1971",
+                            "research-based · space-probe camera → frame-grab",
+                            "Mariner 9: 700 lines of 832 pixels, 9 bits, a frame every 42 seconds. A few lines lost in telemetry. Dropout rate and noise [EST]."
+                        ],
+                        [
+                            "Viking orbiter frame with etched reseau, 1976",
+                            "research-based · space-probe camera → frame-grab",
+                            "The Viking orbiter cameras had an etched reseau grid on the vidicon, so frames show a regular field of marks. Pixel count, grid size and noise [EST]."
+                        ],
+                        [
+                            "Viking lander colour panorama, 1976",
+                            "research-based · space-probe camera → frame-grab",
+                            "The Viking lander camera built each picture from vertical lines: a photodiode array stepped 512 times in elevation per line, then the camera turned a step in azimuth. Colour came from separate scans through filters, so the channels misregister slightly. Misregistration and noise [EST]."
+                        ],
+                        [
+                            "Outer planets, Voyager colour composite, 1979",
+                            "research-based · space-probe camera → frame-grab",
+                            "Voyager's vidicon cameras: 800 x 800, 8 bits, read out in 48 seconds, with reseau marks on the faceplate. Colour pictures were combined from frames taken through filters one after another, so moving things fringe. Reseau layout, fringe and noise [EST]."
+                        ],
+                        [
+                            "Deep-space frame with telemetry dropouts",
+                            "research-based · space-probe camera → frame-grab",
+                            "Telemetry lost on the way leaves black lines and runs of wrong pixels. Rates [EST]."
+                        ],
+                        [
+                            "Far side of the Moon, Luna 3, 1959",
+                            "research-based · space-probe camera → frame-grab",
+                            "Luna 3 photographed the far side on film, developed it on board and scanned it for radio, so the frames came back faint and noisy. The line count is not well sourced; noise and banding [EST]."
+                        ],
+                        [
+                            "Lunar Orbiter framelets, 1966",
+                            "research-based · film read out in strips → frame-grab",
+                            "Lunar Orbiter developed its film on board and read it out in framelets 2.54 mm wide; laid side by side on Earth they leave seams and a brightness drift across each strip, the venetian-blind look. Strip count and drift [EST]."
+                        ],
+                        [
+                            "Lunar Orbiter, scan lines showing",
+                            "research-based · film read out in strips → frame-grab",
+                            "The same strips enlarged until the readout's own lines show. Over 17,000 lines went into each traverse; here a few hundred are drawn [EST]."
+                        ],
+                        [
+                            "Lunar Orbiter strips laid across",
+                            "research-based · film read out in strips → frame-grab",
+                            "The framelets laid horizontally, with stronger drift. Direction and amounts [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Earth observation",
+                    "rows": [
+                        [
+                            "Landsat false colour, 1972",
+                            "research-based · multispectral scanner → frame-grab",
+                            "Landsat MSS: four bands, 6 bits, swept six lines at a time, about 79 m pixels resampled to 57 m. The standard false colour shows near infrared as red, so plants turn red. A photo has no infrared record, so it is guessed from greenness [EST]."
+                        ],
+                        [
+                            "Landsat near-natural colour",
+                            "research-based · multispectral scanner → frame-grab",
+                            "The green and red bands shown as near-natural colour (MSS has no blue band, so blue is made from the other two [EST])."
+                        ],
+                        [
+                            "Landsat band 4 (green), 1972",
+                            "research-based · multispectral scanner → frame-grab",
+                            "One band alone, 0.5 to 0.6 µm, in grey. Bands were numbered 4 to 7 on Landsats 1 to 3."
+                        ],
+                        [
+                            "Landsat band 5 (red)",
+                            "research-based · multispectral scanner → frame-grab",
+                            "The red band, 0.6 to 0.7 µm, in grey."
+                        ],
+                        [
+                            "Landsat band 6 (near infrared)",
+                            "research-based · multispectral scanner → frame-grab",
+                            "Near infrared, 0.7 to 0.8 µm: plants bright, water dark. The infrared is a stand-in made from the photo [EST]."
+                        ],
+                        [
+                            "Landsat band 7 (infrared)",
+                            "research-based · multispectral scanner → frame-grab",
+                            "Near infrared, 0.8 to 1.1 µm, with the striping in sixes stronger. Stand-in infrared and striping amount [EST]."
+                        ],
+                        [
+                            "Landsat, badly striped with lost lines",
+                            "research-based · multispectral scanner → frame-grab",
+                            "Six detectors per band never quite matched, so an uncorrected scene is striped in sixes; lost lines show as black or white. Amounts [EST]."
+                        ],
+                        [
+                            "Whole Landsat scene, skewed",
+                            "research-based · multispectral scanner → frame-grab",
+                            "A full scene is a parallelogram because the Earth turns under the scanner during it; the corners outside it are black. Skew amount [EST]."
+                        ],
+                        [
+                            "Landsat pixels enlarged",
+                            "research-based · multispectral scanner → frame-grab",
+                            "A small area blown up until the 57 x 79 m pixels show as blocks. Pixel count [EST]."
+                        ],
+                        [
+                            "Landsat photographic print",
+                            "research-based · multispectral scanner → frame-grab",
+                            "A scene printed through a film recorder, which softens the pixels into a smooth photograph. Softness [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Radar and sonar",
+                    "rows": [
+                        [
+                            "Radar screen with afterglow, 1950s",
+                            "research-based · radar screen → 12in P7 radar tube",
+                            "A plan position indicator: bearing round, range out, drawn by a sweep that turns with the aerial, on a P7 tube whose blue flash leaves a yellow afterglow until the next turn. Range rings electronic. The photo stands for the ground it sees: bright, edged things echo [EST]."
+                        ],
+                        [
+                            "Ship's radar with sea clutter",
+                            "research-based · radar screen → 12in P7 radar tube",
+                            "Sea clutter fills the middle of the screen, there are more range rings and a heading line. Amounts [EST]."
+                        ],
+                        [
+                            "Radar sweep, clean",
+                            "research-based · radar screen → frame-grab",
+                            "The radar picture without the tube: green-white echoes fading behind the sweep. Amounts [EST]."
+                        ],
+                        [
+                            "Radar sweep filling the frame",
+                            "research-based · radar screen → frame-grab",
+                            "The circle enlarged past the frame edges so the echoes fill the picture. Size [EST]."
+                        ],
+                        [
+                            "Off-centred radar picture",
+                            "research-based · radar screen → 12in P7 radar tube",
+                            "The centre moved to the bottom of the screen to look further ahead, as marine sets allow. Position [EST]."
+                        ],
+                        [
+                            "Weather radar in colour",
+                            "research-based · radar screen → frame-grab",
+                            "Rain shown in colour steps by echo strength. There is no single industry colour scale; these colours and steps [EST]."
+                        ],
+                        [
+                            "Raster radar display, amber",
+                            "research-based · radar screen → frame-grab",
+                            "A later scan-converted radar on an amber raster monitor, in a few levels. Colour and levels [EST]."
+                        ],
+                        [
+                            "Side-scan sonar record",
+                            "research-based · side-scan sonar → frame-grab",
+                            "Each ping draws one line across the record, port left and starboard right, with the dark water column down the middle; tall things throw acoustic shadows away from the track. The photo is the seabed [EST]."
+                        ],
+                        [
+                            "Side-scan sonar on paper",
+                            "research-based · side-scan sonar → frame-grab",
+                            "The record burned onto a paper recorder: strong echoes dark. Paper tone [EST]."
+                        ],
+                        [
+                            "Side-scan sonar, gold palette",
+                            "research-based · side-scan sonar → frame-grab",
+                            "The digital look of later side-scan software, in a gold scale. Palette [EST]."
+                        ],
+                        [
+                            "Echo sounder paper chart",
+                            "research-based · echo sounder / fish finder → frame-grab",
+                            "A paper-recording echo sounder (Furuno's from 1948, for anglers from 1965): each column one ping, depth downwards, stronger echoes darker. The seabed is found where the photo stays bright [EST]."
+                        ],
+                        [
+                            "Colour fish finder",
+                            "research-based · echo sounder / fish finder → frame-grab",
+                            "A colour sounder screen: echo strength in colour bands, red strongest. Colours and levels [EST]."
+                        ],
+                        [
+                            "LCD fish finder, 1980s",
+                            "research-based · echo sounder / fish finder → frame-grab",
+                            "The first LCD sounders (1984) had coarse black pixels and few levels. Pixel count and levels [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Medical scanners",
+                    "rows": [
+                        [
+                            "First CT scanner, EMI, 1971",
+                            "research-based · CT scanner → frame-grab",
+                            "EMI's first clinical scanner (Atkinson Morley Hospital, 1 October 1971): an 80 x 80 matrix from 160 readings at each of 180 angles. VideoLook really projects and reconstructs the photo, so streaks and ringing come from the method. Noise and window [EST]."
+                        ],
+                        [
+                            "CT slice, 1980s",
+                            "research-based · CT scanner → frame-grab",
+                            "A finer matrix shown smooth. Matrix and noise [EST]."
+                        ],
+                        [
+                            "CT with too few angles",
+                            "research-based · CT scanner → frame-grab",
+                            "Back-projection from few angles leaves streaks radiating across the slice. Angle count [EST]."
+                        ],
+                        [
+                            "CT in a narrow window",
+                            "research-based · CT scanner → frame-grab",
+                            "A narrow window stretches a small range of values to black and white, so the noise and texture come up hard. Window [EST]."
+                        ],
+                        [
+                            "MRI slice",
+                            "research-based · MRI scanner → frame-grab",
+                            "The picture is measured as spatial frequencies and rebuilt by Fourier transform from a 128 matrix. Noise [EST]."
+                        ],
+                        [
+                            "MRI with ringing, coarse matrix",
+                            "research-based · MRI scanner → frame-grab",
+                            "Too few samples ring at sharp edges (Gibbs artefact). Matrix [EST]."
+                        ],
+                        [
+                            "MRI with motion ghosts",
+                            "research-based · MRI scanner → frame-grab",
+                            "Movement during the scan copies the picture as ghosts along the phase-encoding direction. Amount [EST]."
+                        ],
+                        [
+                            "MRI with wrap-around",
+                            "research-based · MRI scanner → frame-grab",
+                            "A field of view smaller than the subject folds the outside back over the other side, with a chemical-shift edge on the brightest parts. Amounts [EST]."
+                        ],
+                        [
+                            "Early ultrasound, on or off",
+                            "research-based · ultrasound scanner → frame-grab",
+                            "Early B-scans were bistable: each point either lit or not. The photo is the tissue: edges echo, dark areas are fluid [EST]. Threshold [EST]."
+                        ],
+                        [
+                            "Grey-scale ultrasound, mid 1970s",
+                            "research-based · ultrasound scanner → frame-grab",
+                            "Scan converters brought grey scale between about 1969 and 1975. 16 levels in a sector. Levels and gain [EST]."
+                        ],
+                        [
+                            "Ultrasound black on white",
+                            "research-based · ultrasound scanner → frame-grab",
+                            "One maker's early grey-scale display showed echoes black on white. Levels [EST]."
+                        ],
+                        [
+                            "Ultrasound, curved probe",
+                            "research-based · ultrasound scanner → frame-grab",
+                            "A curved-array probe draws a fan with a rounded top. Beam count and depth [EST]."
+                        ],
+                        [
+                            "Ultrasound scan printed",
+                            "research-based · ultrasound scanner → frame-grab → black-and-white video printer (medical, thermal)",
+                            "The scan on the black-and-white medical video printer's thermal paper, as handed to patients. Printer settings as under Screen to paper; the scan [EST]."
+                        ],
+                        [
+                            "X-ray image intensifier",
+                            "research-based · X-ray image intensifier → frame-grab",
+                            "A round field, brighter in the middle, stretched at the edges (pincushion), twisted slightly (S-distortion), washed by veiling glare and grainy with quantum mottle. The photo is the X-ray shadow [EST]. Amounts [EST]."
+                        ],
+                        [
+                            "Fluoroscopy on a TV monitor",
+                            "research-based · X-ray image intensifier → 625-line B&W → 12in black-and-white tube (P4 white)",
+                            "The intensifier was usually watched through a TV camera: here on a 625-line monochrome monitor at a low dose. Dose and monitor [EST]."
+                        ],
+                        [
+                            "Gamma camera, 128 matrix",
+                            "research-based · gamma camera → frame-grab",
+                            "An Anger camera digitised to 128 x 128 (from 1972): counted gamma rays, so grainy, blurred by the collimator. The photo's brightness is the activity [EST]; counts [EST]."
+                        ],
+                        [
+                            "Gamma camera in colour, 64 matrix",
+                            "research-based · gamma camera → frame-grab",
+                            "A coarser matrix in a hot colour scale. Matrix, counts and scale [EST]."
+                        ],
+                        [
+                            "Gamma camera, low counts",
+                            "research-based · gamma camera → frame-grab",
+                            "A short acquisition: few counts, so the picture is mostly grain, shown black on white in a round field. Counts [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Microscopes",
+                    "rows": [
+                        [
+                            "Scanning electron micrograph",
+                            "research-based · scanning electron microscope → frame-grab",
+                            "Secondary electrons escape more from edges and slopes, so edges glow; the data bar gives voltage, magnification and a scale bar. The photo's brightness is the height [EST]; data bar layout [EST]. Edit the text under Picture source."
+                        ],
+                        [
+                            "Electron micrograph with charging",
+                            "research-based · scanning electron microscope → frame-grab",
+                            "An insulating sample charges up: bright patches, smears along the scan and lines displaced. Amounts [EST]."
+                        ],
+                        [
+                            "Slow-scan electron micrograph",
+                            "research-based · scanning electron microscope → frame-grab",
+                            "A noisy slow scan with the lines showing, no data bar. Amounts [EST]."
+                        ],
+                        [
+                            "Atomic force microscope, gold scale",
+                            "research-based · scanning probe microscope → frame-grab",
+                            "A height map scanned line by line: each line at its own level, streaks along the lines, every feature broadened by the tip. The gold scale is common in AFM software but no source gives it [EST]. The photo's brightness is the height [EST]."
+                        ],
+                        [
+                            "Scanning tunnelling microscope, grey",
+                            "research-based · scanning probe microscope → frame-grab",
+                            "The same scan in grey with stronger relief shading. Amounts [EST]."
+                        ],
+                        [
+                            "AFM scan with line jumps",
+                            "research-based · scanning probe microscope → frame-grab",
+                            "A poor scan: line offsets left after flattening, many streaks, and a bowed background. Amounts [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Early digital cameras",
+                    "rows": [
+                        [
+                            "Dycam Model 1 (1990, 376 x 240 grey)",
+                            "research-based · early digital camera / camera phone → frame-grab",
+                            "One of the first digital cameras sold: 376 x 240 pixels in greys, stored in the camera's memory. Noise and clipping [EST]."
+                        ],
+                        [
+                            "Logitech Fotoman (1992, 320 x 240 grey)",
+                            "research-based · early digital camera / camera phone → frame-grab",
+                            "A small greyscale camera for the PC: 320 x 240 (reported up to 376 x 284), 256 greys. Contrast and noise [EST]."
+                        ],
+                        [
+                            "Apple QuickTake 100 (1994, 640 x 480)",
+                            "research-based · early digital camera / camera phone → frame-grab",
+                            "640 x 480 in 24-bit colour, eight pictures in its memory. One sensor with a colour mosaic, compressed [EST amounts]."
+                        ],
+                        [
+                            "QuickTake 100, standard mode (320 x 240)",
+                            "research-based · early digital camera / camera phone → frame-grab",
+                            "The lower setting: 320 x 240, so 32 pictures fitted. Compression and colour [EST]."
+                        ],
+                        [
+                            "Casio QV-10 (1995, 320 x 240 with a screen)",
+                            "research-based · early digital camera / camera phone → frame-grab",
+                            "The first popular camera with a screen on the back: 320 x 240 pictures. Smear from bright light, JPEG blocks and colour [EST]."
+                        ],
+                        [
+                            "Game Boy Camera (1998, 128 x 112, four greys)",
+                            "research-based · early digital camera / camera phone → frame-grab",
+                            "128 x 112 pixels, two bits each, ordered dither and edge enhancement in the cartridge, shown on the green screen. The greens are a common approximation [EST]."
+                        ],
+                        [
+                            "Game Boy Camera, transferred (plain greys)",
+                            "research-based · early digital camera / camera phone → frame-grab",
+                            "The same picture taken off the cartridge and shown in four plain greys."
+                        ],
+                        [
+                            "Game Boy Camera on the Game Boy Printer",
+                            "research-based · early digital camera / camera phone → frame-grab → thermal receipt printer",
+                            "The four-grey picture printed by the small thermal printer that went with it. Printed 160 dots across; the printer's greys and fading [EST]."
+                        ],
+                        [
+                            "Sony Mavica prototype (1981, still video)",
+                            "research-based · early digital camera / camera phone → 525 NTSC (US) → frame-grab",
+                            "Not digital: an analogue still-video camera, 570 x 490 picture elements, recorded on a small floppy and played on a TV. Shown here through NTSC."
+                        ],
+                        [
+                            "Sony Mavica MVC-FD7 (1997, floppy disk)",
+                            "research-based · early digital camera / camera phone → frame-grab",
+                            "640 x 480 JPEGs saved straight to a 3.5 inch floppy disk. Compression strength and colour [EST]."
+                        ],
+                        [
+                            "Sharp J-SH04 camera phone (2000)",
+                            "research-based · early digital camera / camera phone → frame-grab",
+                            "The first camera phone sold in Japan: a 110,000-pixel sensor. Picture size here 352 x 288, compression and colour [EST]."
+                        ],
+                        [
+                            "Nokia 7650 camera phone (2002, 640 x 480)",
+                            "research-based · early digital camera / camera phone → frame-grab",
+                            "640 x 480 from a small phone sensor: noisy, heavily compressed, highlights clipped. Amounts [EST]."
+                        ],
+                        [
+                            "Phone picture sent on and on (crushed JPEG)",
+                            "from the specifications · early digital camera / camera phone → frame-grab",
+                            "A small picture compressed to the limit: big 8 x 8 blocks and smeared colour. VideoLook's own extreme setting."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Scanners and slit-scan",
+                    "rows": [
+                        [
+                            "Hand-held scanner (ScanMan class)",
+                            "research-based · scanner → frame-grab",
+                            "Dragged down the page by hand: the picture stretches and squeezes with the hand's speed and wanders sideways. Amounts [EST]."
+                        ],
+                        [
+                            "Hand-held scanner, wide page in three passes",
+                            "research-based · scanner → frame-grab",
+                            "A page wider than the scanner, scanned in bands that never quite meet. Amounts [EST]."
+                        ],
+                        [
+                            "Hand-held scanner, shaky hand",
+                            "from the specifications · scanner → frame-grab",
+                            "A very uneven drag: strong stretching and wandering."
+                        ],
+                        [
+                            "Early colour flatbed",
+                            "research-based · scanner → frame-grab",
+                            "A lamp and sensor row moving down the page; slight lamp drift and a dirty-glass streak [EST]."
+                        ],
+                        [
+                            "Three-pass colour flatbed, misregistered",
+                            "research-based · scanner → frame-grab",
+                            "Three passes, one for each colour; when the carriage does not return to the same place the colours part. Amount [EST]."
+                        ],
+                        [
+                            "Scanner, subject moved part-way",
+                            "from the specifications · scanner → frame-grab",
+                            "Something on the glass moved during the scan: everything after that point is displaced."
+                        ],
+                        [
+                            "Scanner art (subject moving all the way)",
+                            "from the specifications · scanner → frame-grab",
+                            "A big movement part-way through a mono scan, with streaks and an uneven lamp: a scanner used as a camera."
+                        ],
+                        [
+                            "Photo-finish camera (with timing marks)",
+                            "research-based · slit-scan / photo-finish camera → frame-grab",
+                            "One axis is time: what passes the slit is recorded column by column, and anything standing still becomes stripes. Timing marks and finish line [EST layout]."
+                        ],
+                        [
+                            "Slit-scan, steady",
+                            "research-based · slit-scan / photo-finish camera → frame-grab",
+                            "Even speed with a few stops, no marks."
+                        ],
+                        [
+                            "Slit-scan, long stops (stripes)",
+                            "from the specifications · slit-scan / photo-finish camera → frame-grab",
+                            "Long stops, so wide bands of stripes."
+                        ],
+                        [
+                            "Slit-scan, wavering slit",
+                            "from the specifications · slit-scan / photo-finish camera → frame-grab",
+                            "The slit's timing wavers down the picture, bending everything."
+                        ],
+                        [
+                            "Slit-scan, time running down",
+                            "from the specifications · slit-scan / photo-finish camera → frame-grab",
+                            "The slit lies across the picture, so time runs from top to bottom."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Instant film",
+                    "rows": [
+                        [
+                            "Polaroid SX-70 (1972)",
+                            "research-based · instant film (Polaroid, Instax)",
+                            "Integral film; soft and warm with gentle contrast. The film's colour and softness are [EST]."
+                        ],
+                        [
+                            "Polaroid 600 (1981)",
+                            "research-based · instant film (Polaroid, Instax)",
+                            "Faster integral film, punchier than SX-70. Colour [EST]."
+                        ],
+                        [
+                            "Polaroid Spectra (1986)",
+                            "research-based · instant film (Polaroid, Instax)",
+                            "The wider Spectra format, here filling the document. Colour [EST]."
+                        ],
+                        [
+                            "Peel-apart pack film",
+                            "research-based · instant film (Polaroid, Instax)",
+                            "Peel-apart colour pack film: cooler, crisp. Colour [EST]."
+                        ],
+                        [
+                            "Fujifilm Instax",
+                            "research-based · instant film (Polaroid, Instax)",
+                            "Clean and contrasty modern instant film. Colour [EST]."
+                        ],
+                        [
+                            "Black-and-white instant",
+                            "research-based · instant film (Polaroid, Instax)",
+                            "Black-and-white instant print with a faint warm tone [EST]."
+                        ],
+                        [
+                            "SX-70 with its white frame",
+                            "research-based · instant film (Polaroid, Instax)",
+                            "The classic white frame with the wide bottom edge. Adds a border round your picture."
+                        ],
+                        [
+                            "Instax with its white frame",
+                            "research-based · instant film (Polaroid, Instax)",
+                            "Instax Mini proportions of frame. Adds a border."
+                        ],
+                        [
+                            "SX-70 manipulated (pushed while developing)",
+                            "research-based · instant film (Polaroid, Instax)",
+                            "SX-70 pictures stay soft for a while and can be pushed about with a stylus; the swirls here are [EST]."
+                        ],
+                        [
+                            "Expired instant film",
+                            "from the specifications · instant film (Polaroid, Instax)",
+                            "Old film: weak, warm, blotchy, chemistry short of one edge. Amounts [EST]."
+                        ],
+                        [
+                            "Instant film, dirty rollers",
+                            "research-based · instant film (Polaroid, Instax)",
+                            "Dirty rollers are the commonest cause of marks; here as repeating marks across the picture."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Computer print-out",
+                    "rows": [
+                        [
+                            "Line printer picture on green-bar",
+                            "research-based · line printer (characters, overprinted)",
+                            "132 characters across, 6 lines to the inch, darker places overprinted. The ribbon and hammer unevenness [EST]."
+                        ],
+                        [
+                            "Line printer, plain paper, heavy overprint",
+                            "research-based · line printer (characters, overprinted)",
+                            "Up to three characters struck in one place for the darkest tones."
+                        ],
+                        [
+                            "Line printer, 80 columns",
+                            "from the specifications · line printer (characters, overprinted)",
+                            "Fewer, bigger characters: the picture reads from across the room."
+                        ],
+                        [
+                            "RTTY art on teleprinter paper",
+                            "research-based · teleprinter picture (RTTY art)",
+                            "Upper-case teleprinter characters, overprinted with the backspace, on yellow roll paper. Width and paper colour [EST]."
+                        ],
+                        [
+                            "RTTY art, fine (110 columns)",
+                            "from the specifications · teleprinter picture (RTTY art)",
+                            "More characters across for more detail."
+                        ],
+                        [
+                            "Dot-matrix printer, 60 dots to the inch",
+                            "research-based · dot-matrix printer (9-pin)",
+                            "Single-density graphics from a 9-pin printer: coarse round dots in passes that do not quite meet."
+                        ],
+                        [
+                            "Dot-matrix printer, 120 dots to the inch",
+                            "research-based · dot-matrix printer (9-pin)",
+                            "Double-density graphics: finer, with ordered dither as many programs used."
+                        ],
+                        [
+                            "Dot matrix, dry ribbon",
+                            "from the specifications · dot-matrix printer (9-pin)",
+                            "The ribbon running dry down the page, passes badly aligned."
+                        ],
+                        [
+                            "Thermal receipt printer (58 mm roll)",
+                            "research-based · thermal receipt printer",
+                            "384 dots across a 58 mm roll, one bit a dot, greys dithered."
+                        ],
+                        [
+                            "Old receipt, faded, dead dot",
+                            "from the specifications · thermal receipt printer",
+                            "Faded paper, a dead heating element and an uneven feed."
+                        ],
+                        [
+                            "Pen plotter, black hatching",
+                            "research-based · pen plotter (hatching)",
+                            "Tone built by hatching in more directions as it darkens. Spacing and angles [EST]."
+                        ],
+                        [
+                            "Pen plotter, four colour pens",
+                            "from the specifications · pen plotter (hatching)",
+                            "Cyan, magenta, yellow and black felt tips hatched over one another."
+                        ],
+                        [
+                            "Pen plotter, black, red, blue, green",
+                            "from the specifications · pen plotter (hatching)",
+                            "A common carousel of pens: colours placed where the picture is nearest to each."
+                        ],
+                        [
+                            "Pen plotter, one brown pen, fine",
+                            "from the specifications · pen plotter (hatching)",
+                            "A single brown pen with close hatching."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Pictures by cable",
+                    "rows": [
+                        [
+                            "Bartlane cable picture (1921, 5 tones)",
+                            "research-based · Bartlane cable picture (1920s)",
+                            "Coded as five tones on punched tape, sent by submarine cable and printed by a telegraph printer with halftone typefaces. The typeface shapes and cell count [EST]."
+                        ],
+                        [
+                            "Bartlane with tape errors",
+                            "from the specifications · Bartlane cable picture (1920s)",
+                            "A noisy line: wrong tones here and there."
+                        ],
+                        [
+                            "Bartlane 1929 (15 tones, photographic)",
+                            "research-based · Bartlane cable picture (1920s)",
+                            "From 1929, 15 tones and a photographic process at the receiving end. Softening and line marks [EST]."
+                        ],
+                        [
+                            "Belinograph (stylus lines)",
+                            "research-based · Digital 720 x 576 (DVD, DVB) → frame-grab → wirephoto (drum, telephone line)",
+                            "Edouard Belin's system sent pictures down a telephone line to a drum; his earlier process drew lines 1/6 mm apart. Shown with the wirephoto drum receiver; tone and noise [EST]."
+                        ],
+                        [
+                            "Fultograph radio picture (1928)",
+                            "research-based · Fultograph radio picture (1928)",
+                            "Received at home from the radio onto chemically soaked paper on a turning drum: blue-black on cream. Shade, fading and crackle [EST]."
+                        ],
+                        [
+                            "Fultograph, bad reception",
+                            "from the specifications · Fultograph radio picture (1928)",
+                            "Fading signal, static and drums slipping out of step."
+                        ],
+                        [
+                            "Fultograph, coarse lines",
+                            "from the specifications · Fultograph radio picture (1928)",
+                            "Fewer, heavier lines."
+                        ],
+                        [
+                            "Hellschreiber tape picture",
+                            "research-based · Hellschreiber tape",
+                            "Hell sent text as columns of 7 x 7 dots, each printed twice on paper tape. Here the picture itself is sent as if it were text and the tapes stacked: VideoLook's own use."
+                        ],
+                        [
+                            "Hellschreiber, out of time (slanting)",
+                            "from the specifications · Hellschreiber tape",
+                            "The receiver running slow, so every strip slants."
+                        ],
+                        [
+                            "Hellschreiber, many strips",
+                            "from the specifications · Hellschreiber tape",
+                            "Narrow strips packed close for more detail."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Videotex",
+                    "rows": [
+                        [
+                            "Prestel page (1979)",
+                            "research-based · teletext mosaics → 625 PAL (UK System I) → 22in slot-mask set",
+                            "Prestel, the Post Office's viewdata service over the phone line (full service from 1979): 24 rows of 40 characters with teletext-style mosaic graphics, seen on a TV set. The header text is [EST]."
+                        ],
+                        [
+                            "Prestel, separated graphics",
+                            "research-based · teletext mosaics (separated) → 625 PAL (UK System I) → 22in slot-mask set",
+                            "The same page with separated mosaic dots, the shading texture page designers used."
+                        ],
+                        [
+                            "Prestel page, clean grab",
+                            "research-based · teletext mosaics (hold) → 625 PAL (UK System I) → frame-grab",
+                            "The page as the adapter drew it, without the TV in between."
+                        ],
+                        [
+                            "Minitel 1 (black-and-white screen)",
+                            "research-based · Minitel → 9in black-and-white tube",
+                            "France's Minitel (from 1982): 25 rows of 40, row 0 for the service, mosaic graphics in 8 greys on a black-and-white screen. Screen size and grey order [EST]."
+                        ],
+                        [
+                            "Minitel page, clean",
+                            "research-based · Minitel → frame-grab",
+                            "The 40 x 25 page in 8 greys, without the screen."
+                        ],
+                        [
+                            "Minitel, separated mosaic",
+                            "research-based · Minitel → frame-grab",
+                            "Separated (disjoint) mosaic dots in 8 greys."
+                        ],
+                        [
+                            "Minitel in colour",
+                            "research-based · Minitel → frame-grab",
+                            "The rarer colour Minitel: the same page in 8 colours."
+                        ],
+                        [
+                            "Minitel page still arriving",
+                            "from the specifications · Minitel → frame-grab",
+                            "At 1,200 bit/s a full page took a while: here it is part-drawn, with the cursor."
+                        ],
+                        [
+                            "Telidon picture (1978)",
+                            "research-based · Telidon / NAPLPS → frame-grab",
+                            "Canada's Telidon sent pictures as drawing commands, so the terminal drew flat-coloured shapes. The palette entries and the tracing are [EST]."
+                        ],
+                        [
+                            "Telidon, many small shapes",
+                            "from the specifications · Telidon / NAPLPS → frame-grab",
+                            "A more detailed picture: more, smaller shapes."
+                        ],
+                        [
+                            "NAPLPS with outlined shapes",
+                            "from the specifications · Telidon / NAPLPS → frame-grab",
+                            "Shapes drawn with outlines, as many NAPLPS pages were."
+                        ],
+                        [
+                            "Telidon page part-drawn",
+                            "from the specifications · Telidon / NAPLPS → frame-grab",
+                            "The page caught while the terminal was still drawing: the biggest shapes first, the rest still black."
+                        ],
+                        [
+                            "NAPLPS in greys",
+                            "from the specifications · Telidon / NAPLPS → frame-grab",
+                            "Only the eight greys of the default palette."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Radio pictures",
+                    "rows": [
+                        [
+                            "SSTV, Martin M1 (good copy)",
+                            "research-based · slow-scan TV → frame-grab",
+                            "320 x 256 in colour, about two minutes a picture, the usual European mode. A light noise level [EST]."
+                        ],
+                        [
+                            "SSTV, Scottie S1 with slant",
+                            "research-based · slow-scan TV → frame-grab",
+                            "Scottie S1, popular in the USA; the receiving computer's clock is slightly off, so the picture slants and the sync bar wraps in."
+                        ],
+                        [
+                            "SSTV, Robot 36",
+                            "research-based · slow-scan TV → frame-grab",
+                            "The quick colour mode: 36 seconds, 320 x 240, colour shared between lines."
+                        ],
+                        [
+                            "SSTV through static and fading",
+                            "research-based · slow-scan TV → frame-grab",
+                            "A weak signal on a noisy band: fading, static crashes and a whistle. Amounts [EST]."
+                        ],
+                        [
+                            "SSTV picture cut short",
+                            "from the specifications · slow-scan TV → frame-grab",
+                            "The signal lost two-thirds of the way down; the rest is black."
+                        ],
+                        [
+                            "SSTV, Robot 8 black and white",
+                            "research-based · slow-scan TV → frame-grab",
+                            "160 x 120 in greys, eight seconds a picture."
+                        ],
+                        [
+                            "SSTV with a caption",
+                            "from the specifications · slow-scan TV → frame-grab",
+                            "Amateurs put text on their pictures. Here a plain 'CQ SSTV' call; change the text in the controls."
+                        ],
+                        [
+                            "Macdonald-style SSTV on a P7 tube",
+                            "research-based · slow-scan TV → 7in P7 radar tube",
+                            "The original 120-line idea, seen on a long-afterglow P7 tube that fades from the top as the bottom is written. Afterglow colours [EST]."
+                        ],
+                        [
+                            "Radiofax news photo",
+                            "research-based · HF radiofax → frame-grab",
+                            "A photograph sent by HF radiofax (120 lines a minute, IOC 576), as remote places did from the 1930s to the early 1970s. Fading and static [EST]."
+                        ],
+                        [
+                            "Radiofax as a weather chart",
+                            "research-based · HF radiofax → frame-grab",
+                            "Two-level, like the weather charts still sent today: the photo becomes black line work on white."
+                        ],
+                        [
+                            "Radiofax out of phase",
+                            "from the specifications · HF radiofax → frame-grab",
+                            "Started out of phase: the picture is split, with the phasing bar inside it, and the phasing lines at the top."
+                        ],
+                        [
+                            "Radiofax, poor night",
+                            "from the specifications · HF radiofax → frame-grab",
+                            "Heavy fading, static, a whistle and a slant from a slow clock."
+                        ],
+                        [
+                            "Radiofax on recorder paper",
+                            "from the specifications · HF radiofax → frame-grab",
+                            "A grey-blue trace on cream recorder paper. Colours [EST]."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Early web images",
+                    "rows": [
+                        [
+                            "GIF in the browser-safe 216 colours",
+                            "research-based · early web image → frame-grab",
+                            "The photo forced into the 6 x 6 x 6 web palette with diffusion dither, as on mid-1990s pages."
+                        ],
+                        [
+                            "Browser-safe GIF, pattern dither",
+                            "research-based · early web image → frame-grab",
+                            "The same palette with a regular pattern dither."
+                        ],
+                        [
+                            "Browser-safe GIF, no dither",
+                            "research-based · early web image → frame-grab",
+                            "No dither: smooth tones break into flat bands."
+                        ],
+                        [
+                            "GIF, 16 colours of its own",
+                            "from the specifications · early web image → frame-grab",
+                            "A small file: an adaptive palette of 16 colours, diffused. Palette method [EST]."
+                        ],
+                        [
+                            "GIF in the Windows 16 colours",
+                            "research-based · early web image → frame-grab",
+                            "The fixed 16-colour system palette, as on a 16-colour display."
+                        ],
+                        [
+                            "Interlaced GIF, first pass",
+                            "research-based · early web image → frame-grab",
+                            "Only every eighth row has arrived; the browser repeats each row down to the next. Row repeating [EST]."
+                        ],
+                        [
+                            "Interlaced GIF, second pass",
+                            "research-based · early web image → frame-grab",
+                            "Two of the four passes: every fourth row."
+                        ],
+                        [
+                            "Progressive JPEG, first scan",
+                            "research-based · early web image → frame-grab",
+                            "Only the first scan: every 8 x 8 block one flat colour."
+                        ],
+                        [
+                            "Progressive JPEG, second scan",
+                            "research-based · early web image → frame-grab",
+                            "A few more coefficients: soft, blocky detail. Scan split [EST]."
+                        ],
+                        [
+                            "JPEG half loaded",
+                            "from the specifications · early web image → frame-grab",
+                            "A baseline JPEG stopped half-way down on a slow modem, the rest still the page's grey."
+                        ],
+                        [
+                            "JPEG on a 256-colour screen",
+                            "research-based · early web image → frame-grab",
+                            "A colour JPEG dithered to the 216 colours by the browser on an 8-bit display."
+                        ],
+                        [
+                            "Over-compressed web JPEG, small and enlarged",
+                            "from the specifications · early web image → frame-grab",
+                            "A tiny, heavily compressed JPEG stretched up by the browser."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "subtitle styles",
+            "type": "reference",
+            "data": [
+                {
+                    "title": "styles",
+                    "intro": "Chosen under Overlay › Subtitles. Each is burned in where it historically happened; font, italic, size, colour, edge and stage can all be changed.",
+                    "rows": [
+                        [
+                            "Arial italic, soft shadow",
+                            "at the studio / on the master · Arial-ItalicMT, ArialMT",
+                            "Soft shadow."
+                        ],
+                        [
+                            "BBC slab serif (TKST-style), black edge",
+                            "at the studio / on the master · Rockwell-Light, Rockwell-Regular, Rockwell",
+                            "Black edge."
+                        ],
+                        [
+                            "BBC slab serif on a grey label",
+                            "at the studio / on the master · Rockwell-Light, Rockwell-Regular, Rockwell",
+                            "Grey label: picture darkened and colour removed behind the text."
+                        ],
+                        [
+                            "Early TV: white on a black box",
+                            "at the studio / on the master · Helvetica, ArialMT",
+                            "Black box."
+                        ],
+                        [
+                            "Cinema print, chemically etched",
+                            "on the film print · Helvetica, ArialMT",
+                            "Ragged etched letters."
+                        ],
+                        [
+                            "Cinema print, laser-etched (1988 on)",
+                            "on the film print · Helvetica, ArialMT",
+                            "Thin dark laser halo."
+                        ],
+                        [
+                            "VHS / LaserDisc release (Univers-style)",
+                            "at the studio / on the master · UniversLTStd-Light, Univers-Light, Univers",
+                            "Black edge."
+                        ],
+                        [
+                            "Dutch TV (Helvetica Neue condensed)",
+                            "at the studio / on the master · HelveticaNeueLTStd-MdCn, HelveticaNeue-CondensedBold, HelveticaNeue-Medium",
+                            "Black edge."
+                        ],
+                        [
+                            "Channel 4 (Gill Sans, drop shadow)",
+                            "at the studio / on the master · GillSans, GillSans-Light, Helvetica",
+                            "Drop shadow."
+                        ],
+                        [
+                            "DVD subpicture (Tahoma-like)",
+                            "at the studio / on the master · Tahoma, Verdana, ArialMT",
+                            "Hard four-colour bitmap edge."
+                        ],
+                        [
+                            "US closed captions (Line 21)",
+                            "by the set · VideoLook dot font",
+                            "Black character cells."
+                        ],
+                        [
+                            "Custom",
+                            "at the studio / on the master · ArialMT",
+                            "Black edge."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "rebuilding",
+            "type": "notes",
+            "data": [
+                "Source and research: the plugin folder, plus VideoLook-References/_research in the APA project (standards reports, BBC documents and notes).",
+                "The engine is the vl_*.js files; test harness and standards tests are kept with the build notes."
+            ]
+        }
+    ]
+})
+
+ITEMS.append({
+    "slug": "printlook",
+    "name": "PrintLook",
+    "kind": "UXP panel",
+    "app": "Photoshop",
+    "author": "Claude",
+    "status": "Working",
+    "folder": "PrintLook-Photoshop-Plugin",
+    "tagline": "Prints your layers: each colour layer is a plate with one ink, put through letterpress, lithography, screenprint, gravure, stencil, duplicator or copier as it was done from the 1850s to the 1980s.",
+    "blurb": "The companion to FilmLook and VideoLook for print. It does not lay a texture over the artwork: it treats each colour layer as a printing plate and prints them one after another on a sheet of paper. For every plate it works out what the plate carries (line work, or tone broken into halftone dots, crayon grain, stipple, gravure cells or collotype grain), where it lands (register), the mark the process makes (how far the ink spreads, the rounded corners, the darker rim letterpress squeezes out, the weave a screen leaves), what goes wrong in the solids (salt, mottle, uneven letters, wood grain, hollow photocopier blacks) and how that ink sits over the paper and the inks already down. Every size is a real size on the paper, worked out from the document's resolution. Processes, screen rulings, angles, palettes and formats come from period trade manuals, standards and museum records, gathered in a research report; where a number is an estimate the control is marked est., and each look says what it rests on. 165 looks cover Britain decade by decade, Ireland, the United States, France, Germany, Norway, the USSR, Japan and India, plus the generic processes and the office machines. The paper is optional: use a built-in stock, your own paper texture layer, or none.",
+    "facts": {
+        "version": "1.1.7",
+        "requires": "Photoshop 24.2+, RGB, 8 or 16-bit",
+        "plugin id": "com.simonmorse.printlook",
+        "looks": "165 (25 sourced, 119 partly, 21 inferred)"
+    },
+    "quickstart": [
+        "Install from Terminal, not by double-clicking the .ccx (Creative Cloud says \"Compatible App Required\" for unsigned plugins): run Adobe's `UnifiedPluginInstallerAgent --install` on `CCX Installers/PrintLook.ccx`, then restart Photoshop. The full command is in PrintLook-References/_notes/PrintLook_build_notes.md.",
+        "Build the artwork with **one layer per colour**: all the red type on one layer, all the blue on another. A white bottom layer is taken as the sheet.",
+        "Open **Plugins › PrintLook**, pick a group under **Looks**, then a look. The note under the list gives its dates, what it is and what it rests on.",
+        "Draw a marquee and press **Preview selection** to print just that area. The preview is exactly what the full render will give there.",
+        "Press **Render**. The printed sheet goes on a new *PrintLook ·* layer at the top; the artwork is untouched.",
+        "Change anything below and press **Re-render last**. **New impression** gives a different misregister, grain and set of faults. Save combinations under **My presets**."
+    ],
+    "controls": [
+        {
+            "title": "Top of panel",
+            "rows": [
+                [
+                    "Looks",
+                    "165 looks in 11 groups",
+                    "Process and era, Britain, Ireland, United States, France, Germany, Norway, USSR, Japan, India, Street and office. Choosing a look sets the process and everything below it. Your paper choice, Detail scale and texture settings are kept."
+                ],
+                [
+                    "Source",
+                    "All visible layers / Selected layers / Whole image",
+                    "Layers are printed bottom first, each as a plate. Whole image treats the document as one picture and separates it as set under Picture layers."
+                ],
+                [
+                    "Output",
+                    "One printed layer / Each printing on its own layer",
+                    "Separate layers give a paper layer and one Multiply layer per plate, to move or mask by hand. That stack is an approximation: opaque inks and the light scattered in the paper are lost."
+                ],
+                [
+                    "Strength",
+                    "0 – 100",
+                    "Opacity of the result layer."
+                ],
+                [
+                    "New impression",
+                    "",
+                    "A new random seed: different misregister, grain, salt and faults."
+                ]
+            ]
+        },
+        {
+            "title": "Process",
+            "rows": [
+                [
+                    "Process",
+                    "21 processes",
+                    "Letterpress: wood letter poster; Letterpress: jobbing (platen); Letterpress: fine (art paper); Letterpress: rotary newspaper; Relief block: lino or woodcut; Aniline (flexographic) on bags; Lithography: drawn on stone or zinc; Offset lithography; Small offset (duplicator, instant print); Screenprint: knife-cut film stencil; Screenprint: glue, tusche or paper stencil; Stencil and brush (pochoir, ROSTA, TASS); Rotogravure; Collotype; Woodblock, water-based (Japan); Stencil duplicator (Gestetner, Roneo, mimeograph); Risograph (1980s); Spirit duplicator (Banda, Ditto); Hectograph (gelatin pad); Xerography, early (914 era); Photocopier, 1970s-80s. Choosing one resets Ink on paper, Faults and Tone to that process."
+                ],
+                [
+                    "Sheet size",
+                    "From the document / A5 to A0 / crown, double crown, quad crown / US one-sheet / Japanese B2, B1",
+                    "How big the print really is. Every size in the panel is a real size on paper, normally worked out from the document's resolution. Choosing a sheet size takes the document's long side as that length instead, so a 2000-pixel test at 72 ppi can be printed as an A3 bill rather than a 70 cm poster. Kept when you change looks."
+                ],
+                [
+                    "Detail scale",
+                    "0.25 – 4",
+                    "Enlarges or shrinks every dot, edge and fault together. 2 draws everything twice as large: the way to show a fine screen in a low-resolution document, or to exaggerate for effect."
+                ]
+            ]
+        },
+        {
+            "title": "Plates and inks",
+            "intro": "A layer in one flat colour is line work in that colour. A flat layer at part opacity prints as a tint. Anything else is a picture. A layer (or group) set to Multiply overprints what is under it.",
+            "rows": [
+                [
+                    "Flat layers print in",
+                    "Their own colour / Nearest ink in the set",
+                    "Their own colour mixes an ink to match the layer. An ink set prints each layer in the nearest ink a printer of that kind kept: a red and a dark blue for a 1950s bill, the chromolithographer's stones, Day-Glo."
+                ],
+                [
+                    "Ink set",
+                    "59 sets",
+                    "Period palettes. Colours are estimates from the pigment named, except a few read from scans."
+                ],
+                [
+                    "Picture layers",
+                    "One ink / Duotone / Three-colour / Four-colour / Spot colours / Tints and black line",
+                    "How a photograph or painting is separated. Spot colours cuts it into flat colours as a poster artist would; Tints and black line is the comic-book system of 25, 50 and 100% tints."
+                ],
+                [
+                    "Overlaps",
+                    "Knock out, black overprints / All knock out / All overprint",
+                    "Colours underneath are cut away where a solid layer covers them, with a small **Trap** overlap so no white shows; tints overprint."
+                ],
+                [
+                    "Printing order",
+                    "As layered / Lightest first",
+                    ""
+                ],
+                [
+                    "Ink opacity",
+                    "own, or 0 – 1",
+                    "Letterpress and litho inks are nearly transparent; screen paint covers."
+                ],
+                [
+                    "Screen angles",
+                    "6 sets",
+                    "Britain 1949, US 1975-88, three-colour 1949, c.1912, comic tints 30° apart, all at 45°."
+                ],
+                [
+                    "Read layers",
+                    "As seen / Directly",
+                    "As seen shows each layer on its own and reads it, so masks, effects, type and shapes come out as they look. Directly is faster but ignores masks and effects."
+                ]
+            ]
+        },
+        {
+            "title": "Ink on paper",
+            "rows": [
+                [
+                    "Ink amount, Impression",
+                    "",
+                    "More ink and more squeeze spread the mark and fill the solids; less gives a grey, salty print."
+                ],
+                [
+                    "Spread, Rounding, Edge softness",
+                    "µm",
+                    "How far the ink goes past the plate's edge, how round corners and fine detail get, and how sharp the ink's edge is."
+                ],
+                [
+                    "Ragged edge",
+                    "amount, size",
+                    "The edge wandering: paper fibres, a glue stencil, worn type."
+                ],
+                [
+                    "Squeezed rim, Starved middle",
+                    "",
+                    "Letterpress and flexo push ink to the edge of every mark, leaving a darker outline and a paler centre."
+                ],
+                [
+                    "Soak into paper, Oil halo, Dent",
+                    "",
+                    "Ink spreading into absorbent paper, the oil stain round old letterpress, and the impression in the sheet."
+                ],
+                [
+                    "Starved edge, Edge ring",
+                    "amount, width / inset, width",
+                    "A pale band just inside every edge, or a pale line set in from it, uneven and grainy, breaking up where the ink is thinnest. The look of True Grit's Atomica actions. 0 in every process; pair Edge ring with Squeezed rim for a dark outline with a pale line inside it."
+                ]
+            ]
+        },
+        {
+            "title": "Faults",
+            "rows": [
+                [
+                    "Uneven solids, Salty solids, Speckle",
+                    "",
+                    "Cloudy inking, white specks where ink misses the hollows of rough paper, and the paper's surface showing through the film."
+                ],
+                [
+                    "Uneven letters, Worn type",
+                    "",
+                    "Each letter inked a little differently; nicks and rounded corners."
+                ],
+                [
+                    "Wood grain / brush",
+                    "amount, direction",
+                    "Grain and cracks in wood letter; brush streaks for stencil work."
+                ],
+                [
+                    "Screen mesh marks",
+                    "amount, pitch",
+                    "The weave of the screen left in the paint and along edges. Needs about 350 ppi to show."
+                ],
+                [
+                    "Hollow solids",
+                    "",
+                    "Early photocopiers developed only the edges of large blacks."
+                ],
+                [
+                    "Spatter, Slur, Hickeys, Stray specks, Scum, Banding",
+                    "",
+                    "Press faults."
+                ],
+                [
+                    "Solid texture",
+                    "none, or one of 26 scanned textures",
+                    "Takes ink out of the solids following a real texture rather than plain noise: foam rollers, brushes, sponges, wood grain, wood type, grit, photocopier toner. Made from your own texture collection. The texture is laid as a patchwork of irregular pieces, each flipped and blended at the joins, and each letter gets its own pieces, so it never repeats however large the shape. Every process has a default; with a texture chosen, Salty solids is halved."
+                ],
+                [
+                    "Texture amount, depth, size, more at edges, varies by letter, direction",
+                    "",
+                    "Amount is the share of a solid the texture removes (the slider is finer at the bottom and goes down to 0.001). Depth is how much ink goes where it marks: 1 takes it all, 0.3 leaves the ink slightly paler, for a light even texture. More at edges makes it bite deeper near the outline."
+                ],
+                [
+                    "Ink texture layer",
+                    "0 – 1.5",
+                    "Strength of your own texture: a layer whose name starts with **ink texture**. Each letter takes a different piece of it, so a repeating texture does not show its repeat."
+                ]
+            ]
+        },
+        {
+            "title": "Wear and damage",
+            "intro": "Damage to the type, blocks or stencil itself, so the shapes break down rather than only the solids. Line (flat) layers only. All amounts are estimates.",
+            "rows": [
+                [
+                    "Overall",
+                    "0 – 3",
+                    "Scales everything in the section. 1 is the process default; 2 to 3 for a thoroughly battered print."
+                ],
+                [
+                    "Edge wear",
+                    "µm, size",
+                    "Edges nibbled and bitten to a depth that wanders along the outline. Small letters and thin rules wear less, so they stay readable."
+                ],
+                [
+                    "Chips",
+                    "amount, size",
+                    "Small irregular bites out of edges and corners."
+                ],
+                [
+                    "Broken letters, Cracked letters",
+                    "share of letters, crack width",
+                    "A piece missing from a letter, or a crack that wanders across it, varying in width, sometimes branching or stopping partway. Letters under about 3 mm are left alone."
+                ],
+                [
+                    "Starved letters",
+                    "share of letters",
+                    "One side of a letter short of ink, breaking up towards that side."
+                ],
+                [
+                    "Ink spurs",
+                    "",
+                    "Ink creeping out past an edge here and there."
+                ]
+            ]
+        },
+        {
+            "title": "Tone",
+            "rows": [
+                [
+                    "Tone is carried by",
+                    "10 kinds",
+                    "Halftone dots, parallel lines, crayon on grained stone, hand stipple, spatter, gravure cells, collotype grain, grain screen, line only, continuous."
+                ],
+                [
+                    "Screen, angle, dot shape",
+                    "20 – 300 lines per inch",
+                    "Newspapers 55-65, programmes 85-133, art paper 133-150."
+                ],
+                [
+                    "Highlights drop out, Shadows fill in",
+                    "",
+                    "The smallest dot the plate holds and the tone above which dots join into solid."
+                ],
+                [
+                    "Platemaker's skill",
+                    "0 – 1",
+                    "How well the plate allowed for dots spreading. At 0 pictures print dark and filled in."
+                ]
+            ]
+        },
+        {
+            "title": "Register",
+            "rows": [
+                [
+                    "Misregister, Paper stretch, Twist",
+                    "mm, mm per metre, degrees",
+                    "How far each printing lands from the first."
+                ]
+            ]
+        },
+        {
+            "title": "Paper",
+            "rows": [
+                [
+                    "Paper",
+                    "Stock / My layer named \"paper\" / Bottom layer's colour / None",
+                    "With your own layer the inks are laid over it. With None the inks alone go on a Multiply layer and the artwork layers are hidden, so whatever paper you keep underneath shows through."
+                ],
+                [
+                    "Stock",
+                    "35 stocks",
+                    "Art paper to newsprint, poster papers, coloured bills, card, washi and more. Colours are estimates."
+                ],
+                [
+                    "Surface roughness, Texture, Fibres, Flecks, Show-through",
+                    "",
+                    "Roughness also shapes the ink (salt and speckle), even when no paper is drawn."
+                ]
+            ]
+        },
+        {
+            "title": "Age",
+            "rows": [
+                [
+                    "Yellowing, Browned edges, Foxing, Faded inks, Folds, Rubbing, Dirt, Set-off, Oil staining",
+                    "",
+                    "All 0 for a fresh print. Faded inks follows the pigment: fugitive lakes and dyes go first."
+                ],
+                [
+                    "Scratches, Flaking ink",
+                    "",
+                    "Ink scratched and flaked off the sheet, from scanned scratch and flaking textures."
+                ]
+            ]
+        }
+    ],
+    "workflow": [
+        {
+            "title": "A two-colour bill",
+            "text": "Set the red lines on one layer and the blue on another, pick a Britain look such as a 1950s variety bill, and render. With *Nearest ink in the set* the layers are printed in the bill printer's red and blue whatever colours you used; switch to *Their own colour* to keep yours."
+        },
+        {
+            "title": "Your own paper textures",
+            "text": "Put a RetroSupply or True Grit paper on a layer named *paper* (anything starting with the word works: *Paper texture 04*) and set Paper to **My layer named \"paper\"**. Or set Paper to **None** and keep your paper layers underneath: the print goes on a Multiply layer."
+        },
+        {
+            "title": "Wood-type textures",
+            "text": "Place a wood-type texture on a layer named *ink texture* and leave it visible. Each letter is given its own piece of the texture. Dark marks remove ink; use **Ink texture reads** if yours is the other way round."
+        },
+        {
+            "title": "Photographs and illustrations",
+            "text": "Put the picture on its own layer and choose how it is separated under **Picture layers**. For a photo in a letterpress programme, One ink and an 85 to 120-line screen; for a poster illustration, Flat spot colours."
+        },
+        {
+            "title": "Evidence",
+            "text": "Each look is graded. *Sourced*: process, colours and format come from a cited record or period text. *Partly sourced*: the process is documented, colours or paper are estimates. *Inferred*: built from the process alone. The research report and notes are in PrintLook-References in the APA project."
+        }
+    ],
+    "gotchas": [
+        "One layer per colour. A layer with two flat colours on it is treated as a picture and screened.",
+        "Scroll the panel with the pointer over the labels, not over a dropdown: Photoshop's panels let the scroll wheel change a dropdown's value.",
+        "A 72 ppi document is read as a very large print (2000 pixels = 70 cm), so textures and faults come out at that scale. Set Sheet size, or the document's real resolution.",
+        "Set the document's real resolution first. At 72 ppi a pixel is a third of a millimetre of paper and little of the process can show; the status line warns when this is the case.",
+        "Fine detail needs pixels: a screen finer than about 125 lines per inch prints as smooth tint at 300 ppi, and mesh marks need about 350 ppi. Raise the resolution or the Detail scale.",
+        "A layer clipped to another reads as empty on its own: merge the pair first. Adjustment layers are ignored.",
+        "With Paper set to None, Render hides the artwork layers under the Multiply result. They are shown again, read and re-hidden on the next render; show them yourself if you delete the result.",
+        "Large posters take time and memory: A2 at 300 ppi with three colours is roughly 35 to 60 seconds. Use Preview selection while adjusting.",
+        "One process per look. A sheet that mixed two (letterpress type on a lithographed picture) needs two renders.",
+        "Ink and paper colours are estimates; nothing is colour-measured. 32-bit documents are not supported.",
+        "The scanned textures inside the plugin are derived from commercial texture packs licensed to Simon: don't share the plugin outside the studio.",
+        "Wear and damage costs time: about 40% more than 1.0 on a typical bill."
+    ],
+    "sections": [
+        {
+            "label": "looks",
+            "type": "reference",
+            "data": [
+                {
+                    "title": "Process and era",
+                    "rows": [
+                        [
+                            "Wood engraving from electros - white-line tone",
+                            "1842-1890s · inferred · Letterpress: jobbing (platen)",
+                            "Before halftone, pictures in the illustrated press were cut as white lines on boxwood and printed from electrotypes (Wikipedia, Wood engraving, as cited in the report). A stand-in: the engine rules straight parallel lines, where engravers followed the form and joined small blocks. Tint-line frequency was not found, so 70 lines per inch is an estimate, as are the squash and the paper."
+                        ],
+                        [
+                            "Jobbing bill from a small printer - worn wood letter",
+                            "1850s-1960s · inferred · Letterpress: wood letter poster",
+                            "Worn wood letter and mixed founts on blanket packing, with reduced ink on paper 'of an inferior quality, and damped' (Southward 1915): heavy squash, uneven letters, slight slur, loose register. The fault list is the researchers' synthesis from Southward 1915 and Whetton 1946, not a period ranking, and every amount here is an estimate. Black, with red or blue as the occasional colour, follows the Hexham jobbing archive of 1885-1904 (Byrom 2023)."
+                        ],
+                        [
+                            "Wood-letter poster, two workings - poster house",
+                            "c.1860-1960s · partly sourced · Letterpress: wood letter poster",
+                            "Wood letter and large metal type from a house with its own poster room and cylinder machine (Whetton 1946), on soft packing (Southward 1915), one forme for each colour (Southward 1892). Coloured bills were 'usually red with either blue, green or black' (Twyman, quoted by Byrom 2023). Rim width, squash, register and the machine-glazed paper are estimates: no source read gives them."
+                        ],
+                        [
+                            "Chromolithograph, chalk-drawn stones",
+                            "c.1870-1910 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Crayon on grained stone, pale and opaque colours first, greys and black last (Richmond 1880; Cumming 1904). Advertising chromos took 'often 8 to 15' printings (Bodleian); the engine draws four tonal stones, so this under-counts them. Palette after the analysis of 1880 Paris chromos (Pitarch 2012): chrome yellow, red lake, iron blue; colour values are estimates. Grain of about 0.1 mm is inferred from sieve grades, register drift from NBS 1932; paper not found."
+                        ],
+                        [
+                            "Chromolithograph, hand-stippled stones",
+                            "c.1870-1910 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Tone dotted by hand in litho ink on polished stone, 'each dot ... one at a time' (Rhodes 1914), which gives many chromolithographs their irregular stipple (Graphics Atlas). As with the chalk version the engine draws four tonal stones where the trade used eight to fifteen. Measured stipple dot sizes were not found: the dot scale is an estimate, as are the ink colours and the paper."
+                        ],
+                        [
+                            "Collotype postcard or plate",
+                            "1870s-1920s · partly sourced · Collotype",
+                            "Screenless tone in reticulated gelatin, polygons 'about 0.10-0.15 mm across', ink level with the paper (Getty Atlas, Collotype). Most collotypes date from the 1870s to the 1920s, many of them postcards (Wikipedia, Collotype); commercial in Britain only from about 1890 (Tarr 1949). Ink film, ink colour and card stock were not found and are estimates."
+                        ],
+                        [
+                            "Zinc line block with type",
+                            "c.1880-1960s · partly sourced · Letterpress: jobbing (platen)",
+                            "A drawing photographed as line (black or white, no tone), etched on zinc and printed with the type: the carrier of non-tonal relief pictures once wood engraving gave way, which the research dates to the 1870s-80s (Focal Encyclopedia 1960 for the process; Whetton 1946 for zinc). The squash rim is the engine's estimate, set by eye against Simon's scanned tickets and programmes; the paper is an estimate."
+                        ],
+                        [
+                            "Letterpress halftone on newsprint, 60-line",
+                            "1890s-1970s · partly sourced · Letterpress: rotary newspaper",
+                            "Zinc halftone stereotyped and printed on news stock: 'screens 50-65 are suitable for news stock and cheap printing papers' (Whetton 1946; Verfasser c.1912 gives 55 to 75 for rotary newspapers), with ragged dots because the paper is rough (Voet 1952). News ink is carbon black in mineral oil (PrintWiki). Dot limits, ink spread and the grey-black ink colour (from Simon's uncalibrated cuttings) are estimates."
+                        ],
+                        [
+                            "Letterpress halftone on machine-finished paper, 85-line",
+                            "1890s-1970s · partly sourced · Letterpress: jobbing (platen)",
+                            "Halftone block printed with type on machine-finished paper: 'screens 75-120 are used for machine-finished, super-calendered and imitation art papers' (Whetton 1946). 85 is chosen from that band; one of Simon's programmes measures about 86, by an unchecked automatic pass. Minimum and maximum printable dots were not found and are estimates, as is the paper colour."
+                        ],
+                        [
+                            "Letterpress halftone on art paper, 133-line",
+                            "1890s-1970s · partly sourced · Letterpress: fine (art paper)",
+                            "Copper halftone on coated art paper with hard packing: 120-150 lines (Voet 1952), 133-150 for glazed to best art papers (F. H. Smith 1948, snippet). Contours are sharp but ink coverage within the dot is uneven (Voet 1952), often with a light centre (Getty Atlas, Halftone). Dot limits and paper colour are estimates. At 300 ppi a 133-line screen is too fine to draw and prints as a smooth tint."
+                        ],
+                        [
+                            "Ben Day tints - colour line work on newsprint",
+                            "1890s-1950s · partly sourced · Letterpress: rotary newspaper",
+                            "For flat-coloured drawings, not photographs: colour built by hand from mechanical tints of yellow, red and blue under a black line plate. Newsprint 'could only take coarse tint screens, perhaps 55 or 65 dots per inch', and 1931-33 Sunday strips have every tint at one angle (Legion of Andy, parts 6 and 6.1). The engine lays fixed 25, 50 and 100% tints on a square grid; real Ben Day dots varied with inking and were often hexagonal. American evidence only. Ink colours are estimates."
+                        ],
+                        [
+                            "Three-colour letterpress process, no black",
+                            "1892-c.1910 · partly sourced · Letterpress: fine (art paper)",
+                            "Three halftone blocks printed 'invariably yellow, red, blue' (Verfasser c.1912) in a lemon yellow, a madder red 'neither a purple nor an orange' and a greenish iron blue, on paper 'hard, well-sized, and glazed' (Zander 1896). Shadows are built from three colours. Ink colours are estimates from those descriptions; the angles are Tarr's of 1949 and the 133-line ruling Hackleman's of 1921, because nothing nearer the date was found."
+                        ],
+                        [
+                            "Letterpress from a well-equipped house",
+                            "1900s-1960s · inferred · Letterpress: jobbing (platen)",
+                            "Hard packing, proper make-ready, metal mounts and two-colour machines: a fine even rim, little dent in the sheet, even solids and tight register (controls described by Whetton 1946 and Southward 1915). The contrast with the small printer is the researchers' synthesis, not a period statement, and every amount is an estimate. The only register figure found is Southward's 'objectionable' at about 1/100 inch, an uncertain reading."
+                        ],
+                        [
+                            "Four-colour letterpress, skeleton black",
+                            "c.1910-1950s · partly sourced · Letterpress: fine (art paper)",
+                            "By 1921 'most process work is made for printing in four colors', usually at 133 or 150 lines (Hackleman 1921); the black was 'merely an extension ... to add black to strengthen the shadows' (Verfasser c.1912). Angles are Tarr's of 1949 (red 105, yellow 90, blue 75, black 45). Inks are the pre-1935 red and greenish blue (Zander 1896), estimated in colour; work after about 1935 could have phthalocyanine blue. Coated paper per the report; its colour is an estimate."
+                        ],
+                        [
+                            "Pochoir - gouache brushed through stencils",
+                            "c.1910-1930s · partly sourced · Stencil and brush (pochoir, ROSTA, TASS)",
+                            "Paris stencil colouring at its peak in the 1910s-20s: thick gouache builds 'against the stencil's edge resulting in a surface elevation' (Smithsonian Libraries) and bristle traces show (South Florida Art Conservation). Usually laid over a printed key, which the engine cannot combine with it. Stencil counts per plate were not found: six flat colours is an estimate, as are the ridge width and the paper."
+                        ],
+                        [
+                            "Rotogravure in a monochrome ink",
+                            "c.1910-1970s · partly sourced · Rotogravure",
+                            "Conventional gravure: equal cells of varying depth at 150 lines per inch and 45 degrees, with type screened too and so serrated (Tarr 1949; Focal Encyclopedia 1960). Demand in the 1920s was 'principally for shades of brown' (Wiborg 1926). Pictures print brown; coloured layers snap to brown, green-black, blue or black, where a real page used one of them. Ink colours are estimates; the supercalendered paper is the later 'roto news' kind (PrintWiki). Too fine to draw at 300 ppi."
+                        ],
+                        [
+                            "Screenprint, glue block-out stencil - heavy oil colour",
+                            "c.1915-1930 · partly sourced · Screenprint: glue, tusche or paper stencil",
+                            "Early commercial screen work before knife-cut film: glue block-out gives a 'ragged-edged effect' with mesh marks and pinholes, and paint went down heavily (Biegeleisen and Busenbark 1941, who note that hand-cut paper stencils of the same years cut sharper). Stock is show-card board, as they describe. The wet film of 27-41 micrometres is worked out from a 1962 coverage figure; edge depth and mesh marks inside solids are estimates."
+                        ],
+                        [
+                            "Hand-drawn litho poster, about six printings",
+                            "1920s-1930s · partly sourced · Lithography: drawn on stone or zinc",
+                            "The British pictorial poster between the wars: drawn on zinc or stone in solids, 'chalked tints' and overprints, 'with the limitation imposed by the use of six printings only' (Griffits 1940, seen as snippets), with no halftone. Layers set to part opacity print as chalk grain. Poster crayon grain of a few tenths of a millimetre is inferred from sieve grades; register drift is scaled from NBS 1932; poster ink colours and paper were not found, so the artwork's colours are kept."
+                        ],
+                        [
+                            "Aniline (flexo) printed paper bag",
+                            "1920s-1950s · inferred · Aniline (flexographic) on bags",
+                            "Rubber stereos and spirit dye inks on bag paper, in use for 'paper bags, cartons, containers' by 1934 (British and Colonial Printer 1934), with elementary inking (Whetton 1946): a ring of squeezed-out ink, little embossing, cloudy solids (FBI Laboratory; Flexopedia). Halo width and register were not found and are estimates. The spatter comes from Simon's French bags, which are only probably flexographic; no source describes it."
+                        ],
+                        [
+                            "Screenprint, knife-cut film stencil",
+                            "1930-1950s · partly sourced · Screenprint: knife-cut film stencil",
+                            "Knife-cut film (on the market 1930-32) 'definitely eliminates the raggedness of line' and with it 'a No. 8 or No. 10 mesh will be satisfactory' (Biegeleisen and Busenbark 1941): No. 10 silk is 109 threads per inch, a pitch of 0.233 mm. Flat oil colours on show-card board, which was often coloured to save printing a ground. Film thickness is worked out from 1962 coverage figures; edge rounding, speckle and mesh marks are the engine's estimates."
+                        ],
+                        [
+                            "Photo-offset halftone from deep-etch plates",
+                            "1943-1960s · partly sourced · Offset lithography",
+                            "Four-colour offset at 133 lines from deep-etch plates (Modern Lithography 1943, American; 175 was also run). British film posters went to four-colour photo-offset from 1954 (Branaghan 2006, snippet). Dots are flat and fuzzy-edged (Graphics Atlas). Angles agree in Tarr 1949 and Horan 1952; fine-surfaced paper after Griffits 1940. The inks are the 1993 SWOP measurements, the only measured set found, so period colours are assumed; the square dot and the light black are estimates."
+                        ],
+                        [
+                            "Day-Glo screenprint bill",
+                            "1949 on (Britain from 1950) · partly sourced · Screenprint: knife-cut film stencil",
+                            "Daylight fluorescent screen colours 'must be applied over a white base', through 'No. 10XX or coarser silk' (Sherwin-Williams Day-Glo leaflet, about 1949); first shown in Britain in spring 1950, when silkscreen was the only process that could print them (Kindel, Eye 60). Fluorescence cannot be shown on screen or in print, so the colours are estimates; paper not found. They lasted 'only 30 days' in sunlight: use the fade control for a survivor."
+                        ],
+                        [
+                            "Colour rotogravure magazine page",
+                            "c.1950-1970s · partly sourced · Rotogravure",
+                            "Four cylinders of equal cells at 150 lines, the screen 'more or less obscured in the dark tones' (Focal Encyclopedia 1960; Tarr 1949). British colour gravure dates from 1926 and the Sunday Times colour section from 1963 (Sun Printers history). Gravure ink colours and screen angles for colour work were not found: the inks are the 1993 SWOP offset set and the angles are the engine's default. Paper colour is an estimate. Too fine to draw at 300 ppi."
+                        ],
+                        [
+                            "Wet four-colour rotary letterpress magazine",
+                            "1950s-1970s · inferred · Letterpress: fine (art paper)",
+                            "High-speed magazine letterpress printing all four colours wet, with undercolour removal: total ink held to 220% (Horan 1952) or 240% (Graphic Arts Monthly 1960). Horan gives 120-line plates with black 45, blue 75, yellow 90, red 105. The engine has no ink-limit control, so a heavy black and reduced colours stand in for it; the wet-trapping amount is an estimate and the inks are the 1993 SWOP set. Built from specification, with no dated object behind it."
+                        ],
+                        [
+                            "Screenprint, photo stencil with coarse halftone",
+                            "1960s on · inferred · Screenprint: knife-cut film stencil",
+                            "Photographic stencils were little used in 1941 but routine stock by 1962 (Biegeleisen and Busenbark 1941; Advance catalogue 1962). Rulings ran from 100-133 lines on small work to 'about a 65-line screen' on sheets up to 40 x 60 in, through No. 13 or 14 silk (1941), 0.183 mm at No. 14. Thinner ink for the 1960s is the researchers' inference; the paper is an estimate. The engine's film-stencil edge stands in for a photo stencil's."
+                        ],
+                        [
+                            "Four-colour offset on coated paper",
+                            "1960s-1980s · partly sourced · Offset lithography",
+                            "Photo-offset as the general process once it displaced letterpress and drawn litho between about 1965 and 1985. A thin film of 1-2 micrometres (Voet 1952) with fuzzy flat dots (Graphics Atlas). Inks are the SWOP 1993 press-test values; angles black 45, magenta 75, yellow 90, cyan 105 (Lithographer 3 and 2, 1975, American). 150 lines is a modern commercial figure (PrintWiki), near Simon's colour scans; the SWOP test ran at 133. Brightened paper after Messier 2005. Too fine to draw at 300 ppi."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Britain",
+                    "rows": [
+                        [
+                            "1858 woodcut pictorial bill - red ground, black figures",
+                            "c.1858 · partly sourced · Relief block: lino or woodcut",
+                            "Scarborough pictorial poster, c.1858: a woodcut 'printed with a red background' with white roundels carrying black woodcut figures, double crown 74.5 x 50.6 cm (V&A O1170945). Paper is not recorded. The thin bill paper, a vermilion red (the usual opaque red before 1900) and the register error are estimates."
+                        ],
+                        [
+                            "1860s provincial playbill - black on flimsy yellow",
+                            "1854-1865 · sourced · Letterpress: wood letter poster",
+                            "Theatre Royal Manchester playbill, 1864: letterpress from wood and metal type, 'printed in black ink on flimsy yellow paper', 50.7 x 25.4 cm (V&A O58433). The same kind of bill is recorded in black on 'very flimsy white paper' (V&A O59793, O1370738): swap the stock for thin bill paper. One working, so every layer prints black. The paper colour and the uneven type are estimates."
+                        ],
+                        [
+                            "1870s circus and theatre bill - coloured wood letter",
+                            "1840s-1890s · inferred · Letterpress: wood letter poster",
+                            "No dated 1870s bill was found. Built from Twyman's statement (quoted by Byrom, APHA 2023) that coloured type on circus and theatre bills from the 1840s was 'usually red with either blue, green or black', printed from one forme per colour (Southward 1892) on 'inferior' damped paper (Southward 1915). The pigments (vermilion, bronze blue, chrome green), paper and register error are estimates."
+                        ],
+                        [
+                            "1889 theatre poster - colour litho on a yellow ground (Nassau Steam Press)",
+                            "1889 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Nassau Steam Press, London, 28 Sept 1889: colour-lithographed theatre poster with a yellow ground, red, white and blue, 75.0 x 50.4 cm (V&A O195551). White is taken as bare paper. The research table adds black, which the record's colour list does not give; it is kept in the ink set for lettering. Paper was not found; the pigments (chrome yellow, vermilion, ultramarine), stock and register stretch are estimates."
+                        ],
+                        [
+                            "1890s Hexham sale bill - black wood letter on white",
+                            "1885-1904 · sourced · Letterpress: wood letter poster",
+                            "C. Armstrong's jobbing archive, Hexham, 1885-1904: livestock and furniture sale bills, church notices, playbills and reward bills, 'the vast majority ... black ink on white paper ... and occasionally coloured paper', at 11.5 x 17.5, 15 x 20 and 22.5 x 34.5 in (Byrom, APHA 2023). One working, so every layer prints black. Press settings are the process defaults, which are estimates. Use a tinted bill stock for the coloured-paper jobs."
+                        ],
+                        [
+                            "1890s Hexham village show poster - red and blue wood letter",
+                            "1885-1904 · sourced · Letterpress: wood letter poster",
+                            "In the Hexham archive, 'when Armstrong does use colour ink it's limited to red and blue as a single press'; only two jobs carry both colours, 'both of which are large-scale posters for annual village shows' (Byrom, APHA 2023). Sizes in the archive run up to 22.5 x 34.5 in, on white or occasionally coloured paper. Which red and blue pigments he used is not recorded: vermilion, bronze blue and the register error are estimates."
+                        ],
+                        [
+                            "1890s melodrama poster - many-colour lithography (David Allen)",
+                            "1894-1915 · partly sourced · Lithography: drawn on stone or zinc",
+                            "David Allen and Sons printed from Belfast, and from a new works at Harrow after 1894; of their V&A works with a named process nearly all are colour lithography (V&A O1333279). By 1900 a London melodrama poster ran to '56 separate sheets, printed in 28 colours' (V&A, Theatre posters). The plugin cuts a picture into at most 8 colours. Colours and paper are not recorded: hand stipple (Cumming 1904), light colours first, the stock and register stretch are estimates."
+                        ],
+                        [
+                            "1900 tour poster - colour litho with gold (Stafford and Co.)",
+                            "1900 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Stafford and Co., Netherfield: colour-lithographed tour poster, 1900, 65.5 x 46.3 cm, with a 'gold decorative plaque' overprinted to change the company name (V&A O1256548). The record gives no colour list beyond full colour and gold, so the chromolithographer's ink set (which includes gold bronze) is an estimate, as are the crayon tone, the stock and register stretch. Paper was not found."
+                        ],
+                        [
+                            "1900s early film bill - typographic long bill",
+                            "1899-1916 · partly sourced · Letterpress: wood letter poster",
+                            "The first British film bills were 'of the purely letterpress theatre bill type'; examples of 1899-1916 'all measure about 30 x 10 in' (a double crown split lengthways) 'and are purely typographic' (Branaghan 2006, snippet). Ink colours are not stated, so the artwork's colours are kept. Paper was not found: thin damped bill paper follows Southward 1915 on poster paper in general, and the press settings are estimates."
+                        ],
+                        [
+                            "1909 programme advert page - blue on cream",
+                            "c.1909-10 · partly sourced · Letterpress: jobbing (platen)",
+                            "From Simon's own scans (file 13): a theatre programme advert page of about 1909-10 (Charing Cross Bank, Old Bushmills, Mazawattee Tea), letterpress in blue on cream, the type showing a darker squeezed-out rim. Identified by eye in a first pass and not verified; the ink and paper colours are read from uncalibrated scans of aged sheets. One working, so every layer prints blue."
+                        ],
+                        [
+                            "1915 recruiting bill - text-only letterpress (David Allen, Harrow)",
+                            "1915 · partly sourced · Letterpress: wood letter poster",
+                            "Parliamentary Recruiting Committee poster No. 136, November 1915: letterpress, text only, 760 x 508 mm (double crown), 'Printed by David Allen and Sons, Ltd., Harrow' (IWM Art.IWM PST 11982). Ink colours and paper are not stated, so the artwork's colours are kept and the stock is an estimate. Cleaner type and fuller inking than a small jobbing office are an estimate for a large house."
+                        ],
+                        [
+                            "1920s Underground double royal - colour litho (Waterlow)",
+                            "1911-1926 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Underground posters of 1911-13 were 'Printed by Waterlow and Sons Ltd' (London Transport Posters 2008, snippet), and a 1926 Waterlow double royal measures 1016 x 635 mm (LTM 1983/4/2000). Such posters were drawn by hand on stone or zinc with no halftone; runs were typically 1,000 (PrintWeek). The record says only full colour, so the artwork's colours are kept. Six printings is borrowed from Griffits 1940; paper was not found and the stock is an estimate."
+                        ],
+                        [
+                            "1920s union and election bill - local letterpress",
+                            "c.1900-1935 · inferred · Letterpress: wood letter poster",
+                            "Before about 1935 trade-union communication was 'letterpress posters and announcements', 'typical of locally sourced letterpress printing' and 'probably 100 years out of date by the 1930s' (Rennie thesis). No dated election bill with a stated process, colours, size or paper was found. This is the small-office letterpress default with worn, mixed type on cheap paper; the artwork's colours are kept and every setting is an estimate."
+                        ],
+                        [
+                            "1930 stock poster - early screenprint (Stafford and Co.)",
+                            "c.1930 · partly sourced · Screenprint: glue, tusche or paper stencil",
+                            "Twelve Stafford and Co. stock posters of about 1930 are catalogued by the V&A as screenprint, 'pictorial and typographic', about 76.5 x 51 cm (V&A O1170721). Colours, stencil type and paper are not stated, so the artwork's colours are kept. A hand-made stencil is assumed because knife-cut film only came on the market in 1930-32 (Biegeleisen and Busenbark 1941, a US source); that and the stock are estimates."
+                        ],
+                        [
+                            "1930s Underground poster - six-colour litho (Vincent Brooks Day)",
+                            "1920s-1930s · partly sourced · Lithography: drawn on stone or zinc",
+                            "Vincent Brooks, Day and Son is the printer named most often on V&A Underground poster records for 1908-33. One job allowed 'only six colour printings' (Artmonsky, snippet); Griffits 1940 builds posters from solids, 'chalked tints' and overprints of semi-opaque and semi-transparent inks, on double royal (40 x 25 in). Tint layers print as crayon grain. The coarse grain size and the stock are estimates: British poster inks and papers were not found, so the artwork's colours are kept."
+                        ],
+                        [
+                            "1930s railway poster - chalk and airbrush litho (Baynard Press)",
+                            "1933-1939 · partly sourced · Lithography: drawn on stone or zinc",
+                            "The Baynard Press (colour lithography; Thomas Griffits worked there) leads V&A London Transport records after 1933 and was on the LNER's tender list for pictorial posters (Science Museum Group; Middleton 2002, snippet); railway posters were double royal or quad royal (Griffits 1940). Airbrush became 'increasingly widespread' in the 1930s (London Transport Posters 2008). A fine spatter stands in for airbrush tints: its size, six printings and the stock are estimates; paper and inks were not found."
+                        ],
+                        [
+                            "1930s LNER letterpress poster - contract printer's type",
+                            "1929-1939 · partly sourced · Letterpress: wood letter poster",
+                            "For the LNER 'the letterpress poster was probably the cheapest form of general advertising available'; its contract printers were pressed to carry Gill Sans after 1929, and the company's own Stratford Market works printed letterpress (Middleton 2002, snippet). Colours, sizes and paper are not stated, so the artwork's colours are kept and the stock and cleaner press settings are estimates. Railway handbills as such were not documented."
+                        ],
+                        [
+                            "1931 theatre ticket - black on orange card",
+                            "1931 · partly sourced · Letterpress: jobbing (platen)",
+                            "From Simon's own scans (file 13): a 1931 Palladium ticket, letterpress in black on orange card, the type showing a darker squeezed-out rim. The jobbing-platen defaults were set by eye against this and similar scans, and the card colour is read from the uncalibrated scan of the aged ticket. Identification is first-pass and unverified. One working, so every layer prints black."
+                        ],
+                        [
+                            "Undated theatre programme - purple and red on buff, 86-line halftone",
+                            "not dated in the survey · partly sourced · Letterpress: jobbing (platen)",
+                            "From Simon's own scans (file 13): 'The Co-Optimists' programme, The Palace, Freshwater, letterpress in purple and red on buff, with a portrait halftone printed in the same coloured ink as the type at about 86 lines per inch and 45 degrees. The survey gives no date. The ruling is a first automatic pass, not checked by hand; ink and paper colours are from uncalibrated scans of an aged sheet, and the register error is an estimate."
+                        ],
+                        [
+                            "1940 town-hall dance bill - red on buff card",
+                            "c.1940-42 · sourced · Letterpress: wood letter poster",
+                            "Town-hall dance bill, Kinross, c.1940-42, David Brown and Son: letterpress, 'red typeface on buff-coloured card', 50.9 x 31.5 cm (V&A O140582). One working, so every layer prints red. The buff colour is borrowed from Simon's scanned buff programme paper, and the red pigment and press settings are estimates."
+                        ],
+                        [
+                            "1940s variety bill on card - blue and red (Tribe Brothers)",
+                            "c.1940s-1955 · partly sourced · Letterpress: wood letter poster",
+                            "Tribe Brothers, London and St Albans: a variety bill of the 1940s in 'bold blue and red text' on card, 37.8 x 25.4 cm, with 20 x 12.5 in bills dated 1949 and 1955 (V&A O1430747, O1164788). The V&A gives the technique only as 'printing': letterpress is likely for a theatrical typographic house but is not proven by the record. Pigments, register error and press settings are estimates."
+                        ],
+                        [
+                            "1940s RoSPA safety poster - photo-litho offset (Loxley)",
+                            "1939-1945 · partly sourced · Offset lithography",
+                            "RoSPA's wartime safety posters were 'all printed using offset presses and the photo-litho process' by Loxley Brothers of Sheffield at double crown, a few half size and two-up for economy; Loxley had two-colour rotary offset presses from 1925 and found its own paper through the war (Rennie thesis). Colours are flat but not listed, so the artwork's colours are kept. Screen ruling and paper were not found: the process default, the glass-screen dot and the stock are estimates."
+                        ],
+                        [
+                            "1942 wartime film quad - three-colour hand litho, no black",
+                            "1941-1945 · partly sourced · Lithography: drawn on stone or zinc",
+                            "'Berlin Correspondent' (1942), printed by Stafford: 'three-colour (yellow, red and blue) hand-litho' with no black plate, so it 'cannot recreate pure black'; wartime posters were 'on such poor quality paper', some on the backs of maps or old posters (Branaghan 2006, snippets). The Control of Paper (No. 36) Order 1941 capped posters at 1,200 sq in, the quad crown (Kinematograph Year Book 1942). Pigments, crayon grain, paper colour and show-through are estimates."
+                        ],
+                        [
+                            "1943 HMSO poster - lithograph (Fosh and Cross)",
+                            "1939-1945 · partly sourced · Lithography: drawn on stone or zinc",
+                            "'Into Action', 1943, printed for HMSO by Fosh and Cross: 'lithograph and letterpress', 763 x 505 mm (IWM 32278). V&A records for Stationery Office posters of 1939-45 index colour lithography 295 times against letterpress 21. Only the lithographed part is modelled: type overprinted by letterpress needs a second pass with a letterpress preset. Colours vary and paper was not found; four printings and the stock are estimates."
+                        ],
+                        [
+                            "1950 variety bill - dark blue and red (Electric Modern)",
+                            "1950-1974 · partly sourced · Letterpress: wood letter poster",
+                            "Palace Theatre Manchester, August 1950, Electric (Modern) Printing Co.: typographical bill 'printed in dark blue and red on white paper', 20 x 12.5 in (V&A O1597618). The firm 'specialised in printing variety theatre posters' and advertised as 'Letterpress and Lithographic'; the V&A gives the technique only as 'printing', so letterpress is likely but not proven. Pigments, register error and press settings are estimates."
+                        ],
+                        [
+                            "1950s Day-Glo bill - fluorescent screenprint",
+                            "1950-1960s · partly sourced · Screenprint: knife-cut film stencil",
+                            "Fluorescent posters were first shown in Britain in spring 1950, among them a Crazy Gang bill 'silkscreened by Greenwood Developments Ltd'; silkscreen was 'at first the only process for which fluorescent inks were available' (Kindel, Eye 60). The mesh follows a US Day-Glo leaflet of 1949 ('No. 10XX or coarser silk', printed over a white base). Fluorescence cannot be shown; ink colours, stencil type and paper (not found) are estimates."
+                        ],
+                        [
+                            "1950s second-feature film quad - two-colour hand-cut silkscreen",
+                            "1950s-1960s · partly sourced · Screenprint: knife-cut film stencil",
+                            "Second-feature and reissue quads of the 1950s were often 'two-colour hand-cut silkscreen' (Branaghan 2006, snippet), on the quad crown, 30 x 40 in. The two colours are not named, so the artwork's colours are kept and a picture is cut to two flat colours. No. 12 silk and the film-stencil edge follow US manuals (Biegeleisen and Busenbark 1941; Advance 1962). Paper was not found; the stock and register error are estimates."
+                        ],
+                        [
+                            "1954 wrestling and variety quad - black and red (Willsons)",
+                            "1954 · partly sourced · Letterpress: wood letter poster",
+                            "Pavilion Theatre, Sheerness, August 1954, Willsons' Printers: variety and wrestling bill in 'black and red typography', quad crown 76.3 x 101.5 cm (V&A O1161342). The V&A gives the technique only as 'printing': letterpress is likely but not proven. Paper was not found; the thin bill paper, the red pigment and the register error are estimates."
+                        ],
+                        [
+                            "1957 circus tour bill - red, blue, yellow and black (Hastings Printing Co.)",
+                            "1957 · partly sourced · Letterpress: wood letter poster",
+                            "Circus tour poster, 1957, Hastings Printing Co.: typographic in red, blue, yellow and black, with 'an empty white rectangle for overprinting the details of the venue, dates and times', 63.2 x 50.3 cm (V&A O1609031). The V&A gives the technique only as 'printing': letterpress is likely but not proven. Paper was not found; the pigments, thin bill paper and register error are estimates."
+                        ],
+                        [
+                            "1958 theatre ticket - black and red on pink card",
+                            "1958 · partly sourced · Letterpress: jobbing (platen)",
+                            "From Simon's own scans (file 13): a New Theatre ticket dated 8 Feb 1958, letterpress in black and red on pink card, the type showing a darker squeezed-out rim. The card colour is read from the uncalibrated scan of the aged ticket and the red is an estimate. Identification is first-pass and unverified. Flat-colour register on jobbing work was not found; the error here is an estimate."
+                        ],
+                        [
+                            "1960s 'boxing match' bill - wooden display type",
+                            "c.1958-1965 · partly sourced · Letterpress: wood letter poster",
+                            "Early-1960s package-tour posters from 'small local printers' were 'variety-style posters - also known as boxing match posters ... printed letterpress' from 'wooden display type locked into a metal frame' (Evans 2010, snippet). Colours, size and paper are not stated, so the artwork's colours are kept. No dated boxing bill with a named printer was found. Worn type, heavy inking and the paper are estimates."
+                        ],
+                        [
+                            "1960s film quad - four-colour photo-offset",
+                            "1954-1989 · partly sourced · Offset lithography",
+                            "Film posters moved to 'four-colour photo-offset' from 1954, 'the accepted industry standard' by 1960, run on two-colour quad presses in lots of about 3,000 (Branaghan 2006, snippets); a 1979 quad measures 75.3 x 101.3 cm (V&A O1243970). The ink colours are late SWOP measurements, not British ones. Poster screen rulings, British screen angles by decade and paper were not found: the 133-line screen, Tarr's 1949 angles and the stock are estimates."
+                        ],
+                        [
+                            "1966 theatre programme - letterpress with halftone blocks",
+                            "1950s-1960s · partly sourced · Letterpress: jobbing (platen)",
+                            "A Sadler's Wells programme of 1966 is catalogued as 'line block, half-tone and letterpress printing', 18.5 x 12.4 cm (V&A O189811). No source gives programme screen rulings: 120 lines follows a first automatic pass over Simon's scanned programmes (106-131; a Palace Theatre souvenir programme about 119), unverified, and sits in Whetton's 1946 band for imitation art. Paper and inks are not recorded: the stock is an estimate and the artwork's colours are kept."
+                        ],
+                        [
+                            "1967 psychedelic poster - screenprint with silver and fluorescents (Hapshash)",
+                            "1967 · partly sourced · Screenprint: knife-cut film stencil",
+                            "Hapshash and the Coloured Coat, 1967: mostly screenprints, one 101 x 75 cm with a 'night sky gradating into silver' and a 'gradient of yellow to orange'; 'the artwork for each colour was transferred to its own individual screen', with 'metallic and fluorescent inks' (V&A O1155361; Evans 2010, snippet). Blended inks on one screen are not modelled: each layer is one ink. Ink colours other than silver, gold and the fluorescents, and the paper (not found), are estimates."
+                        ],
+                        [
+                            "1968 Poster Workshop - screenprint on reused paper",
+                            "1968-1971 · partly sourced · Screenprint: glue, tusche or paper stencil",
+                            "Poster Workshop, Camden Road, 1968-71: about 220 silkscreen designs in one or two flat colours, 'each with an average run of well over 200' (Tate Etc. 43). One account has them printed on the backs of donated posters, shown here as show-through. Stencil type, colours and sizes are not stated: the hand-made stencil, the stock and the amount of show-through are estimates, and the artwork's colours are kept."
+                        ],
+                        [
+                            "1974 seaside pantomime bill - three-colour screenprint",
+                            "1974 · sourced · Screenprint: knife-cut film stencil",
+                            "Pantomime bill, 1974, Ronald Allinson, Rhyl: screenprint in navy on white paper 'with some flashes of light blue and fluorescent pink', 'only three colours of ink, making it easier and cheaper to produce', 52.2 x 31.6 cm (V&A O154024). The stencil type is not recorded, so the film-stencil defaults are an estimate, as are the ink colours and the register error. Fluorescence cannot be shown."
+                        ],
+                        [
+                            "1975 See Red poster - one-colour paper-stencil screenprint",
+                            "1974-1978 · partly sourced · Screenprint: glue, tusche or paper stencil",
+                            "See Red Women's Workshop screenprinted 'using paper stencils or blocking out' until photographic work began in 1978 (Wikipedia, See Red). 'Disc Jockey', 1975, is a 'screenprint in green', 76 x 51 cm (V&A O1193209). One working, so every layer prints green. Paper was not found: the green, the stock and the ragged stencil edge (Biegeleisen and Busenbark 1941) are estimates."
+                        ],
+                        [
+                            "1975 Paddington Printshop poster - four-colour screenprint",
+                            "1975-1988 · partly sourced · Screenprint: knife-cut film stencil",
+                            "Paddington Printshop's opening poster, 1975: 'screenprint poster on paper ... handcut, photostencil' in orange, yellow, green and blue, 77.4 x 58.8 cm (V&A O1274937). Paper was not found. The ink colours, stock and register error are estimates; the 85-line screen for photostencil tone is a US figure for sheets of this size (Biegeleisen and Busenbark 1941), not a British one."
+                        ],
+                        [
+                            "1976 punk fanzine - office photocopier",
+                            "1976-1980s · partly sourced · Photocopier, 1970s-80s",
+                            "Sniffin' Glue (first issue July 1976) was photocopied on an office copier, typed on a child's typewriter, A4 and stapled, first run 50; Panache was A4 photocopied in runs of 200-500 (Triggs, Journal of Design History). Copies are 'high contrast with poor intermediate tones' (Nicholson 1989). The paper is not recorded and plain copier paper is assumed; the edge-band width of the solids and the speck density were not found and are estimates."
+                        ],
+                        [
+                            "1977 punk fanzine - Gestetner stencil duplicator",
+                            "1977 · partly sourced · Stencil duplicator (Gestetner, Roneo, mimeograph)",
+                            "Chainsaw no. 1 (1977): '200 printed on the Gestetner duplicator', with stencil lettering for the title (Triggs, Journal of Design History). Gestetner machines used an oil ink, which gives a deeper black, an oil halo and filled counters (Desborough 1917; PSAP). Ink colour and paper are not recorded: black on absorbent duplicating paper is assumed. The halo width and stroke gain were not found and are estimates."
+                        ],
+                        [
+                            "1980s theatre bill - late wood letter (G and M Organ)",
+                            "1928-1997 · partly sourced · Letterpress: wood letter poster",
+                            "G and M Organ, theatrical printers of Bristol then Wrington (1928-1997), printed posters, playbills, programmes and tickets for venues from Ilfracombe to Ayr on a two-colour Elliott Wharfedale of about 1906, with wood letter from 4-line to 100-line, mostly grotesques (Stothard and Kitching, Eye 74). No dated bill, colour list or paper was found: the artwork's colours are kept, and the old worn type, register error and stock are estimates."
+                        ],
+                        [
+                            "1983 arts centre diary - flat-colour offset",
+                            "1969-1983 · partly sourced · Offset lithography",
+                            "From Simon's own scans (file 13): a Barbican Centre diary of June 1983 in magenta, an Aldwych Theatre playbill of 1969 and Theatre Workshop and Mermaid Theatre programmes, all flat-colour offset with clean edges and fine mottle in the solids. Identified by eye in a first pass and not verified; no dated record stating offset for theatre print was found. The spot colours are read from uncalibrated scans and the stock is an estimate."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Ireland",
+                    "rows": [
+                        [
+                            "1880s Belfast theatre poster - colour lithography (David Allen)",
+                            "c.1860s-1894 · partly sourced · Lithography: drawn on stone or zinc",
+                            "David Allen and Sons were Belfast poster printers from 1857, at Corporation Street from 1884, and 'printing came solely from Belfast until 1894' (V&A O1333279; Grace's Guide). Of their V&A works with a named process nearly all are colour lithography. No dated Belfast poster with colours, size or paper was found: the artwork's colours are kept, and hand stipple, eight printings, the stock and register stretch are estimates."
+                        ],
+                        [
+                            "1916 Proclamation - letterpress in two impressions",
+                            "1916 · partly sourced · Letterpress: wood letter poster",
+                            "Printed at Liberty Hall on a Wharfedale stop-cylinder press, Easter 1916, in black, on paper from the Swiftbrook mills; borrowed type ran so short that it was printed 'in two halves ... on one sheet of paper', with wrong-fount e's and an F made into an E with sealing wax (Dublin City Libraries). Put the halves on separate layers to see the misregister. Sheet size was not verified; the kind of paper, register error and press settings are estimates."
+                        ],
+                        [
+                            "1930s bilingual notice - letterpress with Gaelic type",
+                            "c.1906-1950s · inferred · Letterpress: jobbing (platen)",
+                            "Assembled from type history, not from a dated notice: almost all Irish-language text up to the mid 20th century was set in Gaelic type (Libfocus 2020), by machine in Monotype Series 24 (about 1906) or Colum Cille (1936), giving way to roman after the spelling reforms of 1945-58 (McGuinne, snippet). The typeface comes from the artwork; the plugin adds only jobbing letterpress. Colours, paper and sizes were not found; every setting is an estimate."
+                        ],
+                        [
+                            "1950s provincial political poster - single-colour wood type",
+                            "to the 1980s · partly sourced · Letterpress: wood letter poster",
+                            "'Firms like Danns of Longford ... used big wooden type for printing political and other single colour posters, a far cry from the elaborate full colour posters being used in London', and wooden type was 'still to be found quite often in 1959 in Dublin' (Oram 1986, snippets). Which colour, the paper and the size are not stated: keep the artwork to one colour. Worn type and the paper are estimates; no dated election poster with an imprint was found."
+                        ],
+                        [
+                            "1950s Dublin 48-sheet poster - first large litho",
+                            "1950s · inferred · Offset lithography",
+                            "An agency man of the 1950s recalled that O'Kennedy Brindley 'used litho printing for the first time to print 48 sheet posters for Carroll's cigarettes' (Oram 1986, snippet). That is all the evidence: one recollection in one book. Whether the work was offset or screened is not stated; four-colour offset at a coarse 65-line screen, Tarr's 1949 angles, the ink colours and the paper are all estimates."
+                        ],
+                        [
+                            "1960s Irish poster - halftone silkscreen",
+                            "early 1960s-1980s · partly sourced · Screenprint: knife-cut film stencil",
+                            "'With the perfecting of the half tone process in silk screen printing in the early 1960s, design techniques in silk screen posters improved'; by 1986 the largest Irish screen printer was printing 'many full colour posters' (Oram 1986, snippets). Colours, sizes and paper are not stated, so the artwork's colours are kept. The 65-line screen is a US figure for large sheets (Biegeleisen and Busenbark 1941); stencil, stock and register error are estimates."
+                        ]
+                    ]
+                },
+                {
+                    "title": "United States",
+                    "rows": [
+                        [
+                            "1830s-1890s show bill - black wood type on thin paper",
+                            "c.1830-1900 · partly sourced · Letterpress: wood letter poster",
+                            "Machine-cut wood type (Wells 1828, Leavenworth's pantograph 1834) and wood blocks, the stock American show bill (Wikipedia, Wood type). The report found only 'black; one or two flat colours' and no dated bill, paper or sheet size, so the thin bill paper and every press setting are the wood-letter defaults and estimates."
+                        ],
+                        [
+                            "1880s-1920s circus one-sheet - hand-drawn lithography",
+                            "c.1880-1930 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Hand-drawn lithography (stone, later zinc), the show-poster trade of Strobridge and Morgan; a 1926 Strobridge one-sheet measures 28 x 42 1/4 in (The Ringling, Tibbals collection). Twelve or more printings were 'not unusual' (Wikipedia, Chromolithography) but the engine cuts a picture into eight at most. Colour count for circus work, paper and crayon grain were not found and are estimates; the stretch is within the range of the 1932 NBS register study."
+                        ],
+                        [
+                            "1885-1930 California crate label - stone lithography, hand stipple",
+                            "c.1885-1930 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Stone-lithographed orange-crate labels date from 1880-85 and stone was still standard in the late 1920s, with shading by 'the stippling method' (Claremont Heritage; The Henry Ford). Number of colours, label paper and stipple size were not found: the four stippled stones (yellow, red, blue, black, from Wiborg's 1926 ink list), the smooth litho paper and the dot size are estimates."
+                        ],
+                        [
+                            "1887-1980s mimeograph bulletin - typed stencil, black ink",
+                            "1887-1980s · partly sourced · Stencil duplicator (Gestetner, Roneo, mimeograph)",
+                            "A. B. Dick's mimeograph of 1887: ink forced through a typed stencil onto soft paper, with filled counters and an oil halo (Wikipedia, Mimeograph; PSAP). Used for school, church, fanzine and activist print until photocopying displaced it from the late 1960s. Black ink is as the report gives it; paper stock, halo width and stroke gain were not found and are the process estimates."
+                        ],
+                        [
+                            "1900s-1950s show card - wood type and carved blocks, a pass per colour",
+                            "c.1900-1955 · partly sourced · Letterpress: wood letter poster",
+                            "Hand-set wood and metal type with hand-carved blocks, one pass through the press for each colour, as Hatch Show Print describes its own work (Hatch, What is letterpress). Colours snap to the standard job and poster inks listed by the ink maker Wiborg in 1926. Hatch's own colours, card stock and sizes were not found; the card and the loose register are estimates. The split-fountain rainbow ground of the show printers is not modelled."
+                        ],
+                        [
+                            "1910s-1930s film one-sheet - lithography in four colours, no dot screen",
+                            "c.1912-1935 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Morgan Litho advertised four-colour lithographed film posters in 1912 and the 27 x 41 in one-sheet was standard by 1913; hand-drawn on stone, later zinc, with no dot screen (Mallory 2014; Original Film Art). Which four colours is not stated: yellow, red, blue and black from Wiborg's 1926 list are an assumption, as are paper tone and crayon grain. Issued folded in eighths; add folds with the ageing controls."
+                        ],
+                        [
+                            "1910s-1930s Sunday rotogravure section - brown gravure on newsprint",
+                            "1912-c.1935 · partly sourced · Rotogravure",
+                            "Rotogravure picture sections ran in American Sunday papers from 1912-14, in 47 papers by 1918, printed 'even on inexpensive newsprint' (Library of Congress). The 150-line screen is Hackleman's 1921 US figure. The hue of these sections was not found: brown follows Wiborg's 1926 remark that gravure ink demand was 'principally for shades of brown', so treat the colour as an estimate."
+                        ],
+                        [
+                            "1920s-1950s newspaper - rotary letterpress, 60-line halftone",
+                            "c.1921-1955 · partly sourced · Letterpress: rotary newspaper",
+                            "Stereotyped rotary letterpress on newsprint in news black. US engravers specified 60-line screens and coarser for news and anything stereotyped (Hackleman 1921) and 50-65 lines for newspapers (Horan 1952). Rulings title by title were not found; squash, oil halo and salt are the process estimates."
+                        ],
+                        [
+                            "1936-1943 WPA poster - hand-cut stencil screenprint",
+                            "1936-1943 · partly sourced · Screenprint: knife-cut film stencil",
+                            "The WPA poster units printed about two million posters from about 35,000 designs by hand-cut stencil silkscreen, up to 600 a day (PBS Antiques Roadshow; Wikipedia, Federal Art Project). Flat colours were chosen by the artist; the number of colours, stock, sizes and mesh were not found. Show-card board (Biegeleisen and Busenbark 1941) and No. 12 silk (a 1962 supplier's catalogue) are general US practice, not WPA records; five colours is an estimate."
+                        ],
+                        [
+                            "1936-1950s picture weekly - heat-set rotary letterpress on coated paper",
+                            "1936-c.1960 · partly sourced · Letterpress: fine (art paper)",
+                            "Life was printed by R. R. Donnelley from 1936 on high-speed rotary letterpress with heat-set ink on 'heavily coated paper' (FundingUniverse; Wikipedia, Life). Its screen ruling was not found: 120 lines and the angles (black 45, blue 75, yellow 90, red 105) are Horan's 1952 US figures for four-colour letterpress, and the ink colours are the measured 1993 process set, so tone and colour are estimates for this date."
+                        ],
+                        [
+                            "1940-1985 film one-sheet - colour offset",
+                            "1940-c.1985 · partly sourced · Offset lithography",
+                            "By the 1940s colour offset had 'totally replaced' stone lithography for film posters (Mallory 2014); one-sheets were 27 x 41 in on thin paper, folded in eighths until about 1980 (Heritage Auctions). Screen ruling and number of colours were not found: four-colour process at 133 lines is the US offset norm of 1943 (Modern Lithography), and the paper and ink colours are estimates."
+                        ],
+                        [
+                            "1954-1975 comic book - letterpress on newsprint, 64 flat tints",
+                            "1954-c.1975 · sourced · Letterpress: rotary newspaper",
+                            "Four-colour rotary letterpress on newsprint from hand-made acetate separations: yellow, red and blue each at 25, 50 or 100 per cent with a black line plate, 64 colours, the tints at 60 lines per inch and 30 degrees apart (Legion of Andy, part 9a; Brevoort 2021). Marvel adopted the method in 1954, DC in 1956. Ink colours, register and squash are estimates; the 250 per cent ink limit is not modelled."
+                        ],
+                        [
+                            "1955-1980s show card - black wood type over Day-Glo, letterpress",
+                            "c.1955-1989 · partly sourced · Letterpress: wood letter poster",
+                            "Globe Poster of Baltimore printed by letterpress on Heidelberg platens from wood type, zinc plates and hand-routed blocks, adding Day-Glo oranges, pinks, yellows and greens in the mid-1950s (NPR 2011); Colby of Los Angeles set black capitals over fluorescent grounds on 14 x 22 in cards (PBS SoCal). Card stock was not found for Globe. Fluorescence cannot be shown, ink colours are estimates, and the split-fountain blend is not modelled."
+                        ],
+                        [
+                            "1966-1971 San Francisco rock poster - offset, two or three flat inks",
+                            "1966-1971 · sourced · Offset lithography",
+                            "Fillmore and Family Dog posters were offset lithographs from small San Francisco printers, about 14 x 20 in, in two or three flat inks such as lavender with yellow or green, sometimes silver or gold, on vellum, index or white wove stock (Cooper Hewitt; ClassicPosters; Wolfgang's). The artwork's own colours are kept. Split-fountain blends are not modelled; paper tone and press settings are estimates."
+                        ],
+                        [
+                            "1975-1980s comic book - tint screens all at one angle",
+                            "c.1975-1989 · partly sourced · Letterpress: rotary newspaper",
+                            "As the 1954-1975 comic book, but after a changeover in the mid-1970s the three tint screens were all set at one angle (Legion of Andy, part 9a). The source gives no exact date and nothing else about the change was found, so everything other than the angle is carried over from the earlier preset."
+                        ],
+                        [
+                            "1977-1989 punk flyer - photocopied paste-up",
+                            "1977-1989 · partly sourced · Photocopier, 1970s-80s",
+                            "Flyers pasted up from newspaper and magazine cuttings, pen and glue and then photocopied; 'toner smears and other imperfections made these images literally darker' (JSTOR Daily, Xerox and Roll). Black toner on plain copier paper. Machines, paper and sizes for dated flyers were not found; the raised contrast and the specks are estimates."
+                        ]
+                    ]
+                },
+                {
+                    "title": "France",
+                    "rows": [
+                        [
+                            "1850s-1900s Epinal sheet - printed keyline, colour brushed through stencils",
+                            "c.1850-1910 · partly sourced · Stencil and brush (pochoir, ROSTA, TASS)",
+                            "Pellerin of Epinal printed a keyline (woodcut, then lithograph from about 1840-50) and coloured it by brushing through stencils; V&A sheets show a few flats in red, blue, yellow, green and brown at about 30 x 40 to 39 x 49 cm (Wikipedia, Imagerie d'Epinal; V&A O1156551). The engine gives the keyline the same stencil mark as the colours. Paper, the thin water-colour and the loose register are estimates."
+                        ],
+                        [
+                            "1880s-1930s commercial bill - black letterpress on coloured paper",
+                            "1881-c.1934 · inferred · Letterpress: wood letter poster",
+                            "Built from one rule recorded in 1934: only government posters could be printed on white paper, and others went on coloured paper and paid stamp duty (Otlet 1934). No dated bill, typeface, sheet size or paper colour was found, so the yellow stock is an arbitrary choice and the press settings are the wood-letter defaults. Change the stock to white for an official notice."
+                        ],
+                        [
+                            "1880s-1890s Paris poster - colour lithography from three to five stones",
+                            "c.1881-1900 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Cheret's large-sheet colour lithography, printed by Chaix from 1881 on sheets of about 88 x 124 cm (V&A O919123), is said to have needed only three to five stones (German Wikipedia, Plakat). Inks are the pigments found on Paris chromolithographs of 1880: chrome yellow, red lead, Prussian blue and a red lake (Pitarch 2012). Which colour went on which stone was not found; yellow, red, blue and black, the crayon grain and the paper are estimates."
+                        ],
+                        [
+                            "1891 Paris poster - four colours, brush and crachis",
+                            "1891 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Toulouse-Lautrec's 'Moulin Rouge - La Goulue', 1891: 'colour lithograph, printed in four colours', 'with brush and crachis effects', 170 x 122 cm (V&A O80096). Flat brush areas are cut into four colours and any tint prints as spatter, as flicked from a toothbrush with a knife. The record does not name the four colours, so the artwork's own are kept; droplet size, the stray droplets at edges and the paper are estimates."
+                        ],
+                        [
+                            "1912-1925 pochoir fashion plate - gouache through metal stencils",
+                            "1912-1925 · partly sourced · Stencil and brush (pochoir, ROSTA, TASS)",
+                            "Pochoir plates such as those of the Gazette du Bon Ton (1912-25, 573 plates): a printed outline, sometimes collotype, then opaque gouache brushed through metal stencils, leaving a ridge at the stencil edge and bristle traces (Smithsonian Libraries; Wikipedia, Gazette du bon ton). Stencil counts and sizes were not found; eight colours, cream paper and register are estimates. The outline gets the same stencil mark as the colours."
+                        ],
+                        [
+                            "1920s-1930s travel poster - colour lithography in flat colours",
+                            "c.1923-1939 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Colour-lithographed travel posters: 'Nord Express' 1927 at 75 x 105 cm with the Hachard imprint, and 'Normandie' 1935 at 62.5 x 100.5 cm in black, white, red, blue and green on cotton-backed paper (V&A O89673, O1405126). Colour counts for other posters, paper stock and how tone was drawn were not found: five flat colours, a fine crayon grain and smooth litho paper are estimates."
+                        ],
+                        [
+                            "1928-1940 picture weekly - rotogravure, type and pictures both screened",
+                            "1928-1940 · partly sourced · Rotogravure",
+                            "Vu (1928-40) was printed by rotogravure from film positives of both type and pictures, so the type is screened as well (Wikipedia, Vu). Sources differ on whether gravure began in 1928 or the early 1930s. The 175-line ruling is French Wikipedia's general minimum for heliogravure, not a figure for this title; ink colour and paper were not found and the supercalendered stock is an estimate."
+                        ],
+                        [
+                            "1950s exhibition or tourism poster - late hand-drawn colour lithography",
+                            "c.1949-1966 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Hand-drawn colour lithography lasted into the 1950s for French posters: Mourlot's exhibition and tourism posters (1956-59, about 47 x 64 and 63 x 100 cm) and Savignac's and Villemot's commercial work are catalogued as colour lithographs (V&A O568413, O819392, O549906, O591827). Colours and paper were not found; eight workings, crayon grain and cartridge paper are estimates."
+                        ],
+                        [
+                            "1960s poster - colour offset lithography",
+                            "c.1960-1975 · partly sourced · Offset lithography",
+                            "Offset took over French posters in the 1960s, on a small sample: Picasso's 'Paix' 1960, a colour offset lithograph in an edition of 2,500, and Savignac's 'Yoplait' 1967 at 117 x 158 cm (V&A O1110700, O75870). Process colour is presumed, not stated; screen ruling, inks and paper were not found, so the 133-line screen, the 1993 process ink colours and the poster paper are stand-ins."
+                        ],
+                        [
+                            "May 1968 Atelier Populaire poster - one-colour lithograph",
+                            "1968 · partly sourced · Lithography: drawn on stone or zinc",
+                            "The first Atelier Populaire posters were printed in the Beaux-Arts lithography workshop from 14 May 1968, and some are catalogued as lithographs in one colour at about 62 x 46 and 65 x 50 cm (V&A O102001, O102003; Rougemont 1988). Ink colour and paper are not recorded: newsprint is assumed from the screenprints, and the grain is the litho default."
+                        ],
+                        [
+                            "May-June 1968 Atelier Populaire poster - one-colour screenprint, gum block-out",
+                            "1968 · sourced · Screenprint: glue, tusche or paper stencil",
+                            "From 15 May 1968 the workshop printed by hand screen with no photographic means: 'no half-tone, flat, and one colour per poster', the silk blocked out with gum arabic (Rougemont 1988). Black, blue, dark blue and red are seen on V&A examples of 51 x 32 to 79 x 63 cm, on newsprint or white paper (V&A O25674, O25675, O1664242). Mesh, ink and run sizes were not found; the paint colours are estimates."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Germany",
+                    "rows": [
+                        [
+                            "1900-1925 picture postcard - collotype (Lichtdruck)",
+                            "c.1900-1925 · partly sourced · Collotype",
+                            "German picture postcards were printed by collotype (Lichtdruck) from about 1900 to 1925 (German Wikipedia, Ansichtskarte). Tone sits in reticulated gelatin with polygons about 0.10-0.15 mm across and no screen (Getty Atlas). Ink colour and card stock for German cards were not found; the white card and black ink are estimates."
+                        ],
+                        [
+                            "1905-1914 Berlin Sachplakat - three or four flat colours on a dark ground",
+                            "1905-1914 · sourced · Lithography: drawn on stone or zinc",
+                            "Hollerbaum and Schmidt's Berlin object posters: flat-colour stone lithography on a sheet of about 70 x 95 cm, in as few as three or four colours, for example 'white, ochre, and red on a black ground' (V&A O1034507). Inks snap to those four; the white may have been bare paper. No crayon or spatter is described, so tints print flat. Pigments, paper and the tight register are estimates."
+                        ],
+                        [
+                            "1907-1913 Berlin pictorial poster - eight to eleven flat colours",
+                            "1907-1913 · sourced · Lithography: drawn on stone or zinc",
+                            "Pictorial posters from the same Berlin house in eight to eleven flat colours, for example 'brown, turquoise, two shades of blue, yellow, orange, pink, grey, green and buff', on a sheet of about 70 x 93 cm (V&A O1034334, O1034456). The artwork's own colours are kept and a picture is cut into eight flats, the most the engine allows. Paper was not found; register and flat tints are estimates."
+                        ],
+                        [
+                            "1919-1932 political poster - lithograph in red and black on cream",
+                            "1919-1932 · sourced · Lithography: drawn on stone or zinc",
+                            "A political poster of about 1926 catalogued as a 'lithograph in red and black' on a creamy ground, 85.9 x 61.3 cm (V&A O76445); Kollwitz's posters are likewise catalogued simply as lithographs. Whether drawn on stone or zinc, and the paper stock, are not recorded: cream wove, vermilion for the red and the crayon grain are estimates."
+                        ],
+                        [
+                            "1925-1932 Bauhaus Dessau jobbing print - letterpress in red and black",
+                            "1925-1932 · partly sourced · Letterpress: fine (art paper)",
+                            "The Bauhaus printing workshop at Dessau set in Schelter and Giesecke grotesque (Futura from 1927) with rules, bars and halftone blocks, and 'mostly used the inks red and black' (German Wikipedia, Bauhausdruckerei). Paper, sheet sizes and halftone ruling were not found: hard-packed printing on imitation art paper, a 120-line screen and vermilion for the red are estimates."
+                        ],
+                        [
+                            "1925-1930 New Typography lecture poster - blue and black on grey paper",
+                            "c.1925-1930 · partly sourced · Letterpress: jobbing (platen)",
+                            "Tschichold's lecture poster 'Neues Bauen', mid-1920s: 'blue and black lettering on grey paper', 43.2 x 58.0 cm, close to DIN A2 (V&A O1105177). The record gives no process, so letterpress is taken from his 1930 poster. The exact blue, the grey of the paper and the press settings are estimates."
+                        ],
+                        [
+                            "1927-1945 pictorial poster - colour lithography on DIN A1",
+                            "1927-1945 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Colour-lithographed posters on DIN A1-class sheets: Hohlwein at about 60 x 84-88 cm in 1927-29 and a wartime party poster at exactly 59.4 x 84.2 cm (V&A O748843, O115124). Colour lithography stayed the German poster standard until after 1945 (German Wikipedia, Plakat). Colours, paper and whether the plates were hand-drawn are not recorded; six flats, crayon tints and poster paper are estimates."
+                        ],
+                        [
+                            "1930 New Typography poster - letterpress, black and red on white, DIN A2",
+                            "1925-1933 · sourced · Letterpress: jobbing (platen)",
+                            "Tschichold's 'Plakate der Avantgarde', 1930: 'letterpress printed poster in black and red on white paper', 42.4 x 59.8 cm, a DIN A2 sheet (V&A O1105176); DIN sizes were introduced in 1923. The paper stock, the pigment of the red and the press settings are estimates, set as for jobbing letterpress."
+                        ],
+                        [
+                            "1932-1933 photomontage poster - rotogravure",
+                            "1932-1933 · partly sourced · Rotogravure",
+                            "Heartfield's photomontages were distributed as rotogravure posters in the streets of Berlin in 1932-33 (Wikipedia, John Heartfield). Size, ink colour, paper and screen were not found: the 150-line conventional screen is the British and American figure (Tarr 1949; Hackleman 1921), and the poster paper and black ink are estimates."
+                        ],
+                        [
+                            "1968-1980s spot-colour offset - premixed HKS inks",
+                            "1968-1989 · inferred · Offset lithography",
+                            "Built from a specification only: HKS premixed spot inks, 88 base colours defined in 1968 by three German ink makers for coated and uncoated papers (German Wikipedia, HKS). No dated poster was found. The artwork's own colours stand in for the HKS inks, whose values were not found; three flats per picture and brightened uncoated paper are estimates."
+                        ],
+                        [
+                            "1970s political poster - colour offset lithography",
+                            "1970-1980s · partly sourced · Offset lithography",
+                            "Staeck's political posters of 1970-74 are catalogued as offset and colour offset lithographs (V&A O116759, O116749); after 1945 photo-offset and screenprint replaced colour lithography for German posters (German Wikipedia, Plakat). Euroskala process inks were standardised in 1971 (DIN 16539) but their values were not found: the 1993 measured set, the 150-line screen and the coated paper are stand-ins."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Norway",
+                    "rows": [
+                        [
+                            "1880s Norwegian provincial bill - letterpress",
+                            "c.1880-1900 · inferred · Letterpress: wood letter poster",
+                            "In a sample of the National Library of Norway's 1880s poster records the printers named are provincial letterpress houses ('Bogtrykkeri'), so these are typographic bills; that reading is the strand's own inference from catalogue records. Colours, paper and sizes were not found: wood letter on thin bill paper is assumed from British practice of the same date."
+                        ],
+                        [
+                            "1900s Kristiania poster - colour lithograph",
+                            "1893-1939 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Colour lithography from the Kristiania (Oslo) houses named on National Library of Norway records: A. Worner (17 posters, 1897-1929, all lithography), Kristiania lithografiske Aksjebolag, Hagen and Kornmann, and Norsk lithografisk Officin for the State Railways in the 1930s. A 1920s travel poster in the V&A (O754292) is a colour lithograph of 101 x 62.9 cm. Number of printings, colours and paper were not found; grain, register and stock are estimates."
+                        ],
+                        [
+                            "1920s Stavanger sardine label - red, gold and dark blue",
+                            "c.1900-1960 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Stavanger sardine-can labels ('iddiser') as catalogued on DigitaltMuseum (4,567 records; Dreyer, Stavanger Litografiske Anstalt and others), in schemes such as red and gold with white and black, or red, dark blue and gold. Lithography is the museum's framing: which labels were stone and which offset is not catalogued, and sizes and paper were not found. Ink colours are estimates for the hues named, as are the fine stipple and smooth label paper."
+                        ],
+                        [
+                            "1942 illegal newssheet - typed stencil duplicator",
+                            "1940-1945 · partly sourced · Stencil duplicator (Gestetner, Roneo, mimeograph)",
+                            "More than 300 illegal papers appeared in occupied Norway, 'maskinskrevne eller (oftest) stensilerte' (Store norske leksikon); one Bergen paper ran 200-300 copies two or three times a week, and in December 1942 the ink froze and had to be thawed, making quality very poor (Norwegian Wikipedia). Black from a typed stencil is sourced; the paper was not found, and the thin uneven inking and slight show-through are estimates."
+                        ],
+                        [
+                            "1947 State Railways photo poster - gravure",
+                            "1947 · partly sourced · Rotogravure",
+                            "A Norwegian State Railways poster of 1947 printed by Emil Moestue from a photograph is catalogued by the National Library of Norway as gravure ('Dyptrykk'). Nothing else is recorded: ink colour, number of colours, cell ruling, paper and size were not found, so this is the engine's conventional gravure (150 lines, from British sources) in one dark ink on an uncoated poster stock, all of it estimate."
+                        ],
+                        [
+                            "1950s Norwegian weekly - three-colour gravure",
+                            "1950s · partly sourced · Rotogravure",
+                            "Alle Kvinners Blad in its 1950s heyday was 'trykket i dyptrykk i tre farger', printed by gravure in three colours (Store norske leksikon). Which three inks is not stated: yellow, red and blue are assumed. Cell ruling and paper were not found; 150 lines and supercalendered paper follow British practice (Tarr 1949) and are estimates here."
+                        ],
+                        [
+                            "1953 Norwegian travel poster - offset from a colour photograph",
+                            "1950-1965 · partly sourced · Offset lithography",
+                            "State Railways and travel posters of the 1950s were mostly offset by Grondahl and Son (13 of 16 catalogued records): a 1951 poster in the V&A (O591858) is imprinted 'Offset by Grondahl & Son' and measures 100 x 61.6 cm, and a 1953 one was printed 'from a colour photo'. Four-colour process is presumed, not stated; screen ruling and paper were not found, so the 133-line screen (an American figure of 1943) and the cartridge stock are estimates."
+                        ]
+                    ]
+                },
+                {
+                    "title": "USSR",
+                    "rows": [
+                        [
+                            "1880s chromolithographed lubok - Sytin type",
+                            "1876-1917 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Popular prints and calendars of the kind Sytin issued from his Moscow lithography from 1876: hand-drawn chromolithography with a separate stone for each colour, each first given a key outline (Great Soviet Encyclopaedia). Colours, number of stones, paper and sizes were not found, so the chalk grain, loose register and cheap thin paper are all estimates."
+                        ],
+                        [
+                            "1920 ROSTA window, Moscow - hand stencil",
+                            "1920-1921 · sourced · Stencil and brush (pochoir, ROSTA, TASS)",
+                            "Moscow ROSTA windows were multiplied by hand through stencils cut from cardboard in two or three colours, in editions of '150 or more' (Great Soviet Encyclopaedia) or about 300 (Cheremnykh's memoir, which mentions glue in the paint); a surviving window is 'colour stencil on paper', 151 x 100.9 cm (V&A O74913). Paper and paint were not analysed in any source read: the thin paper, brush marks and loose hand register are estimates."
+                        ],
+                        [
+                            "1923 Constructivist journal - letterpress with line and halftone blocks",
+                            "1923-1930 · sourced · Letterpress: jobbing (platen)",
+                            "LEF (1923) is catalogued by MoMA as letterpress cover, text and illustrations, page 23.3 x 15.5 cm (MoMA 15160); SA (1926-30) is 'journal, letterpress printed' at about 30 x 23 cm. One or two colours from type-case material and blocks. Paper and halftone ruling were not found: the 85-line screen is an estimate and the stock is taken from a much later standard (GOST 9095-73)."
+                        ],
+                        [
+                            "1927 Stenberg film poster - drawn lithograph on poor paper",
+                            "1926-1929 · sourced · Lithography: drawn on stone or zinc",
+                            "Film posters of 1926-29 drawn after projected photographs, not screened from them, 'cheaply printed on poor-quality paper' in runs of 10,000-20,000 at about 100-108 x 69-72 cm, in bright reds, blues, oranges and greens with heavy black (Mount, MoMA 1997). That catalogue calls them offset lithographs and MoMA's database mostly lithographs; the conflict is unresolved and drawn lithography is used here. Ink colours, grain and register are estimates."
+                        ],
+                        [
+                            "1929 typographic theatre poster - letterpress, 108 x 72 cm",
+                            "1923-1931 · partly sourced · Letterpress: wood letter poster",
+                            "Typographic theatre and exhibition posters catalogued by MoMA as letterpress: Rodchenko's 'Bedbug' (1929, 108.3 x 72.4 cm, MoMA 6541) and Gan's architecture exhibition poster (1928, 107.3 x 70.5 cm). Colours were not counted and paper was not found. Wood letter is assumed for type of this size, and the stock is an estimate from a later standard (GOST 9095-73)."
+                        ],
+                        [
+                            "1930 Five-Year-Plan photomontage poster - red and black",
+                            "1929-1932 · partly sourced · Lithography: drawn on stone or zinc",
+                            "Photomontage posters by Klutsis and Kulagina, catalogued by MoMA as lithographs at about 104.5 x 74 cm; one in the V&A (O76004) is 'half-tone letterpress and colour lithograph', 'printed in red and black'. How the photographs were carried on the lithographed sheets is not stated and no screen ruling was found: the 60-line square-dot screen is an estimate for a sheet of this size, as are the ink colours and paper."
+                        ],
+                        [
+                            "1930s USSR in Construction - rotogravure",
+                            "1930-1941 · partly sourced · Rotogravure",
+                            "'USSR in Construction' is catalogued by MoMA as 'journal, photogravure printed', page about 41.5 x 29.6 cm (MoMA 26504); Russian Wikipedia says it was printed on a rotogravure press in runs of 25,000-60,000. Ink colour, cell ruling and paper were not found: one dark ink, the 150-line screen and supercalendered paper are estimates from British gravure practice."
+                        ],
+                        [
+                            "1942 TASS window, small lithographed edition - black, blue, grey and red",
+                            "1942 · sourced · Lithography: drawn on stone or zinc",
+                            "Small printed versions of TASS windows: colour lithographs of only 30-41 x 19-27 cm, one of them 'printed in black, blue, grey and red' at 41.4 x 27.5 cm (V&A O11931). Process, colours and size come from the museum records; the ink colours are estimates for those four names, and paper and chalk grain were not found."
+                        ],
+                        [
+                            "1943 TASS window - brush stencil on newsprint",
+                            "1941-1945 · sourced · Stencil and brush (pochoir, ROSTA, TASS)",
+                            "'Multicolor brush stencil on newsprint (pieced)': glue paints brushed by hand through stencils, some designs needing 60 to 70 stencils and colour divisions, in editions of 50 to 1,500 (Art Institute of Chicago); the Great Soviet Encyclopaedia says '10-12 and more' colours. Median size 159 x 87 cm from 152 records. The conservation analysis of paint and paper was not read, so brush marks, edge and hand register are estimates."
+                        ],
+                        [
+                            "1950s central newspaper - rotary letterpress, 30 lines per cm",
+                            "1934-1980s · inferred · Letterpress: rotary newspaper",
+                            "Central papers of the Pravda format (420 x 594 mm), rotary letterpress from stereotypes with zinc halftones. Built from specifications, not a measured page: the Great Soviet Encyclopaedia gives 24 lines per cm as the coarse end of halftone rulings, and GOST 6445-74 newsprint (45-48.8 g/m2, whiteness about 60% at best) allows up to 36-40. 30 lines per cm (76 lpi) is a choice inside that range; the ruling any paper actually used was not found."
+                        ],
+                        [
+                            "1970s state poster - four-colour offset on No. 2 paper",
+                            "1960s-1989 · inferred · Offset lithography",
+                            "State-published posters by offset, built from specification only: GOST 9094-89 offset paper No. 2 is 65-77% white with a low machine finish, and the Great Soviet Encyclopaedia says offset's thin ink films were helped by extra blue and red inks, which the engine cannot add to its four. No process-ink standard, poster size or screen ruling was found; 48 lines per cm (122 lpi) is an estimate inside the 24-60 the encyclopaedia gives for planographic work."
+                        ],
+                        [
+                            "1970s samizdat typescript - carbon copy",
+                            "late 1950s-1980s · inferred · Spirit duplicator (Banda, Ditto)",
+                            "Typewritten samizdat multiplied with carbon paper on thin or tissue paper, one side only, three to five legible copies at a typing (University of Toronto; Russian Wikipedia; GOST 489-88 for carbon paper, GOST 8854-75 for a pica pitch of 2.54-2.6 mm). The engine has no carbon-copy process: this borrows the spirit-duplicator model with a violet-black deposit. The softness and breaking-up of the stroke are estimates, not measurements."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Japan",
+                    "rows": [
+                        [
+                            "1850s nishiki-e - water-based woodblock",
+                            "to c.1864 · sourced · Woodblock, water-based (Japan)",
+                            "Full-colour woodblock printed by hand with a baren in water-based colour on mulberry (kozo) paper, oban sheet 38 x 25.5 cm, from up to about twenty blocks (Met Museum; Wikipedia). Safflower red (beni) and imported Prussian blue are named in the sources; the yellow, green and red-brown in the ink set, and all the ink colours, are estimates. Hand-wiped gradation (bokashi) is not generated: draw it as a soft-edged layer and it prints as continuous tone."
+                        ],
+                        [
+                            "1870s Meiji nishiki-e - carmine red and aniline purple",
+                            "1869-1889 · partly sourced · Woodblock, water-based (Japan)",
+                            "Meiji colour woodblock with the imported colourants dated by analysis of 57 prints (Cesaratto et al., Heritage Science 2018): rosaniline from 1864, cochineal carmine as the main red from 1869, methyl violet from 1875, eosin from 1877. The change was 'gradual and selective', so one palette for two decades is a simplification. Ink colours are estimates for the dyes named; the number of blocks was not found."
+                        ],
+                        [
+                            "1890s late Meiji nishiki-e - reds that bleed",
+                            "1889-1898 · partly sourced · Woodblock, water-based (Japan)",
+                            "From 1889 naphthol reds appear in woodblock prints and are 'notably water-soluble, bleeding through paper' (Cesaratto et al., Heritage Science 2018). The engine spreads every colour sideways into the sheet, not the reds alone, and does not show the stain on the back; the amount of bleed is an estimate, since the source gives no measurement. Ink colours are estimates, and block counts were not found."
+                        ],
+                        [
+                            "1890s Osaka hikifuda handbill - machine-printed woodblock, red and green",
+                            "1880s-1900s · partly sourced · Woodblock, water-based (Japan)",
+                            "New Year advertising handbills mass-produced in Osaka in the 1880s-90s by machine-printed colour woodblock, about 26 x 38 cm, in a palette centred on red and green, with each shop's name overprinted locally (Okayama City; an Edo-Tokyo Museum example of 1904 is 25.8 x 37.5 cm). What the machine was, the ink and the paper were not found: firmer, more even printing than hand baren work on machine-made paper is assumed, and ink colours are estimates."
+                        ],
+                        [
+                            "1911 Mitsukoshi-type poster - hand-separated lithograph in many colours",
+                            "c.1900-1919 · sourced · Lithography: drawn on stone or zinc",
+                            "Hand-separated lithographed posters of about 90 x 60 cm with no halftone screen: a 1911 Mitsukoshi poster was printed from stone in 35 colours (Internet Museum), and platemakers recall 'at least 10 colours, 15, sometimes 20' as normal (JFPI oral history 31). Each flat layer of the artwork is one working; a picture layer is built from four stippled inks only, far fewer than the real count. Paper was not found; ink colours and stipple size are estimates."
+                        ],
+                        [
+                            "1924 offset poster or magazine cover - HB process, 133-line screen",
+                            "1919-c.1937 · partly sourced · Offset lithography",
+                            "Photo-litho offset as worked in Japan from 1919-20 (the American HB process at Ichida Offset and Toppan): a screened image with separations still retouched by hand, in more than four printings, on posters of about 92 x 62 cm. One Tokyo printer recalled 133 lines as the screen 'generally used' for magazine covers in the 1920s (JFPI oral history 5). The engine prints four colours; the ink colours (an early red and blue set) and the paper are estimates."
+                        ],
+                        [
+                            "1947 kasutori magazine - letterpress on senka-shi",
+                            "1946-1950 · partly sourced · Letterpress: jobbing (platen)",
+                            "Kasutori pulp magazines of 1946-50, B5, on senka-shi: a waste-based paper ranked below ordinary rough paper, quick to decay, with the printing on the back visible from the front (Kotobank; Japanese Wikipedia). Letterpress text in one colour is the strand's reading and the cover process was not found. The 85-line screen is an encyclopaedia figure for general magazines; the colour and weight of the paper were not found and are estimates."
+                        ],
+                        [
+                            "1966 B1 theatre poster - silkscreen",
+                            "1965-1988 · partly sourced · Screenprint: knife-cut film stencil",
+                            "B1 posters (about 728 x 1030 mm) by Yokoo are recorded as silkscreen in 1966 (a dealer's description, about one hundred impressions) and 1988 (MoMA), while one of 1971 is offset, so the process goes with the job and not the designer. Colours, stencil type, mesh and paper were not found: a cut-film or photo stencil, opaque poster colours and white paper are estimates."
+                        ],
+                        [
+                            "1970s gariban sheet - hand-cut wax stencil",
+                            "1894-1980s · partly sourced · Stencil duplicator (Gestetner, Roneo, mimeograph)",
+                            "Toshaban or gariban: a wax-coated ganpi tissue stencil cut by hand with an iron stylus on a file plate and printed with a roller through a silk-covered frame, one colour per stencil, in schools and small groups until the 1980s (Kotobank). No Japanese description of the printed mark, ink or paper was found: the general stencil-duplicator model is used, with black ink and rough absorbent paper as estimates."
+                        ],
+                        [
+                            "1971 B1 or B2 poster - offset on white wove paper",
+                            "1950s-1980s · partly sourced · Offset lithography",
+                            "Post-war posters on JIS B sheets: B2 (515 x 728 mm) for film posters, B1 (728 x 1030 mm) for design posters. A 1971 B1 poster is catalogued as offset lithograph on white wove paper (Cooper Hewitt); for film posters only the size is documented, by a dealer. Four-colour process and the 150-line screen (an encyclopaedia figure for covers) are estimates; Japan had no process-colour standard before the 1990s, so the inks are the late American set."
+                        ]
+                    ]
+                },
+                {
+                    "title": "India",
+                    "rows": [
+                        [
+                            "1860s Battala woodcut - black with red, yellow and green",
+                            "1840s-1890s · sourced · Relief block: lino or woodcut",
+                            "Calcutta Battala relief prints: cut on wood, printed in black on a very light paper 'like modern newsprint' and coloured by hand in red, yellow and green only, about 25 x 39 cm (Paul 1983). The engine prints the three colours as loosely registered blocks; real hand colour was brushed on in broad strokes and is not modelled. The pigments are not named in the source, so the ink colours are estimates."
+                        ],
+                        [
+                            "1870s Lucknow lithographed page - scribe's hand on badami paper",
+                            "1858-c.1900 · sourced · Lithography: drawn on stone or zinc",
+                            "Urdu and Persian text lithographed from a scribe's hand: written in greasy ink on transfer paper, laid down on German stone and pulled on hand scraper presses, about a thousand impressions a day per press, as at the Naval Kishore Press, Lucknow (Stark, An Empire of Books, quoting an 1880 account). Paper was thin Indian 'badami' (half-bleached) or imported white, all acidic. Black ink is sourced; the paper colour, scum and show-through are estimates."
+                        ],
+                        [
+                            "1880 Calcutta Art Studio print - single-colour lithograph",
+                            "1878-c.1885 · sourced · Lithography: drawn on stone or zinc",
+                            "The earliest Calcutta Art Studio prints (from 1878) are single-colour stone lithographs finished by hand: the Met catalogues 1878-83 examples as 'lithograph with watercolor and glaze', and V&A examples of about 1880 measure 25.5 x 33 cm (O101661). Only the printed stone is modelled; the hand colour and glaze are not. Chalk grain and paper are estimates. True chromolithographs followed from about 1885."
+                        ],
+                        [
+                            "1895 Ravi Varma Press oleograph - stipple chromolithograph",
+                            "1894-c.1955 · sourced · Lithography: drawn on stone or zinc",
+                            "Oleographs from the Ravi Varma Press: German steam flat-bed stone presses, drawn almost wholly in stipple, printed in fourteen colours (cut to seven for cheaper work after 1901), darkly varnished and sometimes embossed with a canvas grain, at 70 x 50, 50 x 36 and 35 x 25 cm (Neumayer and Schelberger). The engine builds a picture from four stippled inks, not fourteen, and does not model varnish or emboss. Paper, ink colours and the size of the stipple are estimates."
+                        ],
+                        [
+                            "1920s Manchester shipper's ticket for India - chromolithograph",
+                            "c.1880-1935 · sourced · Lithography: drawn on stone or zinc",
+                            "Labels for cloth shipped to India, chromolithographed in Manchester: 'at least eight colors', one stone each, in pigment inks on gummed paper, varnished, with a narrow gold border, from about 102 x 76 mm to 301 x 203 mm, until 'mechanical' printing came in the mid-1930s (Meller). Hues other than the gold are not listed, so the artwork's colours are kept. The fine stipple, tight register and smooth stock are estimates; the varnish is not modelled."
+                        ],
+                        [
+                            "1940s Sivakasi matchbox label - stone litho, black key and dotted shade",
+                            "1928-1960s · partly sourced · Lithography: drawn on stone or zinc",
+                            "Matchbox and firework labels lithographed from stone in Sivakasi from 1928: older labels 'bear the traces of the lithographic process, with their bold black outlines, flat colors and dotted areas of shade' (Jain, India Bazaar). The number of colours, the paper and label sizes were not found; the strand's guess of three to five flat colours, the coarse dotted tint, loose register and uncoated paper are all estimates."
+                        ],
+                        [
+                            "1950s Bombay film poster - hand-drawn lithograph, 30 x 40 in",
+                            "1940s-1980s · partly sourced · Lithography: drawn on stone or zinc",
+                            "Bombay film posters drawn by hand for lithography on stone and later zinc, from the 1920s to the late 1980s; V&A examples are 'lithograph on paper' at 76 x 51 cm (1948, O61789) and 102 x 76 cm (1980, O68581), the British double crown and quad crown sheets. A dealer describes the paper as thin and low in quality. The number of printings and the colours were not found; grain, register and ink weight are estimates."
+                        ],
+                        [
+                            "1960s Sivakasi calendar picture - six-colour photo-offset",
+                            "1950-1989 · sourced · Offset lithography",
+                            "Sivakasi calendar and framing pictures: photo-offset from separations heavily retouched by hand, printed with two blues and two reds as well as yellow and black, on matte 'map litho' or glossy art paper with gold powder, at 20 x 30, 30 x 40 and later 16 x 22 in (Jain, Gods in the Bazaar). The engine separates a picture into four of those six inks. Screen ruling was not found (133 is the engine default); the raised contrast stands in for the retouching."
+                        ],
+                        [
+                            "1960s calendar overprint - local letterpress",
+                            "1950s-1989 · partly sourced · Letterpress: jobbing (platen)",
+                            "The client's name and address added to a mass-printed Sivakasi calendar by a local letterpress shop from hand-set lead type and photographic blocks, in the blank panel left at the foot; letterpress suits runs of a few hundred where offset needs a thousand (Jain, Gods in the Bazaar). One colour is the strand's reading. The ink colour, the wear of the type and the platen settings are estimates."
+                        ],
+                        [
+                            "1970s Bombay film poster - photo-offset of overpainted stills",
+                            "c.1955-1989 · partly sourced · Offset lithography",
+                            "Film posters imprinted 'Photo Offset Printed by' Bombay presses such as Dnyansagar Litho Press, about 100 x 74 cm: stills cut out, arranged and overpainted in oil, often with a knife, then photographed and printed by offset (Living Pictures 2005; Dwyer and Patel). Four colours is the strand's estimate; screen ruling and paper were not found, so the 100-line screen, heavy dot gain and thin poor paper are estimates."
+                        ],
+                        [
+                            "1970s Bangalore street poster - two hand-drawn zinc plates, seven inks",
+                            "1971-2019 · partly sourced · Lithography: drawn on stone or zinc",
+                            "A Bangalore shop (1971 to about 2019) drew street posters by hand and printed them from two zinc plates, one inked in black, blue and dark green and the other in red, orange, yellow and lime green, on thin paper (Poster House). The engine makes each ink its own plate, so colours that shared a plate can drift apart here as they could not on the press. Sheet size was not found; ink colours, grain and register are estimates."
+                        ]
+                    ]
+                },
+                {
+                    "title": "Street and office",
+                    "rows": [
+                        [
+                            "Hectograph - violet dye from a gelatin pad",
+                            "1870s-1970s · partly sourced · Hectograph (gelatin pad)",
+                            "Aniline dye lifted from a gelatin pad onto smooth, heavily finished paper: 'violet or blue', good for roughly 20 to 100 copies, each fainter (PSAP; Desborough 1917). Several colours came off one master in one operation (Desborough 1917), so there is no misregister. Dye hues, edge softness and the paper colour are estimates: no copy was measured."
+                        ],
+                        [
+                            "Stencil duplicator, oil ink (Gestetner type)",
+                            "1881-1970s · partly sourced · Stencil duplicator (Gestetner, Roneo, mimeograph)",
+                            "Typed or drawn wax stencil with 'carbon and oil' ink on absorbent paper (Desborough 1917): a 'clotted or stippled appearance', an oil halo and closed characters filling in (PSAP). Everything prints in the one black, from one stencil, so there is no misregister. Halo width and stroke gain were not found and are estimates, as is the paper colour."
+                        ],
+                        [
+                            "Rubber hand stamp, aniline ink",
+                            "c.1890 on · inferred · Aniline (flexographic) on bags",
+                            "Stamp-pad ink was aniline dye in glycerine (methyl violet, fuchsin red, methyl green and others: Sloane 1891), the same dye family as spirit copies; in 1934 stamp ink was still named as until lately the main printing use of aniline dyes (British and Colonial Printer 1934). The mark itself is not described in any source read: the uneven, starved impression is general knowledge applied to the engine's rubber-plate model. Later dates of use were not researched."
+                        ],
+                        [
+                            "Stencil duplicator, water ink (Roneo type)",
+                            "1906-1970s · partly sourced · Stencil duplicator (Gestetner, Roneo, mimeograph)",
+                            "Water and glycerine inks 'dry more rapidly and without a halo of oil round the letters', where oil gives 'a deeper black' (Desborough 1917); Roneo listed inks in 12 colours by 1964 (Roneo price list 1964). That the copy looks greyer is the researchers' inference. A second colour needed a second stencil and pass: its register was not found and is an estimate, like the ink colours and stroke gain."
+                        ],
+                        [
+                            "Spirit duplicator (Banda, Ditto) - fresh copy",
+                            "1923-1970s · partly sourced · Spirit duplicator (Banda, Ditto)",
+                            "Aniline dye dissolved off a master by spirit: 'most often purple' (crystal violet), text 'fuzzy or ghostly, lacking crisp edges', on heavily finished paper (PSAP). One to five colours print at once from one master (Heyer catalogue 1964), so there is no misregister. Hue, edge softness and banding amounts are estimates; white bond smoothed towards the glossy stock PSAP describes is the nearest paper."
+                        ],
+                        [
+                            "Spirit duplicator - faded copy",
+                            "1923-1970s · partly sourced · Spirit duplicator (Banda, Ditto)",
+                            "The same copy after light: spirit dyes 'can fade to illegibility in less than a month' in direct sun (Wikipedia, Spirit duplicator) and the paper yellows and embrittles (PSAP). How far a given sheet has gone is a matter of its history, so the fade and yellowing amounts are estimates; no faded copy was measured for hue."
+                        ],
+                        [
+                            "Small offset and instant print",
+                            "c.1945-1980s · partly sourced · Small offset (duplicator, instant print)",
+                            "Multilith and Rotaprint office machines (Multilith on sale from 1933-34) took 'bread and butter work from the letterpress jobbing printer' from 1945 (Gennard 1990, snippet); franchised instant print followed from 1971-78. Early office litho is 'difficult to differentiate from stencil copies' (PSAP). Scum, uneven inking and hickeys are named offset faults (Graphics Atlas; PrintWiki), but their amounts here, and the paper, are estimates."
+                        ],
+                        [
+                            "Thermofax copy, browned",
+                            "1950-1980s · inferred · Spirit duplicator (Banda, Ditto)",
+                            "Heat copy on thin coated paper: a 'browned recto (appearing burnt)', edges 'slightly feathered, lower contrast', waxy, darkening within about five years (PSAP). The engine has no thermal process, so this borrows the spirit duplicator's stain-in-the-paper model with a brown-black image, and shows the sheet as found, already browned. Image colour, paper colour and softness are all estimates."
+                        ],
+                        [
+                            "Electrofax copy on zinc-oxide paper",
+                            "1954-1980s · partly sourced · Photocopier, 1970s-80s",
+                            "Image formed directly on paper 'coated with a shiny layer of finely divided white pigment (zinc oxide)': 'gray-black', low in contrast, on a faintly grey or bluish ground (PSAP). Liquid toner meant most machines 'could only produce a dark gray' (Wikipedia, Electrofax). How its solids developed was not found, so the later copier's behaviour is borrowed; image and paper colours are estimates."
+                        ],
+                        [
+                            "Early xerographic copy (914 type) - hollow solids",
+                            "1960-1970s · partly sourced · Xerography, early (914 era)",
+                            "Solids come out 'black or dark adjacent to their edges and light or white at the central areas' (Haloid patent, filed 1954), still the stated problem in a Xerox patent of 1969; thin lines and characters copied well. The 914 shipped from March 1960 and was made in Britain by 1961 (Grace's Guide). Plain paper. The width of the dark edge band, copier resolution and background specks were not found and are estimates."
+                        ],
+                        [
+                            "Letraset and typewriter paste-up by small offset",
+                            "1961-1980s · inferred · Small offset (duplicator, instant print)",
+                            "Dry-transfer lettering (Letraset, 1961) and strike-on text shot as line and run on a small offset press. The letters 'break and crinkle' (Eye magazine); nicked, chipped edges stand in for that here. Baseline wander and fixed-pitch spacing are geometric and must be in the artwork itself: the engine cannot add them. That these defects survive reproduction is the researchers' inference, and all amounts are estimates."
+                        ],
+                        [
+                            "Late-1970s photocopier",
+                            "c.1975-1989 · inferred · Photocopier, 1970s-80s",
+                            "'High contrast with poor intermediate tones' (Nicholson 1989); a 1979 Xerox patent set a target solid density of 1.1, so solids now fill, though unevenly, and good 1974 office copies measured print contrast of 0.85-0.94 (NBSIR 74-498). Built from those specifications and no measured copy: the residual hollowing, specks and banding are estimates."
+                        ],
+                        [
+                            "Photocopy of a photocopy - generation loss",
+                            "c.1976-1989 · inferred · Photocopier, 1970s-80s",
+                            "The fanzine and flyer look from 1976: 'image noise and artifacts' build up with successive copying at high contrast (PSAP), and punk flyers' toner smears 'made these images literally darker' (JSTOR Daily). Thickened then broken strokes and gathering specks are stated only in words by the sources; no figure for change per generation was found, so every amount here is an estimate."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "rebuilding",
+            "type": "notes",
+            "data": [
+                "Source: the plugin folder. Research, measurements, test harness and the preset source files: PrintLook-References in the APA project (_research, _notes, _toolkit).",
+                "The looks are generated: edit _toolkit/presets/part_*.js, run `node build_presets.js`, then zip the plugin folder's contents (textures folder included) as PrintLook.ccx.",
+                "Texture library: textures/*.bin are built from _TEXTURES_FOR_CLAUDE by _analysis/texture_library (build.py); pl_textures.js lists them. 1.0.0 is kept in CCX Installers/_previous."
+            ]
+        }
+    ]
+})
+
+ITEMS.append({
+    "slug": "look-cookbook",
+    "name": "Look Cookbook",
+    "kind": "Recipe book",
+    "app": "Photoshop",
+    "author": "Claude",
+    "status": "Working",
+    "tagline": "Recipes for FilmLook and VideoLook, alone and chained: kitchen-sink titles, community cable, video art, artists' film and video-to-film oddities.",
+    "blurb": "Starting points rather than reconstructions. Each recipe names the plugin (or the order of the two), the look or settings to start from, and what rests on what: where a source is single or a setting is a judgement, it says so. Control names are as printed on the panels. Some things these plugins can't do yet (magnet-bent pictures, scan processors, step-printed motion) are listed at the end.",
+    "facts": {
+        "covers": "FilmLook 1.x, VideoLook 1.2.0"
+    },
+    "quickstart": [
+        "**Chaining the two panels.** Render the first plugin with Source set to *Whole image*. Then run the second, also on *Whole image*: VideoLook reads the FilmLook layer underneath (it only hides its own earlier layers), and FilmLook reads a VideoLook layer the same way. Keep Strength at 100 on the first pass.",
+        "**Order follows history.** Whatever happened to the pictures first goes first: film shot, then shown on TV = FilmLook, then VideoLook. Video transferred to cinema film = VideoLook, then FilmLook.",
+        "**Mind the noise.** Each plugin adds its own grain or noise, and chained they stack: turn the first plugin's grain down a little.",
+        "**Titles and subtitles.** Put the lettering on before the plugin that would have carried it: optical titles before FilmLook; open subtitles in VideoLook's Overlay section at the right stage."
+    ],
+    "sections": [
+        {
+            "label": "recipes",
+            "type": "reference",
+            "data": [
+                {
+                    "title": "british new wave and kitchen sink",
+                    "intro": "The one that started this page: soft black and white, slightly diffused titles.",
+                    "rows": [
+                        [
+                            "Kitchen-sink title card, as projected",
+                            "FilmLook only",
+                            "Set the title on the photo and merge. Stock *B&W fast panchromatic (1955-80)*. Duplicate generations 1-2 (superimposed titles were usually a printing generation further on: more grain and contrast). Halation up and a little Diffusion / glow, so the white letters bleed slightly. Resolving power down a touch if the letters look too crisp. Grain moderate; a little dust and Uneven density. The printing-generation point is general practice, not checked film by film."
+                        ],
+                        [
+                            "Kitchen-sink film, seen on TV",
+                            "FilmLook → VideoLook",
+                            "The above, then VideoLook *1970s drama: 16 mm film exteriors* with Standard changed to *625-line B&W*. View *Frame-grab* for a clean off-air grab, *Screen close-up* for the set. Lower FilmLook's grain first: the telecine adds its own."
+                        ],
+                        [
+                            "Early Coronation Street-style card",
+                            "VideoLook",
+                            "*405-line telerecording, 1953*: early episodes survive mainly as 405-line film recordings, which gives that heavier, softer glow."
+                        ]
+                    ]
+                },
+                {
+                    "title": "british tv drama and documentary",
+                    "rows": [
+                        [
+                            "Cathy Come Home (1966)",
+                            "FilmLook → VideoLook",
+                            "Location scenes were 16 mm, hand-held (Tony Imi); about ten minutes were shot on studio video and telerecorded into the film because of union rules (two sources). FilmLook: *B&W fast panchromatic*, Gauge *16mm 1.37*, Lens *1970s zoom* (the nearest), grain up. Then VideoLook *405-line live studio at home, 1953* with Camera switched off and Transfer *Telecine*: BBC1 was 405 lines for most viewers then. For the studio inserts, use VideoLook *405-line telerecording* on its own."
+                        ],
+                        [
+                            "Culloden (1964) / The War Game (1965)",
+                            "FilmLook (→ VideoLook)",
+                            "Peter Watkins's newsreel style: 16 mm black and white, mostly hand-held (Culloden about 85%, two sources). FilmLook *B&W newsreel / duplicate*, Gauge *16mm 1.37*, grain up, Condition *Release print*. Add VideoLook's 405-line telecine chain (as above) for a broadcast feel."
+                        ],
+                        [
+                            "Play for Today (1970s)",
+                            "VideoLook",
+                            "Studio scenes on 2-inch tape and location scenes on 16 mm film, telecined in: *1970s drama: studio video interiors* and *1970s drama: 16 mm film exteriors* (run FilmLook's *Eastman 100-speed negative (1968-74)*, *16mm 1.37*, first for the film half). Some colour plays survive only as black-and-white film recordings: *Colour show on B&W film (with PAL dots)*."
+                        ],
+                        [
+                            "Threads (1984)",
+                            "FilmLook (→ VideoLook)",
+                            "16 mm colour, 1.33, hand-held, semi-documentary (two sources). FilmLook *Eastman improved 100-speed negative (1974-83)*, Gauge *16mm 1.37*, Lens *1970s zoom*, grain up, Saturation down a little. For the version most people saw again, add VideoLook *VHS off-air recording, 1986 (UK)*."
+                        ],
+                        [
+                            "Kes (1969)",
+                            "FilmLook",
+                            "Chris Menges: natural light, grainy, high contrast, colour (two sources). Gauge not found: try *35mm flat 1.66 (European)*. Stock *Eastman 100-speed negative (1968-74)*, Exposure a little under, Contrast up, grain up, Saturation slightly down."
+                        ]
+                    ]
+                },
+                {
+                    "title": "community tv and video art",
+                    "rows": [
+                        [
+                            "Swindon Viewpoint, 1973-77",
+                            "VideoLook preset",
+                            "*Swindon Viewpoint, 1974 (black-and-white cable)*. From the station's own history: EMI-funded from September 1973 on the Radio Rentals relay network; Sony Portapaks and 1-inch Sony recorders; little light on location; copy-editing with a glitch at each edit. The 'blurry but sharp' haloes are modelled with the set's Sharpness (my reading of the effect, not documented): raise it for more halo, and push Tracking error up to fake an edit glitch."
+                        ],
+                        [
+                            "Swindon Viewpoint in colour, from 1977",
+                            "VideoLook preset",
+                            "*Swindon Viewpoint, 1978 (colour U-matic)*: single-tube Sony cameras on U-matic; the station says resolution went down with colour."
+                        ],
+                        [
+                            "Portapak video art, around 1970",
+                            "VideoLook preset",
+                            "*Sony Portapak video art, 1970* (625) or switch Standard to *525-line B&W* for the American scene. For Lanesville TV-style pirate broadcasting (Videofreex, from 1972), switch the Channel on: Signal-to-noise about 30, a Ghost of 2-4 µs."
+                        ],
+                        [
+                            "This Is A Television Receiver (David Hall, 1976)",
+                            "VideoLook preset",
+                            "*Re-shot off a monitor, again and again*: each copy is re-shot from the last. Set Transfer › Conversion generations from 1 to 12."
+                        ],
+                        [
+                            "Videotape to cinema, 1964",
+                            "VideoLook preset",
+                            "*Videotape to cinema film, 1964 (Electronovision-style)*: shot on tape, kinescoped to film for cinemas, years before 200 Motels."
+                        ]
+                    ]
+                },
+                {
+                    "title": "photographed off the screen",
+                    "intro": "1960s station symbols, captions and announcers as they survive in off-screen photographs (Tele-snaps). All six are in VideoLook's *Photographed off the screen* group. Start from clean artwork: white on black for symbols and captions.",
+                    "rows": [
+                        [
+                            "Station symbol, grey and ghostly",
+                            "VideoLook preset",
+                            "*Tele-snap: ident, grey and ghostly*. The whites come out a soft mid-grey. **Print exposure** is the main control: about -1.6 for a pale grey symbol, about -2.6 for the darkest captions. **Softness** under Camera sets how soft the artwork is while the scan lines stay crisp. Why real ones are grey isn't established (a thin negative, a dark print or a fade would all do it)."
+                        ],
+                        [
+                            "Station symbol, burnt out",
+                            "VideoLook preset",
+                            "*Tele-snap: ident, burnt-out whites and grey blacks*. The opposite print: whites swollen and solid, blacks a dusty dark grey. Raise **Mean-level AGC** and **Black follows the picture** (Decoder & set) for greyer blacks, **Blooming** (Display) for fatter whites."
+                        ],
+                        [
+                            "Caption with a grey band above it",
+                            "VideoLook preset",
+                            "*Tele-snap: caption with a grey band above it*. A white box on black: grey above the box, black below, the tube's edge in shot. **Black-level tilt** sets the band. Fitted to one 1968 photograph; the cause isn't established."
+                        ],
+                        [
+                            "In-vision announcer",
+                            "VideoLook preset",
+                            "*Tele-snap: in-vision announcer*. The whole tube face, soft, flat and grey. Raise **Pull back** to show more of the surround; **Camera tilt** for a hand-held snap."
+                        ],
+                        [
+                            "Fringe reception, hard print",
+                            "VideoLook preset",
+                            "*Tele-snap: fringe reception, hard print*. A distant transmitter, printed hard so the snow only shows as ragged edges. Lower Signal-to-noise (Channel) for more."
+                        ],
+                        [
+                            "Harsh early video recording",
+                            "VideoLook preset",
+                            "*405-line off-air on an early video recorder*. Hard contrast, outlines, ragged verticals, coarse lines. The Sony CV-2000 model stands in for whichever machine made a given clip."
+                        ],
+                        [
+                            "A tele-snap of your own title",
+                            "VideoLook",
+                            "Set the title as white type on a black layer in Photoshop (ordinary type, not VideoLook's subtitles, which are added after the camera and so stay sharp), then use the grey and ghostly preset. For a hurried, slanted snap: Camera tilt 2-3° and Pull back 0.02."
+                        ]
+                    ]
+                },
+                {
+                    "title": "artists' film and indie",
+                    "rows": [
+                        [
+                            "Warhol Screen Tests (1964-66)",
+                            "FilmLook",
+                            "16 mm black and white, one 100-ft roll on a static Bolex, a single light, varied from sitting to sitting (two sources). Stock *B&W fast panchromatic*, Gauge *16mm 1.37*, one hard light in the photo, Exposure to taste, grain moderate, Condition *Release print*. The slow projection speed can't show in a still."
+                        ],
+                        [
+                            "La Jetée (Chris Marker, 1962)",
+                            "FilmLook",
+                            "Almost entirely optically printed still photographs, 35 mm black and white (single source). Stock *B&W fast stills film, pushed (Nouvelle Vague)*, Gauge *35mm Academy 1.37*, Duplicate generations 1."
+                        ],
+                        [
+                            "The Last of England (Derek Jarman, 1987)",
+                            "FilmLook → VideoLook → FilmLook",
+                            "Super 8, transferred to PAL U-matic, edited, then to 35 mm: 'two levels of grain' and night blues, mauves and burning orange (one blog; Super 8 itself is well sourced). 1: FilmLook *Ektachrome reversal (Super 8 / 16mm, 1970s)*, Gauge *Super 8 1.36*. 2: VideoLook, Camera off, Transfer *Telecine*, Recording *U-matic high band*, View *Frame-grab*. 3: FilmLook again on 35 mm with Duplicate generations 1, grain, and the Printer light and Toning controls pushed towards blue, mauve or orange."
+                        ],
+                        [
+                            "Sadie Benning's Pixelvision diaries (from 1988)",
+                            "VideoLook preset",
+                            "*Fisher-Price Pixelvision, 1988*: the PXL-2000 records 120 x 90 black and white on audio cassette, inside black borders."
+                        ],
+                        [
+                            "The Blair Witch Project (1999)",
+                            "VideoLook → FilmLook",
+                            "Colour Hi8 plus 16 mm black and white (CP-16), finished on video and filmed out to 35 mm (two sources); home video releases came back off the 35 mm print, with grain and a brown cast. Hi8 half: VideoLook *Hi8 camcorder, 1994* with Standard *525 NTSC (US)*, then FilmLook 35 mm, Duplicate generations 1, grain, Warm / cool warmer. 16 mm half: FilmLook *B&W fast panchromatic*, *16mm 1.37*."
+                        ],
+                        [
+                            "Festen (1998) / Julien Donkey-Boy (1999)",
+                            "VideoLook → FilmLook",
+                            "Mini-DV transferred to film. Festen: a small single-chip camera, hand-held (the model is disputed). Julien Donkey-Boy: Canon XL-1 Mini-DV to 16 mm, then blown up to 35 mm. VideoLook *MiniDV, 2002 (PAL)* with Camera set to *Single-CCD consumer camcorder*, then FilmLook on 35 mm with Duplicate generations 1 (Festen) or 2 (Julien), grain up."
+                        ],
+                        [
+                            "200 Motels (Frank Zappa, 1971)",
+                            "VideoLook → FilmLook",
+                            "Shot on colour videotape at Pinewood and transferred to 35 mm; one source says via Technicolor separations. VideoLook *UK colour studio, mid-1970s* with View *Frame-grab*, then FilmLook *Eastmancolor neg + Technicolor IB print (1955-75)*, Duplicate generations 1. Its video false-colour and solarisation effects aren't in either plugin."
+                        ],
+                        [
+                            "Brakhage, Mothlight (1963)",
+                            "FilmLook",
+                            "Moth wings and leaves pressed between strips of 16 mm splicing tape and contact-printed (single source). Photograph real specimens on a lightbox, then FilmLook Gauge *16mm 1.37*, Condition *Worn print*."
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "not yet possible",
+            "type": "flags",
+            "data": [
+                "Nam June Paik's magnet-bent pictures (1963-65) and the Paik-Abe synthesizer: neither plugin bends the raster or makes feedback.",
+                "The Vasulkas' Rutt/Etra scan processor, which deflects the beam into 3D line landscapes.",
+                "Chungking Express's step-printed smear, and any real motion effect: these are stills. VideoLook's Implied motion only shows what a single frame of movement would look like.",
+                "200 Motels' false colour and solarisation."
+            ]
+        },
+        {
+            "label": "sources",
+            "type": "plain",
+            "data": [
+                "Swindon Viewpoint history and equipment: swindonviewpoint.com/history, swindonviewpoint.com/how-it-works (single source for the equipment); Wikipedia.",
+                "David Hall: LUX catalogue (This Is A Television Receiver; TV Interruptions).",
+                "Cathy Come Home: Wikipedia; the-medium-is-not-enough.com. Culloden and The War Game: Harvard Film Archive; pwatkins.mnsi.net; Wikipedia.",
+                "Play for Today: BFI; cineoutsider.com. Threads: Severin Films; Trailers from Hell.",
+                "Warhol Screen Tests: Wikipedia; warholscreentest.com. La Jetée: Wikipedia.",
+                "The Last of England: Wikipedia; plethoralondon.wordpress.com (single source for the U-matic chain). PXL-2000 and Sadie Benning: Wikipedia; IndieWire.",
+                "Blair Witch: Wikipedia; AV Club; Fangoria. Festen and Julien Donkey-Boy: Wikipedia; Filmmaker Magazine. 200 Motels: Wikipedia; Den of Geek. Electronovision: Wikipedia.",
+                "Mothlight: Wikipedia. Paik: Langlois Foundation; Wikipedia.",
+                "Off-screen photographs: Transdiffusion (channel-tv.co.uk and associatedtelevision.network tele-snap pages); Wikipedia, 405-line television system (mean-level AGC) and Tele-snaps (half-frame 35 mm at 1/25 s); videokarma.org thread 248278 (no DC restorer); rewindmuseum.com (Philips EL3400, 405 lines, 1964).",
+                "Full notes: VideoLook-References/_research/J_cookbook.md and K_offscreen_photographs.md."
+            ]
+        }
+    ]
+})
+
+ITEMS.append({
     "slug": "poster-pdf-export",
     "name": "Poster PDF Export",
     "kind": "Watch folder",

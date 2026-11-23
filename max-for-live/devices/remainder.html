@@ -14,12 +14,12 @@
   <h1>remainder</h1>
   <p class="ch-sub">Gives any sound a disintegrating tail: captures the moment before it dies, then plays it back stretched, grainy and rotting — by tape, by bits, by fragmentation, by spectral erosion, by rust — until nothing is left.</p>
 </header>
-<figure class="shot"><div class="shot-frame"><img src="../images/remainder.png" alt="Remainder"></div><figcaption>remainder</figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="../images/remainder.png" alt="Remainder"></div><figcaption>remainder</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/remainder-push.png" alt="Push 3 screen, Live 13 (rendered offline; Push&#x27;s own font differs slightly)"></div><figcaption>push 3 screen, live 13 (rendered offline; push&#x27;s own font differs slightly)</figcaption></figure>
 <section class="block" id="about">
   <div class="block-label"><span class="bl-num">25.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">A rolling buffer records everything. When the input falls below <b>Thresh</b> (or you press <b>Fire</b>) the last <b>Cap</b> window before the crossing is latched, normalised, and played back as a granular tail for <b>Len</b>. A progress value runs 0 → 1 over the tail and every destruction process reads it, so they all arrive at silence together. Five processes mix by amount — <b>Tape</b>, <b>Bits</b>, <b>Shatter</b>, <b>Erode</b>, <b>Rust</b> — and <b>Chaos</b> rerolls their balance on every trigger. The dry signal passes untouched (optionally ducked); the tail is added on top. Cut on retrigger; <b>Freeze</b> suspends a tail mid-rot.</p>
-    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v1.1</dd></div><div class="fact"><dt>folder</dt><dd>Remainder Device</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v1.2</dd></div><div class="fact"><dt>version</dt><dd>1.2</dd></div><div class="fact"><dt>push screen</dt><dd>Live 13 / Max 9.2</dd></div><div class="fact"><dt>folder</dt><dd>Remainder Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -85,13 +85,14 @@
 <div class="enc"><span class="enc-n">3</span><span class="enc-l">Hold</span></div>
 <div class="enc"><span class="enc-n">4</span><span class="enc-l">Sync</span></div>
 <div class="enc"><span class="enc-n">5</span><span class="enc-l">Cap ms</span></div>
-<div class="enc"><span class="enc-n">6</span><span class="enc-l">Cap Beats</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Cap Bt</span></div>
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Len ms</span></div>
-<div class="enc"><span class="enc-n">8</span><span class="enc-l">Len Beats</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Len Bt</span></div>
 </div>
 <div class="buttons"><span class="btn-label">buttons</span>
 <span class="btn">Fire</span>
 <span class="btn">Freeze</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -109,6 +110,7 @@
 <div class="buttons"><span class="btn-label">buttons</span>
 <span class="btn">Fire</span>
 <span class="btn">Freeze</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -126,8 +128,9 @@
 <div class="buttons"><span class="btn-label">buttons</span>
 <span class="btn">Fire</span>
 <span class="btn">Freeze</span>
+<span class="btn">Screen</span>
 </div>
-<p class="bank-note">Banks are baked into the device, so they are right on a fresh add, a set load and a reconnect alike.</p>
+<p class="bank-note">Banks are baked into the device, so they are right on a fresh add, a set load and a reconnect alike. <b>Screen</b> is the last button above the display (slot 8) in every bank: it switches between the device&#x27;s own picture and Push&#x27;s normal view.</p>
 </div></div>
 </section>
 <section class="block" id="workflow">
@@ -142,10 +145,19 @@
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>Nothing happens until the input has risen 6 dB <b>above</b> Thresh and then fallen below it — the device arms on loud, fires on quiet. On sustained pads use Fire.</li><li>The capture is normalised: a near-silent tail-end comes back at full level, noise floor and all. Lower Tail or raise Thresh if a quiet room is being amplified.</li><li>Erode adds 85 ms of latency to the tail (not the dry). The tail is a free-running effect, so this is inaudible as latency, but a tail arrives fractionally later than it did before stage 4.</li><li>Bars assume 4 beats. Capture is clamped to ~10.9 s at 48 kHz.</li><li>Retrigger cuts: a new capture always replaces the running tail. There is no layering by design.</li></ul></div>
 </section>
-<section class="block" id="rebuilding">
+<section class="block" id="push-3-screen">
   <div class="block-label"><span class="bl-num">25.6</span>
+  <h2>push 3 screen</h2></div>
+  <div class="block-body"><h3 class="sub">what it shows</h3><p>The capture drawn as a <b>strip of tape that visibly rots</b>: Tape, Bits, Shatter, Erode and Rust each leave their own mark, and printed dropouts stay in the strip on later passes. Under Freeze the playhead turns ice blue. On the left: the trigger meter and state (armed, ROTTING, how far through and how long is left). The right-hand panel follows the bank: the input scope with each Fire (Trigger), the collapse curve (Tail), or five small rot pictures with their amounts (Rot).</p>
+<h3 class="sub">the screen button</h3><p><b>Screen</b> is the last button above the display, in every bank. It switches between this picture and Push&#x27;s normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before.</p>
+<h3 class="sub">what it needs</h3><p>Live 13 with Max 9.2 or later, and Push 3, tethered or standalone. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push.</p>
+<h3 class="sub">confirmed on push</h3><p>Simon has run this screen on Push 3 (23 Nov 2026). The picture above is the offline render from the Push Screen Kit simulator.</p></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">25.7</span>
   <h2>rebuilding</h2></div>
-  <div class="block-body"><p><code>python3 build_remainder.py</code> in the device folder regenerates <code>Remainder.amxd</code> (and <code>.maxpat</code> / <code>.genexpr</code> mirrors); <code>python3 sim_remainder.py</code> runs the 13-suite engine model.</p>
+  <div class="block-body"><p><code>python3 build_remainder_v12.py</code> builds v1.2: v1.1&#x27;s DSP unchanged plus a 320-slot display frame from gen~ and the screen js (<code>remainder_screen.js</code>), frozen at build. v1.1 is kept as <code>Remainder v1.1.amxd</code>. The older build scripts beside it rebuild earlier versions and overwrite <code>Remainder.amxd</code>, so run this one last.</p>
+<p><code>python3 build_remainder.py</code> in the device folder regenerates <code>Remainder.amxd</code> (and <code>.maxpat</code> / <code>.genexpr</code> mirrors); <code>python3 sim_remainder.py</code> runs the 13-suite engine model.</p>
 <p>No external files, so no freeze step ever. gen~ Data ≈ 14.7 MB.</p>
 <p>Engine: capture ring → 64-samples/sample copy into a latched segment → 8-voice grain pool (Shatter) → normalise → Bits → Rust → Tape → collapse envelope → out 5/6 → patcher-level fft~/ifft~ WOLA chain (Erode, per-bin gen~) → summed with the dry.</p>
 <p>Lessons: <code>e</code> is Euler&#x27;s constant in genexpr (silent no-op on assignment) — never use single-letter names; anything that captures &#x27;just before it went quiet&#x27; must normalise the capture.</p></div>
@@ -155,7 +167,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-11-16</span>
+  <div class="sf-col"><span>generated 2026-11-23</span>
   <span>build_site.py</span></div>
 </footer>
 </body>

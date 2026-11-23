@@ -189,8 +189,10 @@ ITEMS.append({
     "name": "Microcosmos",
     "kind": "Audio Effect",
     "author": "Claude",
-    "status": "Complete",
+    "status": "Complete — v1.1 Push screen",
+    "facts": {"version": "1.1", "push screen": "Live 13 / Max 9.2"},
     "folder": "Microcosmos Device",
+    "extra_images": [{"file": "microcosmos-push", "caption": "Push 3 screen, Live 13 (rendered offline; Push's own font differs slightly)"}],
     "tagline": "Replica of the Hologram Microcosm pedal — 11 granular / loop "
                "effects, 44 variations, and a 30-second phrase looper.",
     "blurb":
@@ -288,19 +290,9 @@ ITEMS.append({
         },
     ],
     "banks": [
-        {"name": "Engine",
-         "encoders": ["Effect", "Variation", "Subdiv", "Activity", "Repeats",
-                      "Mix", "Shape", "Direction"]},
-        {"name": "Post",
-         "encoders": ["Filter", "Reso", "Space", "Reverb", "Mod Depth",
-                      "Mod Rate", "Eff Vol"],
-         "buttons": ["Hold"]},
-        {"name": "Looper",
-         "encoders": ["Loop Spd", "Loop Dir", "Loop Lvl", "Routing",
-                      "Quantize", "Loop Only"],
-         "buttons": ["Looper", "Rec", "Stop", "Undo", "Erase"],
-         "note": "Button rows start at slot 2 — Push 3 reserves the leftmost "
-                 "top-row button for the device name."},
+        {"name": "Engine", "encoders": ["Effect", "Var", "Subdiv", "Activity", "Repeats", "Mix", "Shape", "Dir"], "buttons": ["Screen"]},
+        {"name": "Post", "encoders": ["Filter", "Reso", "Space", "Reverb", "MDepth", "MRate", "EffVol"], "buttons": ["Hold", "Screen"]},
+        {"name": "Looper", "encoders": ["LoopSpd", "LoopDir", "LoopLvl", "Routing", "Quant", "LoopOnly"], "buttons": ["Looper", "Rec", "Stop", "Undo", "Erase", "Screen"], "note": "Button rows start at slot 2 — Push 3 reserves the leftmost top-row button for the device name. **Screen** is the last button above the display (slot 8) in every bank: it switches between the device's own picture and Push's normal view."},
     ],
     "workflow": [
         {"title": "To record a NEW phrase over an old one, Erase first",
@@ -333,14 +325,26 @@ ITEMS.append({
         "it), expression pedal, MIDI CC map, bypass/trails modes, and the "
         "Burst looper mode.",
     ],
-    "rebuild": [
+    "sections": [
+        {"label": "push 3 screen", "type": "notes", "data": [
+            {"title": "what it shows",
+             "text": "An **orrery** of the engine: the effect's category and name with its variation (A to D) and subdivision on the left, the voices orbiting in the middle, and the phrase looper drawn as a **turntable** on the right with its state, length, speed and routing."},
+            {"title": "the screen button",
+             "text": "**Screen** is the last button above the display, in every bank. It switches between this picture and Push's normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before."},
+            {"title": "what it needs",
+             "text": "Live 13 with Max 9.2 or later, and Push 3, tethered or standalone. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push."},
+            {"title": "confirmed on push",
+             "text": "Simon has run this screen on Push 3 (23 Nov 2026). The picture above is the offline render from the Push Screen Kit simulator."},
+        ]},
+        {"label": "rebuilding", "type": "notes", "data": [
+        "`python3 build_microcosmos_v11.py` builds v1.1: the stage-8 device plus the Push screen (gen~ streams an 80-slot display frame into the screen js). v1.1 is frozen at build because of that js; v1.0 is kept as `Microcosmos v1.0.amxd`. The older build scripts beside it rebuild earlier versions and overwrite `Microcosmos.amxd`, so run this one last.",
         "`python3 build_microcosmos.py` regenerates the `.amxd` + `.maxpat` "
         "with full validation. **No freeze is ever needed** — there's no "
         "external js anywhere.",
         "`python3 sim_microcosmos.py` runs 15 suites / 102 checks mirroring "
         "the DSP maths.",
         "Never rescue a copy from an old Live Set — rebuild instead.",
-    ],
+    ]}],
 })
 
 # --------------------------------------------------------------------------
@@ -2269,8 +2273,10 @@ ITEMS.append({
     "name": "Evening Star",
     "kind": "Audio Effect",
     "author": "Claude",
-    "status": "v0.2",
+    "status": "v0.3",
+    "facts": {"version": "0.3", "push screen": "Live 13 / Max 9.2"},
     "folder": "Evening Star Device",
+    "extra_images": [{"file": "evening-star-push", "caption": "Push 3 screen, Live 13 (rendered offline; Push's own font differs slightly)"}],
     "tagline": "Frippertronics twin tape-loop system — two machine pairs "
                "that build slow soundscapes, darken with every pass and ebb "
                "away on command.",
@@ -2286,7 +2292,7 @@ ITEMS.append({
         "both back and overdub over the lot. Named after the 1975 Fripp & "
         "Eno album.",
     "quickstart": [
-        "Drop `Evening Star v0.2.amxd` on an **audio track**, in front of "
+        "Drop `EveningStar.amxd` (v0.3) on an **audio track**, in front of "
         "guitar or any input. Loop 1 starts armed (REC and EAR on).",
         "Play a phrase; it returns after **Time 1** and stacks up at the "
         "**Feedback 1** rate. Keep playing into the wash.",
@@ -2365,20 +2371,9 @@ ITEMS.append({
         },
     ],
     "banks": [
-        {"name": "Perform",
-         "encoders": ["Feedbk 1", "Feedbk 2", "Time 1", "Time 2", "Dry",
-                      "Loops", "Ebb Time", "Output"],
-         "buttons": ["Rec 1", "Ear 1", "Rec 2", "Ear 2", "Ebb"],
-         "note": "The playing surface: both feedbacks and times under one "
-                 "hand, transport on the button row."},
-        {"name": "Machines",
-         "encoders": ["Time 1", "Speed 1", "Feedbk 1", "Level 1", "Time 2",
-                      "Speed 2", "Feedbk 2", "Level 2"],
-         "buttons": ["Rec 1", "Ear 1", "Rec 2", "Ear 2"]},
-        {"name": "Tape",
-         "encoders": ["Wear", "Wow", "Hiss", "Sync", "Ebb Time", "Dry",
-                      "Loops", "Output"],
-         "buttons": ["Ebb"]},
+        {"name": "Perform", "encoders": ["Feedbk 1", "Feedbk 2", "Time 1", "Time 2", "Dry", "Loops", "Ebb Time", "Output"], "buttons": ["Rec 1", "Ear 1", "Rec 2", "Ear 2", "Ebb", "Screen"], "note": "The playing surface: both feedbacks and times under one hand, transport on the button row."},
+        {"name": "Machines", "encoders": ["Time 1", "Speed 1", "Feedbk 1", "Level 1", "Time 2", "Speed 2", "Feedbk 2", "Level 2"], "buttons": ["Rec 1", "Ear 1", "Rec 2", "Ear 2", "Screen"]},
+        {"name": "Tape", "encoders": ["Wear", "Wow", "Hiss", "Sync", "Ebb Time", "Dry", "Loops", "Output"], "buttons": ["Ebb", "Screen"], "note": "**Screen** is the last button above the display (slot 8) in every bank: it switches between the device's own picture and Push's normal view."},
     ],
     "workflow": [
         {"title": "the display",
@@ -2406,7 +2401,19 @@ ITEMS.append({
         "Loop buffers hold 30 s at 48 kHz; at 88.2/96 kHz the maximum Time "
         "shrinks proportionally.",
     ],
-    "rebuild": [
+    "sections": [
+        {"label": "push 3 screen", "type": "notes", "data": [
+            {"title": "what it shows",
+             "text": "Two **Revox-style tape rows**, one per loop. The gap between the reels is that loop's Time, the strand between them shows what's on the tape, and each row reads its length, direction and speed (for example `REV HALF`). On the right, a dusk sky with an evening star that brightens as the loops fill."},
+            {"title": "the screen button",
+             "text": "**Screen** is the last button above the display, in every bank. It switches between this picture and Push's normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before."},
+            {"title": "what it needs",
+             "text": "Live 13 with Max 9.2 or later, and Push 3, tethered or standalone. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push."},
+            {"title": "confirmed on push",
+             "text": "Simon has run this screen on Push 3 (23 Nov 2026). The picture above is the offline render from the Push Screen Kit simulator."},
+        ]},
+        {"label": "rebuilding", "type": "notes", "data": [
+        "`python3 build_eveningstar_v03.py` builds v0.3 on top of the v0.2 Node build: it adds each loop's read position from gen~, the screen js and the Screen button, then writes a frozen `Evening Star v0.3.amxd` and `EveningStar.amxd`. The loop engine is unchanged. If you change the loop engine, run `node build_eveningstar.js` first (it writes the v0.2 `EveningStar.maxpat` this script reads), then this one.",
         "`node build_eveningstar.js` in `Evening Star Device/` regenerates "
         "the `.maxpat` and both `.amxd` files from scratch.",
         "`node tests/sim_eveningstar.js` runs the 53-check suite: a JS port "
@@ -2414,7 +2421,7 @@ ITEMS.append({
         "semantics, head motion, ebb, NaN safety) plus structural checks.",
         "Everything is embedded — gen~ codebox, inline v8ui and v8.codebox "
         "— **no freeze needed**, ever.",
-    ],
+    ]}],
 })
 
 # --------------------------------------------------------------------------
@@ -2893,8 +2900,10 @@ ITEMS.append({
     "name": "Regatta",
     "kind": "MIDI Effect",
     "author": "Claude",
-    "status": "Working",
+    "status": "v1.2c",
+    "facts": {"version": "1.2c", "push screen": "Live 13 / Max 9.2"},
     "folder": "Regatta Device",
+    "extra_images": [{"file": "regatta-push", "caption": "Push 3 screen, Live 13 (rendered offline; Push's own font differs slightly)"}],
     "tagline": "A drum sequencer where the grid is a seed, not the score — "
                "a restless Copeland-style drummer performs your beat in an "
                "endless, never-repeating MIDI stream.",
@@ -2910,33 +2919,33 @@ ITEMS.append({
         "pulled back in**; and a slow ~30-bar contour breathes the whole "
         "performance between near-straight and busy. Sits before a Drum "
         "Rack, generates for ever, and **PRINT** nets the last N bars — "
-        "exactly as played — into a Session clip.",
+        "exactly as played — into a Session clip. Since v1.2 the seed can also come from a **MIDI clip** on the same track, so Regatta can be programmed and played entirely from Push 3, standalone included.",
     "quickstart": [
-        "Drop `Regatta.amxd` on a MIDI track **before a Drum Rack**.",
-        "Draw a seed: click cells (off → ON → ACCENT), drag to paint, "
-        "alt-click sets a lane's length — lanes loop at their own length, "
-        "so polymetre is free. A starter kick/snare/hat beat ships in.",
-        "Set each lane's **Role** to match its drum — gestures read it "
-        "(snares get ghosts and drags, hats get flourishes). Give one "
-        "lane **Ride** so the hat-to-ride modulation has somewhere to go.",
-        "Play, then raise **Restless** and **Depth** until the drummer "
-        "feels right. Add **Loose** for human timing.",
-        "Heard a keeper? **PRINT** drops the last N bars into this "
-        "track's first empty Session slot, unquantised, as played.",
+        "Drop `Regatta.amxd` on a MIDI track **before a Drum Rack**. Regatta only sends MIDI, so it needs an instrument after it to make any sound.",
+        "**Seed** (Drummer bank, encoder 6) starts on **Clip**. Make a MIDI clip on the same track, step-sequence a beat in it on Push, and launch it.",
+        "Regatta takes the pads your clip uses as its lanes, sets each lane's Note and guesses its Role, then plays the beat with the drummer's feel. Your clip's own notes are not doubled.",
+        "Raise **Restless** and **Depth** until the drummer feels right. Add **Loose** for human timing.",
+        "Rather draw on the face? Set **Seed** to Grid: click cells (off → ON → ACCENT), drag to paint, alt-click sets a lane's length (lanes loop at their own length, so polymetre is free). A starter kick/snare/hat beat ships in.",
+        "Heard a keeper? **PRINT** drops the last N bars into this track's first empty Session slot, unquantised, as played.",
     ],
     "controls": [
         {"title": "Per lane (grid rows 1-8)", "rows": [
             ["Note", "0 - 127",
              "MIDI note the lane fires; defaults 36-43, the Drum Rack's "
-             "bottom two rows."],
+             "bottom two rows. In Clip mode it is set for you from the pads "
+             "the clip uses."],
             ["Role", "Kick / Snare / Hat / Ride / Tom / Perc",
              "What kind of drum this lane is. Steers every gesture, fill "
-             "and modulation — set it honestly."],
+             "and modulation — set it honestly. In Clip mode it is guessed "
+             "from the General MIDI drum map (36 kick, 38 snare, 42 hat ...) "
+             "whenever a lane gets a new pad; change it if your kit differs."],
             ["Feel", "-100 - +100 ms",
              "Push/drag against the grid: negative plays ahead (eager "
              "hats), positive behind (lazy backbeat)."],
             ["Level", "0 - 1",
-             "Velocity trim (a trim, not a mute — velocity floors at 1)."]]},
+             "Velocity trim. 0 is silent (since v1.2c; earlier versions "
+             "floored velocity at 1)."]]},
+        {"title": "Seed", "rows": [["Seed", "Grid / Clip", "Where the beat comes from. **Clip** (the default): the MIDI clip *playing* on this track. Its pads become lanes 1-8, lowest note first; velocity 101 and up is an ACCENT; the clip's loop length sets every lane's length (up to 4 bars); muted notes are ignored. The face grid mirrors the clip and can't be clicked. Stop or delete the clip and Regatta goes quiet. **Grid**: the face grid, as in v1.1. Switching back to Grid keeps the clip's beat as a starting point."]]},
         {"title": "Gestures", "rows": [
             ["Restless", "0 - 1",
              "How often the drummer intervenes. 0 = plays the seed dead "
@@ -2959,17 +2968,11 @@ ITEMS.append({
              "column's full). Refuses politely when stopped."]]},
     ],
     "banks": [
-        {"name": "Lanes12",
-         "encoders": ["Note 1", "Role 1", "Feel 1", "Level 1",
-                      "Note 2", "Role 2", "Feel 2", "Level 2"],
-         "note": "lanes never straddle banks — two lanes per bank, in "
-                 "order, through Lanes34, Lanes56 and Lanes78"},
-        {"name": "Drummer",
-         "encoders": ["Restless", "Depth", "Phrase", "Loose", "Print Bars"],
-         "buttons": ["Print"],
-         "note": "Print is momentary — fires a print and resets itself"},
+        {"name": "Lanes12", "encoders": ["Note 1", "Role 1", "Feel 1", "Level 1", "Note 2", "Role 2", "Feel 2", "Level 2"], "buttons": ["Screen"], "note": "lanes never straddle banks — two lanes per bank, in order, through Lanes34, Lanes56 and Lanes78"},
+        {"name": "Drummer", "encoders": ["Restless", "Depth", "Phrase", "Loose", "Bars", "Seed"], "buttons": ["Print", "Screen"], "note": "Print is momentary — fires a print and resets itself **Screen** is the last button above the display (slot 8) in every bank: it switches between the device's own picture and Push's normal view."},
     ],
     "workflow": [
+        {"title": "programming it on push 3", "text": "Put Regatta and a Drum Rack on a track, leave Seed on Clip, and step-sequence a simple beat into a clip with Push's sequencer. Launch it: Regatta plays it with the drummer on top. Edits to the clip are picked up as it plays, so you can build the beat while listening. Use the lane banks to adjust each Role, Feel and Level, and the Drummer bank for Restless, Depth, Phrase and Loose. This works the same standalone and on the Mac."},
         {"title": "the long take",
          "text": "Restless ~0.4, Depth ~0.5, Loose ~0.3, Phrase 4 bars — "
                  "then record 8+ minutes into Arrangement, or just play. "
@@ -2988,6 +2991,9 @@ ITEMS.append({
                  "MIDI works too."},
     ],
     "gotchas": [
+        "In Clip mode Regatta follows only the clip that is **playing**. If nothing sounds, check the clip is running; stopping or deleting it silences Regatta on purpose.",
+        "Clip mode uses the clip's first eight pads (lowest first). A ninth pad passes through untouched, played straight by the Drum Rack.",
+        "In Clip mode, notes on the lane pads are held back (Regatta plays them) and other notes pass through, but the clip's CC, pitch bend and pressure are dropped. Switch to Grid if you need those.",
         "Restless 0 really is off: no gestures, fills, modulations or "
         "excursions. If the device seems inert, look there first.",
         "PRINT needs the transport running and at least one complete "
@@ -3000,7 +3006,19 @@ ITEMS.append({
         "MIDI timing is vector-quantised like every M4L MIDI device "
         "(~1.5 ms at a 64-sample buffer).",
     ],
-    "rebuild": [
+    "sections": [
+        {"label": "push 3 screen", "type": "notes", "data": [
+            {"title": "what it shows",
+             "text": "A **scrolling score** of what the drummer actually played against your seed: seed hits, extra ghosts and flourishes, drops (crossed boxes), fills and pattern changes bracketed and named along the top, and lanes slipping off the grid. On the right, a small **sailing race** over the phrase: the boat reaches the flag where the fill lands, and the waves rise with Restless."},
+            {"title": "the screen button",
+             "text": "**Screen** is the last button above the display, in every bank. It switches between this picture and Push's normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before."},
+            {"title": "what it needs",
+             "text": "Live 13 with Max 9.2 or later, and Push 3, tethered or standalone. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push."},
+            {"title": "confirmed on push",
+             "text": "Simon has run Regatta's screen on Push 3 (23 Nov 2026)."},
+        ]},
+        {"label": "rebuilding", "type": "notes", "data": [
+        "`python3 build_regatta_v12.py` builds the current version (v1.2c): the clip seed and the Push screen, frozen with five js files (grid, brain, clip reader `regatta_clipseed.js`, print, screen). `node test_clipseed_node.js` tests the clip reader against a stubbed Live API; `node tests/preview_screen.js` renders the screen offline. v1.0, v1.1 and v1.2 are kept beside it. The older build scripts beside it rebuild earlier versions and overwrite `Regatta.amxd`, so run this one last.",
         "`python3 build_regatta.py` in `Regatta Device/` regenerates the "
         "`.amxd` (with full wiring validation) — **frozen at build**, all "
         "three js files embedded and byte-verified, so there is no Max "
@@ -3010,7 +3028,7 @@ ITEMS.append({
         "node, LiveAPI stubbed).",
         "All taste numbers — gesture rates, fill shapes, episode "
         "probabilities — live in `regatta_brain.js`.",
-    ],
+    ]}],
 })
 
 ITEMS.append({
@@ -3018,8 +3036,10 @@ ITEMS.append({
     "name": "Remainder",
     "kind": "Audio Effect",
     "author": "Claude",
-    "status": "v1.1",
+    "status": "v1.2",
+    "facts": {"version": "1.2", "push screen": "Live 13 / Max 9.2"},
     "folder": "Remainder Device",
+    "extra_images": [{"file": "remainder-push", "caption": "Push 3 screen, Live 13 (rendered offline; Push's own font differs slightly)"}],
     "tagline": "Gives any sound a disintegrating tail: captures the moment "
                "before it dies, then plays it back stretched, grainy and "
                "rotting — by tape, by bits, by fragmentation, by spectral "
@@ -3141,20 +3161,9 @@ ITEMS.append({
          ]},
     ],
     "banks": [
-        {"name": "Trigger",
-         "encoders": ["Mode", "Thresh", "Hold", "Sync", "Cap ms",
-                      "Cap Beats", "Len ms", "Len Beats"],
-         "buttons": ["Fire", "Freeze"]},
-        {"name": "Tail",
-         "encoders": ["Curve", "Stretch", "Grain", "Width", "Tail", "Duck",
-                      "Dry", None],
-         "buttons": ["Fire", "Freeze"]},
-        {"name": "Rot",
-         "encoders": ["Tape", "Bits", "Shatter", "Erode", "Rust", "Chaos",
-                      None, None],
-         "buttons": ["Fire", "Freeze"],
-         "note": "Banks are baked into the device, so they are right on a "
-                 "fresh add, a set load and a reconnect alike."},
+        {"name": "Trigger", "encoders": ["Mode", "Thresh", "Hold", "Sync", "Cap ms", "Cap Bt", "Len ms", "Len Bt"], "buttons": ["Fire", "Freeze", "Screen"]},
+        {"name": "Tail", "encoders": ["Curve", "Stretch", "Grain", "Width", "Tail", "Duck", "Dry"], "buttons": ["Fire", "Freeze", "Screen"]},
+        {"name": "Rot", "encoders": ["Tape", "Bits", "Shatter", "Erode", "Rust", "Chaos"], "buttons": ["Fire", "Freeze", "Screen"], "note": "Banks are baked into the device, so they are right on a fresh add, a set load and a reconnect alike. **Screen** is the last button above the display (slot 8) in every bank: it switches between the device's own picture and Push's normal view."},
     ],
     "workflow": [
         {"title": "Learn one process at a time",
@@ -3186,7 +3195,19 @@ ITEMS.append({
         "Retrigger cuts: a new capture always replaces the running tail. "
         "There is no layering by design.",
     ],
-    "rebuild": [
+    "sections": [
+        {"label": "push 3 screen", "type": "notes", "data": [
+            {"title": "what it shows",
+             "text": "The capture drawn as a **strip of tape that visibly rots**: Tape, Bits, Shatter, Erode and Rust each leave their own mark, and printed dropouts stay in the strip on later passes. Under Freeze the playhead turns ice blue. On the left: the trigger meter and state (armed, ROTTING, how far through and how long is left). The right-hand panel follows the bank: the input scope with each Fire (Trigger), the collapse curve (Tail), or five small rot pictures with their amounts (Rot)."},
+            {"title": "the screen button",
+             "text": "**Screen** is the last button above the display, in every bank. It switches between this picture and Push's normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before."},
+            {"title": "what it needs",
+             "text": "Live 13 with Max 9.2 or later, and Push 3, tethered or standalone. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push."},
+            {"title": "confirmed on push",
+             "text": "Simon has run this screen on Push 3 (23 Nov 2026). The picture above is the offline render from the Push Screen Kit simulator."},
+        ]},
+        {"label": "rebuilding", "type": "notes", "data": [
+        "`python3 build_remainder_v12.py` builds v1.2: v1.1's DSP unchanged plus a 320-slot display frame from gen~ and the screen js (`remainder_screen.js`), frozen at build. v1.1 is kept as `Remainder v1.1.amxd`. The older build scripts beside it rebuild earlier versions and overwrite `Remainder.amxd`, so run this one last.",
         "`python3 build_remainder.py` in the device folder regenerates "
         "`Remainder.amxd` (and `.maxpat` / `.genexpr` mirrors); "
         "`python3 sim_remainder.py` runs the 13-suite engine model.",
@@ -3198,7 +3219,7 @@ ITEMS.append({
         "Lessons: `e` is Euler's constant in genexpr (silent no-op on "
         "assignment) — never use single-letter names; anything that "
         "captures 'just before it went quiet' must normalise the capture.",
-    ],
+    ]}],
 })
 
 ITEMS.append({
@@ -3206,10 +3227,12 @@ ITEMS.append({
     "name": "Reverie",
     "kind": "Audio Effect",
     "author": "Claude",
-    "status": "v0.2 — face + panel",
+    "status": "v0.3 — Push screen",
+    "facts": {"version": "0.3", "push screen": "Live 13 / Max 9.2"},
     "folder": "Reverie Device",
     "image_aliases": ["reverie-00"],
     "extra_images": [
+        {"file": "reverie-push", "caption": "Push 3 screen, Live 13 (rendered offline; Push's own font differs slightly)"},
         {"file": "reverie-01", "caption": "Face — Grain tab, with the grain window shape"},
         {"file": "reverie-02", "caption": "Face — Play tab"},
         {"file": "reverie-03", "caption": "Face — Pitch tab"},
@@ -3413,19 +3436,17 @@ ITEMS.append({
          ]},
     ],
     "banks": [
-        {"name": "Grain", "encoders": ["Rate Mode", "Rate ms", "Rate Div", "Rate Note", "Size", "Shape", "Skew", "Jitter"], "buttons": ["Link"]},
-        {"name": "Play 1", "encoders": ["Play Mode", "Trigger", "Retrig", "Stretch", "Sens", "Rev Prob", "Spray", "Blur"], "buttons": ["Activate", "Reverse", "Hold"]},
-        {"name": "Play 2", "encoders": ["Scrub", "Scrub Mode", "Loop Len", "Level", None, None, None, None], "buttons": ["Activate", "Reverse", "Hold"]},
-        {"name": "Pitch", "encoders": ["Pitch", "Pitch Mode", "Detune", "Retune", "Root", "Scale", "Chord", "Voices"]},
-        {"name": "Chord", "encoders": ["Int 1", "Int 2", "Int 3", "Arp Rand", "Chord Spread", None, None, None]},
-        {"name": "Filter", "encoders": ["Filter", "Cutoff", "Mod Depth", "Mod Rate", "Reso", "Drive", "Morph", "F Mix"], "buttons": ["F Scale"]},
-        {"name": "Image+Out", "encoders": ["Image", "Spread", "Pan", "Width", "Dimension", "Dry Wet", "Gain", None], "buttons": ["Smooth", "Limiter"]},
-        {"name": "Delay 1", "encoders": ["Taps", "Dly ms", "Dly Div", "Pattern", "Shift", "Feedback", "Space", "Dly Mix"], "buttons": ["Dly Sync"]},
-        {"name": "Delay 2", "encoders": ["Dly LP", "Dly HP", "Stereo", None, None, None, None, None], "buttons": ["Dly Sync"]},
-        {"name": "LFO 1", "encoders": ["L1 Target", "L1 Rate", "L1 Sync", "L1 Shape", "L1 Depth", "Env Target", "Env Attack", "Env Release"]},
-        {"name": "LFO 2", "encoders": ["L2 Target", "L2 Rate", "L2 Sync", "L2 Shape", "L2 Depth", "Env Depth", None, None],
-         "note": "Static banks baked into the device (right on a fresh add); "
-                 "toggles are the top-row buttons from slot 2."},
+        {"name": "Grain", "encoders": ["Rate Mode", "Rate ms", "Rate Div", "Rate Note", "Size", "Shape", "Skew", "Jitter"], "buttons": ["Link", "Screen"]},
+        {"name": "Play 1", "encoders": ["Play", "Trigger", "Retrig", "Stretch", "Sens", "Rev Prob", "Spray", "Blur"], "buttons": ["Activate", "Reverse", "Hold", "Screen"]},
+        {"name": "Play 2", "encoders": ["Scrub", "Scrub Q", "Loop Len", "Level"], "buttons": ["Activate", "Reverse", "Hold", "Screen"]},
+        {"name": "Pitch", "encoders": ["Pitch", "Pitch Mode", "Detune", "Retune", "Root", "Scale", "Chord", "Voices"], "buttons": ["Screen"]},
+        {"name": "Chord", "encoders": ["Int 1", "Int 2", "Int 3", "Arp Rand", "Ch Sprd"], "buttons": ["Screen"]},
+        {"name": "Filter", "encoders": ["Filter", "Cutoff", "Mod Depth", "Mod Rate", "Reso", "Drive", "Morph", "F Mix"], "buttons": ["F Scale", "Screen"]},
+        {"name": "Image+Out", "encoders": ["Image", "Spread", "Pan", "Width", "Dimension", "Dry/Wet", "Gain"], "buttons": ["Smooth", "Limiter", "Screen"]},
+        {"name": "Delay 1", "encoders": ["Taps", "Dly ms", "Dly Div", "Pattern", "Shift", "Feedback", "Space", "Dly Mix"], "buttons": ["Dly Sync", "Screen"]},
+        {"name": "Delay 2", "encoders": ["Dly LP", "Dly HP", "Stereo"], "buttons": ["Dly Sync", "Screen"]},
+        {"name": "LFO 1", "encoders": ["L1 Target", "L1 Rate", "L1 Sync", "L1 Shape", "L1 Depth", "Env Target", "Env Att", "Env Rel"], "buttons": ["Screen"]},
+        {"name": "LFO 2", "encoders": ["L2 Target", "L2 Rate", "L2 Sync", "L2 Shape", "L2 Depth", "Env Depth"], "buttons": ["Screen"], "note": "Static banks baked into the device (right on a fresh add); toggles are the top-row buttons from slot 2. **Screen** is the last button above the display (slot 8) in every bank: it switches between the device's own picture and Push's normal view."},
     ],
     "workflow": [
         {"title": "Freeze pad",
@@ -3463,7 +3484,21 @@ ITEMS.append({
         "engine' if the displays ever go blank — say which.",
         "Working title.",
     ],
-    "rebuild": [
+    "sections": [
+        {"label": "push 3 screen", "type": "notes", "data": [
+            {"title": "what it shows",
+             "text": "A violet **memory ribbon**: the captured sound drawn as a waveform with the playhead across it. Grains appear as glowing seeds at the point they read from: lilac plays forward, rose plays in reverse, cyan seeds are delay taps. The panel on the right changes with the bank you're on: in the picture, the Filter bank shows the filter curve with its cutoff."},
+            {"title": "the screen button",
+             "text": "**Screen** is the last button above the display, in every bank. It switches between this picture and Push's normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before."},
+            {"title": "what it needs",
+             "text": "Live 13 with Max 9.2 or later, and Push 3, tethered or standalone. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push."},
+            {"title": "if push struggles",
+             "text": "Reverie's picture is the busiest of the set. If Push feels sluggish, especially standalone, switch **Screen** off: the sound doesn't change."},
+            {"title": "confirmed on push",
+             "text": "Simon has run this screen on Push 3 (23 Nov 2026). The picture above is the offline render from the Push Screen Kit simulator."},
+        ]},
+        {"label": "rebuilding", "type": "notes", "data": [
+        "`python3 build_reverie_v03.py` builds v0.3: the v0.2b device unchanged plus the Push screen (`reverie_screen.js` + the Push Screen Kit), frozen at build. v0.2b is kept as `Reverie v0.2b.amxd`. The older build scripts beside it rebuild earlier versions and overwrite `Reverie.amxd`, so run this one last.",
         "`python3 build_reverie.py` in the device folder regenerates "
         "`Reverie.amxd` (+ `.maxpat` / `.genexpr`, and the two JavaScript "
         "files from `js_templates.py`) with static genexpr checks and "
@@ -3486,7 +3521,7 @@ ITEMS.append({
         "playhead clamp must sit deeper than the recording backstop; never "
         "read parameter metadata via getattr in a painter — inject a table "
         "keyed by scripting name at build time.",
-    ],
+    ]}],
 })
 
 ITEMS.append({

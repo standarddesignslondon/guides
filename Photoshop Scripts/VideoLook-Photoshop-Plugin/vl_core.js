@@ -98,6 +98,46 @@ const STANDARDS = {
   // by the MUSE route (vl_transfer.muse), not the composite encoder.
   "MUSE":   { lines: 1035, total: 1125, tLine: 29.63e-6, sync: 0.6e-6, back: 2.0e-6, active: 25.86e-6, fs: 74.25e6, colour: "COMP",
               bw: 20e6, chromaBW: 7e6, lineRate: 33750, fieldLines: 562.5, modulation: "neg" },
+
+  /* ---- v1.3 additions: terminals, computer monitors, CCTV feeds and digital frames. Sources in
+   *      VideoLook-References/_research/L_sharp_and_digital.md. Progressive (non-interlaced) where the equipment was. ---- */
+  // DEC VT100 (1978), 80 columns: 800 dots x 240 scans at 60 Hz, line rate 15.734 kHz, dot clock 24.0734 MHz / 1.5,
+  // video amplifier peaked "to extend the bandwidth to 12 MHz" [SEC VT100 Technical Manual ch. 4]. Two samples a dot.
+  "VT100-80": { lines: 240, total: 262, progressive: true, tLine: 63.556e-6, sync: 4.7e-6, back: 6.0e-6, active: 49.84e-6, fs: 2 * 24.0734e6 / 1.5, colour: "MONO",
+                bw: 12e6, lineRate: 15734.264, fieldLines: 262, modulation: "neg" },
+  // IBM MDA on the 5151: 720 x 350, 18.432 kHz, 50 Hz, digital TTL [SEC Wikipedia MDA]. Dot clock 16.257 MHz [EST: not
+  // stated in the sources read]; video bandwidth [EST]
+  "MDA-350": { lines: 350, total: 369, progressive: true, tLine: 54.25e-6, sync: 7.0e-6, back: 1.5e-6, active: 44.29e-6, fs: 2 * 16.257e6, colour: "MONO",
+                bw: 16e6, lineRate: 18432, fieldLines: 369, modulation: "neg" },
+  // IBM CGA on the 5153: 640 x 200 (or 320 x 200 doubled), 262 lines at 59.92 Hz, 15.70 kHz (14.318 MHz / 8 / 114),
+  // digital RGBI [SEC Wikipedia CGA; scan rates from a summary of that page]. 640 dots at 14.318 MHz.
+  "CGA-200": { lines: 200, total: 262, progressive: true, tLine: 63.695e-6, sync: 4.5e-6, back: 7.0e-6, active: 44.70e-6, fs: 2 * 14.31818e6, colour: "MONO",
+                bw: 14e6, lineRate: 15699.8, fieldLines: 262, modulation: "neg" },
+  // Home computer on a 625-line monitor: 64 us lines, 312 lines a field, not interlaced; vertical blanking 25 lines of
+  // 312 [SEC vogons / ULA analysis via search]; BBC Micro pixels at 16 MHz (640 across) [EST clock]
+  "PAL-288P": { lines: 287, total: 312, progressive: true, tLine: 64e-6, sync: 4.7e-6, back: 5.8e-6, active: 52e-6, fs: 32e6, colour: "MONO",
+                bw: 8e6, lineRate: 15625, fieldLines: 312, modulation: "neg" },
+  // Tektronix 4010 (1972) direct-view bistable storage tube: 1024 addressable points across, 780 visible down; not a
+  // raster, so it is drawn here on a dense raster whose lines merge [SEC Wikipedia Tektronix 4010]
+  "TEK-4010": { lines: 780, total: 780, progressive: true, tLine: 64e-6, sync: 2e-6, back: 2e-6, active: 58e-6, fs: 2 * 1024 / 58e-6, colour: "MONO",
+                bw: 40e6, lineRate: 15625, fieldLines: 780, modulation: "neg" },
+  // CCTV camera on coax straight into a monitor: no broadcast filter. High-resolution 1990s B&W cameras were rated 570 TV
+  // lines (Sony SSC-M383) [SEC Sony spec tables]: 570 lines per picture height is about 7.3 MHz on 625 lines [DERIVED].
+  // 12-inch B&W CCTV monitors were rated about 1000 TV lines at the centre, 800 at the corners (Speco VM-1201B, Vicon
+  // VM5124, Hunt HBD-CRT-12) [SEC listings]: 1000 lines is about 12.8 MHz [DERIVED]
+  "CCTV-625": { lines: 575, tLine: 64e-6, sync: 4.7e-6, back: 5.8e-6, active: 52e-6, fs: 13.5e6 * 2, colour: "MONO",
+                bw: 12.8e6, lineRate: 15625, fieldLines: 312.5, modulation: "neg" },
+  "CCTV-525": { lines: 485, tLine: 63.556e-6, sync: 4.7e-6, back: 4.7e-6, active: 52.66e-6, fs: 13.5e6 * 2, colour: "MONO",
+                bw: 12.8e6, lineRate: 15734.264, fieldLines: 262.5, modulation: "neg", setup: 0.075 },
+  // Digital frames (decoded streams, DVD, Video CD): component, one sample a pixel, progressive [SPEC frame sizes]
+  "SIF-288": { lines: 288, total: 288, progressive: true, tLine: 64e-6, sync: 4.7e-6, back: 5.8e-6, active: 52e-6, fs: 352 / 52e-6, colour: "COMP",
+                bw: 3.0e6, chromaBW: 1.5e6, lineRate: 15625, fieldLines: 288, modulation: "neg" },
+  "SD-576": { lines: 576, total: 576, progressive: true, tLine: 64e-6, sync: 4.7e-6, back: 5.8e-6, active: 52e-6, fs: 720 / 52e-6, colour: "COMP",
+                bw: 5.75e6, chromaBW: 2.75e6, lineRate: 15625, fieldLines: 576, modulation: "neg" },
+  "HD-720": { lines: 720, total: 720, progressive: true, tLine: 64e-6, sync: 4.7e-6, back: 5.8e-6, active: 52e-6, fs: 1280 / 52e-6, colour: "COMP",
+                bw: 10e6, chromaBW: 5e6, lineRate: 15625, fieldLines: 720, modulation: "neg" },
+  "HD-1080": { lines: 1080, total: 1080, progressive: true, tLine: 64e-6, sync: 4.7e-6, back: 5.8e-6, active: 52e-6, fs: 1920 / 52e-6, colour: "COMP",
+                bw: 15e6, chromaBW: 7.5e6, lineRate: 15625, fieldLines: 1080, modulation: "neg" },
 };
 // Totals where not stated above: 625 / 525 / 405 / 819 [SPEC]
 for (const k in STANDARDS) { const s = STANDARDS[k]; if (!s.total) s.total = s.lineRate > 15700 && s.lineRate < 15800 ? 525 : s.lineRate === 15625 ? 625 : s.lineRate === 10125 ? 405 : s.lineRate === 20475 ? 819 : s.lines; }
@@ -409,8 +449,86 @@ function discret11(enc, seed) {
   }
 }
 
+/* Pay-TV scrambling of the 1989-1990s, on the PAL baseband lines (sync and colour burst untouched in every system).
+ * VideoCrypt I/II (News Datacom, Sky from 1989): each active line is cut at one of 256 points and the two halves swapped
+ * ("0123456789" -> "4567890123"); a cut never falls closer than about 12-15% of the width to either edge; a fresh 8-bit
+ * cut point per line from a generator re-seeded every 2.5 s [SEC Kuhn, "VideoCrypt details"]. Generator here is VideoLook's own [EST].
+ * 'videocrypt-hack': a home-built decoder of the AntiSky kind, which guessed each cut by matching neighbouring lines
+ * [SEC Kuhn AntiSky 1994]; most lines come back right, the misjudged ones are left rotated by the error (rate set by scrambleErr [EST]). */
+function rotLine(sig, o, ns, c, tmp) {
+  for (let i = 0; i < ns; i++) tmp[i] = sig[o + (i + c) % ns];
+  sig.set(tmp, o);
+}
+function videocrypt(enc, seed, hack, err) {
+  const g = enc.g, { nLine, lines, a0, ns } = g, rnd = mulberry32(((seed || 1) * 7919) >>> 0);
+  const m = Math.round(0.13 * ns), span = ns - 2 * m, tmp = new Float32Array(ns);
+  const cut = () => m + Math.round((Math.floor(rnd() * 256)) * span / 255);
+  const pe = err === undefined ? 0.12 : err;
+  for (let r = 0; r < lines; r++) {
+    const o = r * nLine + a0;
+    if (!hack) { rotLine(enc.sig, o, ns, cut(), tmp); continue; }
+    if (rnd() < pe) { const d = (cut() - cut() + ns) % ns; if (d) rotLine(enc.sig, o, ns, d, tmp); }
+  }
+}
+/* VideoCrypt-S (BBC Select, 1992-94): line shuffle, "six blocks of forty seven lines per field"; full shuffle (282 lines
+ * per field), half shuffle (alternate fields), or line delay (start of each line's video delayed at random) [SEC Kuhn].
+ * Placement of the 282 lines within the field and the size of the delays are [EST]. */
+function fieldRows(g, f) {
+  const out = [];
+  for (let r = g.progressive ? 0 : f; r < g.lines; r += g.progressive ? 1 : 2) out.push(r);
+  return out;
+}
+function permuteRows(enc, rows, perm) {
+  const g = enc.g, { nLine } = g, copy = rows.map((r) => enc.sig.slice(r * nLine + g.a0, r * nLine + g.a0 + g.ns));
+  for (let k = 0; k < rows.length; k++) enc.sig.set(copy[perm[k]], rows[k] * nLine + g.a0);
+}
+function vcSelect(enc, seed, mode) {
+  const g = enc.g, rnd = mulberry32(((seed || 1) * 104729) >>> 0), nf = g.progressive ? 1 : 2;
+  for (let f = 0; f < nf; f++) {
+    const rows = fieldRows(g, f);
+    if (mode === "vcs-delay") {
+      const tmp = new Float32Array(g.ns), dmax = Math.round(0.06 * g.ns); // up to ~6% of the line [EST]
+      for (const r of rows) {
+        const k = Math.round(rnd() * dmax), o = r * g.nLine + g.a0;
+        for (let i = 0; i < g.ns; i++) tmp[i] = i < k ? 0 : enc.sig[o + i - k];
+        enc.sig.set(tmp, o);
+      }
+      continue;
+    }
+    if (mode === "vcs-half" && f === 1) continue;
+    const B = 47, nb = Math.min(6, Math.floor(rows.length / B)), start = Math.max(0, Math.floor((rows.length - nb * B) / 2));
+    const perm = rows.map((_, k) => k);
+    for (let b = 0; b < nb; b++) {
+      const s = start + b * B;
+      for (let k = B - 1; k > 0; k--) { const j = Math.floor(rnd() * (k + 1)); const t = perm[s + k]; perm[s + k] = perm[s + j]; perm[s + j] = t; }
+    }
+    permuteRows(enc, rows, perm);
+  }
+}
+/* Nagravision / Syster (Canal+ and Premiere, 1990s analogue): "the bottom 32 lines of the PAL TV signal are shifted in time
+ * by one video field, and read out in permuted order" under a pseudo-random generator [SEC Kuhn; Wikipedia Nagravision].
+ * Modelled as a 32-line store: each output line is taken from a random slot, which is then refilled with the next input line,
+ * the input running from the previous field's last 32 lines (the same field's, in a single still) [EST buffer model]. */
+function syster(enc, seed) {
+  const g = enc.g, rnd = mulberry32(((seed || 1) * 15485863) >>> 0), nf = g.progressive ? 1 : 2, D = 32;
+  for (let f = 0; f < nf; f++) {
+    const rows = fieldRows(g, f), n = rows.length;
+    if (n <= D) continue;
+    const input = [];
+    for (let k = 0; k < n; k++) input.push((k - D + n) % n);
+    const buf = input.slice(0, D), perm = [];
+    let next = D;
+    for (let k = 0; k < n; k++) {
+      const s = Math.floor(rnd() * buf.length);
+      perm.push(buf[s]);
+      if (next < n) buf[s] = input[next++]; else buf.splice(s, 1);
+    }
+    permuteRows(enc, rows, perm);
+  }
+}
+
 /* CHANNEL. opts: { snrDb, ghosts:[{delayUs, amp, phaseDeg}], impulses (per line probability), txBandwidth, seed, rxBandwidth,
- *   route 'sat_fm' + cnrDb, scramble 'discret11',
+ *   route 'sat_fm' + cnrDb, scramble 'discret11'|'videocrypt'|'videocrypt-hack' (+scrambleErr)|'vcs-full'|'vcs-half'|'vcs-delay'|'syster',
  *   interferer: enc of a second picture, cochannel: { ratio (carrier ratio), offsetHz, dx (fraction of a line), dy (fraction of a frame) },
  *   rx: geometry of the receiving set's standard (default: the same), overload (0..1, strong-signal "lockout"), soundBeat }
  * Everything happens on the time-continuous stream, so echoes and the interfering picture carry their blanking with them.
@@ -429,6 +547,10 @@ function channel(enc, opts) {
   opts = opts || {};
   const g = enc.g, { nLine, fs } = g, T = g.total;
   if (opts.scramble === "discret11") discret11(enc, opts.seed);
+  else if (opts.scramble === "videocrypt") videocrypt(enc, opts.seed, false);
+  else if (opts.scramble === "videocrypt-hack") videocrypt(enc, opts.seed, true, opts.scrambleErr);
+  else if (opts.scramble && opts.scramble.indexOf("vcs-") === 0) vcSelect(enc, opts.seed, opts.scramble);
+  else if (opts.scramble === "syster") syster(enc, opts.seed);
   const S = buildStream(enc), N = S.length;
   // transmitter band-limit (the vestigial-sideband system passes 0..bw) [SPEC]
   const bw = opts.txBandwidth || g.bw;

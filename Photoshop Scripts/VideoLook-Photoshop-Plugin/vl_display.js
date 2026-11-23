@@ -89,6 +89,38 @@ function set(grid, g, s) {
   return grid;
 }
 
+/* Monochrome phosphors (v1.3). Chromaticities DERIVED from the peak wavelength and width in the standard phosphor table
+ * (Wikipedia "Phosphor", JEDEC P-numbers) as a Gaussian emission band through the CIE 1931 observer; P31's derived value
+ * (0.277, 0.515) agrees with a manufacturer figure of (0.287, 0.521) quoted in a secondary source. Real P1 and P39 are
+ * greener than sRGB can show, so they come out as sRGB's own strongest green. Persistence is not modelled for a still. */
+const PHOSPHORS = {
+  P4: { label: "P4 white (TV, VT100, CCTV monitors)", xy: null },             // the tube's own monoWhite
+  P1: { label: "P1 green (oscilloscopes, early monitors)", xy: [0.161, 0.740] }, // 525 nm, 40 nm wide [SEC peak; DERIVED xy]
+  P39: { label: "P39 green, long persistence (IBM 5151)", xy: [0.161, 0.740] },  // 525 nm [SEC]; 5151 uses P39 [SEC Wikipedia IBM 5151]
+  P31: { label: "P31 yellowish green (green-screen monitors)", xy: [0.277, 0.515] }, // [DERIVED; secondary source agrees]
+  P3: { label: "P3 amber (amber monitors)", xy: [0.561, 0.436] },               // 602 nm [SEC peak; DERIVED xy, width EST]
+  P12: { label: "P12 orange (radar)", xy: [0.540, 0.458] },                      // 590 nm [SEC peak; DERIVED xy, width EST]
+};
+/* Scan velocity modulation (v1.3): a differentiated luminance signal drives an auxiliary deflection coil on the neck
+ * [SEC US patents 4185301, 4641195]; "the beam is sped up just before and just after the edge and it is slowed down during
+ * the edge ... the white parts get smaller and the black parts get whiter" [SEC J. Stessen, Philips, in the S.E.R. FAQ].
+ * Here the coil current (the derivative of the line's luminance, band-limited) displaces the beam; light lands where the
+ * beam is, so it bunches up (brighter, sharper) where the beam slows. amount 1 shifts an edge by about one grid sample [EST]. */
+function svmLine(planes, Yline, o, n, k) {
+  const d = new Float32Array(n);
+  for (let x = 1; x < n - 1; x++) d[x] = (Yline[x + 1] - Yline[x - 1]) * 0.5;
+  const sm = new Float32Array(n), r = Math.max(1, Math.round(k * 0.6)), wts = []; let ws = 0;
+  for (let j = -r * 2; j <= r * 2; j++) { const w = Math.exp(-j * j / (2 * r * r)); wts.push(w); ws += w; }
+  for (let x = 0; x < n; x++) { let a = 0; for (let j = -r * 2; j <= r * 2; j++) { const xx = x + j; if (xx >= 0 && xx < n) a += d[xx] * wts[j + r * 2]; } sm[x] = a / ws; }
+  const gain = o * k * k; // displacement in output pixels
+  for (const p of planes) {
+    const src = p.subarray(0), tmp = new Float32Array(n);
+    for (let x = 0; x < n; x++) { const pos = x + gain * sm[x], x0 = Math.floor(pos), f = pos - x0, v = src[x];
+      if (x0 >= 0 && x0 < n) tmp[x0] += v * (1 - f); if (x0 + 1 >= 0 && x0 + 1 < n) tmp[x0 + 1] += v * f; }
+    p.set(tmp);
+  }
+}
+
 /* ---------------- CRT ---------------- */
 const TUBES = {
   mono: { mask: "none" },
@@ -122,12 +154,15 @@ function crt(grid, g, w, h, d, win) {
   // 3. horizontal upsampling of each scan line to output width (x2 for mask/convergence precision)
   const W2 = w;
   const up = lin.map(p => VC.resize(p, ns, nl, W2, nl));
-  const upY = new Float32Array(up[0].length); for (let i = 0; i < upY.length; i++) upY[i] = 0.2126 * up[0][i] + 0.7152 * up[1][i] + 0.0722 * up[2][i];
+  let upY = new Float32Array(up[0].length); for (let i = 0; i < upY.length; i++) upY[i] = 0.2126 * up[0][i] + 0.7152 * up[1][i] + 0.0722 * up[2][i];
+  if (d.svm > 0) { const k = W2 / ns; for (let j = 0; j < nl; j++) { const o = j * W2, sl = up.map(p => p.subarray(o, o + W2)); svmLine(sl, upY.subarray(o, o + W2), d.svm, W2, k); }
+    for (let i = 0; i < upY.length; i++) upY[i] = 0.2126 * up[0][i] + 0.7152 * up[1][i] + 0.0722 * up[2][i]; }
   const wts = new Float32Array(64);
   // 4. compose
   const M = mono ? null : displayToSRGB(PRIMARIES[d.primaries] || PRIMARIES.EBU, white);
   const Mm = mono ? (() => { // mono phosphor: white of given chromaticity expressed in sRGB linear
-    const wxy = d.monoWhite || [0.29, 0.31]; // P4 chromaticity NOT FOUND [EST slightly cool white]
+    const ph = d.phosphor && PHOSPHORS[d.phosphor] && PHOSPHORS[d.phosphor].xy;
+    const wxy = ph || d.monoWhite || [0.29, 0.31]; // P4 chromaticity NOT FOUND [EST slightly cool white]
     const X = wxy[0] / wxy[1], Z = (1 - wxy[0] - wxy[1]) / wxy[1];
     const toS = inv3(rgbToXYZMatrix(PRIMARIES.SRGB, WHITES.D65)); const v = mul3v(toS, [X, 1, Z]); const mx = Math.max(...v); return v.map(x => x / mx);
   })() : null;
@@ -293,5 +328,5 @@ function lensView(pic, w, h, o) {
   return out;
 }
 
-const api = { maskFunction, maskNorm, set, crt, PRIMARIES, WHITES, displayToSRGB, rgbToXYZMatrix, srgbEncode, TUBES, televisor, lensView };
+const api = { PHOSPHORS, maskFunction, maskNorm, set, crt, PRIMARIES, WHITES, displayToSRGB, rgbToXYZMatrix, srgbEncode, TUBES, televisor, lensView };
 if (typeof module !== "undefined" && module.exports) module.exports = api;

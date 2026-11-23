@@ -6,6 +6,10 @@ const DSP = (typeof require !== "undefined") ? require("./vl_display.js") : glob
 const REC = (typeof require !== "undefined") ? require("./vl_record.js") : globalThis.VLRecord;
 const TR = (typeof require !== "undefined") ? require("./vl_transfer.js") : globalThis.VLTransfer;
 const TXT = (typeof require !== "undefined") ? require("./vl_text.js") : globalThis.VLText;
+const DIG = (typeof require !== "undefined") ? require("./vl_digital.js") : globalThis.VLDigital;
+const STR = (typeof require !== "undefined") ? require("./vl_stream.js") : globalThis.VLStream;
+const PAN = (typeof require !== "undefined") ? require("./vl_panel.js") : globalThis.VLPanel;
+const PAP = (typeof require !== "undefined") ? require("./vl_paper.js") : globalThis.VLPaper;
 function transpose(p, w, h) { const o = new Float32Array(w * h); for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) o[x * h + y] = p[y * w + x]; return o; }
 
 /* settings = {
@@ -34,6 +38,17 @@ function cutRegion(planes, W, H, rect, dx, dy) {
   });
 }
 function run(doc, s, winDoc) {
+  // screen to paper works on the whole picture (sync columns, page layout): a preview renders it all and cuts the window
+  if (winDoc && !s.native && paperOn(s)) {
+    const r = run(doc, s, null), x0 = Math.max(0, winDoc.left), y0 = Math.max(0, winDoc.top), x1 = Math.min(r.width, winDoc.right), y1 = Math.min(r.height, winDoc.bottom);
+    if (x1 <= x0 || y1 <= y0) throw new Error("The preview selection is outside the picture area.");
+    const planes = r.planes.map(p => { const a = new Float32Array((x1 - x0) * (y1 - y0)); for (let y = y0; y < y1; y++) a.set(p.subarray(y * r.width + x0, y * r.width + x1), (y - y0) * (x1 - x0)); return a; });
+    return Object.assign({}, r, { planes, left: x0, top: y0, width: x1 - x0, height: y1 - y0 });
+  }
+  return runPicture(doc, s, winDoc);
+}
+function paperOn(s) { const pa = s.paper, en = s.enabled || {}; return !!(pa && pa.kind && pa.kind !== "none" && en.paper !== false && PAP.KINDS[pa.kind]); }
+function runPicture(doc, s, winDoc) {
   // winDoc: optional {left, top, right, bottom} in document pixels (preview); native: output at the standard's own size
   const W = doc.w, H = doc.h;
   const en = Object.assign({ camera: true, encoder: true, channel: true, recording: true, transfer: true, decoder: true, display: true, view: true, overlay: true }, s.enabled || {});
@@ -86,12 +101,22 @@ function run(doc, s, winDoc) {
     if (v && !gs.progressive && !gs.fieldSeq) grid = TR.interlace(grid, gs.ns, gs.lines, v, mask, 1);
     if (cam) { grid = CAM.camera(grid, gs, cam, Object.assign({ seed, aspect }, s.camera)); stages.push("camera"); }
   }
+  // 1b. a picture made by a terminal, a computer or a teletext page (the photo is the material it was made from)
+  const src = s.source;
+  if (en.source !== false && src && src.kind && src.kind !== "none" && !gs.vertical) { grid = DIG.source(grid, gs, Object.assign({ aspect }, src)); stages.push(DIG.KINDS[src.kind] ? DIG.KINDS[src.kind].toLowerCase() : src.kind); }
   if (sub && sub.st.stage === "studio" && sub.st.edge !== "cc") { grid = burnSub(grid, gs); stages.push("subtitles (" + sub.font + ")"); }
   if (ov && ov.kind === "timestamp") { grid = TXT.timestamp(grid, gs, ov); stages.push("date/time stamp"); }
   // 2. recording on the component grid (Betacam, D1, DV...)
   const rec = en.recording && s.recording && s.recording.format && REC.FORMATS[s.recording.format] ? s.recording : null;
   const ro = rec ? Object.assign({ seed }, rec) : null;
   if (rec && REC.isGridFormat(rec.format)) { grid = REC.recordGrid(grid, gs, rec.format, ro); stages.push(REC.FORMATS[rec.format].label); }
+  // 2b. a digital stream that has lost data: lost keyframes, slice errors, error smear
+  const st = s.stream;
+  if (en.stream !== false && st && st.mode && st.mode !== "none" && !gs.vertical) {
+    const second = st.oldPicture === "layer" && doc.interferer ? toGrid(cutRegion(doc.interferer, W, H, rect, 0, 0)) : null;
+    const smask = doc.mask && st.selection ? toGrid(cutRegion([doc.mask], W, H, rect, s.shiftX || 0, s.shiftY || 0))[0] : null;
+    grid = STR.stream(grid, gs, Object.assign({ seed }, st), second, smask); stages.push(STR.MODES[st.mode] || st.mode);
+  }
   const ch = s.channel || {};
   let decOpts = en.decoder ? Object.assign({}, s.decoder || {}) : {};
   const rcv = s.receiver || {};
@@ -193,10 +218,12 @@ function run(doc, s, winDoc) {
   // a photograph of the screen: the shutter may catch one field, or one and part of the next, so the two fields are drawn
   // separately; the photograph is made of the whole picture, so a preview renders it all and shows the selected part
   const vw = s.view || {}, photo = mode === "photo", pe = photo ? (vw.exposure || 0) : 0;
-  const twoField = photo && useCRT && pe > 0 && pe < 2 && !g.progressive && !g.fieldSeq;
+  const isPanel = useCRT && s.display && s.display.tube === "panel"; // a flat matrix display in place of the tube (v1.4)
+  const twoField = photo && useCRT && !isPanel && pe > 0 && pe < 2 && !g.progressive && !g.fieldSeq;
   const photoFull = !!(photo && win); // flare, grain, dust, tilt and pull-back all belong to the whole photograph
   const cwin = photoFull ? null : win;
-  if (useCRT && twoField) { pic = DSP.crt(grid, g, PW, PH, Object.assign({}, s.display || {}, { field: 1 }), cwin); picB = DSP.crt(grid, g, PW, PH, Object.assign({}, s.display || {}, { field: 2 }), cwin); }
+  if (isPanel) { pic = PAN.panel(grid, g, PW, PH, s.display); if (!photoFull) pic = crop(pic); }
+  else if (useCRT && twoField) { pic = DSP.crt(grid, g, PW, PH, Object.assign({}, s.display || {}, { field: 1 }), cwin); picB = DSP.crt(grid, g, PW, PH, Object.assign({}, s.display || {}, { field: 2 }), cwin); }
   else if (useCRT) pic = DSP.crt(grid, g, PW, PH, s.display || {}, cwin);
   else { // frame-grab: deinterlace choice, then scale to square pixels
     const di = (s.view && s.view.deinterlace) || "weave";
@@ -206,7 +233,7 @@ function run(doc, s, winDoc) {
     for (const p of pic) for (let i = 0; i < p.length; i++) p[i] = p[i] < 0 ? 0 : (p[i] > 1 ? 1 : p[i]);
   }
   if (mode === "lens" && useCRT) { // the whole picture is needed for the lens: render it all, then crop to the preview window
-    const full = win ? DSP.crt(grid, g, PW, PH, s.display || {}, null) : pic;
+    const full = win ? (isPanel ? PAN.panel(grid, g, PW, PH, s.display) : DSP.crt(grid, g, PW, PH, s.display || {}, null)) : pic;
     const lv = DSP.lensView(full, PW, PH, s.view || {});
     pic = crop(lv); stages.push("through the magnifying lens");
   }
@@ -214,11 +241,12 @@ function run(doc, s, winDoc) {
     screenPhoto(pic, cwin ? cwin.x1 - cwin.x0 : PW, cwin ? cwin.y1 - cwin.y0 : PH, Object.assign({ seed }, vw), { x0: cwin ? cwin.x0 : 0, y0: cwin ? cwin.y0 : 0, w: PW, h: PH }, picB);
     if (photoFull) pic = crop(pic);
   }
-  stages.push(useCRT ? (photo ? "screen photo" + (twoField ? (pe <= 1 ? " (one field)" : " (one field and part of the next)") : "") + (vw.finish === "bw" ? " on a black-and-white print" : "") : "CRT") : "frame-grab");
+  stages.push(isPanel ? (PAN.PANELS[s.display.panel] ? PAN.PANELS[s.display.panel].label : "panel") + (photo ? " (screen photo)" : "") : useCRT ? (photo ? "screen photo" + (twoField ? (pe <= 1 ? " (one field)" : " (one field and part of the next)") : "") + (vw.finish === "bw" ? " on a black-and-white print" : "") : "CRT") : "frame-grab");
   return finish(pic, s, rect, W, H, PW, PH, win, g, stages);
 }
 // Result: planes plus where they go. Native: the picture alone. Otherwise the document area (window or whole doc, matte black).
 function finish(pic, s, rect, W, H, PW, PH, win, g, stages) {
+  if (!win && paperOn(s)) { pic = PAP.paper(pic, PW, PH, Object.assign({ seed: s.seed || 1 }, s.paper)); stages.push(PAP.KINDS[s.paper.kind].toLowerCase()); }
   if (s.native) return { planes: pic, left: 0, top: 0, width: PW, height: PH, rect, g, stages };
   if (win) return { planes: pic, left: rect.x + win.x0, top: rect.y + win.y0, width: win.x1 - win.x0, height: win.y1 - win.y0, rect, g, stages };
   const out = [0, 1, 2].map(() => new Float32Array(W * H));

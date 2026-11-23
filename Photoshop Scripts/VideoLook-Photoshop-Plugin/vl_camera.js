@@ -89,6 +89,21 @@ const CAMERAS = {
   vidicon_portapak: { label: "Portapak vidicon (Sony, 1970)", tubes: 1, mono: true,
     mtf: [[1, 0.8], [2.5, 0.45], [3.5, 0.2]], transfer: { type: "power", g: 0.65 }, lag: 0.45, knee: 0.85, kneeSlope: 0.3,
     noiseDb: 35, noise: "tri", flare: 0.04, contour: 0.2, gamma: "power045", clip: 1.0 },
+  // ---- v1.4: night vision (an intensifier tube relayed by a CCD camera) and thermal ----
+  nv_gen0: { label: "Infrared converter + searchlight (Gen 0, 1940s-50s)", tubes: 1, nvGen: 0, nvLight: 0.5, chickenWire: 0,
+    mtf: [[1, 0.8], [2.5, 0.45], [3.5, 0.2]], transfer: { type: "power", g: 1.0 }, noiseDb: 38, noise: "flat", flare: 0.05, contour: 0, gamma: "power045", clip: 1.0 },
+  nv_gen1: { label: "Starlight scope (Gen 1, 1960s)", tubes: 1, nvGen: 1, nvLight: 0.35, chickenWire: 0.2, lag: 0.25,
+    mtf: [[1, 0.85], [2.5, 0.55], [3.5, 0.3]], transfer: { type: "power", g: 1.0 }, noiseDb: 40, noise: "flat", flare: 0.04, contour: 0, gamma: "power045", clip: 1.0 },
+  nv_gen2: { label: "Microchannel-plate night vision (Gen 2, 1970s-80s)", tubes: 1, nvGen: 2, nvLight: 0.3, honeycomb: 0.6, chickenWire: 0.5,
+    mtf: [[2, 0.9], [3.5, 0.6], [4.5, 0.3]], transfer: { type: "power", g: 1.0 }, smear: 0.03, noiseDb: 44, noise: "flat", flare: 0.03, contour: 0.2, gamma: "bt709", clip: 1.0 },
+  nv_gen3: { label: "GaAs night vision (Gen 3, late 1980s-90s)", tubes: 1, nvGen: 3, nvLight: 0.25, honeycomb: 0.8, chickenWire: 0.3,
+    mtf: [[2, 0.95], [4, 0.75], [5, 0.45]], transfer: { type: "power", g: 1.0 }, smear: 0.03, noiseDb: 46, noise: "flat", flare: 0.03, contour: 0.3, gamma: "bt709", clip: 1.0 },
+  thermal_pyro: { label: "Pyroelectric vidicon thermal camera (firefighting, 1980s)", tubes: 1, thermal: true, thPalette: "whitehot", netd: 0.03, tubeBlur: 3.5, lag: 0.5,
+    mtf: [[4, 1]], transfer: { type: "power", g: 1.0 }, noiseDb: 60, noise: "flat", contour: 0, gamma: "bt709", clip: 1.0 },
+  thermal_160: { label: "Uncooled thermal camera, 160 x 120 (1990s-2000s)", tubes: 1, thermal: true, thRes: [160, 120], thPalette: "whitehot", netd: 0.02, fpn: 0.01, thHalo: 0.8,
+    mtf: [[4, 1]], transfer: { type: "power", g: 1.0 }, noiseDb: 60, noise: "flat", contour: 0, gamma: "bt709", clip: 1.0 },
+  thermal_320: { label: "Uncooled thermal camera, 320 x 240", tubes: 1, thermal: true, thRes: [320, 240], thPalette: "ironbow", netd: 0.01, fpn: 0.005, thHalo: 0.3,
+    mtf: [[4, 1]], transfer: { type: "power", g: 1.0 }, noiseDb: 60, noise: "flat", contour: 0, gamma: "bt709", clip: 1.0 },
   dv3ccd: { label: "DV 3-CCD (1995-2005)", tubes: 3,
     mtf: [[2, 0.95], [4, 0.85], [5.5, 0.7]], transfer: { type: "power", g: 1.0 }, smear: 0.02,
     noiseDb: 50, noise: "flat", flare: 0.01, contour: 0.55, gamma: "bt709", knee: 0.9, kneeSlope: 0.35, clip: 1.09 }, // [MFR Sony PD150]
@@ -178,6 +193,123 @@ function oetf(kind, L) {
 /* ---------- the stage ---------- */
 /* grid: [R,G,B] sRGB code values on ns x lines; g: geometry; cam: CAMERAS entry merged with user overrides;
  * o: { exposure (stops), seed }. Returns R'G'B' (camera output, video levels 0..clip). */
+/* ---------- night vision and thermal (v1.4) ---------- */
+/* Image intensifier seen through a relay camera. Generation figures [SEC Wikipedia Night-vision device; Newcon / ATN
+ * glossaries]: Gen 0 (WWII) an infrared converter that needs an infrared searchlight; Gen 1 (1960s, Starlight scope 1964)
+ * about 1,000x gain, needs moonlight, cascaded tubes show pincushion distortion; Gen 2 (1970s) adds the microchannel plate,
+ * about 20,000x, with edge glow as a known blemish; Gen 3 (late 1980s) GaAs photocathode, its ion-barrier film increasing the
+ * halo round lights. Green screens because the eye is most sensitive there. Honeycomb (hexagonal fibre-bundle pattern, seen
+ * at high light) and chicken wire (dark hexagonal lines) are listed blemishes; scintillation is normal with an MCP [SEC].
+ * Every amount below is [EST]; a visible photograph has no near-infrared record, so foliage and skin are guessed from colour. */
+function hexEdge(x, y, s) { // 1 at a hexagon's centre, 0 on its edge; flat-topped lattice, s = centre-to-corner
+  const q = (2 / 3 * x) / s, r = (-1 / 3 * x + Math.sqrt(3) / 3 * y) / s, cxz = q, czz = r, cyz = -q - r;
+  let rx = Math.round(cxz), ry = Math.round(cyz), rz = Math.round(czz);
+  const dx = Math.abs(rx - cxz), dy = Math.abs(ry - cyz), dz = Math.abs(rz - czz);
+  if (dx > dy && dx > dz) rx = -ry - rz; else if (dy > dz) ry = -rx - rz; else rz = -rx - ry;
+  const px = s * 1.5 * rx, py = s * Math.sqrt(3) * (rz + rx / 2), ax = Math.abs(x - px), ay = Math.abs(y - py);
+  const m = Math.max(ay, ax * Math.sqrt(3) / 2 + ay / 2);
+  return Math.max(0, 1 - m / (s * Math.sqrt(3) / 2));
+}
+function intensifier(L, ns, nl, cam, o, rnd) {
+  const n = ns * nl, gen = cam.nvGen, asp = o.aspect > 0 ? o.aspect : 4 / 3;
+  const light = o.nvLight !== undefined ? o.nvLight : (cam.nvLight !== undefined ? cam.nvLight : 0.4);
+  const nirW = [0.85, 0.3, 0.45, 0.7][gen] || 0.4; // GaAs reaches further into the near infrared [EST weighting]
+  const cx = (ns - 1) / 2, cy = (nl - 1) / 2, S = new Float32Array(n);
+  for (let y = 0; y < nl; y++) for (let x = 0; x < ns; x++) {
+    const i = y * ns + x, r = L[0][i], g = L[1][i], b = L[2][i], vis = 0.299 * r + 0.587 * g + 0.114 * b;
+    const leaf = Math.max(0, Math.min(1, (g - Math.max(r, b)) * 8 / (g + 0.02)));
+    let v = vis + nirW * ((0.7 * r + 0.25 * g + 0.05 * b + leaf * 1.2 * g) - vis);
+    if (gen === 0) { const u = (x - cx) / cx * asp, w = (y - cy) / cy; v *= 1.4 / (1 + (u * u + w * w) * 1.6); } // the searchlight's beam
+    S[i] = Math.max(0, v);
+  }
+  // automatic brightness control: the tube holds the screen's average brightness [SEC ABC exists; target EST]
+  let m = 0; for (let i = 0; i < n; i++) m += S[i]; m /= n; const k = 0.3 / Math.max(1e-4, m);
+  for (let i = 0; i < n; i++) S[i] *= k;
+  // tube and fibre-optic sharpness [EST per generation]
+  const sig = [1.4, 1.3, 0.9, 0.7][gen] || 1; blur2D(S, ns, nl, sig * ns / 720, sig * nl / 576);
+  // halo round bright points: light bounced between photocathode and MCP; larger behind the Gen 3 ion barrier [SEC; size EST]
+  const haloR = ([0, 0.006, 0.01, 0.018][gen] || 0.01) * ns;
+  if (haloR > 0) { const hl = Float32Array.from(S, v => v > 0.9 ? v - 0.9 : 0); blur2D(hl, ns, nl, haloR, haloR * nl / ns * asp); blur2D(hl, ns, nl, haloR * 0.5, haloR * 0.5 * nl / ns * asp); for (let i = 0; i < n; i++) S[i] += hl[i] * 6; }
+  // photon noise: fewer photons in darker scenes [EST photon counts]; MCP scintillation: brief bright specks [SEC; density EST]
+  const Np = 15 + 600 * light * light;
+  for (let i = 0; i < n; i++) S[i] = Math.max(0, S[i] + Math.sqrt(Math.max(S[i], 0.02) / Np) * VC.gaussRand(rnd));
+  if (gen >= 2) { const sp = Math.round(n * 0.0015 * (1 - light)); for (let s = 0; s < sp; s++) { const x = Math.floor(rnd() * ns), y = Math.floor(rnd() * nl), a = 0.4 + 0.8 * rnd(); S[y * ns + x] += a; if (x + 1 < ns) S[y * ns + x + 1] += a * 0.6; } blur2D(S, ns, nl, 0.5, 0.4); }
+  // phosphor screen saturation: highlights flatten and spread [EST]
+  for (let i = 0; i < n; i++) { const v = S[i]; S[i] = v / (1 + 0.35 * v); }
+  // fixed pattern: honeycomb brightness modulation at high light, chicken wire lines [SEC blemish names; size and depth EST]
+  const hexS = ns / 60, honey = (cam.honeycomb || 0) * Math.max(0, light - 0.4), wire = cam.chickenWire || 0;
+  const rndW = VC.mulberry32(4711), off = [rndW() * 100, rndW() * 100];
+  if (honey > 0 || wire > 0) for (let y = 0; y < nl; y++) for (let x = 0; x < ns; x++) {
+    const e = hexEdge(x + off[0], (y * ns / nl / asp) + off[1], hexS), i = y * ns + x;
+    S[i] *= 1 - honey * 0.08 * (1 - e) - (e < 0.035 ? wire * 0.22 * (1 - e / 0.035) : 0);
+  }
+  // cascaded Gen 1 tubes: pincushion [SEC]; amount [EST]. Round image circle of the tube; Gen 2 edge glow [SEC blemish; EST]
+  const pin = gen === 1 ? 0.07 : gen === 0 ? 0.04 : 0, circ = cam.nvCircle !== undefined ? cam.nvCircle : 1, glow = gen === 2 ? 0.1 : 0;
+  const R = 0.5 * 1.02, out = new Float32Array(n);
+  for (let y = 0; y < nl; y++) for (let x = 0; x < ns; x++) {
+    const u = (x - cx) / nl * (ns / ns), uu = (x - cx) / (ns - 1) * asp, vv = (y - cy) / (nl - 1), r2 = uu * uu + vv * vv, r = Math.sqrt(r2);
+    let sx = x, sy = y;
+    if (pin) { const f = 1 / (1 + pin * r2 * 4); sx = cx + (x - cx) * f; sy = cy + (y - cy) * f; }
+    const x0 = Math.max(0, Math.min(ns - 2, sx | 0)), y0 = Math.max(0, Math.min(nl - 2, sy | 0)), fx = sx - x0, fy = sy - y0;
+    let v = (S[y0 * ns + x0] * (1 - fx) + S[y0 * ns + x0 + 1] * fx) * (1 - fy) + (S[(y0 + 1) * ns + x0] * (1 - fx) + S[(y0 + 1) * ns + x0 + 1] * fx) * fy;
+    if (circ) { const edge = Math.max(0, Math.min(1, (R * circ - r) / 0.012)); v = v * edge * (1 - 0.35 * r2) + (glow && r > R * circ - 0.025 ? glow * edge * (0.5 + 0.5 * rnd()) : 0); }
+    out[y * ns + x] = v;
+  }
+  const tint = cam.nvWhite ? [0.85, 0.9, 1.0] : [0.25, 1.0, 0.3]; // green screen; white phosphor in later tubes [EST colours]
+  for (let c = 0; c < 3; c++) for (let i = 0; i < n; i++) L[c][i] = out[i] * tint[c];
+}
+/* Thermal imaging. Uncooled sensors typically 160 x 120 or 320 x 240 (up to 640 x 480 and more), long-wave infrared
+ * 7-14 um; NETD about 70-80 mK for early ferroelectric (BST) sensors, down to about 20 mK [SEC]. The pyroelectric vidicon
+ * served mainly in firefighting cameras [SEC]. Palettes after FLIR's descriptions: White Hot (most common), Black Hot,
+ * Ironbow ("black through blue ... magenta, orange, yellow to bright white"), Rainbow, Arctic (gold and blue), Lava [SEC];
+ * the colour stops are [EST]. A visible photograph has no temperature: skin, lamps, sky and foliage are guessed from colour
+ * and brightness [EST throughout]. */
+const THERMAL_PALETTES = {
+  whitehot: [[0, "000000"], [1, "FFFFFF"]],
+  blackhot: [[0, "FFFFFF"], [1, "000000"]],
+  ironbow: [[0, "000000"], [0.15, "20008C"], [0.35, "9A0E9E"], [0.55, "E0402C"], [0.75, "F99B0C"], [0.9, "FCE33A"], [1, "FFFFF0"]],
+  rainbow: [[0, "000000"], [0.12, "2A00A0"], [0.28, "0060FF"], [0.44, "00D0C0"], [0.58, "40E020"], [0.72, "F0F000"], [0.86, "FF6000"], [1, "FF0000"]],
+  arctic: [[0, "05103A"], [0.35, "1F5FB8"], [0.6, "8AB8D8"], [0.75, "D8A030"], [1, "FFF2B0"]],
+  lava: [[0, "000000"], [0.25, "0A2A5A"], [0.45, "5A2A6A"], [0.65, "C83010"], [0.85, "F8A020"], [1, "FFFFFF"]],
+};
+function paletteAt(stops, t) {
+  t = t < 0 ? 0 : t > 1 ? 1 : t;
+  for (let k = 1; k < stops.length; k++) if (t <= stops[k][0]) {
+    const a = stops[k - 1], b = stops[k], f = (t - a[0]) / Math.max(1e-6, b[0] - a[0]);
+    return [0, 2, 4].map(j => { const ca = parseInt(a[1].slice(j, j + 2), 16) / 255, cb = parseInt(b[1].slice(j, j + 2), 16) / 255; return ca + (cb - ca) * f; });
+  }
+  const l = stops[stops.length - 1][1]; return [0, 2, 4].map(j => parseInt(l.slice(j, j + 2), 16) / 255);
+}
+function thermal(L, ns, nl, cam, o, rnd) {
+  const n = ns * nl, T = new Float32Array(n);
+  for (let i = 0; i < n; i++) {
+    const r = Math.max(0, Math.min(1, L[0][i])), g = Math.max(0, Math.min(1, L[1][i])), b = Math.max(0, Math.min(1, L[2][i])), mx = Math.max(r, g, b), mn = Math.min(r, g, b), lum = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    const sat = mx > 0 ? (mx - mn) / mx : 0;
+    const skin = r > g && g > b && sat > 0.15 && sat < 0.75 && mx > 0.03 ? Math.min(1, (r - g) / (mx + 1e-4) * 4) * Math.min(1, (g - b) / (mx + 1e-4) * 4) : 0;
+    const sky = b > r && b >= g && lum > 0.25 ? Math.min(1, (b - r) / (mx + 1e-4) * 2) : 0;
+    const leaf = Math.max(0, Math.min(1, (g - Math.max(r, b)) * 6 / (g + 0.02)));
+    const lamp = lum > 0.92 ? (lum - 0.92) / 0.08 : 0;
+    T[i] = 0.42 + 0.1 * (Math.sqrt(lum) - 0.5) + 0.5 * skin - 0.35 * sky - 0.1 * leaf + 0.5 * lamp;
+  }
+  blur2D(T, ns, nl, ns / 180, nl / 180); // heat spreads; surfaces show less texture than in light [EST]
+  const res = o.thRes || cam.thRes;
+  let tw = ns, th = nl, F = T;
+  if (res) { tw = res[0]; th = res[1]; F = VC.resize(T, ns, nl, tw, th); }
+  else blur2D(F, ns, nl, (cam.tubeBlur || 3) * ns / 720, (cam.tubeBlur || 3) * nl / 576); // pyroelectric vidicon: a soft tube [EST]
+  // ferroelectric "halo": hot objects edged by a dark ring (and the reverse) from the sensor's own processing [EST]
+  const halo = o.thHalo !== undefined ? o.thHalo : (cam.thHalo || 0);
+  if (halo) { const b = Float32Array.from(F); blur2D(b, tw, th, tw / 40, tw / 40); for (let i = 0; i < F.length; i++) F[i] += halo * (F[i] - b[i]); }
+  // automatic gain: the hottest and coldest 1% set the span [SEC AGC exists; percentiles EST]
+  const srt = Float32Array.from(F).sort(), lo = srt[Math.floor(F.length * 0.01)], hi = srt[Math.floor(F.length * 0.99)], sp = Math.max(0.05, hi - lo);
+  const netd = cam.netd || 0.01, fpn = cam.fpn || 0, cols = new Float32Array(tw); for (let x = 0; x < tw; x++) cols[x] = VC.gaussRand(rnd) * fpn;
+  const lvl = o.thLevel || 0, gain = o.thGain || 1;
+  for (let y = 0; y < th; y++) for (let x = 0; x < tw; x++) { const i = y * tw + x; F[i] = ((F[i] - lo) / sp - 0.5) * gain + 0.5 + lvl + VC.gaussRand(rnd) * netd + cols[x]; }
+  const back = res ? VC.resize(F, tw, th, ns, nl) : F; // VC.resize averages down and interpolates up: the display's own scaling
+  if (res && (o.thBlocky || cam.thBlocky)) { for (let y = 0; y < nl; y++) for (let x = 0; x < ns; x++) back[y * ns + x] = F[Math.min(th - 1, Math.floor(y * th / nl)) * tw + Math.min(tw - 1, Math.floor(x * tw / ns))]; }
+  const stops = THERMAL_PALETTES[o.thPalette || cam.thPalette || "whitehot"] || THERMAL_PALETTES.whitehot;
+  for (let i = 0; i < n; i++) { const c = paletteAt(stops, back[i]); L[0][i] = c[0]; L[1][i] = c[1]; L[2][i] = c[2]; }
+}
+
 function camera(grid, g, cam, o) {
   o = o || {};
   const ns = g.ns, nl = g.lines, n = ns * nl;
@@ -186,8 +318,40 @@ function camera(grid, g, cam, o) {
   // 1. scene linear light
   const L = grid.map(p => { const a = new Float32Array(n); for (let i = 0; i < n; i++) a[i] = srgbToLin(p[i]) * expo; return a; });
   const pxPerPW = ns; // samples across the picture width
+  // wide-angle lens (v1.3): barrel distortion r_src = r (1 + k r^2), r from the centre in units of the half-diagonal;
+  // "aperture angles of 180 degrees or more are possible only with large amounts of barrel distortion" [SEC Wikipedia
+  // Fisheye lens]; the amount per lens [EST]. Outside the image circle the tube or chip sees black.
+  const lb = o.lensBarrel !== undefined ? o.lensBarrel : (cam.lensBarrel || 0);
+  if (lb > 0) {
+    const asp0 = o.aspect > 0 ? o.aspect : 4 / 3, cx = (ns - 1) / 2, cy = (nl - 1) / 2, hd = Math.sqrt(asp0 * asp0 + 1);
+    for (let c = 0; c < 3; c++) { const src = L[c], dst = new Float32Array(n);
+      for (let y = 0; y < nl; y++) for (let x = 0; x < ns; x++) {
+        const u = (x - cx) / cx * asp0, v = (y - cy) / cy, r2 = (u * u + v * v) / (hd * hd), k = 1 + lb * r2;
+        const sx = cx + (x - cx) * k, sy = cy + (y - cy) * k; if (sx < 0 || sy < 0 || sx > ns - 1 || sy > nl - 1) continue;
+        const x0 = sx | 0, y0 = sy | 0, fx = sx - x0, fy = sy - y0, x1 = Math.min(ns - 1, x0 + 1), y1 = Math.min(nl - 1, y0 + 1);
+        dst[y * ns + x] = (src[y0 * ns + x0] * (1 - fx) + src[y0 * ns + x1] * fx) * (1 - fy) + (src[y1 * ns + x0] * (1 - fx) + src[y1 * ns + x1] * fx) * fy;
+      } L[c] = dst; }
+  }
+  // near-infrared night picture (v1.3): a monochrome CCD under an 850 nm illuminator [EST throughout: a visible photo
+  // has no infrared record]. Foliage reflects near-infrared strongly, so green plants turn pale; the red channel stands
+  // in for skin and fabric; the illuminator lights the centre most, falling off towards the corners.
+  const ir = o.ir !== undefined ? o.ir : (cam.ir || 0);
+  if (ir > 0) {
+    const cx = (ns - 1) / 2, cy = (nl - 1) / 2, asp0 = o.aspect > 0 ? o.aspect : 4 / 3;
+    for (let y = 0; y < nl; y++) for (let x = 0; x < ns; x++) {
+      const i = y * ns + x, r = L[0][i], gg = L[1][i], b = L[2][i], vis = 0.299 * r + 0.587 * gg + 0.114 * b;
+      const leaf = Math.max(0, Math.min(1, (gg - Math.max(r, b)) * 8 / (gg + 0.02)));
+      const nir = 0.7 * r + 0.25 * gg + 0.05 * b + leaf * 1.4 * gg + 0.15 * vis;
+      const u = (x - cx) / cx * asp0, v = (y - cy) / cy, fall = 1 / (1 + (u * u + v * v) * 0.9 * ir);
+      const val = vis + ir * (nir * fall * 1.3 - vis);
+      L[0][i] = L[1][i] = L[2][i] = Math.max(0, val);
+    }
+  }
   // intermediate film: the scene is first a fast-processed film image [EST forms, see CAMERAS entry]
   if (cam.film) filmImage(L, ns, nl, cam.film, rnd);
+  // thermal camera: the palette picture is the output (display values, already gamma-coded) [see thermal()]
+  if (cam.thermal) { thermal(L, ns, nl, cam, o, rnd); return L; }
+  if (cam.nvGen !== undefined) intensifier(L, ns, nl, cam, o, rnd);
   // low-resolution sensor (PXL-2000): box-average onto the sensor's cells, read out as analogue lines (soft across, stepped
   // down), and shown as an inset in the middle of the TV frame [SEC layout; inset size EST]
   if (cam.sensor) {
@@ -336,5 +500,5 @@ function camera(grid, g, cam, o) {
   return L;
 }
 
-const api = { CAMERAS, camera, oetf, firFromResponse, srgbToLin, gaussK, blur2D, blurV, shiftPlane };
+const api = { THERMAL_PALETTES, CAMERAS, camera, oetf, firFromResponse, srgbToLin, gaussK, blur2D, blurV, shiftPlane };
 if (typeof module !== "undefined" && module.exports) module.exports = api;

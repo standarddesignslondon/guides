@@ -14,12 +14,12 @@
   <h1>reverie</h1>
   <p class="ch-sub">A Lucid-style granular playground: grains that stay in key (pitch tracking, scale retune, chords and arps, tuned filters, scale-locked grain delays) and in time (grid retriggers, synced rates, timeline-locked scrub and LFOs), with a wireframe face and a pop-out panel.</p>
 </header>
-<figure class="shot"><div class="shot-frame"><img src="../images/reverie-00.png" alt="Reverie"></div><figcaption>reverie</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-01.png" alt="Face — Grain tab, with the grain window shape"></div><figcaption>face — grain tab, with the grain window shape</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-02.png" alt="Face — Play tab"></div><figcaption>face — play tab</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-03.png" alt="Face — Pitch tab"></div><figcaption>face — pitch tab</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-04.png" alt="Face — Filter tab, with the per-grain filter response"></div><figcaption>face — filter tab, with the per-grain filter response</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-05.png" alt="Face — Image / Out tab, with the stereo field"></div><figcaption>face — image / out tab, with the stereo field</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-06.png" alt="Face — Delay tab, with the tap ladder"></div><figcaption>face — delay tab, with the tap ladder</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-07.png" alt="Face — Mod tab"></div><figcaption>face — mod tab</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-08.png" alt="Face — Scope / Key tab: live LFOs, envelope, mini waveform, keyboard"></div><figcaption>face — scope / key tab: live lfos, envelope, mini waveform, keyboard</figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="../images/reverie-00.png" alt="Reverie"></div><figcaption>reverie</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-push.png" alt="Push 3 screen, Live 13 (rendered offline; Push&#x27;s own font differs slightly)"></div><figcaption>push 3 screen, live 13 (rendered offline; push&#x27;s own font differs slightly)</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-01.png" alt="Face — Grain tab, with the grain window shape"></div><figcaption>face — grain tab, with the grain window shape</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-02.png" alt="Face — Play tab"></div><figcaption>face — play tab</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-03.png" alt="Face — Pitch tab"></div><figcaption>face — pitch tab</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-04.png" alt="Face — Filter tab, with the per-grain filter response"></div><figcaption>face — filter tab, with the per-grain filter response</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-05.png" alt="Face — Image / Out tab, with the stereo field"></div><figcaption>face — image / out tab, with the stereo field</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-06.png" alt="Face — Delay tab, with the tap ladder"></div><figcaption>face — delay tab, with the tap ladder</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-07.png" alt="Face — Mod tab"></div><figcaption>face — mod tab</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/reverie-08.png" alt="Face — Scope / Key tab: live LFOs, envelope, mini waveform, keyboard"></div><figcaption>face — scope / key tab: live lfos, envelope, mini waveform, keyboard</figcaption></figure>
 <section class="block" id="about">
   <div class="block-label"><span class="bl-num">26.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Built overnight from the Minimal Audio Lucid manual. A 43-second capture ring records everything; a playhead moves through it (<b>Stretch</b> — slowed, reversed or frozen from each Grid, Transient or Manual retrigger — or <b>Scrub</b>, placed by hand or by an LFO); a scheduler fires grains at a free, note-synced or scale-note rate. Every grain gets its own pitch (detected, retuned to the scale, transposed in degrees, chorded or arpeggiated), its own filter (SVF, tuned comb or reducer), its own pan position from a pattern, and up to eight delayed copies shifted by a pattern that stays in key. Two LFOs and an envelope follower reach sixteen engine targets. The <b>face</b> in Live&#x27;s device row is a tabbed window onto one <b>panel</b> of controls; <b>VIEW</b> opens that panel as a floating window with the waveform, the grains, the scopes and the keyboard. Working title.</p>
-    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v0.2 — face + panel</dd></div><div class="fact"><dt>folder</dt><dd>Reverie Device</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>v0.3 — push screen</dd></div><div class="fact"><dt>version</dt><dd>0.3</dd></div><div class="fact"><dt>push screen</dt><dd>Live 13 / Max 9.2</dd></div><div class="fact"><dt>folder</dt><dd>Reverie Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -113,12 +113,13 @@
 </div>
 <div class="buttons"><span class="btn-label">buttons</span>
 <span class="btn">Link</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
 <div class="bank-head">play 1</div>
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
-<div class="enc"><span class="enc-n">1</span><span class="enc-l">Play Mode</span></div>
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Play</span></div>
 <div class="enc"><span class="enc-n">2</span><span class="enc-l">Trigger</span></div>
 <div class="enc"><span class="enc-n">3</span><span class="enc-l">Retrig</span></div>
 <div class="enc"><span class="enc-n">4</span><span class="enc-l">Stretch</span></div>
@@ -131,13 +132,14 @@
 <span class="btn">Activate</span>
 <span class="btn">Reverse</span>
 <span class="btn">Hold</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
 <div class="bank-head">play 2</div>
 <div class="encoders" style="grid-template-columns:repeat(8,1fr)">
 <div class="enc"><span class="enc-n">1</span><span class="enc-l">Scrub</span></div>
-<div class="enc"><span class="enc-n">2</span><span class="enc-l">Scrub Mode</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Scrub Q</span></div>
 <div class="enc"><span class="enc-n">3</span><span class="enc-l">Loop Len</span></div>
 <div class="enc"><span class="enc-n">4</span><span class="enc-l">Level</span></div>
 <div class="enc empty"><span class="enc-n">5</span><span class="enc-l">&ndash;</span></div>
@@ -149,6 +151,7 @@
 <span class="btn">Activate</span>
 <span class="btn">Reverse</span>
 <span class="btn">Hold</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -163,6 +166,9 @@
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Chord</span></div>
 <div class="enc"><span class="enc-n">8</span><span class="enc-l">Voices</span></div>
 </div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
+</div>
 </div>
 <div class="bank">
 <div class="bank-head">chord</div>
@@ -171,10 +177,13 @@
 <div class="enc"><span class="enc-n">2</span><span class="enc-l">Int 2</span></div>
 <div class="enc"><span class="enc-n">3</span><span class="enc-l">Int 3</span></div>
 <div class="enc"><span class="enc-n">4</span><span class="enc-l">Arp Rand</span></div>
-<div class="enc"><span class="enc-n">5</span><span class="enc-l">Chord Spread</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Ch Sprd</span></div>
 <div class="enc empty"><span class="enc-n">6</span><span class="enc-l">&ndash;</span></div>
 <div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
 <div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -191,6 +200,7 @@
 </div>
 <div class="buttons"><span class="btn-label">buttons</span>
 <span class="btn">F Scale</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -201,13 +211,14 @@
 <div class="enc"><span class="enc-n">3</span><span class="enc-l">Pan</span></div>
 <div class="enc"><span class="enc-n">4</span><span class="enc-l">Width</span></div>
 <div class="enc"><span class="enc-n">5</span><span class="enc-l">Dimension</span></div>
-<div class="enc"><span class="enc-n">6</span><span class="enc-l">Dry Wet</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Dry/Wet</span></div>
 <div class="enc"><span class="enc-n">7</span><span class="enc-l">Gain</span></div>
 <div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
 </div>
 <div class="buttons"><span class="btn-label">buttons</span>
 <span class="btn">Smooth</span>
 <span class="btn">Limiter</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -224,6 +235,7 @@
 </div>
 <div class="buttons"><span class="btn-label">buttons</span>
 <span class="btn">Dly Sync</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -240,6 +252,7 @@
 </div>
 <div class="buttons"><span class="btn-label">buttons</span>
 <span class="btn">Dly Sync</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -251,8 +264,11 @@
 <div class="enc"><span class="enc-n">4</span><span class="enc-l">L1 Shape</span></div>
 <div class="enc"><span class="enc-n">5</span><span class="enc-l">L1 Depth</span></div>
 <div class="enc"><span class="enc-n">6</span><span class="enc-l">Env Target</span></div>
-<div class="enc"><span class="enc-n">7</span><span class="enc-l">Env Attack</span></div>
-<div class="enc"><span class="enc-n">8</span><span class="enc-l">Env Release</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Env Att</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Env Rel</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
 </div>
 </div>
 <div class="bank">
@@ -267,7 +283,10 @@
 <div class="enc empty"><span class="enc-n">7</span><span class="enc-l">&ndash;</span></div>
 <div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
 </div>
-<p class="bank-note">Static banks baked into the device (right on a fresh add); toggles are the top-row buttons from slot 2.</p>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Screen</span>
+</div>
+<p class="bank-note">Static banks baked into the device (right on a fresh add); toggles are the top-row buttons from slot 2. <b>Screen</b> is the last button above the display (slot 8) in every bank: it switches between the device&#x27;s own picture and Push&#x27;s normal view.</p>
 </div></div>
 </section>
 <section class="block" id="workflow">
@@ -283,10 +302,20 @@
   <h2>gotchas</h2></div>
   <div class="block-body"><ul class="gotchas"><li>Grains are read ~32 ms behind the live input, plus the grain length when a grain is longer than that (a forward grain can never read the future). Treat it like Lucid&#x27;s own 28 ms.</li><li>Pitch tracking is monophonic. Chords and noise report no pitch (no red dot on the keyboard), so Scale mode then transposes in degrees from the Root — musical, but no retune.</li><li>A freeze is protected: if the capture ring is about to overwrite a frozen region (≈ 37 s of new input at 48 kHz), recording pauses until the playhead returns towards live.</li><li>The voice pool is 40 grains; at audio-rate Rates with long Sizes (or many taps) extra spawns are dropped rather than stolen — turn Link on to keep density sane.</li><li>The panel&#x27;s header status line is a diagnostic: it reads &#x27;engine running, display buffer not connected&#x27; or &#x27;no signal from the engine&#x27; if the displays ever go blank — say which.</li><li>Working title.</li></ul></div>
 </section>
-<section class="block" id="rebuilding">
+<section class="block" id="push-3-screen">
   <div class="block-label"><span class="bl-num">26.6</span>
+  <h2>push 3 screen</h2></div>
+  <div class="block-body"><h3 class="sub">what it shows</h3><p>A violet <b>memory ribbon</b>: the captured sound drawn as a waveform with the playhead across it. Grains appear as glowing seeds at the point they read from: lilac plays forward, rose plays in reverse, cyan seeds are delay taps. The panel on the right changes with the bank you&#x27;re on: in the picture, the Filter bank shows the filter curve with its cutoff.</p>
+<h3 class="sub">the screen button</h3><p><b>Screen</b> is the last button above the display, in every bank. It switches between this picture and Push&#x27;s normal view. Push still draws the encoder names and values on top of the picture, so turning an encoder works exactly as before.</p>
+<h3 class="sub">what it needs</h3><p>Live 13 with Max 9.2 or later, and Push 3, tethered or standalone. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The picture is drawn only while this device is the one showing on Push.</p>
+<h3 class="sub">if push struggles</h3><p>Reverie&#x27;s picture is the busiest of the set. If Push feels sluggish, especially standalone, switch <b>Screen</b> off: the sound doesn&#x27;t change.</p>
+<h3 class="sub">confirmed on push</h3><p>Simon has run this screen on Push 3 (23 Nov 2026). The picture above is the offline render from the Push Screen Kit simulator.</p></div>
+</section>
+<section class="block" id="rebuilding">
+  <div class="block-label"><span class="bl-num">26.7</span>
   <h2>rebuilding</h2></div>
-  <div class="block-body"><p><code>python3 build_reverie.py</code> in the device folder regenerates <code>Reverie.amxd</code> (+ <code>.maxpat</code> / <code>.genexpr</code>, and the two JavaScript files from <code>js_templates.py</code>) with static genexpr checks and patcher/bank asserts; the device is frozen at build with the painter and canvas scripts embedded — no Max freeze step.</p>
+  <div class="block-body"><p><code>python3 build_reverie_v03.py</code> builds v0.3: the v0.2b device unchanged plus the Push screen (<code>reverie_screen.js</code> + the Push Screen Kit), frozen at build. v0.2b is kept as <code>Reverie v0.2b.amxd</code>. The older build scripts beside it rebuild earlier versions and overwrite <code>Reverie.amxd</code>, so run this one last.</p>
+<p><code>python3 build_reverie.py</code> in the device folder regenerates <code>Reverie.amxd</code> (+ <code>.maxpat</code> / <code>.genexpr</code>, and the two JavaScript files from <code>js_templates.py</code>) with static genexpr checks and patcher/bank asserts; the device is frozen at build with the painter and canvas scripts embedded — no Max freeze step.</p>
 <p><code>python3 sim_reverie.py</code> transpiles the real engine to Python and runs 13 suites / 151 checks; <code>node test_ui_node.js</code> runs the painter and canvases under mocks; <code>node render_mock.js</code> draws the panel to an SVG for a look before Live does.</p>
 <p>UI architecture: one embedded bpatcher panel holds every control; the face is a viewport (tab → bpatcher offset — the offset is the translation applied to the content, so tile (x, y) needs (−x, −y)); VIEW → <code>thispatcher front</code> with floating window flags. <code>live.dial</code> / <code>live.toggle</code> keep native behaviour and are repainted with <code>jspainterfile</code> (JS Painter). gen~ streams a 1024-slot display frame through <code>poke~</code> into a <code>buffer~</code> whose name the head canvas coins at load; a 33 ms metro drives the v8ui canvases.</p>
 <p>Lessons: a genexpr→Python transpiler tests the shipped code; store positions as ring indices so float32 Data keeps them exact; a playhead clamp must sit deeper than the recording backstop; never read parameter metadata via getattr in a painter — inject a table keyed by scripting name at build time.</p></div>
@@ -296,7 +325,7 @@
 <footer class="siteftr">
   <div class="sf-col"><span>max for live</span>
   <span>user guide</span></div>
-  <div class="sf-col"><span>generated 2026-11-16</span>
+  <div class="sf-col"><span>generated 2026-11-23</span>
   <span>build_site.py</span></div>
 </footer>
 </body>
