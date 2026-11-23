@@ -19,7 +19,7 @@
   <div class="block-label"><span class="bl-num">03.0</span><h2>about</h2></div>
   <div class="block-body">
     <p class="lead">Not another tape device. Tape degradation is <b>mechanical</b>; shortwave degradation is <b>atmospheric</b>, and the signatures are completely different — multipath comb filtering that sweeps as the ionosphere moves, fades that an AGC chases back up, a receiver hissing into its own noise floor, and interference arriving in bursts. Nine modules, each with a toggle and an amount, all breathing together under one shared drift source: the coherence of everything degrading <i>at the same time</i> is what sells it. Named for Stockhausen&#x27;s <i>Kurzwellen</i> (1968), for players with shortwave receivers.</p>
-    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete · v1.1 push screen awaiting test</dd></div><div class="fact"><dt>version</dt><dd>1.1</dd></div><div class="fact"><dt>push screen</dt><dd>Live 13 / Max 9.2</dd></div><div class="fact"><dt>folder</dt><dd>Kurzwellen Device</dd></div></dl>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>complete · v1.2 crash fix + push screen, awaiting test</dd></div><div class="fact"><dt>version</dt><dd>1.2</dd></div><div class="fact"><dt>push screen</dt><dd>Live 13 / Max 9.2</dd></div><div class="fact"><dt>folder</dt><dd>Kurzwellen Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -133,7 +133,8 @@
 <section class="block" id="rebuilding">
   <div class="block-label"><span class="bl-num">03.7</span>
   <h2>rebuilding</h2></div>
-  <div class="block-body"><p><code>python3 build_kurzwellen_v11.py</code> builds v1.1 from <code>Kurzwellen v1.0.amxd</code> with <code>Push Screen Kit/pushscreen_genfx.py</code>: 18 report outlets for the screen (the sound is unchanged), frozen.</p>
+  <div class="block-body"><p><code>python3 build_kurzwellen_v12.py</code> builds v1.2: v1.1 plus the static-crash fix (Grit&#x27;s envelope variable renamed from <code>ea</code> to <code>gea</code>, which had been overwriting the Events amount, so crashes were about 30 dB quieter than designed). v1.1 is kept as <code>Kurzwellen v1.1.amxd</code>. Run it last: the v1.1 script would write the unfixed version over <code>Kurzwellen.amxd</code>.</p>
+<p><code>python3 build_kurzwellen_v11.py</code> builds v1.1 from <code>Kurzwellen v1.0.amxd</code> with <code>Push Screen Kit/pushscreen_genfx.py</code>: 18 report outlets for the screen (the sound is unchanged), frozen.</p>
 <p><code>python3 build_kurzwellen.py</code> regenerates the <code>.amxd</code> + <code>.maxpat</code> with full validation. <b>No freeze is ever needed</b> — there is no external js anywhere.</p>
 <p><code>python3 sim_kurzwellen.py</code> runs 11 suites mirroring the DSP maths (about 150 s). <code>--full</code> adds the 60 s stability soak.</p>
 <p>Rebuilding from the script alone into an empty folder produces byte-identical files. Never rescue a copy from an old Live Set.</p></div>

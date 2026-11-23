@@ -360,8 +360,8 @@ ITEMS.append({
     "name": "Kurzwellen",
     "kind": "Audio Effect",
     "author": "Claude",
-    "status": "Complete · v1.1 Push screen awaiting test",
-    "facts": {"version": "1.1", "push screen": "Live 13 / Max 9.2"},
+    "status": "Complete · v1.2 crash fix + Push screen, awaiting test",
+    "facts": {"version": "1.2", "push screen": "Live 13 / Max 9.2"},
     "folder": "Kurzwellen Device",
     "extra_images": [{"file": "kurzwellen-push", "caption": "Push 3 screen, Live 13 (rendered offline; Push's own font differs slightly)"}],
     "tagline": "Shortwave-radio simulator \u2014 makes anything sound like it is "
@@ -534,6 +534,7 @@ ITEMS.append({
             {"title": "not yet tried on push", "text": "Built and checked in the offline Push Screen Kit simulator on 23 Nov 2026 (the picture above is its render); not yet run in Live or on Push. The old version is kept beside the new one."},
         ]},
         {"label": "rebuilding", "type": "notes", "data": [
+            "`python3 build_kurzwellen_v12.py` builds v1.2: v1.1 plus the static-crash fix (Grit's envelope variable renamed from `ea` to `gea`, which had been overwriting the Events amount, so crashes were about 30 dB quieter than designed). v1.1 is kept as `Kurzwellen v1.1.amxd`. Run it last: the v1.1 script would write the unfixed version over `Kurzwellen.amxd`.",
             "`python3 build_kurzwellen_v11.py` builds v1.1 from `Kurzwellen v1.0.amxd` with `Push Screen Kit/pushscreen_genfx.py`: 18 report outlets for the screen (the sound is unchanged), frozen.",
         "`python3 build_kurzwellen.py` regenerates the `.amxd` + `.maxpat` with "
         "full validation. **No freeze is ever needed** \u2014 there is no "
