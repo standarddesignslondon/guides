@@ -12,14 +12,14 @@
 <header class="chapter">
   <p class="ch-num">09</p>
   <h1>sw radio</h1>
-  <p class="ch-sub">Tunes a KiwiSDR shortwave receiver anywhere in the world from inside Live.</p>
+  <p class="ch-sub">Tunes a KiwiSDR shortwave receiver anywhere in the world from inside Live, and now from Push 3 standalone, with a 1950s radiogram dial on Push&#x27;s screen.</p>
 </header>
-<figure class="shot"><div class="shot-frame"><img src="../images/sw–radio.png" alt="SW Radio"></div><figcaption>sw radio</figcaption></figure>
+<figure class="shot"><div class="shot-frame"><img src="../images/sw–radio.png" alt="SW Radio"></div><figcaption>sw radio</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/sw-radio-push.png" alt="SW Radio Standalone on Push 3, Radio bank: tuned to a station on the On Now list (rendered offline; Push&#x27;s own font differs slightly)"></div><figcaption>sw radio standalone on push 3, radio bank: tuned to a station on the on now list (rendered offline; push&#x27;s own font differs slightly)</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/sw-radio-push-map.png" alt="Radio bank, touching Receiver: the world map of receivers (rendered offline; Push&#x27;s own font differs slightly)"></div><figcaption>radio bank, touching receiver: the world map of receivers (rendered offline; push&#x27;s own font differs slightly)</figcaption></figure><figure class="shot"><div class="shot-frame"><img src="../images/sw-radio-push-browse.png" alt="Browse bank: the On Now station, the 8 memories and the transmitters on air now (rendered offline; Push&#x27;s own font differs slightly)"></div><figcaption>browse bank: the on now station, the 8 memories and the transmitters on air now (rendered offline; push&#x27;s own font differs slightly)</figcaption></figure>
 <section class="block" id="about">
   <div class="block-label"><span class="bl-num">09.0</span><h2>about</h2></div>
   <div class="block-body">
-    <p class="lead">A Max for Live device can&#x27;t carry live audio in from the internet, so this is a <b>controller</b>: it launches KiwiSDR&#x27;s <code>kiwiclientd</code> in the background, which plays the radio audio into the free <b>BlackHole</b> virtual audio device. Live records that as an input. Frequency and mode change live over rigctl — no restart, no gaps. Only changing server restarts the stream.</p>
-    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>folder</dt><dd>SW Radio Device</dd></div></dl>
+    <p class="lead">A Max for Live device can&#x27;t carry live audio in from the internet, so this is a <b>controller</b>: it launches KiwiSDR&#x27;s <code>kiwiclientd</code> in the background, which plays the radio audio into the free <b>BlackHole</b> virtual audio device. Live records that as an input. Frequency and mode change live over rigctl — no restart, no gaps. Only changing server restarts the stream. <b>SW Radio Standalone</b>, a separate device (see below), has no Mac parts at all: it talks to the receiver itself and the radio comes out of the device like an instrument, so it runs on Push 3 standalone, with its own picture on Push&#x27;s screen.</p>
+    <dl class="facts"><div class="fact"><dt>type</dt><dd>audio effect</dd></div><div class="fact"><dt>built by</dt><dd>claude</dd></div><div class="fact"><dt>state</dt><dd>working</dd></div><div class="fact"><dt>standalone version</dt><dd>SW Radio Standalone v0.3c</dd></div><div class="fact"><dt>standalone folder</dt><dd>SW Radio Standalone Device</dd></div><div class="fact"><dt>push screen</dt><dd>Live 13 / Max 9.2</dd></div><div class="fact"><dt>folder</dt><dd>SW Radio Device</dd></div></dl>
   </div>
 </section>
 <section class="block" id="quick-start">
@@ -65,6 +65,90 @@
   <div class="block-label"><span class="bl-num">09.5</span>
   <h2>rebuilding</h2></div>
   <div class="block-body"><p><code>python3 build_patch.py</code> rebuilds the device. Required after any change to the <code>SERVERS</code> array, since the receiver menu is a fixed-list Live parameter.</p></div>
+</section>
+<section class="block" id="standalone-version">
+  <div class="block-label"><span class="bl-num">09.6</span>
+  <h2>standalone version</h2></div>
+  <div class="block-body"><h3 class="sub">what it is</h3><p><code>SW Radio Standalone.amxd</code> (in <code>SW Radio Standalone Device/</code>) is a rebuild for Push 3 standalone. The original needed a Python program and BlackHole on the Mac; this one connects to the KiwiSDR directly from a node.script inside the device, and the radio is the device&#x27;s own audio output. Put it on an audio track and switch <b>Power</b> on. Everything is embedded, nothing sits beside it.</p>
+<h3 class="sub">getting it onto push</h3><p>Use it in a Set on the Mac and send that Set to Push, or drag the device onto Push in Live&#x27;s browser. It loads no samples, so the standalone sample-loading limit doesn&#x27;t apply.</p>
+<h3 class="sub">recording it</h3><p>The radio is the device&#x27;s output, so arming its own track won&#x27;t record it. Record it on a second audio track with <b>Input Type = the radio track, Post FX</b> (Push&#x27;s resampling route).</p>
+<h3 class="sub">status</h3><p>Confirmed working on Push 3 standalone (19 Nov 2026), and the screen confirmed on Push (18 Nov).</p></div>
+</section>
+<section class="block" id="standalone-controls">
+  <div class="block-label"><span class="bl-num">09.7</span>
+  <h2>standalone controls</h2></div>
+  <div class="block-body"><h3 class="sub">radio bank</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Power<span class="rng">off / on</span></dt><dd>Connects and disconnects. Turns itself off if the connection fails after trying other receivers, so check Status.</dd></div>
+<div class="ctl-row"><dt>Receiver<span class="rng">37 KiwiSDRs</span></dt><dd>The same receivers as SW Radio, UK Wessex first. Changing it while on reconnects. A full, down or silent receiver hands over to the next in the list by itself (up to 8 tries), and Receiver follows.</dd></div>
+<div class="ctl-row"><dt>Freq<span class="rng">kHz, 1 kHz steps</span></dt><dd>Coarse tuning.</dd></div>
+<div class="ctl-row"><dt>Fine<span class="rng">0.01 kHz steps, endless</span></dt><dd>Added to Freq. Past 1 kHz either way the whole kHz moves into Freq, so you can keep turning. Use it for SSB and CW.</dd></div>
+<div class="ctl-row"><dt>Mode<span class="rng">AM, AM-N, SAM, LSB, USB, CW, FM</span></dt><dd>CW plays the signal as a 500 Hz tone.</dd></div>
+<div class="ctl-row"><dt>Band<span class="rng">LW, MW, 120m - 11m</span></dt><dd>Jumps to the start of a broadcast band. <code>--</code> does nothing.</dd></div>
+<div class="ctl-row"><dt>Volume<span class="rng">dB</span></dt><dd>Output gain (receivers apply their own AGC).</dd></div>
+<div class="ctl-row"><dt>Status<span class="rng">read-only</span></dt><dd>Off, Connecting, On, No network, Busy, No answer, Closed, Time limit.</dd></div>
+</dl>
+<h3 class="sub">browse bank</h3>
+<dl class="ctl">
+<div class="ctl-row"><dt>Region / On Now<span class="rng">EiBi regions / 1, 2, 3 ...</span></dt><dd>Pick a region, then turn On Now to step through what&#x27;s broadcasting there right now, in frequency order, one station per encoder click. Each step retunes. The list refreshes every 5 minutes from eibispace.de.</dd></div>
+<div class="ctl-row"><dt>Memory / Store<span class="rng">8 slots</span></dt><dd>Turning Memory tunes to that slot; Store saves what you&#x27;re tuned to into it. Saved with the Set.</dd></div>
+<div class="ctl-row"><dt>Width<span class="rng">20 - 120 %</span></dt><dd>Passband width, relative to the receiver&#x27;s normal width for the mode.</dd></div>
+<div class="ctl-row"><dt>Drift<span class="rng">kHz</span></dt><dd>Slowly wanders the tuning by up to this much, for evolving textures. 0 = off.</dd></div>
+<div class="ctl-row"><dt>Latency<span class="rng">ms (default 400)</span></dt><dd>Audio held in reserve. Raise it if the sound drops out on weak Wi-Fi.</dd></div>
+</dl></div>
+</section>
+<section class="block" id="standalone-push-3">
+  <div class="block-label"><span class="bl-num">09.8</span>
+  <h2>standalone push 3</h2></div>
+  <div class="block-body"><p class="lead">encoders read left to right. slots marked “–” are intentionally empty.</p>
+<div class="bank">
+<div class="bank-head">radio</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Power</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">Receiver</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Freq</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Fine</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Mode</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Band</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Volume</span></div>
+<div class="enc"><span class="enc-n">8</span><span class="enc-l">Status</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Power</span>
+<span class="btn">Screen</span>
+</div>
+</div>
+<div class="bank">
+<div class="bank-head">browse</div>
+<div class="encoders" style="grid-template-columns:repeat(8,1fr)">
+<div class="enc"><span class="enc-n">1</span><span class="enc-l">Region</span></div>
+<div class="enc"><span class="enc-n">2</span><span class="enc-l">On Now</span></div>
+<div class="enc"><span class="enc-n">3</span><span class="enc-l">Memory</span></div>
+<div class="enc"><span class="enc-n">4</span><span class="enc-l">Store</span></div>
+<div class="enc"><span class="enc-n">5</span><span class="enc-l">Width</span></div>
+<div class="enc"><span class="enc-n">6</span><span class="enc-l">Drift</span></div>
+<div class="enc"><span class="enc-n">7</span><span class="enc-l">Latency</span></div>
+<div class="enc empty"><span class="enc-n">8</span><span class="enc-l">&ndash;</span></div>
+</div>
+<div class="buttons"><span class="btn-label">buttons</span>
+<span class="btn">Store</span>
+<span class="btn">Screen</span>
+</div>
+<p class="bank-note">Buttons from slot 2: <b>Screen</b> is button 3 in both banks and switches between the radiogram picture and Push&#x27;s normal view.</p>
+</div></div>
+</section>
+<section class="block" id="push-3-screen">
+  <div class="block-label"><span class="bl-num">09.9</span>
+  <h2>push 3 screen</h2></div>
+  <div class="block-body"><h3 class="sub">radio bank</h3><p>A backlit amber <b>radiogram dial</b> with three scales (LW/MW, SW 2-10 MHz, SW 10-30 MHz), the broadcast bands, and the names of stations on air now at their place on the scale, each with a tick at its exact frequency. A red needle glides to the frequency. As you tune towards a named station its name, tick and lamp glow brighter, fully lit when you&#x27;re on it, and the name shows under the big frequency. On the right: frequency, receiver and status, a rolling mode drum, a magic-eye <b>signal</b> meter with an S-unit reading (S9 = -73 dBm), and a round scope of the sound, delayed by Latency so it matches what you hear. The glow warms up at switch-on, throbs gently, and flickers while connecting.</p>
+<h3 class="sub">touching receiver</h3><p>The right panel becomes a world map with the receivers in green and the current one ringed. Receiver positions come from each receiver&#x27;s own GPS, read weekly and cached; until then they&#x27;re approximate.</p>
+<h3 class="sub">browse bank</h3><p>The On Now station large, with its frequency and place in the list; the 8 memories as radiogram keys; and the map with the transmitters of what&#x27;s on now in amber (positions from EiBi&#x27;s transmitter-site list).</p>
+<h3 class="sub">what it needs</h3><p>Live 13 with Max 9.2 or later. Custom Push graphics are a Live 13 beta feature, so Ableton may still change how they work. The radio itself works without the screen.</p></div>
+</section>
+<section class="block" id="standalone-gotchas">
+  <div class="block-label"><span class="bl-num">09.10</span>
+  <h2>standalone gotchas</h2></div>
+  <div class="block-body"><ul class="gotchas"><li>The Mac face shows extra readouts (signal, buffer, station name, memory contents); on Push those live in the screen picture instead.</li><li>Receivers limit how long you can listen (Status reads Time limit) and how many people can connect (Busy); the device moves on to another receiver by itself when one is full.</li><li>Rebuilding: <code>python3 build_swr_standalone.py</code> in <code>SW Radio Standalone Device/</code> (needs the <code>Push Screen Kit</code> folder beside it). Receivers, bands, modes, regions and default memories are read from the node script and built into the Push menus, so edit those lists, then rebuild.</li></ul></div>
 </section>
 <nav class="chapnav"><a class="cn prev" href="ondes-martenot.html"><span>previous</span>ondes martenot</a><a class="cn idx" href="../index.html"><span>&nbsp;</span>back to index</a><a class="cn next" href="yt-sampler.html"><span>next</span>yt sampler</a></nav>
 </main>

@@ -110,7 +110,7 @@
    "num": "09",
    "slug": "sw-radio",
    "name": "SW Radio",
-   "tagline": "Tunes a KiwiSDR shortwave receiver anywhere in the world from inside Live.",
+   "tagline": "Tunes a KiwiSDR shortwave receiver anywhere in the world from inside Live, and now from Push 3 standalone, with a 1950s radiogram dial on Push's screen.",
    "url": "devices/sw-radio.html",
    "image": "images/sw\u2013radio.png",
    "facets": {
